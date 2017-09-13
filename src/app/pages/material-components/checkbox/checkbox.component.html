@@ -1,0 +1,57 @@
+<ni-card [title]="'Configurable checkbox'">
+  <div class="row">
+    <div class="col col-auto">
+      <md-checkbox class="example-margin" [(ngModel)]="checked">Checked</md-checkbox>
+    </div>
+    <div class="col col-auto">
+      <md-checkbox class="example-margin" [(ngModel)]="indeterminate">Indeterminate</md-checkbox>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row align-content-center">
+    <div class="col col-auto">
+      <label class="mb-0"><strong>Align:</strong></label>
+    </div>
+    <div class="col col-auto">
+      <md-radio-group [(ngModel)]="align">
+        <md-radio-button class="example-margin" value="start">Start</md-radio-button>
+        <md-radio-button class="example-margin" value="end">End</md-radio-button>
+      </md-radio-group>
+    </div>
+  </div>
+
+  <br>
+
+  <div>
+    <md-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</md-checkbox>
+  </div>
+
+  <h6>Result</h6>
+
+  <div>
+    <md-checkbox
+      class="example-margin"
+      [checked]="checked"
+      [indeterminate]="indeterminate"
+      [align]="align"
+      [disabled]="disabled">
+      I'm a checkbox
+    </md-checkbox>
+  </div>
+</ni-card>
+
+<ni-card [title]="'Theming'" class="mb-0">
+  <div class="row">
+    <div class="col col-auto">
+      <md-checkbox [checked]="true" color="primary">Primary</md-checkbox>
+    </div>
+    <div class="col col-auto">
+      <md-checkbox [checked]="true" color="accent">Accent</md-checkbox>
+    </div>
+    <div class="col col-auto">
+      <md-checkbox [checked]="true" color="warn">Warning</md-checkbox>
+    </div>
+  </div>
+</ni-card>

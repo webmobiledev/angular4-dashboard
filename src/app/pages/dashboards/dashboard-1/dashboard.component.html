@@ -1,0 +1,165 @@
+<ni-breadcrumb [menu]="breadcrumb" [style]="'custom1'" class="mb-4"></ni-breadcrumb>
+
+<ni-card>
+  <div class="row">
+    <div class="col-lg-12 col-xl-6 mb-lg-4">
+      <div class="chart-container">
+        <div id="amchart-1" [style.width.%]="100" [style.height.%]="100"></div>
+      </div>
+    </div>
+    <div class="col-md-6 col-xl-3 flex-xl-first mb-4 mb-md-0">
+      <h5 class="mt-0">Last sales</h5>
+      <div class="table-responsive mb-3">
+        <table class="table table-sm">
+          <tbody>
+          <tr>
+            <td>Samsung Galaxy S8</td>
+            <td class="text-right">
+              <ni-badge [color]="'success'" [borderRadius]="false">1</ni-badge>
+            </td>
+          </tr>
+          <tr>
+            <td>Meizu M3</td>
+            <td class="text-right">
+              <ni-badge [color]="'success'" [borderRadius]="false">1</ni-badge>
+            </td>
+          </tr>
+          <tr>
+            <td>Meizu Pro 6</td>
+            <td class="text-right">
+              <ni-badge [color]="'info'" [borderRadius]="false">5</ni-badge>
+            </td>
+          </tr>
+          <tr>
+            <td>Apple iPhone SE</td>
+            <td class="text-right">
+              <ni-badge [color]="'warning'" [borderRadius]="false">7</ni-badge>
+            </td>
+          </tr>
+          <tr>
+            <td>iPhone 6</td>
+            <td class="text-right">
+              <ni-badge [color]="'success'" [borderRadius]="false">1</ni-badge>
+            </td>
+          </tr>
+          <tr>
+            <td>iPhone 7</td>
+            <td class="text-right">
+              <ni-badge [color]="'success'" [borderRadius]="false">1</ni-badge>
+            </td>
+          </tr>
+          <tr>
+            <td>Huawei P8</td>
+            <td class="text-right">
+              <ni-badge [color]="'info'" [borderRadius]="false">4</ni-badge>
+            </td>
+          </tr>
+          <tr>
+            <td>Xiaomi Mi Band 2</td>
+            <td class="text-right">
+              <ni-badge [color]="'danger'" [borderRadius]="false">10</ni-badge>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <button ni-button block="true" type="accent" outline="true" lineStyle="dashed" beforeIcon="fa fa-shopping-basket">Look all</button>
+    </div>
+    <div class="col-md-6 col-xl-3">
+      <p class="mb-1"><strong>Angular</strong></p>
+      <md-progress-bar mode="determinate" color="accent" [value]="98"></md-progress-bar>
+
+      <p class="mb-1"><strong>React</strong></p>
+      <md-progress-bar mode="determinate" color="warn" [value]="85"></md-progress-bar>
+
+      <p class="mb-1"><strong>Vue.js</strong></p>
+      <md-progress-bar mode="determinate" [value]="40"></md-progress-bar>
+
+      <p class="mb-1"><strong>Backbone.js</strong></p>
+      <md-progress-bar mode="determinate" [value]="38"></md-progress-bar>
+
+      <p class="mb-1"><strong>Ember.js</strong></p>
+      <md-progress-bar mode="determinate" color="accent" [value]="54"></md-progress-bar>
+
+      <p class="mb-1"><strong>Meteor.js</strong></p>
+      <md-progress-bar mode="determinate" color="warn" [value]="38"></md-progress-bar>
+
+      <p class="mb-1"><strong>jQuery</strong></p>
+      <md-progress-bar mode="determinate" color="warn" [value]="61"></md-progress-bar>
+    </div>
+  </div>
+</ni-card>
+
+<div class="row">
+  <div class="col-md-6 col-xl-3">
+    <ni-card [bgColor]="'info'" [outline]="true" class="info-card">
+      <h6 class="mt-0 title">Orders</h6>
+      <div class="count">2,145</div>
+      <ni-badge [color]="'info'" [borderRadius]="false">+17%</ni-badge> <small>from previous period</small>
+      <md-icon>shopping_basket</md-icon>
+    </ni-card>
+  </div>
+
+  <div class="col-md-6 col-xl-3">
+    <ni-card [bgColor]="'info'" [outline]="true" class="info-card">
+      <h6 class="mt-0 title">Revenue</h6>
+      <div class="count">$ 50,24</div>
+      <small>11750</small>
+      <md-icon>equalizer</md-icon>
+    </ni-card>
+  </div>
+
+  <div class="col-md-6 col-xl-3">
+    <ni-card [bgColor]="'info'" [outline]="true" class="info-card">
+      <h6 class="mt-0 title">Products</h6>
+      <div class="count">2,543</div>
+      <ni-badge [color]="'info'" [borderRadius]="false">+210</ni-badge>
+      <md-icon>monetization_on</md-icon>
+    </ni-card>
+  </div>
+
+  <div class="col-md-6 col-xl-3">
+    <ni-card [bgColor]="'info'" [outline]="true" class="info-card">
+      <h6 class="mt-0 title">Sold</h6>
+      <div class="count">1,005</div>
+      <ni-badge [color]="'info'" [borderRadius]="false">+24%</ni-badge>
+      <md-icon>donut_large</md-icon>
+    </ni-card>
+  </div>
+</div>
+
+<ni-card>
+  <div class="row">
+    <div class="col-lg-4">
+      <div id="amchart-2" [style.width.%]="100" [style.height.px]="400"></div>
+    </div>
+
+    <div class="col-lg-4">
+      <div id="amchart-3" [style.width.%]="100" [style.height.px]="400"></div>
+    </div>
+
+    <div class="col-lg-4">
+      <div id="amchart-4" [style.width.%]="100" [style.height.px]="400"></div>
+    </div>
+  </div>
+</ni-card>
+
+<div class="row">
+  <div class="col-lg-6">
+    <ni-card [title]="'Changelog'" [outline]="true" class="mb-lg-0">
+      <ni-h-timeline [showYears]="false" [showDate]="false" [align]="'left'" [data]="timelineData"></ni-h-timeline>
+    </ni-card>
+  </div>
+
+  <div class="col-lg-6">
+    <ni-card [title]="'To do list'" class="mb-0">
+      <md-list>
+        <md-list-item *ngFor="let folder of folders">
+          <md-icon md-list-avatar>{{folder.icon}}<ni-badge *ngIf="folder.badge" [color]="'danger'" [position]="'top-right'">{{folder.badge}}</ni-badge></md-icon>
+          <h4 md-line>{{folder.name}}</h4>
+          <p md-line><i>{{folder.updated}}</i></p>
+        </md-list-item>
+      </md-list>
+    </ni-card>
+  </div>
+</div>

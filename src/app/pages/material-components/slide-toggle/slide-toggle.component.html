@@ -1,0 +1,23 @@
+<ni-breadcrumb [menu]="breadcrumb" [style]="'custom1'" class="mb-4"></ni-breadcrumb>
+
+<ni-card [title]="'Basic'">
+  <md-slide-toggle>Slide me!</md-slide-toggle>
+</ni-card>
+
+<ni-card [title]="'Disabled'">
+  <md-slide-toggle disabled>Disabled</md-slide-toggle>
+</ni-card>
+
+<ni-card [title]="'Theming'" class="mb-0">
+  <md-slide-toggle color="primary" [checked]="true">
+    Primary Slide Toggle
+  </md-slide-toggle>
+
+  <md-slide-toggle color="accent" [checked]="true">
+    Accent Slide Toggle
+  </md-slide-toggle>
+
+  <md-slide-toggle color="warn" [checked]="true">
+    Warning Slide Toggle
+  </md-slide-toggle>
+</ni-card>

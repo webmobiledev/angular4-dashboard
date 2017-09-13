@@ -1,0 +1,10 @@
+.buttons-list {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px;
+
+  .ni-btn {
+    margin: 5px;
+  }
+}

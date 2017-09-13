@@ -1,0 +1,98 @@
+<ni-breadcrumb [menu]="breadcrumb" [style]="'custom1'" class="mb-4"></ni-breadcrumb>
+
+<div class="row">
+  <div class="col-md-8">
+    <ni-card title="Column chart">
+      <div id="amchart-1" [style.width.%]="100" [style.height.px]="400"></div>
+    </ni-card>
+
+    <ni-card title="Lines chart">
+      <div id="amchart-2" [style.width.%]="100" [style.height.px]="400"></div>
+    </ni-card>
+
+    <ni-card [title]="'What we doing'" class="mb-md-0">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque
+        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente. Ad architecto at aut
+        et ex facilis fuga, laboriosam, magnam modi obcaecati officia officiis, omnis praesentium quam quas reiciendis
+        rerum ullam velit veritatis vitae.</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-1"><strong>Wordpress</strong></p>
+          <md-progress-bar mode="determinate" [value]="90"></md-progress-bar>
+
+          <p class="mb-1"><strong>Magento</strong></p>
+          <md-progress-bar mode="determinate" [value]="80"></md-progress-bar>
+
+          <p class="mb-1"><strong>Opencart</strong></p>
+          <md-progress-bar mode="determinate" [value]="60"></md-progress-bar>
+
+          <p class="mb-1"><strong>Drupal</strong></p>
+          <md-progress-bar mode="determinate" [value]="30"></md-progress-bar>
+          <div class="clearfix"></div>
+        </div>
+
+        <div class="col-md-6">
+          <p class="mb-1"><strong>Angular</strong></p>
+          <md-progress-bar mode="determinate" color="accent" [value]="98"></md-progress-bar>
+
+          <p class="mb-1"><strong>React</strong></p>
+          <md-progress-bar mode="determinate" color="accent" [value]="85"></md-progress-bar>
+
+          <p class="mb-1"><strong>Vue.js</strong></p>
+          <md-progress-bar mode="determinate" color="accent" [value]="40"></md-progress-bar>
+
+          <p class="mb-1"><strong>Backbone.js</strong></p>
+          <md-progress-bar mode="determinate" color="accent" [value]="38"></md-progress-bar>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam cumque dicta earum, iure maiores neque
+        nesciunt officia quisquam ullam.</p>
+    </ni-card>
+  </div>
+
+  <div class="col-md-4">
+    <ni-card [title]="'Recent activities'" [outline]="true">
+      <ni-h-timeline [showYears]="false" [align]="'left'" [data]="timelineData"></ni-h-timeline>
+    </ni-card>
+
+    <ni-card [customBgColor]="'rgba(226,77,77,0.6)'" [customColor]="'#fff'" [bgImage]="'assets/content/card-4.jpg'" class="info-card">
+      <div class="title text-uppercase">Orders</div>
+      <div class="count">2,145</div>
+      <ni-badge [customColor]="'rgba(255,255,255,0.3)'" [borderRadius]="false">+17%</ni-badge> <small>from previous period</small>
+    </ni-card>
+
+    <ni-card [customBgColor]="'rgba(255,183,77,0.9)'" [customColor]="'#fff'" [bgImage]="'assets/content/card-5.jpg'" class="info-card">
+      <div class="title text-uppercase">Revenue</div>
+      <div class="count">$ 50,24</div>
+      <small>11750</small>
+    </ni-card>
+
+    <ni-card [customBgColor]="'rgba(100,181,246,0.9)'" [customColor]="'#fff'" [bgImage]="'assets/content/card-6.jpg'" class="info-card">
+      <div class="title text-uppercase">Products</div>
+      <div class="count">2,543</div>
+      <ni-badge [customColor]="'rgba(255,255,255,0.3)'" [borderRadius]="false">+210</ni-badge>
+    </ni-card>
+
+    <ni-card [customBgColor]="'rgba(129,199,132,0.8)'" [customColor]="'#fff'" [bgImage]="'assets/content/card-7.jpg'" class="info-card">
+      <div class="title text-uppercase">Sold</div>
+      <div class="count">1,005</div>
+      <ni-badge [customColor]="'rgba(255,255,255,0.3)'" [borderRadius]="false">+24%</ni-badge>
+    </ni-card>
+
+    <ni-card title="Last uploaded files" class="mb-0">
+      <ni-file [size]="'small'" [type]="'jpg'" [title]="'bulb'" [image]="'assets/content/file-1.jpg'"></ni-file>
+      <ni-file [size]="'small'" [type]="'doc'" [title]="'resume'"></ni-file>
+      <ni-file [size]="'small'" [type]="'jpg'" [title]="'main-image'" [image]="'assets/content/file-2.jpg'"></ni-file>
+      <ni-file [size]="'small'" [type]="'jpg'" [title]="'watch'" [image]="'assets/content/file-3.jpg'"></ni-file>
+      <ni-file [size]="'small'" [type]="'jpg'" [title]="'camera'" [image]="'assets/content/file-4.jpg'"></ni-file>
+      <ni-file [size]="'small'" [type]="'pdf'" [title]="'documentation'"></ni-file>
+      <ni-file [size]="'small'" [type]="'mp4'" [title]="'video-tutorial'"></ni-file>
+      <ni-file [size]="'small'" [type]="'jpg'" [title]="'best-work'" [image]="'assets/content/file.jpg'"></ni-file>
+      <ni-file [size]="'small'" [type]="'jpg'" [title]="'smart'" [image]="'assets/content/file-5.jpg'"></ni-file>
+      <ni-file [size]="'small'" [type]="'zip'" [title]="'theme'"></ni-file>
+    </ni-card>
+  </div>
+</div>

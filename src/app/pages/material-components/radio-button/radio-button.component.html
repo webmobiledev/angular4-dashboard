@@ -1,0 +1,37 @@
+<ni-card [title]="'Basic radios'">
+  <md-radio-group name="group-1">
+    <md-radio-button value="1" [checked]="true">Option 1</md-radio-button>
+    <md-radio-button value="2">Option 2</md-radio-button>
+  </md-radio-group>
+</ni-card>
+
+<ni-card [title]="'Column Layout'">
+  <md-radio-group name="group-2" class="column-layout">
+    <md-radio-button value="1" [checked]="true">Option 1</md-radio-button>
+    <md-radio-button value="2">Option 2</md-radio-button>
+  </md-radio-group>
+</ni-card>
+
+<ni-card [title]="'Align'">
+  <md-radio-group name="group-3" class="column-layout">
+    <md-radio-button value="1" [align]="'start'" [checked]="true">Start</md-radio-button>
+    <md-radio-button value="2" [align]="'end'">End</md-radio-button>
+  </md-radio-group>
+</ni-card>
+
+<ni-card [title]="'Disabled'">
+  <md-radio-group name="group-4" class="column-layout">
+    <md-radio-button value="1" [checked]="true">Option 1</md-radio-button>
+    <md-radio-button value="2">Option 2</md-radio-button>
+    <md-radio-button value="3" [disabled]="true">Disabled Option</md-radio-button>
+  </md-radio-group>
+</ni-card>
+
+<ni-card [title]="'Radios with ngModel'" class="mb-0">
+  <md-radio-group name="ngModel-options" [(ngModel)]="favoriteSeason" class="column-layout">
+    <md-radio-button *ngFor="let season of seasons" [value]="season" [checked]="i === 0">
+      {{season}}
+    </md-radio-button>
+  </md-radio-group>
+  <p>Your favorite season is: <strong>{{favoriteSeason}}</strong></p>
+</ni-card>

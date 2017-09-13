@@ -1,0 +1,23 @@
+<ni-card [title]="'Left align timeline'" [customBgColor]="'transparent'">
+  <ni-h-timeline [data]="timelineData"></ni-h-timeline>
+</ni-card>
+
+<ni-card [title]="'Right align timeline'" [customBgColor]="'transparent'">
+  <ni-h-timeline [align]="'right'" [data]="timelineData"></ni-h-timeline>
+</ni-card>
+
+<ni-card [title]="'Center align timeline'" [customBgColor]="'transparent'">
+  <ni-h-timeline [align]="'center'" [data]="timelineData"></ni-h-timeline>
+</ni-card>
+
+<ni-card [title]="'Both sides timeline'" [customBgColor]="'transparent'">
+  <ni-h-timeline [align]="'between'" [data]="timelineData"></ni-h-timeline>
+</ni-card>
+
+<ni-card [title]="'Timeline without time'" [customBgColor]="'transparent'">
+  <ni-h-timeline [showDate]="false" [align]="'between'" [data]="timelineData"></ni-h-timeline>
+</ni-card>
+
+<ni-card [title]="'Timeline with years'" [customBgColor]="'transparent'" class="mb-0">
+  <ni-h-timeline [showYears]="true" [align]="'between'" [data]="timelineData"></ni-h-timeline>
+</ni-card>

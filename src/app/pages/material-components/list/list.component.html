@@ -1,0 +1,71 @@
+<ni-breadcrumb [menu]="breadcrumb" [style]="'custom1'" class="mb-4"></ni-breadcrumb>
+
+<ni-card [title]="'Simple lists'">
+  <md-list>
+    <md-list-item>Pepper</md-list-item>
+    <md-list-item>Salt</md-list-item>
+    <md-list-item>Paprika</md-list-item>
+  </md-list>
+</ni-card>
+
+<ni-card [title]="'Navigation lists'">
+  <md-nav-list>
+    <md-list-item *ngFor="let link of links">
+      <a md-line href="#">{{ link }}</a>
+      <button md-icon-button (click)="showInfo(link)">
+        <md-icon>info</md-icon>
+      </button>
+    </md-list-item>
+  </md-nav-list>
+</ni-card>
+
+<ni-card [title]="'Multi-line lists'">
+  <md-list>
+    <md-list-item *ngFor="let message of messages">
+      <h3 md-line>{{ message.from }}</h3>
+      <p md-line>
+        <span>{{ message.subject }}</span>
+        <span class="demo-2"> -- {{ message.content }}</span>
+      </p>
+    </md-list-item>
+  </md-list>
+</ni-card>
+
+<ni-card [title]="'Lists with avatars'">
+  <md-list>
+    <md-list-item *ngFor="let message of messages">
+      <img md-list-avatar src="{{ message.avatar }}" width="40" height="40" alt="">
+      <h3 md-line class="h3">{{ message.from }}</h3>
+      <p md-line>
+        <span>{{message.subject}}</span>
+        <span class="demo-2"> -- {{ message.content }}</span>
+      </p>
+    </md-list-item>
+  </md-list>
+</ni-card>
+
+<ni-card [title]="'Dense lists'">
+  <md-list dense>
+    <md-list-item>Pepper</md-list-item>
+    <md-list-item>Salt</md-list-item>
+    <md-list-item>Paprika</md-list-item>
+  </md-list>
+</ni-card>
+
+<ni-card [title]="'Lists with multiple sections'" class="mb-0">
+  <md-list>
+    <h3 md-subheader>Folders</h3>
+    <md-list-item *ngFor="let folder of folders">
+      <md-icon md-list-avatar>folder</md-icon>
+      <h4 md-line>{{folder.name}}</h4>
+      <p md-line class="demo-2"> {{folder.updated}} </p>
+    </md-list-item>
+    <md-divider></md-divider>
+    <h3 md-subheader>Notes</h3>
+    <md-list-item *ngFor="let note of notes">
+      <md-icon md-list-avatar>note</md-icon>
+      <h4 md-line>{{note.name}}</h4>
+      <p md-line class="demo-2"> {{note.updated}} </p>
+    </md-list-item>
+  </md-list>
+</ni-card>

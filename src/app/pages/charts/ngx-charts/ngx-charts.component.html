@@ -1,0 +1,169 @@
+<div class="row">
+  <div class="col-lg-6">
+    <ni-card title="Vertical Bar Chart">
+      <div class="chart-container">
+        <ngx-charts-bar-vertical
+          [scheme]="colorScheme"
+          [results]="single1"
+          [gradient]="false"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="false"
+          [showXAxisLabel]="false"
+          [showYAxisLabel]="false">
+        </ngx-charts-bar-vertical>
+      </div>
+    </ni-card>
+  </div>
+
+  <div class="col-lg-6">
+    <ni-card title="Horizontal Bar Chart">
+      <div class="chart-container">
+        <ngx-charts-bar-horizontal
+          [scheme]="colorScheme"
+          [results]="single2"
+          [gradient]="false"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="false"
+          [showXAxisLabel]="false"
+          [showYAxisLabel]="false">
+        </ngx-charts-bar-horizontal>
+      </div>
+    </ni-card>
+  </div>
+
+  <div class="col-lg-6">
+    <ni-card title="Stacked Vertical Bar Chart">
+      <div class="chart-container">
+        <ngx-charts-bar-vertical-stacked
+          [scheme]="colorScheme"
+          [results]="multi1"
+          [gradient]="false"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="false"
+          [showXAxisLabel]="false"
+          [showYAxisLabel]="false">
+        </ngx-charts-bar-vertical-stacked>
+      </div>
+    </ni-card>
+  </div>
+
+  <div class="col-lg-6">
+    <ni-card title="Stacked Horizontal Bar Chart">
+      <div class="chart-container">
+        <ngx-charts-bar-horizontal-stacked
+          [scheme]="colorScheme"
+          [results]="multi2"
+          [gradient]="false"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="false"
+          [showXAxisLabel]="false"
+          [showYAxisLabel]="false">
+        </ngx-charts-bar-horizontal-stacked>
+      </div>
+    </ni-card>
+  </div>
+
+  <div class="col-lg-6">
+    <ni-card title="Pie Chart">
+      <div class="chart-container">
+        <ngx-charts-pie-chart
+          [scheme]="colorScheme"
+          [results]="single1"
+          [gradient]="false"
+          [legend]="false"
+          [explodeSlices]="false"
+          [labels]="true"
+          [doughnut]="false">
+        </ngx-charts-pie-chart>
+      </div>
+    </ni-card>
+  </div>
+
+  <div class="col-lg-6">
+    <ni-card title="Doughnut Pie Chart">
+      <div class="chart-container">
+        <ngx-charts-pie-chart
+          [scheme]="colorScheme"
+          [results]="single2"
+          [gradient]="false"
+          [legend]="false"
+          [explodeSlices]="false"
+          [labels]="true"
+          [doughnut]="true">
+        </ngx-charts-pie-chart>
+      </div>
+    </ni-card>
+  </div>
+
+  <div class="col-lg-6">
+    <ni-card title="Area Chart">
+      <div class="chart-container">
+        <ngx-charts-area-chart
+          [scheme]="colorScheme"
+          [results]="multi3"
+          [gradient]="false"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="false"
+          [showXAxisLabel]="false"
+          [showYAxisLabel]="false"
+          [autoScale]="true">
+        </ngx-charts-area-chart>
+      </div>
+    </ni-card>
+  </div>
+
+  <div class="col-lg-6">
+    <ni-card title="Line Chart">
+      <div class="chart-container">
+        <ngx-charts-line-chart
+          [scheme]="colorScheme"
+          [results]="multi3"
+          [gradient]="false"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="false"
+          [showXAxisLabel]="false"
+          [showYAxisLabel]="false"
+          [autoScale]="true">
+        </ngx-charts-line-chart>
+      </div>
+    </ni-card>
+  </div>
+
+  <div class="col-lg-6">
+    <ni-card title="Polar Chart" class="mb-lg-0">
+      <div class="chart-container">
+        <ngx-charts-polar-chart
+          [scheme]="colorScheme"
+          [results]="multi3"
+          [xAxis]="true"
+          [yAxis]="true"
+        >
+        </ngx-charts-polar-chart>
+      </div>
+    </ni-card>
+  </div>
+
+  <div class="col-lg-6">
+    <ni-card title="Gauge Chart" class="mb-0">
+      <div class="chart-container">
+        <ngx-charts-gauge
+          [scheme]="colorScheme"
+          [results]="single2"
+          [min]="0"
+          [max]="100"
+          [angleSpan]="240"
+          [startAngle]="-120"
+          [units]="'alerts'"
+          [bigSegments]="10"
+          [smallSegments]="5">
+        </ngx-charts-gauge>
+      </div>
+    </ni-card>
+  </div>
+</div>

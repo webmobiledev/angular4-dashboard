@@ -1,0 +1,70 @@
+<ni-breadcrumb [menu]="breadcrumb" [style]="'custom1'" class="mb-4"></ni-breadcrumb>
+
+<div class="row">
+  <div class="col-lg-6">
+    <ni-card title="Line Chart">
+      <canvas
+        baseChart
+        [datasets]="lineChartData"
+        [labels]="lineChartLabels"
+        [options]="lineChartOptions"
+        [colors]="lineChartColors"
+        [legend]="lineChartLegend"
+        [chartType]="lineChartType"></canvas>
+    </ni-card>
+  </div>
+
+  <div class="col-lg-6">
+    <ni-card title="Bar Chart">
+      <canvas
+        baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [legend]="barChartLegend"
+        [chartType]="barChartType"></canvas>
+    </ni-card>
+  </div>
+
+  <div class="col-lg-6">
+    <ni-card title="Doughnut Chart">
+      <canvas
+        baseChart
+        [data]="doughnutChartData"
+        [labels]="doughnutChartLabels"
+        [chartType]="doughnutChartType"></canvas>
+    </ni-card>
+  </div>
+
+  <div class="col-lg-6">
+    <ni-card title="Radar Chart">
+      <canvas
+        baseChart
+        [datasets]="radarChartData"
+        [labels]="radarChartLabels"
+        [chartType]="radarChartType"></canvas>
+    </ni-card>
+  </div>
+
+  <div class="col-lg-6">
+    <ni-card title="Pie Chart" class="mb-lg-0">
+      <canvas
+        baseChart
+        [data]="pieChartData"
+        [labels]="pieChartLabels"
+        [chartType]="pieChartType"></canvas>
+    </ni-card>
+  </div>
+
+  <div class="col-lg-6">
+    <ni-card title="Polar Area Chart" class="mb-0">
+      <canvas
+        baseChart
+        [data]="polarAreaChartData"
+        [labels]="polarAreaChartLabels"
+        [legend]="polarAreaLegend"
+        [chartType]="polarAreaChartType"
+        [options]="polarAreaChartOptions"></canvas>
+    </ni-card>
+  </div>
+</div>

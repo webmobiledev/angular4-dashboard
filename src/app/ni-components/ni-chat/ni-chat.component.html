@@ -1,0 +1,38 @@
+<div class="chat-wrap">
+  <div class="dialog">
+    <div class="dialog-header">
+      <div class="user-avatar">
+        <div *ngIf="activeUser.avatar && activeUser.avatar !== ''; then imageAvatar else textAvatar"></div>
+
+        <ng-template #imageAvatar>
+          <div class="image-avatar"><img src="{{ activeUser.avatar }}" alt=""></div>
+        </ng-template>
+        <ng-template #textAvatar>
+          <div class="text-avatar">{{ firstLetter }}</div>
+        </ng-template>
+      </div>
+      <div class="user-info">
+        <h3 class="user-name">{{ activeUser.name }}</h3>
+        <div class="user-last-seen" [ngClass]="{'online': activeUser.lastSeen === 'online'}">{{ activeUser.lastSeen }}</div>
+      </div>
+      <button class="btn call"><i class="sli-options-vertical"></i></button>
+    </div>
+
+    <div class="dialog-messages">
+      <div class="messages-list">
+        <div *ngFor="let message of messages" class="message" [ngClass]="{'my-message': message.my}">
+          <div class="message-content" [innerHtml]="message.content"></div>
+          <div class="message-date">{{ message.date }}</div>
+        </div>
+      </div>
+    </div>
+
+    <form class="dialog-footer" #messageForm="ngForm" (ngSubmit)="onSubmit(messageForm)" (keydown.enter)="onSubmit(messageForm)">
+      <button class="btn load-file" (click)="loadFile($event); false"><i class="sli-paper-clip"></i></button>
+      <div class="message-box">
+        <textarea required ngModel class="enter-message" rows="1" name="message" placeholder="Write a message..."></textarea>
+      </div>
+      <button class="btn send-message" type="submit"><i class="sli-paper-plane"></i></button>
+    </form>
+  </div>
+</div>

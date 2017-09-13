@@ -1,0 +1,85 @@
+@import '../../../../assets/sass/variable';
+
+:host {
+  background: main-color(50);
+  bottom: 0;
+  box-shadow: -5px 0 5px -4px rgba(#000,.25);
+  color: main-contrast(50);
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translate(300px, 0);
+  transition:
+    .2s transform 0s $animation,
+    0s z-index .2s $animation;
+  width: 300px;
+  z-index: 9997;
+  @media #{$max543} {
+    transform: translate(270px, 0);
+    width: 270px;
+  }
+
+  .rtl & {
+    left: 0;
+    right: auto;
+    transform: translate(-300px, 0);
+    @media #{$max543} {
+      transform: translate(-270px, 0);
+    }
+  }
+  &.open {
+    transform: translate(0, 0);
+    transition:
+      .2s transform 0s $animation,
+      .2s z-index 0s $animation;
+    z-index: 9999;
+  }
+  .open-navbar {
+    align-items: center;
+    background: main-color(50);
+    border: 1px solid main-color(50);
+    border-right: 0;
+    border-radius: $shape 0 0 $shape;
+    color: main-contrast(50);
+    display: flex;
+    font-size: 20px;
+    height: 50px;
+    justify-content: center;
+    margin-right: -1px;
+    position: absolute;
+    right: 100%;
+    top: 92px;
+    transition: color .2s $animation;
+    width: 50px;
+
+    .rtl & {
+      border-radius: 0 $shape $shape 0;
+      left: 100%;
+      right: auto;
+    }
+    &:hover {
+      color: accent-color(500);
+    }
+  }
+  .navbar-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+    .navbar-header {
+      align-items: center;
+      background: main-color(700);
+      color: main-contrast(700);
+      display: flex;
+      height: $module-rem * 5;
+      padding: $module-rem ($module-rem * 2);
+    }
+    .navbar-content {
+      flex-grow: 1;
+      overflow: auto;
+      padding: ($module-rem * 2);
+      width: 100%;
+    }
+  }
+}

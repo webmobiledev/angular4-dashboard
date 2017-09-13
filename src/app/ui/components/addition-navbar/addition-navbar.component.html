@@ -1,0 +1,26 @@
+<a href="#" class="open-navbar"  (click)="openNavbar($event)">
+  <i class="icon fa fa-object-ungroup"></i>
+</a>
+
+<div class="navbar-wrap">
+  <div class="navbar-header">
+    {{ title }}
+  </div>
+
+  <div class="navbar-content">
+    <div>
+      <h5 class="mt-0">Frameworks</h5>
+      <p class="mb-1"><strong>Angular</strong></p>
+      <md-progress-bar mode="determinate" color="accent" [value]="98"></md-progress-bar>
+
+      <p class="mb-1"><strong>React</strong></p>
+      <md-progress-bar mode="determinate" color="accent" [value]="85"></md-progress-bar>
+
+      <p class="mb-1"><strong>Vue.js</strong></p>
+      <md-progress-bar mode="determinate" color="accent" [value]="40"></md-progress-bar>
+
+      <p class="mb-1"><strong>Backbone.js</strong></p>
+      <md-progress-bar mode="determinate" color="accent" [value]="38"></md-progress-bar>
+    </div>
+  </div>
+</div>

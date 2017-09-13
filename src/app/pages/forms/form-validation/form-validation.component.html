@@ -1,0 +1,91 @@
+<ni-breadcrumb [menu]="breadcrumb" [style]="'custom1'" class="mb-4"></ni-breadcrumb>
+
+<ni-card>
+  <form [formGroup]="form">
+    <div class="row">
+      <div class="col-md-4">
+        <md-input-container class="mb-4">
+          <input mdInput placeholder="First name" [formControl]="form.controls['fname']">
+          <small *ngIf="form.controls['fname'].hasError('required') && form.controls['fname'].touched" class="form-message text-danger">You must include a first name.</small>
+          <small *ngIf="form.controls['fname'].hasError('minlength') && form.controls['fname'].touched" class="form-message text-danger">Your first name must be at least 5 characters long.</small>
+          <small *ngIf="form.controls['fname'].hasError('maxlength') && form.controls['fname'].touched" class="form-message text-danger">Your first name cannot exceed 10 characters.</small>
+        </md-input-container>
+      </div>
+
+      <div class="col-md-4">
+        <md-input-container class="mb-4">
+          <input mdInput placeholder="Email address" [formControl]="form.controls['email']" type="email">
+          <small *ngIf="form.controls['email'].hasError('required') && form.controls['email'].touched" class="form-message text-danger">You must include an email address.</small>
+          <small *ngIf="form.controls['email'].errors?.email && form.controls['email'].touched" class="form-message text-danger">You must include a valid email address.</small>
+        </md-input-container>
+      </div>
+
+      <div class="col-md-4">
+        <md-input-container class="mb-4">
+          <input mdInput placeholder="Website address" [formControl]="form.controls['url']" type="url">
+          <small *ngIf="form.controls['url'].hasError('required') && form.controls['url'].touched" class="form-message text-danger">You must include a web address.</small>
+          <small *ngIf="form.controls['url'].errors?.url && form.controls['url'].touched" class="form-message text-danger">You must include a valid web address.</small>
+        </md-input-container>
+      </div>
+
+      <div class="col-md-4">
+        <md-input-container>
+          <input mdInput [mdDatepicker]="picker" placeholder="Choose a date" [formControl]="form.controls['date']">
+          <button mdSuffix [mdDatepickerToggle]="picker"></button>
+          <small *ngIf="form.controls['date'].hasError('required') && form.controls['date'].touched" class="form-message text-danger">You must include a date.</small>
+          <small *ngIf="form.controls['date'].errors?.date && form.controls['date'].touched" class="form-message text-danger">You must include a valid date.</small>
+        </md-input-container>
+        <md-datepicker #picker></md-datepicker>
+      </div>
+
+      <div class="col-md-4">
+        <md-input-container class="mb-4">
+          <input mdInput placeholder="Number range (between 5 and 9)" [formControl]="form.controls['range']">
+          <small *ngIf="form.controls['range'].hasError('required') && form.controls['range'].touched" class="form-message text-danger">You must enter a number.</small>
+          <small *ngIf="form.controls['range'].errors?.range && form.controls['range'].touched" class="form-message text-danger">Number should be between 5 and 9.</small>
+        </md-input-container>
+      </div>
+
+      <div class="col-md-4">
+        <md-input-container class="mb-4">
+          <input mdInput placeholder="Credit card" [formControl]="form.controls['creditCard']">
+          <small *ngIf="form.controls['creditCard'].hasError('required') && form.controls['creditCard'].touched" class="form-message text-danger">You must enter a credit card.</small>
+          <small *ngIf="form.controls['creditCard'].errors?.creditCard && form.controls['creditCard'].touched" class="form-message text-danger">You must enter a valid credit card number.</small>
+        </md-input-container>
+      </div>
+
+      <div class="col-md-4">
+        <md-input-container class="mb-4">
+          <input mdInput placeholder="US Phone number (15417543010)" [formControl]="form.controls['phone']" type="text">
+          <small *ngIf="form.controls['phone'].hasError('required') && form.controls['phone'].touched" class="form-message text-danger">You must include phone number.</small>
+          <small *ngIf="form.controls['phone'].errors?.phone && form.controls['phone'].touched" class="form-message text-danger">You must include a valid phone number.</small>
+        </md-input-container>
+      </div>
+
+      <div class="col-md-4">
+        <md-input-container class="mb-4">
+          <input mdInput placeholder="Password" [formControl]="form.controls['password']" type="password">
+          <small *ngIf="form.controls['password'].hasError('required') && form.controls['password'].touched" class="form-message text-danger">You must include password.</small>
+        </md-input-container>
+      </div>
+
+      <div class="col-md-4">
+        <md-input-container class="mb-4">
+          <input mdInput placeholder="Confirm Password" [formControl]="form.controls['confirmPassword']" type="password">
+          <small *ngIf="form.controls['confirmPassword'].hasError('required') && form.controls['confirmPassword'].touched" class="form-message text-danger">You must include confirm password.</small>
+          <small *ngIf="form.controls['confirmPassword'].errors?.equalTo" class="form-message text-danger">Passwords do not math.</small>
+        </md-input-container>
+      </div>
+    </div>
+    <div class="mb-4">
+      <label>Gender</label>
+      <md-radio-group [formControl]="form.controls['gender']">
+        <md-radio-button value="male">Male</md-radio-button>
+        <md-radio-button value="female">Female</md-radio-button>
+        <small *ngIf="!form.controls['gender'].valid && form.controls['gender'].touched" class="form-message text-danger">You must select a gender.</small>
+      </md-radio-group>
+    </div>
+
+    <button md-raised-button color="accent" type="submit" [disabled]="!form.valid">Submit</button>
+  </form>
+</ni-card>

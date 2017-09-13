@@ -1,0 +1,89 @@
+<ni-breadcrumb [menu]="breadcrumb" [style]="'custom1'" class="mb-4"></ni-breadcrumb>
+
+<ni-card title="Basic form layout">
+  <md-input-container>
+    <input mdInput placeholder="Email address" type="email" value="">
+  </md-input-container>
+
+  <md-input-container>
+    <input mdInput placeholder="Password" type="password" value="">
+  </md-input-container>
+
+  <button md-raised-button color="accent">Submit</button>
+</ni-card>
+
+<ni-card title="Inline form layout">
+  <div class="form-group row">
+    <label for="inputEmail" class="col-sm-3 col-md-2 col-form-label mb-0">Email</label>
+    <div class="col-sm-9 col-md-10">
+      <md-input-container class="mb-2">
+        <input mdInput id="inputEmail" placeholder="Enter email" type="email" value="">
+      </md-input-container>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPass" class="col-sm-3 col-md-2 col-form-label mb-0">Password</label>
+    <div class="col-sm-9 col-md-10">
+      <md-input-container class="mb-2">
+        <input mdInput id="inputPass" placeholder="Enter password" type="password" value="">
+      </md-input-container>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3 col-md-2"></div>
+    <div class="col-sm-9 col-md-10">
+      <button md-raised-button color="warn">Submit</button>
+    </div>
+  </div>
+</ni-card>
+
+<ni-card title="Grid form" class="mb-0">
+  <div class="row">
+    <div class="col-md-3">
+      <md-input-container>
+        <input mdInput placeholder="Col 3" type="text" value="">
+      </md-input-container>
+    </div>
+    <div class="col-md-9">
+      <md-input-container>
+        <input mdInput placeholder="Col 9" type="text" value="">
+      </md-input-container>
+    </div>
+    <div class="col-md-6">
+      <md-input-container>
+        <input mdInput placeholder="Col 6" type="text" value="">
+      </md-input-container>
+    </div>
+    <div class="col-md-6">
+      <md-input-container>
+        <input mdInput placeholder="Col 6" type="text" value="">
+      </md-input-container>
+    </div>
+    <div class="col-md-9">
+      <md-input-container>
+        <input mdInput placeholder="Col 9" type="text" value="">
+      </md-input-container>
+    </div>
+    <div class="col-md-3">
+      <md-input-container>
+        <input mdInput placeholder="Col 3" type="text" value="">
+      </md-input-container>
+    </div>
+    <div class="col-md-4">
+      <md-input-container>
+        <input mdInput placeholder="Col 4" type="text" value="">
+      </md-input-container>
+    </div>
+    <div class="col-md-4">
+      <md-input-container>
+        <input mdInput placeholder="Col 4" type="text" value="">
+      </md-input-container>
+    </div>
+    <div class="col-md-4">
+      <md-input-container>
+        <input mdInput placeholder="Col 4" type="text" value="">
+      </md-input-container>
+    </div>
+  </div>
+</ni-card>

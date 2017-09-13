@@ -1,0 +1,23 @@
+<ni-breadcrumb [menu]="breadcrumb" [style]="'custom1'" class="mb-4"></ni-breadcrumb>
+
+<ni-card [title]="'Basic progress-spinner'">
+  <md-spinner class="mb-0" mode="indeterminate"></md-spinner>
+</ni-card>
+
+<ni-card [title]="'Progress mode'">
+  <p><strong>Determinate</strong></p>
+  <md-progress-spinner mode="determinate" [value]="progressValue"></md-progress-spinner>
+  <p>
+    <button md-raised-button color="primary" (click)="step(10)">Increase</button>
+    <button md-raised-button color="varn" (click)="step(-10)">Decrease</button>
+  </p>
+
+  <p><strong>Indeterminate</strong></p>
+  <md-progress-spinner class="mb-0" mode="indeterminate"></md-progress-spinner>
+</ni-card>
+
+<ni-card [title]="'Theming'" class="mb-0">
+  <md-progress-spinner mode="indeterminate" color="primary"></md-progress-spinner>
+  <md-progress-spinner mode="indeterminate" color="accent"></md-progress-spinner>
+  <md-progress-spinner class="mb-0" mode="indeterminate" color="warn"></md-progress-spinner>
+</ni-card>

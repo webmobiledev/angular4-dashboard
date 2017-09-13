@@ -1,0 +1,59 @@
+<ni-breadcrumb [menu]="breadcrumb" [style]="'custom1'" class="mb-4"></ni-breadcrumb>
+
+<ni-card [title]="'Flat buttons'">
+  <button md-button>Default</button>
+  <button md-button color="primary">Primary</button>
+  <button md-button color="accent">Accent</button>
+  <button md-button color="warn">Warning</button>
+  <button md-button disabled>Disabled</button>
+</ni-card>
+
+<ni-card [title]="'Raised buttons'">
+  <button md-raised-button>Default</button>
+  <button md-raised-button color="primary">Primary</button>
+  <button md-raised-button color="accent">Accent</button>
+  <button md-raised-button color="warn">Warning</button>
+  <button md-raised-button disabled>Disabled</button>
+</ni-card>
+
+<ni-card [title]="'Icon buttons'">
+  <button md-icon-button><md-icon>home</md-icon></button>
+  <button md-icon-button color="primary"><md-icon>add</md-icon></button>
+  <button md-icon-button color="accent"><md-icon>settings</md-icon></button>
+  <button md-icon-button color="warn"><md-icon>thumb_up</md-icon></button>
+  <button md-icon-button disabled><md-icon>check</md-icon></button>
+</ni-card>
+
+<ni-card [title]="'Floating Action Buttons (FABs)'">
+  <button md-fab><md-icon>home</md-icon></button>
+  <button md-fab color="primary"><md-icon>add</md-icon></button>
+  <button md-fab color="accent"><md-icon>settings</md-icon></button>
+  <button md-fab color="warn"><md-icon>thumb_up</md-icon></button>
+  <button md-fab disabled><md-icon>check</md-icon></button>
+</ni-card>
+
+<ni-card [title]="'Mini Floating Action Buttons (Mini FABs)'">
+  <button md-mini-fab><md-icon>home</md-icon></button>
+  <button md-mini-fab color="primary"><md-icon>add</md-icon></button>
+  <button md-mini-fab color="accent"><md-icon>settings</md-icon></button>
+  <button md-mini-fab color="warn"><md-icon>thumb_up</md-icon></button>
+  <button md-mini-fab disabled><md-icon>check</md-icon></button>
+</ni-card>
+
+<ni-card [title]="'Button toggles'" class="mb-0">
+  <md-button-toggle-group #group="mdButtonToggleGroup">
+    <md-button-toggle value="left">
+      <md-icon>format_align_left</md-icon>
+    </md-button-toggle>
+    <md-button-toggle value="center">
+      <md-icon>format_align_center</md-icon>
+    </md-button-toggle>
+    <md-button-toggle value="right">
+      <md-icon>format_align_right</md-icon>
+    </md-button-toggle>
+    <md-button-toggle value="justify">
+      <md-icon>format_align_justify</md-icon>
+    </md-button-toggle>
+  </md-button-toggle-group>
+  <div class="mt-4">Selected value: {{group.value}}</div>
+</ni-card>

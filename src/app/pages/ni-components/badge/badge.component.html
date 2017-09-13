@@ -1,0 +1,88 @@
+<div class="row">
+  <div class="col-lg-3">
+    <ni-card [title]="'Simple badges'" class="badge-indent">
+      <ni-badge>128</ni-badge>
+      <ni-badge>5</ni-badge>
+      <ni-badge>Babge</ni-badge>
+    </ni-card>
+  </div>
+  <div class="col-lg-3">
+    <ni-card [title]="'Colored badges'" class="badge-indent">
+      <ni-badge>128</ni-badge>
+      <ni-badge [color]="'success'">5</ni-badge>
+      <ni-badge [color]="'info'">1554</ni-badge>
+      <ni-badge [color]="'warning'">29</ni-badge>
+      <ni-badge [color]="'danger'">87</ni-badge>
+      <ni-badge [customColor]="'#9B479F'">Badge</ni-badge>
+    </ni-card>
+  </div>
+  <div class="col-lg-3">
+    <ni-card [title]="'Outline badges'" class="badge-indent">
+      <ni-badge [outline]="true">128</ni-badge>
+      <ni-badge [color]="'success'" [outline]="true">5</ni-badge>
+      <ni-badge [color]="'info'" [outline]="true">1554</ni-badge>
+      <ni-badge [color]="'warning'" [outline]="true">29</ni-badge>
+      <ni-badge [color]="'danger'" [outline]="true">87</ni-badge>
+      <ni-badge [customColor]="'#9B479F'" [outline]="true">Badge</ni-badge>
+    </ni-card>
+  </div>
+  <div class="col-lg-3">
+    <ni-card [title]="'Square badges'" class="badge-indent">
+      <ni-badge [borderRadius]="false">128</ni-badge>
+      <ni-badge [color]="'success'" [borderRadius]="false">5</ni-badge>
+      <ni-badge [color]="'info'" [borderRadius]="false">1554</ni-badge>
+      <ni-badge [color]="'warning'" [borderRadius]="false">29</ni-badge>
+      <ni-badge [color]="'danger'" [borderRadius]="false">87</ni-badge>
+      <ni-badge [customColor]="'#9B479F'" [borderRadius]="false">Badge</ni-badge>
+    </ni-card>
+  </div>
+
+  <div class="col-lg-6">
+    <ni-card [title]="'Badges with arrow'" class="badge-indent">
+      <ni-badge [arrow]="'top'" [borderRadius]="false">128</ni-badge>
+      <ni-badge [color]="'success'" [borderRadius]="false" [arrow]="'right'">5</ni-badge>
+      <ni-badge [color]="'info'" [borderRadius]="false" [arrow]="'bottom'">154</ni-badge>
+      <ni-badge [color]="'warning'" [borderRadius]="false" [arrow]="'left'">29</ni-badge>
+      <ni-badge [color]="'danger'" [arrow]="'top'">87</ni-badge>
+      <ni-badge [customColor]="'#9B479F'" [arrow]="'right'">55</ni-badge>
+      <ni-badge [color]="'success'" [arrow]="'bottom'">588</ni-badge>
+      <ni-badge [color]="'info'" [arrow]="'left'">154</ni-badge>
+      <ni-badge [arrow]="'top'" [borderRadius]="false" [outline]="true">128</ni-badge>
+      <ni-badge [color]="'success'" [borderRadius]="false" [arrow]="'right'" [outline]="true">5</ni-badge>
+      <ni-badge [color]="'info'" [borderRadius]="false" [arrow]="'bottom'" [outline]="true">154</ni-badge>
+      <ni-badge [color]="'warning'" [borderRadius]="false" [arrow]="'left'" [outline]="true">29</ni-badge>
+    </ni-card>
+  </div>
+  <div class="col-lg-6">
+    <ni-card [title]="'Size badges'" class="badge-indent">
+      <ni-badge [size]="'large'">128</ni-badge>
+      <ni-badge [color]="'warning'" [borderRadius]="false" [size]="'large'">Large</ni-badge>
+      <ni-badge [color]="'success'" [size]="'medium'">518</ni-badge>
+      <ni-badge [color]="'danger'" [borderRadius]="false" [size]="'medium'">Medium</ni-badge>
+      <ni-badge [color]="'info'">154</ni-badge>
+      <ni-badge [customColor]="'#9B479F'" [borderRadius]="false">Default</ni-badge>
+    </ni-card>
+  </div>
+  <div class="col-lg-6">
+    <ni-card [title]="'Badges on button'">
+      <button md-button>Default <ni-badge>128</ni-badge></button>
+      <button md-button color="warn"><ni-badge [color]="'danger'">87</ni-badge> Warning</button>
+      <button md-raised-button color="primary">Primary <ni-badge [customColor]="'#9CAACE'">8</ni-badge></button>
+      <button md-raised-button color="accent"><ni-badge [color]="'info'" [customColor]="'#fff'" [outline]="true">1554</ni-badge> Accent</button>
+    </ni-card>
+  </div>
+  <div class="col-lg-6">
+    <ni-card [title]="'Badges with icon'" class="mb-0 icon-badge-indent">
+      <md-icon>mail_outline<ni-badge>5</ni-badge></md-icon>
+      <md-icon>shopping_cart<ni-badge [color]="'danger'" [position]="'top-left'">1</ni-badge></md-icon>
+      <md-icon>notifications_none<ni-badge [color]="'info'" [position]="'bottom-left'">8</ni-badge></md-icon>
+      <md-icon>local_phone<ni-badge [color]="'warning'" [position]="'bottom-right'">3</ni-badge></md-icon>
+      <md-icon>person<ni-badge [customColor]="'#9B479F'">15</ni-badge></md-icon>
+      <md-icon>notifications<ni-badge [color]="'danger'">813</ni-badge></md-icon>
+      <md-icon>desktop_mac<ni-badge [color]="'danger'">7</ni-badge></md-icon>
+      <md-icon>alarm<ni-badge [color]="'success'">new</ni-badge></md-icon>
+      <md-icon>home<ni-badge [color]="'danger'" [outline]="true">1</ni-badge></md-icon>
+      <md-icon>visibility<ni-badge [color]="'info'">9</ni-badge></md-icon>
+    </ni-card>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<ni-breadcrumb [menu]="breadcrumb" [style]="'custom1'" class="mb-4"></ni-breadcrumb>
+
+<ni-card [title]="'Basic input'">
+  <md-input-container>
+    <input mdInput placeholder="Input placeholder" value="">
+  </md-input-container>
+</ni-card>
+
+<ni-card [title]="'Prefix and Suffix'">
+  <md-input-container>
+    <span mdPrefix>Prefix</span>
+    <input mdInput placeholder="Input placeholder" value="">
+    <span mdSuffix>Suffix</span>
+  </md-input-container>
+</ni-card>
+
+<ni-card [title]="'Hint Labels'">
+  <md-input-container>
+    <input mdInput placeholder="Input placeholder" maxlength="100" value="Value" #characterCountHintExample>
+    <md-hint align="end">{{characterCountHintExample.value.length}} / 100</md-hint>
+  </md-input-container>
+</ni-card>
+
+<ni-card [title]="'Divider Color'">
+  <md-input-container>
+    <input mdInput placeholder="Default color" value="">
+  </md-input-container>
+  <md-input-container dividerColor="accent">
+    <input mdInput placeholder="Accent color" value="">
+  </md-input-container>
+  <md-input-container dividerColor="warn">
+    <input mdInput placeholder="Warning color" value="">
+  </md-input-container>
+</ni-card>
+
+<ni-card [title]="'Textarea'">
+  <md-input-container>
+    <textarea mdInput placeholder="Textarea placeholder">1600 Amphitheatre Pkwy</textarea>
+  </md-input-container>
+</ni-card>
+
+<ni-card [title]="'Autocomplete'" class="mb-0">
+  <md-input-container class="mb-0">
+    <input mdInput placeholder="State" [mdAutocomplete]="auto" [formControl]="stateCtrl">
+  </md-input-container>
+
+  <md-autocomplete #auto="mdAutocomplete">
+    <md-option *ngFor="let state of filteredStates | async" [value]="state">
+      {{ state }}
+    </md-option>
+  </md-autocomplete>
+</ni-card>

@@ -1,0 +1,39 @@
+<ni-breadcrumb [menu]="breadcrumb" [style]="'custom1'" class="mb-4"></ni-breadcrumb>
+
+<ni-card [title]="'Basic slider'">
+  <md-slider thumbLabel></md-slider>
+</ni-card>
+
+<ni-card [title]="'Selecting a value'">
+  <md-slider min="1" max="5" step="0.5" value="1.5" #slider2></md-slider> <span>{{slider2.value}}</span>
+</ni-card>
+
+<ni-card [title]="'Orientation'">
+  <p>
+    <strong>Horizontal</strong><br>
+    <md-slider></md-slider>
+  </p>
+
+  <p>
+    <strong>Vertical</strong><br>
+    <md-slider vertical></md-slider>
+  </p>
+
+  <p>
+    <strong>Invert</strong><br>
+    <md-slider invert></md-slider>
+  </p>
+</ni-card>
+
+<ni-card [title]="'Adding ticks'">
+  <md-slider thumbLabel tickInterval="1"></md-slider>
+</ni-card>
+
+<ni-card [title]="'Tick marks'">
+  <md-slider step="4" tickInterval="3"></md-slider>
+  <md-slider tickInterval="auto"></md-slider>
+</ni-card>
+
+<ni-card [title]="'Disabled'" class="mb-0">
+  <md-slider disabled value="5"></md-slider>
+</ni-card>

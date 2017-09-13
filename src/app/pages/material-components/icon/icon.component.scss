@@ -1,0 +1,12 @@
+@import '../../../../assets/sass/variable';
+
+:host .mat-icon {
+  background: main-color(100);
+  color: main-contrast(100);
+  font-size: 32px;
+  height: 50px;
+  padding: 9px;
+  margin: $module-rem;
+  text-align: center;
+  width: 50px;
+}
