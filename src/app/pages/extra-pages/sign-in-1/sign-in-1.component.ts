@@ -13,6 +13,6 @@ export class PageSignIn1Component implements OnInit {
   ngOnInit() { }
 
   onSubmit() {
-    this.router.navigate(['/default-layout/dashboard']);
+    // this.router.navigate(['/default-layout/dashboard']);
   }
 }

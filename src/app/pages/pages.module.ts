@@ -3,6 +3,7 @@ import { CommonModule }                    from '@angular/common';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { NiComponentsModule }              from '../ni-components/ni-components.module';
+import { RouterModule } from '@angular/router';
 
 import {
   MdAutocompleteModule,
@@ -99,10 +100,7 @@ import { PageLeafletMapComponent }         from './maps/leaflet-map/leaflet-map.
 import { PageWidgetsComponent }            from './widgets/widgets.component';
 import { PageLayoutsComponent }            from './layouts/layouts.component';
 import { PageSignIn1Component }            from './extra-pages/sign-in-1/sign-in-1.component';
-import { PageSignIn2Component }            from './extra-pages/sign-in-2/sign-in-2.component';
-import { PageSignIn3Component }            from './extra-pages/sign-in-3/sign-in-3.component';
 import { PageSignUp1Component }            from './extra-pages/sign-up-1/sign-up-1.component';
-import { PageSignUp2Component }            from './extra-pages/sign-up-2/sign-up-2.component';
 import { PageForgotComponent }             from './extra-pages/forgot/forgot.component';
 import { PageConfirmComponent }            from './extra-pages/confirm/confirm.component';
 import { Page404Component }                from './extra-pages/page-404/page-404.component';
@@ -156,7 +154,8 @@ import { PageNiButtonsComponent }          from './ni-components/buttons/buttons
       apiKey: 'AIzaSyAU9f7luK3J31nurL-Io3taRKF7w9BItQE'
     }),
     SqueezeBoxModule,
-    AmChartsModule
+    AmChartsModule,
+    RouterModule
   ],
   declarations: [
     PageDashboardComponent,
@@ -192,10 +191,7 @@ import { PageNiButtonsComponent }          from './ni-components/buttons/buttons
     PageTypographyComponent,
     PageNotFoundComponent,
     PageSignIn1Component,
-    PageSignIn2Component,
-    PageSignIn3Component,
     PageSignUp1Component,
-    PageSignUp2Component,
     PageForgotComponent,
     PageConfirmComponent,
     Page404Component,
@@ -257,10 +253,7 @@ import { PageNiButtonsComponent }          from './ni-components/buttons/buttons
     PageTypographyComponent,
     PageNotFoundComponent,
     PageSignIn1Component,
-    PageSignIn2Component,
-    PageSignIn3Component,
     PageSignUp1Component,
-    PageSignUp2Component,
     PageForgotComponent,
     PageConfirmComponent,
     Page404Component,

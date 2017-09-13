@@ -4,6 +4,9 @@ import { NgModule }                         from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule }          from '@angular/platform-browser/animations';
 
+import { UserAccessGuardService } from './services/user-access-guard.service';
+import { AuthService } from './services/auth.service';
+
 import { routes, AppRoutingModule }         from './app-routing.module';
 import { AppComponent }                     from './app.component';
 import { UIModule }                         from './ui/ui.module';
@@ -36,6 +39,10 @@ import { ExtraLayoutComponent }             from './layouts/extra/extra.componen
     UIModule,
     NiComponentsModule,
     PagesModule
+  ],
+  providers: [
+    UserAccessGuardService,
+    AuthService
   ],
   bootstrap: [ AppComponent ]
 })
