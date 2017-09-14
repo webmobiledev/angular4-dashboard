@@ -3,8 +3,11 @@ import { RouterModule }                     from '@angular/router';
 import { NgModule }                         from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule }          from '@angular/platform-browser/animations';
+import { Http } from '@angular/http';
+import { TranslateModule, TranslateLoader, TranslateStaticLoader, TranslateService } from 'ng2-translate';
 
 import { UserAccessGuardService } from './services/user-access-guard.service';
+import { UserConfirmEmailService } from './services/user-confirm-email.service';
 import { AuthService } from './services/auth.service';
 
 import { routes, AppRoutingModule }         from './app-routing.module';
@@ -18,6 +21,10 @@ import { BoxedLayoutComponent }             from './layouts/boxed/boxed.componen
 import { DefaultCLayoutComponent }          from './layouts/default-c/default-c.component';
 import { BoxedCLayoutComponent }            from './layouts/boxed-c/boxed-c.component';
 import { ExtraLayoutComponent }             from './layouts/extra/extra.component';
+
+export function translateLoader(http: Http) {
+  return new TranslateStaticLoader(http, 'assets/i18n', '.json');
+}
 
 @NgModule({
   declarations : [
@@ -33,8 +40,8 @@ import { ExtraLayoutComponent }             from './layouts/extra/extra.componen
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes, { useHash: true }),
-
+    RouterModule.forRoot(routes, { useHash: false }),
+    TranslateModule.forRoot(),
     AppRoutingModule,
     UIModule,
     NiComponentsModule,
@@ -42,7 +49,14 @@ import { ExtraLayoutComponent }             from './layouts/extra/extra.componen
   ],
   providers: [
     UserAccessGuardService,
-    AuthService
+    AuthService,
+    UserConfirmEmailService,
+    TranslateService,
+    {
+      provide: TranslateLoader,
+      useFactory: translateLoader,
+      deps: [Http]
+    }
   ],
   bootstrap: [ AppComponent ]
 })

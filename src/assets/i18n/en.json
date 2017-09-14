@@ -1,0 +1,10 @@
+{
+  "username": "Username",
+  "password": "Password",
+  "signin": "Sign in",
+  "signup": "Sign up",
+  "forgotPassword": "Forgot your password?",
+  "keepSigned": "Keep me signed in",
+  "email": "Email",
+  "selectLanguage": "Select Language"
+}

@@ -1,0 +1,10 @@
+{
+  "username": "Nom d'utilisateur",
+  "password": "Mot de passe",
+  "signin": "se connecter",
+  "signup": "S'inscrire",
+  "forgotPassword": "Mot de passe oublié?",
+  "keepSigned": "Gardez-moi connecté",
+  "email": "Email",
+  "selectLanguage": "Choisir la langue"
+}

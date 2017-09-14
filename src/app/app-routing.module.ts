@@ -2,6 +2,7 @@ import { NgModule }                     from '@angular/core';
 import { Routes, RouterModule }         from '@angular/router';
 
 import { UserAccessGuardService } from './services/user-access-guard.service';
+import { UserConfirmEmailService } from './services/user-confirm-email.service';
 
 import { DefaultLayoutComponent }       from './layouts/default/default.component';
 import { BoxedLayoutComponent }         from './layouts/boxed/boxed.component';
@@ -144,7 +145,11 @@ const extraRoutes: Routes = [
   { path: 'sign-in', component: PageSignIn1Component },
   { path: 'sign-up', component: PageSignUp1Component },
   { path: 'forgot', component: PageForgotComponent },
-  { path: 'confirm', component: PageConfirmComponent },
+  { 
+    path: 'confirm', 
+    component: PageConfirmComponent,
+    canActivate: [ UserConfirmEmailService ]
+  },
   { path: 'page-404', component: Page404Component },
   { path: 'page-500', component: Page500Component },
 ];

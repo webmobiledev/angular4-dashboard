@@ -1,25 +1,31 @@
-<ni-card [title]="'Sign in with your app id to continue'" [align]="'center'">
-  <form (ngSubmit)="onSubmit()">
+<ni-card [title]="'signin' | translate" [align]="'left'">
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
     <md-input-container>
-      <input mdInput placeholder="Username" value="">
+      <input mdInput [placeholder]="'email' | translate" value="" [formControl]="form.controls['email']" type="email">
     </md-input-container>
 
     <md-input-container>
-      <input mdInput placeholder="Password" value="">
+      <input mdInput [placeholder]="'password' | translate" value="" [formControl]="form.controls['password']" type="password">
     </md-input-container>
 
     <div class="text-left mb-module">
       <md-checkbox>
-        Keep me signed in
+        {{'keepSigned' | translate}}
       </md-checkbox>
     </div>
 
-    <button md-raised-button color="primary" type="submit">Sign In</button>
+    <button md-raised-button color="primary" type="submit">{{'signin' | translate}}</button>
+
+    <md-select [placeholder]="'selectLanguage' | translate" class="mt-4 col-sm-12" (ngModelChange)="changeLanguage()" [formControl]="form.controls['langCode']">
+      <md-option *ngFor="let lang of languages" [value]="lang.code">
+        {{ lang.value }}
+      </md-option>
+    </md-select>
 
     <div class="additional-info">
-      <a [routerLink]="'/extra-layout/sign-up'">Sign up</a>
+      <a [routerLink]="'/extra-layout/sign-up'">{{'signup' | translate}}</a>
       <span class="divider"></span>
-      <a [routerLink]="'/extra-layout/forgot'">Forgot your password?</a>
+      <a [routerLink]="'/extra-layout/forgot'">{{'forgotPassword' | translate}}</a>
     </div>
   </form>
 </ni-card>

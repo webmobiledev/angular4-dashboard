@@ -45,6 +45,7 @@ import { CalendarModule }                  from 'angular-calendar';
 import { AgmCoreModule }                   from '@agm/core';
 import { SqueezeBoxModule }                from 'squeezebox';
 import { AmChartsModule }                  from "@amcharts/amcharts3-angular";
+import { TranslateModule } from 'ng2-translate';
 
 import { PageDashboardComponent }          from './dashboards/dashboard-1/dashboard.component';
 import { PageDashboard2Component }         from './dashboards/dashboard-2/dashboard-2.component';
@@ -54,7 +55,6 @@ import { PageCardComponent }               from './material-components/card/card
 import { PageCheckboxComponent }           from './material-components/checkbox/checkbox.component';
 import { PageChipsComponent }              from './material-components/chips/chips.component';
 import { PageDialogComponent }             from './material-components/dialog/dialog.component';
-import { DialogResultComponent }           from './material-components/dialog/dialog.component';
 import { PageIconComponent }               from './material-components/icon/icon.component';
 import { PageInputComponent }              from './material-components/input/input.component';
 import { PageListComponent }               from './material-components/list/list.component';
@@ -101,6 +101,7 @@ import { PageWidgetsComponent }            from './widgets/widgets.component';
 import { PageLayoutsComponent }            from './layouts/layouts.component';
 import { PageSignIn1Component }            from './extra-pages/sign-in-1/sign-in-1.component';
 import { PageSignUp1Component }            from './extra-pages/sign-up-1/sign-up-1.component';
+import { DialogResultComponent }           from './extra-pages/sign-up-1/sign-up-1.component';
 import { PageForgotComponent }             from './extra-pages/forgot/forgot.component';
 import { PageConfirmComponent }            from './extra-pages/confirm/confirm.component';
 import { Page404Component }                from './extra-pages/page-404/page-404.component';
@@ -114,6 +115,7 @@ import { PageNiButtonsComponent }          from './ni-components/buttons/buttons
     ReactiveFormsModule,
 
     NiComponentsModule,
+    TranslateModule,
 
     MdAutocompleteModule,
     MdButtonModule,
