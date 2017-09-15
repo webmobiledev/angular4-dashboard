@@ -22,70 +22,22 @@ webpackEmptyAsyncContext.id = "../../../../../src lazy recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__ = __webpack_require__("../../../../../src/app/services/user-access-guard.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_confirm_email_service__ = __webpack_require__("../../../../../src/app/services/user-confirm-email.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__layouts_default_default_component__ = __webpack_require__("../../../../../src/app/layouts/default/default.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__layouts_boxed_boxed_component__ = __webpack_require__("../../../../../src/app/layouts/boxed/boxed.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__layouts_default_c_default_c_component__ = __webpack_require__("../../../../../src/app/layouts/default-c/default-c.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__layouts_boxed_c_boxed_c_component__ = __webpack_require__("../../../../../src/app/layouts/boxed-c/boxed-c.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__layouts_extra_extra_component__ = __webpack_require__("../../../../../src/app/layouts/extra/extra.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_dashboards_dashboard_1_dashboard_component__ = __webpack_require__("../../../../../src/app/pages/dashboards/dashboard-1/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_dashboards_dashboard_2_dashboard_2_component__ = __webpack_require__("../../../../../src/app/pages/dashboards/dashboard-2/dashboard-2.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_dashboards_dashboard_3_dashboard_3_component__ = __webpack_require__("../../../../../src/app/pages/dashboards/dashboard-3/dashboard-3.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_material_components_button_button_component__ = __webpack_require__("../../../../../src/app/pages/material-components/button/button.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_material_components_card_card_component__ = __webpack_require__("../../../../../src/app/pages/material-components/card/card.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_material_components_checkbox_checkbox_component__ = __webpack_require__("../../../../../src/app/pages/material-components/checkbox/checkbox.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_material_components_chips_chips_component__ = __webpack_require__("../../../../../src/app/pages/material-components/chips/chips.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_material_components_dialog_dialog_component__ = __webpack_require__("../../../../../src/app/pages/material-components/dialog/dialog.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_material_components_icon_icon_component__ = __webpack_require__("../../../../../src/app/pages/material-components/icon/icon.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_material_components_input_input_component__ = __webpack_require__("../../../../../src/app/pages/material-components/input/input.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_material_components_list_list_component__ = __webpack_require__("../../../../../src/app/pages/material-components/list/list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_material_components_menu_menu_component__ = __webpack_require__("../../../../../src/app/pages/material-components/menu/menu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_material_components_progress_bar_progress_bar_component__ = __webpack_require__("../../../../../src/app/pages/material-components/progress-bar/progress-bar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_material_components_progress_spinner_progress_spinner_component__ = __webpack_require__("../../../../../src/app/pages/material-components/progress-spinner/progress-spinner.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_material_components_radio_button_radio_button_component__ = __webpack_require__("../../../../../src/app/pages/material-components/radio-button/radio-button.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_material_components_select_select_component__ = __webpack_require__("../../../../../src/app/pages/material-components/select/select.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_material_components_slider_slider_component__ = __webpack_require__("../../../../../src/app/pages/material-components/slider/slider.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_material_components_slide_toggle_slide_toggle_component__ = __webpack_require__("../../../../../src/app/pages/material-components/slide-toggle/slide-toggle.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_material_components_snackbar_snackbar_component__ = __webpack_require__("../../../../../src/app/pages/material-components/snackbar/snackbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_material_components_tabs_tabs_component__ = __webpack_require__("../../../../../src/app/pages/material-components/tabs/tabs.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_material_components_toolbar_toolbar_component__ = __webpack_require__("../../../../../src/app/pages/material-components/toolbar/toolbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_material_components_tooltip_tooltip_component__ = __webpack_require__("../../../../../src/app/pages/material-components/tooltip/tooltip.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_ni_components_alert_alert_component__ = __webpack_require__("../../../../../src/app/pages/ni-components/alert/alert.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_ni_components_badge_badge_component__ = __webpack_require__("../../../../../src/app/pages/ni-components/badge/badge.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_ni_components_breadcrumb_breadcrumb_component__ = __webpack_require__("../../../../../src/app/pages/ni-components/breadcrumb/breadcrumb.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__pages_ni_components_buttons_buttons_component__ = __webpack_require__("../../../../../src/app/pages/ni-components/buttons/buttons.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__pages_ni_components_card_card_component__ = __webpack_require__("../../../../../src/app/pages/ni-components/card/card.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__pages_ni_components_chat_chat_component__ = __webpack_require__("../../../../../src/app/pages/ni-components/chat/chat.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__pages_ni_components_file_file_component__ = __webpack_require__("../../../../../src/app/pages/ni-components/file/file.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__pages_ni_components_h_timeline_h_timeline_component__ = __webpack_require__("../../../../../src/app/pages/ni-components/h-timeline/h-timeline.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__pages_typography_typography_component__ = __webpack_require__("../../../../../src/app/pages/typography/typography.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__pages_not_found_not_found_component__ = __webpack_require__("../../../../../src/app/pages/not-found/not-found.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__pages_extra_pages_sign_in_1_sign_in_1_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/sign-in-1/sign-in-1.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__pages_extra_pages_sign_up_1_sign_up_1_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/sign-up-1/sign-up-1.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__pages_extra_pages_forgot_forgot_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/forgot/forgot.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__pages_extra_pages_confirm_confirm_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/confirm/confirm.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__pages_extra_pages_page_404_page_404_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-404/page-404.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__pages_extra_pages_page_500_page_500_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-500/page-500.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__pages_pages_service_about_us_about_us_component__ = __webpack_require__("../../../../../src/app/pages/pages-service/about-us/about-us.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__pages_pages_service_faq_faq_component__ = __webpack_require__("../../../../../src/app/pages/pages-service/faq/faq.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__pages_pages_service_timeline_timeline_component__ = __webpack_require__("../../../../../src/app/pages/pages-service/timeline/timeline.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__pages_pages_service_invoice_invoice_component__ = __webpack_require__("../../../../../src/app/pages/pages-service/invoice/invoice.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__pages_charts_ng2_charts_ng2_charts_component__ = __webpack_require__("../../../../../src/app/pages/charts/ng2-charts/ng2-charts.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__pages_charts_ngx_charts_ngx_charts_component__ = __webpack_require__("../../../../../src/app/pages/charts/ngx-charts/ngx-charts.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__pages_charts_amcharts_amcharts_component__ = __webpack_require__("../../../../../src/app/pages/charts/amcharts/amcharts.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__pages_calendar_calendar_component__ = __webpack_require__("../../../../../src/app/pages/calendar/calendar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__pages_tables_simple_table_simple_table_component__ = __webpack_require__("../../../../../src/app/pages/tables/simple-table/simple-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__pages_tables_bootstrap_tables_bootstrap_tables_component__ = __webpack_require__("../../../../../src/app/pages/tables/bootstrap-tables/bootstrap-tables.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__pages_tables_editing_table_editing_table_component__ = __webpack_require__("../../../../../src/app/pages/tables/editing-table/editing-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__pages_tables_filtering_table_filtering_table_component__ = __webpack_require__("../../../../../src/app/pages/tables/filtering-table/filtering-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__pages_tables_pagination_table_pagination_table_component__ = __webpack_require__("../../../../../src/app/pages/tables/pagination-table/pagination-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__pages_forms_form_elements_form_elements_component__ = __webpack_require__("../../../../../src/app/pages/forms/form-elements/form-elements.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__pages_forms_form_layout_form_layout_component__ = __webpack_require__("../../../../../src/app/pages/forms/form-layout/form-layout.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__pages_forms_form_validation_form_validation_component__ = __webpack_require__("../../../../../src/app/pages/forms/form-validation/form-validation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__pages_maps_google_map_google_map_component__ = __webpack_require__("../../../../../src/app/pages/maps/google-map/google-map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__pages_maps_leaflet_map_leaflet_map_component__ = __webpack_require__("../../../../../src/app/pages/maps/leaflet-map/leaflet-map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__pages_widgets_widgets_component__ = __webpack_require__("../../../../../src/app/pages/widgets/widgets.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__pages_layouts_layouts_component__ = __webpack_require__("../../../../../src/app/pages/layouts/layouts.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__layouts_default_default_component__ = __webpack_require__("../../../../../src/app/layouts/default/default.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__layouts_extra_extra_component__ = __webpack_require__("../../../../../src/app/layouts/extra/extra.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_default_pages_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_default_pages_groups_groups_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/groups/groups.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_default_pages_transactions_transactions_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/transactions/transactions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_default_pages_requests_requests_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/requests/requests.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_default_pages_not_found_not_found_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/not-found/not-found.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_default_pages_aboutus_aboutus_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/aboutus/aboutus.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_default_pages_profile_profile_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/profile/profile.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_default_pages_simulation_simulation_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/simulation/simulation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_extra_pages_signin_signin_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/signin/signin.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_extra_pages_signup_signup_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/signup/signup.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_extra_pages_forgot_forgot_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/forgot/forgot.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_extra_pages_confirm_confirm_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/confirm/confirm.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_extra_pages_page_404_page_404_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-404/page-404.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_extra_pages_page_500_page_500_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-500/page-500.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -111,130 +63,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var defaultRoutes = [
-    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_9__pages_dashboards_dashboard_1_dashboard_component__["a" /* PageDashboardComponent */] },
-    { path: 'dashboard-2', component: __WEBPACK_IMPORTED_MODULE_10__pages_dashboards_dashboard_2_dashboard_2_component__["a" /* PageDashboard2Component */] },
-    { path: 'dashboard-3', component: __WEBPACK_IMPORTED_MODULE_11__pages_dashboards_dashboard_3_dashboard_3_component__["a" /* PageDashboard3Component */] },
-    { path: 'typography', component: __WEBPACK_IMPORTED_MODULE_39__pages_typography_typography_component__["a" /* PageTypographyComponent */] },
-    { path: 'widgets', component: __WEBPACK_IMPORTED_MODULE_65__pages_widgets_widgets_component__["a" /* PageWidgetsComponent */] },
-    { path: 'calendar', component: __WEBPACK_IMPORTED_MODULE_54__pages_calendar_calendar_component__["b" /* PageCalendarComponent */] },
-    { path: 'button', component: __WEBPACK_IMPORTED_MODULE_12__pages_material_components_button_button_component__["a" /* PageButtonComponent */] },
-    { path: 'card', component: __WEBPACK_IMPORTED_MODULE_13__pages_material_components_card_card_component__["a" /* PageCardComponent */] },
-    { path: 'checkbox', component: __WEBPACK_IMPORTED_MODULE_14__pages_material_components_checkbox_checkbox_component__["a" /* PageCheckboxComponent */] },
-    { path: 'chips', component: __WEBPACK_IMPORTED_MODULE_15__pages_material_components_chips_chips_component__["a" /* PageChipsComponent */] },
-    { path: 'dialog', component: __WEBPACK_IMPORTED_MODULE_16__pages_material_components_dialog_dialog_component__["a" /* PageDialogComponent */] },
-    { path: 'icon', component: __WEBPACK_IMPORTED_MODULE_17__pages_material_components_icon_icon_component__["a" /* PageIconComponent */] },
-    { path: 'input', component: __WEBPACK_IMPORTED_MODULE_18__pages_material_components_input_input_component__["a" /* PageInputComponent */] },
-    { path: 'list', component: __WEBPACK_IMPORTED_MODULE_19__pages_material_components_list_list_component__["a" /* PageListComponent */] },
-    { path: 'menu', component: __WEBPACK_IMPORTED_MODULE_20__pages_material_components_menu_menu_component__["a" /* PageMenuComponent */] },
-    { path: 'progress-bar', component: __WEBPACK_IMPORTED_MODULE_21__pages_material_components_progress_bar_progress_bar_component__["a" /* PageProgressBarComponent */] },
-    { path: 'progress-spinner', component: __WEBPACK_IMPORTED_MODULE_22__pages_material_components_progress_spinner_progress_spinner_component__["a" /* PageProgressSpinnerComponent */] },
-    { path: 'radio-button', component: __WEBPACK_IMPORTED_MODULE_23__pages_material_components_radio_button_radio_button_component__["a" /* PageRadioButtonComponent */] },
-    { path: 'select', component: __WEBPACK_IMPORTED_MODULE_24__pages_material_components_select_select_component__["a" /* PageSelectComponent */] },
-    { path: 'slider', component: __WEBPACK_IMPORTED_MODULE_25__pages_material_components_slider_slider_component__["a" /* PageSliderComponent */] },
-    { path: 'slide-toggle', component: __WEBPACK_IMPORTED_MODULE_26__pages_material_components_slide_toggle_slide_toggle_component__["a" /* PageSlideToggleComponent */] },
-    { path: 'snackbar', component: __WEBPACK_IMPORTED_MODULE_27__pages_material_components_snackbar_snackbar_component__["a" /* PageSnackbarComponent */] },
-    { path: 'tabs', component: __WEBPACK_IMPORTED_MODULE_28__pages_material_components_tabs_tabs_component__["a" /* PageTabsComponent */] },
-    { path: 'toolbar', component: __WEBPACK_IMPORTED_MODULE_29__pages_material_components_toolbar_toolbar_component__["a" /* PageToolbarComponent */] },
-    { path: 'tooltip', component: __WEBPACK_IMPORTED_MODULE_30__pages_material_components_tooltip_tooltip_component__["a" /* PageTooltipComponent */] },
-    { path: 'ni-alerts', component: __WEBPACK_IMPORTED_MODULE_31__pages_ni_components_alert_alert_component__["a" /* PageNiAlertsComponent */] },
-    { path: 'ni-badges', component: __WEBPACK_IMPORTED_MODULE_32__pages_ni_components_badge_badge_component__["a" /* PageNiBadgesComponent */] },
-    { path: 'ni-breadcrumbs', component: __WEBPACK_IMPORTED_MODULE_33__pages_ni_components_breadcrumb_breadcrumb_component__["a" /* PageNiBreadcrumbsComponent */] },
-    { path: 'ni-buttons', component: __WEBPACK_IMPORTED_MODULE_34__pages_ni_components_buttons_buttons_component__["a" /* PageNiButtonsComponent */] },
-    { path: 'ni-cards', component: __WEBPACK_IMPORTED_MODULE_35__pages_ni_components_card_card_component__["a" /* PageNiCardsComponent */] },
-    { path: 'ni-chat', component: __WEBPACK_IMPORTED_MODULE_36__pages_ni_components_chat_chat_component__["a" /* PageNiChatComponent */] },
-    { path: 'ni-files', component: __WEBPACK_IMPORTED_MODULE_37__pages_ni_components_file_file_component__["a" /* PageNiFilesComponent */] },
-    { path: 'ni-h-timeline', component: __WEBPACK_IMPORTED_MODULE_38__pages_ni_components_h_timeline_h_timeline_component__["a" /* PageNiHTimelineComponent */] },
-    { path: 'sign-in', component: __WEBPACK_IMPORTED_MODULE_41__pages_extra_pages_sign_in_1_sign_in_1_component__["a" /* PageSignIn1Component */] },
-    { path: 'sign-up', component: __WEBPACK_IMPORTED_MODULE_42__pages_extra_pages_sign_up_1_sign_up_1_component__["b" /* PageSignUp1Component */] },
-    { path: 'about-us', component: __WEBPACK_IMPORTED_MODULE_47__pages_pages_service_about_us_about_us_component__["a" /* PageAboutUsComponent */] },
-    { path: 'faq', component: __WEBPACK_IMPORTED_MODULE_48__pages_pages_service_faq_faq_component__["a" /* PageFaqComponent */] },
-    { path: 'timeline', component: __WEBPACK_IMPORTED_MODULE_49__pages_pages_service_timeline_timeline_component__["a" /* PageTimelineComponent */] },
-    { path: 'invoice', component: __WEBPACK_IMPORTED_MODULE_50__pages_pages_service_invoice_invoice_component__["a" /* PageInvoiceComponent */] },
-    { path: 'ng2-charts', component: __WEBPACK_IMPORTED_MODULE_51__pages_charts_ng2_charts_ng2_charts_component__["a" /* PageNg2ChartsComponent */] },
-    { path: 'ngx-charts', component: __WEBPACK_IMPORTED_MODULE_52__pages_charts_ngx_charts_ngx_charts_component__["a" /* PageNgxChartsComponent */] },
-    { path: 'amcharts', component: __WEBPACK_IMPORTED_MODULE_53__pages_charts_amcharts_amcharts_component__["a" /* PageAmchartsComponent */] },
-    { path: 'simple-table', component: __WEBPACK_IMPORTED_MODULE_55__pages_tables_simple_table_simple_table_component__["a" /* PageSimpleTableComponent */] },
-    { path: 'bootstrap-tables', component: __WEBPACK_IMPORTED_MODULE_56__pages_tables_bootstrap_tables_bootstrap_tables_component__["a" /* PageBootstrapTablesComponent */] },
-    { path: 'editing-table', component: __WEBPACK_IMPORTED_MODULE_57__pages_tables_editing_table_editing_table_component__["a" /* PageEditingTableComponent */] },
-    { path: 'filtering-table', component: __WEBPACK_IMPORTED_MODULE_58__pages_tables_filtering_table_filtering_table_component__["a" /* PageFilteringTableComponent */] },
-    { path: 'pagination-table', component: __WEBPACK_IMPORTED_MODULE_59__pages_tables_pagination_table_pagination_table_component__["a" /* PagePaginationTableComponent */] },
-    { path: 'form-elements', component: __WEBPACK_IMPORTED_MODULE_60__pages_forms_form_elements_form_elements_component__["a" /* PageFormElementsComponent */] },
-    { path: 'form-layout', component: __WEBPACK_IMPORTED_MODULE_61__pages_forms_form_layout_form_layout_component__["a" /* PageFormLayoutComponent */] },
-    { path: 'form-validation', component: __WEBPACK_IMPORTED_MODULE_62__pages_forms_form_validation_form_validation_component__["a" /* PageFormValidationComponent */] },
-    { path: 'google-map', component: __WEBPACK_IMPORTED_MODULE_63__pages_maps_google_map_google_map_component__["a" /* PageGoogleMapComponent */] },
-    { path: 'leaflet-map', component: __WEBPACK_IMPORTED_MODULE_64__pages_maps_leaflet_map_leaflet_map_component__["a" /* PageLeafletMapComponent */] },
-    { path: 'layouts', component: __WEBPACK_IMPORTED_MODULE_66__pages_layouts_layouts_component__["a" /* PageLayoutsComponent */] },
-    { path: '**', component: __WEBPACK_IMPORTED_MODULE_40__pages_not_found_not_found_component__["a" /* PageNotFoundComponent */] },
-];
-var boxedRoutes = [
-    { path: 'layouts', component: __WEBPACK_IMPORTED_MODULE_66__pages_layouts_layouts_component__["a" /* PageLayoutsComponent */] }
-];
-var boxedCRoutes = [
-    { path: 'layouts', component: __WEBPACK_IMPORTED_MODULE_66__pages_layouts_layouts_component__["a" /* PageLayoutsComponent */] }
-];
-var defaultCRoutes = [
-    { path: 'layouts', component: __WEBPACK_IMPORTED_MODULE_66__pages_layouts_layouts_component__["a" /* PageLayoutsComponent */] }
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_5__pages_default_pages_dashboard_dashboard_component__["a" /* PageDashboardComponent */] },
+    { path: 'groups', component: __WEBPACK_IMPORTED_MODULE_6__pages_default_pages_groups_groups_component__["a" /* PageGroupsComponent */] },
+    { path: 'transactions', component: __WEBPACK_IMPORTED_MODULE_7__pages_default_pages_transactions_transactions_component__["a" /* PageTransactionsComponent */] },
+    { path: 'requests', component: __WEBPACK_IMPORTED_MODULE_8__pages_default_pages_requests_requests_component__["a" /* PageRequestsComponent */] },
+    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_11__pages_default_pages_profile_profile_component__["a" /* PageProfileComponent */] },
+    { path: 'simulation', component: __WEBPACK_IMPORTED_MODULE_12__pages_default_pages_simulation_simulation_component__["a" /* PageSimulationComponent */] },
+    { path: 'aboutus', component: __WEBPACK_IMPORTED_MODULE_10__pages_default_pages_aboutus_aboutus_component__["a" /* PageAboutusComponent */] },
+    { path: '**', component: __WEBPACK_IMPORTED_MODULE_9__pages_default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */] },
 ];
 var extraRoutes = [
-    { path: 'sign-in', component: __WEBPACK_IMPORTED_MODULE_41__pages_extra_pages_sign_in_1_sign_in_1_component__["a" /* PageSignIn1Component */] },
-    { path: 'sign-up', component: __WEBPACK_IMPORTED_MODULE_42__pages_extra_pages_sign_up_1_sign_up_1_component__["b" /* PageSignUp1Component */] },
-    { path: 'forgot', component: __WEBPACK_IMPORTED_MODULE_43__pages_extra_pages_forgot_forgot_component__["a" /* PageForgotComponent */] },
+    { path: 'sign-in', component: __WEBPACK_IMPORTED_MODULE_13__pages_extra_pages_signin_signin_component__["a" /* PageSigninComponent */] },
+    {
+        path: 'sign-up',
+        component: __WEBPACK_IMPORTED_MODULE_14__pages_extra_pages_signup_signup_component__["b" /* PageSignupComponent */],
+        canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
+        data: {
+            authGuardRedirect: 'signup'
+        }
+    },
+    {
+        path: 'forgot',
+        component: __WEBPACK_IMPORTED_MODULE_15__pages_extra_pages_forgot_forgot_component__["a" /* PageForgotComponent */],
+        canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
+        data: {
+            authGuardRedirect: 'forgot'
+        }
+    },
     {
         path: 'confirm',
-        component: __WEBPACK_IMPORTED_MODULE_44__pages_extra_pages_confirm_confirm_component__["a" /* PageConfirmComponent */],
-        canActivate: [__WEBPACK_IMPORTED_MODULE_3__services_user_confirm_email_service__["a" /* UserConfirmEmailService */]]
+        component: __WEBPACK_IMPORTED_MODULE_16__pages_extra_pages_confirm_confirm_component__["a" /* PageConfirmComponent */],
+        canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
+        data: {
+            authGuardRedirect: 'confirm'
+        }
     },
-    { path: 'page-404', component: __WEBPACK_IMPORTED_MODULE_45__pages_extra_pages_page_404_page_404_component__["a" /* Page404Component */] },
-    { path: 'page-500', component: __WEBPACK_IMPORTED_MODULE_46__pages_extra_pages_page_500_page_500_component__["a" /* Page500Component */] },
+    {
+        path: 'page-404',
+        component: __WEBPACK_IMPORTED_MODULE_17__pages_extra_pages_page_404_page_404_component__["a" /* Page404Component */],
+        canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
+        data: {
+            authGuardRedirect: 'page404'
+        }
+    },
+    {
+        path: 'page-500',
+        component: __WEBPACK_IMPORTED_MODULE_18__pages_extra_pages_page_500_page_500_component__["a" /* Page500Component */],
+        canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
+        data: {
+            authGuardRedirect: 'page500'
+        }
+    },
 ];
 var routes = [
     {
@@ -244,36 +124,18 @@ var routes = [
     },
     {
         path: 'default-layout',
-        component: __WEBPACK_IMPORTED_MODULE_4__layouts_default_default_component__["a" /* DefaultLayoutComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_3__layouts_default_default_component__["a" /* DefaultLayoutComponent */],
         children: defaultRoutes,
         canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]]
     },
     {
-        path: 'default-c-layout',
-        component: __WEBPACK_IMPORTED_MODULE_6__layouts_default_c_default_c_component__["a" /* DefaultCLayoutComponent */],
-        children: defaultCRoutes,
-        canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]]
-    },
-    {
-        path: 'boxed-layout',
-        component: __WEBPACK_IMPORTED_MODULE_5__layouts_boxed_boxed_component__["a" /* BoxedLayoutComponent */],
-        children: boxedRoutes,
-        canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]]
-    },
-    {
-        path: 'boxed-c-layout',
-        component: __WEBPACK_IMPORTED_MODULE_7__layouts_boxed_c_boxed_c_component__["a" /* BoxedCLayoutComponent */],
-        children: boxedCRoutes,
-        canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]]
-    },
-    {
         path: 'extra-layout',
-        component: __WEBPACK_IMPORTED_MODULE_8__layouts_extra_extra_component__["a" /* ExtraLayoutComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_4__layouts_extra_extra_component__["a" /* ExtraLayoutComponent */],
         children: extraRoutes
     },
     {
         path: '**',
-        component: __WEBPACK_IMPORTED_MODULE_4__layouts_default_default_component__["a" /* DefaultLayoutComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_3__layouts_default_default_component__["a" /* DefaultLayoutComponent */],
         children: defaultRoutes,
         canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]]
     }
@@ -303,7 +165,6 @@ var AppRoutingModule = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_translate__ = __webpack_require__("../../../../ng2-translate/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -315,25 +176,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
 var AppComponent = (function () {
-    function AppComponent(auth, translate) {
+    function AppComponent(auth) {
         this.auth = auth;
-        this.translate = translate;
         auth.getConfirmParams(window.location.href);
-        translate.addLangs(['en', 'fr', 'es', 'pt']);
-        translate.setDefaultLang('en');
-        translate.use('en');
     }
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app',
             template: "<router-outlet></router-outlet>"
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ng2_translate__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ng2_translate__["c" /* TranslateService */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object])
     ], AppComponent);
     return AppComponent;
-    var _a, _b;
+    var _a;
 }());
 
 //# sourceMappingURL=app.component.js.map
@@ -354,28 +210,20 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_translate__ = __webpack_require__("../../../../ng2-translate/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_user_access_guard_service__ = __webpack_require__("../../../../../src/app/services/user-access-guard.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_user_confirm_email_service__ = __webpack_require__("../../../../../src/app/services/user-confirm-email.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ui_ui_module__ = __webpack_require__("../../../../../src/app/ui/ui.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ni_components_ni_components_module__ = __webpack_require__("../../../../../src/app/ni-components/ni-components.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_pages_module__ = __webpack_require__("../../../../../src/app/pages/pages.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__layouts_default_default_component__ = __webpack_require__("../../../../../src/app/layouts/default/default.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__layouts_boxed_boxed_component__ = __webpack_require__("../../../../../src/app/layouts/boxed/boxed.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__layouts_default_c_default_c_component__ = __webpack_require__("../../../../../src/app/layouts/default-c/default-c.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__layouts_boxed_c_boxed_c_component__ = __webpack_require__("../../../../../src/app/layouts/boxed-c/boxed-c.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__layouts_extra_extra_component__ = __webpack_require__("../../../../../src/app/layouts/extra/extra.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ui_ui_module__ = __webpack_require__("../../../../../src/app/ui/ui.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ni_components_ni_components_module__ = __webpack_require__("../../../../../src/app/ni-components/ni-components.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_pages_module__ = __webpack_require__("../../../../../src/app/pages/pages.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__layouts_default_default_component__ = __webpack_require__("../../../../../src/app/layouts/default/default.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__layouts_extra_extra_component__ = __webpack_require__("../../../../../src/app/layouts/extra/extra.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
-
-
 
 
 
@@ -401,29 +249,25 @@ var AppModule = (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__layouts_default_default_component__["a" /* DefaultLayoutComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__layouts_boxed_boxed_component__["a" /* BoxedLayoutComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__layouts_default_c_default_c_component__["a" /* DefaultCLayoutComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__layouts_boxed_c_boxed_c_component__["a" /* BoxedCLayoutComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__layouts_extra_extra_component__["a" /* ExtraLayoutComponent */]
+                __WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__layouts_default_default_component__["a" /* DefaultLayoutComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__layouts_extra_extra_component__["a" /* ExtraLayoutComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
                 __WEBPACK_IMPORTED_MODULE_3__angular_forms__["FormsModule"],
                 __WEBPACK_IMPORTED_MODULE_3__angular_forms__["ReactiveFormsModule"],
                 __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forRoot(__WEBPACK_IMPORTED_MODULE_10__app_routing_module__["b" /* routes */], { useHash: false }),
+                __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forRoot(__WEBPACK_IMPORTED_MODULE_9__app_routing_module__["b" /* routes */], { useHash: false }),
                 __WEBPACK_IMPORTED_MODULE_6_ng2_translate__["b" /* TranslateModule */].forRoot(),
-                __WEBPACK_IMPORTED_MODULE_10__app_routing_module__["a" /* AppRoutingModule */],
-                __WEBPACK_IMPORTED_MODULE_12__ui_ui_module__["a" /* UIModule */],
-                __WEBPACK_IMPORTED_MODULE_13__ni_components_ni_components_module__["a" /* NiComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_pages_module__["a" /* PagesModule */]
+                __WEBPACK_IMPORTED_MODULE_9__app_routing_module__["a" /* AppRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_11__ui_ui_module__["a" /* UIModule */],
+                __WEBPACK_IMPORTED_MODULE_12__ni_components_ni_components_module__["a" /* NiComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_pages_module__["a" /* PagesModule */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_7__services_user_access_guard_service__["a" /* UserAccessGuardService */],
-                __WEBPACK_IMPORTED_MODULE_9__services_auth_service__["a" /* AuthService */],
-                __WEBPACK_IMPORTED_MODULE_8__services_user_confirm_email_service__["a" /* UserConfirmEmailService */],
+                __WEBPACK_IMPORTED_MODULE_8__services_auth_service__["a" /* AuthService */],
                 __WEBPACK_IMPORTED_MODULE_6_ng2_translate__["c" /* TranslateService */],
                 {
                     provide: __WEBPACK_IMPORTED_MODULE_6_ng2_translate__["a" /* TranslateLoader */],
@@ -431,235 +275,13 @@ var AppModule = (function () {
                     deps: [__WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Http */]]
                 }
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
 }());
 
 //# sourceMappingURL=app.module.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/layouts/boxed-c/boxed-c.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"site-container\" [ngClass]=\"getClasses()\" [attr.dir]=\"rtl ? 'rtl' : null\">\r\n  <horizontal-navbar [title]=\"pageTitle\" (sidebarState)=\"sidebarState()\"></horizontal-navbar>\r\n\r\n  <vertical-navbar></vertical-navbar>\r\n\r\n  <addition-navbar></addition-navbar>\r\n\r\n  <main class=\"main-content\">\r\n    <div class=\"main-content-wrap\">\r\n      <router-outlet></router-outlet>\r\n    </div>\r\n    <app-footer></app-footer>\r\n  </main>\r\n\r\n  <div class=\"app-overlay\"></div>\r\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/layouts/boxed-c/boxed-c.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BoxedCLayoutComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BoxedCLayoutComponent = (function () {
-    function BoxedCLayoutComponent(_sharedService) {
-        var _this = this;
-        this._sharedService = _sharedService;
-        this.openedSidebar = false;
-        this.boxed = true;
-        this.compress = true;
-        this.menuStyle = 'style-3';
-        this.rtl = false;
-        _sharedService.changeEmitted$.subscribe(function (title) {
-            _this.pageTitle = title;
-        });
-    }
-    BoxedCLayoutComponent.prototype.ngOnInit = function () { };
-    BoxedCLayoutComponent.prototype.getClasses = function () {
-        var menu = (this.menuStyle);
-        return _a = {},
-            _a['menu-' + menu] = menu,
-            _a['boxed'] = this.boxed,
-            _a['compress-vertical-navbar'] = this.compress,
-            _a['open-sidebar'] = this.openedSidebar,
-            _a['rtl'] = this.rtl,
-            _a;
-        var _a;
-    };
-    BoxedCLayoutComponent.prototype.sidebarState = function () {
-        this.openedSidebar = !this.openedSidebar;
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-        __metadata("design:type", Boolean)
-    ], BoxedCLayoutComponent.prototype, "openedSidebar", void 0);
-    BoxedCLayoutComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'boxed-c-layout',
-            template: __webpack_require__("../../../../../src/app/layouts/boxed-c/boxed-c.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/layouts/layouts.scss")],
-            providers: [__WEBPACK_IMPORTED_MODULE_1__shared_service__["a" /* SharedService */]]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], BoxedCLayoutComponent);
-    return BoxedCLayoutComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=boxed-c.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/layouts/boxed/boxed.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"site-container\" [ngClass]=\"getClasses()\" [attr.dir]=\"rtl ? 'rtl' : null\">\r\n  <horizontal-navbar [title]=\"pageTitle\" (sidebarState)=\"sidebarState()\"></horizontal-navbar>\r\n\r\n  <vertical-navbar></vertical-navbar>\r\n\r\n  <addition-navbar></addition-navbar>\r\n\r\n  <main class=\"main-content\">\r\n    <div class=\"main-content-wrap\">\r\n      <router-outlet></router-outlet>\r\n    </div>\r\n    <app-footer></app-footer>\r\n  </main>\r\n\r\n  <div class=\"app-overlay\"></div>\r\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/layouts/boxed/boxed.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BoxedLayoutComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BoxedLayoutComponent = (function () {
-    function BoxedLayoutComponent(_sharedService) {
-        var _this = this;
-        this._sharedService = _sharedService;
-        this.openedSidebar = false;
-        this.boxed = true;
-        this.compress = false;
-        this.menuStyle = 'style-3';
-        this.rtl = false;
-        _sharedService.changeEmitted$.subscribe(function (title) {
-            _this.pageTitle = title;
-        });
-    }
-    BoxedLayoutComponent.prototype.ngOnInit = function () { };
-    BoxedLayoutComponent.prototype.getClasses = function () {
-        var menu = (this.menuStyle);
-        return _a = {},
-            _a['menu-' + menu] = menu,
-            _a['boxed'] = this.boxed,
-            _a['compress-vertical-navbar'] = this.compress,
-            _a['open-sidebar'] = this.openedSidebar,
-            _a['rtl'] = this.rtl,
-            _a;
-        var _a;
-    };
-    BoxedLayoutComponent.prototype.sidebarState = function () {
-        this.openedSidebar = !this.openedSidebar;
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-        __metadata("design:type", Boolean)
-    ], BoxedLayoutComponent.prototype, "openedSidebar", void 0);
-    BoxedLayoutComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'boxed-layout',
-            template: __webpack_require__("../../../../../src/app/layouts/boxed/boxed.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/layouts/layouts.scss")],
-            providers: [__WEBPACK_IMPORTED_MODULE_1__shared_service__["a" /* SharedService */]]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], BoxedLayoutComponent);
-    return BoxedLayoutComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=boxed.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/layouts/default-c/default-c.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"site-container\" [ngClass]=\"getClasses()\" [attr.dir]=\"rtl ? 'rtl' : null\">\r\n  <horizontal-navbar [title]=\"pageTitle\" (sidebarState)=\"sidebarState()\"></horizontal-navbar>\r\n\r\n  <vertical-navbar></vertical-navbar>\r\n\r\n  <addition-navbar></addition-navbar>\r\n\r\n  <main class=\"main-content\">\r\n    <div class=\"main-content-wrap\">\r\n      <router-outlet></router-outlet>\r\n    </div>\r\n    <app-footer></app-footer>\r\n  </main>\r\n\r\n  <div class=\"app-overlay\"></div>\r\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/layouts/default-c/default-c.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DefaultCLayoutComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var DefaultCLayoutComponent = (function () {
-    function DefaultCLayoutComponent(_sharedService) {
-        var _this = this;
-        this._sharedService = _sharedService;
-        this.openedSidebar = false;
-        this.boxed = false;
-        this.compress = true;
-        this.menuStyle = 'style-3';
-        this.rtl = false;
-        _sharedService.changeEmitted$.subscribe(function (title) {
-            _this.pageTitle = title;
-        });
-    }
-    DefaultCLayoutComponent.prototype.ngOnInit = function () { };
-    DefaultCLayoutComponent.prototype.getClasses = function () {
-        var menu = (this.menuStyle);
-        return _a = {},
-            _a['menu-' + menu] = menu,
-            _a['boxed'] = this.boxed,
-            _a['compress-vertical-navbar'] = this.compress,
-            _a['open-sidebar'] = this.openedSidebar,
-            _a['rtl'] = this.rtl,
-            _a;
-        var _a;
-    };
-    DefaultCLayoutComponent.prototype.sidebarState = function () {
-        this.openedSidebar = !this.openedSidebar;
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-        __metadata("design:type", Boolean)
-    ], DefaultCLayoutComponent.prototype, "openedSidebar", void 0);
-    DefaultCLayoutComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'default-c-layout',
-            template: __webpack_require__("../../../../../src/app/layouts/default-c/default-c.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/layouts/layouts.scss")],
-            providers: [__WEBPACK_IMPORTED_MODULE_1__shared_service__["a" /* SharedService */]]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], DefaultCLayoutComponent);
-    return DefaultCLayoutComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=default-c.component.js.map
 
 /***/ }),
 
@@ -2117,1008 +1739,14 @@ var NiHTimelineComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/calendar/calendar.component.html":
+/***/ "../../../../../src/app/pages/default-pages/aboutus/aboutus.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card [customBgColor]=\"'#ccc'\" [outline]=\"true\">\r\n  <div [ngSwitch]=\"view\">\r\n    <mwl-calendar-month-view\r\n      *ngSwitchCase=\"'month'\"\r\n      [viewDate]=\"viewDate\"\r\n      [events]=\"events\"\r\n      [refresh]=\"refresh\"\r\n      [activeDayIsOpen]=\"activeDayIsOpen\"\r\n      (dayClicked)=\"dayClicked($event.day)\"\r\n      (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n      (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n    </mwl-calendar-month-view>\r\n    <mwl-calendar-week-view\r\n      *ngSwitchCase=\"'week'\"\r\n      [viewDate]=\"viewDate\"\r\n      [events]=\"events\"\r\n      [refresh]=\"refresh\"\r\n      (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n      (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n    </mwl-calendar-week-view>\r\n    <mwl-calendar-day-view\r\n      *ngSwitchCase=\"'day'\"\r\n      [viewDate]=\"viewDate\"\r\n      [events]=\"events\"\r\n      [refresh]=\"refresh\"\r\n      (eventClicked)=\"handleEvent('Clicked', $event.event)\"\r\n      (eventTimesChanged)=\"eventTimesChanged($event)\">\r\n    </mwl-calendar-day-view>\r\n  </div>\r\n</ni-card>"
+module.exports = "\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'danger'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Orders</div>\r\n      <div class=\"count\">2,145</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+17%</ni-badge> <small>from previous period</small>\r\n      <md-icon>shopping_basket</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'warning'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Revenue</div>\r\n      <div class=\"count\">$ 50,24</div>\r\n      <small>11750</small>\r\n      <md-icon>equalizer</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'info'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Products</div>\r\n      <div class=\"count\">2,543</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+210</ni-badge>\r\n      <md-icon>monetization_on</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'success'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Sold</div>\r\n      <div class=\"count\">1,005</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+24%</ni-badge>\r\n      <md-icon>donut_large</md-icon>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6\">\r\n    <ni-card [title]=\"'About admin'\">\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente. Ad architecto at aut\r\n        et ex facilis fuga, laboriosam, magnam modi obcaecati officia officiis, omnis praesentium quam quas reiciendis\r\n        rerum ullam velit veritatis vitae.</p>\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-md-6\">\r\n          <p class=\"mb-1\"><strong>Wordpress</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"90\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Magento</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"80\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Opencart</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"60\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Drupal</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"30\"></md-progress-bar>\r\n          <div class=\"clearfix\"></div>\r\n        </div>\r\n\r\n        <div class=\"col-md-6\">\r\n          <p class=\"mb-1\"><strong>Angular</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"98\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>React</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"85\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Vue.js</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"40\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Backbone.js</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"38\"></md-progress-bar>\r\n          <div class=\"clearfix\"></div>\r\n        </div>\r\n      </div>\r\n\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam cumque dicta earum, iure maiores neque\r\n        nesciunt officia quisquam ullam.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6\">\r\n    <ni-card title=\"Audience Overview\">\r\n      <canvas\r\n        baseChart\r\n        [datasets]=\"lineChartData\"\r\n        [labels]=\"lineChartLabels\"\r\n        [options]=\"lineChartOptions\"\r\n        [colors]=\"lineChartColors\"\r\n        [legend]=\"lineChartLegend\"\r\n        [chartType]=\"lineChartType\"></canvas>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"text-center\">\r\n  <h4>Meet the Team</h4>\r\n  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, eum.</p>\r\n  <div class=\"clearfix\"></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [align]=\"'center'\" class=\"mb-xl-0\">\r\n      <img src=\"assets/content/person-4.jpg\" class=\"circle\" width=\"150\" height=\"150\" alt=\"\">\r\n      <h5>Mark Wahlberg</h5>\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto corporis culpa eaque earum eius\r\n        eligendi et eveniet ex fuga natus nulla quisquam quod repellat.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [align]=\"'center'\" class=\"mb-xl-0\">\r\n      <img src=\"assets/content/person-1.jpg\" class=\"circle\" width=\"150\" height=\"150\" alt=\"\">\r\n      <h5>Lindsay Lohan</h5>\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto corporis culpa eaque earum eius\r\n        eligendi et eveniet ex fuga natus nulla quisquam quod repellat.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [align]=\"'center'\" class=\"mb-md-0\">\r\n      <img src=\"assets/content/person-3.jpg\" class=\"circle\" width=\"150\" height=\"150\" alt=\"\">\r\n      <h5>Mary Jane</h5>\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto corporis culpa eaque earum eius\r\n        eligendi et eveniet ex fuga natus nulla quisquam quod repellat.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [align]=\"'center'\" class=\"mb-0\">\r\n      <img src=\"assets/content/person-5.jpg\" class=\"circle\" width=\"150\" height=\"150\" alt=\"\">\r\n      <h5>Tom Brady</h5>\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto corporis culpa eaque earum eius\r\n        eligendi et eveniet ex fuga natus nulla quisquam quod repellat.</p>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/calendar/calendar.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ":host {\n  display: block;\n  overflow-x: auto; }\n  :host /deep/card {\n    margin: 0;\n    min-width: 600px; }\n    :host /deep/card .card-wrap .card-content {\n      padding: 0 !important; }\n  :host /deep/.cal-month-view {\n    display: block; }\n    :host /deep/.cal-month-view .cal-day-badge {\n      background: #dc143c; }\n    :host /deep/.cal-month-view .cal-days {\n      border-left: 0;\n      border-right: 0; }\n    :host /deep/.cal-month-view .cal-open-day-events {\n      background: #666c7e;\n      box-shadow: none; }\n      :host /deep/.cal-month-view .cal-open-day-events .cal-event-action {\n        color: rgba(255, 255, 255, 0.5);\n        display: inline-block;\n        font-size: 16px;\n        margin: 0 2px;\n        vertical-align: top; }\n        :host /deep/.cal-month-view .cal-open-day-events .cal-event-action:hover {\n          color: #fff; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/calendar/calendar.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PageCalendarComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarDialogComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_date_fns__ = __webpack_require__("../../../../date-fns/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_date_fns___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_date_fns__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__ = __webpack_require__("../../../../rxjs/Subject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
-
-
-
-
-
-
-var BREADCRUMBS = [
-    {
-        title: 'Main',
-        link: '#'
-    },
-    {
-        title: 'Calendar',
-        link: ''
-    }
-];
-var colors = {
-    red: {
-        primary: '#ad2121',
-        secondary: '#FAE3E3'
-    },
-    blue: {
-        primary: '#1e90ff',
-        secondary: '#D1E8FF'
-    },
-    yellow: {
-        primary: '#e3bc08',
-        secondary: '#FDF1BA'
-    }
-};
-var PageCalendarComponent = (function () {
-    function PageCalendarComponent(dialog, doc, _sharedService) {
-        var _this = this;
-        this.dialog = dialog;
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Calendar';
-        this.breadcrumb = BREADCRUMBS;
-        this.config = {
-            disableClose: false,
-            width: '',
-            height: '',
-            position: {
-                top: '',
-                bottom: '',
-                left: '',
-                right: ''
-            },
-            data: {
-                action: '',
-                event: []
-            }
-        };
-        this.numTemplateOpens = 0;
-        this.view = 'month';
-        this.viewDate = new Date();
-        this.actions = [{
-                label: '<i class="fa fa-pencil"></i>',
-                onClick: function (_a) {
-                    var event = _a.event;
-                    _this.handleEvent('Edited', event);
-                }
-            }, {
-                label: '<i class="fa fa-times"></i>',
-                onClick: function (_a) {
-                    var event = _a.event;
-                    _this.events = _this.events.filter(function (iEvent) { return iEvent !== event; });
-                    _this.handleEvent('Deleted', event);
-                }
-            }];
-        this.refresh = new __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject__["Subject"]();
-        this.events = [{
-                start: Object(__WEBPACK_IMPORTED_MODULE_3_date_fns__["subDays"])(Object(__WEBPACK_IMPORTED_MODULE_3_date_fns__["startOfDay"])(new Date()), 1),
-                end: Object(__WEBPACK_IMPORTED_MODULE_3_date_fns__["addDays"])(new Date(), 1),
-                title: 'A 3 day event',
-                color: colors.red,
-                actions: this.actions
-            }, {
-                start: Object(__WEBPACK_IMPORTED_MODULE_3_date_fns__["startOfDay"])(new Date()),
-                title: 'An event with no end date',
-                color: colors.yellow,
-                actions: this.actions
-            }, {
-                start: Object(__WEBPACK_IMPORTED_MODULE_3_date_fns__["subDays"])(Object(__WEBPACK_IMPORTED_MODULE_3_date_fns__["endOfMonth"])(new Date()), 3),
-                end: Object(__WEBPACK_IMPORTED_MODULE_3_date_fns__["addDays"])(Object(__WEBPACK_IMPORTED_MODULE_3_date_fns__["endOfMonth"])(new Date()), 3),
-                title: 'A long event that spans 2 months',
-                color: colors.blue
-            }, {
-                start: Object(__WEBPACK_IMPORTED_MODULE_3_date_fns__["addHours"])(Object(__WEBPACK_IMPORTED_MODULE_3_date_fns__["startOfDay"])(new Date()), 2),
-                end: new Date(),
-                title: 'A draggable and resizable event',
-                color: colors.yellow,
-                actions: this.actions,
-                resizable: {
-                    beforeStart: true,
-                    afterEnd: true
-                },
-                draggable: true
-            }];
-        this.activeDayIsOpen = true;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageCalendarComponent.prototype.ngOnInit = function () { };
-    PageCalendarComponent.prototype.dayClicked = function (_a) {
-        var date = _a.date, events = _a.events;
-        if (Object(__WEBPACK_IMPORTED_MODULE_3_date_fns__["isSameMonth"])(date, this.viewDate)) {
-            if ((Object(__WEBPACK_IMPORTED_MODULE_3_date_fns__["isSameDay"])(this.viewDate, date) && this.activeDayIsOpen === true) ||
-                events.length === 0) {
-                this.activeDayIsOpen = false;
-            }
-            else {
-                this.activeDayIsOpen = true;
-                this.viewDate = date;
-            }
-        }
-    };
-    PageCalendarComponent.prototype.eventTimesChanged = function (_a) {
-        var event = _a.event, newStart = _a.newStart, newEnd = _a.newEnd;
-        event.start = newStart;
-        event.end = newEnd;
-        this.handleEvent('Dropped or resized', event);
-        this.refresh.next();
-    };
-    PageCalendarComponent.prototype.handleEvent = function (action, event) {
-        var _this = this;
-        this.config.data = { event: event, action: action };
-        this.dialogRef = this.dialog.open(CalendarDialogComponent, this.config);
-        this.dialogRef.afterClosed().subscribe(function (result) {
-            _this.lastCloseResult = result;
-            _this.dialogRef = null;
-        });
-    };
-    PageCalendarComponent.prototype.addEvent = function () {
-        this.events.push({
-            title: 'New event',
-            start: Object(__WEBPACK_IMPORTED_MODULE_3_date_fns__["startOfDay"])(new Date()),
-            end: Object(__WEBPACK_IMPORTED_MODULE_3_date_fns__["endOfDay"])(new Date()),
-            color: colors.red,
-            draggable: true,
-            resizable: {
-                beforeStart: true,
-                afterEnd: true
-            }
-        });
-        this.refresh.next();
-    };
-    PageCalendarComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-calendar',
-            changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectionStrategy"].OnPush,
-            template: __webpack_require__("../../../../../src/app/pages/calendar/calendar.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/calendar/calendar.component.scss")]
-        }),
-        __param(1, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["DOCUMENT"])),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["j" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["j" /* MdDialog */]) === "function" && _a || Object, Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__layouts_shared_service__["a" /* SharedService */]) === "function" && _b || Object])
-    ], PageCalendarComponent);
-    return PageCalendarComponent;
-    var _a, _b;
-}());
-
-var CalendarDialogComponent = (function () {
-    function CalendarDialogComponent(dialogRef, data) {
-        this.dialogRef = dialogRef;
-        this.data = data;
-    }
-    CalendarDialogComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-calendar-dialog',
-            template: "\n  <h5 class=\"mt-0\">Event action occurred</h5>\n  <div class=\"mb-4\">\n    <strong>Action:</strong>\n    <pre>{{ data?.action }}</pre>\n  </div>\n  <div class=\"mb-4\">\n    <strong>Event:</strong>\n    <pre>{{ data?.event | json }}</pre>\n  </div>\n  <button md-button type=\"button\" (click)=\"dialogRef.close()\">Close dialog</button>"
-        }),
-        __param(1, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["a" /* MD_DIALOG_DATA */])),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */]) === "function" && _a || Object, Object])
-    ], CalendarDialogComponent);
-    return CalendarDialogComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=calendar.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/charts/amcharts/amcharts.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n  <div class=\"col-xl-6\">\n    <ni-card title=\"Column chart\">\n      <div id=\"amchart-1\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\n    </ni-card>\n  </div>\n  <div class=\"col-xl-6\">\n    <ni-card title=\"Lines chart\">\n      <div id=\"amchart-2\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-xl-6\">\n    <ni-card title=\"Column and line chart\">\n      <div id=\"amchart-3\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\n    </ni-card>\n  </div>\n  <div class=\"col-xl-6\">\n    <ni-card title=\"Pie chart\">\n      <div id=\"amchart-4\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-xl-6\">\n    <ni-card title=\"Donut chart\">\n      <div id=\"amchart-5\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\n    </ni-card>\n  </div>\n  <div class=\"col-xl-6\">\n    <ni-card title=\"Radar chart\">\n      <div id=\"amchart-6\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-xl-6\">\n    <ni-card title=\"CSS animations chart\" class=\"mb-xl-0\">\n      <div id=\"amchart-7\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\n    </ni-card>\n  </div>\n  <div class=\"col-xl-6\">\n    <ni-card title=\"Bubble chart\" class=\"mb-0\">\n      <div id=\"amchart-8\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\n    </ni-card>\n  </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/charts/amcharts/amcharts.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ":host /deep/ .amcharts-graph-g2 .amcharts-graph-stroke {\n  stroke-dasharray: 3px 3px;\n  stroke-linejoin: round;\n  stroke-linecap: round;\n  -webkit-animation: am-moving-dashes 1s linear infinite;\n          animation: am-moving-dashes 1s linear infinite; }\n\n@-webkit-keyframes am-moving-dashes {\n  100% {\n    stroke-dashoffset: -31px; } }\n\n@keyframes am-moving-dashes {\n  100% {\n    stroke-dashoffset: -31px; } }\n\n:host /deep/ .lastBullet {\n  -webkit-animation: am-pulsating 1s ease-out infinite;\n          animation: am-pulsating 1s ease-out infinite; }\n\n@-webkit-keyframes am-pulsating {\n  0% {\n    stroke-opacity: 1;\n    stroke-width: 0px; }\n  100% {\n    stroke-opacity: 0;\n    stroke-width: 50px; } }\n\n@keyframes am-pulsating {\n  0% {\n    stroke-opacity: 1;\n    stroke-width: 0px; }\n  100% {\n    stroke-opacity: 0;\n    stroke-width: 50px; } }\n\n:host /deep/ .amcharts-graph-column-front {\n  transition: all .3s .3s ease-out; }\n\n:host /deep/ .amcharts-graph-column-front:hover {\n  fill: #496375;\n  stroke: #496375;\n  transition: all .3s ease-out; }\n\n:host /deep/ .amcharts-graph-g3 {\n  stroke-linejoin: round;\n  stroke-linecap: round;\n  stroke-dasharray: 500%;\n  stroke-dasharray: 0;\n  stroke-dashoffset: 0;\n  -webkit-animation: am-draw 40s;\n          animation: am-draw 40s; }\n\n@-webkit-keyframes am-draw {\n  0% {\n    stroke-dashoffset: 500%; }\n  100% {\n    stroke-dashoffset: 0%; } }\n\n@keyframes am-draw {\n  0% {\n    stroke-dashoffset: 500%; }\n  100% {\n    stroke-dashoffset: 0%; } }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/charts/amcharts/amcharts.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageAmchartsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__ = __webpack_require__("../../../../@amcharts/amcharts3-angular/es2015/index.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var PageAmchartsComponent = (function () {
-    function PageAmchartsComponent(AmCharts, _sharedService) {
-        this.AmCharts = AmCharts;
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Amcharts';
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageAmchartsComponent.prototype.ngOnInit = function () {
-        this.chart = this.AmCharts.makeChart('amchart-1', {
-            'type': 'serial',
-            'theme': 'light',
-            'dataProvider': [
-                {
-                    'country': 'Angular',
-                    'visits': 1232
-                }, {
-                    'country': 'AngularJS',
-                    'visits': 1882
-                }, {
-                    'country': 'React',
-                    'visits': 1809
-                }, {
-                    'country': 'Vue.js',
-                    'visits': 1322
-                }, {
-                    'country': 'Backbone.js',
-                    'visits': 1542
-                }, {
-                    'country': 'Ember.js',
-                    'visits': 1497
-                }, {
-                    'country': 'Meteor.js',
-                    'visits': 1240
-                }, {
-                    'country': 'jQuery',
-                    'visits': 711
-                }
-            ],
-            'valueAxes': [{
-                    'gridColor': '#FFFFFF',
-                    'gridAlpha': 0.2,
-                    'dashLength': 0
-                }],
-            'gridAboveGraphs': true,
-            'startDuration': 1,
-            'graphs': [{
-                    'balloonText': '[[category]]: <b>[[value]]</b>',
-                    'fillAlphas': 0.8,
-                    'lineAlpha': 0.2,
-                    'type': 'column',
-                    'valueField': 'visits'
-                }],
-            'chartCursor': {
-                'categoryBalloonEnabled': false,
-                'cursorAlpha': 0,
-                'zoomable': false
-            },
-            'categoryField': 'country',
-            'categoryAxis': {
-                'gridPosition': 'start',
-                'gridAlpha': 0,
-                'tickPosition': 'start',
-                'tickLength': 20
-            }
-        });
-        this.chart = this.AmCharts.makeChart('amchart-2', {
-            'type': 'serial',
-            'theme': 'light',
-            //'autoMarginOffset':20,
-            'dataDateFormat': 'YYYY-MM-DD HH:NN',
-            'dataProvider': [
-                {
-                    'date': '2012-01-01',
-                    'value': 8
-                }, {
-                    'date': '2012-01-02',
-                    'color': '#CC0000',
-                    'value': 10
-                }, {
-                    'date': '2012-01-03',
-                    'value': 12
-                }, {
-                    'date': '2012-01-04',
-                    'value': 14
-                }, {
-                    'date': '2012-01-05',
-                    'value': 11
-                }, {
-                    'date': '2012-01-06',
-                    'value': 6
-                }, {
-                    'date': '2012-01-07',
-                    'value': 7
-                }, {
-                    'date': '2012-01-08',
-                    'value': 9
-                }, {
-                    'date': '2012-01-09',
-                    'value': 13
-                }, {
-                    'date': '2012-01-10',
-                    'value': 15
-                }, {
-                    'date': '2012-01-11',
-                    'color': '#CC0000',
-                    'value': 19
-                }, {
-                    'date': '2012-01-12',
-                    'value': 21
-                }, {
-                    'date': '2012-01-13',
-                    'value': 22
-                }, {
-                    'date': '2012-01-14',
-                    'value': 20
-                }, {
-                    'date': '2012-01-15',
-                    'value': 18
-                }, {
-                    'date': '2012-01-16',
-                    'value': 14
-                }, {
-                    'date': '2012-01-17',
-                    'color': '#CC0000',
-                    'value': 16
-                }, {
-                    'date': '2012-01-18',
-                    'value': 18
-                }, {
-                    'date': '2012-01-19',
-                    'value': 17
-                }, {
-                    'date': '2012-01-20',
-                    'value': 15
-                }, {
-                    'date': '2012-01-21',
-                    'value': 12
-                }, {
-                    'date': '2012-01-22',
-                    'color': '#CC0000',
-                    'value': 10
-                }, {
-                    'date': '2012-01-23',
-                    'value': 8
-                }
-            ],
-            'valueAxes': [{
-                    'axisAlpha': 0,
-                    'guides': [{
-                            'fillAlpha': 0.1,
-                            'fillColor': '#888888',
-                            'lineAlpha': 0,
-                            'toValue': 16,
-                            'value': 10
-                        }],
-                    'position': 'left',
-                    'tickLength': 0
-                }],
-            'graphs': [{
-                    'balloonText': '[[category]]<br><b><span style="font-size:14px;">value:[[value]]</span></b>',
-                    'bullet': 'round',
-                    'dashLength': 3,
-                    'colorField': 'color',
-                    'valueField': 'value'
-                }],
-            'trendLines': [{
-                    'finalDate': '2012-01-11 12',
-                    'finalValue': 19,
-                    'initialDate': '2012-01-02 12',
-                    'initialValue': 10,
-                    'lineColor': '#CC0000'
-                }, {
-                    'finalDate': '2012-01-22 12',
-                    'finalValue': 10,
-                    'initialDate': '2012-01-17 12',
-                    'initialValue': 16,
-                    'lineColor': '#CC0000'
-                }],
-            'chartCursor': {
-                'fullWidth': true,
-                'valueLineEabled': true,
-                'valueLineBalloonEnabled': true,
-                'valueLineAlpha': 0.5,
-                'cursorAlpha': 0
-            },
-            'categoryField': 'date',
-            'categoryAxis': {
-                'parseDates': true,
-                'axisAlpha': 0,
-                'gridAlpha': 0.1,
-                'minorGridAlpha': 0.1,
-                'minorGridEnabled': true
-            }
-        });
-        this.chart = this.AmCharts.makeChart('amchart-3', {
-            'type': 'serial',
-            'addClassNames': true,
-            'theme': 'light',
-            'autoMargins': false,
-            'marginLeft': 30,
-            'marginRight': 8,
-            'marginTop': 10,
-            'marginBottom': 26,
-            'balloon': {
-                'adjustBorderColor': false,
-                'horizontalPadding': 10,
-                'verticalPadding': 8,
-                'color': '#ffffff'
-            },
-            'dataProvider': [{
-                    'year': 2012,
-                    'income': 23.5,
-                    'expenses': 21.1
-                }, {
-                    'year': 2013,
-                    'income': 26.2,
-                    'expenses': 30.5
-                }, {
-                    'year': 2014,
-                    'income': 30.1,
-                    'expenses': 34.9
-                }, {
-                    'year': 2015,
-                    'income': 29.5,
-                    'expenses': 31.1
-                }, {
-                    'year': 2016,
-                    'income': 30.6,
-                    'expenses': 28.2,
-                    'dashLengthLine': 5
-                }, {
-                    'year': 2017,
-                    'income': 34.1,
-                    'expenses': 32.9,
-                    'dashLengthColumn': 5,
-                    'alpha': 0.2,
-                    'additional': '(projection)'
-                }],
-            'valueAxes': [{
-                    'axisAlpha': 0,
-                    'position': 'left'
-                }],
-            'startDuration': 1,
-            'graphs': [{
-                    'alphaField': 'alpha',
-                    'balloonText': '<span style="font-size:12px;">[[title]] in [[category]]:<br><span style="font-size:20px;">[[value]]</span> [[additional]]</span>',
-                    'fillAlphas': 1,
-                    'title': 'Income',
-                    'type': 'column',
-                    'valueField': 'income',
-                    'dashLengthField': 'dashLengthColumn'
-                }, {
-                    'id': 'graph2',
-                    'balloonText': '<span style="font-size:12px;">[[title]] in [[category]]:<br><span style="font-size:20px;">[[value]]</span> [[additional]]</span>',
-                    'bullet': 'round',
-                    'lineThickness': 3,
-                    'bulletSize': 7,
-                    'bulletBorderAlpha': 1,
-                    'bulletColor': '#FFFFFF',
-                    'useLineColorForBulletBorder': true,
-                    'bulletBorderThickness': 3,
-                    'fillAlphas': 0,
-                    'lineAlpha': 1,
-                    'title': 'Expenses',
-                    'valueField': 'expenses',
-                    'dashLengthField': 'dashLengthLine'
-                }],
-            'categoryField': 'year',
-            'categoryAxis': {
-                'gridPosition': 'start',
-                'axisAlpha': 0,
-                'tickLength': 0
-            }
-        });
-        this.chart = this.AmCharts.makeChart('amchart-4', {
-            'type': 'pie',
-            'theme': 'light',
-            'dataProvider': [
-                {
-                    'country': 'Lithuania',
-                    'litres': 501.9
-                }, {
-                    'country': 'Czech Republic',
-                    'litres': 301.9
-                }, {
-                    'country': 'Ireland',
-                    'litres': 201.1
-                }, {
-                    'country': 'Germany',
-                    'litres': 165.8
-                }, {
-                    'country': 'Australia',
-                    'litres': 139.9
-                }, {
-                    'country': 'Austria',
-                    'litres': 128.3
-                }, {
-                    'country': 'UK',
-                    'litres': 99
-                }, {
-                    'country': 'Belgium',
-                    'litres': 60
-                }, {
-                    'country': 'The Netherlands',
-                    'litres': 50
-                }
-            ],
-            'valueField': 'litres',
-            'titleField': 'country',
-            'balloon': {
-                'fixedPosition': true
-            }
-        });
-        this.chart = this.AmCharts.makeChart('amchart-5', {
-            'type': 'pie',
-            'theme': 'light',
-            'dataProvider': [
-                {
-                    'title': 'New',
-                    'value': 4852
-                }, {
-                    'title': 'Returning',
-                    'value': 9899
-                }
-            ],
-            'titleField': 'title',
-            'valueField': 'value',
-            'labelRadius': 5,
-            'radius': '42%',
-            'innerRadius': '60%',
-            'labelText': '[[title]]'
-        });
-        this.chart = this.AmCharts.makeChart('amchart-6', {
-            'type': 'radar',
-            'theme': 'light',
-            'dataProvider': [
-                {
-                    'country': 'Czech Republic',
-                    'litres': 156.9
-                }, {
-                    'country': 'Ireland',
-                    'litres': 131.1
-                }, {
-                    'country': 'Germany',
-                    'litres': 115.8
-                }, {
-                    'country': 'Australia',
-                    'litres': 109.9
-                }, {
-                    'country': 'Austria',
-                    'litres': 108.3
-                }, {
-                    'country': 'UK',
-                    'litres': 99
-                }
-            ],
-            'valueAxes': [{
-                    'axisTitleOffset': 20,
-                    'minimum': 0,
-                    'axisAlpha': 0.15
-                }],
-            'startDuration': 2,
-            'graphs': [{
-                    'balloonText': '[[value]] litres of beer per year',
-                    'bullet': 'round',
-                    'lineThickness': 2,
-                    'valueField': 'litres'
-                }],
-            'categoryField': 'country'
-        });
-        this.chart = this.AmCharts.makeChart('amchart-7', {
-            'type': 'serial',
-            'theme': 'light',
-            'dataDateFormat': 'YYYY-MM-DD',
-            'dataProvider': [
-                {
-                    'date': '2012-01-01',
-                    'distance': 227,
-                    'townName': 'New York',
-                    'townName2': 'New York',
-                    'townSize': 25,
-                    'latitude': 40.71,
-                    'duration': 408
-                }, {
-                    'date': '2012-01-02',
-                    'distance': 371,
-                    'townName': 'Washington',
-                    'townSize': 14,
-                    'latitude': 38.89,
-                    'duration': 482
-                }, {
-                    'date': '2012-01-03',
-                    'distance': 433,
-                    'townName': 'Wilmington',
-                    'townSize': 6,
-                    'latitude': 34.22,
-                    'duration': 562
-                }, {
-                    'date': '2012-01-04',
-                    'distance': 345,
-                    'townName': 'Jacksonville',
-                    'townSize': 7,
-                    'latitude': 30.35,
-                    'duration': 379
-                }, {
-                    'date': '2012-01-05',
-                    'distance': 480,
-                    'townName': 'Miami',
-                    'townName2': 'Miami',
-                    'townSize': 10,
-                    'latitude': 25.83,
-                    'duration': 501
-                }, {
-                    'date': '2012-01-06',
-                    'distance': 386,
-                    'townName': 'Tallahassee',
-                    'townSize': 7,
-                    'latitude': 30.46,
-                    'duration': 443
-                }, {
-                    'date': '2012-01-07',
-                    'distance': 348,
-                    'townName': 'New Orleans',
-                    'townSize': 10,
-                    'latitude': 29.94,
-                    'duration': 405
-                }, {
-                    'date': '2012-01-08',
-                    'distance': 238,
-                    'townName': 'Houston',
-                    'townName2': 'Houston',
-                    'townSize': 16,
-                    'latitude': 29.76,
-                    'duration': 309
-                }, {
-                    'date': '2012-01-09',
-                    'distance': 218,
-                    'townName': 'Dalas',
-                    'townSize': 17,
-                    'latitude': 32.8,
-                    'duration': 287
-                }, {
-                    'date': '2012-01-10',
-                    'distance': 349,
-                    'townName': 'Oklahoma City',
-                    'townSize': 11,
-                    'latitude': 35.49,
-                    'duration': 485
-                }, {
-                    'date': '2012-01-11',
-                    'distance': 603,
-                    'townName': 'Kansas City',
-                    'townSize': 10,
-                    'latitude': 39.1,
-                    'duration': 890
-                }, {
-                    'date': '2012-01-12',
-                    'distance': 534,
-                    'townName': 'Denver',
-                    'townName2': 'Denver',
-                    'townSize': 18,
-                    'latitude': 39.74,
-                    'duration': 810
-                }, {
-                    'date': '2012-01-13',
-                    'townName': 'Salt Lake City',
-                    'townSize': 12,
-                    'distance': 425,
-                    'duration': 670,
-                    'latitude': 40.75,
-                    'alpha': 0.4
-                }, {
-                    'date': '2012-01-14',
-                    'latitude': 36.1,
-                    'duration': 470,
-                    'townName': 'Las Vegas',
-                    'townName2': 'Las Vegas',
-                    'bulletClass': 'lastBullet'
-                }, {
-                    'date': '2012-01-15'
-                }, {
-                    'date': '2012-01-16'
-                }, {
-                    'date': '2012-01-17'
-                }, {
-                    'date': '2012-01-18'
-                }, {
-                    'date': '2012-01-19'
-                }
-            ],
-            'addClassNames': true,
-            'startDuration': 1,
-            //'color': '#FFFFFF',
-            'marginLeft': 0,
-            'categoryField': 'date',
-            'categoryAxis': {
-                'parseDates': true,
-                'minPeriod': 'DD',
-                'autoGridCount': false,
-                'gridCount': 50,
-                'gridAlpha': 0.1,
-                'gridColor': '#FFFFFF',
-                'axisColor': '#555555',
-                'dateFormats': [{
-                        'period': 'DD',
-                        'format': 'DD'
-                    }, {
-                        'period': 'WW',
-                        'format': 'MMM DD'
-                    }, {
-                        'period': 'MM',
-                        'format': 'MMM'
-                    }, {
-                        'period': 'YYYY',
-                        'format': 'YYYY'
-                    }]
-            },
-            'valueAxes': [{
-                    'id': 'a1',
-                    'title': 'distance',
-                    'gridAlpha': 0,
-                    'axisAlpha': 0
-                }, {
-                    'id': 'a2',
-                    'position': 'right',
-                    'gridAlpha': 0,
-                    'axisAlpha': 0,
-                    'labelsEnabled': false
-                }, {
-                    'id': 'a3',
-                    'title': 'duration',
-                    'position': 'right',
-                    'gridAlpha': 0,
-                    'axisAlpha': 0,
-                    'inside': true,
-                    'duration': 'mm',
-                    'durationUnits': {
-                        'DD': 'd. ',
-                        'hh': 'h ',
-                        'mm': 'min',
-                        'ss': ''
-                    }
-                }],
-            'graphs': [{
-                    'id': 'g1',
-                    'valueField': 'distance',
-                    'title': 'distance',
-                    'type': 'column',
-                    'fillAlphas': 0.9,
-                    'valueAxis': 'a1',
-                    'balloonText': '[[value]] miles',
-                    'legendValueText': '[[value]] mi',
-                    'legendPeriodValueText': 'total: [[value.sum]] mi',
-                    'lineColor': '#263138',
-                    'alphaField': 'alpha'
-                }, {
-                    'id': 'g2',
-                    'valueField': 'latitude',
-                    'classNameField': 'bulletClass',
-                    'title': 'latitude/city',
-                    'type': 'line',
-                    'valueAxis': 'a2',
-                    'lineColor': '#786c56',
-                    'lineThickness': 1,
-                    'legendValueText': '[[value]]/[[description]]',
-                    'descriptionField': 'townName',
-                    'bullet': 'round',
-                    'bulletSizeField': 'townSize',
-                    'bulletBorderColor': '#786c56',
-                    'bulletBorderAlpha': 1,
-                    'bulletBorderThickness': 2,
-                    'bulletColor': '#000000',
-                    'labelText': '[[townName2]]',
-                    'labelPosition': 'right',
-                    'balloonText': 'latitude:[[value]]',
-                    'showBalloon': true,
-                    'animationPlayed': true
-                }, {
-                    'id': 'g3',
-                    'title': 'duration',
-                    'valueField': 'duration',
-                    'type': 'line',
-                    'valueAxis': 'a3',
-                    'lineColor': '#ff5755',
-                    'balloonText': '[[value]]',
-                    'lineThickness': 1,
-                    'legendValueText': '[[value]]',
-                    'bullet': 'square',
-                    'bulletBorderColor': '#ff5755',
-                    'bulletBorderThickness': 1,
-                    'bulletBorderAlpha': 1,
-                    'dashLengthField': 'dashLength',
-                    'animationPlayed': true
-                }],
-            'chartCursor': {
-                'zoomable': false,
-                'categoryBalloonDateFormat': 'DD',
-                'cursorAlpha': 0,
-                'valueBalloonsEnabled': false
-            },
-            'legend': {
-                'bulletType': 'round',
-                'equalWidths': false,
-                'valueWidth': 120,
-                'useGraphSettings': true,
-            }
-        });
-        this.chart = this.AmCharts.makeChart('amchart-8', {
-            'type': 'xy',
-            'theme': 'light',
-            'balloon': {
-                'fixedPosition': true,
-            },
-            'dataProvider': [{
-                    'y': 10,
-                    'x': 14,
-                    'value': 59,
-                    'y2': -5,
-                    'x2': -3,
-                    'value2': 44
-                }, {
-                    'y': 5,
-                    'x': 3,
-                    'value': 50,
-                    'y2': -15,
-                    'x2': -8,
-                    'value2': 12
-                }, {
-                    'y': -10,
-                    'x': 8,
-                    'value': 19,
-                    'y2': -4,
-                    'x2': 6,
-                    'value2': 35
-                }, {
-                    'y': -6,
-                    'x': 5,
-                    'value': 65,
-                    'y2': -5,
-                    'x2': -6,
-                    'value2': 168
-                }, {
-                    'y': 15,
-                    'x': -4,
-                    'value': 92,
-                    'y2': -10,
-                    'x2': -8,
-                    'value2': 102
-                }, {
-                    'y': 13,
-                    'x': 1,
-                    'value': 8,
-                    'y2': -2,
-                    'x2': 0,
-                    'value2': 41
-                }, {
-                    'y': 1,
-                    'x': 6,
-                    'value': 35,
-                    'y2': 0,
-                    'x2': -3,
-                    'value2': 16
-                }],
-            'valueAxes': [{
-                    'position': 'bottom',
-                    'axisAlpha': 0
-                }, {
-                    'minMaxMultiplier': 1.2,
-                    'axisAlpha': 0,
-                    'position': 'left'
-                }],
-            'startDuration': 1.5,
-            'graphs': [{
-                    'balloonText': 'x:<b>[[x]]</b> y:<b>[[y]]</b><br>value:<b>[[value]]</b>',
-                    'bullet': 'circle',
-                    'bulletBorderAlpha': 0.2,
-                    'bulletAlpha': 0.8,
-                    'lineAlpha': 0,
-                    'fillAlphas': 0,
-                    'valueField': 'value',
-                    'xField': 'x',
-                    'yField': 'y',
-                    'maxBulletSize': 100
-                }, {
-                    'balloonText': 'x:<b>[[x]]</b> y:<b>[[y]]</b><br>value:<b>[[value]]</b>',
-                    'bullet': 'diamond',
-                    'bulletBorderAlpha': 0.2,
-                    'bulletAlpha': 0.8,
-                    'lineAlpha': 0,
-                    'fillAlphas': 0,
-                    'valueField': 'value2',
-                    'xField': 'x2',
-                    'yField': 'y2',
-                    'maxBulletSize': 100
-                }],
-            'marginLeft': 46,
-            'marginBottom': 35
-        });
-    };
-    PageAmchartsComponent.prototype.ngOnDestroy = function () {
-        this.AmCharts.destroyChart(this.chart);
-    };
-    PageAmchartsComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-amcharts',
-            template: __webpack_require__("../../../../../src/app/pages/charts/amcharts/amcharts.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/charts/amcharts/amcharts.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _b || Object])
-    ], PageAmchartsComponent);
-    return PageAmchartsComponent;
-    var _a, _b;
-}());
-
-//# sourceMappingURL=amcharts.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/charts/ng2-charts/ng2-charts.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\n\n<div class=\"row\">\n  <div class=\"col-lg-6\">\n    <ni-card title=\"Line Chart\">\n      <canvas\n        baseChart\n        [datasets]=\"lineChartData\"\n        [labels]=\"lineChartLabels\"\n        [options]=\"lineChartOptions\"\n        [colors]=\"lineChartColors\"\n        [legend]=\"lineChartLegend\"\n        [chartType]=\"lineChartType\"></canvas>\n    </ni-card>\n  </div>\n\n  <div class=\"col-lg-6\">\n    <ni-card title=\"Bar Chart\">\n      <canvas\n        baseChart\n        [datasets]=\"barChartData\"\n        [labels]=\"barChartLabels\"\n        [options]=\"barChartOptions\"\n        [legend]=\"barChartLegend\"\n        [chartType]=\"barChartType\"></canvas>\n    </ni-card>\n  </div>\n\n  <div class=\"col-lg-6\">\n    <ni-card title=\"Doughnut Chart\">\n      <canvas\n        baseChart\n        [data]=\"doughnutChartData\"\n        [labels]=\"doughnutChartLabels\"\n        [chartType]=\"doughnutChartType\"></canvas>\n    </ni-card>\n  </div>\n\n  <div class=\"col-lg-6\">\n    <ni-card title=\"Radar Chart\">\n      <canvas\n        baseChart\n        [datasets]=\"radarChartData\"\n        [labels]=\"radarChartLabels\"\n        [chartType]=\"radarChartType\"></canvas>\n    </ni-card>\n  </div>\n\n  <div class=\"col-lg-6\">\n    <ni-card title=\"Pie Chart\" class=\"mb-lg-0\">\n      <canvas\n        baseChart\n        [data]=\"pieChartData\"\n        [labels]=\"pieChartLabels\"\n        [chartType]=\"pieChartType\"></canvas>\n    </ni-card>\n  </div>\n\n  <div class=\"col-lg-6\">\n    <ni-card title=\"Polar Area Chart\" class=\"mb-0\">\n      <canvas\n        baseChart\n        [data]=\"polarAreaChartData\"\n        [labels]=\"polarAreaChartLabels\"\n        [legend]=\"polarAreaLegend\"\n        [chartType]=\"polarAreaChartType\"\n        [options]=\"polarAreaChartOptions\"></canvas>\n    </ni-card>\n  </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/charts/ng2-charts/ng2-charts.component.scss":
+/***/ "../../../../../src/app/pages/default-pages/aboutus/aboutus.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -3136,11 +1764,11 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/charts/ng2-charts/ng2-charts.component.ts":
+/***/ "../../../../../src/app/pages/default-pages/aboutus/aboutus.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageNg2ChartsComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageAboutusComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -3154,558 +1782,114 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Charts',
-        link: '#'
-    },
-    {
-        title: 'Ng2 Charts',
-        link: ''
-    }
-];
-var PageNg2ChartsComponent = (function () {
-    function PageNg2ChartsComponent(_sharedService) {
+var PageAboutusComponent = (function () {
+    function PageAboutusComponent(_sharedService) {
         this._sharedService = _sharedService;
-        this.pageTitle = 'Ng2 Charts';
-        this.breadcrumb = BREADCRUMBS;
+        this.pageTitle = 'About Us';
         // lineChart
         this.lineChartData = [
-            { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
-            { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' },
-            { data: [18, 48, 77, 9, 100, 27, 40], label: 'Series C' }
+            {
+                data: [30, 42, 46, 51, 65, 73, 80],
+                label: 'Users',
+                borderWidth: 1,
+                pointRadius: 1
+            },
+            {
+                data: [42, 43, 52, 47, 65, 70, 79],
+                label: 'Pages',
+                borderWidth: 1,
+                pointRadius: 1
+            },
+            {
+                data: [51, 48, 45, 56, 61, 69, 67],
+                label: 'Visits',
+                borderWidth: 1,
+                pointRadius: 1
+            }
         ];
         this.lineChartLabels = [
-            'Jan',
-            'Feb',
-            'Mar',
-            'Apr',
-            'May',
-            'June',
-            'July'
+            'Mon.',
+            'Tue.',
+            'Wed.',
+            'Thu.',
+            'Fri.',
+            'Sat.',
+            'Sun.'
         ];
         this.lineChartOptions = {
-            responsive: true
+            responsiveAnimationDuration: 500,
+            responsive: true,
+            scales: {
+                xAxes: [{
+                        gridLines: {
+                            display: false
+                        }
+                    }],
+                yAxes: [{
+                        gridLines: {
+                            display: true
+                        },
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }],
+            }
         };
         this.lineChartColors = [
             {
-                backgroundColor: 'rgba(255,116,19,0.2)',
-                borderColor: 'rgba(255,116,19,1)',
-                pointBackgroundColor: 'rgba(255,116,19,1)',
-                pointBorderColor: '#fff',
+                backgroundColor: 'rgba(93,173,224,0.2)',
+                borderColor: '#5dade0',
+                pointBackgroundColor: '#5dade0',
+                pointBorderColor: '#0e7cc5',
                 pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: 'rgba(255,116,19,0.8)'
+                pointHoverBorderColor: '#000'
             },
             {
-                backgroundColor: 'rgba(225,122,180,0.2)',
-                borderColor: 'rgba(225,122,180,1)',
-                pointBackgroundColor: 'rgba(225,122,180,1)',
-                pointBorderColor: '#fff',
+                backgroundColor: 'rgba(255,140,0,0.2)',
+                borderColor: '#ff8c00',
+                pointBackgroundColor: '#ff8c00',
+                pointBorderColor: '#FF630B',
                 pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: 'rgba(225,122,180,1)'
+                pointHoverBorderColor: '#000'
             },
             {
-                backgroundColor: 'rgba(145,55,63,0.2)',
-                borderColor: 'rgba(145,55,63,1)',
-                pointBackgroundColor: 'rgba(145,55,63,1)',
-                pointBorderColor: '#fff',
+                backgroundColor: 'rgba(220,20,60,0.2)',
+                borderColor: '#dc143c',
+                pointBackgroundColor: '#dc143c',
+                pointBorderColor: '#7E2303',
                 pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: 'rgba(145,55,63,0.8)'
+                pointHoverBorderColor: '#000'
             }
         ];
         this.lineChartLegend = true;
         this.lineChartType = 'line';
-        //Bar chart
-        this.barChartOptions = {
-            scaleShowVerticalLines: false,
-            responsive: true
-        };
-        this.barChartLabels = [
-            '2011',
-            '2012',
-            '2013',
-            '2014',
-            '2015',
-            '2016',
-            '2017'
-        ];
-        this.barChartType = 'bar';
-        this.barChartLegend = true;
-        this.barChartData = [
-            { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
-            { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
-        ];
-        //Doughnut chart
-        this.doughnutChartLabels = [
-            'Download Sales',
-            'In-Store Sales',
-            'Mail-Order Sales'
-        ];
-        this.doughnutChartData = [
-            350,
-            450,
-            100
-        ];
-        this.doughnutChartType = 'doughnut';
-        // Radar chart
-        this.radarChartLabels = [
-            'Eating',
-            'Drinking',
-            'Sleeping',
-            'Designing',
-            'Coding',
-            'Cycling',
-            'Running'
-        ];
-        this.radarChartData = [
-            { data: [65, 59, 90, 81, 56, 55, 40], label: 'Series A' },
-            { data: [28, 48, 40, 19, 96, 27, 100], label: 'Series B' }
-        ];
-        this.radarChartType = 'radar';
-        // Pie
-        this.pieChartLabels = [
-            'Download Sales',
-            'In-Store Sales',
-            'Mail Sales'
-        ];
-        this.pieChartData = [
-            300,
-            500,
-            100
-        ];
-        this.pieChartType = 'pie';
-        // PolarArea
-        this.polarAreaChartLabels = [
-            'Download Sales',
-            'In-Store Sales',
-            'Mail Sales',
-            'Telesales',
-            'Corporate Sales'
-        ];
-        this.polarAreaChartData = [
-            300,
-            500,
-            100,
-            40,
-            120
-        ];
-        this.polarAreaLegend = true;
-        this.polarAreaChartType = 'polarArea';
-        this.polarAreaChartOptions = {
-            responsiveAnimationDuration: 500
-        };
         this._sharedService.emitChange(this.pageTitle);
     }
-    PageNg2ChartsComponent.prototype.ngOnInit = function () { };
-    PageNg2ChartsComponent = __decorate([
+    PageAboutusComponent.prototype.ngOnInit = function () { };
+    PageAboutusComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-ng2-charts',
-            template: __webpack_require__("../../../../../src/app/pages/charts/ng2-charts/ng2-charts.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/charts/ng2-charts/ng2-charts.component.scss")]
+            selector: 'page-aboutus',
+            template: __webpack_require__("../../../../../src/app/pages/default-pages/aboutus/aboutus.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/default-pages/aboutus/aboutus.component.scss")]
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageNg2ChartsComponent);
-    return PageNg2ChartsComponent;
+    ], PageAboutusComponent);
+    return PageAboutusComponent;
     var _a;
 }());
 
-//# sourceMappingURL=ng2-charts.component.js.map
+//# sourceMappingURL=aboutus.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/charts/ngx-charts/data.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return single1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return single2; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return multi1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return multi2; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return multi3; });
-var single1 = [
-    {
-        'name': 'Angular',
-        'value': 8940
-    },
-    {
-        'name': 'React',
-        'value': 5000
-    },
-    {
-        'name': 'Vue.js',
-        'value': 7200
-    },
-    {
-        'name': 'Backbone.js',
-        'value': 4300
-    },
-    {
-        'name': 'Ember.js',
-        'value': 2500
-    },
-    {
-        'name': 'Meteor.js',
-        'value': 6500
-    }
-];
-var single2 = [
-    {
-        'name': 'Angular',
-        'value': 8940
-    },
-    {
-        'name': 'React',
-        'value': 5000
-    },
-    {
-        'name': 'Vue.js',
-        'value': 7200
-    },
-    {
-        'name': 'Backbone.js',
-        'value': 4300
-    }
-];
-var multi1 = [
-    {
-        'name': 'Angular',
-        'series': [
-            {
-                'name': '2016',
-                'value': 7300
-            },
-            {
-                'name': '2017',
-                'value': 8940
-            }
-        ]
-    },
-    {
-        'name': 'React',
-        'series': [
-            {
-                'name': '2016',
-                'value': 7870
-            },
-            {
-                'name': '2017',
-                'value': 8270
-            }
-        ]
-    },
-    {
-        'name': 'Vue.js',
-        'series': [
-            {
-                'name': '2016',
-                'value': 7870
-            },
-            {
-                'name': '2017',
-                'value': 2270
-            }
-        ]
-    },
-    {
-        'name': 'Backbone.js',
-        'series': [
-            {
-                'name': '2016',
-                'value': 5000
-            },
-            {
-                'name': '2017',
-                'value': 5800
-            }
-        ]
-    },
-    {
-        'name': 'Ember.js',
-        'series': [
-            {
-                'name': '2016',
-                'value': 7500
-            },
-            {
-                'name': '2017',
-                'value': 6900
-            }
-        ]
-    },
-    {
-        'name': 'Meteor.js',
-        'series': [
-            {
-                'name': '2016',
-                'value': 3000
-            },
-            {
-                'name': '2017',
-                'value': 7800
-            }
-        ]
-    }
-];
-var multi2 = [
-    {
-        'name': 'Angular',
-        'series': [
-            {
-                'name': '2016',
-                'value': 7300
-            },
-            {
-                'name': '2017',
-                'value': 8940
-            }
-        ]
-    },
-    {
-        'name': 'React',
-        'series': [
-            {
-                'name': '2016',
-                'value': 7870
-            },
-            {
-                'name': '2017',
-                'value': 8270
-            }
-        ]
-    },
-    {
-        'name': 'Vue.js',
-        'series': [
-            {
-                'name': '2016',
-                'value': 7870
-            },
-            {
-                'name': '2017',
-                'value': 2270
-            }
-        ]
-    },
-    {
-        'name': 'Backbone.js',
-        'series': [
-            {
-                'name': '2016',
-                'value': 5000
-            },
-            {
-                'name': '2017',
-                'value': 5800
-            }
-        ]
-    }
-];
-var multi3 = [
-    {
-        'name': 'Angular',
-        'series': [
-            {
-                'name': '2013',
-                'value': 1500
-            },
-            {
-                'name': '2014',
-                'value': 2300
-            },
-            {
-                'name': '2015',
-                'value': 3000
-            },
-            {
-                'name': '2016',
-                'value': 5000
-            },
-            {
-                'name': '2017',
-                'value': 7600
-            }
-        ]
-    },
-    {
-        'name': 'React',
-        'series': [
-            {
-                'name': '2013',
-                'value': 980
-            },
-            {
-                'name': '2014',
-                'value': 1200
-            },
-            {
-                'name': '2015',
-                'value': 4000
-            },
-            {
-                'name': '2016',
-                'value': 4500
-            },
-            {
-                'name': '2017',
-                'value': 6000
-            }
-        ]
-    },
-    {
-        'name': 'Vue.js',
-        'series': [
-            {
-                'name': '2013',
-                'value': 5200
-            },
-            {
-                'name': '2014',
-                'value': 6000
-            },
-            {
-                'name': '2015',
-                'value': 5400
-            },
-            {
-                'name': '2016',
-                'value': 5000
-            },
-            {
-                'name': '2017',
-                'value': 6560
-            }
-        ]
-    },
-    {
-        'name': 'Backbone.js',
-        'series': [
-            {
-                'name': '2013',
-                'value': 6540
-            },
-            {
-                'name': '2014',
-                'value': 5300
-            },
-            {
-                'name': '2015',
-                'value': 5460
-            },
-            {
-                'name': '2016',
-                'value': 4680
-            },
-            {
-                'name': '2017',
-                'value': 6240
-            }
-        ]
-    }
-];
-//# sourceMappingURL=data.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/charts/ngx-charts/ngx-charts.component.html":
+/***/ "../../../../../src/app/pages/default-pages/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-lg-6\">\n    <ni-card title=\"Vertical Bar Chart\">\n      <div class=\"chart-container\">\n        <ngx-charts-bar-vertical\n          [scheme]=\"colorScheme\"\n          [results]=\"single1\"\n          [gradient]=\"false\"\n          [xAxis]=\"true\"\n          [yAxis]=\"true\"\n          [legend]=\"false\"\n          [showXAxisLabel]=\"false\"\n          [showYAxisLabel]=\"false\">\n        </ngx-charts-bar-vertical>\n      </div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-lg-6\">\n    <ni-card title=\"Horizontal Bar Chart\">\n      <div class=\"chart-container\">\n        <ngx-charts-bar-horizontal\n          [scheme]=\"colorScheme\"\n          [results]=\"single2\"\n          [gradient]=\"false\"\n          [xAxis]=\"true\"\n          [yAxis]=\"true\"\n          [legend]=\"false\"\n          [showXAxisLabel]=\"false\"\n          [showYAxisLabel]=\"false\">\n        </ngx-charts-bar-horizontal>\n      </div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-lg-6\">\n    <ni-card title=\"Stacked Vertical Bar Chart\">\n      <div class=\"chart-container\">\n        <ngx-charts-bar-vertical-stacked\n          [scheme]=\"colorScheme\"\n          [results]=\"multi1\"\n          [gradient]=\"false\"\n          [xAxis]=\"true\"\n          [yAxis]=\"true\"\n          [legend]=\"false\"\n          [showXAxisLabel]=\"false\"\n          [showYAxisLabel]=\"false\">\n        </ngx-charts-bar-vertical-stacked>\n      </div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-lg-6\">\n    <ni-card title=\"Stacked Horizontal Bar Chart\">\n      <div class=\"chart-container\">\n        <ngx-charts-bar-horizontal-stacked\n          [scheme]=\"colorScheme\"\n          [results]=\"multi2\"\n          [gradient]=\"false\"\n          [xAxis]=\"true\"\n          [yAxis]=\"true\"\n          [legend]=\"false\"\n          [showXAxisLabel]=\"false\"\n          [showYAxisLabel]=\"false\">\n        </ngx-charts-bar-horizontal-stacked>\n      </div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-lg-6\">\n    <ni-card title=\"Pie Chart\">\n      <div class=\"chart-container\">\n        <ngx-charts-pie-chart\n          [scheme]=\"colorScheme\"\n          [results]=\"single1\"\n          [gradient]=\"false\"\n          [legend]=\"false\"\n          [explodeSlices]=\"false\"\n          [labels]=\"true\"\n          [doughnut]=\"false\">\n        </ngx-charts-pie-chart>\n      </div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-lg-6\">\n    <ni-card title=\"Doughnut Pie Chart\">\n      <div class=\"chart-container\">\n        <ngx-charts-pie-chart\n          [scheme]=\"colorScheme\"\n          [results]=\"single2\"\n          [gradient]=\"false\"\n          [legend]=\"false\"\n          [explodeSlices]=\"false\"\n          [labels]=\"true\"\n          [doughnut]=\"true\">\n        </ngx-charts-pie-chart>\n      </div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-lg-6\">\n    <ni-card title=\"Area Chart\">\n      <div class=\"chart-container\">\n        <ngx-charts-area-chart\n          [scheme]=\"colorScheme\"\n          [results]=\"multi3\"\n          [gradient]=\"false\"\n          [xAxis]=\"true\"\n          [yAxis]=\"true\"\n          [legend]=\"false\"\n          [showXAxisLabel]=\"false\"\n          [showYAxisLabel]=\"false\"\n          [autoScale]=\"true\">\n        </ngx-charts-area-chart>\n      </div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-lg-6\">\n    <ni-card title=\"Line Chart\">\n      <div class=\"chart-container\">\n        <ngx-charts-line-chart\n          [scheme]=\"colorScheme\"\n          [results]=\"multi3\"\n          [gradient]=\"false\"\n          [xAxis]=\"true\"\n          [yAxis]=\"true\"\n          [legend]=\"false\"\n          [showXAxisLabel]=\"false\"\n          [showYAxisLabel]=\"false\"\n          [autoScale]=\"true\">\n        </ngx-charts-line-chart>\n      </div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-lg-6\">\n    <ni-card title=\"Polar Chart\" class=\"mb-lg-0\">\n      <div class=\"chart-container\">\n        <ngx-charts-polar-chart\n          [scheme]=\"colorScheme\"\n          [results]=\"multi3\"\n          [xAxis]=\"true\"\n          [yAxis]=\"true\"\n        >\n        </ngx-charts-polar-chart>\n      </div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-lg-6\">\n    <ni-card title=\"Gauge Chart\" class=\"mb-0\">\n      <div class=\"chart-container\">\n        <ngx-charts-gauge\n          [scheme]=\"colorScheme\"\n          [results]=\"single2\"\n          [min]=\"0\"\n          [max]=\"100\"\n          [angleSpan]=\"240\"\n          [startAngle]=\"-120\"\n          [units]=\"'alerts'\"\n          [bigSegments]=\"10\"\n          [smallSegments]=\"5\">\n        </ngx-charts-gauge>\n      </div>\n    </ni-card>\n  </div>\n</div>"
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-lg-8\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'Request'\">\r\n            <md-list>\r\n              <md-list-item>Pepper</md-list-item>\r\n              <md-list-item>Salt</md-list-item>\r\n              <md-list-item>Paprika</md-list-item>\r\n            </md-list>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <ni-card [title]=\"'Next payment'\">\r\n            <md-list>\r\n              <md-list-item>Pepper</md-list-item>\r\n              <md-list-item>Salt</md-list-item>\r\n              <md-list-item>Paprika</md-list-item>\r\n            </md-list>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <ni-card [title]=\"'Request'\">\r\n            <md-list>\r\n              <md-list-item>Pepper</md-list-item>\r\n              <md-list-item>Salt</md-list-item>\r\n              <md-list-item>Paprika</md-list-item>\r\n            </md-list>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-4\">\r\n      <ni-card [title]=\"'Time Line(Last)'\">\r\n        <md-list>\r\n          <md-list-item>Pepper</md-list-item>\r\n          <md-list-item>Salt</md-list-item>\r\n          <md-list-item>Paprika</md-list-item>\r\n        </md-list>\r\n      </ni-card>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/charts/ngx-charts/ngx-charts.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".chart-container {\n  display: block;\n  height: 300px;\n  width: 100%; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/charts/ngx-charts/ngx-charts.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageNgxChartsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data__ = __webpack_require__("../../../../../src/app/pages/charts/ngx-charts/data.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Charts',
-        link: '#'
-    },
-    {
-        title: 'Ngx Charts',
-        link: ''
-    }
-];
-var PageNgxChartsComponent = (function () {
-    function PageNgxChartsComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Ngx Charts';
-        this.breadcrumb = BREADCRUMBS;
-        // Color scheme
-        this.colorScheme = {
-            domain: ['#a8385d', '#7aa3e5', '#a27ea8', '#aae3f5', '#a95963', '#50abcc']
-        };
-        Object.assign(this, { single1: __WEBPACK_IMPORTED_MODULE_2__data__["d" /* single1 */], single2: __WEBPACK_IMPORTED_MODULE_2__data__["e" /* single2 */], multi1: __WEBPACK_IMPORTED_MODULE_2__data__["a" /* multi1 */], multi2: __WEBPACK_IMPORTED_MODULE_2__data__["b" /* multi2 */], multi3: __WEBPACK_IMPORTED_MODULE_2__data__["c" /* multi3 */] });
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageNgxChartsComponent.prototype.ngOnInit = function () { };
-    PageNgxChartsComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-ngx-charts',
-            template: __webpack_require__("../../../../../src/app/pages/charts/ngx-charts/ngx-charts.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/charts/ngx-charts/ngx-charts.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageNgxChartsComponent);
-    return PageNgxChartsComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=ngx-charts.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/dashboards/dashboard-1/dashboard.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12 col-xl-6 mb-lg-4\">\r\n      <div class=\"chart-container\">\r\n        <div id=\"amchart-1\" [style.width.%]=\"100\" [style.height.%]=\"100\"></div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-md-6 col-xl-3 flex-xl-first mb-4 mb-md-0\">\r\n      <h5 class=\"mt-0\">Last sales</h5>\r\n      <div class=\"table-responsive mb-3\">\r\n        <table class=\"table table-sm\">\r\n          <tbody>\r\n          <tr>\r\n            <td>Samsung Galaxy S8</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Meizu M3</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Meizu Pro 6</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">5</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Apple iPhone SE</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'warning'\" [borderRadius]=\"false\">7</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>iPhone 6</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>iPhone 7</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Huawei P8</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">4</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Xiaomi Mi Band 2</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'danger'\" [borderRadius]=\"false\">10</ni-badge>\r\n            </td>\r\n          </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n      <button ni-button block=\"true\" type=\"accent\" outline=\"true\" lineStyle=\"dashed\" beforeIcon=\"fa fa-shopping-basket\">Look all</button>\r\n    </div>\r\n    <div class=\"col-md-6 col-xl-3\">\r\n      <p class=\"mb-1\"><strong>Angular</strong></p>\r\n      <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"98\"></md-progress-bar>\r\n\r\n      <p class=\"mb-1\"><strong>React</strong></p>\r\n      <md-progress-bar mode=\"determinate\" color=\"warn\" [value]=\"85\"></md-progress-bar>\r\n\r\n      <p class=\"mb-1\"><strong>Vue.js</strong></p>\r\n      <md-progress-bar mode=\"determinate\" [value]=\"40\"></md-progress-bar>\r\n\r\n      <p class=\"mb-1\"><strong>Backbone.js</strong></p>\r\n      <md-progress-bar mode=\"determinate\" [value]=\"38\"></md-progress-bar>\r\n\r\n      <p class=\"mb-1\"><strong>Ember.js</strong></p>\r\n      <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"54\"></md-progress-bar>\r\n\r\n      <p class=\"mb-1\"><strong>Meteor.js</strong></p>\r\n      <md-progress-bar mode=\"determinate\" color=\"warn\" [value]=\"38\"></md-progress-bar>\r\n\r\n      <p class=\"mb-1\"><strong>jQuery</strong></p>\r\n      <md-progress-bar mode=\"determinate\" color=\"warn\" [value]=\"61\"></md-progress-bar>\r\n    </div>\r\n  </div>\r\n</ni-card>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'info'\" [outline]=\"true\" class=\"info-card\">\r\n      <h6 class=\"mt-0 title\">Orders</h6>\r\n      <div class=\"count\">2,145</div>\r\n      <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">+17%</ni-badge> <small>from previous period</small>\r\n      <md-icon>shopping_basket</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'info'\" [outline]=\"true\" class=\"info-card\">\r\n      <h6 class=\"mt-0 title\">Revenue</h6>\r\n      <div class=\"count\">$ 50,24</div>\r\n      <small>11750</small>\r\n      <md-icon>equalizer</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'info'\" [outline]=\"true\" class=\"info-card\">\r\n      <h6 class=\"mt-0 title\">Products</h6>\r\n      <div class=\"count\">2,543</div>\r\n      <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">+210</ni-badge>\r\n      <md-icon>monetization_on</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'info'\" [outline]=\"true\" class=\"info-card\">\r\n      <h6 class=\"mt-0 title\">Sold</h6>\r\n      <div class=\"count\">1,005</div>\r\n      <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">+24%</ni-badge>\r\n      <md-icon>donut_large</md-icon>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<ni-card>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-4\">\r\n      <div id=\"amchart-2\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\r\n    </div>\r\n\r\n    <div class=\"col-lg-4\">\r\n      <div id=\"amchart-3\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\r\n    </div>\r\n\r\n    <div class=\"col-lg-4\">\r\n      <div id=\"amchart-4\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\r\n    </div>\r\n  </div>\r\n</ni-card>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-6\">\r\n    <ni-card [title]=\"'Changelog'\" [outline]=\"true\" class=\"mb-lg-0\">\r\n      <ni-h-timeline [showYears]=\"false\" [showDate]=\"false\" [align]=\"'left'\" [data]=\"timelineData\"></ni-h-timeline>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-lg-6\">\r\n    <ni-card [title]=\"'To do list'\" class=\"mb-0\">\r\n      <md-list>\r\n        <md-list-item *ngFor=\"let folder of folders\">\r\n          <md-icon md-list-avatar>{{folder.icon}}<ni-badge *ngIf=\"folder.badge\" [color]=\"'danger'\" [position]=\"'top-right'\">{{folder.badge}}</ni-badge></md-icon>\r\n          <h4 md-line>{{folder.name}}</h4>\r\n          <p md-line><i>{{folder.updated}}</i></p>\r\n        </md-list-item>\r\n      </md-list>\r\n    </ni-card>\r\n  </div>\r\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/dashboards/dashboard-1/dashboard.component.scss":
+/***/ "../../../../../src/app/pages/default-pages/dashboard/dashboard.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -3723,7 +1907,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/dashboards/dashboard-1/dashboard.component.ts":
+/***/ "../../../../../src/app/pages/default-pages/dashboard/dashboard.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3743,20 +1927,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var BREADCRUMBS = [
-    {
-        title: 'Main',
-        link: '#'
-    },
-    {
-        title: 'Dashboards',
-        link: '#'
-    },
-    {
-        title: 'Dashboard v1',
-        link: ''
-    }
-];
 var folders = [
     {
         icon: 'android',
@@ -3832,7 +2002,6 @@ var PageDashboardComponent = (function () {
         this.AmCharts = AmCharts;
         this._sharedService = _sharedService;
         this.pageTitle = 'Dashboard';
-        this.breadcrumb = BREADCRUMBS;
         this.folders = folders;
         this.timelineData = timelineData;
         this._sharedService.emitChange(this.pageTitle);
@@ -4160,8 +2329,8 @@ var PageDashboardComponent = (function () {
     PageDashboardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-dashboard',
-            template: __webpack_require__("../../../../../src/app/pages/dashboards/dashboard-1/dashboard.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/dashboards/dashboard-1/dashboard.component.scss")]
+            template: __webpack_require__("../../../../../src/app/pages/default-pages/dashboard/dashboard.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/default-pages/dashboard/dashboard.component.scss")]
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _b || Object])
     ], PageDashboardComponent);
@@ -4173,14 +2342,14 @@ var PageDashboardComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/dashboards/dashboard-2/dashboard-2.component.html":
+/***/ "../../../../../src/app/pages/default-pages/groups/groups.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-8\">\r\n    <ni-card title=\"Column chart\">\r\n      <div id=\"amchart-1\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\r\n    </ni-card>\r\n\r\n    <ni-card title=\"Lines chart\">\r\n      <div id=\"amchart-2\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\r\n    </ni-card>\r\n\r\n    <ni-card [title]=\"'What we doing'\" class=\"mb-md-0\">\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente. Ad architecto at aut\r\n        et ex facilis fuga, laboriosam, magnam modi obcaecati officia officiis, omnis praesentium quam quas reiciendis\r\n        rerum ullam velit veritatis vitae.</p>\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-md-6\">\r\n          <p class=\"mb-1\"><strong>Wordpress</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"90\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Magento</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"80\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Opencart</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"60\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Drupal</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"30\"></md-progress-bar>\r\n          <div class=\"clearfix\"></div>\r\n        </div>\r\n\r\n        <div class=\"col-md-6\">\r\n          <p class=\"mb-1\"><strong>Angular</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"98\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>React</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"85\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Vue.js</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"40\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Backbone.js</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"38\"></md-progress-bar>\r\n          <div class=\"clearfix\"></div>\r\n        </div>\r\n      </div>\r\n\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam cumque dicta earum, iure maiores neque\r\n        nesciunt officia quisquam ullam.</p>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-4\">\r\n    <ni-card [title]=\"'Recent activities'\" [outline]=\"true\">\r\n      <ni-h-timeline [showYears]=\"false\" [align]=\"'left'\" [data]=\"timelineData\"></ni-h-timeline>\r\n    </ni-card>\r\n\r\n    <ni-card [customBgColor]=\"'rgba(226,77,77,0.6)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-4.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Orders</div>\r\n      <div class=\"count\">2,145</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+17%</ni-badge> <small>from previous period</small>\r\n    </ni-card>\r\n\r\n    <ni-card [customBgColor]=\"'rgba(255,183,77,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-5.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Revenue</div>\r\n      <div class=\"count\">$ 50,24</div>\r\n      <small>11750</small>\r\n    </ni-card>\r\n\r\n    <ni-card [customBgColor]=\"'rgba(100,181,246,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-6.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Products</div>\r\n      <div class=\"count\">2,543</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+210</ni-badge>\r\n    </ni-card>\r\n\r\n    <ni-card [customBgColor]=\"'rgba(129,199,132,0.8)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-7.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Sold</div>\r\n      <div class=\"count\">1,005</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+24%</ni-badge>\r\n    </ni-card>\r\n\r\n    <ni-card title=\"Last uploaded files\" class=\"mb-0\">\r\n      <ni-file [size]=\"'small'\" [type]=\"'jpg'\" [title]=\"'bulb'\" [image]=\"'assets/content/file-1.jpg'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'doc'\" [title]=\"'resume'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'jpg'\" [title]=\"'main-image'\" [image]=\"'assets/content/file-2.jpg'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'jpg'\" [title]=\"'watch'\" [image]=\"'assets/content/file-3.jpg'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'jpg'\" [title]=\"'camera'\" [image]=\"'assets/content/file-4.jpg'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'pdf'\" [title]=\"'documentation'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'mp4'\" [title]=\"'video-tutorial'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'jpg'\" [title]=\"'best-work'\" [image]=\"'assets/content/file.jpg'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'jpg'\" [title]=\"'smart'\" [image]=\"'assets/content/file-5.jpg'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'zip'\" [title]=\"'theme'\"></ni-file>\r\n    </ni-card>\r\n  </div>\r\n</div>"
+module.exports = "\r\n<div class=\"row\">\r\n  <div class=\"col-md-8\">\r\n    <ni-card title=\"Column chart\">\r\n      <div id=\"amchart-1\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\r\n    </ni-card>\r\n\r\n    <ni-card title=\"Lines chart\">\r\n      <div id=\"amchart-2\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\r\n    </ni-card>\r\n\r\n    <ni-card [title]=\"'What we doing'\" class=\"mb-md-0\">\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente. Ad architecto at aut\r\n        et ex facilis fuga, laboriosam, magnam modi obcaecati officia officiis, omnis praesentium quam quas reiciendis\r\n        rerum ullam velit veritatis vitae.</p>\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-md-6\">\r\n          <p class=\"mb-1\"><strong>Wordpress</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"90\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Magento</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"80\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Opencart</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"60\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Drupal</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"30\"></md-progress-bar>\r\n          <div class=\"clearfix\"></div>\r\n        </div>\r\n\r\n        <div class=\"col-md-6\">\r\n          <p class=\"mb-1\"><strong>Angular</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"98\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>React</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"85\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Vue.js</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"40\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Backbone.js</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"38\"></md-progress-bar>\r\n          <div class=\"clearfix\"></div>\r\n        </div>\r\n      </div>\r\n\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam cumque dicta earum, iure maiores neque\r\n        nesciunt officia quisquam ullam.</p>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-4\">\r\n    <ni-card [title]=\"'Recent activities'\" [outline]=\"true\">\r\n      <ni-h-timeline [showYears]=\"false\" [align]=\"'left'\" [data]=\"timelineData\"></ni-h-timeline>\r\n    </ni-card>\r\n\r\n    <ni-card [customBgColor]=\"'rgba(226,77,77,0.6)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-4.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Orders</div>\r\n      <div class=\"count\">2,145</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+17%</ni-badge> <small>from previous period</small>\r\n    </ni-card>\r\n\r\n    <ni-card [customBgColor]=\"'rgba(255,183,77,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-5.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Revenue</div>\r\n      <div class=\"count\">$ 50,24</div>\r\n      <small>11750</small>\r\n    </ni-card>\r\n\r\n    <ni-card [customBgColor]=\"'rgba(100,181,246,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-6.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Products</div>\r\n      <div class=\"count\">2,543</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+210</ni-badge>\r\n    </ni-card>\r\n\r\n    <ni-card [customBgColor]=\"'rgba(129,199,132,0.8)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-7.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Sold</div>\r\n      <div class=\"count\">1,005</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+24%</ni-badge>\r\n    </ni-card>\r\n\r\n    <ni-card title=\"Last uploaded files\" class=\"mb-0\">\r\n      <ni-file [size]=\"'small'\" [type]=\"'jpg'\" [title]=\"'bulb'\" [image]=\"'assets/content/file-1.jpg'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'doc'\" [title]=\"'resume'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'jpg'\" [title]=\"'main-image'\" [image]=\"'assets/content/file-2.jpg'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'jpg'\" [title]=\"'watch'\" [image]=\"'assets/content/file-3.jpg'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'jpg'\" [title]=\"'camera'\" [image]=\"'assets/content/file-4.jpg'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'pdf'\" [title]=\"'documentation'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'mp4'\" [title]=\"'video-tutorial'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'jpg'\" [title]=\"'best-work'\" [image]=\"'assets/content/file.jpg'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'jpg'\" [title]=\"'smart'\" [image]=\"'assets/content/file-5.jpg'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'zip'\" [title]=\"'theme'\"></ni-file>\r\n    </ni-card>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/dashboards/dashboard-2/dashboard-2.component.scss":
+/***/ "../../../../../src/app/pages/default-pages/groups/groups.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -4198,11 +2367,11 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/dashboards/dashboard-2/dashboard-2.component.ts":
+/***/ "../../../../../src/app/pages/default-pages/groups/groups.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageDashboard2Component; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageGroupsComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__ = __webpack_require__("../../../../@amcharts/amcharts3-angular/es2015/index.js");
@@ -4218,20 +2387,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var BREADCRUMBS = [
-    {
-        title: 'Main',
-        link: '#'
-    },
-    {
-        title: 'Dashboards',
-        link: '#'
-    },
-    {
-        title: 'Dashboard v2',
-        link: ''
-    }
-];
 var timelineData = [
     {
         'timeline': [
@@ -4263,16 +2418,15 @@ var timelineData = [
         ]
     }
 ];
-var PageDashboard2Component = (function () {
-    function PageDashboard2Component(AmCharts, _sharedService) {
+var PageGroupsComponent = (function () {
+    function PageGroupsComponent(AmCharts, _sharedService) {
         this.AmCharts = AmCharts;
         this._sharedService = _sharedService;
-        this.pageTitle = 'Dashboard';
-        this.breadcrumb = BREADCRUMBS;
+        this.pageTitle = 'Groups';
         this.timelineData = timelineData;
         this._sharedService.emitChange(this.pageTitle);
     }
-    PageDashboard2Component.prototype.ngOnInit = function () {
+    PageGroupsComponent.prototype.ngOnInit = function () {
         this.chart = this.AmCharts.makeChart('amchart-1', {
             'type': 'serial',
             'theme': 'light',
@@ -4460,33 +2614,869 @@ var PageDashboard2Component = (function () {
             }
         });
     };
-    PageDashboard2Component.prototype.ngOnDestroy = function () {
+    PageGroupsComponent.prototype.ngOnDestroy = function () {
         this.AmCharts.destroyChart(this.chart);
     };
-    PageDashboard2Component = __decorate([
+    PageGroupsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-dashboard-2',
-            template: __webpack_require__("../../../../../src/app/pages/dashboards/dashboard-2/dashboard-2.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/dashboards/dashboard-2/dashboard-2.component.scss")]
+            selector: 'page-groups',
+            template: __webpack_require__("../../../../../src/app/pages/default-pages/groups/groups.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/default-pages/groups/groups.component.scss")]
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _b || Object])
-    ], PageDashboard2Component);
-    return PageDashboard2Component;
+    ], PageGroupsComponent);
+    return PageGroupsComponent;
     var _a, _b;
 }());
 
-//# sourceMappingURL=dashboard-2.component.js.map
+//# sourceMappingURL=groups.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/dashboards/dashboard-3/dashboard-3.component.html":
+/***/ "../../../../../src/app/pages/default-pages/not-found/not-found.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-4\">\r\n    <ni-card>\r\n      <div id=\"amchart-1\" [style.width.%]=\"100\" [style.height.px]=\"300\"></div>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-lg-4\">\r\n    <ni-card>\r\n      <div id=\"amchart-2\" [style.width.%]=\"100\" [style.height.px]=\"300\"></div>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-lg-4\">\r\n    <ni-card>\r\n      <div id=\"amchart-3\" [style.width.%]=\"100\" [style.height.px]=\"300\"></div>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-xl-8\">\r\n    <ni-card [title]=\"'What we doing'\">\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente. Ad architecto at aut\r\n        et ex facilis fuga, laboriosam, magnam modi obcaecati officia officiis, omnis praesentium quam quas reiciendis\r\n        rerum ullam velit veritatis vitae.</p>\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-md-6\">\r\n          <p class=\"mb-1\"><strong>Wordpress</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"90\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Magento</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"80\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Opencart</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"60\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Drupal</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"30\"></md-progress-bar>\r\n          <div class=\"clearfix\"></div>\r\n        </div>\r\n\r\n        <div class=\"col-md-6\">\r\n          <p class=\"mb-1\"><strong>Angular</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"98\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>React</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"85\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Vue.js</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"40\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Backbone.js</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"38\"></md-progress-bar>\r\n          <div class=\"clearfix\"></div>\r\n        </div>\r\n      </div>\r\n\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam at corporis deleniti dicta doloremque\r\n        doloribus, ea ex excepturi fugiat labore minima possimus quia repellat similique soluta ut voluptate! Ad et hic\r\n        incidunt molestiae mollitia officiis omnis, perspiciatis quaerat qui quibusdam.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-xl-4\">\r\n    <ni-card [bgColor]=\"''\" class=\"chart-card\">\r\n      <div class=\"chart\">\r\n        <canvas\r\n          baseChart\r\n          [data]=\"pieChartData\"\r\n          [colors]=\"pieChartColors\"\r\n          [labels]=\"pieChartLabels\"\r\n          [legend]=\"false\"\r\n          [options]=\"pieChartOptions\"\r\n          [chartType]=\"pieChartType\"></canvas>\r\n      </div>\r\n      <div class=\"info\">\r\n        <div class=\"title\"><strong>930</strong> <small>Resolved</small></div>\r\n        <div class=\"small\">More than 70% resolved issues</div>\r\n      </div>\r\n    </ni-card>\r\n    <ni-card [bgColor]=\"''\" class=\"chart-card\">\r\n      <div class=\"chart\">\r\n        <canvas\r\n          baseChart\r\n          [data]=\"doughnutChartData\"\r\n          [colors]=\"doughnutChartColors\"\r\n          [labels]=\"doughnutChartLabels\"\r\n          [legend]=\"false\"\r\n          [options]=\"doughnutChartOptions\"\r\n          [chartType]=\"doughnutChartType\"></canvas>\r\n      </div>\r\n      <div class=\"info\">\r\n        <div class=\"title\"><strong>466</strong> <small>Unresolved</small></div>\r\n        <div class=\"small\">Less than 30% unresolved issues</div>\r\n      </div>\r\n    </ni-card>\r\n    <ni-card [bgColor]=\"''\" class=\"chart-card\">\r\n      <div class=\"chart\">\r\n        <canvas\r\n          baseChart\r\n          [data]=\"polarAreaChartData\"\r\n          [colors]=\"polarAreaChartColors\"\r\n          [labels]=\"polarAreaChartLabels\"\r\n          [legend]=\"false\"\r\n          [options]=\"polarAreaChartOptions\"\r\n          [chartType]=\"polarAreaChartType\"></canvas>\r\n      </div>\r\n      <div class=\"info\">\r\n        <div class=\"title\"><strong>1,547</strong> <small>Issues</small></div>\r\n        <div class=\"small\">8 issues are unassigned</div>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-4\">\r\n    <ni-card [title]=\"'Recent activities'\" [outline]=\"true\" class=\"mb-md-0\">\r\n      <ni-h-timeline [showYears]=\"false\" [align]=\"'left'\" [data]=\"timelineData\"></ni-h-timeline>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <ni-card [title]=\"'Last sales'\" class=\"mb-md-0\">\r\n      <div class=\"table-responsive mb-3\">\r\n        <table class=\"table table-sm\">\r\n          <tbody>\r\n          <tr>\r\n            <td>Samsung Galaxy S8</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Meizu M3</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Meizu Pro 6</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">5</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Apple iPhone SE</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'warning'\" [borderRadius]=\"false\">7</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>iPhone 6</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>iPhone 7</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Huawei P8</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">4</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Ipad Mini</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">15</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Ipad Pro</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">6</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Xiaomi Mi Band 2</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'danger'\" [borderRadius]=\"false\">10</ni-badge>\r\n            </td>\r\n          </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n      <button ni-button block=\"true\" type=\"accent\" outline=\"true\" lineStyle=\"dashed\" beforeIcon=\"fa fa-shopping-basket\">Look all</button>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <ni-chat [activeUser]=\"activeUser\" [messages]=\"messages\" [style.height.px]=\"474\"></ni-chat>\r\n  </div>\r\n</div>"
+module.exports = "<h1>Not found!</h1>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/dashboards/dashboard-3/dashboard-3.component.scss":
+/***/ "../../../../../src/app/pages/default-pages/not-found/not-found.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageNotFoundComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var PageNotFoundComponent = (function () {
+    function PageNotFoundComponent(_sharedService) {
+        this._sharedService = _sharedService;
+        this.pageTitle = 'Not found!';
+        this._sharedService.emitChange(this.pageTitle);
+    }
+    PageNotFoundComponent.prototype.ngOnInit = function () { };
+    PageNotFoundComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-not-found',
+            template: __webpack_require__("../../../../../src/app/pages/default-pages/not-found/not-found.component.html")
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
+    ], PageNotFoundComponent);
+    return PageNotFoundComponent;
+    var _a;
+}());
+
+//# sourceMappingURL=not-found.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/profile/profile.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'danger'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Orders</div>\r\n      <div class=\"count\">2,145</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+17%</ni-badge> <small>from previous period</small>\r\n      <md-icon>shopping_basket</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'warning'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Revenue</div>\r\n      <div class=\"count\">$ 50,24</div>\r\n      <small>11750</small>\r\n      <md-icon>equalizer</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'info'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Products</div>\r\n      <div class=\"count\">2,543</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+210</ni-badge>\r\n      <md-icon>monetization_on</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'success'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Sold</div>\r\n      <div class=\"count\">1,005</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+24%</ni-badge>\r\n      <md-icon>donut_large</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"clearfix\"></div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [customBgColor]=\"'rgba(226,77,77,0.6)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-4.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Orders</div>\r\n      <div class=\"count\">2,145</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+17%</ni-badge> <small>from previous period</small>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [customBgColor]=\"'rgba(255,183,77,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-5.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Revenue</div>\r\n      <div class=\"count\">$ 50,24</div>\r\n      <small>11750</small>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [customBgColor]=\"'rgba(100,181,246,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-6.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Products</div>\r\n      <div class=\"count\">2,543</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+210</ni-badge>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [customBgColor]=\"'rgba(129,199,132,0.8)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-7.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Sold</div>\r\n      <div class=\"count\">1,005</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+24%</ni-badge>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"clearfix\"></div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [outline]=\"true\" [bgColor]=\"'danger'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Orders</div>\r\n      <div class=\"count\">2,145</div>\r\n      <ni-badge [color]=\"'danger'\">+17%</ni-badge> <small>from previous period</small>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [outline]=\"true\" [bgColor]=\"'warning'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Revenue</div>\r\n      <div class=\"count\">$ 50,24</div>\r\n      <small>11750</small>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [outline]=\"true\" [bgColor]=\"'info'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Products</div>\r\n      <div class=\"count\">2,543</div>\r\n      <ni-badge [color]=\"'info'\">+210</ni-badge>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [outline]=\"true\" [bgColor]=\"'success'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Sold</div>\r\n      <div class=\"count\">1,005</div>\r\n      <ni-badge [color]=\"'success'\">+24%</ni-badge>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"clearfix\"></div>\r\n\r\n  <div class=\"col-xl-4\">\r\n    <ni-card [bgColor]=\"''\" class=\"chart-card\">\r\n      <div class=\"chart\">\r\n        <canvas\r\n          baseChart\r\n          [data]=\"pieChartData\"\r\n          [colors]=\"pieChartColors\"\r\n          [labels]=\"pieChartLabels\"\r\n          [legend]=\"false\"\r\n          [options]=\"pieChartOptions\"\r\n          [chartType]=\"pieChartType\"></canvas>\r\n      </div>\r\n      <div class=\"info\">\r\n        <div class=\"title\"><strong>930</strong> <small>Resolved</small></div>\r\n        <div class=\"small\">More than 70% resolved issues</div>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-xl-4\">\r\n    <ni-card [bgColor]=\"''\" class=\"chart-card\">\r\n      <div class=\"chart\">\r\n        <canvas\r\n          baseChart\r\n          [data]=\"doughnutChartData\"\r\n          [colors]=\"doughnutChartColors\"\r\n          [labels]=\"doughnutChartLabels\"\r\n          [legend]=\"false\"\r\n          [options]=\"doughnutChartOptions\"\r\n          [chartType]=\"doughnutChartType\"></canvas>\r\n      </div>\r\n      <div class=\"info\">\r\n        <div class=\"title\"><strong>466</strong> <small>Unresolved</small></div>\r\n        <div class=\"small\">Less than 30% unresolved issues</div>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-xl-4\">\r\n    <ni-card [bgColor]=\"''\" class=\"chart-card\">\r\n      <div class=\"chart\">\r\n        <canvas\r\n          baseChart\r\n          [data]=\"polarAreaChartData\"\r\n          [colors]=\"polarAreaChartColors\"\r\n          [labels]=\"polarAreaChartLabels\"\r\n          [legend]=\"false\"\r\n          [options]=\"polarAreaChartOptions\"\r\n          [chartType]=\"polarAreaChartType\"></canvas>\r\n      </div>\r\n      <div class=\"info\">\r\n        <div class=\"title\"><strong>1,547</strong> <small>Issues</small></div>\r\n        <div class=\"small\">8 issues are unassigned</div>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row mb-lg-4\">\r\n  <div class=\"col-lg-6 map-col mb-4 mb-lg-0\">\r\n    <ni-card [indents]=\"0\" class=\"mb-0\">\r\n      <agm-map [latitude]=\"lat\" [longitude]=\"lng\">\r\n        <agm-marker [latitude]=\"lat\" [longitude]=\"lng\"></agm-marker>\r\n      </agm-map>\r\n    </ni-card>\r\n    <div class=\"clearfix\"></div>\r\n  </div>\r\n\r\n  <div class=\"col-lg-6\">\r\n    <ni-card class=\"mb-lg-0\">\r\n      <canvas\r\n        baseChart\r\n        [datasets]=\"barChartData\"\r\n        [labels]=\"barChartLabels\"\r\n        [options]=\"barChartOptions\"\r\n        [legend]=\"barChartLegend\"\r\n        [chartType]=\"barChartType\"></canvas>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-6\">\r\n    <ni-card [title]=\"'Users'\" class=\"mb-lg-0\">\r\n      <md-list>\r\n        <md-list-item *ngFor=\"let message of messages\">\r\n          <img md-list-avatar src=\"{{ message.avatar }}\" width=\"40\" height=\"40\" alt=\"\">\r\n          <h3 md-line class=\"h3\">{{ message.from }}</h3>\r\n          <p md-line><i>\r\n            <span>{{message.subject}}</span>\r\n            <span> -- {{ message.content }}</span>\r\n          </i></p>\r\n        </md-list-item>\r\n      </md-list>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-lg-6\">\r\n    <ni-card [title]=\"'To do list'\" class=\"mb-0\">\r\n      <md-list>\r\n        <md-list-item *ngFor=\"let folder of folders\">\r\n          <md-icon md-list-avatar>{{folder.icon}}<ni-badge *ngIf=\"folder.badge\" [color]=\"'danger'\" [position]=\"'top-right'\">{{folder.badge}}</ni-badge></md-icon>\r\n          <h4 md-line>{{folder.name}}</h4>\r\n          <p md-line><i>{{folder.updated}}</i></p>\r\n        </md-list-item>\r\n      </md-list>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/profile/profile.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".map-col .ni-card {\n  height: 100%; }\n  .map-col .ni-card /deep/.card-wrap {\n    height: 100%; }\n    .map-col .ni-card /deep/.card-wrap .card-content {\n      height: 100%; }\n\n.sebm-google-map-container {\n  height: 100%;\n  min-height: 200px; }\n  .sebm-google-map-container /deep/.sebm-google-map-container-inner {\n    min-height: 200px; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/profile/profile.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageProfileComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var messages = [
+    {
+        from: 'Nancy',
+        subject: 'HTML',
+        content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+        avatar: 'assets/content/avatar-4.jpg'
+    },
+    {
+        from: 'Mary',
+        subject: 'Css',
+        content: 'Lorem Ipsum has been the industrys standard',
+        avatar: 'assets/content/avatar-3.jpg'
+    },
+    {
+        from: 'Bobby',
+        subject: 'Angular 2',
+        content: 'It is a long established fact that a reader will be distracted by the readable content',
+        avatar: 'assets/content/avatar-2.jpg'
+    },
+    {
+        from: 'Roma',
+        subject: 'Type Script',
+        content: 'There are many variations of passages of',
+        avatar: 'assets/content/avatar-1.jpg'
+    },
+    {
+        from: 'Amanda',
+        subject: 'PHP',
+        content: 'Lorem Ipsum has been the industrys standard',
+        avatar: 'assets/content/avatar-5.jpg'
+    },
+    {
+        from: 'Tom',
+        subject: 'Sql',
+        content: 'There are many variations of passages of',
+        avatar: 'assets/content/avatar-6.jpg'
+    }
+];
+var folders = [
+    {
+        icon: 'android',
+        badge: false,
+        name: 'Android app',
+        updated: 'March 21, 2017'
+    },
+    {
+        icon: 'update',
+        badge: false,
+        name: 'Update plugins',
+        updated: 'March 19, 2017'
+    },
+    {
+        icon: 'bug_report',
+        badge: false,
+        name: 'Fix bugs',
+        updated: 'March 22, 2017'
+    },
+    {
+        icon: 'unarchive',
+        badge: false,
+        name: 'Create app design',
+        updated: 'March 25, 2017'
+    },
+    {
+        icon: 'content_copy',
+        badge: 8,
+        name: 'Create widgets',
+        updated: 'March 16, 2017'
+    },
+    {
+        icon: 'folder_open',
+        badge: false,
+        name: 'Documentation',
+        updated: 'March 28, 2017'
+    }
+];
+var PageProfileComponent = (function () {
+    function PageProfileComponent(_sharedService) {
+        this._sharedService = _sharedService;
+        this.pageTitle = 'Profile';
+        this.lat = 50.4664212;
+        this.lng = 30.6;
+        this.messages = messages;
+        this.folders = folders;
+        // barChart
+        this.barChartOptions = {
+            scaleShowVerticalLines: false,
+            responsive: true,
+            responsiveAnimationDuration: 500
+        };
+        this.barChartLabels = [
+            '2012',
+            '2013',
+            '2014',
+            '2015',
+            '2016',
+            '2017'
+        ];
+        this.barChartType = 'bar';
+        this.barChartLegend = true;
+        this.barChartData = [
+            {
+                data: [59, 80, 81, 56, 55, 40],
+                label: 'Angular JS',
+                borderWidth: 1,
+                pointRadius: 1
+            },
+            {
+                data: [48, 40, 19, 86, 27, 90],
+                label: 'React JS',
+                borderWidth: 1,
+                pointRadius: 1
+            }
+        ];
+        // Pie
+        this.pieChartLabels = [
+            'Angular',
+            'PHP',
+            'HTML'
+        ];
+        this.pieChartData = [
+            300,
+            500,
+            100
+        ];
+        this.pieChartColors = [
+            {
+                backgroundColor: [
+                    "#778391",
+                    "#5dade0",
+                    "#3c4e62"
+                ],
+            }
+        ];
+        this.pieChartType = 'pie';
+        this.pieChartOptions = {
+            elements: {
+                arc: {
+                    borderWidth: 0
+                }
+            },
+            tooltips: false
+        };
+        //Doughnut
+        this.doughnutChartLabels = [
+            'Angular',
+            'PHP',
+            'HTML'
+        ];
+        this.doughnutChartData = [
+            350,
+            450,
+            100
+        ];
+        this.doughnutChartColors = [
+            {
+                backgroundColor: [
+                    "#778391",
+                    "#ff8c00",
+                    "#3c4e62"
+                ],
+            }
+        ];
+        this.doughnutChartType = 'doughnut';
+        this.doughnutChartOptions = {
+            elements: {
+                arc: {
+                    borderWidth: 0
+                }
+            },
+            tooltips: false
+        };
+        // PolarArea
+        this.polarAreaChartLabels = [
+            'Angular',
+            'PHP',
+            'HTML'
+        ];
+        this.polarAreaChartData = [
+            300,
+            400,
+            500
+        ];
+        this.polarAreaChartColors = [
+            {
+                backgroundColor: [
+                    "#778391",
+                    "#dc143c",
+                    "#3c4e62"
+                ],
+            }
+        ];
+        this.polarAreaChartType = 'polarArea';
+        this.polarAreaChartOptions = {
+            elements: {
+                arc: {
+                    borderWidth: 0
+                }
+            },
+            tooltips: false
+        };
+        this._sharedService.emitChange(this.pageTitle);
+    }
+    PageProfileComponent.prototype.ngOnInit = function () { };
+    PageProfileComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-profile',
+            template: __webpack_require__("../../../../../src/app/pages/default-pages/profile/profile.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/default-pages/profile/profile.component.scss")]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
+    ], PageProfileComponent);
+    return PageProfileComponent;
+    var _a;
+}());
+
+//# sourceMappingURL=profile.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/requests/requests.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\r\n<ni-card>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12 col-xl-6 mb-lg-4\">\r\n      <div class=\"chart-container\">\r\n        <div id=\"amchart-1\" [style.width.%]=\"100\" [style.height.%]=\"100\"></div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-md-6 col-xl-3 flex-xl-first mb-4 mb-md-0\">\r\n      <h5 class=\"mt-0\">Last sales</h5>\r\n      <div class=\"table-responsive mb-3\">\r\n        <table class=\"table table-sm\">\r\n          <tbody>\r\n          <tr>\r\n            <td>Samsung Galaxy S8</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Meizu M3</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Meizu Pro 6</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">5</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Apple iPhone SE</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'warning'\" [borderRadius]=\"false\">7</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>iPhone 6</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>iPhone 7</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Huawei P8</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">4</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Xiaomi Mi Band 2</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'danger'\" [borderRadius]=\"false\">10</ni-badge>\r\n            </td>\r\n          </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n      <button ni-button block=\"true\" type=\"accent\" outline=\"true\" lineStyle=\"dashed\" beforeIcon=\"fa fa-shopping-basket\">Look all</button>\r\n    </div>\r\n    <div class=\"col-md-6 col-xl-3\">\r\n      <p class=\"mb-1\"><strong>Angular</strong></p>\r\n      <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"98\"></md-progress-bar>\r\n\r\n      <p class=\"mb-1\"><strong>React</strong></p>\r\n      <md-progress-bar mode=\"determinate\" color=\"warn\" [value]=\"85\"></md-progress-bar>\r\n\r\n      <p class=\"mb-1\"><strong>Vue.js</strong></p>\r\n      <md-progress-bar mode=\"determinate\" [value]=\"40\"></md-progress-bar>\r\n\r\n      <p class=\"mb-1\"><strong>Backbone.js</strong></p>\r\n      <md-progress-bar mode=\"determinate\" [value]=\"38\"></md-progress-bar>\r\n\r\n      <p class=\"mb-1\"><strong>Ember.js</strong></p>\r\n      <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"54\"></md-progress-bar>\r\n\r\n      <p class=\"mb-1\"><strong>Meteor.js</strong></p>\r\n      <md-progress-bar mode=\"determinate\" color=\"warn\" [value]=\"38\"></md-progress-bar>\r\n\r\n      <p class=\"mb-1\"><strong>jQuery</strong></p>\r\n      <md-progress-bar mode=\"determinate\" color=\"warn\" [value]=\"61\"></md-progress-bar>\r\n    </div>\r\n  </div>\r\n</ni-card>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'info'\" [outline]=\"true\" class=\"info-card\">\r\n      <h6 class=\"mt-0 title\">Orders</h6>\r\n      <div class=\"count\">2,145</div>\r\n      <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">+17%</ni-badge> <small>from previous period</small>\r\n      <md-icon>shopping_basket</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'info'\" [outline]=\"true\" class=\"info-card\">\r\n      <h6 class=\"mt-0 title\">Revenue</h6>\r\n      <div class=\"count\">$ 50,24</div>\r\n      <small>11750</small>\r\n      <md-icon>equalizer</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'info'\" [outline]=\"true\" class=\"info-card\">\r\n      <h6 class=\"mt-0 title\">Products</h6>\r\n      <div class=\"count\">2,543</div>\r\n      <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">+210</ni-badge>\r\n      <md-icon>monetization_on</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'info'\" [outline]=\"true\" class=\"info-card\">\r\n      <h6 class=\"mt-0 title\">Sold</h6>\r\n      <div class=\"count\">1,005</div>\r\n      <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">+24%</ni-badge>\r\n      <md-icon>donut_large</md-icon>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<ni-card>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-4\">\r\n      <div id=\"amchart-2\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\r\n    </div>\r\n\r\n    <div class=\"col-lg-4\">\r\n      <div id=\"amchart-3\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\r\n    </div>\r\n\r\n    <div class=\"col-lg-4\">\r\n      <div id=\"amchart-4\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\r\n    </div>\r\n  </div>\r\n</ni-card>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-6\">\r\n    <ni-card [title]=\"'Changelog'\" [outline]=\"true\" class=\"mb-lg-0\">\r\n      <ni-h-timeline [showYears]=\"false\" [showDate]=\"false\" [align]=\"'left'\" [data]=\"timelineData\"></ni-h-timeline>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-lg-6\">\r\n    <ni-card [title]=\"'To do list'\" class=\"mb-0\">\r\n      <md-list>\r\n        <md-list-item *ngFor=\"let folder of folders\">\r\n          <md-icon md-list-avatar>{{folder.icon}}<ni-badge *ngIf=\"folder.badge\" [color]=\"'danger'\" [position]=\"'top-right'\">{{folder.badge}}</ni-badge></md-icon>\r\n          <h4 md-line>{{folder.name}}</h4>\r\n          <p md-line><i>{{folder.updated}}</i></p>\r\n        </md-list-item>\r\n      </md-list>\r\n    </ni-card>\r\n  </div>\r\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/requests/requests.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".chart-container {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  height: 400px;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  width: 100%; }\n  @media (max-width: 767px) {\n    .chart-container {\n      height: 300px; } }\n  .chart-container canvas {\n    margin: 0 auto;\n    max-height: 100%;\n    width: auto !important; }\n\n:host /deep/ .amcharts-graph-g2 .amcharts-graph-stroke {\n  stroke-dasharray: 3px 3px;\n  stroke-linejoin: round;\n  stroke-linecap: round;\n  -webkit-animation: am-moving-dashes 1s linear infinite;\n          animation: am-moving-dashes 1s linear infinite; }\n\n@-webkit-keyframes am-moving-dashes {\n  100% {\n    stroke-dashoffset: -31px; } }\n\n@keyframes am-moving-dashes {\n  100% {\n    stroke-dashoffset: -31px; } }\n\n:host /deep/ .lastBullet {\n  -webkit-animation: am-pulsating 1s ease-out infinite;\n          animation: am-pulsating 1s ease-out infinite; }\n\n@-webkit-keyframes am-pulsating {\n  0% {\n    stroke-opacity: 1;\n    stroke-width: 0px; }\n  100% {\n    stroke-opacity: 0;\n    stroke-width: 50px; } }\n\n@keyframes am-pulsating {\n  0% {\n    stroke-opacity: 1;\n    stroke-width: 0px; }\n  100% {\n    stroke-opacity: 0;\n    stroke-width: 50px; } }\n\n:host /deep/ .amcharts-graph-column-front {\n  transition: all .3s .3s ease-out; }\n\n:host /deep/ .amcharts-graph-column-front:hover {\n  fill: #496375;\n  stroke: #496375;\n  transition: all .3s ease-out; }\n\n:host /deep/ .amcharts-graph-g3 {\n  stroke-linejoin: round;\n  stroke-linecap: round;\n  stroke-dasharray: 500%;\n  stroke-dasharray: 0;\n  stroke-dashoffset: 0;\n  -webkit-animation: am-draw 40s;\n          animation: am-draw 40s; }\n\n@-webkit-keyframes am-draw {\n  0% {\n    stroke-dashoffset: 500%; }\n  100% {\n    stroke-dashoffset: 0%; } }\n\n@keyframes am-draw {\n  0% {\n    stroke-dashoffset: 500%; }\n  100% {\n    stroke-dashoffset: 0%; } }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/requests/requests.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageRequestsComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__ = __webpack_require__("../../../../@amcharts/amcharts3-angular/es2015/index.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var folders = [
+    {
+        icon: 'android',
+        badge: false,
+        name: 'Android app',
+        updated: 'July 21, 2017'
+    },
+    {
+        icon: 'update',
+        badge: false,
+        name: 'Update plugins',
+        updated: 'July 19, 2017'
+    },
+    {
+        icon: 'bug_report',
+        badge: false,
+        name: 'Fix bugs',
+        updated: 'July 22, 2017'
+    },
+    {
+        icon: 'unarchive',
+        badge: false,
+        name: 'Create app design',
+        updated: 'July 25, 2017'
+    },
+    {
+        icon: 'content_copy',
+        badge: 8,
+        name: 'Create widgets',
+        updated: 'July 16, 2017'
+    },
+    {
+        icon: 'folder_open',
+        badge: false,
+        name: 'Documentation',
+        updated: 'July 28, 2017'
+    },
+    {
+        icon: 'folder_open',
+        badge: false,
+        name: 'Upload',
+        updated: 'July 30, 2017'
+    }
+];
+var timelineData = [
+    {
+        'timeline': [
+            {
+                'content': "Aenean lacinia bibendum nulla sed consectetur.",
+                'pointColor': '#ea8080'
+            },
+            {
+                'content': "Aenean lacinia bibendum nulla.",
+                'pointColor': '#915035'
+            },
+            {
+                'content': "Lorem ipsum dolor sit amet.",
+                'pointColor': '#B925FF'
+            },
+            {
+                'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                'pointColor': '#C5CAE9'
+            },
+            {
+                'content': "Lorem ipsum dolor sit.",
+                'pointColor': '#FF8A65'
+            }
+        ]
+    }
+];
+var PageRequestsComponent = (function () {
+    function PageRequestsComponent(AmCharts, _sharedService) {
+        this.AmCharts = AmCharts;
+        this._sharedService = _sharedService;
+        this.pageTitle = 'Requests';
+        this.folders = folders;
+        this.timelineData = timelineData;
+        this._sharedService.emitChange(this.pageTitle);
+    }
+    PageRequestsComponent.prototype.ngOnInit = function () {
+        this.chart = this.AmCharts.makeChart('amchart-1', {
+            'type': 'serial',
+            'theme': 'light',
+            'dataDateFormat': 'YYYY-MM-DD',
+            'dataProvider': [
+                {
+                    'date': '2012-01-01',
+                    'distance': 227,
+                    'townName': 'New York',
+                    'townName2': 'New York',
+                    'townSize': 25,
+                    'latitude': 40.71,
+                    'duration': 408
+                }, {
+                    'date': '2012-01-02',
+                    'distance': 371,
+                    'townName': 'Washington',
+                    'townSize': 14,
+                    'latitude': 38.89,
+                    'duration': 482
+                }, {
+                    'date': '2012-01-03',
+                    'distance': 433,
+                    'townName': 'Wilmington',
+                    'townSize': 6,
+                    'latitude': 34.22,
+                    'duration': 562
+                }, {
+                    'date': '2012-01-04',
+                    'distance': 345,
+                    'townName': 'Jacksonville',
+                    'townSize': 7,
+                    'latitude': 30.35,
+                    'duration': 379
+                }, {
+                    'date': '2012-01-05',
+                    'distance': 480,
+                    'townName': 'Miami',
+                    'townName2': 'Miami',
+                    'townSize': 10,
+                    'latitude': 25.83,
+                    'duration': 501
+                }, {
+                    'date': '2012-01-06',
+                    'distance': 386,
+                    'townName': 'Tallahassee',
+                    'townSize': 7,
+                    'latitude': 30.46,
+                    'duration': 443
+                }, {
+                    'date': '2012-01-07',
+                    'distance': 348,
+                    'townName': 'New Orleans',
+                    'townSize': 10,
+                    'latitude': 29.94,
+                    'duration': 405
+                }, {
+                    'date': '2012-01-08',
+                    'distance': 238,
+                    'townName': 'Houston',
+                    'townName2': 'Houston',
+                    'townSize': 16,
+                    'latitude': 29.76,
+                    'duration': 309
+                }, {
+                    'date': '2012-01-09',
+                    'distance': 218,
+                    'townName': 'Dalas',
+                    'townSize': 17,
+                    'latitude': 32.8,
+                    'duration': 287
+                }, {
+                    'date': '2012-01-10',
+                    'distance': 349,
+                    'townName': 'Oklahoma City',
+                    'townSize': 11,
+                    'latitude': 35.49,
+                    'duration': 485
+                }, {
+                    'date': '2012-01-11',
+                    'distance': 603,
+                    'townName': 'Kansas City',
+                    'townSize': 10,
+                    'latitude': 39.1,
+                    'duration': 890
+                }, {
+                    'date': '2012-01-12',
+                    'distance': 534,
+                    'townName': 'Denver',
+                    'townName2': 'Denver',
+                    'townSize': 18,
+                    'latitude': 39.74,
+                    'duration': 810
+                }, {
+                    'date': '2012-01-13',
+                    'townName': 'Salt Lake City',
+                    'townSize': 12,
+                    'distance': 425,
+                    'duration': 670,
+                    'latitude': 40.75,
+                    'alpha': 0.4
+                }, {
+                    'date': '2012-01-14',
+                    'latitude': 36.1,
+                    'duration': 470,
+                    'townName': 'Las Vegas',
+                    'bulletClass': 'lastBullet'
+                }
+            ],
+            'addClassNames': true,
+            'startDuration': 1,
+            'categoryField': 'date',
+            'categoryAxis': {
+                'parseDates': true,
+                'minPeriod': 'DD',
+                'autoGridCount': false,
+                'gridCount': 50,
+                'gridAlpha': 0.1,
+                'gridColor': '#FFFFFF',
+                'axisColor': '#555555',
+                'dateFormats': [{
+                        'period': 'DD',
+                        'format': 'DD'
+                    }, {
+                        'period': 'WW',
+                        'format': 'MMM DD'
+                    }, {
+                        'period': 'MM',
+                        'format': 'MMM'
+                    }, {
+                        'period': 'YYYY',
+                        'format': 'YYYY'
+                    }]
+            },
+            'valueAxes': [{
+                    'id': 'a1',
+                    'title': 'distance',
+                    'gridAlpha': 0,
+                    'axisAlpha': 0
+                }, {
+                    'id': 'a2',
+                    'position': 'right',
+                    'gridAlpha': 0,
+                    'axisAlpha': 0,
+                    'labelsEnabled': false
+                }],
+            'graphs': [{
+                    'id': 'g1',
+                    'valueField': 'distance',
+                    'title': 'distance',
+                    'type': 'column',
+                    'fillAlphas': 0.9,
+                    'valueAxis': 'a1',
+                    'balloonText': '[[value]] miles',
+                    'legendValueText': '[[value]] mi',
+                    'legendPeriodValueText': 'total: [[value.sum]] mi',
+                    'lineColor': '#B3E5FC',
+                    'alphaField': 'alpha'
+                }, {
+                    'id': 'g2',
+                    'valueField': 'latitude',
+                    'classNameField': 'bulletClass',
+                    'title': 'latitude/city',
+                    'type': 'line',
+                    'valueAxis': 'a2',
+                    'lineColor': '#d50000',
+                    'lineThickness': 1,
+                    'legendValueText': '[[value]]/[[description]]',
+                    'descriptionField': 'townName',
+                    'bullet': 'round',
+                    'bulletSizeField': 'townSize',
+                    'bulletBorderColor': '#ca0000',
+                    'bulletBorderAlpha': 1,
+                    'bulletBorderThickness': 2,
+                    'bulletColor': '#f2b3b3',
+                    'labelText': '[[townName2]]',
+                    'labelPosition': 'right',
+                    'balloonText': 'latitude:[[value]]',
+                    'showBalloon': true,
+                    'animationPlayed': true
+                }, {
+                    'id': 'g3',
+                    'title': 'duration',
+                    'valueField': 'duration',
+                    'type': 'line',
+                    'valueAxis': 'a3',
+                    'lineColor': '#64B5F6',
+                    'balloonText': '[[value]]',
+                    'lineThickness': 1,
+                    'legendValueText': '[[value]]',
+                    'bullet': 'square',
+                    'bulletBorderColor': '#64B5F6',
+                    'bulletBorderThickness': 1,
+                    'bulletBorderAlpha': 1,
+                    'dashLengthField': 'dashLength',
+                    'animationPlayed': true
+                }],
+            'chartCursor': {
+                'zoomable': false,
+                'categoryBalloonDateFormat': 'DD',
+                'cursorAlpha': 0,
+                'valueBalloonsEnabled': false
+            },
+            'legend': {
+                'bulletType': 'round',
+                'equalWidths': false,
+                'valueWidth': 120,
+                'useGraphSettings': true
+            }
+        });
+        this.chart = this.AmCharts.makeChart('amchart-2', {
+            'type': 'pie',
+            'theme': 'light',
+            'dataProvider': [
+                {
+                    'country': 'Lithuania',
+                    'litres': 501.9
+                }, {
+                    'country': 'Czech Republic',
+                    'litres': 301.9
+                }, {
+                    'country': 'Ireland',
+                    'litres': 201.1
+                }, {
+                    'country': 'Germany',
+                    'litres': 165.8
+                }, {
+                    'country': 'Australia',
+                    'litres': 139.9
+                }, {
+                    'country': 'Austria',
+                    'litres': 128.3
+                }, {
+                    'country': 'UK',
+                    'litres': 99
+                }, {
+                    'country': 'Belgium',
+                    'litres': 60
+                }, {
+                    'country': 'The Netherlands',
+                    'litres': 50
+                }
+            ],
+            'pullOutRadius': 0,
+            'labelRadius': -40,
+            'valueField': 'litres',
+            'titleField': 'country',
+            'labelText': '[[litres]]',
+            'balloon': {
+                'fixedPosition': true
+            }
+        });
+        this.chart = this.AmCharts.makeChart('amchart-3', {
+            'type': 'pie',
+            'theme': 'light',
+            'dataProvider': [
+                {
+                    'title': 'Chrome',
+                    'value': 70
+                }, {
+                    'title': 'Firefox',
+                    'value': 15
+                }, {
+                    'title': 'Opera',
+                    'value': 10
+                }, {
+                    'title': 'Safari',
+                    'value': 12
+                }, {
+                    'title': 'Edge',
+                    'value': 5
+                }
+            ],
+            'titleField': 'title',
+            'valueField': 'value',
+            'labelRadius': -40,
+            'radius': '46%',
+            'innerRadius': '60%',
+            'labelText': '[[title]]'
+        });
+        this.chart = this.AmCharts.makeChart('amchart-4', {
+            'type': 'radar',
+            'theme': 'light',
+            'dataProvider': [
+                {
+                    'country': 'Czech Republic',
+                    'litres': 156.9
+                }, {
+                    'country': 'Ireland',
+                    'litres': 131.1
+                }, {
+                    'country': 'Germany',
+                    'litres': 115.8
+                }, {
+                    'country': 'Australia',
+                    'litres': 109.9
+                }, {
+                    'country': 'Austria',
+                    'litres': 108.3
+                }, {
+                    'country': 'UK',
+                    'litres': 99
+                }
+            ],
+            'valueAxes': [{
+                    'axisTitleOffset': 20,
+                    'minimum': 0,
+                    'axisAlpha': 0.15
+                }],
+            'startDuration': 1,
+            'graphs': [{
+                    'balloonText': '[[value]] litres of beer per year',
+                    'bullet': 'round',
+                    'lineThickness': 2,
+                    'valueField': 'litres'
+                }],
+            'categoryField': 'country'
+        });
+    };
+    PageRequestsComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-requests',
+            template: __webpack_require__("../../../../../src/app/pages/default-pages/requests/requests.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/default-pages/requests/requests.component.scss")]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _b || Object])
+    ], PageRequestsComponent);
+    return PageRequestsComponent;
+    var _a, _b;
+}());
+
+//# sourceMappingURL=requests.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/simulation/simulation.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<ni-card [title]=\"'Headers'\">\n  <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>\n  <div class=\"row\">\n    <div class=\"col-md-6\">\n      <h1>Heading 1</h1>\n      <h2>Heading 2</h2>\n      <h3>Heading 3</h3>\n      <h4>Heading 4</h4>\n      <h5>Heading 5</h5>\n      <h6>Heading 6</h6>\n    </div>\n    <div class=\"col-md-6\">\n      <h1 class=\"text-uppercase\">Heading 1</h1>\n      <h2 class=\"text-uppercase\">Heading 2</h2>\n      <h3 class=\"text-uppercase\">Heading 3</h3>\n      <h4 class=\"text-uppercase\">Heading 4</h4>\n      <h5 class=\"text-uppercase\">Heading 5</h5>\n      <h6 class=\"text-uppercase\">Heading 6</h6>\n    </div>\n  </div>\n</ni-card>\n\n<ni-card [title]=\"'Text style'\">\n  <p><code>.mark</code> and <code>.small</code> classes are also available to apply the same styles as <code>&lt;mark&gt;</code> and <code>&lt;small&gt;</code> while avoiding any unwanted semantic implications that the tags would bring.</p>\n  <p>You can use the mark tag to <mark>highlight</mark> text.</p>\n  <p><del>This line of text is meant to be treated as deleted text.</del></p>\n  <p><s>This line of text is meant to be treated as no longer accurate.</s></p>\n  <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>\n  <p><u>This line of text will render as underlined</u></p>\n  <p><small>This line of text is meant to be treated as fine print.</small></p>\n  <p><strong>This line rendered as bold text.</strong></p>\n  <p><em>This line rendered as italicized text.</em></p>\n</ni-card>\n\n<ni-card [title]=\"'Blockquotes'\">\n  <p>For quoting blocks of content from another source within your document. Wrap <code>&lt;blockquote class=\"blockquote\"&gt;</code> around any <abbr title=\"HyperText Markup Language\">HTML</abbr> as the quote.</p>\n  <blockquote class=\"blockquote\">\n    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\n    <footer class=\"blockquote-footer\">Someone famous in <cite title=\"Source Title\">Source Title</cite></footer>\n  </blockquote>\n\n  <blockquote class=\"blockquote blockquote-reverse\">\n    <p class=\"mb-0\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\n    <footer class=\"blockquote-footer\">Someone famous in <cite title=\"Source Title\">Source Title</cite></footer>\n  </blockquote>\n</ni-card>\n\n<ni-card [title]=\"'Lists'\">\n  <div class=\"row\">\n    <div class=\"col-md-6\">\n      <ul>\n        <li>Lorem ipsum dolor sit amet</li>\n        <li>Consectetur adipiscing elit</li>\n        <li>Integer molestie lorem at massa</li>\n        <li>Facilisis in pretium nisl aliquet</li>\n        <li>Nulla volutpat aliquam velit\n          <ul>\n            <li>Phasellus iaculis neque</li>\n            <li>Purus sodales ultricies</li>\n            <li>Vestibulum laoreet porttitor sem</li>\n            <li>Ac tristique libero volutpat at</li>\n          </ul>\n        </li>\n        <li>Faucibus porta lacus fringilla vel</li>\n        <li>Aenean sit amet erat nunc</li>\n        <li>Eget porttitor lorem</li>\n      </ul>\n    </div>\n    <div class=\"col-md-6\">\n      <ol>\n        <li>Lorem ipsum dolor sit amet</li>\n        <li>Consectetur adipiscing elit</li>\n        <li>Integer molestie lorem at massa</li>\n        <li>Facilisis in pretium nisl aliquet</li>\n        <li>Nulla volutpat aliquam velit\n          <ol>\n            <li>Phasellus iaculis neque</li>\n            <li>Purus sodales ultricies</li>\n            <li>Vestibulum laoreet porttitor sem</li>\n            <li>Ac tristique libero volutpat at</li>\n          </ol>\n        </li>\n        <li>Faucibus porta lacus fringilla vel</li>\n        <li>Aenean sit amet erat nunc</li>\n        <li>Eget porttitor lorem</li>\n      </ol>\n    </div>\n  </div>\n</ni-card>\n\n<ni-card [title]=\"'Text alignment'\">\n  <p>Easily realign text to components with text alignment classes.</p>\n  <p class=\"text-left\">Left aligned text on all viewport sizes.</p>\n  <p class=\"text-center\">Center aligned text on all viewport sizes.</p>\n  <p class=\"text-right\">Right aligned text on all viewport sizes.</p>\n</ni-card>\n\n<ni-card [title]=\"'Text transform'\" class=\"mb-0\">\n  <p>Transform text in components with text capitalization classes.</p>\n  <p class=\"text-lowercase\">Lowercased text.</p>\n  <p class=\"text-uppercase\">Uppercased text.</p>\n  <p class=\"text-capitalize\">CapiTaliZed text.</p>\n</ni-card>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/simulation/simulation.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/simulation/simulation.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageSimulationComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var PageSimulationComponent = (function () {
+    function PageSimulationComponent(_sharedService) {
+        this._sharedService = _sharedService;
+        this.pageTitle = 'Simulation';
+        this._sharedService.emitChange(this.pageTitle);
+    }
+    PageSimulationComponent.prototype.ngOnInit = function () { };
+    PageSimulationComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-simulation',
+            template: __webpack_require__("../../../../../src/app/pages/default-pages/simulation/simulation.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/default-pages/simulation/simulation.component.scss")]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
+    ], PageSimulationComponent);
+    return PageSimulationComponent;
+    var _a;
+}());
+
+//# sourceMappingURL=simulation.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/transactions/transactions.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\r\n<div class=\"row\">\r\n  <div class=\"col-lg-4\">\r\n    <ni-card>\r\n      <div id=\"amchart-1\" [style.width.%]=\"100\" [style.height.px]=\"300\"></div>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-lg-4\">\r\n    <ni-card>\r\n      <div id=\"amchart-2\" [style.width.%]=\"100\" [style.height.px]=\"300\"></div>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-lg-4\">\r\n    <ni-card>\r\n      <div id=\"amchart-3\" [style.width.%]=\"100\" [style.height.px]=\"300\"></div>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-xl-8\">\r\n    <ni-card [title]=\"'What we doing'\">\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente. Ad architecto at aut\r\n        et ex facilis fuga, laboriosam, magnam modi obcaecati officia officiis, omnis praesentium quam quas reiciendis\r\n        rerum ullam velit veritatis vitae.</p>\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-md-6\">\r\n          <p class=\"mb-1\"><strong>Wordpress</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"90\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Magento</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"80\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Opencart</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"60\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Drupal</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"30\"></md-progress-bar>\r\n          <div class=\"clearfix\"></div>\r\n        </div>\r\n\r\n        <div class=\"col-md-6\">\r\n          <p class=\"mb-1\"><strong>Angular</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"98\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>React</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"85\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Vue.js</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"40\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Backbone.js</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"38\"></md-progress-bar>\r\n          <div class=\"clearfix\"></div>\r\n        </div>\r\n      </div>\r\n\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam at corporis deleniti dicta doloremque\r\n        doloribus, ea ex excepturi fugiat labore minima possimus quia repellat similique soluta ut voluptate! Ad et hic\r\n        incidunt molestiae mollitia officiis omnis, perspiciatis quaerat qui quibusdam.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-xl-4\">\r\n    <ni-card [bgColor]=\"''\" class=\"chart-card\">\r\n      <div class=\"chart\">\r\n        <canvas\r\n          baseChart\r\n          [data]=\"pieChartData\"\r\n          [colors]=\"pieChartColors\"\r\n          [labels]=\"pieChartLabels\"\r\n          [legend]=\"false\"\r\n          [options]=\"pieChartOptions\"\r\n          [chartType]=\"pieChartType\"></canvas>\r\n      </div>\r\n      <div class=\"info\">\r\n        <div class=\"title\"><strong>930</strong> <small>Resolved</small></div>\r\n        <div class=\"small\">More than 70% resolved issues</div>\r\n      </div>\r\n    </ni-card>\r\n    <ni-card [bgColor]=\"''\" class=\"chart-card\">\r\n      <div class=\"chart\">\r\n        <canvas\r\n          baseChart\r\n          [data]=\"doughnutChartData\"\r\n          [colors]=\"doughnutChartColors\"\r\n          [labels]=\"doughnutChartLabels\"\r\n          [legend]=\"false\"\r\n          [options]=\"doughnutChartOptions\"\r\n          [chartType]=\"doughnutChartType\"></canvas>\r\n      </div>\r\n      <div class=\"info\">\r\n        <div class=\"title\"><strong>466</strong> <small>Unresolved</small></div>\r\n        <div class=\"small\">Less than 30% unresolved issues</div>\r\n      </div>\r\n    </ni-card>\r\n    <ni-card [bgColor]=\"''\" class=\"chart-card\">\r\n      <div class=\"chart\">\r\n        <canvas\r\n          baseChart\r\n          [data]=\"polarAreaChartData\"\r\n          [colors]=\"polarAreaChartColors\"\r\n          [labels]=\"polarAreaChartLabels\"\r\n          [legend]=\"false\"\r\n          [options]=\"polarAreaChartOptions\"\r\n          [chartType]=\"polarAreaChartType\"></canvas>\r\n      </div>\r\n      <div class=\"info\">\r\n        <div class=\"title\"><strong>1,547</strong> <small>Issues</small></div>\r\n        <div class=\"small\">8 issues are unassigned</div>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-4\">\r\n    <ni-card [title]=\"'Recent activities'\" [outline]=\"true\" class=\"mb-md-0\">\r\n      <ni-h-timeline [showYears]=\"false\" [align]=\"'left'\" [data]=\"timelineData\"></ni-h-timeline>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <ni-card [title]=\"'Last sales'\" class=\"mb-md-0\">\r\n      <div class=\"table-responsive mb-3\">\r\n        <table class=\"table table-sm\">\r\n          <tbody>\r\n          <tr>\r\n            <td>Samsung Galaxy S8</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Meizu M3</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Meizu Pro 6</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">5</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Apple iPhone SE</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'warning'\" [borderRadius]=\"false\">7</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>iPhone 6</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>iPhone 7</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Huawei P8</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">4</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Ipad Mini</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">15</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Ipad Pro</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">6</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Xiaomi Mi Band 2</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'danger'\" [borderRadius]=\"false\">10</ni-badge>\r\n            </td>\r\n          </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n      <button ni-button block=\"true\" type=\"accent\" outline=\"true\" lineStyle=\"dashed\" beforeIcon=\"fa fa-shopping-basket\">Look all</button>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <ni-chat [activeUser]=\"activeUser\" [messages]=\"messages\" [style.height.px]=\"474\"></ni-chat>\r\n  </div>\r\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/transactions/transactions.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -4504,11 +3494,11 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/dashboards/dashboard-3/dashboard-3.component.ts":
+/***/ "../../../../../src/app/pages/default-pages/transactions/transactions.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageDashboard3Component; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageTransactionsComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__ = __webpack_require__("../../../../@amcharts/amcharts3-angular/es2015/index.js");
@@ -4524,20 +3514,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var BREADCRUMBS = [
-    {
-        title: 'Main',
-        link: '#'
-    },
-    {
-        title: 'Dashboards',
-        link: '#'
-    },
-    {
-        title: 'Dashboard v3',
-        link: ''
-    }
-];
 var timelineData = [
     {
         'timeline': [
@@ -4564,12 +3540,11 @@ var timelineData = [
         ]
     }
 ];
-var PageDashboard3Component = (function () {
-    function PageDashboard3Component(AmCharts, _sharedService) {
+var PageTransactionsComponent = (function () {
+    function PageTransactionsComponent(AmCharts, _sharedService) {
         this.AmCharts = AmCharts;
         this._sharedService = _sharedService;
-        this.pageTitle = 'Dashboard';
-        this.breadcrumb = BREADCRUMBS;
+        this.pageTitle = 'Transactions';
         this.timelineData = timelineData;
         this.activeUser = {
             name: 'Amanda Li',
@@ -4697,7 +3672,7 @@ var PageDashboard3Component = (function () {
         };
         this._sharedService.emitChange(this.pageTitle);
     }
-    PageDashboard3Component.prototype.ngOnInit = function () {
+    PageTransactionsComponent.prototype.ngOnInit = function () {
         this.chart = this.AmCharts.makeChart('amchart-1', {
             'type': 'pie',
             'theme': 'light',
@@ -4807,22 +3782,22 @@ var PageDashboard3Component = (function () {
             'categoryField': 'country'
         });
     };
-    PageDashboard3Component.prototype.ngOnDestroy = function () {
+    PageTransactionsComponent.prototype.ngOnDestroy = function () {
         this.AmCharts.destroyChart(this.chart);
     };
-    PageDashboard3Component = __decorate([
+    PageTransactionsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-dashboard-3',
-            template: __webpack_require__("../../../../../src/app/pages/dashboards/dashboard-3/dashboard-3.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/dashboards/dashboard-3/dashboard-3.component.scss")]
+            selector: 'page-transactions',
+            template: __webpack_require__("../../../../../src/app/pages/default-pages/transactions/transactions.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/default-pages/transactions/transactions.component.scss")]
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _b || Object])
-    ], PageDashboard3Component);
-    return PageDashboard3Component;
+    ], PageTransactionsComponent);
+    return PageTransactionsComponent;
     var _a, _b;
 }());
 
-//# sourceMappingURL=dashboard-3.component.js.map
+//# sourceMappingURL=transactions.component.js.map
 
 /***/ }),
 
@@ -4878,6 +3853,7 @@ var PageConfirmComponent = (function () {
     }
     PageConfirmComponent.prototype.ngOnInit = function () {
         var _this = this;
+        console.log("aaaa");
         this.auth.validateEmail().then(function (res) {
             if (res === 'yes') {
                 _this.router.navigate(['/default-layout/dashboard']);
@@ -4903,7 +3879,7 @@ var PageConfirmComponent = (function () {
 /***/ "../../../../../src/app/pages/extra-pages/forgot/forgot.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-card [title]=\"'Reset Your Password'\" [align]=\"'center'\">\r\n  <form (ngSubmit)=\"onSubmit()\">\r\n    <md-input-container>\r\n      <input mdInput placeholder=\"Email\" value=\"\">\r\n    </md-input-container>\r\n\r\n    <p class=\"text-left small\">Enter your email address that you used to register. We'll send you an email with your username and a link to reset your password.</p>\r\n\r\n    <button md-raised-button color=\"primary\" type=\"submit\">Reset</button>\r\n\r\n    <div class=\"additional-info\">\r\n      <a [routerLink]=\"'/extra-layout/sign-in'\">Sign In</a>\r\n      <span class=\"divider\"></span>\r\n      <a [routerLink]=\"'/extra-layout/sign-up'\">Sign up</a>\r\n    </div>\r\n  </form>\r\n</ni-card>"
+module.exports = "<ni-card [title]=\"'Reset Your Password'\" [align]=\"'center'\">\r\n  <form (ngSubmit)=\"onSubmit()\">\r\n    <md-input-container>\r\n      <input mdInput placeholder=\"Email\" value=\"\">\r\n    </md-input-container>\r\n\r\n    <p class=\"text-left small\">Enter your email address that you used to register. We'll send you an email with your username and a link to reset your password.</p>\r\n\r\n    <button md-raised-button color=\"primary\" type=\"submit\">Reset</button>\r\n\r\n    <div class=\"additional-info\">\r\n      <a [routerLink]=\"'/extra-layout/sign-in'\">Sign In</a>\r\n    </div>\r\n  </form>\r\n</ni-card>"
 
 /***/ }),
 
@@ -5081,14 +4057,14 @@ var Page500Component = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/extra-pages/sign-in-1/sign-in-1.component.html":
+/***/ "../../../../../src/app/pages/extra-pages/signin/signin.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-card [title]=\"'signin' | translate\" [align]=\"'left'\">\r\n  <form (ngSubmit)=\"onSubmit()\" [formGroup]=\"form\">\r\n    <md-input-container>\r\n      <input mdInput [placeholder]=\"'email' | translate\" value=\"\" [formControl]=\"form.controls['email']\" type=\"email\">\r\n    </md-input-container>\r\n\r\n    <md-input-container>\r\n      <input mdInput [placeholder]=\"'password' | translate\" value=\"\" [formControl]=\"form.controls['password']\" type=\"password\">\r\n    </md-input-container>\r\n\r\n    <div class=\"text-left mb-module\">\r\n      <md-checkbox>\r\n        {{'keepSigned' | translate}}\r\n      </md-checkbox>\r\n    </div>\r\n\r\n    <button md-raised-button color=\"primary\" type=\"submit\">{{'signin' | translate}}</button>\r\n\r\n    <md-select [placeholder]=\"'selectLanguage' | translate\" class=\"mt-4 col-sm-12\" (ngModelChange)=\"changeLanguage()\" [formControl]=\"form.controls['langCode']\">\r\n      <md-option *ngFor=\"let lang of languages\" [value]=\"lang.code\">\r\n        {{ lang.value }}\r\n      </md-option>\r\n    </md-select>\r\n\r\n    <div class=\"additional-info\">\r\n      <a [routerLink]=\"'/extra-layout/sign-up'\">{{'signup' | translate}}</a>\r\n      <span class=\"divider\"></span>\r\n      <a [routerLink]=\"'/extra-layout/forgot'\">{{'forgotPassword' | translate}}</a>\r\n    </div>\r\n  </form>\r\n</ni-card>\r\n"
+module.exports = "<ni-card [title]=\"'signin' | translate\" [align]=\"'left'\">\r\n  <form (ngSubmit)=\"onSubmit()\" [formGroup]=\"form\">\r\n    <md-input-container>\r\n      <input mdInput [placeholder]=\"'email' | translate\" value=\"\" [formControl]=\"form.controls['email']\" type=\"email\">\r\n    </md-input-container>\r\n\r\n    <md-input-container>\r\n      <input mdInput [placeholder]=\"'password' | translate\" value=\"\" [formControl]=\"form.controls['password']\" type=\"password\">\r\n    </md-input-container>\r\n\r\n    <div class=\"text-left mb-module\">\r\n      <md-checkbox>\r\n        {{'keepSigned' | translate}}\r\n      </md-checkbox>\r\n    </div>\r\n\r\n    <button md-raised-button color=\"primary\" type=\"submit\">{{'signin' | translate}}</button>\r\n\r\n    <md-select [placeholder]=\"'selectLanguage' | translate\" class=\"mt-4 col-sm-12\" (ngModelChange)=\"changeLanguage()\" [formControl]=\"form.controls['langCode']\">\r\n      <md-option *ngFor=\"let lang of languages\" [value]=\"lang.code\">\r\n        {{ lang.value }}\r\n      </md-option>\r\n    </md-select>\r\n\r\n    <div class=\"additional-info\">\r\n      <a (click)=\"goSignupPage()\">{{'signup' | translate}}</a>\r\n      <span class=\"divider\"></span>\r\n      <a (click)=\"goForgotPage()\">{{'forgotPassword' | translate}}</a>\r\n    </div>\r\n  </form>\r\n</ni-card>\r\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/extra-pages/sign-in-1/sign-in-1.component.scss":
+/***/ "../../../../../src/app/pages/extra-pages/signin/signin.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -5106,16 +4082,17 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/extra-pages/sign-in-1/sign-in-1.component.ts":
+/***/ "../../../../../src/app/pages/extra-pages/signin/signin.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageSignIn1Component; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageSigninComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_translate__ = __webpack_require__("../../../../ng2-translate/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__settings_menu__ = __webpack_require__("../../../../../src/settings/menu.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5130,32 +4107,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var PageSignIn1Component = (function () {
-    function PageSignIn1Component(router, auth, fb, translate) {
+
+var PageSigninComponent = (function () {
+    function PageSigninComponent(router, auth, fb, translate) {
         this.router = router;
         this.auth = auth;
         this.fb = fb;
         this.translate = translate;
-        this.languages = [
-            { code: 'en', value: 'English' },
-            { code: 'fr', value: 'French' },
-            { code: 'pt', value: 'Portuguese' },
-            { code: 'es', value: 'Spanish' }
-        ];
+        this.languages = __WEBPACK_IMPORTED_MODULE_5__settings_menu__["a" /* LANGUAGES */];
         this.form = this.fb.group({
             email: [null, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required],
             password: [null, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required],
             langCode: ['en']
         });
-        translate.addLangs(['en', 'fr', 'es', 'pt']);
-        translate.setDefaultLang('en');
-        translate.use('en');
+        this.auth.langCode.subscribe(function (code) {
+            translate.use(code);
+        });
     }
-    PageSignIn1Component.prototype.ngOnInit = function () {
+    PageSigninComponent.prototype.ngOnInit = function () {
         this.auth.isConfirm = false;
         this.auth.isLogged = false;
     };
-    PageSignIn1Component.prototype.onSubmit = function () {
+    PageSigninComponent.prototype.onSubmit = function () {
         var _this = this;
         this.auth.login(this.form.value).then(function (res) {
             if (res === 'yes') {
@@ -5163,43 +4136,52 @@ var PageSignIn1Component = (function () {
             }
         });
     };
-    PageSignIn1Component.prototype.changeLanguage = function () {
+    PageSigninComponent.prototype.changeLanguage = function () {
         var _this = this;
         this.form.controls.langCode.valueChanges.subscribe(function (d) {
             _this.translate.use(d);
+            _this.auth.changeLanguage(d);
         });
     };
-    PageSignIn1Component = __decorate([
+    PageSigninComponent.prototype.goSignupPage = function () {
+        this.auth.redirectPage = 'signup';
+        this.router.navigate(['/extra-layout/sign-up']);
+    };
+    PageSigninComponent.prototype.goForgotPage = function () {
+        this.auth.redirectPage = 'forgot';
+        this.router.navigate(['/extra-layout/forgot']);
+    };
+    PageSigninComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-sign-in-1',
-            template: __webpack_require__("../../../../../src/app/pages/extra-pages/sign-in-1/sign-in-1.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/extra-pages/sign-in-1/sign-in-1.component.scss")]
+            selector: 'page-signin',
+            template: __webpack_require__("../../../../../src/app/pages/extra-pages/signin/signin.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/extra-pages/signin/signin.component.scss")]
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3_ng2_translate__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ng2_translate__["c" /* TranslateService */]) === "function" && _d || Object])
-    ], PageSignIn1Component);
-    return PageSignIn1Component;
+    ], PageSigninComponent);
+    return PageSigninComponent;
     var _a, _b, _c, _d;
 }());
 
-//# sourceMappingURL=sign-in-1.component.js.map
+//# sourceMappingURL=signin.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/extra-pages/sign-up-1/dialog-result.html":
+/***/ "../../../../../src/app/pages/extra-pages/signup/dialog-result.html":
 /***/ (function(module, exports) {
 
 module.exports = "<h2 md-dialog-title>Privacy and Terms</h2>\n<div md-dialog-content>Combining data\n    We also combine data among our services and across your devices for these purposes. For example, we show you ads based on information from your use of Search and Gmail, and we use data from trillions of search queries to build spell-correction models that we use across all of our services.</div>\n<div md-dialog-actions>\n  <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n  <button md-raised-button (click)=\"dialogRef.close('yes')\" color=\"accent\">I AGREE</button>\n</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/extra-pages/sign-up-1/sign-up-1.component.html":
+/***/ "../../../../../src/app/pages/extra-pages/signup/signup.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-card [title]=\"'Create your account'\" [align]=\"'left'\">\r\n  <form (ngSubmit)=\"onSubmit()\" [formGroup]=\"form\">\r\n    <md-input-container>\r\n      <input mdInput placeholder=\"First name\" [formControl]=\"form.controls['fname']\">\r\n      <small *ngIf=\"form.controls['fname'].hasError('required') && form.controls['fname'].touched\" class=\"form-message text-danger\">You must include a first name.</small>\r\n      <small *ngIf=\"form.controls['fname'].hasError('minlength') && form.controls['fname'].touched\" class=\"form-message text-danger\">Your first name must be at least 5 characters long.</small>\r\n      <small *ngIf=\"form.controls['fname'].hasError('maxlength') && form.controls['fname'].touched\" class=\"form-message text-danger\">Your first name cannot exceed 10 characters.</small>\r\n    </md-input-container>\r\n\r\n    <md-input-container>\r\n        <input mdInput placeholder=\"Email address\" [formControl]=\"form.controls['email']\" type=\"email\">\r\n        <small *ngIf=\"form.controls['email'].hasError('required') && form.controls['email'].touched\" class=\"form-message text-danger\">You must include an email address.</small>\r\n        <small *ngIf=\"form.controls['email'].errors?.email && form.controls['email'].touched\" class=\"form-message text-danger\">You must include a valid email address.</small>\r\n    </md-input-container>\r\n\r\n    <md-input-container>\r\n      <input mdInput placeholder=\"Password\" [formControl]=\"form.controls['password']\" type=\"password\">\r\n      <small *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\" class=\"form-message text-danger\">You must include password.</small>\r\n    </md-input-container>\r\n\r\n    <md-input-container>\r\n      <input mdInput placeholder=\"Confirm Password\" [formControl]=\"form.controls['confirmPassword']\" type=\"password\">\r\n      <small *ngIf=\"form.controls['confirmPassword'].hasError('required') && form.controls['confirmPassword'].touched\" class=\"form-message text-danger\">You must include confirm password.</small>\r\n      <small *ngIf=\"form.controls['confirmPassword'].errors?.equalTo\" class=\"form-message text-danger\">Passwords do not math.</small>\r\n    </md-input-container>\r\n\r\n    <div class=\"text-left mb-4 mt-2\">\r\n      <label>Gender</label>\r\n      <md-radio-group [formControl]=\"form.controls['gender']\">\r\n        <md-radio-button value=\"male\">Male</md-radio-button>\r\n        <md-radio-button value=\"female\">Female</md-radio-button>\r\n        <small *ngIf=\"!form.controls['gender'].valid && form.controls['gender'].touched\" class=\"text-danger\">You must select a gender.</small>\r\n      </md-radio-group>\r\n    </div>\r\n\r\n    <div class=\"text-left mb-module\">\r\n      <md-checkbox [formControl]=\"form.controls['agree']\" (click)=\"openDialog()\">\r\n        I have read and agree to the terms of service.\r\n      </md-checkbox>\r\n      <small *ngIf=\"!form.controls['agree'].valid && form.controls['agree'].touched\" class=\"text-danger\">You must agree to the terms of service.</small>\r\n    </div>\r\n\r\n    <button md-raised-button color=\"primary\" type=\"submit\" [disabled]=\"!form.valid\">Sign Up</button>\r\n\r\n    <md-select placeholder=\"Select Language\" class=\"mt-4\">\r\n      <md-option *ngFor=\"let lang of languages\" [value]=\"lang.code\">\r\n        {{ lang.value }}\r\n      </md-option>\r\n    </md-select>\r\n\r\n    <div class=\"additional-info\">\r\n      Already have an account?\r\n      <a [routerLink]=\"'/extra-layout/sign-in'\">Sign in</a>\r\n    </div>\r\n  </form>\r\n</ni-card>\r\n"
+module.exports = "<ni-card [title]=\"'signup' | translate\" [align]=\"'left'\">\r\n  <form (ngSubmit)=\"onSubmit()\" [formGroup]=\"form\">\r\n    <md-input-container>\r\n      <input mdInput [placeholder]=\"'firstname' | translate\" [formControl]=\"form.controls['fname']\">\r\n      <small *ngIf=\"form.controls['fname'].hasError('required') && form.controls['fname'].touched\" class=\"form-message text-danger\">{{'firstnameValid1' | translate}}</small>\r\n      <small *ngIf=\"form.controls['fname'].hasError('minlength') && form.controls['fname'].touched\" class=\"form-message text-danger\">{{'firstnameValid2' | translate}}</small>\r\n      <small *ngIf=\"form.controls['fname'].hasError('maxlength') && form.controls['fname'].touched\" class=\"form-message text-danger\">{{'firstnameValid3' | translate}}</small>\r\n    </md-input-container>\r\n\r\n    <md-input-container>\r\n        <input mdInput [placeholder]=\"'email' | translate\" [formControl]=\"form.controls['email']\" type=\"email\">\r\n        <small *ngIf=\"form.controls['email'].hasError('required') && form.controls['email'].touched\" class=\"form-message text-danger\">{{'emailValid1' | translate}}</small>\r\n        <small *ngIf=\"form.controls['email'].errors?.email && form.controls['email'].touched\" class=\"form-message text-danger\">{{'emailValid2' | translate}}</small>\r\n    </md-input-container>\r\n\r\n    <md-input-container>\r\n      <input mdInput [placeholder]=\"'password' | translate\" [formControl]=\"form.controls['password']\" type=\"password\">\r\n      <small *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\" class=\"form-message text-danger\">{{'passwordValid1' | translate}}</small>\r\n    </md-input-container>\r\n\r\n    <md-input-container>\r\n      <input mdInput [placeholder]=\"'confirmPass' | translate\" [formControl]=\"form.controls['confirmPassword']\" type=\"password\">\r\n      <small *ngIf=\"form.controls['confirmPassword'].hasError('required') && form.controls['confirmPassword'].touched\" class=\"form-message text-danger\">{{'confirmpasswordValid1' | translate}}</small>\r\n      <small *ngIf=\"form.controls['confirmPassword'].errors?.equalTo\" class=\"form-message text-danger\">{{'confirmpasswordValid2' | translate}}</small>\r\n    </md-input-container>\r\n\r\n    <div class=\"text-left mb-4 mt-2\">\r\n      <label>{{'gender' | translate}}</label>\r\n      <md-radio-group [formControl]=\"form.controls['gender']\">\r\n        <md-radio-button value=\"male\">{{'male' | translate}}</md-radio-button>\r\n        <md-radio-button value=\"female\">{{'female' | translate}}</md-radio-button>\r\n        <small *ngIf=\"!form.controls['gender'].valid && form.controls['gender'].touched\" class=\"text-danger\">{{'genderValid1' | translate}}</small>\r\n      </md-radio-group>\r\n    </div>\r\n\r\n    <div class=\"text-left mb-module\">\r\n      <md-checkbox [formControl]=\"form.controls['agree']\" (click)=\"openDialog()\">\r\n        {{'agreeTermsofService' | translate}}\r\n      </md-checkbox>\r\n      <small *ngIf=\"!form.controls['agree'].valid && form.controls['agree'].touched\" class=\"text-danger\">{{'agreeTermsofService' | translate}}</small>\r\n    </div>\r\n\r\n    <button md-raised-button color=\"primary\" type=\"submit\" [disabled]=\"!form.valid\">{{'signup' | translate}}</button>\r\n\r\n    <div class=\"additional-info\">\r\n      {{'alreadyHaveAccount' | translate}}\r\n      <a [routerLink]=\"'/extra-layout/sign-in'\">{{'signin' | translate}}</a>\r\n    </div>\r\n  </form>\r\n</ni-card>\r\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/extra-pages/sign-up-1/sign-up-1.component.scss":
+/***/ "../../../../../src/app/pages/extra-pages/signup/signup.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -5217,11 +4199,11 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/extra-pages/sign-up-1/sign-up-1.component.ts":
+/***/ "../../../../../src/app/pages/extra-pages/signup/signup.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PageSignUp1Component; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PageSignupComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogResultComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
@@ -5249,24 +4231,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var password = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormControl"]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required);
 var confirmPassword = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormControl"]('', __WEBPACK_IMPORTED_MODULE_2_ng2_validation__["CustomValidators"].equalTo(password));
-var PageSignUp1Component = (function () {
-    function PageSignUp1Component(fb, auth, router, dialog, translate) {
+var PageSignupComponent = (function () {
+    function PageSignupComponent(fb, auth, router, dialog, translate) {
         this.fb = fb;
         this.auth = auth;
         this.router = router;
         this.dialog = dialog;
         this.translate = translate;
-        this.languages = [
-            { code: 'en', value: 'English' },
-            { code: 'fr', value: 'French' },
-            { code: 'pt', value: 'Portuguese' },
-            { code: 'es', value: 'Spanish' }
-        ];
-        translate.addLangs(['en', 'fr', 'es', 'pt']);
-        translate.setDefaultLang('en');
-        translate.use('en');
+        this.auth.langCode.subscribe(function (code) {
+            translate.use(code);
+        });
     }
-    PageSignUp1Component.prototype.ngOnInit = function () {
+    PageSignupComponent.prototype.ngOnInit = function () {
         this.auth.isConfirm = false;
         this.auth.isLogged = false;
         this.form = this.fb.group({
@@ -5275,17 +4251,18 @@ var PageSignUp1Component = (function () {
             gender: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required],
             agree: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].requiredTrue],
             password: password,
-            confirmPassword: confirmPassword
+            confirmPassword: confirmPassword,
+            langCode: ['en']
         });
     };
-    PageSignUp1Component.prototype.onSubmit = function () {
+    PageSignupComponent.prototype.onSubmit = function () {
         var _this = this;
         this.auth.signup(this.form.value).then(function (data) {
-            console.log(data);
+            _this.auth.redirectPage = 'confirm';
             _this.router.navigate(['/extra-layout/confirm']);
         });
     };
-    PageSignUp1Component.prototype.openDialog = function () {
+    PageSignupComponent.prototype.openDialog = function () {
         var _this = this;
         var dialogRef = this.dialog.open(DialogResultComponent);
         dialogRef.afterClosed().subscribe(function (result) {
@@ -5298,15 +4275,15 @@ var PageSignUp1Component = (function () {
             }
         });
     };
-    PageSignUp1Component = __decorate([
+    PageSignupComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-sign-up-1',
-            template: __webpack_require__("../../../../../src/app/pages/extra-pages/sign-up-1/sign-up-1.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/extra-pages/sign-up-1/sign-up-1.component.scss")]
+            selector: 'page-signup',
+            template: __webpack_require__("../../../../../src/app/pages/extra-pages/signup/signup.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/extra-pages/signup/signup.component.scss")]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__services_auth_service__["a" /* AuthService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["j" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["j" /* MdDialog */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5_ng2_translate__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ng2_translate__["c" /* TranslateService */]) === "function" && _e || Object])
-    ], PageSignUp1Component);
-    return PageSignUp1Component;
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__services_auth_service__["a" /* AuthService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["i" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["i" /* MdDialog */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5_ng2_translate__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ng2_translate__["c" /* TranslateService */]) === "function" && _e || Object])
+    ], PageSignupComponent);
+    return PageSignupComponent;
     var _a, _b, _c, _d, _e;
 }());
 
@@ -5317,3515 +4294,15 @@ var DialogResultComponent = (function () {
     DialogResultComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'dialog-result',
-            template: __webpack_require__("../../../../../src/app/pages/extra-pages/sign-up-1/dialog-result.html"),
+            template: __webpack_require__("../../../../../src/app/pages/extra-pages/signup/dialog-result.html"),
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["l" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["l" /* MdDialogRef */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["k" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["k" /* MdDialogRef */]) === "function" && _a || Object])
     ], DialogResultComponent);
     return DialogResultComponent;
     var _a;
 }());
 
-//# sourceMappingURL=sign-up-1.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/forms/form-elements/form-elements.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card title=\"Material inputs\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-6\">\r\n      <md-input-container class=\"md-icon-left\">\r\n        <md-icon>perm_identity</md-icon>\r\n        <input mdInput placeholder=\"First Name\" value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n    <div class=\"col-md-6\">\r\n      <md-input-container class=\"md-icon-left\">\r\n        <md-icon>people_outline</md-icon>\r\n        <input mdInput placeholder=\"Last Name\" value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n  </div>\r\n\r\n  <md-input-container>\r\n    <textarea mdInput placeholder=\"Address\"></textarea>\r\n  </md-input-container>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-md-4\">\r\n      <md-input-container class=\"mb-0\">\r\n        <input mdInput placeholder=\"State\" [mdAutocomplete]=\"auto\" [formControl]=\"stateCtrl\">\r\n      </md-input-container>\r\n\r\n      <md-autocomplete #auto=\"mdAutocomplete\">\r\n        <md-option *ngFor=\"let state of filteredStates | async\" [value]=\"state\">\r\n          {{ state }}\r\n        </md-option>\r\n      </md-autocomplete>\r\n    </div>\r\n    <div class=\"col-md-4\">\r\n      <md-input-container>\r\n        <input mdInput placeholder=\"City\" value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n    <div class=\"col-md-4\">\r\n      <md-input-container>\r\n        <input mdInput placeholder=\"Postal Code\" maxlength=\"100\" value=\"\" #characterCountHintExample>\r\n        <md-hint align=\"end\">{{characterCountHintExample.value.length}} / 5</md-hint>\r\n      </md-input-container>\r\n    </div>\r\n  </div>\r\n\r\n  <md-input-container class=\"mb-0\">\r\n    <textarea mdInput placeholder=\"Biography\" rows=\"5\"></textarea>\r\n  </md-input-container>\r\n</ni-card>\r\n\r\n<ni-card title=\"Material checkboxes\">\r\n  <div class=\"mb-4\">\r\n    <md-checkbox [checked]=\"true\" color=\"accent\">\r\n      Accent checkbox\r\n    </md-checkbox>\r\n  </div>\r\n\r\n  <div class=\"mb-4\">\r\n    <md-checkbox [checked]=\"false\" color=\"primary\">\r\n      Primary checkbox\r\n    </md-checkbox>\r\n  </div>\r\n\r\n  <div class=\"\">\r\n    <md-checkbox [checked]=\"false\" [indeterminate]=\"true\" color=\"warn\">\r\n      Warning checkbox\r\n    </md-checkbox>\r\n  </div>\r\n</ni-card>\r\n\r\n<ni-card title=\"Material radio buttons\">\r\n  <md-radio-group name=\"ngModel-options\" [(ngModel)]=\"favoriteSeason\" class=\"column-layout\">\r\n    <md-radio-button *ngFor=\"let season of seasons\" [value]=\"season\" [checked]=\"i === 0\">\r\n      {{season}}\r\n    </md-radio-button>\r\n  </md-radio-group>\r\n  <p>Your favorite season is: <strong>{{favoriteSeason}}</strong></p>\r\n</ni-card>\r\n\r\n<ni-card title=\"Material sliders\">\r\n  <md-slider thumbLabel tickInterval=\"1\"></md-slider>\r\n</ni-card>\r\n\r\n<ni-card title=\"Material slides\">\r\n  <md-slide-toggle color=\"primary\" [checked]=\"false\">\r\n    Primary Slide Toggle\r\n  </md-slide-toggle>\r\n\r\n  <md-slide-toggle color=\"accent\" [checked]=\"true\">\r\n    Accent Slide Toggle\r\n  </md-slide-toggle>\r\n\r\n  <md-slide-toggle color=\"warn\" [checked]=\"true\">\r\n    Warning Slide Toggle\r\n  </md-slide-toggle>\r\n</ni-card>\r\n\r\n<ni-card title=\"Material chips\" class=\"mb-0\">\r\n  <md-chip-list class=\"md-chip-list example-chips\">\r\n    <md-chip *ngFor=\"let chipColor of availableColors\" selected=\"true\" color=\"{{chipColor.color}}\">\r\n      {{chipColor.name}}\r\n    </md-chip>\r\n  </md-chip-list>\r\n</ni-card>\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/forms/form-elements/form-elements.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".example-chips .mat-chip {\n  margin: 4px !important;\n  max-width: 200px; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/forms/form-elements/form-elements.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageFormElementsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_startWith__ = __webpack_require__("../../../../rxjs/add/operator/startWith.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_startWith___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_startWith__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Forms',
-        link: '#'
-    },
-    {
-        title: 'Form elements',
-        link: ''
-    }
-];
-var PageFormElementsComponent = (function () {
-    function PageFormElementsComponent(_sharedService) {
-        var _this = this;
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Form elements';
-        this.breadcrumb = BREADCRUMBS;
-        this.states = [
-            'Alabama',
-            'Alaska',
-            'Arizona',
-            'Arkansas',
-            'California',
-            'Colorado',
-            'Connecticut',
-            'Delaware',
-            'Florida',
-            'Georgia',
-            'Hawaii',
-            'Idaho',
-            'Illinois',
-            'Indiana',
-            'Iowa',
-            'Kansas',
-            'Kentucky',
-            'Louisiana',
-            'Maine',
-            'Maryland',
-            'Massachusetts',
-            'Michigan',
-            'Minnesota',
-            'Mississippi',
-            'Missouri',
-            'Montana',
-            'Nebraska',
-            'Nevada',
-            'New Hampshire',
-            'New Jersey',
-            'New Mexico',
-            'New York',
-            'North Carolina',
-            'North Dakota',
-            'Ohio',
-            'Oklahoma',
-            'Oregon',
-            'Pennsylvania',
-            'Rhode Island',
-            'South Carolina',
-            'South Dakota',
-            'Tennessee',
-            'Texas',
-            'Utah',
-            'Vermont',
-            'Virginia',
-            'Washington',
-            'West Virginia',
-            'Wisconsin',
-            'Wyoming',
-        ];
-        this.favoriteSeason = 'Winter';
-        this.seasons = [
-            'Winter',
-            'Spring',
-            'Summer',
-            'Autumn'
-        ];
-        this.availableColors = [
-            { name: 'Default', color: '' },
-            { name: 'Primary', color: 'primary' },
-            { name: 'Accent', color: 'accent' },
-            { name: 'Warning', color: 'warn' }
-        ];
-        this.stateCtrl = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormControl"]();
-        this.filteredStates = this.stateCtrl.valueChanges
-            .startWith(null)
-            .map(function (name) { return _this.filterStates(name); });
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageFormElementsComponent.prototype.filterStates = function (val) {
-        return val ? this.states.filter(function (s) { return new RegExp(val, 'gi').test(s); }) : this.states;
-    };
-    PageFormElementsComponent.prototype.ngOnInit = function () { };
-    PageFormElementsComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-form-elements',
-            template: __webpack_require__("../../../../../src/app/pages/forms/form-elements/form-elements.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/forms/form-elements/form-elements.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageFormElementsComponent);
-    return PageFormElementsComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=form-elements.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/forms/form-layout/form-layout.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card title=\"Basic form layout\">\r\n  <md-input-container>\r\n    <input mdInput placeholder=\"Email address\" type=\"email\" value=\"\">\r\n  </md-input-container>\r\n\r\n  <md-input-container>\r\n    <input mdInput placeholder=\"Password\" type=\"password\" value=\"\">\r\n  </md-input-container>\r\n\r\n  <button md-raised-button color=\"accent\">Submit</button>\r\n</ni-card>\r\n\r\n<ni-card title=\"Inline form layout\">\r\n  <div class=\"form-group row\">\r\n    <label for=\"inputEmail\" class=\"col-sm-3 col-md-2 col-form-label mb-0\">Email</label>\r\n    <div class=\"col-sm-9 col-md-10\">\r\n      <md-input-container class=\"mb-2\">\r\n        <input mdInput id=\"inputEmail\" placeholder=\"Enter email\" type=\"email\" value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n  </div>\r\n  <div class=\"form-group row\">\r\n    <label for=\"inputPass\" class=\"col-sm-3 col-md-2 col-form-label mb-0\">Password</label>\r\n    <div class=\"col-sm-9 col-md-10\">\r\n      <md-input-container class=\"mb-2\">\r\n        <input mdInput id=\"inputPass\" placeholder=\"Enter password\" type=\"password\" value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-3 col-md-2\"></div>\r\n    <div class=\"col-sm-9 col-md-10\">\r\n      <button md-raised-button color=\"warn\">Submit</button>\r\n    </div>\r\n  </div>\r\n</ni-card>\r\n\r\n<ni-card title=\"Grid form\" class=\"mb-0\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-3\">\r\n      <md-input-container>\r\n        <input mdInput placeholder=\"Col 3\" type=\"text\" value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n    <div class=\"col-md-9\">\r\n      <md-input-container>\r\n        <input mdInput placeholder=\"Col 9\" type=\"text\" value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n    <div class=\"col-md-6\">\r\n      <md-input-container>\r\n        <input mdInput placeholder=\"Col 6\" type=\"text\" value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n    <div class=\"col-md-6\">\r\n      <md-input-container>\r\n        <input mdInput placeholder=\"Col 6\" type=\"text\" value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n    <div class=\"col-md-9\">\r\n      <md-input-container>\r\n        <input mdInput placeholder=\"Col 9\" type=\"text\" value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n    <div class=\"col-md-3\">\r\n      <md-input-container>\r\n        <input mdInput placeholder=\"Col 3\" type=\"text\" value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n    <div class=\"col-md-4\">\r\n      <md-input-container>\r\n        <input mdInput placeholder=\"Col 4\" type=\"text\" value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n    <div class=\"col-md-4\">\r\n      <md-input-container>\r\n        <input mdInput placeholder=\"Col 4\" type=\"text\" value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n    <div class=\"col-md-4\">\r\n      <md-input-container>\r\n        <input mdInput placeholder=\"Col 4\" type=\"text\" value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n  </div>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/forms/form-layout/form-layout.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/forms/form-layout/form-layout.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageFormLayoutComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Forms',
-        link: '#'
-    },
-    {
-        title: 'Form layout',
-        link: ''
-    }
-];
-var PageFormLayoutComponent = (function () {
-    function PageFormLayoutComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Form layout';
-        this.breadcrumb = BREADCRUMBS;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageFormLayoutComponent.prototype.ngOnInit = function () { };
-    PageFormLayoutComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-form-layout',
-            template: __webpack_require__("../../../../../src/app/pages/forms/form-layout/form-layout.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/forms/form-layout/form-layout.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageFormLayoutComponent);
-    return PageFormLayoutComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=form-layout.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/forms/form-validation/form-validation.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card>\r\n  <form [formGroup]=\"form\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <md-input-container class=\"mb-4\">\r\n          <input mdInput placeholder=\"First name\" [formControl]=\"form.controls['fname']\">\r\n          <small *ngIf=\"form.controls['fname'].hasError('required') && form.controls['fname'].touched\" class=\"form-message text-danger\">You must include a first name.</small>\r\n          <small *ngIf=\"form.controls['fname'].hasError('minlength') && form.controls['fname'].touched\" class=\"form-message text-danger\">Your first name must be at least 5 characters long.</small>\r\n          <small *ngIf=\"form.controls['fname'].hasError('maxlength') && form.controls['fname'].touched\" class=\"form-message text-danger\">Your first name cannot exceed 10 characters.</small>\r\n        </md-input-container>\r\n      </div>\r\n\r\n      <div class=\"col-md-4\">\r\n        <md-input-container class=\"mb-4\">\r\n          <input mdInput placeholder=\"Email address\" [formControl]=\"form.controls['email']\" type=\"email\">\r\n          <small *ngIf=\"form.controls['email'].hasError('required') && form.controls['email'].touched\" class=\"form-message text-danger\">You must include an email address.</small>\r\n          <small *ngIf=\"form.controls['email'].errors?.email && form.controls['email'].touched\" class=\"form-message text-danger\">You must include a valid email address.</small>\r\n        </md-input-container>\r\n      </div>\r\n\r\n      <div class=\"col-md-4\">\r\n        <md-input-container class=\"mb-4\">\r\n          <input mdInput placeholder=\"Website address\" [formControl]=\"form.controls['url']\" type=\"url\">\r\n          <small *ngIf=\"form.controls['url'].hasError('required') && form.controls['url'].touched\" class=\"form-message text-danger\">You must include a web address.</small>\r\n          <small *ngIf=\"form.controls['url'].errors?.url && form.controls['url'].touched\" class=\"form-message text-danger\">You must include a valid web address.</small>\r\n        </md-input-container>\r\n      </div>\r\n\r\n      <div class=\"col-md-4\">\r\n        <md-input-container>\r\n          <input mdInput [mdDatepicker]=\"picker\" placeholder=\"Choose a date\" [formControl]=\"form.controls['date']\">\r\n          <button mdSuffix [mdDatepickerToggle]=\"picker\"></button>\r\n          <small *ngIf=\"form.controls['date'].hasError('required') && form.controls['date'].touched\" class=\"form-message text-danger\">You must include a date.</small>\r\n          <small *ngIf=\"form.controls['date'].errors?.date && form.controls['date'].touched\" class=\"form-message text-danger\">You must include a valid date.</small>\r\n        </md-input-container>\r\n        <md-datepicker #picker></md-datepicker>\r\n      </div>\r\n\r\n      <div class=\"col-md-4\">\r\n        <md-input-container class=\"mb-4\">\r\n          <input mdInput placeholder=\"Number range (between 5 and 9)\" [formControl]=\"form.controls['range']\">\r\n          <small *ngIf=\"form.controls['range'].hasError('required') && form.controls['range'].touched\" class=\"form-message text-danger\">You must enter a number.</small>\r\n          <small *ngIf=\"form.controls['range'].errors?.range && form.controls['range'].touched\" class=\"form-message text-danger\">Number should be between 5 and 9.</small>\r\n        </md-input-container>\r\n      </div>\r\n\r\n      <div class=\"col-md-4\">\r\n        <md-input-container class=\"mb-4\">\r\n          <input mdInput placeholder=\"Credit card\" [formControl]=\"form.controls['creditCard']\">\r\n          <small *ngIf=\"form.controls['creditCard'].hasError('required') && form.controls['creditCard'].touched\" class=\"form-message text-danger\">You must enter a credit card.</small>\r\n          <small *ngIf=\"form.controls['creditCard'].errors?.creditCard && form.controls['creditCard'].touched\" class=\"form-message text-danger\">You must enter a valid credit card number.</small>\r\n        </md-input-container>\r\n      </div>\r\n\r\n      <div class=\"col-md-4\">\r\n        <md-input-container class=\"mb-4\">\r\n          <input mdInput placeholder=\"US Phone number (15417543010)\" [formControl]=\"form.controls['phone']\" type=\"text\">\r\n          <small *ngIf=\"form.controls['phone'].hasError('required') && form.controls['phone'].touched\" class=\"form-message text-danger\">You must include phone number.</small>\r\n          <small *ngIf=\"form.controls['phone'].errors?.phone && form.controls['phone'].touched\" class=\"form-message text-danger\">You must include a valid phone number.</small>\r\n        </md-input-container>\r\n      </div>\r\n\r\n      <div class=\"col-md-4\">\r\n        <md-input-container class=\"mb-4\">\r\n          <input mdInput placeholder=\"Password\" [formControl]=\"form.controls['password']\" type=\"password\">\r\n          <small *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\" class=\"form-message text-danger\">You must include password.</small>\r\n        </md-input-container>\r\n      </div>\r\n\r\n      <div class=\"col-md-4\">\r\n        <md-input-container class=\"mb-4\">\r\n          <input mdInput placeholder=\"Confirm Password\" [formControl]=\"form.controls['confirmPassword']\" type=\"password\">\r\n          <small *ngIf=\"form.controls['confirmPassword'].hasError('required') && form.controls['confirmPassword'].touched\" class=\"form-message text-danger\">You must include confirm password.</small>\r\n          <small *ngIf=\"form.controls['confirmPassword'].errors?.equalTo\" class=\"form-message text-danger\">Passwords do not math.</small>\r\n        </md-input-container>\r\n      </div>\r\n    </div>\r\n    <div class=\"mb-4\">\r\n      <label>Gender</label>\r\n      <md-radio-group [formControl]=\"form.controls['gender']\">\r\n        <md-radio-button value=\"male\">Male</md-radio-button>\r\n        <md-radio-button value=\"female\">Female</md-radio-button>\r\n        <small *ngIf=\"!form.controls['gender'].valid && form.controls['gender'].touched\" class=\"form-message text-danger\">You must select a gender.</small>\r\n      </md-radio-group>\r\n    </div>\r\n\r\n    <button md-raised-button color=\"accent\" type=\"submit\" [disabled]=\"!form.valid\">Submit</button>\r\n  </form>\r\n</ni-card>\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/forms/form-validation/form-validation.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/forms/form-validation/form-validation.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageFormValidationComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_validation__ = __webpack_require__("../../../../ng2-validation/dist/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_validation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng2_validation__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Forms',
-        link: '#'
-    },
-    {
-        title: 'Form validation',
-        link: ''
-    }
-];
-var password = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormControl"]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required);
-var confirmPassword = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormControl"]('', __WEBPACK_IMPORTED_MODULE_2_ng2_validation__["CustomValidators"].equalTo(password));
-var PageFormValidationComponent = (function () {
-    function PageFormValidationComponent(fb, _sharedService) {
-        this.fb = fb;
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Form validation';
-        this.breadcrumb = BREADCRUMBS;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageFormValidationComponent.prototype.ngOnInit = function () {
-        this.form = this.fb.group({
-            fname: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].minLength(5), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].maxLength(10)])],
-            email: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_2_ng2_validation__["CustomValidators"].email])],
-            range: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_2_ng2_validation__["CustomValidators"].range([5, 9])])],
-            url: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_2_ng2_validation__["CustomValidators"].url])],
-            date: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_2_ng2_validation__["CustomValidators"].date])],
-            creditCard: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_2_ng2_validation__["CustomValidators"].creditCard])],
-            phone: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_2_ng2_validation__["CustomValidators"].phone('en-US')])],
-            gender: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required],
-            password: password,
-            confirmPassword: confirmPassword
-        });
-    };
-    PageFormValidationComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-form-validation',
-            template: __webpack_require__("../../../../../src/app/pages/forms/form-validation/form-validation.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/forms/form-validation/form-validation.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__layouts_shared_service__["a" /* SharedService */]) === "function" && _b || Object])
-    ], PageFormValidationComponent);
-    return PageFormValidationComponent;
-    var _a, _b;
-}());
-
-//# sourceMappingURL=form-validation.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/layouts/layouts.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-card [title]=\"'Headers'\">\n  <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>\n  <div class=\"row\">\n    <div class=\"col-md-6\">\n      <h1>Heading 1</h1>\n      <h2>Heading 2</h2>\n      <h3>Heading 3</h3>\n      <h4>Heading 4</h4>\n      <h5>Heading 5</h5>\n      <h6>Heading 6</h6>\n    </div>\n    <div class=\"col-md-6\">\n      <h1 class=\"text-uppercase\">Heading 1</h1>\n      <h2 class=\"text-uppercase\">Heading 2</h2>\n      <h3 class=\"text-uppercase\">Heading 3</h3>\n      <h4 class=\"text-uppercase\">Heading 4</h4>\n      <h5 class=\"text-uppercase\">Heading 5</h5>\n      <h6 class=\"text-uppercase\">Heading 6</h6>\n    </div>\n  </div>\n</ni-card>\n\n<ni-card [title]=\"'Text style'\">\n  <p><code>.mark</code> and <code>.small</code> classes are also available to apply the same styles as <code>&lt;mark&gt;</code> and <code>&lt;small&gt;</code> while avoiding any unwanted semantic implications that the tags would bring.</p>\n  <p>You can use the mark tag to <mark>highlight</mark> text.</p>\n  <p><del>This line of text is meant to be treated as deleted text.</del></p>\n  <p><s>This line of text is meant to be treated as no longer accurate.</s></p>\n  <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>\n  <p><u>This line of text will render as underlined</u></p>\n  <p><small>This line of text is meant to be treated as fine print.</small></p>\n  <p><strong>This line rendered as bold text.</strong></p>\n  <p><em>This line rendered as italicized text.</em></p>\n</ni-card>\n\n<ni-card [title]=\"'Blockquotes'\">\n  <p>For quoting blocks of content from another source within your document. Wrap <code>&lt;blockquote class=\"blockquote\"&gt;</code> around any <abbr title=\"HyperText Markup Language\">HTML</abbr> as the quote.</p>\n  <blockquote class=\"blockquote\">\n    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\n    <footer class=\"blockquote-footer\">Someone famous in <cite title=\"Source Title\">Source Title</cite></footer>\n  </blockquote>\n\n  <blockquote class=\"blockquote blockquote-reverse\">\n    <p class=\"mb-0\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\n    <footer class=\"blockquote-footer\">Someone famous in <cite title=\"Source Title\">Source Title</cite></footer>\n  </blockquote>\n</ni-card>\n\n<ni-card [title]=\"'Lists'\">\n  <div class=\"row\">\n    <div class=\"col-md-6\">\n      <ul>\n        <li>Lorem ipsum dolor sit amet</li>\n        <li>Consectetur adipiscing elit</li>\n        <li>Integer molestie lorem at massa</li>\n        <li>Facilisis in pretium nisl aliquet</li>\n        <li>Nulla volutpat aliquam velit\n          <ul>\n            <li>Phasellus iaculis neque</li>\n            <li>Purus sodales ultricies</li>\n            <li>Vestibulum laoreet porttitor sem</li>\n            <li>Ac tristique libero volutpat at</li>\n          </ul>\n        </li>\n        <li>Faucibus porta lacus fringilla vel</li>\n        <li>Aenean sit amet erat nunc</li>\n        <li>Eget porttitor lorem</li>\n      </ul>\n    </div>\n    <div class=\"col-md-6\">\n      <ol>\n        <li>Lorem ipsum dolor sit amet</li>\n        <li>Consectetur adipiscing elit</li>\n        <li>Integer molestie lorem at massa</li>\n        <li>Facilisis in pretium nisl aliquet</li>\n        <li>Nulla volutpat aliquam velit\n          <ol>\n            <li>Phasellus iaculis neque</li>\n            <li>Purus sodales ultricies</li>\n            <li>Vestibulum laoreet porttitor sem</li>\n            <li>Ac tristique libero volutpat at</li>\n          </ol>\n        </li>\n        <li>Faucibus porta lacus fringilla vel</li>\n        <li>Aenean sit amet erat nunc</li>\n        <li>Eget porttitor lorem</li>\n      </ol>\n    </div>\n  </div>\n</ni-card>\n\n<ni-card [title]=\"'Text alignment'\">\n  <p>Easily realign text to components with text alignment classes.</p>\n  <p class=\"text-left\">Left aligned text on all viewport sizes.</p>\n  <p class=\"text-center\">Center aligned text on all viewport sizes.</p>\n  <p class=\"text-right\">Right aligned text on all viewport sizes.</p>\n</ni-card>\n\n<ni-card [title]=\"'Text transform'\" class=\"mb-0\">\n  <p>Transform text in components with text capitalization classes.</p>\n  <p class=\"text-lowercase\">Lowercased text.</p>\n  <p class=\"text-uppercase\">Uppercased text.</p>\n  <p class=\"text-capitalize\">CapiTaliZed text.</p>\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/layouts/layouts.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/layouts/layouts.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageLayoutsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var PageLayoutsComponent = (function () {
-    function PageLayoutsComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Layouts';
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageLayoutsComponent.prototype.ngOnInit = function () { };
-    PageLayoutsComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-layouts',
-            template: __webpack_require__("../../../../../src/app/pages/layouts/layouts.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/layouts/layouts.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageLayoutsComponent);
-    return PageLayoutsComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=layouts.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/maps/google-map/google-map.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-card>\r\n  <agm-map [latitude]=\"lat\" [longitude]=\"lng\">\r\n    <agm-marker [latitude]=\"lat\" [longitude]=\"lng\"></agm-marker>\r\n  </agm-map>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/maps/google-map/google-map.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ":host {\n  display: table-cell;\n  height: 100%;\n  width: 100%; }\n  :host /deep/ .ni-card {\n    height: 100%;\n    min-height: 400px;\n    padding: 0; }\n    :host /deep/ .ni-card .card-wrap,\n    :host /deep/ .ni-card .card-content {\n      border: 0 !important;\n      height: 100%;\n      padding: 0 !important; }\n  :host .sebm-google-map-container {\n    height: 100%; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/maps/google-map/google-map.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageGoogleMapComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var PageGoogleMapComponent = (function () {
-    function PageGoogleMapComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Google Map';
-        this.lat = 50.4664212;
-        this.lng = 30.6;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageGoogleMapComponent.prototype.ngOnInit = function () { };
-    PageGoogleMapComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-google-map',
-            template: __webpack_require__("../../../../../src/app/pages/maps/google-map/google-map.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/maps/google-map/google-map.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageGoogleMapComponent);
-    return PageGoogleMapComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=google-map.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/maps/leaflet-map/leaflet-map.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-card>\r\n  <div id=\"map\"></div>\r\n</ni-card>\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/maps/leaflet-map/leaflet-map.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ":host {\n  display: table-cell;\n  height: 100%;\n  width: 100%; }\n  :host /deep/ .ni-card {\n    height: 100%;\n    min-height: 400px;\n    padding: 0; }\n    :host /deep/ .ni-card .card-wrap,\n    :host /deep/ .ni-card .card-content {\n      border: 0 !important;\n      height: 100%;\n      padding: 0 !important; }\n  :host #map {\n    width: 100%;\n    height: 100%; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/maps/leaflet-map/leaflet-map.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageLeafletMapComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_leaflet__ = __webpack_require__("../../../../leaflet/dist/leaflet-src.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_leaflet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_leaflet__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var PageLeafletMapComponent = (function () {
-    function PageLeafletMapComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Leaflet Map';
-        this.lat = 50.4664212;
-        this.lng = 30.6;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageLeafletMapComponent.prototype.ngOnInit = function () {
-        var mymap = __WEBPACK_IMPORTED_MODULE_2_leaflet__["map"]('map').setView([this.lat, this.lng], 13);
-        var circle = __WEBPACK_IMPORTED_MODULE_2_leaflet__["circle"]([this.lat, this.lng], {
-            color: '#dc143c',
-            fillColor: '#dc143c',
-            fillOpacity: 0.2,
-            radius: 800
-        }).addTo(mymap);
-        __WEBPACK_IMPORTED_MODULE_2_leaflet__["tileLayer"]('https://api.mapbox.com/styles/v1/mapbox/dark-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibmV4dC1pdGVtIiwiYSI6ImNqMDFlYWRqeTAyNzEyd3FuNjQxdmVvMjgifQ.Ff8pEWrzeJ3uipr78e69uw', {
-            maxZoom: 18,
-            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-                '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-                'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-            id: 'mapbox.streets'
-        }).addTo(mymap);
-    };
-    PageLeafletMapComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-leaflet-map',
-            template: __webpack_require__("../../../../../src/app/pages/maps/leaflet-map/leaflet-map.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/maps/leaflet-map/leaflet-map.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageLeafletMapComponent);
-    return PageLeafletMapComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=leaflet-map.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/button/button.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card [title]=\"'Flat buttons'\">\r\n  <button md-button>Default</button>\r\n  <button md-button color=\"primary\">Primary</button>\r\n  <button md-button color=\"accent\">Accent</button>\r\n  <button md-button color=\"warn\">Warning</button>\r\n  <button md-button disabled>Disabled</button>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Raised buttons'\">\r\n  <button md-raised-button>Default</button>\r\n  <button md-raised-button color=\"primary\">Primary</button>\r\n  <button md-raised-button color=\"accent\">Accent</button>\r\n  <button md-raised-button color=\"warn\">Warning</button>\r\n  <button md-raised-button disabled>Disabled</button>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Icon buttons'\">\r\n  <button md-icon-button><md-icon>home</md-icon></button>\r\n  <button md-icon-button color=\"primary\"><md-icon>add</md-icon></button>\r\n  <button md-icon-button color=\"accent\"><md-icon>settings</md-icon></button>\r\n  <button md-icon-button color=\"warn\"><md-icon>thumb_up</md-icon></button>\r\n  <button md-icon-button disabled><md-icon>check</md-icon></button>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Floating Action Buttons (FABs)'\">\r\n  <button md-fab><md-icon>home</md-icon></button>\r\n  <button md-fab color=\"primary\"><md-icon>add</md-icon></button>\r\n  <button md-fab color=\"accent\"><md-icon>settings</md-icon></button>\r\n  <button md-fab color=\"warn\"><md-icon>thumb_up</md-icon></button>\r\n  <button md-fab disabled><md-icon>check</md-icon></button>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Mini Floating Action Buttons (Mini FABs)'\">\r\n  <button md-mini-fab><md-icon>home</md-icon></button>\r\n  <button md-mini-fab color=\"primary\"><md-icon>add</md-icon></button>\r\n  <button md-mini-fab color=\"accent\"><md-icon>settings</md-icon></button>\r\n  <button md-mini-fab color=\"warn\"><md-icon>thumb_up</md-icon></button>\r\n  <button md-mini-fab disabled><md-icon>check</md-icon></button>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Button toggles'\" class=\"mb-0\">\r\n  <md-button-toggle-group #group=\"mdButtonToggleGroup\">\r\n    <md-button-toggle value=\"left\">\r\n      <md-icon>format_align_left</md-icon>\r\n    </md-button-toggle>\r\n    <md-button-toggle value=\"center\">\r\n      <md-icon>format_align_center</md-icon>\r\n    </md-button-toggle>\r\n    <md-button-toggle value=\"right\">\r\n      <md-icon>format_align_right</md-icon>\r\n    </md-button-toggle>\r\n    <md-button-toggle value=\"justify\">\r\n      <md-icon>format_align_justify</md-icon>\r\n    </md-button-toggle>\r\n  </md-button-toggle-group>\r\n  <div class=\"mt-4\">Selected value: {{group.value}}</div>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/button/button.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/button/button.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageButtonComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Material components',
-        link: '#'
-    },
-    {
-        title: 'Button',
-        link: ''
-    }
-];
-var PageButtonComponent = (function () {
-    function PageButtonComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Buttons';
-        this.breadcrumb = BREADCRUMBS;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageButtonComponent.prototype.ngOnInit = function () { };
-    PageButtonComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-button',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/button/button.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/material-components/button/button.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageButtonComponent);
-    return PageButtonComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=button.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/card/card.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<h5>Basic cards</h5>\r\n<md-card class=\"example-card\">\r\n  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim, nemo nihil non omnis temporibus? Blanditiis culpa labore velit.</p>\r\n  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, provident?</p>\r\n</md-card>\r\n\r\n<h5>Cards with header</h5>\r\n<md-card class=\"example-card\">\r\n  <md-card-header>\r\n    <div md-card-avatar><img src=\"assets/content/avatar-1.jpg\" width=\"40\" height=\"40\"></div>\r\n    <md-card-title><strong>Header title</strong></md-card-title>\r\n    <md-card-subtitle>Header subtitle</md-card-subtitle>\r\n  </md-card-header>\r\n  <md-card-content>\r\n    <p>\r\n      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi cupiditate dicta ducimus enim esse eum eveniet explicabo id in, quae rerum.\r\n    </p>\r\n  </md-card-content>\r\n</md-card>\r\n\r\n<h5>Card with multiple sections</h5>\r\n<md-card class=\"example-card\">\r\n  <md-card-header>\r\n    <div md-card-avatar><img src=\"assets/content/avatar-2.jpg\" width=\"40\" height=\"40\"></div>\r\n    <md-card-title><strong>Header title</strong></md-card-title>\r\n    <md-card-subtitle>Header subtitle</md-card-subtitle>\r\n  </md-card-header>\r\n  <img md-card-image src=\"assets/content/card-1.jpg\">\r\n  <md-card-content>\r\n    <p>\r\n      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.\r\n      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally\r\n      bred for hunting.\r\n    </p>\r\n  </md-card-content>\r\n  <md-card-actions>\r\n    <button md-button color=\"accent\">LIKE</button>\r\n    <button md-button>SHARE</button>\r\n  </md-card-actions>\r\n</md-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/card/card.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".example-card {\n  max-width: 500px; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/card/card.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageCardComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Material components',
-        link: '#'
-    },
-    {
-        title: 'Card',
-        link: ''
-    }
-];
-var PageCardComponent = (function () {
-    function PageCardComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Cards';
-        this.breadcrumb = BREADCRUMBS;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageCardComponent.prototype.ngOnInit = function () { };
-    PageCardComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-card',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/card/card.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/material-components/card/card.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageCardComponent);
-    return PageCardComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=card.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/checkbox/checkbox.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-card [title]=\"'Configurable checkbox'\">\r\n  <div class=\"row\">\r\n    <div class=\"col col-auto\">\r\n      <md-checkbox class=\"example-margin\" [(ngModel)]=\"checked\">Checked</md-checkbox>\r\n    </div>\r\n    <div class=\"col col-auto\">\r\n      <md-checkbox class=\"example-margin\" [(ngModel)]=\"indeterminate\">Indeterminate</md-checkbox>\r\n    </div>\r\n  </div>\r\n\r\n  <br>\r\n\r\n  <div class=\"row align-content-center\">\r\n    <div class=\"col col-auto\">\r\n      <label class=\"mb-0\"><strong>Align:</strong></label>\r\n    </div>\r\n    <div class=\"col col-auto\">\r\n      <md-radio-group [(ngModel)]=\"align\">\r\n        <md-radio-button class=\"example-margin\" value=\"start\">Start</md-radio-button>\r\n        <md-radio-button class=\"example-margin\" value=\"end\">End</md-radio-button>\r\n      </md-radio-group>\r\n    </div>\r\n  </div>\r\n\r\n  <br>\r\n\r\n  <div>\r\n    <md-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</md-checkbox>\r\n  </div>\r\n\r\n  <h6>Result</h6>\r\n\r\n  <div>\r\n    <md-checkbox\r\n      class=\"example-margin\"\r\n      [checked]=\"checked\"\r\n      [indeterminate]=\"indeterminate\"\r\n      [align]=\"align\"\r\n      [disabled]=\"disabled\">\r\n      I'm a checkbox\r\n    </md-checkbox>\r\n  </div>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Theming'\" class=\"mb-0\">\r\n  <div class=\"row\">\r\n    <div class=\"col col-auto\">\r\n      <md-checkbox [checked]=\"true\" color=\"primary\">Primary</md-checkbox>\r\n    </div>\r\n    <div class=\"col col-auto\">\r\n      <md-checkbox [checked]=\"true\" color=\"accent\">Accent</md-checkbox>\r\n    </div>\r\n    <div class=\"col col-auto\">\r\n      <md-checkbox [checked]=\"true\" color=\"warn\">Warning</md-checkbox>\r\n    </div>\r\n  </div>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/checkbox/checkbox.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/checkbox/checkbox.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageCheckboxComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Material components',
-        link: '#'
-    },
-    {
-        title: 'Checkbox',
-        link: ''
-    }
-];
-var PageCheckboxComponent = (function () {
-    function PageCheckboxComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Checkbox';
-        this.breadcrumb = BREADCRUMBS;
-        this.checked = false;
-        this.indeterminate = false;
-        this.align = 'start';
-        this.disabled = false;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageCheckboxComponent.prototype.ngOnInit = function () { };
-    PageCheckboxComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-checkbox',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/checkbox/checkbox.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/material-components/checkbox/checkbox.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageCheckboxComponent);
-    return PageCheckboxComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=checkbox.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/chips/chips.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card [title]=\"'Inline chips'\" class=\"mb-0\">\r\n  <md-chip-list class=\"md-chip-list example-chips\">\r\n    <md-chip *ngFor=\"let chipColor of availableColors\" selected=\"true\" color=\"{{chipColor.color}}\">\r\n      {{chipColor.name}}\r\n    </md-chip>\r\n  </md-chip-list>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/chips/chips.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".example-chips .mat-chip {\n  margin: 4px !important;\n  max-width: 200px; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/chips/chips.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageChipsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Material components',
-        link: '#'
-    },
-    {
-        title: 'Chips',
-        link: ''
-    }
-];
-var PageChipsComponent = (function () {
-    function PageChipsComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Chips';
-        this.breadcrumb = BREADCRUMBS;
-        this.availableColors = [
-            { name: 'Default', color: '' },
-            { name: 'Primary', color: 'primary' },
-            { name: 'Accent', color: 'accent' },
-            { name: 'Warning', color: 'warn' }
-        ];
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageChipsComponent.prototype.ngOnInit = function () { };
-    PageChipsComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-chips',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/chips/chips.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/material-components/chips/chips.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageChipsComponent);
-    return PageChipsComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=chips.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/dialog/dialog-result.html":
-/***/ (function(module, exports) {
-
-module.exports = "<h2 md-dialog-title>Dialog</h2>\r\n<div md-dialog-content>What would you like to do?</div>\r\n<div md-dialog-actions>\r\n  <button md-button (click)=\"dialogRef.close('Option 1')\" color=\"accent\">Option 1</button>\r\n  <button md-button (click)=\"dialogRef.close('Option 2')\" color=\"warn\">Option 2</button>\r\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/dialog/dialog.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card [title]=\"'Basic dialog'\">\r\n  <p><button md-raised-button color=\"accent\" (click)=\"openDialog()\">Launch dialog</button></p>\r\n  <p>You chose: {{selectedOption}}</p>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/dialog/dialog.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/dialog/dialog.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageDialogComponent; });
-/* unused harmony export DialogResultComponent */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Material components',
-        link: '#'
-    },
-    {
-        title: 'Dialog',
-        link: ''
-    }
-];
-var PageDialogComponent = (function () {
-    function PageDialogComponent(dialog, _sharedService) {
-        this.dialog = dialog;
-        this._sharedService = _sharedService;
-        this.pageTitle = "Dialog";
-        this.breadcrumb = BREADCRUMBS;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageDialogComponent.prototype.openDialog = function () {
-        var _this = this;
-        var dialogRef = this.dialog.open(DialogResultComponent);
-        dialogRef.afterClosed().subscribe(function (result) {
-            _this.selectedOption = result;
-        });
-    };
-    PageDialogComponent.prototype.ngOnInit = function () { };
-    PageDialogComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-dialog',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/dialog/dialog.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/material-components/dialog/dialog.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["j" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["j" /* MdDialog */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _b || Object])
-    ], PageDialogComponent);
-    return PageDialogComponent;
-    var _a, _b;
-}());
-
-var DialogResultComponent = (function () {
-    function DialogResultComponent(dialogRef) {
-        this.dialogRef = dialogRef;
-        this.jazzMessage = 'Jazzy jazz jazz';
-    }
-    DialogResultComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'dialog-result',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/dialog/dialog-result.html"),
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */]) === "function" && _a || Object])
-    ], DialogResultComponent);
-    return DialogResultComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=dialog.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/icon/icon.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card [title]=\"'Action icons'\">\r\n  <md-icon>3d_rotation</md-icon>\r\n  <md-icon>accessibility</md-icon>\r\n  <md-icon>accessible</md-icon>\r\n  <md-icon>account_balance</md-icon>\r\n  <md-icon>account_balance_wallet</md-icon>\r\n  <md-icon>account_box</md-icon>\r\n  <md-icon>account_circle</md-icon>\r\n  <md-icon>add_shopping_cart</md-icon>\r\n  <md-icon>alarm</md-icon>\r\n  <md-icon>alarm_add</md-icon>\r\n  <md-icon>alarm_off</md-icon>\r\n  <md-icon>alarm_on</md-icon>\r\n  <md-icon>all_out</md-icon>\r\n  <md-icon>android</md-icon>\r\n  <md-icon>announcement</md-icon>\r\n  <md-icon>aspect_ratio</md-icon>\r\n  <md-icon>assessment</md-icon>\r\n  <md-icon>assignment</md-icon>\r\n  <md-icon>assignment_ind</md-icon>\r\n  <md-icon>assignment_late</md-icon>\r\n  <md-icon>assignment_return</md-icon>\r\n  <md-icon>assignment_returned</md-icon>\r\n  <md-icon>assignment_turned_in</md-icon>\r\n  <md-icon>autorenew</md-icon>\r\n  <md-icon>backup</md-icon>\r\n  <md-icon>book</md-icon>\r\n  <md-icon>bookmark</md-icon>\r\n  <md-icon>bookmark_outline</md-icon>\r\n  <md-icon>bug_report</md-icon>\r\n  <md-icon>build</md-icon>\r\n  <md-icon>cached</md-icon>\r\n  <md-icon>camera_enhanced</md-icon>\r\n  <md-icon>card_giftcard</md-icon>\r\n  <md-icon>card_membership</md-icon>\r\n  <md-icon>card_travel</md-icon>\r\n  <md-icon>change_history</md-icon>\r\n  <md-icon>check_circle</md-icon>\r\n  <md-icon>chrome_reader_mode</md-icon>\r\n  <md-icon>class</md-icon>\r\n  <md-icon>code</md-icon>\r\n  <md-icon>compare_arrows</md-icon>\r\n  <md-icon>copyright</md-icon>\r\n  <md-icon>credit_card</md-icon>\r\n  <md-icon>dashboard</md-icon>\r\n  <md-icon>date_range</md-icon>\r\n  <md-icon>delete</md-icon>\r\n  <md-icon>delete_forever</md-icon>\r\n  <md-icon>description</md-icon>\r\n  <md-icon>dns</md-icon>\r\n  <md-icon>done</md-icon>\r\n  <md-icon>done_all</md-icon>\r\n  <md-icon>donut_large</md-icon>\r\n  <md-icon>donut_small</md-icon>\r\n  <md-icon>eject</md-icon>\r\n  <md-icon>euro_symbol</md-icon>\r\n  <md-icon>event</md-icon>\r\n  <md-icon>event_seat</md-icon>\r\n  <md-icon>exit_to_app</md-icon>\r\n  <md-icon>explore</md-icon>\r\n  <md-icon>extension</md-icon>\r\n  <md-icon>face</md-icon>\r\n  <md-icon>favorite</md-icon>\r\n  <md-icon>favorite_border</md-icon>\r\n  <md-icon>feedback</md-icon>\r\n  <md-icon>find_in_page</md-icon>\r\n  <md-icon>find_replace</md-icon>\r\n  <md-icon>fingerprint</md-icon>\r\n  <md-icon>flight_land</md-icon>\r\n  <md-icon>flight_takeoff</md-icon>\r\n  <md-icon>flip_to_back</md-icon>\r\n  <md-icon>flip_to_front</md-icon>\r\n  <md-icon>g_translate</md-icon>\r\n  <md-icon>gavel</md-icon>\r\n  <md-icon>get_app</md-icon>\r\n  <md-icon>gif</md-icon>\r\n  <md-icon>grade</md-icon>\r\n  <md-icon>group_work</md-icon>\r\n  <md-icon>help</md-icon>\r\n  <md-icon>help_outline</md-icon>\r\n  <md-icon>highlight_off</md-icon>\r\n  <md-icon>history</md-icon>\r\n  <md-icon>home</md-icon>\r\n  <md-icon>hourglass_empty</md-icon>\r\n  <md-icon>hourglass_full</md-icon>\r\n  <md-icon>http</md-icon>\r\n  <md-icon>https</md-icon>\r\n  <md-icon>important_devices</md-icon>\r\n  <md-icon>info</md-icon>\r\n  <md-icon>info_outline</md-icon>\r\n  <md-icon>input</md-icon>\r\n  <md-icon>invert_colors</md-icon>\r\n  <md-icon>label</md-icon>\r\n  <md-icon>label_outline</md-icon>\r\n  <md-icon>language</md-icon>\r\n  <md-icon>launch</md-icon>\r\n  <md-icon>lightbulb_outline</md-icon>\r\n  <md-icon>line_style</md-icon>\r\n  <md-icon>line_weight</md-icon>\r\n  <md-icon>list</md-icon>\r\n  <md-icon>lock</md-icon>\r\n  <md-icon>lock_open</md-icon>\r\n  <md-icon>lock_outline</md-icon>\r\n  <md-icon>loyalty</md-icon>\r\n  <md-icon>markunread_mailbox</md-icon>\r\n  <md-icon>motorcycle</md-icon>\r\n  <md-icon>note_add</md-icon>\r\n  <md-icon>offline_pin</md-icon>\r\n  <md-icon>opacity</md-icon>\r\n  <md-icon>open_in_browser</md-icon>\r\n  <md-icon>open_in_new</md-icon>\r\n  <md-icon>open_with</md-icon>\r\n  <md-icon>pageview</md-icon>\r\n  <md-icon>pan_tool</md-icon>\r\n  <md-icon>payment</md-icon>\r\n  <md-icon>perm_camera_mic</md-icon>\r\n  <md-icon>perm_contact_calendar</md-icon>\r\n  <md-icon>perm_data_setting</md-icon>\r\n  <md-icon>perm_device_information</md-icon>\r\n  <md-icon>perm_identity</md-icon>\r\n  <md-icon>perm_media</md-icon>\r\n  <md-icon>perm_phone_msg</md-icon>\r\n  <md-icon>perm_scan_wifi</md-icon>\r\n  <md-icon>pets</md-icon>\r\n  <md-icon>picture_in_picture</md-icon>\r\n  <md-icon>picture_in_picture_alt</md-icon>\r\n  <md-icon>play_for_work</md-icon>\r\n  <md-icon>polymer</md-icon>\r\n  <md-icon>power_settings_new</md-icon>\r\n  <md-icon>pregnant_woman</md-icon>\r\n  <md-icon>print</md-icon>\r\n  <md-icon>query_builder</md-icon>\r\n  <md-icon>question_answer</md-icon>\r\n  <md-icon>receipt</md-icon>\r\n  <md-icon>record_voice_over</md-icon>\r\n  <md-icon>redeem</md-icon>\r\n  <md-icon>remove_shopping_cart</md-icon>\r\n  <md-icon>reorder</md-icon>\r\n  <md-icon>report_problem</md-icon>\r\n  <md-icon>restore</md-icon>\r\n  <md-icon>restore_page</md-icon>\r\n  <md-icon>room</md-icon>\r\n  <md-icon>rounded_corner</md-icon>\r\n  <md-icon>rowing</md-icon>\r\n  <md-icon>schedule</md-icon>\r\n  <md-icon>search</md-icon>\r\n  <md-icon>settings</md-icon>\r\n  <md-icon>settings_applications</md-icon>\r\n  <md-icon>settings_backup_restore</md-icon>\r\n  <md-icon>settings_bluetooth</md-icon>\r\n  <md-icon>settings_brightness</md-icon>\r\n  <md-icon>settings_cell</md-icon>\r\n  <md-icon>settings_ethernet</md-icon>\r\n  <md-icon>settings_input_antenna</md-icon>\r\n  <md-icon>settings_input_component</md-icon>\r\n  <md-icon>settings_input_composite</md-icon>\r\n  <md-icon>settings_input_hdmi</md-icon>\r\n  <md-icon>settings_input_svideo</md-icon>\r\n  <md-icon>settings_overscan</md-icon>\r\n  <md-icon>settings_phone</md-icon>\r\n  <md-icon>settings_power</md-icon>\r\n  <md-icon>settings_remote</md-icon>\r\n  <md-icon>settings_voice</md-icon>\r\n  <md-icon>shop</md-icon>\r\n  <md-icon>shop_two</md-icon>\r\n  <md-icon>shopping_basket</md-icon>\r\n  <md-icon>shopping_cart</md-icon>\r\n  <md-icon>speaker_notes</md-icon>\r\n  <md-icon>speaker_notes_off</md-icon>\r\n  <md-icon>spellcheck</md-icon>\r\n  <md-icon>star_rate</md-icon>\r\n  <md-icon>stars</md-icon>\r\n  <md-icon>store</md-icon>\r\n  <md-icon>subject</md-icon>\r\n  <md-icon>supervisor_account</md-icon>\r\n  <md-icon>swap_horiz</md-icon>\r\n  <md-icon>swap_vert</md-icon>\r\n  <md-icon>swap_vertial_circle</md-icon>\r\n  <md-icon>system_update_alt</md-icon>\r\n  <md-icon>tab</md-icon>\r\n  <md-icon>tab_unselected</md-icon>\r\n  <md-icon>theaters</md-icon>\r\n  <md-icon>thumb_down</md-icon>\r\n  <md-icon>thumb_up</md-icon>\r\n  <md-icon>thumbs_up_down</md-icon>\r\n  <md-icon>timeline</md-icon>\r\n  <md-icon>toc</md-icon>\r\n  <md-icon>today</md-icon>\r\n  <md-icon>toll</md-icon>\r\n  <md-icon>touch_app</md-icon>\r\n  <md-icon>track_changes</md-icon>\r\n  <md-icon>translate</md-icon>\r\n  <md-icon>trending_down</md-icon>\r\n  <md-icon>trending_flat</md-icon>\r\n  <md-icon>trending_up</md-icon>\r\n  <md-icon>turned_in</md-icon>\r\n  <md-icon>turned_in_not</md-icon>\r\n  <md-icon>update</md-icon>\r\n  <md-icon>verified_user</md-icon>\r\n  <md-icon>view_agenda</md-icon>\r\n  <md-icon>view_array</md-icon>\r\n  <md-icon>view_carousel</md-icon>\r\n  <md-icon>view_column</md-icon>\r\n  <md-icon>view_day</md-icon>\r\n  <md-icon>view_headline</md-icon>\r\n  <md-icon>view_list</md-icon>\r\n  <md-icon>view_module</md-icon>\r\n  <md-icon>view_quilt</md-icon>\r\n  <md-icon>view_stream</md-icon>\r\n  <md-icon>view_week</md-icon>\r\n  <md-icon>visibility</md-icon>\r\n  <md-icon>visibility_off</md-icon>\r\n  <md-icon>watch_later</md-icon>\r\n  <md-icon>work</md-icon>\r\n  <md-icon>youtube_searched_for</md-icon>\r\n  <md-icon>zoom_in</md-icon>\r\n  <md-icon>zoom_out</md-icon>\r\n</ni-card>\r\n<ni-card [title]=\"'Alert icons'\">\r\n  <md-icon>add_alert</md-icon>\r\n  <md-icon>error</md-icon>\r\n  <md-icon>error_outline</md-icon>\r\n  <md-icon>warning</md-icon>\r\n</ni-card>\r\n<ni-card [title]=\"'Av icons'\">\r\n  <md-icon>add_to_queue</md-icon>\r\n  <md-icon>airplay</md-icon>\r\n  <md-icon>album</md-icon>\r\n  <md-icon>art_track</md-icon>\r\n  <md-icon>av_timer</md-icon>\r\n  <md-icon>branding_watermark</md-icon>\r\n  <md-icon>call_to_action</md-icon>\r\n  <md-icon>closed_caption</md-icon>\r\n  <md-icon>equalizer</md-icon>\r\n  <md-icon>explicit</md-icon>\r\n  <md-icon>fast_forward</md-icon>\r\n  <md-icon>fast_rewind</md-icon>\r\n  <md-icon>featured_play_list</md-icon>\r\n  <md-icon>featured_video</md-icon>\r\n  <md-icon>fiber_manual_record</md-icon>\r\n  <md-icon>forward_10</md-icon>\r\n  <md-icon>forward_30</md-icon>\r\n  <md-icon>forward_5</md-icon>\r\n  <md-icon>games</md-icon>\r\n  <md-icon>hd</md-icon>\r\n  <md-icon>hearing</md-icon>\r\n  <md-icon>high_quality</md-icon>\r\n  <md-icon>my_library_add</md-icon>\r\n  <md-icon>my_library_books</md-icon>\r\n  <md-icon>my_library_music</md-icon>\r\n  <md-icon>loop</md-icon>\r\n  <md-icon>mic</md-icon>\r\n  <md-icon>mic_none</md-icon>\r\n  <md-icon>mic_off</md-icon>\r\n  <md-icon>movie</md-icon>\r\n  <md-icon>music_video</md-icon>\r\n  <md-icon>new_releases</md-icon>\r\n  <md-icon>not_interested</md-icon>\r\n  <md-icon>note</md-icon>\r\n  <md-icon>pause</md-icon>\r\n  <md-icon>pause_circle_filled</md-icon>\r\n  <md-icon>pause_circle_outline</md-icon>\r\n  <md-icon>play_arrow</md-icon>\r\n  <md-icon>play_circle_fill</md-icon>\r\n  <md-icon>play_circle_outline</md-icon>\r\n  <md-icon>playlist_add</md-icon>\r\n  <md-icon>playlist_add_check</md-icon>\r\n  <md-icon>playlist_play</md-icon>\r\n  <md-icon>queue</md-icon>\r\n  <md-icon>queue_music</md-icon>\r\n  <md-icon>queue_play_next</md-icon>\r\n  <md-icon>radio</md-icon>\r\n  <md-icon>recent_actors</md-icon>\r\n  <md-icon>remove_from_queue</md-icon>\r\n  <md-icon>repeat</md-icon>\r\n  <md-icon>repeat_one</md-icon>\r\n  <md-icon>replay</md-icon>\r\n  <md-icon>replay_10</md-icon>\r\n  <md-icon>replay_30</md-icon>\r\n  <md-icon>replay_5</md-icon>\r\n  <md-icon>shuffle</md-icon>\r\n  <md-icon>skip_next</md-icon>\r\n  <md-icon>skip_previous</md-icon>\r\n  <md-icon>slow_motion_video</md-icon>\r\n  <md-icon>snooze</md-icon>\r\n  <md-icon>sort_by_alpha</md-icon>\r\n  <md-icon>stop</md-icon>\r\n  <md-icon>subscriptions</md-icon>\r\n  <md-icon>subtitles</md-icon>\r\n  <md-icon>surround_sound</md-icon>\r\n  <md-icon>video_call</md-icon>\r\n  <md-icon>video_label</md-icon>\r\n  <md-icon>video_library</md-icon>\r\n  <md-icon>videocam</md-icon>\r\n  <md-icon>videocam_off</md-icon>\r\n  <md-icon>volume_down</md-icon>\r\n  <md-icon>volume_mute</md-icon>\r\n  <md-icon>volume_off</md-icon>\r\n  <md-icon>volume_up</md-icon>\r\n  <md-icon>web</md-icon>\r\n  <md-icon>web_asset</md-icon>\r\n</ni-card>\r\n<ni-card [title]=\"'Cummunikation icons'\">\r\n  <md-icon>business</md-icon>\r\n  <md-icon>call</md-icon>\r\n  <md-icon>call_end</md-icon>\r\n  <md-icon>call_made</md-icon>\r\n  <md-icon>call_merge</md-icon>\r\n  <md-icon>call_missed</md-icon>\r\n  <md-icon>call_missed_outgoing</md-icon>\r\n  <md-icon>call_received</md-icon>\r\n  <md-icon>call_split</md-icon>\r\n  <md-icon>chat</md-icon>\r\n  <md-icon>chat_bubble</md-icon>\r\n  <md-icon>chat_bubble_outline</md-icon>\r\n  <md-icon>clear_all</md-icon>\r\n  <md-icon>comment</md-icon>\r\n  <md-icon>contact_mail</md-icon>\r\n  <md-icon>contact_phone</md-icon>\r\n  <md-icon>contacts</md-icon>\r\n  <md-icon>dialer_sip</md-icon>\r\n  <md-icon>dialpad</md-icon>\r\n  <md-icon>email</md-icon>\r\n  <md-icon>forum</md-icon>\r\n  <md-icon>import_contacts</md-icon>\r\n  <md-icon>import_export</md-icon>\r\n  <md-icon>invert_colors_off</md-icon>\r\n  <md-icon>live_help</md-icon>\r\n  <md-icon>location_off</md-icon>\r\n  <md-icon>location_on</md-icon>\r\n  <md-icon>mail_outline</md-icon>\r\n  <md-icon>message</md-icon>\r\n  <md-icon>no_sim</md-icon>\r\n  <md-icon>phone</md-icon>\r\n  <md-icon>phonelink_erase</md-icon>\r\n  <md-icon>phonelink_lock</md-icon>\r\n  <md-icon>phonelink_ring</md-icon>\r\n  <md-icon>phonelink_setup</md-icon>\r\n  <md-icon>portable_wifi_off</md-icon>\r\n  <md-icon>present_to_all</md-icon>\r\n  <md-icon>ring_volume</md-icon>\r\n  <md-icon>rss_feed</md-icon>\r\n  <md-icon>screen_share</md-icon>\r\n  <md-icon>stay_current_landscape</md-icon>\r\n  <md-icon>stay_current_portrait</md-icon>\r\n  <md-icon>stay_primary_landscape</md-icon>\r\n  <md-icon>stay_primary_portrait</md-icon>\r\n  <md-icon>stop_screen_share</md-icon>\r\n  <md-icon>swap_calls</md-icon>\r\n  <md-icon>textsms</md-icon>\r\n  <md-icon>voicemail</md-icon>\r\n  <md-icon>vpn_key</md-icon>\r\n</ni-card>\r\n<ni-card [title]=\"'Content icons'\">\r\n  <md-icon>add</md-icon>\r\n  <md-icon>add_box</md-icon>\r\n  <md-icon>add_circle</md-icon>\r\n  <md-icon>add_circle_outline</md-icon>\r\n  <md-icon>archive</md-icon>\r\n  <md-icon>backspace</md-icon>\r\n  <md-icon>block</md-icon>\r\n  <md-icon>clear</md-icon>\r\n  <md-icon>content_copy</md-icon>\r\n  <md-icon>content_cut</md-icon>\r\n  <md-icon>content_paste</md-icon>\r\n  <md-icon>create</md-icon>\r\n  <md-icon>delete_sweep</md-icon>\r\n  <md-icon>drafts</md-icon>\r\n  <md-icon>filter_list</md-icon>\r\n  <md-icon>flag</md-icon>\r\n  <md-icon>font_download</md-icon>\r\n  <md-icon>forward</md-icon>\r\n  <md-icon>gesture</md-icon>\r\n  <md-icon>inbox</md-icon>\r\n  <md-icon>link</md-icon>\r\n  <md-icon>low_priority</md-icon>\r\n  <md-icon>mail</md-icon>\r\n  <md-icon>markunread</md-icon>\r\n  <md-icon>move_to_inbox</md-icon>\r\n  <md-icon>next_week</md-icon>\r\n  <md-icon>redo</md-icon>\r\n  <md-icon>remove</md-icon>\r\n  <md-icon>remove_circle</md-icon>\r\n  <md-icon>remove_circle_outline</md-icon>\r\n  <md-icon>reply</md-icon>\r\n  <md-icon>reply_all</md-icon>\r\n  <md-icon>report</md-icon>\r\n  <md-icon>save</md-icon>\r\n  <md-icon>select_all</md-icon>\r\n  <md-icon>send</md-icon>\r\n  <md-icon>sort</md-icon>\r\n  <md-icon>text_format</md-icon>\r\n  <md-icon>unarchive</md-icon>\r\n  <md-icon>undo</md-icon>\r\n  <md-icon>weekend</md-icon>\r\n</ni-card>\r\n<ni-card [title]=\"'Device icons'\">\r\n  <md-icon>access_alarms</md-icon>\r\n  <md-icon>access_alarm</md-icon>\r\n  <md-icon>access_time</md-icon>\r\n  <md-icon>add_alarm</md-icon>\r\n  <md-icon>airplanemode_on</md-icon>\r\n  <md-icon>airplanemode_inactive</md-icon>\r\n  <md-icon>battery_charging_full</md-icon>\r\n  <md-icon>battery_full</md-icon>\r\n  <md-icon>battery_std</md-icon>\r\n  <md-icon>battery_unknown</md-icon>\r\n  <md-icon>bluetooth</md-icon>\r\n  <md-icon>bluetooth_connected</md-icon>\r\n  <md-icon>bluetooth_disabled</md-icon>\r\n  <md-icon>bluetooth_searching</md-icon>\r\n  <md-icon>brightness_auto</md-icon>\r\n  <md-icon>brightness_high</md-icon>\r\n  <md-icon>brightness_low</md-icon>\r\n  <md-icon>brightness_medium</md-icon>\r\n  <md-icon>data_usage</md-icon>\r\n  <md-icon>developer_mode</md-icon>\r\n  <md-icon>devices</md-icon>\r\n  <md-icon>dvr</md-icon>\r\n  <md-icon>gps_fixed</md-icon>\r\n  <md-icon>gps_not_fixed</md-icon>\r\n  <md-icon>gps_off</md-icon>\r\n  <md-icon>graphic_eq</md-icon>\r\n  <md-icon>location_disabled</md-icon>\r\n  <md-icon>location_searching</md-icon>\r\n  <md-icon>network_cell</md-icon>\r\n  <md-icon>network_wifi</md-icon>\r\n  <md-icon>nfc</md-icon>\r\n  <md-icon>screen_lock_landscape</md-icon>\r\n  <md-icon>screen_lock_portrait</md-icon>\r\n  <md-icon>screen_lock_rotation</md-icon>\r\n  <md-icon>screen_rotation</md-icon>\r\n  <md-icon>sd_storage</md-icon>\r\n  <md-icon>settings_system_daydream</md-icon>\r\n  <md-icon>signal_cellular_4_bar</md-icon>\r\n  <md-icon>signal_cellular_connected_no_internet_4_bar</md-icon>\r\n  <md-icon>signal_cellular_no_sim</md-icon>\r\n  <md-icon>signal_cellular_null</md-icon>\r\n  <md-icon>signal_cellular_off</md-icon>\r\n  <md-icon>signal_wifi_4_bar</md-icon>\r\n  <md-icon>signal_wifi_4_bar_lock</md-icon>\r\n  <md-icon>signal_wifi_off</md-icon>\r\n  <md-icon>storage</md-icon>\r\n  <md-icon>usb</md-icon>\r\n  <md-icon>wallpaper</md-icon>\r\n  <md-icon>wifi_lock</md-icon>\r\n  <md-icon>wifi_tethering</md-icon>\r\n</ni-card>\r\n<ni-card [title]=\"'Editor icons'\">\r\n  <md-icon>attach_file</md-icon>\r\n  <md-icon>attach_money</md-icon>\r\n  <md-icon>border_all</md-icon>\r\n  <md-icon>border_bottom</md-icon>\r\n  <md-icon>border_clear</md-icon>\r\n  <md-icon>border_color</md-icon>\r\n  <md-icon>border_horizontal</md-icon>\r\n  <md-icon>border_inner</md-icon>\r\n  <md-icon>border_left</md-icon>\r\n  <md-icon>border_outer</md-icon>\r\n  <md-icon>border_right</md-icon>\r\n  <md-icon>border_style</md-icon>\r\n  <md-icon>border_top</md-icon>\r\n  <md-icon>border_vertical</md-icon>\r\n  <md-icon>bubble_chart</md-icon>\r\n  <md-icon>drag_handle</md-icon>\r\n  <md-icon>format_align_center</md-icon>\r\n  <md-icon>format_align_justify</md-icon>\r\n  <md-icon>format_align_left</md-icon>\r\n  <md-icon>format_align_right</md-icon>\r\n  <md-icon>format_bold</md-icon>\r\n  <md-icon>format_clear</md-icon>\r\n  <md-icon>format_color_fill</md-icon>\r\n  <md-icon>format_color_reset</md-icon>\r\n  <md-icon>format_color_text</md-icon>\r\n  <md-icon>format_indent_decrease</md-icon>\r\n  <md-icon>format_indent_increase</md-icon>\r\n  <md-icon>format_italic</md-icon>\r\n  <md-icon>format_line_spacing</md-icon>\r\n  <md-icon>format_list_bulleted</md-icon>\r\n  <md-icon>format_list_numbered</md-icon>\r\n  <md-icon>format_paint</md-icon>\r\n  <md-icon>format_quote</md-icon>\r\n  <md-icon>format_shapes</md-icon>\r\n  <md-icon>format_size</md-icon>\r\n  <md-icon>format_strikethrough</md-icon>\r\n  <md-icon>format_textdirection_l_to_r</md-icon>\r\n  <md-icon>format_textdirection_r_to_l</md-icon>\r\n  <md-icon>format_underline</md-icon>\r\n  <md-icon>functions</md-icon>\r\n  <md-icon>highlight</md-icon>\r\n  <md-icon>insert_chart</md-icon>\r\n  <md-icon>insert_comment</md-icon>\r\n  <md-icon>insert_drive_file</md-icon>\r\n  <md-icon>insert_emoticon</md-icon>\r\n  <md-icon>insert_invitation</md-icon>\r\n  <md-icon>insert_link</md-icon>\r\n  <md-icon>insert_photo</md-icon>\r\n  <md-icon>linear_scale</md-icon>\r\n  <md-icon>merge_type</md-icon>\r\n  <md-icon>mode_comment</md-icon>\r\n  <md-icon>mode_edit</md-icon>\r\n  <md-icon>monetization_on</md-icon>\r\n  <md-icon>money_off</md-icon>\r\n  <md-icon>multiline_chart</md-icon>\r\n  <md-icon>pie_chart</md-icon>\r\n  <md-icon>pie_chart_outline</md-icon>\r\n  <md-icon>publish</md-icon>\r\n  <md-icon>short_text</md-icon>\r\n  <md-icon>show_chart</md-icon>\r\n  <md-icon>space_bar</md-icon>\r\n  <md-icon>strikethrough_s</md-icon>\r\n  <md-icon>text_fields</md-icon>\r\n  <md-icon>title</md-icon>\r\n  <md-icon>vertical_align_bottom</md-icon>\r\n  <md-icon>vertical_align_center</md-icon>\r\n  <md-icon>vertical_align_top</md-icon>\r\n  <md-icon>wrap_text</md-icon>\r\n</ni-card>\r\n<ni-card [title]=\"'File icons'\">\r\n  <md-icon>attachment</md-icon>\r\n  <md-icon>cloud</md-icon>\r\n  <md-icon>cloud_circle</md-icon>\r\n  <md-icon>cloud_done</md-icon>\r\n  <md-icon>cloud_download</md-icon>\r\n  <md-icon>cloud_off</md-icon>\r\n  <md-icon>cloud_queue</md-icon>\r\n  <md-icon>cloud_upload</md-icon>\r\n  <md-icon>create_new_folder</md-icon>\r\n  <md-icon>file_download</md-icon>\r\n  <md-icon>file_upload</md-icon>\r\n  <md-icon>folder</md-icon>\r\n  <md-icon>folder_open</md-icon>\r\n  <md-icon>folder_shared</md-icon>\r\n</ni-card>\r\n<ni-card [title]=\"'Hardware icons'\">\r\n  <md-icon>cast</md-icon>\r\n  <md-icon>cast_connected</md-icon>\r\n  <md-icon>computer</md-icon>\r\n  <md-icon>desktop_mac</md-icon>\r\n  <md-icon>desktop_windows</md-icon>\r\n  <md-icon>device_hub</md-icon>\r\n  <md-icon>devices_other</md-icon>\r\n  <md-icon>dock</md-icon>\r\n  <md-icon>gamepad</md-icon>\r\n  <md-icon>headset</md-icon>\r\n  <md-icon>headset_mic</md-icon>\r\n  <md-icon>keyboard</md-icon>\r\n  <md-icon>keyboard_arrow_down</md-icon>\r\n  <md-icon>keyboard_arrow_left</md-icon>\r\n  <md-icon>keyboard_arrow_right</md-icon>\r\n  <md-icon>keyboard_arrow_up</md-icon>\r\n  <md-icon>keyboard_backspace</md-icon>\r\n  <md-icon>keyboard_capslock</md-icon>\r\n  <md-icon>keyboard_hide</md-icon>\r\n  <md-icon>keyboard_return</md-icon>\r\n  <md-icon>keyboard_tab</md-icon>\r\n  <md-icon>keyboard_voice</md-icon>\r\n  <md-icon>laptop</md-icon>\r\n  <md-icon>laptop_chromebook</md-icon>\r\n  <md-icon>laptop_mac</md-icon>\r\n  <md-icon>laptop_windows</md-icon>\r\n  <md-icon>memory</md-icon>\r\n  <md-icon>mouse</md-icon>\r\n  <md-icon>phone_android</md-icon>\r\n  <md-icon>phone_iphone</md-icon>\r\n  <md-icon>phonelink</md-icon>\r\n  <md-icon>phonelink_off</md-icon>\r\n  <md-icon>power_input</md-icon>\r\n  <md-icon>router</md-icon>\r\n  <md-icon>scanner</md-icon>\r\n  <md-icon>security</md-icon>\r\n  <md-icon>sim_card</md-icon>\r\n  <md-icon>smartphone</md-icon>\r\n  <md-icon>speaker</md-icon>\r\n  <md-icon>speaker_group</md-icon>\r\n  <md-icon>tablet</md-icon>\r\n  <md-icon>tablet_android</md-icon>\r\n  <md-icon>tablet_mac</md-icon>\r\n  <md-icon>toys</md-icon>\r\n  <md-icon>tv</md-icon>\r\n  <md-icon>watch</md-icon>\r\n</ni-card>\r\n<ni-card [title]=\"'Image icons'\">\r\n  <md-icon>add_a_photo</md-icon>\r\n  <md-icon>add_to_photos</md-icon>\r\n  <md-icon>adjust</md-icon>\r\n  <md-icon>assistant_photo</md-icon>\r\n  <md-icon>audiotrack</md-icon>\r\n  <md-icon>blur_circular</md-icon>\r\n  <md-icon>blur_linear</md-icon>\r\n  <md-icon>blur_off</md-icon>\r\n  <md-icon>blur_on</md-icon>\r\n  <md-icon>brightness_1</md-icon>\r\n  <md-icon>brightness_2</md-icon>\r\n  <md-icon>brightness_3</md-icon>\r\n  <md-icon>brightness_4</md-icon>\r\n  <md-icon>brightness_5</md-icon>\r\n  <md-icon>brightness_6</md-icon>\r\n  <md-icon>brightness_7</md-icon>\r\n  <md-icon>broken_image</md-icon>\r\n  <md-icon>brush</md-icon>\r\n  <md-icon>burst_mode</md-icon>\r\n  <md-icon>camera</md-icon>\r\n  <md-icon>camera_alt</md-icon>\r\n  <md-icon>camera_front</md-icon>\r\n  <md-icon>camera_rear</md-icon>\r\n  <md-icon>camera_roll</md-icon>\r\n  <md-icon>center_focus_strong</md-icon>\r\n  <md-icon>center_focus_weak</md-icon>\r\n  <md-icon>collections</md-icon>\r\n  <md-icon>collections_bookmark</md-icon>\r\n  <md-icon>color_lens</md-icon>\r\n  <md-icon>colorize</md-icon>\r\n  <md-icon>compare</md-icon>\r\n  <md-icon>control_point</md-icon>\r\n  <md-icon>control_point_duplicate</md-icon>\r\n  <md-icon>crop</md-icon>\r\n  <md-icon>crop_16_9</md-icon>\r\n  <md-icon>crop_3_2</md-icon>\r\n  <md-icon>crop_5_4</md-icon>\r\n  <md-icon>crop_7_5</md-icon>\r\n  <md-icon>crop_din</md-icon>\r\n  <md-icon>crop_free</md-icon>\r\n  <md-icon>crop_landscape</md-icon>\r\n  <md-icon>crop_original</md-icon>\r\n  <md-icon>crop_portrait</md-icon>\r\n  <md-icon>crop_rotate</md-icon>\r\n  <md-icon>crop_square</md-icon>\r\n  <md-icon>dehaze</md-icon>\r\n  <md-icon>details</md-icon>\r\n  <md-icon>edit</md-icon>\r\n  <md-icon>exposure</md-icon>\r\n  <md-icon>exposure_neg_1</md-icon>\r\n  <md-icon>exposure_neg_2</md-icon>\r\n  <md-icon>exposure_plus_1</md-icon>\r\n  <md-icon>exposure_plus_2</md-icon>\r\n  <md-icon>exposure_zero</md-icon>\r\n  <md-icon>filter</md-icon>\r\n  <md-icon>filter_1</md-icon>\r\n  <md-icon>filter_2</md-icon>\r\n  <md-icon>filter_3</md-icon>\r\n  <md-icon>filter_4</md-icon>\r\n  <md-icon>filter_5</md-icon>\r\n  <md-icon>filter_6</md-icon>\r\n  <md-icon>filter_7</md-icon>\r\n  <md-icon>filter_8</md-icon>\r\n  <md-icon>filter_9</md-icon>\r\n  <md-icon>filter_9_plus</md-icon>\r\n  <md-icon>filter_b_and_w</md-icon>\r\n  <md-icon>filter_center_focus</md-icon>\r\n  <md-icon>filter_drama</md-icon>\r\n  <md-icon>filter_frames</md-icon>\r\n  <md-icon>filter_hdr</md-icon>\r\n  <md-icon>filter_none</md-icon>\r\n  <md-icon>filter_tilt_shift</md-icon>\r\n  <md-icon>filter_vintage</md-icon>\r\n  <md-icon>flare</md-icon>\r\n  <md-icon>flash_auto</md-icon>\r\n  <md-icon>flash_off</md-icon>\r\n  <md-icon>flash_on</md-icon>\r\n  <md-icon>flip</md-icon>\r\n  <md-icon>gradient</md-icon>\r\n  <md-icon>grain</md-icon>\r\n  <md-icon>grid_off</md-icon>\r\n  <md-icon>grid_on</md-icon>\r\n  <md-icon>hdr_off</md-icon>\r\n  <md-icon>hdr_on</md-icon>\r\n  <md-icon>hdr_strong</md-icon>\r\n  <md-icon>hdr_weak</md-icon>\r\n  <md-icon>healing</md-icon>\r\n  <md-icon>image</md-icon>\r\n  <md-icon>image_aspect_ratio</md-icon>\r\n  <md-icon>iso</md-icon>\r\n  <md-icon>landscape</md-icon>\r\n  <md-icon>leak_add</md-icon>\r\n  <md-icon>leak_remove</md-icon>\r\n  <md-icon>lens</md-icon>\r\n  <md-icon>linked_camera</md-icon>\r\n  <md-icon>looks</md-icon>\r\n  <md-icon>looks_3</md-icon>\r\n  <md-icon>looks_4</md-icon>\r\n  <md-icon>looks_5</md-icon>\r\n  <md-icon>looks_6</md-icon>\r\n  <md-icon>looks_one</md-icon>\r\n  <md-icon>looks_two</md-icon>\r\n  <md-icon>loupe</md-icon>\r\n  <md-icon>monochrome_photos</md-icon>\r\n  <md-icon>movie_creation</md-icon>\r\n  <md-icon>movie_filter</md-icon>\r\n  <md-icon>music_note</md-icon>\r\n  <md-icon>nature</md-icon>\r\n  <md-icon>nature_people</md-icon>\r\n  <md-icon>navigate_before</md-icon>\r\n  <md-icon>navigate_next</md-icon>\r\n  <md-icon>palette</md-icon>\r\n  <md-icon>panorama</md-icon>\r\n  <md-icon>panorama_fisheye</md-icon>\r\n  <md-icon>panorama_horizontal</md-icon>\r\n  <md-icon>panorama_vertical</md-icon>\r\n  <md-icon>panorama_wide_angle</md-icon>\r\n  <md-icon>photo</md-icon>\r\n  <md-icon>photo_album</md-icon>\r\n  <md-icon>photo_camera</md-icon>\r\n  <md-icon>photo_filter</md-icon>\r\n  <md-icon>photo_library</md-icon>\r\n  <md-icon>photo_size_select_actual</md-icon>\r\n  <md-icon>photo_size_select_large</md-icon>\r\n  <md-icon>photo_size_select_small</md-icon>\r\n  <md-icon>picture_as_pdf</md-icon>\r\n  <md-icon>portrait</md-icon>\r\n  <md-icon>remove_red_eye</md-icon>\r\n  <md-icon>rotate_90_degrees_ccw</md-icon>\r\n  <md-icon>rotate_left</md-icon>\r\n  <md-icon>rotate_right</md-icon>\r\n  <md-icon>slideshow</md-icon>\r\n  <md-icon>straighten</md-icon>\r\n  <md-icon>style</md-icon>\r\n  <md-icon>switch_camera</md-icon>\r\n  <md-icon>switch_video</md-icon>\r\n  <md-icon>tag_faces</md-icon>\r\n  <md-icon>texture</md-icon>\r\n  <md-icon>timelapse</md-icon>\r\n  <md-icon>timer</md-icon>\r\n  <md-icon>timer_10</md-icon>\r\n  <md-icon>timer_3</md-icon>\r\n  <md-icon>timer_off</md-icon>\r\n  <md-icon>tonality</md-icon>\r\n  <md-icon>transform</md-icon>\r\n  <md-icon>tune</md-icon>\r\n  <md-icon>view_comfy</md-icon>\r\n  <md-icon>view_compact</md-icon>\r\n  <md-icon>vignette</md-icon>\r\n  <md-icon>wb_auto</md-icon>\r\n  <md-icon>wb_cloudy</md-icon>\r\n  <md-icon>wb_incandescent</md-icon>\r\n  <md-icon>wb_sunny</md-icon>\r\n</ni-card>\r\n<ni-card [title]=\"'Maps icons'\">\r\n  <md-icon>add_location</md-icon>\r\n  <md-icon>beenhere</md-icon>\r\n  <md-icon>directions</md-icon>\r\n  <md-icon>directions_bike</md-icon>\r\n  <md-icon>directions_bus</md-icon>\r\n  <md-icon>directions_car</md-icon>\r\n  <md-icon>directions_ferry</md-icon>\r\n  <md-icon>directions_subway</md-icon>\r\n  <md-icon>directions_train</md-icon>\r\n  <md-icon>directions_transit</md-icon>\r\n  <md-icon>directions_walk</md-icon>\r\n  <md-icon>edit_location</md-icon>\r\n  <md-icon>ev_station</md-icon>\r\n  <md-icon>flight</md-icon>\r\n  <md-icon>hotel</md-icon>\r\n  <md-icon>layers</md-icon>\r\n  <md-icon>layers_clear</md-icon>\r\n  <md-icon>local_activity</md-icon>\r\n  <md-icon>local_airport</md-icon>\r\n  <md-icon>local_atm</md-icon>\r\n  <md-icon>local_bar</md-icon>\r\n  <md-icon>local_cafe</md-icon>\r\n  <md-icon>local_car_wash</md-icon>\r\n  <md-icon>local_convenience_store</md-icon>\r\n  <md-icon>local_dining</md-icon>\r\n  <md-icon>local_drink</md-icon>\r\n  <md-icon>local_florist</md-icon>\r\n  <md-icon>local_gas_station</md-icon>\r\n  <md-icon>local_grocery_store</md-icon>\r\n  <md-icon>local_hospital</md-icon>\r\n  <md-icon>local_hotel</md-icon>\r\n  <md-icon>local_laundry_service</md-icon>\r\n  <md-icon>local_library</md-icon>\r\n  <md-icon>local_mall</md-icon>\r\n  <md-icon>local_movies</md-icon>\r\n  <md-icon>local_offer</md-icon>\r\n  <md-icon>local_parking</md-icon>\r\n  <md-icon>local_pharmacy</md-icon>\r\n  <md-icon>local_phone</md-icon>\r\n  <md-icon>local_pizza</md-icon>\r\n  <md-icon>local_play</md-icon>\r\n  <md-icon>local_post_office</md-icon>\r\n  <md-icon>local_print_shop</md-icon>\r\n  <md-icon>local_restaurant</md-icon>\r\n  <md-icon>local_see</md-icon>\r\n  <md-icon>local_shipping</md-icon>\r\n  <md-icon>local_taxi</md-icon>\r\n  <md-icon>map</md-icon>\r\n  <md-icon>my_location</md-icon>\r\n  <md-icon>navigation</md-icon>\r\n  <md-icon>near_me</md-icon>\r\n  <md-icon>person_pin_circle</md-icon>\r\n  <md-icon>person_pin</md-icon>\r\n  <md-icon>pin_drop</md-icon>\r\n  <md-icon>place</md-icon>\r\n  <md-icon>rate_review</md-icon>\r\n  <md-icon>restaurant</md-icon>\r\n  <md-icon>restaurant_menu</md-icon>\r\n  <md-icon>satellite</md-icon>\r\n  <md-icon>store_mall_directory</md-icon>\r\n  <md-icon>streetview</md-icon>\r\n  <md-icon>subway</md-icon>\r\n  <md-icon>terrain</md-icon>\r\n  <md-icon>traffic</md-icon>\r\n  <md-icon>train</md-icon>\r\n  <md-icon>tram</md-icon>\r\n  <md-icon>transfer_within_a_station</md-icon>\r\n  <md-icon>zoom_out_map</md-icon>\r\n</ni-card>\r\n<ni-card [title]=\"'Navigation icons'\">\r\n  <md-icon>apps</md-icon>\r\n  <md-icon>arrow_back</md-icon>\r\n  <md-icon>arrow_downward</md-icon>\r\n  <md-icon>arrow_drop_down</md-icon>\r\n  <md-icon>arrow_drop_down_circle</md-icon>\r\n  <md-icon>arrow_drop_up</md-icon>\r\n  <md-icon>arrow_forward</md-icon>\r\n  <md-icon>arrow_upwards</md-icon>\r\n  <md-icon>cancel</md-icon>\r\n  <md-icon>check</md-icon>\r\n  <md-icon>chevron_left</md-icon>\r\n  <md-icon>chevron_right</md-icon>\r\n  <md-icon>close</md-icon>\r\n  <md-icon>expand_less</md-icon>\r\n  <md-icon>expand_more</md-icon>\r\n  <md-icon>first_page</md-icon>\r\n  <md-icon>fullscreen</md-icon>\r\n  <md-icon>fullscreen_exit</md-icon>\r\n  <md-icon>last_page</md-icon>\r\n  <md-icon>menu</md-icon>\r\n  <md-icon>more_horiz</md-icon>\r\n  <md-icon>more_vert</md-icon>\r\n  <md-icon>refresh</md-icon>\r\n  <md-icon>subdirectory_arrow_left</md-icon>\r\n  <md-icon>subdirectory_arrow_right</md-icon>\r\n  <md-icon>adb</md-icon>\r\n  <md-icon>airline_seat_flat</md-icon>\r\n  <md-icon>airline_seat_individual_suite</md-icon>\r\n  <md-icon>airline_seat_legroom_extra</md-icon>\r\n  <md-icon>airline_seat_legroom_normal</md-icon>\r\n  <md-icon>airline_seat_legroom_reduced</md-icon>\r\n  <md-icon>airline_seat_recline_extra</md-icon>\r\n  <md-icon>airline_seat_recline_normal</md-icon>\r\n  <md-icon>bluetooth_audio</md-icon>\r\n  <md-icon>confirmation_number</md-icon>\r\n  <md-icon>disc_full</md-icon>\r\n  <md-icon>do_not_disturb</md-icon>\r\n  <md-icon>do_not_disturb_alt</md-icon>\r\n  <md-icon>do_not_disturb_off</md-icon>\r\n  <md-icon>do_not_disturb_on</md-icon>\r\n  <md-icon>drive_eta</md-icon>\r\n  <md-icon>enhanced_encryption</md-icon>\r\n  <md-icon>event_available</md-icon>\r\n  <md-icon>event_busy</md-icon>\r\n  <md-icon>event_note</md-icon>\r\n  <md-icon>folder_special</md-icon>\r\n  <md-icon>live_tv</md-icon>\r\n  <md-icon>mms</md-icon>\r\n  <md-icon>more</md-icon>\r\n  <md-icon>network_check</md-icon>\r\n  <md-icon>network_locked</md-icon>\r\n  <md-icon>no_encryption</md-icon>\r\n  <md-icon>ondemand_video</md-icon>\r\n  <md-icon>personal_video</md-icon>\r\n  <md-icon>phone_bluetooth_speaker</md-icon>\r\n  <md-icon>phone_forwarded</md-icon>\r\n  <md-icon>phone_in_talk</md-icon>\r\n  <md-icon>phone_locked</md-icon>\r\n  <md-icon>phone_missed</md-icon>\r\n  <md-icon>phone_paused</md-icon>\r\n  <md-icon>power</md-icon>\r\n  <md-icon>priority_high</md-icon>\r\n  <md-icon>sd_card</md-icon>\r\n  <md-icon>sim_card_alert</md-icon>\r\n  <md-icon>sms</md-icon>\r\n  <md-icon>sms_failed</md-icon>\r\n  <md-icon>sync</md-icon>\r\n  <md-icon>sync_disabled</md-icon>\r\n  <md-icon>sync_problem</md-icon>\r\n  <md-icon>system_update</md-icon>\r\n  <md-icon>tap_and_play</md-icon>\r\n  <md-icon>time_to_leave</md-icon>\r\n  <md-icon>vibration</md-icon>\r\n  <md-icon>voice_chat</md-icon>\r\n  <md-icon>vpn_lock</md-icon>\r\n  <md-icon>wc</md-icon>\r\n  <md-icon>wifi</md-icon>\r\n</ni-card>\r\n<ni-card [title]=\"'Places icons'\">\r\n  <md-icon>ac_unit</md-icon>\r\n  <md-icon>airport_shuttle</md-icon>\r\n  <md-icon>all_inclusive</md-icon>\r\n  <md-icon>beach_access</md-icon>\r\n  <md-icon>business_center</md-icon>\r\n  <md-icon>casino</md-icon>\r\n  <md-icon>child_care</md-icon>\r\n  <md-icon>fitness_center</md-icon>\r\n  <md-icon>free_breakfast</md-icon>\r\n  <md-icon>golf_course</md-icon>\r\n  <md-icon>hot_tub</md-icon>\r\n  <md-icon>kitchen</md-icon>\r\n  <md-icon>pool</md-icon>\r\n  <md-icon>room_service</md-icon>\r\n  <md-icon>rv_hookup</md-icon>\r\n  <md-icon>smoke_free</md-icon>\r\n  <md-icon>spa</md-icon>\r\n</ni-card>\r\n<ni-card [title]=\"'Social icons'\">\r\n  <md-icon>cake</md-icon>\r\n  <md-icon>domain</md-icon>\r\n  <md-icon>group</md-icon>\r\n  <md-icon>group_add</md-icon>\r\n  <md-icon>location_city</md-icon>\r\n  <md-icon>mood</md-icon>\r\n  <md-icon>mood_bad</md-icon>\r\n  <md-icon>notifications</md-icon>\r\n  <md-icon>notifications_none</md-icon>\r\n  <md-icon>notifications_off</md-icon>\r\n  <md-icon>notifications_active</md-icon>\r\n  <md-icon>notifications_paused</md-icon>\r\n  <md-icon>pages</md-icon>\r\n  <md-icon>party_mode</md-icon>\r\n  <md-icon>people</md-icon>\r\n  <md-icon>people_outline</md-icon>\r\n  <md-icon>person</md-icon>\r\n  <md-icon>person_add</md-icon>\r\n  <md-icon>person_outline</md-icon>\r\n  <md-icon>plus_one</md-icon>\r\n  <md-icon>poll</md-icon>\r\n  <md-icon>public</md-icon>\r\n  <md-icon>school</md-icon>\r\n  <md-icon>sentiment_dissatisfied</md-icon>\r\n  <md-icon>sentiment_neutral</md-icon>\r\n  <md-icon>sentiment_satisfied</md-icon>\r\n  <md-icon>sentiment_very_dissatisfied</md-icon>\r\n  <md-icon>sentiment_very_satisfied</md-icon>\r\n  <md-icon>share</md-icon>\r\n  <md-icon>whatshot</md-icon>\r\n</ni-card>\r\n<ni-card [title]=\"'Toggle icons'\" class=\"mb-0\">\r\n  <md-icon>check_box</md-icon>\r\n  <md-icon>check_box_outline_blank</md-icon>\r\n  <md-icon>indeterminate_check_box</md-icon>\r\n  <md-icon>radio_button_unchecked</md-icon>\r\n  <md-icon>radio_button_checked</md-icon>\r\n  <md-icon>star</md-icon>\r\n  <md-icon>star_half</md-icon>\r\n  <md-icon>star_border</md-icon>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/icon/icon.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ":host .mat-icon {\n  background: #bec0c8;\n  color: #000000;\n  font-size: 32px;\n  height: 50px;\n  padding: 9px;\n  margin: 0.6875rem;\n  text-align: center;\n  width: 50px; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/icon/icon.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageIconComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Material components',
-        link: '#'
-    },
-    {
-        title: 'Icons',
-        link: ''
-    }
-];
-var PageIconComponent = (function () {
-    function PageIconComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Icon';
-        this.breadcrumb = BREADCRUMBS;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageIconComponent.prototype.ngOnInit = function () { };
-    PageIconComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-icon',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/icon/icon.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/material-components/icon/icon.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageIconComponent);
-    return PageIconComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=icon.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/input/input.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card [title]=\"'Basic input'\">\r\n  <md-input-container>\r\n    <input mdInput placeholder=\"Input placeholder\" value=\"\">\r\n  </md-input-container>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Prefix and Suffix'\">\r\n  <md-input-container>\r\n    <span mdPrefix>Prefix</span>\r\n    <input mdInput placeholder=\"Input placeholder\" value=\"\">\r\n    <span mdSuffix>Suffix</span>\r\n  </md-input-container>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Hint Labels'\">\r\n  <md-input-container>\r\n    <input mdInput placeholder=\"Input placeholder\" maxlength=\"100\" value=\"Value\" #characterCountHintExample>\r\n    <md-hint align=\"end\">{{characterCountHintExample.value.length}} / 100</md-hint>\r\n  </md-input-container>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Divider Color'\">\r\n  <md-input-container>\r\n    <input mdInput placeholder=\"Default color\" value=\"\">\r\n  </md-input-container>\r\n  <md-input-container dividerColor=\"accent\">\r\n    <input mdInput placeholder=\"Accent color\" value=\"\">\r\n  </md-input-container>\r\n  <md-input-container dividerColor=\"warn\">\r\n    <input mdInput placeholder=\"Warning color\" value=\"\">\r\n  </md-input-container>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Textarea'\">\r\n  <md-input-container>\r\n    <textarea mdInput placeholder=\"Textarea placeholder\">1600 Amphitheatre Pkwy</textarea>\r\n  </md-input-container>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Autocomplete'\" class=\"mb-0\">\r\n  <md-input-container class=\"mb-0\">\r\n    <input mdInput placeholder=\"State\" [mdAutocomplete]=\"auto\" [formControl]=\"stateCtrl\">\r\n  </md-input-container>\r\n\r\n  <md-autocomplete #auto=\"mdAutocomplete\">\r\n    <md-option *ngFor=\"let state of filteredStates | async\" [value]=\"state\">\r\n      {{ state }}\r\n    </md-option>\r\n  </md-autocomplete>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/input/input.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/input/input.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageInputComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_startWith__ = __webpack_require__("../../../../rxjs/add/operator/startWith.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_startWith___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_startWith__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Material components',
-        link: '#'
-    },
-    {
-        title: 'Input',
-        link: ''
-    }
-];
-var PageInputComponent = (function () {
-    function PageInputComponent(_sharedService) {
-        var _this = this;
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Input';
-        this.breadcrumb = BREADCRUMBS;
-        this.states = [
-            'Alabama',
-            'Alaska',
-            'Arizona',
-            'Arkansas',
-            'California',
-            'Colorado',
-            'Connecticut',
-            'Delaware',
-            'Florida',
-            'Georgia',
-            'Hawaii',
-            'Idaho',
-            'Illinois',
-            'Indiana',
-            'Iowa',
-            'Kansas',
-            'Kentucky',
-            'Louisiana',
-            'Maine',
-            'Maryland',
-            'Massachusetts',
-            'Michigan',
-            'Minnesota',
-            'Mississippi',
-            'Missouri',
-            'Montana',
-            'Nebraska',
-            'Nevada',
-            'New Hampshire',
-            'New Jersey',
-            'New Mexico',
-            'New York',
-            'North Carolina',
-            'North Dakota',
-            'Ohio',
-            'Oklahoma',
-            'Oregon',
-            'Pennsylvania',
-            'Rhode Island',
-            'South Carolina',
-            'South Dakota',
-            'Tennessee',
-            'Texas',
-            'Utah',
-            'Vermont',
-            'Virginia',
-            'Washington',
-            'West Virginia',
-            'Wisconsin',
-            'Wyoming',
-        ];
-        this.stateCtrl = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormControl"]();
-        this.filteredStates = this.stateCtrl.valueChanges
-            .startWith(null)
-            .map(function (name) { return _this.filterStates(name); });
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageInputComponent.prototype.filterStates = function (val) {
-        return val ? this.states.filter(function (s) { return new RegExp(val, 'gi').test(s); }) : this.states;
-    };
-    PageInputComponent.prototype.ngOnInit = function () { };
-    PageInputComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-input',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/input/input.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/material-components/input/input.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageInputComponent);
-    return PageInputComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=input.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/list/list.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card [title]=\"'Simple lists'\">\r\n  <md-list>\r\n    <md-list-item>Pepper</md-list-item>\r\n    <md-list-item>Salt</md-list-item>\r\n    <md-list-item>Paprika</md-list-item>\r\n  </md-list>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Navigation lists'\">\r\n  <md-nav-list>\r\n    <md-list-item *ngFor=\"let link of links\">\r\n      <a md-line href=\"#\">{{ link }}</a>\r\n      <button md-icon-button (click)=\"showInfo(link)\">\r\n        <md-icon>info</md-icon>\r\n      </button>\r\n    </md-list-item>\r\n  </md-nav-list>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Multi-line lists'\">\r\n  <md-list>\r\n    <md-list-item *ngFor=\"let message of messages\">\r\n      <h3 md-line>{{ message.from }}</h3>\r\n      <p md-line>\r\n        <span>{{ message.subject }}</span>\r\n        <span class=\"demo-2\"> -- {{ message.content }}</span>\r\n      </p>\r\n    </md-list-item>\r\n  </md-list>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Lists with avatars'\">\r\n  <md-list>\r\n    <md-list-item *ngFor=\"let message of messages\">\r\n      <img md-list-avatar src=\"{{ message.avatar }}\" width=\"40\" height=\"40\" alt=\"\">\r\n      <h3 md-line class=\"h3\">{{ message.from }}</h3>\r\n      <p md-line>\r\n        <span>{{message.subject}}</span>\r\n        <span class=\"demo-2\"> -- {{ message.content }}</span>\r\n      </p>\r\n    </md-list-item>\r\n  </md-list>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Dense lists'\">\r\n  <md-list dense>\r\n    <md-list-item>Pepper</md-list-item>\r\n    <md-list-item>Salt</md-list-item>\r\n    <md-list-item>Paprika</md-list-item>\r\n  </md-list>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Lists with multiple sections'\" class=\"mb-0\">\r\n  <md-list>\r\n    <h3 md-subheader>Folders</h3>\r\n    <md-list-item *ngFor=\"let folder of folders\">\r\n      <md-icon md-list-avatar>folder</md-icon>\r\n      <h4 md-line>{{folder.name}}</h4>\r\n      <p md-line class=\"demo-2\"> {{folder.updated}} </p>\r\n    </md-list-item>\r\n    <md-divider></md-divider>\r\n    <h3 md-subheader>Notes</h3>\r\n    <md-list-item *ngFor=\"let note of notes\">\r\n      <md-icon md-list-avatar>note</md-icon>\r\n      <h4 md-line>{{note.name}}</h4>\r\n      <p md-line class=\"demo-2\"> {{note.updated}} </p>\r\n    </md-list-item>\r\n  </md-list>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/list/list.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/list/list.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageListComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Material components',
-        link: '#'
-    },
-    {
-        title: 'List',
-        link: ''
-    }
-];
-var links = ['Link 1', 'Link 2', 'Link 3'];
-var messages = [
-    {
-        from: 'Nancy',
-        subject: 'HTML',
-        content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-        avatar: 'assets/content/avatar-1.jpg'
-    },
-    {
-        from: 'Mary',
-        subject: 'Css',
-        content: 'Lorem Ipsum has been the industrys standard',
-        avatar: 'assets/content/avatar-2.jpg'
-    },
-    {
-        from: 'Bobby',
-        subject: 'Angular 2',
-        content: 'It is a long established fact that a reader will be distracted by the readable content',
-        avatar: 'assets/content/avatar-3.jpg'
-    },
-    {
-        from: 'Roma',
-        subject: 'Type Script',
-        content: 'There are many variations of passages of',
-        avatar: 'assets/content/avatar-4.jpg'
-    }
-];
-var folders = [
-    {
-        name: 'Nancy',
-        updated: 'Jan 21, 2017'
-    },
-    {
-        name: 'Mary',
-        updated: 'Jan 19, 2017'
-    }
-];
-var notes = [
-    {
-        name: 'Bobby',
-        updated: 'Jan 18, 2017'
-    },
-    {
-        name: 'Roma',
-        updated: 'Jan 17, 2017'
-    }
-];
-var PageListComponent = (function () {
-    function PageListComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'List';
-        this.breadcrumb = BREADCRUMBS;
-        this.links = links;
-        this.messages = messages;
-        this.folders = folders;
-        this.notes = notes;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageListComponent.prototype.ngOnInit = function () { };
-    PageListComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-list',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/list/list.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/material-components/list/list.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageListComponent);
-    return PageListComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=list.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/menu/menu.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card [title]=\"'Simple menu'\">\r\n  <button md-icon-button [mdMenuTriggerFor]=\"menu\">\r\n    <md-icon>more_vert</md-icon>\r\n  </button>\r\n  <md-menu #menu=\"mdMenu\">\r\n    <button md-menu-item>\r\n      <span>Redial</span>\r\n    </button>\r\n    <button md-menu-item disabled>\r\n      <span>Check voicemail</span>\r\n    </button>\r\n    <button md-menu-item>\r\n      <span>Disable alerts</span>\r\n    </button>\r\n  </md-menu>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Icons'\">\r\n  <button md-icon-button [mdMenuTriggerFor]=\"menu2\">\r\n    <md-icon>more_vert</md-icon>\r\n  </button>\r\n  <md-menu #menu2=\"mdMenu\">\r\n    <button md-menu-item>\r\n      <md-icon>dialpad</md-icon>\r\n      <span>Redial</span>\r\n    </button>\r\n    <button md-menu-item disabled>\r\n      <md-icon>voicemail</md-icon>\r\n      <span>Check voicemail</span>\r\n    </button>\r\n    <button md-menu-item>\r\n      <md-icon>notifications_off</md-icon>\r\n      <span>Disable alerts</span>\r\n    </button>\r\n  </md-menu>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Customizing menu position'\" class=\"mb-0\">\r\n  <button md-icon-button [mdMenuTriggerFor]=\"menu3\">\r\n    <md-icon>more_vert</md-icon>\r\n  </button>\r\n  <md-menu #menu3=\"mdMenu\" x-position=\"before\">\r\n    <button md-menu-item>\r\n      <md-icon>dialpad</md-icon>\r\n      <span>Redial</span>\r\n    </button>\r\n    <button md-menu-item disabled>\r\n      <md-icon>voicemail</md-icon>\r\n      <span>Check voicemail</span>\r\n    </button>\r\n    <button md-menu-item>\r\n      <md-icon>notifications_off</md-icon>\r\n      <span>Disable alerts</span>\r\n    </button>\r\n  </md-menu>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/menu/menu.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/menu/menu.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageMenuComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Material components',
-        link: '#'
-    },
-    {
-        title: 'Menu',
-        link: ''
-    }
-];
-var PageMenuComponent = (function () {
-    function PageMenuComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Menu';
-        this.breadcrumb = BREADCRUMBS;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageMenuComponent.prototype.ngOnInit = function () { };
-    PageMenuComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-menu',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/menu/menu.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/material-components/menu/menu.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageMenuComponent);
-    return PageMenuComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=menu.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/progress-bar/progress-bar.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card [title]=\"'Basic progress-bar'\">\r\n  <md-progress-bar mode=\"indeterminate\" class=\"mb-0\"></md-progress-bar>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Progress Modes'\">\r\n  <p><strong>Determinate</strong></p>\r\n  <md-progress-bar mode=\"determinate\" [value]=\"determinateProgressValue\" color=\"warn\"></md-progress-bar>\r\n  <p>\r\n    <button md-raised-button color=\"primary\" (click)=\"stepDeterminateProgressVal(10)\">Increase</button>\r\n    <button md-raised-button color=\"warn\" (click)=\"stepDeterminateProgressVal(-10)\">Decrease</button>\r\n  </p>\r\n\r\n  <p><strong>Indeterminate</strong></p>\r\n  <md-progress-bar mode=\"indeterminate\"></md-progress-bar>\r\n\r\n  <p><strong>Buffer</strong></p>\r\n  <md-progress-bar mode=\"buffer\" [value]=\"bufferProgressValue\" [bufferValue]=\"bufferBufferValue\" color=\"warn\"></md-progress-bar>\r\n  <p>\r\n    <button md-raised-button color=\"primary\" (click)=\"stepBufferProgressVal(10)\">Increase</button>\r\n    <button md-raised-button color=\"warn\" (click)=\"stepBufferProgressVal(-10)\">Decrease</button>\r\n    <button md-raised-button color=\"primary\" (click)=\"stepBufferBufferVal(10)\">Buffer Increase</button>\r\n    <button md-raised-button color=\"warn\" (click)=\"stepBufferBufferVal(-10)\">Buffer Decrease</button>\r\n  </p>\r\n\r\n  <p><strong>Query</strong></p>\r\n  <md-progress-bar mode=\"query\" class=\"mb-0\"></md-progress-bar>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Theming'\" class=\"mb-0\">\r\n  <md-progress-bar mode=\"indeterminate\" color=\"primary\"></md-progress-bar>\r\n  <md-progress-bar mode=\"indeterminate\" color=\"accent\"></md-progress-bar>\r\n  <md-progress-bar mode=\"indeterminate\" color=\"warn\"></md-progress-bar>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/progress-bar/progress-bar.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/progress-bar/progress-bar.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageProgressBarComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Material components',
-        link: '#'
-    },
-    {
-        title: 'Progress bar',
-        link: ''
-    }
-];
-var PageProgressBarComponent = (function () {
-    function PageProgressBarComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.breadcrumb = BREADCRUMBS;
-        this.pageTitle = 'Progress bar';
-        this.determinateProgressValue = 50;
-        this.bufferProgressValue = 30;
-        this.bufferBufferValue = 40;
-        this.sidebar = true;
-        this.navbar = true;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageProgressBarComponent.prototype.stepDeterminateProgressVal = function (val) {
-        this.determinateProgressValue += val;
-    };
-    PageProgressBarComponent.prototype.stepBufferProgressVal = function (val) {
-        this.bufferProgressValue += val;
-    };
-    PageProgressBarComponent.prototype.stepBufferBufferVal = function (val) {
-        this.bufferBufferValue += val;
-    };
-    PageProgressBarComponent.prototype.ngOnInit = function () { };
-    PageProgressBarComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-progress-bar',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/progress-bar/progress-bar.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/material-components/progress-bar/progress-bar.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageProgressBarComponent);
-    return PageProgressBarComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=progress-bar.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/progress-spinner/progress-spinner.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card [title]=\"'Basic progress-spinner'\">\r\n  <md-spinner class=\"mb-0\" mode=\"indeterminate\"></md-spinner>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Progress mode'\">\r\n  <p><strong>Determinate</strong></p>\r\n  <md-progress-spinner mode=\"determinate\" [value]=\"progressValue\"></md-progress-spinner>\r\n  <p>\r\n    <button md-raised-button color=\"primary\" (click)=\"step(10)\">Increase</button>\r\n    <button md-raised-button color=\"varn\" (click)=\"step(-10)\">Decrease</button>\r\n  </p>\r\n\r\n  <p><strong>Indeterminate</strong></p>\r\n  <md-progress-spinner class=\"mb-0\" mode=\"indeterminate\"></md-progress-spinner>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Theming'\" class=\"mb-0\">\r\n  <md-progress-spinner mode=\"indeterminate\" color=\"primary\"></md-progress-spinner>\r\n  <md-progress-spinner mode=\"indeterminate\" color=\"accent\"></md-progress-spinner>\r\n  <md-progress-spinner class=\"mb-0\" mode=\"indeterminate\" color=\"warn\"></md-progress-spinner>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/progress-spinner/progress-spinner.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/progress-spinner/progress-spinner.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageProgressSpinnerComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Material components',
-        link: '#'
-    },
-    {
-        title: 'Progress spinner',
-        link: ''
-    }
-];
-var PageProgressSpinnerComponent = (function () {
-    function PageProgressSpinnerComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.breadcrumb = BREADCRUMBS;
-        this.pageTitle = 'Progress spinner';
-        this.progressValue = 40;
-        this.sidebar = true;
-        this.navbar = true;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageProgressSpinnerComponent.prototype.step = function (val) {
-        this.progressValue += val;
-    };
-    PageProgressSpinnerComponent.prototype.ngOnInit = function () { };
-    PageProgressSpinnerComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-progress-spinner',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/progress-spinner/progress-spinner.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/material-components/progress-spinner/progress-spinner.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageProgressSpinnerComponent);
-    return PageProgressSpinnerComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=progress-spinner.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/radio-button/radio-button.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-card [title]=\"'Basic radios'\">\r\n  <md-radio-group name=\"group-1\">\r\n    <md-radio-button value=\"1\" [checked]=\"true\">Option 1</md-radio-button>\r\n    <md-radio-button value=\"2\">Option 2</md-radio-button>\r\n  </md-radio-group>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Column Layout'\">\r\n  <md-radio-group name=\"group-2\" class=\"column-layout\">\r\n    <md-radio-button value=\"1\" [checked]=\"true\">Option 1</md-radio-button>\r\n    <md-radio-button value=\"2\">Option 2</md-radio-button>\r\n  </md-radio-group>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Align'\">\r\n  <md-radio-group name=\"group-3\" class=\"column-layout\">\r\n    <md-radio-button value=\"1\" [align]=\"'start'\" [checked]=\"true\">Start</md-radio-button>\r\n    <md-radio-button value=\"2\" [align]=\"'end'\">End</md-radio-button>\r\n  </md-radio-group>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Disabled'\">\r\n  <md-radio-group name=\"group-4\" class=\"column-layout\">\r\n    <md-radio-button value=\"1\" [checked]=\"true\">Option 1</md-radio-button>\r\n    <md-radio-button value=\"2\">Option 2</md-radio-button>\r\n    <md-radio-button value=\"3\" [disabled]=\"true\">Disabled Option</md-radio-button>\r\n  </md-radio-group>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Radios with ngModel'\" class=\"mb-0\">\r\n  <md-radio-group name=\"ngModel-options\" [(ngModel)]=\"favoriteSeason\" class=\"column-layout\">\r\n    <md-radio-button *ngFor=\"let season of seasons\" [value]=\"season\" [checked]=\"i === 0\">\r\n      {{season}}\r\n    </md-radio-button>\r\n  </md-radio-group>\r\n  <p>Your favorite season is: <strong>{{favoriteSeason}}</strong></p>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/radio-button/radio-button.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/radio-button/radio-button.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageRadioButtonComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Material components',
-        link: '#'
-    },
-    {
-        title: 'Radio button',
-        link: ''
-    }
-];
-var PageRadioButtonComponent = (function () {
-    function PageRadioButtonComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Radio button';
-        this.breadcrumb = BREADCRUMBS;
-        this.favoriteSeason = 'Winter';
-        this.seasons = [
-            'Winter',
-            'Spring',
-            'Summer',
-            'Autumn'
-        ];
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageRadioButtonComponent.prototype.ngOnInit = function () { };
-    PageRadioButtonComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-radio-button',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/radio-button/radio-button.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/material-components/radio-button/radio-button.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageRadioButtonComponent);
-    return PageRadioButtonComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=radio-button.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/select/select.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card [title]=\"'Basic select'\">\r\n  <md-select placeholder=\"Favorite food\">\r\n    <md-option *ngFor=\"let food of foods\" [value]=\"food.value\">\r\n      {{ food.viewValue }}\r\n    </md-option>\r\n  </md-select>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/select/select.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/select/select.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageSelectComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Material components',
-        link: '#'
-    },
-    {
-        title: 'Select',
-        link: ''
-    }
-];
-var PageSelectComponent = (function () {
-    function PageSelectComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Select';
-        this.breadcrumb = BREADCRUMBS;
-        this.foods = [
-            { value: 'steak-0', viewValue: 'Steak' },
-            { value: 'pizza-1', viewValue: 'Pizza' },
-            { value: 'tacos-2', viewValue: 'Tacos' }
-        ];
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageSelectComponent.prototype.ngOnInit = function () { };
-    PageSelectComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-select',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/select/select.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/material-components/select/select.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageSelectComponent);
-    return PageSelectComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=select.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/slide-toggle/slide-toggle.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card [title]=\"'Basic'\">\r\n  <md-slide-toggle>Slide me!</md-slide-toggle>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Disabled'\">\r\n  <md-slide-toggle disabled>Disabled</md-slide-toggle>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Theming'\" class=\"mb-0\">\r\n  <md-slide-toggle color=\"primary\" [checked]=\"true\">\r\n    Primary Slide Toggle\r\n  </md-slide-toggle>\r\n\r\n  <md-slide-toggle color=\"accent\" [checked]=\"true\">\r\n    Accent Slide Toggle\r\n  </md-slide-toggle>\r\n\r\n  <md-slide-toggle color=\"warn\" [checked]=\"true\">\r\n    Warning Slide Toggle\r\n  </md-slide-toggle>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/slide-toggle/slide-toggle.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/slide-toggle/slide-toggle.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageSlideToggleComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Material components',
-        link: '#'
-    },
-    {
-        title: 'Slide toggle',
-        link: ''
-    }
-];
-var PageSlideToggleComponent = (function () {
-    function PageSlideToggleComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Slide toggle';
-        this.breadcrumb = BREADCRUMBS;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageSlideToggleComponent.prototype.ngOnInit = function () { };
-    PageSlideToggleComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-slide-toggle',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/slide-toggle/slide-toggle.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/material-components/slide-toggle/slide-toggle.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageSlideToggleComponent);
-    return PageSlideToggleComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=slide-toggle.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/slider/slider.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card [title]=\"'Basic slider'\">\r\n  <md-slider thumbLabel></md-slider>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Selecting a value'\">\r\n  <md-slider min=\"1\" max=\"5\" step=\"0.5\" value=\"1.5\" #slider2></md-slider> <span>{{slider2.value}}</span>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Orientation'\">\r\n  <p>\r\n    <strong>Horizontal</strong><br>\r\n    <md-slider></md-slider>\r\n  </p>\r\n\r\n  <p>\r\n    <strong>Vertical</strong><br>\r\n    <md-slider vertical></md-slider>\r\n  </p>\r\n\r\n  <p>\r\n    <strong>Invert</strong><br>\r\n    <md-slider invert></md-slider>\r\n  </p>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Adding ticks'\">\r\n  <md-slider thumbLabel tickInterval=\"1\"></md-slider>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Tick marks'\">\r\n  <md-slider step=\"4\" tickInterval=\"3\"></md-slider>\r\n  <md-slider tickInterval=\"auto\"></md-slider>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Disabled'\" class=\"mb-0\">\r\n  <md-slider disabled value=\"5\"></md-slider>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/slider/slider.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/slider/slider.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageSliderComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Material components',
-        link: '#'
-    },
-    {
-        title: 'Slider',
-        link: ''
-    }
-];
-var PageSliderComponent = (function () {
-    function PageSliderComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Slider';
-        this.breadcrumb = BREADCRUMBS;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageSliderComponent.prototype.ngOnInit = function () { };
-    PageSliderComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-slider',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/slider/slider.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/material-components/slider/slider.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageSliderComponent);
-    return PageSliderComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=slider.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/snackbar/snackbar.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card [title]=\"'Snackbar config'\">\r\n  <md-input-container>\r\n    <input mdInput value=\"Disco party!\" placeholder=\"Message\" #message>\r\n  </md-input-container>\r\n\r\n  <md-input-container>\r\n    <input mdInput value=\"Dance\" placeholder=\"Action\" #action>\r\n  </md-input-container>\r\n\r\n  <button md-raised-button color=\"primary\" (click)=\"openSnackBar(message.value, action.value)\">Show snack-bar</button>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/snackbar/snackbar.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/snackbar/snackbar.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageSnackbarComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Material components',
-        link: '#'
-    },
-    {
-        title: 'Snackbar',
-        link: ''
-    }
-];
-var PageSnackbarComponent = (function () {
-    function PageSnackbarComponent(snackBar, _sharedService) {
-        this.snackBar = snackBar;
-        this._sharedService = _sharedService;
-        this.breadcrumb = BREADCRUMBS;
-        this.pageTitle = 'Snackbar';
-        this.sidebar = true;
-        this.navbar = true;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageSnackbarComponent.prototype.openSnackBar = function (message, action) {
-        this.snackBar.open(message, action, {
-            duration: 2000,
-        });
-    };
-    PageSnackbarComponent.prototype.ngOnInit = function () { };
-    PageSnackbarComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-snackbar',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/snackbar/snackbar.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/material-components/snackbar/snackbar.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["C" /* MdSnackBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["C" /* MdSnackBar */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _b || Object])
-    ], PageSnackbarComponent);
-    return PageSnackbarComponent;
-    var _a, _b;
-}());
-
-//# sourceMappingURL=snackbar.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/tabs/tabs.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card [title]=\"'Basic tabs'\">\r\n  <md-tab-group>\r\n    <md-tab label=\"One\">\r\n      <h3>Some tab content</h3>\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque autem consequatur distinctio dolor dolore dolores, earum, eos explicabo id illo impedit iste modi nihil nulla praesentium provident quis repellat suscipit veritatis. Aut cum, dolor ea est ex excepturi minima obcaecati perspiciatis quaerat quidem quo repellendus sapiente sit sunt tenetur.</p>\r\n    </md-tab>\r\n    <md-tab label=\"Two\">\r\n      <h3>Some more tab content</h3>\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, aperiam architecto distinctio ea facere ipsum iste molestiae nihil omnis optio perferendis praesentium tempore veritatis. Aperiam cupiditate dicta doloribus eaque et exercitationem modi necessitatibus nisi, nostrum porro quae quaerat reiciendis, repellendus sequi sunt temporibus, voluptatem. Corporis ducimus laboriosam odio quas reiciendis repudiandae.</p>\r\n    </md-tab>\r\n    <md-tab label=\"Three\">\r\n      <h3>Some tab content</h3>\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque autem consequatur distinctio dolor dolore dolores, earum, eos explicabo id illo impedit iste modi nihil nulla praesentium provident quis repellat suscipit veritatis. Aut cum, dolor ea est ex excepturi minima obcaecati perspiciatis quaerat quidem quo repellendus sapiente sit sunt tenetur.</p>\r\n    </md-tab>\r\n  </md-tab-group>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Tabs with label templates'\" class=\"mb-0\">\r\n  <md-tab-group>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>thumb_up</md-icon> The best pasta\r\n      </ng-template>\r\n      <h3>Best pasta restaurants</h3>\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet commodi culpa dolorem ducimus eligendi est impedit inventore iste iure magnam neque nulla odit officia, porro repudiandae saepe sed, soluta suscipit tempore ullam? Adipisci aliquid aspernatur consequatur, cum eius facilis incidunt ipsum omnis, perspiciatis sunt tempora temporibus tenetur voluptatem! Est, quas!</p>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>thumb_down</md-icon> The worst sushi\r\n      </ng-template>\r\n      <h3>Terrible sushi restaurants</h3>\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci alias animi aperiam blanditiis consectetur culpa cum deleniti dicta dolor dolore eaque earum fugiat ipsum mollitia necessitatibus nesciunt obcaecati officiis quam quia quis, quo saepe sapiente tenetur ut velit veniam vitae. Dolore ea nam nisi numquam tempora unde voluptas!</p>\r\n    </md-tab>\r\n  </md-tab-group>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/tabs/tabs.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/tabs/tabs.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageTabsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Material components',
-        link: '#'
-    },
-    {
-        title: 'Tabs',
-        link: ''
-    }
-];
-var PageTabsComponent = (function () {
-    function PageTabsComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Tabs';
-        this.breadcrumb = BREADCRUMBS;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageTabsComponent.prototype.ngOnInit = function () { };
-    PageTabsComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-tabs',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/tabs/tabs.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/material-components/tabs/tabs.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageTabsComponent);
-    return PageTabsComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=tabs.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/toolbar/toolbar.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card [title]=\"'Basic toolbar'\">\r\n  <md-toolbar>My App</md-toolbar>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Multiple rows'\">\r\n  <md-toolbar>\r\n    <span>First Row</span>\r\n\r\n    <md-toolbar-row>\r\n      <span>Second Row</span>\r\n    </md-toolbar-row>\r\n\r\n    <md-toolbar-row>\r\n      <span>Third Row</span>\r\n    </md-toolbar-row>\r\n  </md-toolbar>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Positioning toolbar content'\">\r\n  <md-toolbar color=\"primary\">\r\n    <span>Title</span>\r\n\r\n    <span class=\"example-fill-remaining-space\"></span>\r\n\r\n    <span>Right Aligned</span>\r\n  </md-toolbar>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Theming'\" class=\"mb-0\">\r\n  <md-toolbar color=\"primary\">Primary</md-toolbar>\r\n  <br>\r\n  <md-toolbar color=\"accent\">Accent</md-toolbar>\r\n  <br>\r\n  <md-toolbar color=\"warn\">Warning</md-toolbar>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/toolbar/toolbar.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".example-fill-remaining-space {\n  -webkit-box-flex: 1;\n      -ms-flex: 1 1 auto;\n          flex: 1 1 auto; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/toolbar/toolbar.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageToolbarComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Material components',
-        link: '#'
-    },
-    {
-        title: 'Toolbar',
-        link: ''
-    }
-];
-var PageToolbarComponent = (function () {
-    function PageToolbarComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Toolbar';
-        this.breadcrumb = BREADCRUMBS;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageToolbarComponent.prototype.ngOnInit = function () { };
-    PageToolbarComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-toolbar',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/toolbar/toolbar.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/material-components/toolbar/toolbar.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageToolbarComponent);
-    return PageToolbarComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=toolbar.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/tooltip/tooltip.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card [title]=\"'Basic tooltip'\">\r\n  <button md-raised-button color=\"primary\" mdTooltip=\"Some message\" mdTooltipPosition=\"below\">Tooltip</button>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Positioning'\">\r\n  <button md-raised-button color=\"primary\" mdTooltip=\"Some message\" mdTooltipPosition=\"after\">after</button>\r\n  <button md-raised-button color=\"primary\" mdTooltip=\"Some message\" mdTooltipPosition=\"before\">before</button>\r\n  <button md-raised-button color=\"primary\" mdTooltip=\"Some message\" mdTooltipPosition=\"above\">above</button>\r\n  <button md-raised-button color=\"primary\" mdTooltip=\"Some message\" mdTooltipPosition=\"below\">below</button>\r\n  <button md-raised-button color=\"primary\" mdTooltip=\"Some message\" mdTooltipPosition=\"left\">left</button>\r\n  <button md-raised-button color=\"primary\" mdTooltip=\"Some message\" mdTooltipPosition=\"right\">right</button>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/tooltip/tooltip.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/material-components/tooltip/tooltip.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageTooltipComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Material components',
-        link: '#'
-    },
-    {
-        title: 'Tooltip',
-        link: ''
-    }
-];
-var PageTooltipComponent = (function () {
-    function PageTooltipComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Tooltip';
-        this.breadcrumb = BREADCRUMBS;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageTooltipComponent.prototype.ngOnInit = function () { };
-    PageTooltipComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-tooltip',
-            template: __webpack_require__("../../../../../src/app/pages/material-components/tooltip/tooltip.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/material-components/tooltip/tooltip.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageTooltipComponent);
-    return PageTooltipComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=tooltip.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/alert/alert.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-6\">\r\n    <ni-card [title]=\"'Colored ni-alerts'\">\r\n      <ni-alert><strong>Good day!</strong> Read <a href=\"#\">this important ni-alert message</a></ni-alert>\r\n      <ni-alert [color]=\"'success'\"><strong>Well done!</strong> You successfully read <a href=\"#\">this important ni-alert message</a></ni-alert>\r\n      <ni-alert [color]=\"'info'\"><strong>Heads up!</strong> This <a href=\"#\">ni-alert needs your attention</a></ni-alert>\r\n      <ni-alert [color]=\"'warning'\"><strong>Warning!</strong> Better check yourself, you're <a href=\"#\">not looking too good</a></ni-alert>\r\n      <ni-alert [color]=\"'danger'\"><strong>Oh snap!</strong> Change a few things up <a href=\"#\">and try submitting again</a></ni-alert>\r\n      <ni-alert [customColor]=\"'#000'\"><strong>Custom color!</strong> Change a few things up and try submitting again</ni-alert>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6\">\r\n    <ni-card [title]=\"'Outline ni-alerts'\">\r\n      <ni-alert [outline]=\"true\"><strong>Good day!</strong> Read <a href=\"#\">this important ni-alert message</a></ni-alert>\r\n      <ni-alert [color]=\"'success'\" [outline]=\"true\"><strong>Well done!</strong> You successfully read <a href=\"#\">this important ni-alert message</a></ni-alert>\r\n      <ni-alert [color]=\"'info'\" [outline]=\"true\"><strong>Heads up!</strong> This <a href=\"#\">ni-alert needs your attention</a></ni-alert>\r\n      <ni-alert [color]=\"'warning'\" [outline]=\"true\"><strong>Warning!</strong> Better check yourself, you're <a href=\"#\">not looking too good</a></ni-alert>\r\n      <ni-alert [color]=\"'danger'\" [outline]=\"true\"><strong>Oh snap!</strong> Change a few things up <a href=\"#\">and try submitting again</a></ni-alert>\r\n      <ni-alert [customColor]=\"'#000'\" [outline]=\"true\"><strong>Custom color!</strong> Change a few things up and try submitting again</ni-alert>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6\">\r\n    <ni-card [title]=\"'Alerts with closing button'\" class=\"mb-md-0\">\r\n      <ni-alert [close]=\"true\"><strong>Good day!</strong> Read <a href=\"#\">this important ni-alert message</a></ni-alert>\r\n      <ni-alert [color]=\"'success'\" [close]=\"true\"><strong>Well done!</strong> You successfully read <a href=\"#\">this important ni-alert message</a></ni-alert>\r\n      <ni-alert [color]=\"'info'\" [close]=\"true\"><strong>Heads up!</strong> This <a href=\"#\">ni-alert needs your attention</a></ni-alert>\r\n      <ni-alert [color]=\"'warning'\" [close]=\"true\"><strong>Warning!</strong> Better check yourself, you're <a href=\"#\">not looking too good</a></ni-alert>\r\n      <ni-alert [color]=\"'danger'\" [close]=\"true\"><strong>Oh snap!</strong> Change a few things up <a href=\"#\">and try submitting again</a></ni-alert>\r\n      <ni-alert [customColor]=\"'#000'\" [close]=\"true\"><strong>Custom color!</strong> Change a few things up and try submitting again</ni-alert>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6\">\r\n    <ni-card [title]=\"'Alerts with icon'\" class=\"mb-0\">\r\n      <ni-alert [outline]=\"true\"><md-icon>add_ni-alert</md-icon><strong>Good day!</strong> Read <a href=\"#\">this important ni-alert message</a></ni-alert>\r\n      <ni-alert [color]=\"'success'\" [outline]=\"true\"><md-icon>settings</md-icon><strong>Well done!</strong> You successfully read <a href=\"#\">this important ni-alert message</a></ni-alert>\r\n      <ni-alert [color]=\"'info'\" [outline]=\"true\"><md-icon>launch</md-icon><strong>Heads up!</strong> This <a href=\"#\">ni-alert needs your attention</a></ni-alert>\r\n      <ni-alert [color]=\"'warning'\" [outline]=\"true\"><md-icon>warning</md-icon><strong>Warning!</strong> Better check yourself, you're <a href=\"#\">not looking too good</a></ni-alert>\r\n      <ni-alert [color]=\"'danger'\" [outline]=\"true\"><md-icon>error_outline</md-icon><strong>Oh snap!</strong> Change a few things up <a href=\"#\">and try submitting again</a></ni-alert>\r\n      <ni-alert [customColor]=\"'#000'\" [outline]=\"true\"><md-icon>live_help</md-icon><strong>Custom color!</strong> Change a few things up and try submitting again</ni-alert>\r\n    </ni-card>\r\n  </div>\r\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/alert/alert.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/alert/alert.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageNiAlertsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var PageNiAlertsComponent = (function () {
-    function PageNiAlertsComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Alerts';
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageNiAlertsComponent.prototype.ngOnInit = function () { };
-    PageNiAlertsComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-ni-alerts',
-            template: __webpack_require__("../../../../../src/app/pages/ni-components/alert/alert.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/ni-components/alert/alert.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageNiAlertsComponent);
-    return PageNiAlertsComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=alert.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/badge/badge.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-lg-3\">\r\n    <ni-card [title]=\"'Simple badges'\" class=\"badge-indent\">\r\n      <ni-badge>128</ni-badge>\r\n      <ni-badge>5</ni-badge>\r\n      <ni-badge>Babge</ni-badge>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-lg-3\">\r\n    <ni-card [title]=\"'Colored badges'\" class=\"badge-indent\">\r\n      <ni-badge>128</ni-badge>\r\n      <ni-badge [color]=\"'success'\">5</ni-badge>\r\n      <ni-badge [color]=\"'info'\">1554</ni-badge>\r\n      <ni-badge [color]=\"'warning'\">29</ni-badge>\r\n      <ni-badge [color]=\"'danger'\">87</ni-badge>\r\n      <ni-badge [customColor]=\"'#9B479F'\">Badge</ni-badge>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-lg-3\">\r\n    <ni-card [title]=\"'Outline badges'\" class=\"badge-indent\">\r\n      <ni-badge [outline]=\"true\">128</ni-badge>\r\n      <ni-badge [color]=\"'success'\" [outline]=\"true\">5</ni-badge>\r\n      <ni-badge [color]=\"'info'\" [outline]=\"true\">1554</ni-badge>\r\n      <ni-badge [color]=\"'warning'\" [outline]=\"true\">29</ni-badge>\r\n      <ni-badge [color]=\"'danger'\" [outline]=\"true\">87</ni-badge>\r\n      <ni-badge [customColor]=\"'#9B479F'\" [outline]=\"true\">Badge</ni-badge>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-lg-3\">\r\n    <ni-card [title]=\"'Square badges'\" class=\"badge-indent\">\r\n      <ni-badge [borderRadius]=\"false\">128</ni-badge>\r\n      <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">5</ni-badge>\r\n      <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">1554</ni-badge>\r\n      <ni-badge [color]=\"'warning'\" [borderRadius]=\"false\">29</ni-badge>\r\n      <ni-badge [color]=\"'danger'\" [borderRadius]=\"false\">87</ni-badge>\r\n      <ni-badge [customColor]=\"'#9B479F'\" [borderRadius]=\"false\">Badge</ni-badge>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-lg-6\">\r\n    <ni-card [title]=\"'Badges with arrow'\" class=\"badge-indent\">\r\n      <ni-badge [arrow]=\"'top'\" [borderRadius]=\"false\">128</ni-badge>\r\n      <ni-badge [color]=\"'success'\" [borderRadius]=\"false\" [arrow]=\"'right'\">5</ni-badge>\r\n      <ni-badge [color]=\"'info'\" [borderRadius]=\"false\" [arrow]=\"'bottom'\">154</ni-badge>\r\n      <ni-badge [color]=\"'warning'\" [borderRadius]=\"false\" [arrow]=\"'left'\">29</ni-badge>\r\n      <ni-badge [color]=\"'danger'\" [arrow]=\"'top'\">87</ni-badge>\r\n      <ni-badge [customColor]=\"'#9B479F'\" [arrow]=\"'right'\">55</ni-badge>\r\n      <ni-badge [color]=\"'success'\" [arrow]=\"'bottom'\">588</ni-badge>\r\n      <ni-badge [color]=\"'info'\" [arrow]=\"'left'\">154</ni-badge>\r\n      <ni-badge [arrow]=\"'top'\" [borderRadius]=\"false\" [outline]=\"true\">128</ni-badge>\r\n      <ni-badge [color]=\"'success'\" [borderRadius]=\"false\" [arrow]=\"'right'\" [outline]=\"true\">5</ni-badge>\r\n      <ni-badge [color]=\"'info'\" [borderRadius]=\"false\" [arrow]=\"'bottom'\" [outline]=\"true\">154</ni-badge>\r\n      <ni-badge [color]=\"'warning'\" [borderRadius]=\"false\" [arrow]=\"'left'\" [outline]=\"true\">29</ni-badge>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-lg-6\">\r\n    <ni-card [title]=\"'Size badges'\" class=\"badge-indent\">\r\n      <ni-badge [size]=\"'large'\">128</ni-badge>\r\n      <ni-badge [color]=\"'warning'\" [borderRadius]=\"false\" [size]=\"'large'\">Large</ni-badge>\r\n      <ni-badge [color]=\"'success'\" [size]=\"'medium'\">518</ni-badge>\r\n      <ni-badge [color]=\"'danger'\" [borderRadius]=\"false\" [size]=\"'medium'\">Medium</ni-badge>\r\n      <ni-badge [color]=\"'info'\">154</ni-badge>\r\n      <ni-badge [customColor]=\"'#9B479F'\" [borderRadius]=\"false\">Default</ni-badge>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-lg-6\">\r\n    <ni-card [title]=\"'Badges on button'\">\r\n      <button md-button>Default <ni-badge>128</ni-badge></button>\r\n      <button md-button color=\"warn\"><ni-badge [color]=\"'danger'\">87</ni-badge> Warning</button>\r\n      <button md-raised-button color=\"primary\">Primary <ni-badge [customColor]=\"'#9CAACE'\">8</ni-badge></button>\r\n      <button md-raised-button color=\"accent\"><ni-badge [color]=\"'info'\" [customColor]=\"'#fff'\" [outline]=\"true\">1554</ni-badge> Accent</button>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-lg-6\">\r\n    <ni-card [title]=\"'Badges with icon'\" class=\"mb-0 icon-badge-indent\">\r\n      <md-icon>mail_outline<ni-badge>5</ni-badge></md-icon>\r\n      <md-icon>shopping_cart<ni-badge [color]=\"'danger'\" [position]=\"'top-left'\">1</ni-badge></md-icon>\r\n      <md-icon>notifications_none<ni-badge [color]=\"'info'\" [position]=\"'bottom-left'\">8</ni-badge></md-icon>\r\n      <md-icon>local_phone<ni-badge [color]=\"'warning'\" [position]=\"'bottom-right'\">3</ni-badge></md-icon>\r\n      <md-icon>person<ni-badge [customColor]=\"'#9B479F'\">15</ni-badge></md-icon>\r\n      <md-icon>notifications<ni-badge [color]=\"'danger'\">813</ni-badge></md-icon>\r\n      <md-icon>desktop_mac<ni-badge [color]=\"'danger'\">7</ni-badge></md-icon>\r\n      <md-icon>alarm<ni-badge [color]=\"'success'\">new</ni-badge></md-icon>\r\n      <md-icon>home<ni-badge [color]=\"'danger'\" [outline]=\"true\">1</ni-badge></md-icon>\r\n      <md-icon>visibility<ni-badge [color]=\"'info'\">9</ni-badge></md-icon>\r\n    </ni-card>\r\n  </div>\r\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/badge/badge.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".icon-badge-indent .mat-icon {\n  margin: 11px; }\n\n.badge-indent badge {\n  margin: 4px; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/badge/badge.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageNiBadgesComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var PageNiBadgesComponent = (function () {
-    function PageNiBadgesComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Badges';
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageNiBadgesComponent.prototype.ngOnInit = function () { };
-    PageNiBadgesComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-ni-badges',
-            template: __webpack_require__("../../../../../src/app/pages/ni-components/badge/badge.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/ni-components/badge/badge.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageNiBadgesComponent);
-    return PageNiBadgesComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=badge.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/breadcrumb/breadcrumb.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<h5 class=\"mt-0\">Simple breadcrumbs</h5>\r\n<ni-breadcrumb [menu]=\"breadcrumb\"></ni-breadcrumb>\r\n<br>\r\n\r\n<h5>Simple breadcrumbs with custom separator</h5>\r\n<ni-breadcrumb [menu]=\"breadcrumb\" [separator]=\"'&#8594;'\"></ni-breadcrumb>\r\n<br>\r\n<ni-breadcrumb [menu]=\"breadcrumb\" [separator]=\"'&#187;'\"></ni-breadcrumb>\r\n<br>\r\n\r\n<h5>Custom style breadcrumbs</h5>\r\n<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\"></ni-breadcrumb>\r\n<br>\r\n\r\n<h5>Custom style 2 breadcrumbs</h5>\r\n<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\"></ni-breadcrumb>\r\n<br>\r\n\r\n<h5>Breadcrumbs with icon</h5>\r\n<ni-breadcrumb [menu]=\"breadcrumbIcon\"></ni-breadcrumb>\r\n<br>\r\n<ni-breadcrumb [menu]=\"breadcrumbIcon\" [style]=\"'custom1'\"></ni-breadcrumb>\r\n<br>\r\n<ni-breadcrumb [menu]=\"breadcrumbIcon\" [style]=\"'custom2'\"></ni-breadcrumb>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/breadcrumb/breadcrumb.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/breadcrumb/breadcrumb.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageNiBreadcrumbsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'Home',
-        link: '#',
-        icon: ''
-    },
-    {
-        title: 'UI Elements',
-        link: '#',
-        icon: ''
-    },
-    {
-        title: 'Components',
-        link: '#',
-        icon: ''
-    },
-    {
-        title: 'Breadcrumb',
-        link: '',
-        icon: ''
-    }
-];
-var BREADCRUMBSICON = [
-    {
-        title: 'Home',
-        link: '#',
-        icon: 'fa fa-home'
-    },
-    {
-        title: 'UI Elements',
-        link: '#',
-        icon: 'fa fa-paper-plane'
-    },
-    {
-        title: 'Components',
-        link: '#',
-        icon: 'fa fa-shopping-bag'
-    },
-    {
-        title: 'Breadcrumb',
-        link: '',
-        icon: 'fa fa-diamond'
-    }
-];
-var PageNiBreadcrumbsComponent = (function () {
-    function PageNiBreadcrumbsComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Breadcrumbs';
-        this.breadcrumb = BREADCRUMBS;
-        this.breadcrumbIcon = BREADCRUMBSICON;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageNiBreadcrumbsComponent.prototype.ngOnInit = function () { };
-    PageNiBreadcrumbsComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-ni-breadcrumbs',
-            template: __webpack_require__("../../../../../src/app/pages/ni-components/breadcrumb/breadcrumb.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/ni-components/breadcrumb/breadcrumb.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageNiBreadcrumbsComponent);
-    return PageNiBreadcrumbsComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=breadcrumb.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/buttons/buttons.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n  <div class=\"col-sm-6\">\n    <ni-card title=\"Button size\">\n      <div class=\"buttons-list\">\n        <button ni-button size=\"large\">Large</button>\n        <button ni-button>Default</button>\n        <button ni-button size=\"small\">Small</button>\n      </div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-sm-6\">\n    <ni-card title=\"Button shape\">\n      <div class=\"buttons-list\">\n        <button ni-button>Default</button>\n        <button ni-button shape=\"0\">Square</button>\n        <button ni-button shape=\"17px\">Rounded</button>\n      </div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-sm-6\">\n    <ni-card title=\"Button width\">\n      <div class=\"buttons-list\">\n        <button ni-button>Auto</button>\n        <br>\n        <button ni-button block=\"true\">Block button</button>\n        <button ni-button [style.width.%]=\"50\">Width 50%</button>\n      </div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-sm-6\">\n    <ni-card title=\"Button align\">\n      <div class=\"buttons-list\">\n        <button ni-button block=\"true\" align=\"center\">Center</button>\n        <button ni-button block=\"true\" align=\"left\">Left</button>\n        <button ni-button block=\"true\" align=\"right\">Right</button>\n      </div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-sm-6\">\n    <ni-card title=\"Button tag\">\n      <div class=\"buttons-list\">\n        <button ni-button>Button</button>\n        <a href=\"#\" ni-button>Link</a>\n      </div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-sm-6\">\n    <ni-card title=\"Button style\">\n      <div class=\"buttons-list\">\n        <button ni-button>Default</button>\n        <button ni-button type=\"accent\">Accent</button>\n        <button ni-button type=\"success\">Success</button>\n        <button ni-button type=\"info\">Info</button>\n        <button ni-button type=\"warning\">Warning</button>\n        <button ni-button type=\"error\">Error</button>\n      </div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-sm-6\">\n    <ni-card title=\"Outline button\">\n      <div class=\"buttons-list\">\n        <button ni-button outline=\"true\">Default</button>\n        <button ni-button type=\"accent\" outline=\"true\" lineStyle=\"dashed\">Accent</button>\n        <button ni-button type=\"success\" outline=\"true\">Success</button>\n        <button ni-button type=\"info\" outline=\"true\" shape=\"17px\">Info</button>\n        <button ni-button type=\"warning\" outline=\"true\" lineStyle=\"dotted\">Warning</button>\n        <button ni-button type=\"error\" outline=\"true\" shape=\"3px\">Error</button>\n      </div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-sm-6\">\n    <ni-card title=\"Button with custom color / background\">\n      <div class=\"buttons-list\">\n        <button ni-button [color]=\"'#fbc2eb'\">Simple color</button>\n        <button ni-button [color]=\"['#ea8080', '#fff']\">Hovered color</button>\n        <button ni-button [bg]=\"'#ff8a65'\">Simple bg</button>\n        <button ni-button [bg]=\"['#a972cb', '#cb72aa']\">Hovered bg</button>\n        <button ni-button [color]=\"['#7ebbb6', '#fff']\" [bg]=\"'#7ebbb6'\" outline=\"true\">Outline color</button>\n      </div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-sm-6\">\n    <ni-card title=\"Gradient button\">\n      <div class=\"buttons-list\">\n        <button ni-button [gradient]=\"['#f6d365', '#fda085']\">Button</button>\n        <button ni-button [gradient]=\"['#c780b3', '#50408e']\">Button</button>\n        <button ni-button [gradient]=\"['#84fab0', '#8fd3f4']\">Button</button>\n        <button ni-button [gradient]=\"['#a1c4fd', '#c2e9fb']\">Button</button>\n        <button ni-button [gradient]=\"['#ffecd2', '#fcb69f']\">Button</button>\n      </div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-sm-6\">\n    <ni-card title=\"Disabled button\">\n      <div class=\"buttons-list\">\n        <button ni-button disabled=\"true\">Disabled</button>\n        <button ni-button disabled=\"true\" [gradient]=\"['#c780b3', '#50408e']\">Disabled</button>\n        <button ni-button disabled=\"true\" type=\"accent\">Disabled</button>\n        <button ni-button disabled=\"true\" type=\"warning\" outline=\"true\">Disabled</button>\n        <button ni-button disabled=\"true\" type=\"info\" outline=\"true\" lineStyle=\"dotted\" shape=\"17px\">Disabled</button>\n      </div>\n    </ni-card>\n  </div>\n\n  <div class=\"col-sm-6\">\n    <ni-card title=\"Icon button\" class=\"mb-0\">\n      <div class=\"buttons-list\">\n        <button ni-button beforeIcon=\"sli-bell\">Before</button>\n        <button ni-button afterIcon=\"fa fa-save\" [gradient]=\"['#cce451', '#4b650d']\">After</button>\n        <button ni-button afterIcon=\"sli-printer\" type=\"success\" outline=\"true\"></button>\n        <button ni-button afterIcon=\"fa fa-shopping-basket\" [bg]=\"['#f0f4c3', '#aab71c']\" [color]=\"'#000'\">Add</button>\n        <button ni-button beforeIcon=\"fa fa-dropbox\" type=\"info\" outline=\"true\" lineStyle=\"dashed\">Dropbox</button>\n        <button ni-button afterIcon=\"sli-trash\" iconAnimation=\"true\" type=\"error\">Remove</button>\n      </div>\n    </ni-card>\n  </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/buttons/buttons.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".buttons-list {\n  -webkit-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  margin: -5px; }\n  .buttons-list .ni-btn {\n    margin: 5px; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/buttons/buttons.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageNiButtonsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var PageNiButtonsComponent = (function () {
-    function PageNiButtonsComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Buttons';
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageNiButtonsComponent.prototype.ngOnInit = function () { };
-    PageNiButtonsComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-ni-buttons',
-            template: __webpack_require__("../../../../../src/app/pages/ni-components/buttons/buttons.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/ni-components/buttons/buttons.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageNiButtonsComponent);
-    return PageNiButtonsComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=buttons.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/card/card.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<h5 class=\"mt-0\">Simple cards</h5>\r\n<div class=\"row\">\r\n  <div class=\"col-md-6\">\r\n    <ni-card [title]=\"'Simple card'\">\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente. Ad architecto at aut\r\n        et ex facilis fuga, laboriosam, magnam modi obcaecati officia officiis, omnis praesentium quam quas reiciendis\r\n        rerum ullam velit veritatis vitae.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6\">\r\n    <ni-card>\r\n      <h5 class=\"mt-0\">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente. Ad architecto at aut\r\n        et ex facilis fuga, laboriosam, magnam modi obcaecati officia officiis, omnis praesentium quam quas reiciendis\r\n        rerum ullam velit veritatis vitae.</p>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<h5>Colored cards</h5>\r\n<div class=\"row\">\r\n  <div class=\"col-md-6\">\r\n    <ni-card>\r\n      <p><strong>Standard color</strong>, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6\">\r\n    <ni-card [bgColor]=\"'success'\">\r\n      <p><strong>Success color</strong>, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6\">\r\n    <ni-card [bgColor]=\"'info'\">\r\n      <p><strong>Info color</strong>, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6\">\r\n    <ni-card [bgColor]=\"'warning'\">\r\n      <p><strong>Warning color</strong>, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6\">\r\n    <ni-card [bgColor]=\"'danger'\">\r\n      <p><strong>Danger color</strong>, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6\">\r\n    <ni-card [customBgColor]=\"'#9b479f'\" [customColor]=\"'#ccc'\">\r\n      <p><strong>Custom color</strong>, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente.</p>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<h5>Outline cards</h5>\r\n<div class=\"row\">\r\n  <div class=\"col-md-6\">\r\n    <ni-card [outline]=\"true\">\r\n      <p><strong>Standard color</strong>, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6\">\r\n    <ni-card [bgColor]=\"'success'\" [color]=\"'success'\" [outline]=\"true\">\r\n      <p><strong>Success color</strong>, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6\">\r\n    <ni-card [bgColor]=\"'info'\" [color]=\"'info'\" [outline]=\"true\">\r\n      <p><strong>Info color</strong>, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6\">\r\n    <ni-card [bgColor]=\"'warning'\" [color]=\"'warning'\" [outline]=\"true\">\r\n      <p><strong>Warning color</strong>, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6\">\r\n    <ni-card [bgColor]=\"'danger'\" [color]=\"'danger'\" [outline]=\"true\">\r\n      <p><strong>Danger color</strong>, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6\">\r\n    <ni-card [customBgColor]=\"'#9b479f'\" [customColor]=\"'#9b479f'\" [outline]=\"true\">\r\n      <p><strong>Custom color</strong>, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente.</p>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<h5>Image background cards</h5>\r\n<div class=\"row\">\r\n  <div class=\"col-md-6\">\r\n    <ni-card [customBgColor]=\"'rgba(0,128,0,0.7)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-2.jpg'\">\r\n      <p><strong>Image background</strong>, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente.</p>\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci assumenda at aut autem cupiditate\r\n        dolorum ducimus eaque earum eveniet facere magni neque numquam odit, optio quas quod vel voluptatem?</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6\">\r\n    <ni-card [customBgColor]=\"'rgba(220,20,60,0.6)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-3.jpg'\">\r\n      <p>Consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente.</p>\r\n      <ul>\r\n        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi!</li>\r\n        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus assumenda illum quae.</li>\r\n        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>\r\n      </ul>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<h5>Align cards</h5>\r\n<div class=\"row\">\r\n  <div class=\"col-lg-4\">\r\n    <ni-card [align]=\"'left'\" class=\"mb-lg-0\">\r\n      <p><strong>Standard color</strong>, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-lg-4\">\r\n    <ni-card [bgColor]=\"'success'\" [align]=\"'center'\" class=\"mb-lg-0\">\r\n      <p><strong>Success color</strong>, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-lg-4\">\r\n    <ni-card [bgColor]=\"'info'\" [align]=\"'right'\" class=\"mb-0\">\r\n      <p><strong>Info color</strong>, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente.</p>\r\n    </ni-card>\r\n  </div>\r\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/card/card.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/card/card.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageNiCardsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var PageNiCardsComponent = (function () {
-    function PageNiCardsComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Cards';
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageNiCardsComponent.prototype.ngOnInit = function () { };
-    PageNiCardsComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-ni-cards',
-            template: __webpack_require__("../../../../../src/app/pages/ni-components/card/card.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/ni-components/card/card.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageNiCardsComponent);
-    return PageNiCardsComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=card.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/chat/chat.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n  <div class=\"col-md-6 mb-4 mb-md-0\">\n    <ni-chat [activeUser]=\"activeUser\" [messages]=\"messages\"></ni-chat>\n  </div>\n  <div class=\"col-md-6\">\n    <ni-chat [activeUser]=\"activeUser2\" [messages]=\"messages2\" [style.height.px]=\"600\"></ni-chat>\n  </div>\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/chat/chat.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/chat/chat.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageNiChatComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var PageNiChatComponent = (function () {
-    function PageNiChatComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Chat';
-        this.activeUser = {
-            name: 'Dennis',
-            lastSeen: 'online',
-            avatar: ''
-        };
-        this.activeUser2 = {
-            name: 'Amanda Li',
-            lastSeen: 'last seen 10 minutes ago',
-            avatar: 'assets/content/avatar-4.jpg'
-        };
-        this.messages = [
-            {
-                'date': '7 : 21',
-                'content': "Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.",
-                'my': false
-            },
-            {
-                'date': '7 : 25',
-                'content': "Aenean lacinia bibendum nulla sed consectetur.",
-                'my': true
-            },
-            {
-                'date': '7 : 29',
-                'content': "Aenean lacinia bibendum nulla.",
-                'my': false
-            },
-            {
-                'date': '8 : 15',
-                'content': "Lorem ipsum dolor sit.",
-                'my': false
-            }
-        ];
-        this.messages2 = [
-            {
-                'date': '8 hours ago',
-                'content': "Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.",
-                'my': false
-            },
-            {
-                'date': '7 hours ago',
-                'content': "Aenean lacinia bibendum nulla sed consectetur.",
-                'my': true
-            },
-            {
-                'date': '2 hours ago',
-                'content': "Contrary to popular belief,",
-                'my': false
-            },
-            {
-                'date': '15 minutes ago',
-                'content': "Lorem ipsum dolor sit.",
-                'my': true
-            },
-            {
-                'date': '14 minutes ago',
-                'content': "Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.",
-                'my': false
-            },
-            {
-                'date': '12 minutes ago',
-                'content': "Aenean lacinia bibendum nulla sed consectetur.",
-                'my': true
-            },
-        ];
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageNiChatComponent.prototype.ngOnInit = function () { };
-    PageNiChatComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-chat',
-            template: __webpack_require__("../../../../../src/app/pages/ni-components/chat/chat.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/ni-components/chat/chat.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageNiChatComponent);
-    return PageNiChatComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=chat.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/file/file.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-card [title]=\"'Files Types'\">\r\n  <ni-file [title]=\"'file-name'\"></ni-file>\r\n  <ni-file [type]=\"'doc'\" [title]=\"'file-name'\"></ni-file>\r\n  <ni-file [type]=\"'xlx'\" [title]=\"'file-name'\"></ni-file>\r\n  <ni-file [type]=\"'pdf'\" [title]=\"'file-name'\"></ni-file>\r\n  <ni-file [type]=\"'zip'\" [title]=\"'file-name'\"></ni-file>\r\n  <ni-file [type]=\"'mp3'\" [title]=\"'file-name'\"></ni-file>\r\n  <ni-file [type]=\"'mp4'\" [title]=\"'file-name'\"></ni-file>\r\n  <ni-file [type]=\"'jpg'\" [title]=\"'file-name'\" [image]=\"'assets/content/file-1.jpg'\"></ni-file>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Files Size'\">\r\n  <p><strong>Small</strong></p>\r\n  <p>\r\n    <ni-file [title]=\"'file-name'\" [size]=\"'small'\"></ni-file>\r\n    <ni-file [type]=\"'doc'\" [title]=\"'file-name'\" [size]=\"'small'\"></ni-file>\r\n    <ni-file [type]=\"'xlx'\" [title]=\"'file-name'\" [size]=\"'small'\"></ni-file>\r\n    <ni-file [type]=\"'pdf'\" [title]=\"'file-name'\" [size]=\"'small'\"></ni-file>\r\n    <ni-file [type]=\"'zip'\" [title]=\"'file-name'\" [size]=\"'small'\"></ni-file>\r\n    <ni-file [type]=\"'mp3'\" [title]=\"'file-name'\" [size]=\"'small'\"></ni-file>\r\n    <ni-file [type]=\"'mp4'\" [title]=\"'file-name'\" [size]=\"'small'\"></ni-file>\r\n    <ni-file [type]=\"'jpg'\" [title]=\"'file-name'\" [image]=\"'assets/content/file-2.jpg'\" [size]=\"'small'\"></ni-file>\r\n  </p>\r\n  <p><strong>Normal</strong></p>\r\n  <p>\r\n    <ni-file [title]=\"'file-name'\"></ni-file>\r\n    <ni-file [type]=\"'doc'\" [title]=\"'file-name'\"></ni-file>\r\n    <ni-file [type]=\"'xlx'\" [title]=\"'file-name'\"></ni-file>\r\n    <ni-file [type]=\"'pdf'\" [title]=\"'file-name'\"></ni-file>\r\n    <ni-file [type]=\"'zip'\" [title]=\"'file-name'\"></ni-file>\r\n    <ni-file [type]=\"'mp3'\" [title]=\"'file-name'\"></ni-file>\r\n    <ni-file [type]=\"'mp4'\" [title]=\"'file-name'\"></ni-file>\r\n    <ni-file [type]=\"'jpg'\" [title]=\"'file-name'\" [image]=\"'assets/content/file-3.jpg'\"></ni-file>\r\n  </p>\r\n  <p><strong>Large</strong></p>\r\n  <p>\r\n    <ni-file [title]=\"'file-name'\" [size]=\"'large'\"></ni-file>\r\n    <ni-file [type]=\"'doc'\" [title]=\"'file-name'\" [size]=\"'large'\"></ni-file>\r\n    <ni-file [type]=\"'xlx'\" [title]=\"'file-name'\" [size]=\"'large'\"></ni-file>\r\n    <ni-file [type]=\"'pdf'\" [title]=\"'file-name'\" [size]=\"'large'\"></ni-file>\r\n    <ni-file [type]=\"'zip'\" [title]=\"'file-name'\" [size]=\"'large'\"></ni-file>\r\n    <ni-file [type]=\"'mp3'\" [title]=\"'file-name'\" [size]=\"'large'\"></ni-file>\r\n    <ni-file [type]=\"'mp4'\" [title]=\"'file-name'\" [size]=\"'large'\"></ni-file>\r\n    <ni-file [type]=\"'jpg'\" [title]=\"'file-name'\" [image]=\"'assets/content/file.jpg'\" [size]=\"'large'\"></ni-file>\r\n  </p>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Files with delete button'\">\r\n  <ni-file [title]=\"'file-name'\" [delete]=\"true\"></ni-file>\r\n  <ni-file [type]=\"'doc'\" [title]=\"'file-name'\" [delete]=\"true\"></ni-file>\r\n  <ni-file [type]=\"'xlx'\" [title]=\"'file-name'\" [delete]=\"true\"></ni-file>\r\n  <ni-file [type]=\"'pdf'\" [title]=\"'file-name'\" [delete]=\"true\"></ni-file>\r\n  <ni-file [type]=\"'zip'\" [title]=\"'file-name'\" [delete]=\"true\"></ni-file>\r\n  <ni-file [type]=\"'mp3'\" [title]=\"'file-name'\" [delete]=\"true\"></ni-file>\r\n  <ni-file [type]=\"'mp4'\" [title]=\"'file-name'\" [delete]=\"true\"></ni-file>\r\n  <ni-file [type]=\"'jpg'\" [title]=\"'file-name'\" [image]=\"'assets/content/file-4.jpg'\" [delete]=\"true\"></ni-file>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Files with spinners'\" class=\"mb-0\">\r\n  <ni-file [title]=\"'file-name'\" [spinner]=\"true\"></ni-file>\r\n  <ni-file [type]=\"'doc'\" [title]=\"'file-name'\" [spinner]=\"true\"></ni-file>\r\n  <ni-file [type]=\"'xlx'\" [title]=\"'file-name'\" [spinner]=\"true\"></ni-file>\r\n  <ni-file [type]=\"'pdf'\" [title]=\"'file-name'\" [spinner]=\"true\"></ni-file>\r\n  <ni-file [type]=\"'zip'\" [title]=\"'file-name'\" [spinner]=\"true\"></ni-file>\r\n  <ni-file [type]=\"'mp3'\" [title]=\"'file-name'\" [spinner]=\"true\"></ni-file>\r\n  <ni-file [type]=\"'mp4'\" [title]=\"'file-name'\" [spinner]=\"true\"></ni-file>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/file/file.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/file/file.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageNiFilesComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var PageNiFilesComponent = (function () {
-    function PageNiFilesComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Files';
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageNiFilesComponent.prototype.ngOnInit = function () { };
-    PageNiFilesComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-ni-files',
-            template: __webpack_require__("../../../../../src/app/pages/ni-components/file/file.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/ni-components/file/file.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageNiFilesComponent);
-    return PageNiFilesComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=file.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/h-timeline/h-timeline.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-card [title]=\"'Left align timeline'\" [customBgColor]=\"'transparent'\">\n  <ni-h-timeline [data]=\"timelineData\"></ni-h-timeline>\n</ni-card>\n\n<ni-card [title]=\"'Right align timeline'\" [customBgColor]=\"'transparent'\">\n  <ni-h-timeline [align]=\"'right'\" [data]=\"timelineData\"></ni-h-timeline>\n</ni-card>\n\n<ni-card [title]=\"'Center align timeline'\" [customBgColor]=\"'transparent'\">\n  <ni-h-timeline [align]=\"'center'\" [data]=\"timelineData\"></ni-h-timeline>\n</ni-card>\n\n<ni-card [title]=\"'Both sides timeline'\" [customBgColor]=\"'transparent'\">\n  <ni-h-timeline [align]=\"'between'\" [data]=\"timelineData\"></ni-h-timeline>\n</ni-card>\n\n<ni-card [title]=\"'Timeline without time'\" [customBgColor]=\"'transparent'\">\n  <ni-h-timeline [showDate]=\"false\" [align]=\"'between'\" [data]=\"timelineData\"></ni-h-timeline>\n</ni-card>\n\n<ni-card [title]=\"'Timeline with years'\" [customBgColor]=\"'transparent'\" class=\"mb-0\">\n  <ni-h-timeline [showYears]=\"true\" [align]=\"'between'\" [data]=\"timelineData\"></ni-h-timeline>\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/h-timeline/h-timeline.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/ni-components/h-timeline/h-timeline.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageNiHTimelineComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var timelineData = [
-    {
-        'label': '2017',
-        'timeline': [
-            {
-                'date': '2 hours ago',
-                'content': "Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.",
-                'pointColor': '#ea8080'
-            },
-            {
-                'date': 'July 10, 2017',
-                'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate.",
-                'pointColor': '#B2DFDB'
-            }
-        ]
-    },
-    {
-        'label': '2016',
-        'timeline': [
-            {
-                'date': 'December 27, 2016',
-                'content': "Lorem ipsum dolor sit.",
-                'pointColor': '#FFC6E6'
-            },
-            {
-                'date': 'December 20, 2016',
-                'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.",
-                'pointColor': '#FFA78D'
-            }
-        ]
-    }
-];
-var PageNiHTimelineComponent = (function () {
-    function PageNiHTimelineComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Horizontal timeline';
-        this.timelineData = timelineData;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageNiHTimelineComponent.prototype.ngOnInit = function () { };
-    PageNiHTimelineComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-h-timeline',
-            template: __webpack_require__("../../../../../src/app/pages/ni-components/h-timeline/h-timeline.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/ni-components/h-timeline/h-timeline.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageNiHTimelineComponent);
-    return PageNiHTimelineComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=h-timeline.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/not-found/not-found.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<h1>Not found!</h1>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/not-found/not-found.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageNotFoundComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var PageNotFoundComponent = (function () {
-    function PageNotFoundComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Not found!';
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageNotFoundComponent.prototype.ngOnInit = function () { };
-    PageNotFoundComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-not-found',
-            template: __webpack_require__("../../../../../src/app/pages/not-found/not-found.component.html")
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageNotFoundComponent);
-    return PageNotFoundComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=not-found.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/pages-service/about-us/about-us.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'danger'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Orders</div>\r\n      <div class=\"count\">2,145</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+17%</ni-badge> <small>from previous period</small>\r\n      <md-icon>shopping_basket</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'warning'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Revenue</div>\r\n      <div class=\"count\">$ 50,24</div>\r\n      <small>11750</small>\r\n      <md-icon>equalizer</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'info'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Products</div>\r\n      <div class=\"count\">2,543</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+210</ni-badge>\r\n      <md-icon>monetization_on</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'success'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Sold</div>\r\n      <div class=\"count\">1,005</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+24%</ni-badge>\r\n      <md-icon>donut_large</md-icon>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6\">\r\n    <ni-card [title]=\"'About admin'\">\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente. Ad architecto at aut\r\n        et ex facilis fuga, laboriosam, magnam modi obcaecati officia officiis, omnis praesentium quam quas reiciendis\r\n        rerum ullam velit veritatis vitae.</p>\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-md-6\">\r\n          <p class=\"mb-1\"><strong>Wordpress</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"90\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Magento</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"80\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Opencart</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"60\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Drupal</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"30\"></md-progress-bar>\r\n          <div class=\"clearfix\"></div>\r\n        </div>\r\n\r\n        <div class=\"col-md-6\">\r\n          <p class=\"mb-1\"><strong>Angular</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"98\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>React</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"85\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Vue.js</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"40\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Backbone.js</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"38\"></md-progress-bar>\r\n          <div class=\"clearfix\"></div>\r\n        </div>\r\n      </div>\r\n\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam cumque dicta earum, iure maiores neque\r\n        nesciunt officia quisquam ullam.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6\">\r\n    <ni-card title=\"Audience Overview\">\r\n      <canvas\r\n        baseChart\r\n        [datasets]=\"lineChartData\"\r\n        [labels]=\"lineChartLabels\"\r\n        [options]=\"lineChartOptions\"\r\n        [colors]=\"lineChartColors\"\r\n        [legend]=\"lineChartLegend\"\r\n        [chartType]=\"lineChartType\"></canvas>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"text-center\">\r\n  <h4>Meet the Team</h4>\r\n  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, eum.</p>\r\n  <div class=\"clearfix\"></div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [align]=\"'center'\" class=\"mb-xl-0\">\r\n      <img src=\"assets/content/person-4.jpg\" class=\"circle\" width=\"150\" height=\"150\" alt=\"\">\r\n      <h5>Mark Wahlberg</h5>\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto corporis culpa eaque earum eius\r\n        eligendi et eveniet ex fuga natus nulla quisquam quod repellat.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [align]=\"'center'\" class=\"mb-xl-0\">\r\n      <img src=\"assets/content/person-1.jpg\" class=\"circle\" width=\"150\" height=\"150\" alt=\"\">\r\n      <h5>Lindsay Lohan</h5>\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto corporis culpa eaque earum eius\r\n        eligendi et eveniet ex fuga natus nulla quisquam quod repellat.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [align]=\"'center'\" class=\"mb-md-0\">\r\n      <img src=\"assets/content/person-3.jpg\" class=\"circle\" width=\"150\" height=\"150\" alt=\"\">\r\n      <h5>Mary Jane</h5>\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto corporis culpa eaque earum eius\r\n        eligendi et eveniet ex fuga natus nulla quisquam quod repellat.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [align]=\"'center'\" class=\"mb-0\">\r\n      <img src=\"assets/content/person-5.jpg\" class=\"circle\" width=\"150\" height=\"150\" alt=\"\">\r\n      <h5>Tom Brady</h5>\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto corporis culpa eaque earum eius\r\n        eligendi et eveniet ex fuga natus nulla quisquam quod repellat.</p>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/pages-service/about-us/about-us.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/pages-service/about-us/about-us.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageAboutUsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'Pages',
-        link: '#'
-    },
-    {
-        title: 'Page service',
-        link: '#'
-    },
-    {
-        title: 'About Us',
-        link: ''
-    }
-];
-var PageAboutUsComponent = (function () {
-    function PageAboutUsComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'About Us';
-        this.breadcrumb = BREADCRUMBS;
-        // lineChart
-        this.lineChartData = [
-            {
-                data: [30, 42, 46, 51, 65, 73, 80],
-                label: 'Users',
-                borderWidth: 1,
-                pointRadius: 1
-            },
-            {
-                data: [42, 43, 52, 47, 65, 70, 79],
-                label: 'Pages',
-                borderWidth: 1,
-                pointRadius: 1
-            },
-            {
-                data: [51, 48, 45, 56, 61, 69, 67],
-                label: 'Visits',
-                borderWidth: 1,
-                pointRadius: 1
-            }
-        ];
-        this.lineChartLabels = [
-            'Mon.',
-            'Tue.',
-            'Wed.',
-            'Thu.',
-            'Fri.',
-            'Sat.',
-            'Sun.'
-        ];
-        this.lineChartOptions = {
-            responsiveAnimationDuration: 500,
-            responsive: true,
-            scales: {
-                xAxes: [{
-                        gridLines: {
-                            display: false
-                        }
-                    }],
-                yAxes: [{
-                        gridLines: {
-                            display: true
-                        },
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }],
-            }
-        };
-        this.lineChartColors = [
-            {
-                backgroundColor: 'rgba(93,173,224,0.2)',
-                borderColor: '#5dade0',
-                pointBackgroundColor: '#5dade0',
-                pointBorderColor: '#0e7cc5',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: '#000'
-            },
-            {
-                backgroundColor: 'rgba(255,140,0,0.2)',
-                borderColor: '#ff8c00',
-                pointBackgroundColor: '#ff8c00',
-                pointBorderColor: '#FF630B',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: '#000'
-            },
-            {
-                backgroundColor: 'rgba(220,20,60,0.2)',
-                borderColor: '#dc143c',
-                pointBackgroundColor: '#dc143c',
-                pointBorderColor: '#7E2303',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: '#000'
-            }
-        ];
-        this.lineChartLegend = true;
-        this.lineChartType = 'line';
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageAboutUsComponent.prototype.ngOnInit = function () { };
-    PageAboutUsComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-about-us',
-            template: __webpack_require__("../../../../../src/app/pages/pages-service/about-us/about-us.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/pages-service/about-us/about-us.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageAboutUsComponent);
-    return PageAboutUsComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=about-us.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/pages-service/faq/faq.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<div class=\"text-center\">\r\n  <h4>Some of your Questions:</h4>\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-3\"></div>\r\n    <div class=\"col-xl-6\">\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos labore minima odio possimus praesentium qui\r\n        quibusdam quis recusandae sequi voluptate. Iste nihil totam voluptatibus. Blanditiis, non vitae! Deleniti eum,\r\n        fugiat illum in incidunt labore, magni maxime necessitatibus nisi numquam officia, placeat quo suscipit tempora\r\n        temporibus ut veniam! Labore, omnis, suscipit?</p>\r\n      <div class=\"clearfix\"></div>\r\n    </div>\r\n    <div class=\"col-xl-3\"></div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6\">\r\n    <ni-card title=\"General\">\r\n      <squeezebox [multiple]=\"false\">\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cumque dolor exercitationem\r\n            incidunt quaerat, ullam!</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias atque dolores harum maiores\r\n            nam sint? Accusantium ducimus laboriosam natus.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet, aperiam aspernatur, autem\r\n            consequatur dignissimos, ipsum itaque numquam praesentium quaerat quis reprehenderit sint tempora veniam.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing elit?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi culpa error harum laborum,\r\n            nihil non quis rerum, soluta voluptate voluptatem?</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at aut consequuntur cumque,\r\n            esse exercitationem fugit numquam quam sed soluta, tempora ut voluptatum.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus autem doloremque eveniet\r\n            fuga iusto, nemo obcaecati quos sunt voluptatem. Provident, veritatis.</sb-item-body>\r\n        </sb-item>\r\n      </squeezebox>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6\">\r\n    <ni-card title=\"Marketplace\">\r\n      <squeezebox [multiple]=\"false\">\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cumque dolor exercitationem\r\n            incidunt quaerat, ullam!</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cumque dolor exercitationem\r\n            incidunt quaerat, ullam!</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias atque dolores harum maiores\r\n            nam sint? Accusantium ducimus laboriosam natus.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet, aperiam aspernatur, autem\r\n            consequatur dignissimos, ipsum itaque numquam praesentium quaerat quis reprehenderit sint tempora veniam.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing elit?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi culpa error harum laborum,\r\n            nihil non quis rerum, soluta voluptate voluptatem?</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at aut consequuntur cumque,\r\n            esse exercitationem fugit numquam quam sed soluta, tempora ut voluptatum.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus autem doloremque eveniet\r\n            fuga iusto, nemo obcaecati quos sunt voluptatem. Provident, veritatis.</sb-item-body>\r\n        </sb-item>\r\n      </squeezebox>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6\">\r\n    <ni-card title=\"Customization\" class=\"mb-lg-0\">\r\n      <squeezebox [multiple]=\"false\">\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias atque dolores harum maiores\r\n            nam sint? Accusantium ducimus laboriosam natus.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet, aperiam aspernatur, autem\r\n            consequatur dignissimos, ipsum itaque numquam praesentium quaerat quis reprehenderit sint tempora veniam.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing elit?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi culpa error harum laborum,\r\n            nihil non quis rerum, soluta voluptate voluptatem?</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at aut consequuntur cumque,\r\n            esse exercitationem fugit numquam quam sed soluta, tempora ut voluptatum.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus autem doloremque eveniet\r\n            fuga iusto, nemo obcaecati quos sunt voluptatem. Provident, veritatis.</sb-item-body>\r\n        </sb-item>\r\n      </squeezebox>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6\">\r\n    <ni-card title=\"Design\" class=\"mb-0\">\r\n      <squeezebox [multiple]=\"false\">\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias atque dolores harum maiores\r\n            nam sint? Accusantium ducimus laboriosam natus.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet, aperiam aspernatur, autem\r\n            consequatur dignissimos, ipsum itaque numquam praesentium quaerat quis reprehenderit sint tempora veniam.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing elit?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi culpa error harum laborum,\r\n            nihil non quis rerum, soluta voluptate voluptatem?</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at aut consequuntur cumque,\r\n            esse exercitationem fugit numquam quam sed soluta, tempora ut voluptatum.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus autem doloremque eveniet\r\n            fuga iusto, nemo obcaecati quos sunt voluptatem. Provident, veritatis.</sb-item-body>\r\n        </sb-item>\r\n      </squeezebox>\r\n    </ni-card>\r\n  </div>\r\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/pages-service/faq/faq.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/pages-service/faq/faq.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageFaqComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'Pages',
-        link: '#'
-    },
-    {
-        title: 'Page service',
-        link: '#'
-    },
-    {
-        title: 'FAQ',
-        link: ''
-    }
-];
-var PageFaqComponent = (function () {
-    function PageFaqComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'FAQ';
-        this.breadcrumb = BREADCRUMBS;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageFaqComponent.prototype.ngOnInit = function () { };
-    PageFaqComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-faq',
-            template: __webpack_require__("../../../../../src/app/pages/pages-service/faq/faq.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/pages-service/faq/faq.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageFaqComponent);
-    return PageFaqComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=faq.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/pages-service/invoice/invoice.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card [title]=\"'INVOICE No. 158450'\" class=\"mb-0\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-6 mb-4 mb-md-0\">\r\n      <p><strong>Hello, Stanley Jones</strong></p>\r\n      <p>Thanks a lot because you keep purchasing our products. Our company promises to provide high quality products\r\n        for you as well as outstanding customer service for every transaction.</p>\r\n    </div>\r\n    <div class=\"col-md-6 text-md-right\">\r\n      <p class=\"mb-2\"><strong>Order Date:</strong> <i>May 17, 2017</i></p>\r\n      <p class=\"mb-2\"><strong>Order Status:</strong> <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">Paid</ni-badge></p>\r\n      <p><strong>Order ID:</strong> #158450</p>\r\n    </div>\r\n  </div><!-- .row -->\r\n\r\n  <div class=\"row\">\r\n    <div class=\"col-md-6\">\r\n      <h5>Billing Address</h5>\r\n\r\n      <address class=\"line-h-24\">\r\n        Stanley Jones<br>\r\n        795 Folsom Ave, Suite 600<br>\r\n        San Francisco, CA 94107<br>\r\n        <abbr title=\"Phone\">P:</abbr> (123) 456-7890\r\n      </address>\r\n    </div>\r\n\r\n    <div class=\"col-md-6 text-md-right\">\r\n      <h5>Shipping Address</h5>\r\n\r\n      <address class=\"line-h-24\">\r\n        Stanley Jones<br>\r\n        795 Folsom Ave, Suite 600<br>\r\n        San Francisco, CA 94107<br>\r\n        <abbr title=\"Phone\">P:</abbr> (123) 456-7890\r\n      </address>\r\n    </div>\r\n  </div><!-- .row -->\r\n\r\n  <div class=\"table-responsive mb-4\">\r\n    <table class=\"table\">\r\n      <thead>\r\n      <tr class=\"text-nowrap\">\r\n        <th>#</th>\r\n        <th>Item</th>\r\n        <th>Quantity</th>\r\n        <th>Unit Cost</th>\r\n        <th class=\"text-right\">Total</th>\r\n      </tr>\r\n      </thead>\r\n      <tbody>\r\n      <tr>\r\n        <td>1</td>\r\n        <td>\r\n          <b>Laptop</b> <br>\r\n          Brand Model VGN-TXN27N/B\r\n          11.1\" Notebook PC\r\n        </td>\r\n        <td>1</td>\r\n        <td>$1799</td>\r\n        <td class=\"text-right\">$1799</td>\r\n      </tr>\r\n      <tr>\r\n        <td>2</td>\r\n        <td>\r\n          <b>Warranty</b> <br>\r\n          Two Year Extended Warranty -\r\n          Parts and Labor\r\n        </td>\r\n        <td>3</td>\r\n        <td>$499</td>\r\n        <td class=\"text-right\">$1497</td>\r\n      </tr>\r\n      <tr>\r\n        <td>3</td>\r\n        <td>\r\n          <b>LED</b> <br>\r\n          80cm (32) HD Ready LED TV\r\n        </td>\r\n        <td>2</td>\r\n        <td>$412</td>\r\n        <td class=\"text-right\">$824</td>\r\n      </tr>\r\n      </tbody>\r\n    </table>\r\n  </div><!-- .table-responsive -->\r\n\r\n  <div class=\"mb-5 text-center text-md-right\">\r\n    <p class=\"mb-2\"><strong>Sub-total:</strong> $4120.00</p>\r\n    <p class=\"mb-0\"><strong>VAT (12.5):</strong> $515</p>\r\n    <p class=\"h4 mt-2\">$4635.00 USD</p>\r\n    <div class=\"hidden-print text-center text-md-right\">\r\n      <button md-raised-button color=\"primary\">Make a Payment</button>\r\n      <button md-raised-button><i class=\"fa fa-print mr-2\"></i> Print</button>\r\n    </div>\r\n  </div>\r\n\r\n  <p>\r\n    <small>PLEASE NOTE: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur consequuntur eveniet ipsam iure labore\r\n      nemo pariatur perferendis quaerat quidem similique. Alias earum facere magni nam odio rem suscipit voluptatibus!\r\n      Alias, consequatur distinctio dolore ducimus eaque est eveniet labore minus nam officiis placeat qui, quod quos\r\n      repellat repellendus suscipit velit, voluptatem. Alias earum facere magni nam odio rem suscipit voluptatibus!\r\n      Alias, consequatur distinctio dolore ducimus eaque est eveniet labore minus nam officiis placeat qui, quod quos\r\n      repellat repellendus suscipit velit, voluptatem.</small>\r\n  </p>\r\n  <p>\r\n    <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur consequuntur eveniet ipsam iure labore\r\n      nemo pariatur perferendis quaerat quidem similique. Alias earum facere magni nam odio rem suscipit voluptatibus!\r\n      Alias, consequatur distinctio dolore ducimus eaque est eveniet labore minus nam officiis placeat qui, quod quos\r\n      repellat repellendus suscipit velit, voluptatem.</small>\r\n  </p>\r\n  <hr>\r\n  <div class=\"row text-center text-md-left \">\r\n    <div class=\"col-md-6 mb-3 mb-md-0 pt-2 pb-2\">\r\n      <img src=\"../../../../assets/img/logo-compress.png\" alt=\"\" width=\"38\" height=\"33\">\r\n    </div>\r\n    <div class=\"col-md-6 align-self-center text-md-right pt-2 pb-2\">\r\n      <p class=\"mb-2 small\">Phone: +1 888-555-0000</p>\r\n      <p class=\"small\"><a href=\"mailto:support@mail.com\">support@mail.com</a></p>\r\n    </div>\r\n  </div>\r\n</ni-card>\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/pages-service/invoice/invoice.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/pages-service/invoice/invoice.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageInvoiceComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'Pages',
-        link: '#'
-    },
-    {
-        title: 'Page service',
-        link: '#'
-    },
-    {
-        title: 'Invoice',
-        link: ''
-    }
-];
-var PageInvoiceComponent = (function () {
-    function PageInvoiceComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Invoice';
-        this.breadcrumb = BREADCRUMBS;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageInvoiceComponent.prototype.ngOnInit = function () { };
-    PageInvoiceComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-invoice',
-            template: __webpack_require__("../../../../../src/app/pages/pages-service/invoice/invoice.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/pages-service/invoice/invoice.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageInvoiceComponent);
-    return PageInvoiceComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=invoice.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/pages-service/timeline/timeline.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-h-timeline [showYears]=\"true\" [showDate]=\"true\" [align]=\"'between'\" [data]=\"timelineData\"></ni-h-timeline>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/pages-service/timeline/timeline.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/pages-service/timeline/timeline.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageTimelineComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'Pages',
-        link: '#'
-    },
-    {
-        title: 'Page service',
-        link: '#'
-    },
-    {
-        title: 'Timeline',
-        link: ''
-    }
-];
-var timelineData = [
-    {
-        'label': '2017',
-        'timeline': [
-            {
-                'date': '2 hours ago',
-                'content': "Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.",
-                'pointColor': '#ea8080'
-            },
-            {
-                'date': '5 hours ago',
-                'content': "Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.\n         Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.",
-                'pointColor': '#915035'
-            },
-            {
-                'date': '8 hours ago',
-                'content': "Lorem ipsum dolor sit amet.",
-                'pointColor': '#B925FF'
-            },
-            {
-                'date': '2 days ago',
-                'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-                'pointColor': '#C5CAE9'
-            },
-            {
-                'date': '3 days ago',
-                'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis doloremque earum itaque laborum, nobis non ratione rerum similique vel?",
-                'pointColor': '#FF8A65'
-            },
-            {
-                'date': '5 days ago',
-                'content': "Lorem ipsum dolor sit.",
-                'pointColor': '#B3E5FC'
-            },
-            {
-                'date': 'July 10, 2017',
-                'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate.",
-                'pointColor': '#B2DFDB'
-            },
-            {
-                'date': 'July 7, 2017',
-                'content': "Lorem ipsum dolor sit amet, consectetur.",
-                'pointColor': '#3E5EFF'
-            }
-        ]
-    },
-    {
-        'label': '2016',
-        'timeline': [
-            {
-                'date': 'December 27, 2016',
-                'content': "Lorem ipsum dolor sit.",
-                'pointColor': '#FFC6E6'
-            },
-            {
-                'date': 'December 20, 2016',
-                'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.",
-                'pointColor': '#FFA78D'
-            },
-            {
-                'date': 'December 17, 2016',
-                'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate.",
-                'pointColor': '#F0F4C3'
-            },
-            {
-                'date': 'December 12, 2016',
-                'content': "Lorem ipsum dolor sit amet, consectetur.",
-                'pointColor': '#FFC6F1'
-            },
-            {
-                'date': 'December 2, 2016',
-                'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.",
-                'pointColor': '#488034'
-            },
-        ]
-    }
-];
-var PageTimelineComponent = (function () {
-    function PageTimelineComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Timeline';
-        this.breadcrumb = BREADCRUMBS;
-        this.timelineData = timelineData;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageTimelineComponent.prototype.ngOnInit = function () { };
-    PageTimelineComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-timeline',
-            template: __webpack_require__("../../../../../src/app/pages/pages-service/timeline/timeline.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/pages-service/timeline/timeline.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageTimelineComponent);
-    return PageTimelineComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=timeline.component.js.map
+//# sourceMappingURL=signup.component.js.map
 
 /***/ }),
 
@@ -8850,115 +4327,26 @@ var PageTimelineComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_squeezebox__ = __webpack_require__("../../../../squeezebox/index.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__amcharts_amcharts3_angular__ = __webpack_require__("../../../../@amcharts/amcharts3-angular/es2015/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_ng2_translate__ = __webpack_require__("../../../../ng2-translate/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__dashboards_dashboard_1_dashboard_component__ = __webpack_require__("../../../../../src/app/pages/dashboards/dashboard-1/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__dashboards_dashboard_2_dashboard_2_component__ = __webpack_require__("../../../../../src/app/pages/dashboards/dashboard-2/dashboard-2.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__dashboards_dashboard_3_dashboard_3_component__ = __webpack_require__("../../../../../src/app/pages/dashboards/dashboard-3/dashboard-3.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__material_components_button_button_component__ = __webpack_require__("../../../../../src/app/pages/material-components/button/button.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__material_components_card_card_component__ = __webpack_require__("../../../../../src/app/pages/material-components/card/card.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__material_components_checkbox_checkbox_component__ = __webpack_require__("../../../../../src/app/pages/material-components/checkbox/checkbox.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__material_components_chips_chips_component__ = __webpack_require__("../../../../../src/app/pages/material-components/chips/chips.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__material_components_dialog_dialog_component__ = __webpack_require__("../../../../../src/app/pages/material-components/dialog/dialog.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__material_components_icon_icon_component__ = __webpack_require__("../../../../../src/app/pages/material-components/icon/icon.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__material_components_input_input_component__ = __webpack_require__("../../../../../src/app/pages/material-components/input/input.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__material_components_list_list_component__ = __webpack_require__("../../../../../src/app/pages/material-components/list/list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__material_components_menu_menu_component__ = __webpack_require__("../../../../../src/app/pages/material-components/menu/menu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__material_components_progress_bar_progress_bar_component__ = __webpack_require__("../../../../../src/app/pages/material-components/progress-bar/progress-bar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__material_components_progress_spinner_progress_spinner_component__ = __webpack_require__("../../../../../src/app/pages/material-components/progress-spinner/progress-spinner.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__material_components_radio_button_radio_button_component__ = __webpack_require__("../../../../../src/app/pages/material-components/radio-button/radio-button.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__material_components_select_select_component__ = __webpack_require__("../../../../../src/app/pages/material-components/select/select.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__material_components_slider_slider_component__ = __webpack_require__("../../../../../src/app/pages/material-components/slider/slider.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__material_components_slide_toggle_slide_toggle_component__ = __webpack_require__("../../../../../src/app/pages/material-components/slide-toggle/slide-toggle.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__material_components_snackbar_snackbar_component__ = __webpack_require__("../../../../../src/app/pages/material-components/snackbar/snackbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__material_components_tabs_tabs_component__ = __webpack_require__("../../../../../src/app/pages/material-components/tabs/tabs.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__material_components_toolbar_toolbar_component__ = __webpack_require__("../../../../../src/app/pages/material-components/toolbar/toolbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__material_components_tooltip_tooltip_component__ = __webpack_require__("../../../../../src/app/pages/material-components/tooltip/tooltip.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__ni_components_file_file_component__ = __webpack_require__("../../../../../src/app/pages/ni-components/file/file.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__ni_components_card_card_component__ = __webpack_require__("../../../../../src/app/pages/ni-components/card/card.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__ni_components_chat_chat_component__ = __webpack_require__("../../../../../src/app/pages/ni-components/chat/chat.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__ni_components_alert_alert_component__ = __webpack_require__("../../../../../src/app/pages/ni-components/alert/alert.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__ni_components_badge_badge_component__ = __webpack_require__("../../../../../src/app/pages/ni-components/badge/badge.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__ni_components_breadcrumb_breadcrumb_component__ = __webpack_require__("../../../../../src/app/pages/ni-components/breadcrumb/breadcrumb.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__ni_components_h_timeline_h_timeline_component__ = __webpack_require__("../../../../../src/app/pages/ni-components/h-timeline/h-timeline.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__typography_typography_component__ = __webpack_require__("../../../../../src/app/pages/typography/typography.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__not_found_not_found_component__ = __webpack_require__("../../../../../src/app/pages/not-found/not-found.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__pages_service_about_us_about_us_component__ = __webpack_require__("../../../../../src/app/pages/pages-service/about-us/about-us.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__pages_service_faq_faq_component__ = __webpack_require__("../../../../../src/app/pages/pages-service/faq/faq.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__pages_service_timeline_timeline_component__ = __webpack_require__("../../../../../src/app/pages/pages-service/timeline/timeline.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__pages_service_invoice_invoice_component__ = __webpack_require__("../../../../../src/app/pages/pages-service/invoice/invoice.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__charts_ng2_charts_ng2_charts_component__ = __webpack_require__("../../../../../src/app/pages/charts/ng2-charts/ng2-charts.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__charts_ngx_charts_ngx_charts_component__ = __webpack_require__("../../../../../src/app/pages/charts/ngx-charts/ngx-charts.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__charts_amcharts_amcharts_component__ = __webpack_require__("../../../../../src/app/pages/charts/amcharts/amcharts.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__calendar_calendar_component__ = __webpack_require__("../../../../../src/app/pages/calendar/calendar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__tables_simple_table_simple_table_component__ = __webpack_require__("../../../../../src/app/pages/tables/simple-table/simple-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__tables_bootstrap_tables_bootstrap_tables_component__ = __webpack_require__("../../../../../src/app/pages/tables/bootstrap-tables/bootstrap-tables.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__tables_editing_table_editing_table_component__ = __webpack_require__("../../../../../src/app/pages/tables/editing-table/editing-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__tables_filtering_table_filtering_table_component__ = __webpack_require__("../../../../../src/app/pages/tables/filtering-table/filtering-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__tables_pagination_table_pagination_table_component__ = __webpack_require__("../../../../../src/app/pages/tables/pagination-table/pagination-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__forms_form_elements_form_elements_component__ = __webpack_require__("../../../../../src/app/pages/forms/form-elements/form-elements.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__forms_form_layout_form_layout_component__ = __webpack_require__("../../../../../src/app/pages/forms/form-layout/form-layout.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__forms_form_validation_form_validation_component__ = __webpack_require__("../../../../../src/app/pages/forms/form-validation/form-validation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__maps_google_map_google_map_component__ = __webpack_require__("../../../../../src/app/pages/maps/google-map/google-map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__maps_leaflet_map_leaflet_map_component__ = __webpack_require__("../../../../../src/app/pages/maps/leaflet-map/leaflet-map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__widgets_widgets_component__ = __webpack_require__("../../../../../src/app/pages/widgets/widgets.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__layouts_layouts_component__ = __webpack_require__("../../../../../src/app/pages/layouts/layouts.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__extra_pages_sign_in_1_sign_in_1_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/sign-in-1/sign-in-1.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__extra_pages_sign_up_1_sign_up_1_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/sign-up-1/sign-up-1.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_67__extra_pages_forgot_forgot_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/forgot/forgot.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_68__extra_pages_confirm_confirm_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/confirm/confirm.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_69__extra_pages_page_404_page_404_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-404/page-404.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_70__extra_pages_page_500_page_500_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-500/page-500.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_71__ni_components_buttons_buttons_component__ = __webpack_require__("../../../../../src/app/pages/ni-components/buttons/buttons.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__extra_pages_signin_signin_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/signin/signin.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__extra_pages_signup_signup_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/signup/signup.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__extra_pages_forgot_forgot_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/forgot/forgot.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__extra_pages_confirm_confirm_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/confirm/confirm.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__extra_pages_page_404_page_404_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-404/page-404.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__extra_pages_page_500_page_500_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-500/page-500.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/groups/groups.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__default_pages_transactions_transactions_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/transactions/transactions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__default_pages_requests_requests_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/requests/requests.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__default_pages_not_found_not_found_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/not-found/not-found.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__default_pages_aboutus_aboutus_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/aboutus/aboutus.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/profile/profile.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__default_pages_simulation_simulation_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/simulation/simulation.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -8999,37 +4387,37 @@ var PagesModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["ReactiveFormsModule"],
                 __WEBPACK_IMPORTED_MODULE_3__ni_components_ni_components_module__["a" /* NiComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_13_ng2_translate__["b" /* TranslateModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["b" /* MdAutocompleteModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["c" /* MdButtonModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["d" /* MdButtonToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["e" /* MdCardModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["f" /* MdCheckboxModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["g" /* MdChipsModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["h" /* MdCoreModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["i" /* MdDatepickerModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["k" /* MdDialogModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["m" /* MdExpansionModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["n" /* MdGridListModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["o" /* MdIconModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["p" /* MdInputModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["q" /* MdListModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["r" /* MdMenuModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["s" /* MdNativeDateModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["t" /* MdPaginatorModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["u" /* MdProgressBarModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["v" /* MdProgressSpinnerModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["w" /* MdRadioModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["x" /* MdRippleModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["y" /* MdSelectModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["z" /* MdSidenavModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["B" /* MdSliderModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["A" /* MdSlideToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["D" /* MdSnackBarModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["E" /* MdSortModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["F" /* MdTableModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["G" /* MdTabsModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["H" /* MdToolbarModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["I" /* MdTooltipModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["a" /* MdAutocompleteModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["b" /* MdButtonModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["c" /* MdButtonToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["d" /* MdCardModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["e" /* MdCheckboxModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["f" /* MdChipsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["g" /* MdCoreModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["h" /* MdDatepickerModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["j" /* MdDialogModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["l" /* MdExpansionModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["m" /* MdGridListModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["n" /* MdIconModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["o" /* MdInputModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["p" /* MdListModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["q" /* MdMenuModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["r" /* MdNativeDateModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["s" /* MdPaginatorModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["t" /* MdProgressBarModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["u" /* MdProgressSpinnerModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["v" /* MdRadioModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["w" /* MdRippleModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["x" /* MdSelectModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["y" /* MdSidenavModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["A" /* MdSliderModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["z" /* MdSlideToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["B" /* MdSnackBarModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["C" /* MdSortModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["D" /* MdTableModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["E" /* MdTabsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["F" /* MdToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["G" /* MdTooltipModule */],
                 __WEBPACK_IMPORTED_MODULE_6__angular_cdk__["l" /* CdkTableModule */],
                 __WEBPACK_IMPORTED_MODULE_7_ng2_charts__["ChartsModule"],
                 __WEBPACK_IMPORTED_MODULE_8__swimlane_ngx_charts__["NgxChartsModule"],
@@ -9042,132 +4430,43 @@ var PagesModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* RouterModule */]
             ],
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_14__dashboards_dashboard_1_dashboard_component__["a" /* PageDashboardComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__dashboards_dashboard_2_dashboard_2_component__["a" /* PageDashboard2Component */],
-                __WEBPACK_IMPORTED_MODULE_16__dashboards_dashboard_3_dashboard_3_component__["a" /* PageDashboard3Component */],
-                __WEBPACK_IMPORTED_MODULE_17__material_components_button_button_component__["a" /* PageButtonComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__material_components_card_card_component__["a" /* PageCardComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__material_components_checkbox_checkbox_component__["a" /* PageCheckboxComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__material_components_chips_chips_component__["a" /* PageChipsComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__material_components_dialog_dialog_component__["a" /* PageDialogComponent */],
-                __WEBPACK_IMPORTED_MODULE_66__extra_pages_sign_up_1_sign_up_1_component__["a" /* DialogResultComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__material_components_icon_icon_component__["a" /* PageIconComponent */],
-                __WEBPACK_IMPORTED_MODULE_23__material_components_input_input_component__["a" /* PageInputComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__material_components_list_list_component__["a" /* PageListComponent */],
-                __WEBPACK_IMPORTED_MODULE_25__material_components_menu_menu_component__["a" /* PageMenuComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__material_components_progress_bar_progress_bar_component__["a" /* PageProgressBarComponent */],
-                __WEBPACK_IMPORTED_MODULE_27__material_components_progress_spinner_progress_spinner_component__["a" /* PageProgressSpinnerComponent */],
-                __WEBPACK_IMPORTED_MODULE_28__material_components_radio_button_radio_button_component__["a" /* PageRadioButtonComponent */],
-                __WEBPACK_IMPORTED_MODULE_29__material_components_select_select_component__["a" /* PageSelectComponent */],
-                __WEBPACK_IMPORTED_MODULE_30__material_components_slider_slider_component__["a" /* PageSliderComponent */],
-                __WEBPACK_IMPORTED_MODULE_31__material_components_slide_toggle_slide_toggle_component__["a" /* PageSlideToggleComponent */],
-                __WEBPACK_IMPORTED_MODULE_32__material_components_snackbar_snackbar_component__["a" /* PageSnackbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_33__material_components_tabs_tabs_component__["a" /* PageTabsComponent */],
-                __WEBPACK_IMPORTED_MODULE_34__material_components_toolbar_toolbar_component__["a" /* PageToolbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_35__material_components_tooltip_tooltip_component__["a" /* PageTooltipComponent */],
-                __WEBPACK_IMPORTED_MODULE_36__ni_components_file_file_component__["a" /* PageNiFilesComponent */],
-                __WEBPACK_IMPORTED_MODULE_37__ni_components_card_card_component__["a" /* PageNiCardsComponent */],
-                __WEBPACK_IMPORTED_MODULE_38__ni_components_chat_chat_component__["a" /* PageNiChatComponent */],
-                __WEBPACK_IMPORTED_MODULE_39__ni_components_alert_alert_component__["a" /* PageNiAlertsComponent */],
-                __WEBPACK_IMPORTED_MODULE_40__ni_components_badge_badge_component__["a" /* PageNiBadgesComponent */],
-                __WEBPACK_IMPORTED_MODULE_41__ni_components_breadcrumb_breadcrumb_component__["a" /* PageNiBreadcrumbsComponent */],
-                __WEBPACK_IMPORTED_MODULE_42__ni_components_h_timeline_h_timeline_component__["a" /* PageNiHTimelineComponent */],
-                __WEBPACK_IMPORTED_MODULE_43__typography_typography_component__["a" /* PageTypographyComponent */],
-                __WEBPACK_IMPORTED_MODULE_44__not_found_not_found_component__["a" /* PageNotFoundComponent */],
-                __WEBPACK_IMPORTED_MODULE_65__extra_pages_sign_in_1_sign_in_1_component__["a" /* PageSignIn1Component */],
-                __WEBPACK_IMPORTED_MODULE_66__extra_pages_sign_up_1_sign_up_1_component__["b" /* PageSignUp1Component */],
-                __WEBPACK_IMPORTED_MODULE_67__extra_pages_forgot_forgot_component__["a" /* PageForgotComponent */],
-                __WEBPACK_IMPORTED_MODULE_68__extra_pages_confirm_confirm_component__["a" /* PageConfirmComponent */],
-                __WEBPACK_IMPORTED_MODULE_69__extra_pages_page_404_page_404_component__["a" /* Page404Component */],
-                __WEBPACK_IMPORTED_MODULE_70__extra_pages_page_500_page_500_component__["a" /* Page500Component */],
-                __WEBPACK_IMPORTED_MODULE_45__pages_service_about_us_about_us_component__["a" /* PageAboutUsComponent */],
-                __WEBPACK_IMPORTED_MODULE_46__pages_service_faq_faq_component__["a" /* PageFaqComponent */],
-                __WEBPACK_IMPORTED_MODULE_47__pages_service_timeline_timeline_component__["a" /* PageTimelineComponent */],
-                __WEBPACK_IMPORTED_MODULE_48__pages_service_invoice_invoice_component__["a" /* PageInvoiceComponent */],
-                __WEBPACK_IMPORTED_MODULE_52__calendar_calendar_component__["b" /* PageCalendarComponent */],
-                __WEBPACK_IMPORTED_MODULE_52__calendar_calendar_component__["a" /* CalendarDialogComponent */],
-                __WEBPACK_IMPORTED_MODULE_53__tables_simple_table_simple_table_component__["a" /* PageSimpleTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_54__tables_bootstrap_tables_bootstrap_tables_component__["a" /* PageBootstrapTablesComponent */],
-                __WEBPACK_IMPORTED_MODULE_55__tables_editing_table_editing_table_component__["a" /* PageEditingTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_56__tables_filtering_table_filtering_table_component__["a" /* PageFilteringTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_57__tables_pagination_table_pagination_table_component__["a" /* PagePaginationTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_58__forms_form_elements_form_elements_component__["a" /* PageFormElementsComponent */],
-                __WEBPACK_IMPORTED_MODULE_59__forms_form_layout_form_layout_component__["a" /* PageFormLayoutComponent */],
-                __WEBPACK_IMPORTED_MODULE_60__forms_form_validation_form_validation_component__["a" /* PageFormValidationComponent */],
-                __WEBPACK_IMPORTED_MODULE_61__maps_google_map_google_map_component__["a" /* PageGoogleMapComponent */],
-                __WEBPACK_IMPORTED_MODULE_62__maps_leaflet_map_leaflet_map_component__["a" /* PageLeafletMapComponent */],
-                __WEBPACK_IMPORTED_MODULE_63__widgets_widgets_component__["a" /* PageWidgetsComponent */],
-                __WEBPACK_IMPORTED_MODULE_64__layouts_layouts_component__["a" /* PageLayoutsComponent */],
-                __WEBPACK_IMPORTED_MODULE_49__charts_ng2_charts_ng2_charts_component__["a" /* PageNg2ChartsComponent */],
-                __WEBPACK_IMPORTED_MODULE_50__charts_ngx_charts_ngx_charts_component__["a" /* PageNgxChartsComponent */],
-                __WEBPACK_IMPORTED_MODULE_51__charts_amcharts_amcharts_component__["a" /* PageAmchartsComponent */],
-                __WEBPACK_IMPORTED_MODULE_71__ni_components_buttons_buttons_component__["a" /* PageNiButtonsComponent */]
+                __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__["a" /* PageDashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["a" /* PageGroupsComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__default_pages_requests_requests_component__["a" /* PageRequestsComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["a" /* PageProfileComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__default_pages_aboutus_aboutus_component__["a" /* PageAboutusComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__default_pages_simulation_simulation_component__["a" /* PageSimulationComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__default_pages_transactions_transactions_component__["a" /* PageTransactionsComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__extra_pages_signup_signup_component__["a" /* DialogResultComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__extra_pages_signin_signin_component__["a" /* PageSigninComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__extra_pages_signup_signup_component__["b" /* PageSignupComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__extra_pages_forgot_forgot_component__["a" /* PageForgotComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__extra_pages_confirm_confirm_component__["a" /* PageConfirmComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__extra_pages_page_404_page_404_component__["a" /* Page404Component */],
+                __WEBPACK_IMPORTED_MODULE_19__extra_pages_page_500_page_500_component__["a" /* Page500Component */],
+                __WEBPACK_IMPORTED_MODULE_24__default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */]
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_14__dashboards_dashboard_1_dashboard_component__["a" /* PageDashboardComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__dashboards_dashboard_2_dashboard_2_component__["a" /* PageDashboard2Component */],
-                __WEBPACK_IMPORTED_MODULE_16__dashboards_dashboard_3_dashboard_3_component__["a" /* PageDashboard3Component */],
-                __WEBPACK_IMPORTED_MODULE_17__material_components_button_button_component__["a" /* PageButtonComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__material_components_card_card_component__["a" /* PageCardComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__material_components_checkbox_checkbox_component__["a" /* PageCheckboxComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__material_components_chips_chips_component__["a" /* PageChipsComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__material_components_dialog_dialog_component__["a" /* PageDialogComponent */],
-                __WEBPACK_IMPORTED_MODULE_66__extra_pages_sign_up_1_sign_up_1_component__["a" /* DialogResultComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__material_components_icon_icon_component__["a" /* PageIconComponent */],
-                __WEBPACK_IMPORTED_MODULE_23__material_components_input_input_component__["a" /* PageInputComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__material_components_list_list_component__["a" /* PageListComponent */],
-                __WEBPACK_IMPORTED_MODULE_25__material_components_menu_menu_component__["a" /* PageMenuComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__material_components_progress_bar_progress_bar_component__["a" /* PageProgressBarComponent */],
-                __WEBPACK_IMPORTED_MODULE_27__material_components_progress_spinner_progress_spinner_component__["a" /* PageProgressSpinnerComponent */],
-                __WEBPACK_IMPORTED_MODULE_28__material_components_radio_button_radio_button_component__["a" /* PageRadioButtonComponent */],
-                __WEBPACK_IMPORTED_MODULE_29__material_components_select_select_component__["a" /* PageSelectComponent */],
-                __WEBPACK_IMPORTED_MODULE_30__material_components_slider_slider_component__["a" /* PageSliderComponent */],
-                __WEBPACK_IMPORTED_MODULE_31__material_components_slide_toggle_slide_toggle_component__["a" /* PageSlideToggleComponent */],
-                __WEBPACK_IMPORTED_MODULE_32__material_components_snackbar_snackbar_component__["a" /* PageSnackbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_33__material_components_tabs_tabs_component__["a" /* PageTabsComponent */],
-                __WEBPACK_IMPORTED_MODULE_34__material_components_toolbar_toolbar_component__["a" /* PageToolbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_35__material_components_tooltip_tooltip_component__["a" /* PageTooltipComponent */],
-                __WEBPACK_IMPORTED_MODULE_36__ni_components_file_file_component__["a" /* PageNiFilesComponent */],
-                __WEBPACK_IMPORTED_MODULE_37__ni_components_card_card_component__["a" /* PageNiCardsComponent */],
-                __WEBPACK_IMPORTED_MODULE_38__ni_components_chat_chat_component__["a" /* PageNiChatComponent */],
-                __WEBPACK_IMPORTED_MODULE_39__ni_components_alert_alert_component__["a" /* PageNiAlertsComponent */],
-                __WEBPACK_IMPORTED_MODULE_40__ni_components_badge_badge_component__["a" /* PageNiBadgesComponent */],
-                __WEBPACK_IMPORTED_MODULE_41__ni_components_breadcrumb_breadcrumb_component__["a" /* PageNiBreadcrumbsComponent */],
-                __WEBPACK_IMPORTED_MODULE_42__ni_components_h_timeline_h_timeline_component__["a" /* PageNiHTimelineComponent */],
-                __WEBPACK_IMPORTED_MODULE_43__typography_typography_component__["a" /* PageTypographyComponent */],
-                __WEBPACK_IMPORTED_MODULE_44__not_found_not_found_component__["a" /* PageNotFoundComponent */],
-                __WEBPACK_IMPORTED_MODULE_65__extra_pages_sign_in_1_sign_in_1_component__["a" /* PageSignIn1Component */],
-                __WEBPACK_IMPORTED_MODULE_66__extra_pages_sign_up_1_sign_up_1_component__["b" /* PageSignUp1Component */],
-                __WEBPACK_IMPORTED_MODULE_67__extra_pages_forgot_forgot_component__["a" /* PageForgotComponent */],
-                __WEBPACK_IMPORTED_MODULE_68__extra_pages_confirm_confirm_component__["a" /* PageConfirmComponent */],
-                __WEBPACK_IMPORTED_MODULE_69__extra_pages_page_404_page_404_component__["a" /* Page404Component */],
-                __WEBPACK_IMPORTED_MODULE_70__extra_pages_page_500_page_500_component__["a" /* Page500Component */],
-                __WEBPACK_IMPORTED_MODULE_45__pages_service_about_us_about_us_component__["a" /* PageAboutUsComponent */],
-                __WEBPACK_IMPORTED_MODULE_46__pages_service_faq_faq_component__["a" /* PageFaqComponent */],
-                __WEBPACK_IMPORTED_MODULE_47__pages_service_timeline_timeline_component__["a" /* PageTimelineComponent */],
-                __WEBPACK_IMPORTED_MODULE_48__pages_service_invoice_invoice_component__["a" /* PageInvoiceComponent */],
-                __WEBPACK_IMPORTED_MODULE_52__calendar_calendar_component__["b" /* PageCalendarComponent */],
-                __WEBPACK_IMPORTED_MODULE_52__calendar_calendar_component__["a" /* CalendarDialogComponent */],
-                __WEBPACK_IMPORTED_MODULE_53__tables_simple_table_simple_table_component__["a" /* PageSimpleTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_54__tables_bootstrap_tables_bootstrap_tables_component__["a" /* PageBootstrapTablesComponent */],
-                __WEBPACK_IMPORTED_MODULE_55__tables_editing_table_editing_table_component__["a" /* PageEditingTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_56__tables_filtering_table_filtering_table_component__["a" /* PageFilteringTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_57__tables_pagination_table_pagination_table_component__["a" /* PagePaginationTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_58__forms_form_elements_form_elements_component__["a" /* PageFormElementsComponent */],
-                __WEBPACK_IMPORTED_MODULE_59__forms_form_layout_form_layout_component__["a" /* PageFormLayoutComponent */],
-                __WEBPACK_IMPORTED_MODULE_60__forms_form_validation_form_validation_component__["a" /* PageFormValidationComponent */],
-                __WEBPACK_IMPORTED_MODULE_61__maps_google_map_google_map_component__["a" /* PageGoogleMapComponent */],
-                __WEBPACK_IMPORTED_MODULE_62__maps_leaflet_map_leaflet_map_component__["a" /* PageLeafletMapComponent */],
-                __WEBPACK_IMPORTED_MODULE_63__widgets_widgets_component__["a" /* PageWidgetsComponent */],
-                __WEBPACK_IMPORTED_MODULE_64__layouts_layouts_component__["a" /* PageLayoutsComponent */],
-                __WEBPACK_IMPORTED_MODULE_49__charts_ng2_charts_ng2_charts_component__["a" /* PageNg2ChartsComponent */],
-                __WEBPACK_IMPORTED_MODULE_50__charts_ngx_charts_ngx_charts_component__["a" /* PageNgxChartsComponent */],
-                __WEBPACK_IMPORTED_MODULE_51__charts_amcharts_amcharts_component__["a" /* PageAmchartsComponent */],
-                __WEBPACK_IMPORTED_MODULE_71__ni_components_buttons_buttons_component__["a" /* PageNiButtonsComponent */]
+                __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__["a" /* PageDashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["a" /* PageGroupsComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__default_pages_requests_requests_component__["a" /* PageRequestsComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["a" /* PageProfileComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__default_pages_aboutus_aboutus_component__["a" /* PageAboutusComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__default_pages_simulation_simulation_component__["a" /* PageSimulationComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__default_pages_transactions_transactions_component__["a" /* PageTransactionsComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__extra_pages_signup_signup_component__["a" /* DialogResultComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__extra_pages_signin_signin_component__["a" /* PageSigninComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__extra_pages_signup_signup_component__["b" /* PageSignupComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__extra_pages_forgot_forgot_component__["a" /* PageForgotComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__extra_pages_confirm_confirm_component__["a" /* PageConfirmComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__extra_pages_page_404_page_404_component__["a" /* Page404Component */],
+                __WEBPACK_IMPORTED_MODULE_19__extra_pages_page_500_page_500_component__["a" /* Page500Component */],
+                __WEBPACK_IMPORTED_MODULE_24__default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */]
             ],
             entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_66__extra_pages_sign_up_1_sign_up_1_component__["a" /* DialogResultComponent */],
-                __WEBPACK_IMPORTED_MODULE_52__calendar_calendar_component__["a" /* CalendarDialogComponent */]
+                __WEBPACK_IMPORTED_MODULE_15__extra_pages_signup_signup_component__["a" /* DialogResultComponent */]
             ]
         })
     ], PagesModule);
@@ -9178,959 +4477,6 @@ var PagesModule = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/tables/bootstrap-tables/bootstrap-tables.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-6\">\r\n    <ni-card title=\"Basic table\">\r\n      <div class=\"table-responsive\">\r\n        <table class=\"table\">\r\n          <thead>\r\n          <tr>\r\n            <th>#</th>\r\n            <th>First Name</th>\r\n            <th>Last Name</th>\r\n            <th>Username</th>\r\n          </tr>\r\n          </thead>\r\n          <tbody>\r\n          <tr>\r\n            <th scope=\"row\">1</th>\r\n            <td>Mark</td>\r\n            <td>Otto</td>\r\n            <td>@mdo</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">2</th>\r\n            <td>Jacob</td>\r\n            <td>Thornton</td>\r\n            <td>@fat</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">3</th>\r\n            <td>Larry</td>\r\n            <td>the Bird</td>\r\n            <td>@twitter</td>\r\n          </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-lg-6\">\r\n    <ni-card title=\"Inverse table\">\r\n      <div class=\"table-responsive\">\r\n        <table class=\"table table-inverse\">\r\n          <thead>\r\n          <tr>\r\n            <th>#</th>\r\n            <th>First Name</th>\r\n            <th>Last Name</th>\r\n            <th>Username</th>\r\n          </tr>\r\n          </thead>\r\n          <tbody>\r\n          <tr>\r\n            <th scope=\"row\">1</th>\r\n            <td>Mark</td>\r\n            <td>Otto</td>\r\n            <td>@mdo</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">2</th>\r\n            <td>Jacob</td>\r\n            <td>Thornton</td>\r\n            <td>@fat</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">3</th>\r\n            <td>Larry</td>\r\n            <td>the Bird</td>\r\n            <td>@twitter</td>\r\n          </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-6\">\r\n    <ni-card title=\"Background table head\">\r\n      <div class=\"table-responsive\">\r\n        <table class=\"table\">\r\n          <thead class=\"thead-default\">\r\n          <tr>\r\n            <th>#</th>\r\n            <th>First Name</th>\r\n            <th>Last Name</th>\r\n            <th>Username</th>\r\n          </tr>\r\n          </thead>\r\n          <tbody>\r\n          <tr>\r\n            <th scope=\"row\">1</th>\r\n            <td>Mark</td>\r\n            <td>Otto</td>\r\n            <td>@mdo</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">2</th>\r\n            <td>Jacob</td>\r\n            <td>Thornton</td>\r\n            <td>@fat</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">3</th>\r\n            <td>Larry</td>\r\n            <td>the Bird</td>\r\n            <td>@twitter</td>\r\n          </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-lg-6\">\r\n    <ni-card title=\"Inverse background table head\">\r\n      <div class=\"table-responsive\">\r\n        <table class=\"table\">\r\n          <thead class=\"thead-inverse\">\r\n          <tr>\r\n            <th>#</th>\r\n            <th>First Name</th>\r\n            <th>Last Name</th>\r\n            <th>Username</th>\r\n          </tr>\r\n          </thead>\r\n          <tbody>\r\n          <tr>\r\n            <th scope=\"row\">1</th>\r\n            <td>Mark</td>\r\n            <td>Otto</td>\r\n            <td>@mdo</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">2</th>\r\n            <td>Jacob</td>\r\n            <td>Thornton</td>\r\n            <td>@fat</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">3</th>\r\n            <td>Larry</td>\r\n            <td>the Bird</td>\r\n            <td>@twitter</td>\r\n          </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-6\">\r\n    <ni-card title=\"Striped rows\">\r\n      <div class=\"table-responsive\">\r\n        <table class=\"table table-striped\">\r\n          <thead>\r\n          <tr>\r\n            <th>#</th>\r\n            <th>First Name</th>\r\n            <th>Last Name</th>\r\n            <th>Username</th>\r\n          </tr>\r\n          </thead>\r\n          <tbody>\r\n          <tr>\r\n            <th scope=\"row\">1</th>\r\n            <td>Mark</td>\r\n            <td>Otto</td>\r\n            <td>@mdo</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">2</th>\r\n            <td>Jacob</td>\r\n            <td>Thornton</td>\r\n            <td>@fat</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">3</th>\r\n            <td>Larry</td>\r\n            <td>the Bird</td>\r\n            <td>@twitter</td>\r\n          </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-lg-6\">\r\n    <ni-card title=\"Bordered table\">\r\n      <div class=\"table-responsive\">\r\n        <table class=\"table table-bordered\">\r\n          <thead>\r\n          <tr>\r\n            <th>#</th>\r\n            <th>First Name</th>\r\n            <th>Last Name</th>\r\n            <th>Username</th>\r\n          </tr>\r\n          </thead>\r\n          <tbody>\r\n          <tr>\r\n            <th scope=\"row\">1</th>\r\n            <td>Mark</td>\r\n            <td>Otto</td>\r\n            <td>@mdo</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">2</th>\r\n            <td>Jacob</td>\r\n            <td>Thornton</td>\r\n            <td>@fat</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">3</th>\r\n            <td>Larry</td>\r\n            <td>the Bird</td>\r\n            <td>@twitter</td>\r\n          </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-6\">\r\n    <ni-card title=\"Hoverable rows\">\r\n      <div class=\"table-responsive\">\r\n        <table class=\"table table-hover\">\r\n          <thead>\r\n          <tr>\r\n            <th>#</th>\r\n            <th>First Name</th>\r\n            <th>Last Name</th>\r\n            <th>Username</th>\r\n          </tr>\r\n          </thead>\r\n          <tbody>\r\n          <tr>\r\n            <th scope=\"row\">1</th>\r\n            <td>Mark</td>\r\n            <td>Otto</td>\r\n            <td>@mdo</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">2</th>\r\n            <td>Jacob</td>\r\n            <td>Thornton</td>\r\n            <td>@fat</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">3</th>\r\n            <td>Larry</td>\r\n            <td>the Bird</td>\r\n            <td>@twitter</td>\r\n          </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-lg-6\">\r\n    <ni-card title=\"Small table\">\r\n      <div class=\"table-responsive\">\r\n        <table class=\"table table-sm\">\r\n          <thead>\r\n          <tr>\r\n            <th>#</th>\r\n            <th>First Name</th>\r\n            <th>Last Name</th>\r\n            <th>Username</th>\r\n          </tr>\r\n          </thead>\r\n          <tbody>\r\n          <tr>\r\n            <th scope=\"row\">1</th>\r\n            <td>Mark</td>\r\n            <td>Otto</td>\r\n            <td>@mdo</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">2</th>\r\n            <td>Jacob</td>\r\n            <td>Thornton</td>\r\n            <td>@fat</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">3</th>\r\n            <td>Larry</td>\r\n            <td>the Bird</td>\r\n            <td>@twitter</td>\r\n          </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-6\">\r\n    <ni-card title=\"Contextual classes\" class=\"mb-lg-0\">\r\n      <div class=\"table-responsive\">\r\n        <table class=\"table\">\r\n          <thead>\r\n          <tr>\r\n            <th>#</th>\r\n            <th>Column heading</th>\r\n            <th>Column heading</th>\r\n            <th>Column heading</th>\r\n          </tr>\r\n          </thead>\r\n          <tbody>\r\n          <tr class=\"table-active\">\r\n            <th scope=\"row\">1</th>\r\n            <td>Column content</td>\r\n            <td>Column content</td>\r\n            <td>Column content</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">2</th>\r\n            <td>Column content</td>\r\n            <td>Column content</td>\r\n            <td>Column content</td>\r\n          </tr>\r\n          <tr class=\"table-success\">\r\n            <th scope=\"row\">3</th>\r\n            <td>Column content</td>\r\n            <td>Column content</td>\r\n            <td>Column content</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">4</th>\r\n            <td>Column content</td>\r\n            <td>Column content</td>\r\n            <td>Column content</td>\r\n          </tr>\r\n          <tr class=\"table-info\">\r\n            <th scope=\"row\">5</th>\r\n            <td>Column content</td>\r\n            <td>Column content</td>\r\n            <td>Column content</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">6</th>\r\n            <td>Column content</td>\r\n            <td>Column content</td>\r\n            <td>Column content</td>\r\n          </tr>\r\n          <tr class=\"table-warning\">\r\n            <th scope=\"row\">7</th>\r\n            <td>Column content</td>\r\n            <td>Column content</td>\r\n            <td>Column content</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">8</th>\r\n            <td>Column content</td>\r\n            <td>Column content</td>\r\n            <td>Column content</td>\r\n          </tr>\r\n          <tr class=\"table-danger\">\r\n            <th scope=\"row\">9</th>\r\n            <td>Column content</td>\r\n            <td>Column content</td>\r\n            <td>Column content</td>\r\n          </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-lg-6\">\r\n    <ni-card title=\"Responsive tables\" class=\"mb-0\">\r\n      <div class=\"table-responsive\">\r\n        <table class=\"table table-bordered mb-0\">\r\n          <thead>\r\n          <tr>\r\n            <th>#</th>\r\n            <th>Table heading</th>\r\n            <th>Table heading</th>\r\n            <th>Table heading</th>\r\n            <th>Table heading</th>\r\n            <th>Table heading</th>\r\n            <th>Table heading</th>\r\n          </tr>\r\n          </thead>\r\n          <tbody>\r\n          <tr>\r\n            <th scope=\"row\">1</th>\r\n            <td>Table cell</td>\r\n            <td>Table cell</td>\r\n            <td>Table cell</td>\r\n            <td>Table cell</td>\r\n            <td>Table cell</td>\r\n            <td>Table cell</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">2</th>\r\n            <td>Table cell</td>\r\n            <td>Table cell</td>\r\n            <td>Table cell</td>\r\n            <td>Table cell</td>\r\n            <td>Table cell</td>\r\n            <td>Table cell</td>\r\n          </tr>\r\n          <tr>\r\n            <th scope=\"row\">3</th>\r\n            <td>Table cell</td>\r\n            <td>Table cell</td>\r\n            <td>Table cell</td>\r\n            <td>Table cell</td>\r\n            <td>Table cell</td>\r\n            <td>Table cell</td>\r\n          </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/tables/bootstrap-tables/bootstrap-tables.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/tables/bootstrap-tables/bootstrap-tables.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageBootstrapTablesComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Tables',
-        link: '#'
-    },
-    {
-        title: 'Bootstrap table',
-        link: ''
-    }
-];
-var PageBootstrapTablesComponent = (function () {
-    function PageBootstrapTablesComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Bootstrap table';
-        this.breadcrumb = BREADCRUMBS;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageBootstrapTablesComponent.prototype.ngOnInit = function () { };
-    PageBootstrapTablesComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-bootstrap-tables',
-            template: __webpack_require__("../../../../../src/app/pages/tables/bootstrap-tables/bootstrap-tables.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/tables/bootstrap-tables/bootstrap-tables.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageBootstrapTablesComponent);
-    return PageBootstrapTablesComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=bootstrap-tables.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/tables/editing-table/editing-table.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/tables/editing-table/editing-table.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/tables/editing-table/editing-table.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageEditingTableComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Tables',
-        link: '#'
-    },
-    {
-        title: 'Editing table',
-        link: ''
-    }
-];
-var PageEditingTableComponent = (function () {
-    function PageEditingTableComponent(_sharedService) {
-        var _this = this;
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Editing table';
-        this.breadcrumb = BREADCRUMBS;
-        this.editing = {};
-        this.rows = [];
-        this.loadingIndicator = true;
-        this.fetch(function (data) {
-            _this.rows = data;
-            setTimeout(function () { _this.loadingIndicator = false; }, 1500);
-        });
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageEditingTableComponent.prototype.fetch = function (cb) {
-        var req = new XMLHttpRequest();
-        req.open('GET', 'assets/table-data.json');
-        req.onload = function () {
-            cb(JSON.parse(req.response));
-        };
-        req.send();
-    };
-    PageEditingTableComponent.prototype.updateValue = function (event, cell, cellValue, row) {
-        this.editing[row.$$index + '-' + cell] = false;
-        this.rows[row.$$index][cell] = event.target.value;
-    };
-    PageEditingTableComponent.prototype.ngOnInit = function () { };
-    PageEditingTableComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-editing-table',
-            template: __webpack_require__("../../../../../src/app/pages/tables/editing-table/editing-table.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/tables/editing-table/editing-table.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageEditingTableComponent);
-    return PageEditingTableComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=editing-table.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/tables/filtering-table/filtering-table.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<div class=\"example-container mat-elevation-z8\">\r\n  <div class=\"example-header\">\r\n    <md-input-container floatPlaceholder=\"never\">\r\n      <input mdInput #filter placeholder=\"Filter users\">\r\n    </md-input-container>\r\n  </div>\r\n\r\n  <md-table #table [dataSource]=\"dataSource\">\r\n\r\n    <!--- Note that these columns can be defined in any order.\r\n          The actual rendered columns are set as a property on the row definition\" -->\r\n\r\n    <!-- ID Column -->\r\n    <ng-container cdkColumnDef=\"userId\">\r\n      <md-header-cell *cdkHeaderCellDef> ID </md-header-cell>\r\n      <md-cell *cdkCellDef=\"let row\"> {{row.id}} </md-cell>\r\n    </ng-container>\r\n\r\n    <!-- Progress Column -->\r\n    <ng-container cdkColumnDef=\"progress\">\r\n      <md-header-cell *cdkHeaderCellDef> Progress </md-header-cell>\r\n      <md-cell *cdkCellDef=\"let row\"> {{row.progress}}% </md-cell>\r\n    </ng-container>\r\n\r\n    <!-- Name Column -->\r\n    <ng-container cdkColumnDef=\"userName\">\r\n      <md-header-cell *cdkHeaderCellDef> Name </md-header-cell>\r\n      <md-cell *cdkCellDef=\"let row\"> {{row.name}} </md-cell>\r\n    </ng-container>\r\n\r\n    <!-- Color Column -->\r\n    <ng-container cdkColumnDef=\"color\">\r\n      <md-header-cell *cdkHeaderCellDef> Color </md-header-cell>\r\n      <md-cell *cdkCellDef=\"let row\" [style.color]=\"row.color\"> {{row.color}} </md-cell>\r\n    </ng-container>\r\n\r\n    <md-header-row *cdkHeaderRowDef=\"displayedColumns\"></md-header-row>\r\n    <md-row *cdkRowDef=\"let row; columns: displayedColumns;\"></md-row>\r\n  </md-table>\r\n</div>\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/tables/filtering-table/filtering-table.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/tables/filtering-table/filtering-table.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageFilteringTableComponent; });
-/* unused harmony export ExampleDatabase */
-/* unused harmony export ExampleDataSource */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_cdk__ = __webpack_require__("../../../cdk/@angular/cdk.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__ = __webpack_require__("../../../../rxjs/BehaviorSubject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_startWith__ = __webpack_require__("../../../../rxjs/add/operator/startWith.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_startWith___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_startWith__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_merge__ = __webpack_require__("../../../../rxjs/add/observable/merge.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_merge___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_merge__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_debounceTime__ = __webpack_require__("../../../../rxjs/add/operator/debounceTime.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_debounceTime__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_add_operator_distinctUntilChanged__ = __webpack_require__("../../../../rxjs/add/operator/distinctUntilChanged.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_add_operator_distinctUntilChanged___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_rxjs_add_operator_distinctUntilChanged__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_add_observable_fromEvent__ = __webpack_require__("../../../../rxjs/add/observable/fromEvent.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_add_observable_fromEvent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_rxjs_add_observable_fromEvent__);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Tables',
-        link: '#'
-    },
-    {
-        title: 'Filtering table',
-        link: ''
-    }
-];
-var COLORS = [
-    'maroon',
-    'red',
-    'orange',
-    'yellow',
-    'olive',
-    'green',
-    'purple',
-    'fuchsia',
-    'lime',
-    'teal',
-    'aqua',
-    'blue',
-    'navy',
-    'black',
-    'gray'
-];
-var NAMES = [
-    'Maia',
-    'Asher',
-    'Olivia',
-    'Atticus',
-    'Amelia',
-    'Jack',
-    'Charlotte',
-    'Theodore',
-    'Isla',
-    'Oliver',
-    'Isabella',
-    'Jasper',
-    'Cora',
-    'Levi',
-    'Violet',
-    'Arthur',
-    'Mia',
-    'Thomas',
-    'Elizabeth'
-];
-var PageFilteringTableComponent = (function () {
-    function PageFilteringTableComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Filtering table';
-        this.breadcrumb = BREADCRUMBS;
-        this.displayedColumns = ['userId', 'userName', 'progress', 'color'];
-        this.exampleDatabase = new ExampleDatabase();
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageFilteringTableComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.dataSource = new ExampleDataSource(this.exampleDatabase);
-        __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__["Observable"].fromEvent(this.filter.nativeElement, 'keyup')
-            .debounceTime(150)
-            .distinctUntilChanged()
-            .subscribe(function () {
-            if (!_this.dataSource) {
-                return;
-            }
-            _this.dataSource.filter = _this.filter.nativeElement.value;
-        });
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('filter'),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
-    ], PageFilteringTableComponent.prototype, "filter", void 0);
-    PageFilteringTableComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-filtering-table',
-            template: __webpack_require__("../../../../../src/app/pages/tables/filtering-table/filtering-table.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/tables/filtering-table/filtering-table.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _b || Object])
-    ], PageFilteringTableComponent);
-    return PageFilteringTableComponent;
-    var _a, _b;
-}());
-
-var ExampleDatabase = (function () {
-    function ExampleDatabase() {
-        this.dataChange = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["BehaviorSubject"]([]);
-        // Fill up the database with 100 users.
-        for (var i = 0; i < 100; i++) {
-            this.addUser();
-        }
-    }
-    Object.defineProperty(ExampleDatabase.prototype, "data", {
-        get: function () { return this.dataChange.value; },
-        enumerable: true,
-        configurable: true
-    });
-    ExampleDatabase.prototype.addUser = function () {
-        var copiedData = this.data.slice();
-        copiedData.push(this.createNewUser());
-        this.dataChange.next(copiedData);
-    };
-    ExampleDatabase.prototype.createNewUser = function () {
-        var name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
-            NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
-        return {
-            id: (this.data.length + 1).toString(),
-            name: name,
-            progress: Math.round(Math.random() * 100).toString(),
-            color: COLORS[Math.round(Math.random() * (COLORS.length - 1))]
-        };
-    };
-    return ExampleDatabase;
-}());
-
-var ExampleDataSource = (function (_super) {
-    __extends(ExampleDataSource, _super);
-    function ExampleDataSource(_exampleDatabase) {
-        var _this = _super.call(this) || this;
-        _this._exampleDatabase = _exampleDatabase;
-        _this._filterChange = new __WEBPACK_IMPORTED_MODULE_3_rxjs_BehaviorSubject__["BehaviorSubject"]('');
-        return _this;
-    }
-    Object.defineProperty(ExampleDataSource.prototype, "filter", {
-        get: function () { return this._filterChange.value; },
-        set: function (filter) { this._filterChange.next(filter); },
-        enumerable: true,
-        configurable: true
-    });
-    ExampleDataSource.prototype.connect = function () {
-        var _this = this;
-        var displayDataChanges = [
-            this._exampleDatabase.dataChange,
-            this._filterChange,
-        ];
-        return __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__["Observable"].merge.apply(__WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__["Observable"], displayDataChanges).map(function () {
-            return _this._exampleDatabase.data.slice().filter(function (item) {
-                var searchStr = (item.name + item.color).toLowerCase();
-                return searchStr.indexOf(_this.filter.toLowerCase()) != -1;
-            });
-        });
-    };
-    ExampleDataSource.prototype.disconnect = function () { };
-    return ExampleDataSource;
-}(__WEBPACK_IMPORTED_MODULE_2__angular_cdk__["o" /* DataSource */]));
-
-//# sourceMappingURL=filtering-table.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/tables/pagination-table/pagination-table.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/tables/pagination-table/pagination-table.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/tables/pagination-table/pagination-table.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PagePaginationTableComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Tables',
-        link: '#'
-    },
-    {
-        title: 'Pagination table',
-        link: ''
-    }
-];
-var PagePaginationTableComponent = (function () {
-    function PagePaginationTableComponent(_sharedService) {
-        var _this = this;
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Pagination table';
-        this.breadcrumb = BREADCRUMBS;
-        this.columns = [
-            { prop: 'name' },
-            { name: 'Gender' },
-            { name: 'Company' }
-        ];
-        this.rows = [];
-        this.loadingIndicator = true;
-        this.fetch(function (data) {
-            _this.rows = data;
-            setTimeout(function () { _this.loadingIndicator = false; }, 1500);
-        });
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PagePaginationTableComponent.prototype.fetch = function (cb) {
-        var req = new XMLHttpRequest();
-        req.open('GET', 'assets/table-data.json');
-        req.onload = function () {
-            cb(JSON.parse(req.response));
-        };
-        req.send();
-    };
-    PagePaginationTableComponent.prototype.ngOnInit = function () { };
-    PagePaginationTableComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-pagination-table',
-            template: __webpack_require__("../../../../../src/app/pages/tables/pagination-table/pagination-table.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/tables/pagination-table/pagination-table.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PagePaginationTableComponent);
-    return PagePaginationTableComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=pagination-table.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/tables/simple-table/simple-table.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/tables/simple-table/simple-table.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/tables/simple-table/simple-table.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageSimpleTableComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Tables',
-        link: '#'
-    },
-    {
-        title: 'Simple table',
-        link: ''
-    }
-];
-var PageSimpleTableComponent = (function () {
-    function PageSimpleTableComponent(_sharedService) {
-        var _this = this;
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Simple table';
-        this.breadcrumb = BREADCRUMBS;
-        this.columns = [
-            { prop: 'name' },
-            { name: 'Gender' },
-            { name: 'Company' }
-        ];
-        this.rows = [];
-        this.loadingIndicator = true;
-        this.fetch(function (data) {
-            _this.rows = data;
-            setTimeout(function () { _this.loadingIndicator = false; }, 1500);
-        });
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageSimpleTableComponent.prototype.fetch = function (cb) {
-        var req = new XMLHttpRequest();
-        req.open('GET', 'assets/table-data.json');
-        req.onload = function () {
-            cb(JSON.parse(req.response));
-        };
-        req.send();
-    };
-    PageSimpleTableComponent.prototype.ngOnInit = function () { };
-    PageSimpleTableComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-simple-table',
-            template: __webpack_require__("../../../../../src/app/pages/tables/simple-table/simple-table.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/tables/simple-table/simple-table.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageSimpleTableComponent);
-    return PageSimpleTableComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=simple-table.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/typography/typography.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<ni-card [title]=\"'Headers'\">\r\n  <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-6\">\r\n      <h1>Heading 1</h1>\r\n      <h2>Heading 2</h2>\r\n      <h3>Heading 3</h3>\r\n      <h4>Heading 4</h4>\r\n      <h5>Heading 5</h5>\r\n      <h6>Heading 6</h6>\r\n    </div>\r\n    <div class=\"col-md-6\">\r\n      <h1 class=\"text-uppercase\">Heading 1</h1>\r\n      <h2 class=\"text-uppercase\">Heading 2</h2>\r\n      <h3 class=\"text-uppercase\">Heading 3</h3>\r\n      <h4 class=\"text-uppercase\">Heading 4</h4>\r\n      <h5 class=\"text-uppercase\">Heading 5</h5>\r\n      <h6 class=\"text-uppercase\">Heading 6</h6>\r\n    </div>\r\n  </div>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Text style'\">\r\n  <p><code>.mark</code> and <code>.small</code> classes are also available to apply the same styles as <code>&lt;mark&gt;</code> and <code>&lt;small&gt;</code> while avoiding any unwanted semantic implications that the tags would bring.</p>\r\n  <p>You can use the mark tag to <mark>highlight</mark> text.</p>\r\n  <p><del>This line of text is meant to be treated as deleted text.</del></p>\r\n  <p><s>This line of text is meant to be treated as no longer accurate.</s></p>\r\n  <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>\r\n  <p><u>This line of text will render as underlined</u></p>\r\n  <p><small>This line of text is meant to be treated as fine print.</small></p>\r\n  <p><strong>This line rendered as bold text.</strong></p>\r\n  <p><em>This line rendered as italicized text.</em></p>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Blockquotes'\">\r\n  <p>For quoting blocks of content from another source within your document. Wrap <code>&lt;blockquote class=\"blockquote\"&gt;</code> around any <abbr title=\"HyperText Markup Language\">HTML</abbr> as the quote.</p>\r\n  <blockquote class=\"blockquote\">\r\n    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\r\n    <footer class=\"blockquote-footer\">Someone famous in <cite title=\"Source Title\">Source Title</cite></footer>\r\n  </blockquote>\r\n\r\n  <blockquote class=\"blockquote blockquote-reverse\">\r\n    <p class=\"mb-0\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\r\n    <footer class=\"blockquote-footer\">Someone famous in <cite title=\"Source Title\">Source Title</cite></footer>\r\n  </blockquote>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Lists'\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-6\">\r\n      <ul>\r\n        <li>Lorem ipsum dolor sit amet</li>\r\n        <li>Consectetur adipiscing elit</li>\r\n        <li>Integer molestie lorem at massa</li>\r\n        <li>Facilisis in pretium nisl aliquet</li>\r\n        <li>Nulla volutpat aliquam velit\r\n          <ul>\r\n            <li>Phasellus iaculis neque</li>\r\n            <li>Purus sodales ultricies</li>\r\n            <li>Vestibulum laoreet porttitor sem</li>\r\n            <li>Ac tristique libero volutpat at</li>\r\n          </ul>\r\n        </li>\r\n        <li>Faucibus porta lacus fringilla vel</li>\r\n        <li>Aenean sit amet erat nunc</li>\r\n        <li>Eget porttitor lorem</li>\r\n      </ul>\r\n    </div>\r\n    <div class=\"col-md-6\">\r\n      <ol>\r\n        <li>Lorem ipsum dolor sit amet</li>\r\n        <li>Consectetur adipiscing elit</li>\r\n        <li>Integer molestie lorem at massa</li>\r\n        <li>Facilisis in pretium nisl aliquet</li>\r\n        <li>Nulla volutpat aliquam velit\r\n          <ol>\r\n            <li>Phasellus iaculis neque</li>\r\n            <li>Purus sodales ultricies</li>\r\n            <li>Vestibulum laoreet porttitor sem</li>\r\n            <li>Ac tristique libero volutpat at</li>\r\n          </ol>\r\n        </li>\r\n        <li>Faucibus porta lacus fringilla vel</li>\r\n        <li>Aenean sit amet erat nunc</li>\r\n        <li>Eget porttitor lorem</li>\r\n      </ol>\r\n    </div>\r\n  </div>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Text alignment'\">\r\n  <p>Easily realign text to components with text alignment classes.</p>\r\n  <p class=\"text-left\">Left aligned text on all viewport sizes.</p>\r\n  <p class=\"text-center\">Center aligned text on all viewport sizes.</p>\r\n  <p class=\"text-right\">Right aligned text on all viewport sizes.</p>\r\n</ni-card>\r\n\r\n<ni-card [title]=\"'Text transform'\" class=\"mb-0\">\r\n  <p>Transform text in components with text capitalization classes.</p>\r\n  <p class=\"text-lowercase\">Lowercased text.</p>\r\n  <p class=\"text-uppercase\">Uppercased text.</p>\r\n  <p class=\"text-capitalize\">CapiTaliZed text.</p>\r\n</ni-card>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/typography/typography.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageTypographyComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'UI Elements',
-        link: '#'
-    },
-    {
-        title: 'Typography',
-        link: ''
-    }
-];
-var PageTypographyComponent = (function () {
-    function PageTypographyComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Typography';
-        this.breadcrumb = BREADCRUMBS;
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageTypographyComponent.prototype.ngOnInit = function () { };
-    PageTypographyComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-typography',
-            template: __webpack_require__("../../../../../src/app/pages/typography/typography.component.html")
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageTypographyComponent);
-    return PageTypographyComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=typography.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/widgets/widgets.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'danger'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Orders</div>\r\n      <div class=\"count\">2,145</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+17%</ni-badge> <small>from previous period</small>\r\n      <md-icon>shopping_basket</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'warning'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Revenue</div>\r\n      <div class=\"count\">$ 50,24</div>\r\n      <small>11750</small>\r\n      <md-icon>equalizer</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'info'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Products</div>\r\n      <div class=\"count\">2,543</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+210</ni-badge>\r\n      <md-icon>monetization_on</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'success'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Sold</div>\r\n      <div class=\"count\">1,005</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+24%</ni-badge>\r\n      <md-icon>donut_large</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"clearfix\"></div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [customBgColor]=\"'rgba(226,77,77,0.6)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-4.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Orders</div>\r\n      <div class=\"count\">2,145</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+17%</ni-badge> <small>from previous period</small>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [customBgColor]=\"'rgba(255,183,77,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-5.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Revenue</div>\r\n      <div class=\"count\">$ 50,24</div>\r\n      <small>11750</small>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [customBgColor]=\"'rgba(100,181,246,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-6.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Products</div>\r\n      <div class=\"count\">2,543</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+210</ni-badge>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [customBgColor]=\"'rgba(129,199,132,0.8)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-7.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Sold</div>\r\n      <div class=\"count\">1,005</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+24%</ni-badge>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"clearfix\"></div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [outline]=\"true\" [bgColor]=\"'danger'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Orders</div>\r\n      <div class=\"count\">2,145</div>\r\n      <ni-badge [color]=\"'danger'\">+17%</ni-badge> <small>from previous period</small>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [outline]=\"true\" [bgColor]=\"'warning'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Revenue</div>\r\n      <div class=\"count\">$ 50,24</div>\r\n      <small>11750</small>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [outline]=\"true\" [bgColor]=\"'info'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Products</div>\r\n      <div class=\"count\">2,543</div>\r\n      <ni-badge [color]=\"'info'\">+210</ni-badge>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [outline]=\"true\" [bgColor]=\"'success'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Sold</div>\r\n      <div class=\"count\">1,005</div>\r\n      <ni-badge [color]=\"'success'\">+24%</ni-badge>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"clearfix\"></div>\r\n\r\n  <div class=\"col-xl-4\">\r\n    <ni-card [bgColor]=\"''\" class=\"chart-card\">\r\n      <div class=\"chart\">\r\n        <canvas\r\n          baseChart\r\n          [data]=\"pieChartData\"\r\n          [colors]=\"pieChartColors\"\r\n          [labels]=\"pieChartLabels\"\r\n          [legend]=\"false\"\r\n          [options]=\"pieChartOptions\"\r\n          [chartType]=\"pieChartType\"></canvas>\r\n      </div>\r\n      <div class=\"info\">\r\n        <div class=\"title\"><strong>930</strong> <small>Resolved</small></div>\r\n        <div class=\"small\">More than 70% resolved issues</div>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-xl-4\">\r\n    <ni-card [bgColor]=\"''\" class=\"chart-card\">\r\n      <div class=\"chart\">\r\n        <canvas\r\n          baseChart\r\n          [data]=\"doughnutChartData\"\r\n          [colors]=\"doughnutChartColors\"\r\n          [labels]=\"doughnutChartLabels\"\r\n          [legend]=\"false\"\r\n          [options]=\"doughnutChartOptions\"\r\n          [chartType]=\"doughnutChartType\"></canvas>\r\n      </div>\r\n      <div class=\"info\">\r\n        <div class=\"title\"><strong>466</strong> <small>Unresolved</small></div>\r\n        <div class=\"small\">Less than 30% unresolved issues</div>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-xl-4\">\r\n    <ni-card [bgColor]=\"''\" class=\"chart-card\">\r\n      <div class=\"chart\">\r\n        <canvas\r\n          baseChart\r\n          [data]=\"polarAreaChartData\"\r\n          [colors]=\"polarAreaChartColors\"\r\n          [labels]=\"polarAreaChartLabels\"\r\n          [legend]=\"false\"\r\n          [options]=\"polarAreaChartOptions\"\r\n          [chartType]=\"polarAreaChartType\"></canvas>\r\n      </div>\r\n      <div class=\"info\">\r\n        <div class=\"title\"><strong>1,547</strong> <small>Issues</small></div>\r\n        <div class=\"small\">8 issues are unassigned</div>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row mb-lg-4\">\r\n  <div class=\"col-lg-6 map-col mb-4 mb-lg-0\">\r\n    <ni-card [indents]=\"0\" class=\"mb-0\">\r\n      <agm-map [latitude]=\"lat\" [longitude]=\"lng\">\r\n        <agm-marker [latitude]=\"lat\" [longitude]=\"lng\"></agm-marker>\r\n      </agm-map>\r\n    </ni-card>\r\n    <div class=\"clearfix\"></div>\r\n  </div>\r\n\r\n  <div class=\"col-lg-6\">\r\n    <ni-card class=\"mb-lg-0\">\r\n      <canvas\r\n        baseChart\r\n        [datasets]=\"barChartData\"\r\n        [labels]=\"barChartLabels\"\r\n        [options]=\"barChartOptions\"\r\n        [legend]=\"barChartLegend\"\r\n        [chartType]=\"barChartType\"></canvas>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-6\">\r\n    <ni-card [title]=\"'Users'\" class=\"mb-lg-0\">\r\n      <md-list>\r\n        <md-list-item *ngFor=\"let message of messages\">\r\n          <img md-list-avatar src=\"{{ message.avatar }}\" width=\"40\" height=\"40\" alt=\"\">\r\n          <h3 md-line class=\"h3\">{{ message.from }}</h3>\r\n          <p md-line><i>\r\n            <span>{{message.subject}}</span>\r\n            <span> -- {{ message.content }}</span>\r\n          </i></p>\r\n        </md-list-item>\r\n      </md-list>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-lg-6\">\r\n    <ni-card [title]=\"'To do list'\" class=\"mb-0\">\r\n      <md-list>\r\n        <md-list-item *ngFor=\"let folder of folders\">\r\n          <md-icon md-list-avatar>{{folder.icon}}<ni-badge *ngIf=\"folder.badge\" [color]=\"'danger'\" [position]=\"'top-right'\">{{folder.badge}}</ni-badge></md-icon>\r\n          <h4 md-line>{{folder.name}}</h4>\r\n          <p md-line><i>{{folder.updated}}</i></p>\r\n        </md-list-item>\r\n      </md-list>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/widgets/widgets.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".map-col .ni-card {\n  height: 100%; }\n  .map-col .ni-card /deep/.card-wrap {\n    height: 100%; }\n    .map-col .ni-card /deep/.card-wrap .card-content {\n      height: 100%; }\n\n.sebm-google-map-container {\n  height: 100%;\n  min-height: 200px; }\n  .sebm-google-map-container /deep/.sebm-google-map-container-inner {\n    min-height: 200px; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/widgets/widgets.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageWidgetsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var BREADCRUMBS = [
-    {
-        title: 'Main',
-        link: '#'
-    },
-    {
-        title: 'Widgets',
-        link: ''
-    }
-];
-var messages = [
-    {
-        from: 'Nancy',
-        subject: 'HTML',
-        content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-        avatar: 'assets/content/avatar-4.jpg'
-    },
-    {
-        from: 'Mary',
-        subject: 'Css',
-        content: 'Lorem Ipsum has been the industrys standard',
-        avatar: 'assets/content/avatar-3.jpg'
-    },
-    {
-        from: 'Bobby',
-        subject: 'Angular 2',
-        content: 'It is a long established fact that a reader will be distracted by the readable content',
-        avatar: 'assets/content/avatar-2.jpg'
-    },
-    {
-        from: 'Roma',
-        subject: 'Type Script',
-        content: 'There are many variations of passages of',
-        avatar: 'assets/content/avatar-1.jpg'
-    },
-    {
-        from: 'Amanda',
-        subject: 'PHP',
-        content: 'Lorem Ipsum has been the industrys standard',
-        avatar: 'assets/content/avatar-5.jpg'
-    },
-    {
-        from: 'Tom',
-        subject: 'Sql',
-        content: 'There are many variations of passages of',
-        avatar: 'assets/content/avatar-6.jpg'
-    }
-];
-var folders = [
-    {
-        icon: 'android',
-        badge: false,
-        name: 'Android app',
-        updated: 'March 21, 2017'
-    },
-    {
-        icon: 'update',
-        badge: false,
-        name: 'Update plugins',
-        updated: 'March 19, 2017'
-    },
-    {
-        icon: 'bug_report',
-        badge: false,
-        name: 'Fix bugs',
-        updated: 'March 22, 2017'
-    },
-    {
-        icon: 'unarchive',
-        badge: false,
-        name: 'Create app design',
-        updated: 'March 25, 2017'
-    },
-    {
-        icon: 'content_copy',
-        badge: 8,
-        name: 'Create widgets',
-        updated: 'March 16, 2017'
-    },
-    {
-        icon: 'folder_open',
-        badge: false,
-        name: 'Documentation',
-        updated: 'March 28, 2017'
-    }
-];
-var PageWidgetsComponent = (function () {
-    function PageWidgetsComponent(_sharedService) {
-        this._sharedService = _sharedService;
-        this.pageTitle = 'Widgets';
-        this.breadcrumb = BREADCRUMBS;
-        this.lat = 50.4664212;
-        this.lng = 30.6;
-        this.messages = messages;
-        this.folders = folders;
-        // barChart
-        this.barChartOptions = {
-            scaleShowVerticalLines: false,
-            responsive: true,
-            responsiveAnimationDuration: 500
-        };
-        this.barChartLabels = [
-            '2012',
-            '2013',
-            '2014',
-            '2015',
-            '2016',
-            '2017'
-        ];
-        this.barChartType = 'bar';
-        this.barChartLegend = true;
-        this.barChartData = [
-            {
-                data: [59, 80, 81, 56, 55, 40],
-                label: 'Angular JS',
-                borderWidth: 1,
-                pointRadius: 1
-            },
-            {
-                data: [48, 40, 19, 86, 27, 90],
-                label: 'React JS',
-                borderWidth: 1,
-                pointRadius: 1
-            }
-        ];
-        // Pie
-        this.pieChartLabels = [
-            'Angular',
-            'PHP',
-            'HTML'
-        ];
-        this.pieChartData = [
-            300,
-            500,
-            100
-        ];
-        this.pieChartColors = [
-            {
-                backgroundColor: [
-                    "#778391",
-                    "#5dade0",
-                    "#3c4e62"
-                ],
-            }
-        ];
-        this.pieChartType = 'pie';
-        this.pieChartOptions = {
-            elements: {
-                arc: {
-                    borderWidth: 0
-                }
-            },
-            tooltips: false
-        };
-        //Doughnut
-        this.doughnutChartLabels = [
-            'Angular',
-            'PHP',
-            'HTML'
-        ];
-        this.doughnutChartData = [
-            350,
-            450,
-            100
-        ];
-        this.doughnutChartColors = [
-            {
-                backgroundColor: [
-                    "#778391",
-                    "#ff8c00",
-                    "#3c4e62"
-                ],
-            }
-        ];
-        this.doughnutChartType = 'doughnut';
-        this.doughnutChartOptions = {
-            elements: {
-                arc: {
-                    borderWidth: 0
-                }
-            },
-            tooltips: false
-        };
-        // PolarArea
-        this.polarAreaChartLabels = [
-            'Angular',
-            'PHP',
-            'HTML'
-        ];
-        this.polarAreaChartData = [
-            300,
-            400,
-            500
-        ];
-        this.polarAreaChartColors = [
-            {
-                backgroundColor: [
-                    "#778391",
-                    "#dc143c",
-                    "#3c4e62"
-                ],
-            }
-        ];
-        this.polarAreaChartType = 'polarArea';
-        this.polarAreaChartOptions = {
-            elements: {
-                arc: {
-                    borderWidth: 0
-                }
-            },
-            tooltips: false
-        };
-        this._sharedService.emitChange(this.pageTitle);
-    }
-    PageWidgetsComponent.prototype.ngOnInit = function () { };
-    PageWidgetsComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-widgets',
-            template: __webpack_require__("../../../../../src/app/pages/widgets/widgets.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/widgets/widgets.component.scss")]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
-    ], PageWidgetsComponent);
-    return PageWidgetsComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=widgets.component.js.map
-
-/***/ }),
-
 /***/ "../../../../../src/app/services/auth.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -10138,6 +4484,9 @@ var PageWidgetsComponent = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__("../../../../rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10147,6 +4496,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
 
 
 var AuthService = (function () {
@@ -10156,6 +4507,8 @@ var AuthService = (function () {
         this.isConfirm = false;
         this.confirmCode = '';
         this.confirmEmail = '';
+        this.langCode = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"]('en');
+        this.redirectPage = '';
     }
     AuthService.prototype.isLoggedIn = function () {
         return this.isLogged;
@@ -10165,7 +4518,7 @@ var AuthService = (function () {
     };
     AuthService.prototype.signup = function (data) {
         var _this = this;
-        var url = 'http://54.76.14.28:8888/create_account';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'create_account';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         params.set('email', data.email);
         params.set('first_name', data.fname);
@@ -10180,7 +4533,7 @@ var AuthService = (function () {
     };
     AuthService.prototype.login = function (data) {
         var _this = this;
-        var url = 'http://54.76.14.28:8888/login';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'login';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         params.set('email', data.email);
         params.set('password', data.password);
@@ -10188,7 +4541,7 @@ var AuthService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 _this.isLogged = true;
                 _this.isConfirm = false;
-                resolve(res.json().login_exist);
+                resolve(res.json().email_validated);
             });
         });
     };
@@ -10202,7 +4555,7 @@ var AuthService = (function () {
     };
     AuthService.prototype.validateEmail = function () {
         var _this = this;
-        var url = 'http://54.76.14.28:8888/validate_user_email';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'validate_user_email';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         params.set('email', this.confirmEmail);
         params.set('validation_code', this.confirmCode);
@@ -10215,6 +4568,9 @@ var AuthService = (function () {
                 console.log(err);
             });
         });
+    };
+    AuthService.prototype.changeLanguage = function (lang) {
+        this.langCode.next(lang);
     };
     AuthService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -10250,8 +4606,36 @@ var UserAccessGuardService = (function () {
     function UserAccessGuardService(authService) {
         this.authService = authService;
     }
-    UserAccessGuardService.prototype.canActivate = function () {
-        return this.authService.isLoggedIn();
+    UserAccessGuardService.prototype.canActivate = function (snapshot) {
+        var redirectData = snapshot.data['authGuardRedirect'];
+        if (typeof redirectData !== 'undefined' && this.authService.redirectPage !== '') {
+            if (redirectData === 'signup') {
+                return this.authService.redirectPage === 'signup' ? true : false;
+            }
+            else if (redirectData === 'confirm') {
+                return this.authService.redirectPage === 'confirm' && this.authService.isConfirmRequired() === true ? true : false;
+            }
+            else if (redirectData === 'forgot') {
+                return this.authService.redirectPage === 'forgot' ? true : false;
+            }
+            else if (redirectData === 'page404') {
+                return this.authService.redirectPage === 'page404' ? true : false;
+            }
+            else if (redirectData === 'page500') {
+                return this.authService.redirectPage === 'page500' ? true : false;
+            }
+            else {
+                return false;
+            }
+        }
+        else {
+            if (this.authService.isConfirmRequired() && redirectData === 'confirm') {
+                return true;
+            }
+            else {
+                return this.authService.isLoggedIn();
+            }
+        }
     };
     UserAccessGuardService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -10262,43 +4646,6 @@ var UserAccessGuardService = (function () {
 }());
 
 //# sourceMappingURL=user-access-guard.service.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/services/user-confirm-email.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserConfirmEmailService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var UserConfirmEmailService = (function () {
-    function UserConfirmEmailService(authService) {
-        this.authService = authService;
-    }
-    UserConfirmEmailService.prototype.canActivate = function () {
-        return this.authService.isConfirmRequired();
-    };
-    UserConfirmEmailService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__auth_service__["a" /* AuthService */]) === "function" && _a || Object])
-    ], UserConfirmEmailService);
-    return UserConfirmEmailService;
-    var _a;
-}());
-
-//# sourceMappingURL=user-confirm-email.service.js.map
 
 /***/ }),
 
@@ -10436,7 +4783,7 @@ var FooterComponent = (function () {
 /***/ "../../../../../src/app/ui/components/horizontal-navbar/horizontal-navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"navbar-wrap\">\r\n  <div class=\"navbar-button\" [ngClass]=\"{ 'open' : openedSidebar }\" (click)=\"openSidebar()\">\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n  </div>\r\n\r\n  <h1 class=\"page-title\">{{ title }}</h1>\r\n\r\n  <div class=\"nav-items\">\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <span class=\"icon sli-bell\"></span>\r\n        <span class=\"marker\"></span>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu\">\r\n        <h4 class=\"menu-title\">Notifications</h4>\r\n\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\">\r\n              <span class=\"icon sli-puzzle\"></span>\r\n              <div class=\"content\">\r\n                <span class=\"desc\">This is a new message for my dear friend <strong>Rob</strong>.</span>\r\n                <span class=\"date\">10 minutes ago</span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\">\r\n              <span class=\"icon sli-playlist\"></span>\r\n              <div class=\"content\">\r\n                <span class=\"desc\">Your site visits have increased <strong>15.5%</strong> more since the last week.</span>\r\n                <span class=\"date\">23 minutes ago</span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\">\r\n              <span class=\"icon sli-globe\"></span>\r\n              <div class=\"content\">\r\n                <span class=\"desc\">Server loaded by 98% please recover soon</span>\r\n                <span class=\"date\">25 minutes ago</span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\">\r\n              <span class=\"icon sli-feed\"></span>\r\n              <div class=\"content\">\r\n                <span class=\"desc\">We're looking to hire two more protypers to our team.</span>\r\n                <span class=\"date\">32 minutes ago</span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\">\r\n              <span class=\"icon sli-cup\"></span>\r\n              <div class=\"content\">\r\n                <span class=\"desc\">This is a new message for my dear friend <strong>Rob</strong>.</span>\r\n                <span class=\"date\">58 minutes ago</span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n\r\n        <div class=\"menu-footer\">\r\n          <a href=\"#\">View all notifications</a>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <span class=\"icon sli-event\"></span>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu\">\r\n        <h4 class=\"menu-title\">Events</h4>\r\n\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\">\r\n              <span class=\"icon sli-emotsmile\"></span>\r\n              <div class=\"content\">\r\n                <span class=\"desc\">This is a new message for my dear friend <strong>Rob</strong>.</span>\r\n                <span class=\"date\">2 minutes ago</span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\">\r\n              <span class=\"icon sli-layers\"></span>\r\n              <div class=\"content\">\r\n                <span class=\"desc\">This is a new message for my dear friend <strong>Rob</strong>.</span>\r\n                <span class=\"date\">14 minutes ago</span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\">\r\n              <span class=\"icon sli-graduation\"></span>\r\n              <div class=\"content\">\r\n                <span class=\"desc\">This is a new message for my dear friend <strong>Rob</strong>.</span>\r\n                <span class=\"date\">15 minutes ago</span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n\r\n        <div class=\"menu-footer\">\r\n          <a href=\"#\">View all events</a>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <span class=\"icon sli-bubbles\"></span>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu\">\r\n        <h4 class=\"menu-title\">You have 3 new messages</h4>\r\n\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\">\r\n              <img class=\"avatar\" src=\"assets/content/avatar-1.jpg\" width=\"42\" height=\"42\" alt=\"\">\r\n\r\n              <div class=\"content\">\r\n                <span class=\"meta\">\r\n                  <strong class=\"name\">Victor Jara</strong>\r\n                  <span class=\"date\">3 Apr</span>\r\n                </span>\r\n                <span class=\"desc\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, odio.</span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\">\r\n              <img class=\"avatar\" src=\"assets/content/avatar-4.jpg\" width=\"42\" height=\"42\" alt=\"\">\r\n              <div class=\"content\">\r\n                <span class=\"meta\">\r\n                  <strong class=\"name\">Nancy Allen</strong>\r\n                  <span class=\"date\">2 Apr</span>\r\n                </span>\r\n                <span class=\"desc\">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\">\r\n              <img class=\"avatar\" src=\"assets/content/avatar-3.jpg\" width=\"42\" height=\"42\" alt=\"\">\r\n              <div class=\"content\">\r\n                <span class=\"meta\">\r\n                  <strong class=\"name\">Emma Watson</strong>\r\n                  <span class=\"date\">1 Apr</span>\r\n                </span>\r\n                <span class=\"desc\">Lorem ipsum dolor sit amet, consectetur adipisicing.</span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <div class=\"avatar\"><img src=\"assets/content/avatar-2.jpg\" width=\"40\" height=\"40\" alt=\"\"></div>\r\n        <div class=\"name\">Justin Adams</div>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu mini-menu\">\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-home\"></span> My Account</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-user\"></span> Profile</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"/default-layout/calendar\"><span class=\"icon sli-calendar\"></span> Calendar</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-settings\"></span> Settings</a>\r\n          </li>\r\n          <li>\r\n            <a [routerLink]=\"'/'\"><span class=\"icon sli-logout\"></span> Log Out</a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"items-overlay\" (click)=\"close($event)\"></div>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"navbar-wrap\">\r\n  <div class=\"navbar-button\" [ngClass]=\"{ 'open' : openedSidebar }\" (click)=\"openSidebar()\">\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n  </div>\r\n\r\n  <h1 class=\"page-title\">{{ title }}</h1>\r\n\r\n  <div class=\"nav-items\">\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\">Payment</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\">Create new group</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button [mdMenuTriggerFor]=\"menu\" color=\"accent\">Group List</button>\r\n      <md-menu #menu=\"mdMenu\">\r\n        <button *ngFor=\"let group of groupList\" md-menu-item>\r\n          <span>{{group}}</span>\r\n        </button>\r\n      </md-menu>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-select [placeholder]=\"'Group list'\" (ngModelChange)=\"changeLanguage()\" [(ngModel)]=\"langCode\">\r\n        <md-option *ngFor=\"let lang of languages\" [value]=\"lang.code\">\r\n          {{ lang.code.toUpperCase() }}\r\n        </md-option>\r\n      </md-select>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <div class=\"avatar\"><img src=\"assets/content/avatar-2.jpg\" width=\"40\" height=\"40\" alt=\"\"></div>\r\n        <div class=\"name\">Justin Adams</div>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu mini-menu\">\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-home\"></span> My Account</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-user\"></span> Profile</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"/default-layout/calendar\"><span class=\"icon sli-calendar\"></span> Calendar</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-settings\"></span> Settings</a>\r\n          </li>\r\n          <li>\r\n            <a [routerLink]=\"'/'\"><span class=\"icon sli-logout\"></span> Log Out</a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"items-overlay\" (click)=\"close($event)\"></div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -10464,6 +4811,9 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HorizontalNavbarComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_translate__ = __webpack_require__("../../../../ng2-translate/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__settings_menu__ = __webpack_require__("../../../../../src/settings/menu.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10474,11 +4824,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var HorizontalNavbarComponent = (function () {
-    function HorizontalNavbarComponent() {
+    function HorizontalNavbarComponent(translate, auth) {
+        var _this = this;
+        this.translate = translate;
+        this.auth = auth;
         this.sidebarState = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.languages = __WEBPACK_IMPORTED_MODULE_3__settings_menu__["a" /* LANGUAGES */];
+        this.langCode = 'en';
+        this.groupList = ['First', 'Second'];
         this.openedSidebar = false;
         this.showOverlay = false;
+        translate.use('en');
+        this.auth.langCode.subscribe(function (code) {
+            translate.use(code);
+            _this.langCode = code;
+        });
     }
     HorizontalNavbarComponent.prototype.ngOnInit = function () { };
     HorizontalNavbarComponent.prototype.open = function (event) {
@@ -10489,7 +4853,6 @@ var HorizontalNavbarComponent = (function () {
             items[i].classList.remove('opened');
         }
         clickedComponent.classList.add('opened');
-        //Add class 'show-overlay'
         this.showOverlay = true;
     };
     HorizontalNavbarComponent.prototype.close = function (event) {
@@ -10499,12 +4862,15 @@ var HorizontalNavbarComponent = (function () {
         for (var i = 0; i < items.length; i++) {
             items[i].classList.remove('opened');
         }
-        //Remove class 'show-overlay'
         this.showOverlay = false;
     };
     HorizontalNavbarComponent.prototype.openSidebar = function () {
         this.openedSidebar = !this.openedSidebar;
         this.sidebarState.emit();
+    };
+    HorizontalNavbarComponent.prototype.changeLanguage = function () {
+        this.translate.use(this.langCode);
+        this.auth.changeLanguage(this.langCode);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
@@ -10528,9 +4894,10 @@ var HorizontalNavbarComponent = (function () {
                 '[class.show-overlay]': 'showOverlay'
             }
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ng2_translate__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ng2_translate__["c" /* TranslateService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _b || Object])
     ], HorizontalNavbarComponent);
     return HorizontalNavbarComponent;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=horizontal-navbar.component.js.map
@@ -10601,7 +4968,7 @@ var LogoComponent = (function () {
 /***/ "../../../../../src/app/ui/components/menu/menu.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"main-menu\">\n  <ul>\n    <li\n      class=\"menu-item\"\n      *ngFor=\"let item of menuItems\"\n      [ngClass]=\"getLiClasses(item, rla.isActive)\"\n      #rla=\"routerLinkActive\"\n      routerLinkActive=\"active\"\n      [routerLinkActiveOptions]=\"{exact:true}\"\n    >\n      <div *ngIf=\"item.groupTitle; then group else default\"></div>\n\n      <!-- Group title -->\n      <ng-template #group>\n        <span class=\"group-title\">{{ item.title }}</span>\n      </ng-template>\n      <!-- end Group title -->\n\n      <!-- Default item -->\n      <ng-template #default>\n        <div *ngIf=\"!item.sub; then simple else sub\"></div>\n\n        <ng-template #simple>\n          <a href=\"#\" class=\"item-link\" routerLink=\"{{ item.routing }}\" (click)=\"toggle($event, item, this)\">\n            <span class=\"text\">{{ item.title }}</span>\n\n            <span\n              class=\"item-badge\"\n              *ngIf=\"item.badge && item.badge.text\"\n              [ngStyle]=\"getStyles(item.badge)\"\n            >{{ item.badge.text }}</span>\n\n            <span class=\"icon\">\n              <i class=\"icon-wrap {{ item.icon.class }}\" *ngIf=\"item.icon && item.icon.class\" [ngStyle]=\"getStyles(item.icon)\"></i>\n            </span>\n          </a>\n        </ng-template>\n\n        <ng-template #sub>\n          <!-- Item with sub -->\n          <a href=\"#\" class=\"item-link\" (click)=\"toggle($event, item, this)\">\n            <span class=\"text\">{{ item.title }}</span>\n\n            <span\n              class=\"item-badge\"\n              *ngIf=\"item.badge && item.badge.text\"\n              [ngStyle]=\"getStyles(item.badge)\"\n            >{{ item.badge.text }}</span>\n\n            <span class=\"caret\" *ngIf=\"item.sub\"></span>\n\n            <span class=\"icon\">\n              <i class=\"icon-wrap {{ item.icon.class }}\" *ngIf=\"item.icon && item.icon.class\" [ngStyle]=\"getStyles(item.icon)\"></i>\n            </span>\n          </a>\n\n          <!-- Menu sub -->\n          <ul class=\"sub\" *ngIf=\"!item.groupTitle && item.sub\">\n            <li\n              class=\"menu-item\"\n              *ngFor=\"let itemSub of item.sub\"\n              [ngClass]=\"getLiClasses(itemSub, rla.isActive)\"\n              #rla=\"routerLinkActive\"\n              routerLinkActive=\"active\"\n            >\n              <a href=\"#\" routerLink=\"{{ itemSub.routing }}\" class=\"item-link\">\n                <span class=\"text\">{{ itemSub.title }}</span>\n              </a>\n            </li>\n          </ul>\n        </ng-template>\n      </ng-template>\n    </li>\n  </ul>\n</nav>"
+module.exports = "<nav class=\"main-menu\">\n  <div class=\"text-center pt-3 pb-3\">\n      <img src=\"assets/content/person-4.jpg\" class=\"circle\" width=\"150\" height=\"150\" alt=\"\">      \n  </div>\n  <ul>\n    <li\n      class=\"menu-item\"\n      *ngFor=\"let item of menuItems\"\n      [ngClass]=\"getLiClasses(item, rla.isActive)\"\n      #rla=\"routerLinkActive\"\n      routerLinkActive=\"active\"\n      [routerLinkActiveOptions]=\"{exact:true}\"\n    >\n      <div *ngIf=\"item.groupTitle; then group else default\"></div>\n\n      <!-- Group title -->\n      <ng-template #group>\n        <span class=\"group-title\">{{ item.title }}</span>\n      </ng-template>\n      <!-- end Group title -->\n\n      <!-- Default item -->\n      <ng-template #default>\n        <div *ngIf=\"!item.sub; then simple else sub\"></div>\n\n        <ng-template #simple>\n          <a href=\"#\" class=\"item-link\" routerLink=\"{{ item.routing }}\" (click)=\"toggle($event, item, this)\">\n            <span class=\"text\">{{ item.title }}</span>\n\n            <span\n              class=\"item-badge\"\n              *ngIf=\"item.badge && item.badge.text\"\n              [ngStyle]=\"getStyles(item.badge)\"\n            >{{ item.badge.text }}</span>\n\n            <span class=\"icon\">\n              <i class=\"icon-wrap {{ item.icon.class }}\" *ngIf=\"item.icon && item.icon.class\" [ngStyle]=\"getStyles(item.icon)\"></i>\n            </span>\n          </a>\n        </ng-template>\n\n        <ng-template #sub>\n          <!-- Item with sub -->\n          <a href=\"#\" class=\"item-link\" (click)=\"toggle($event, item, this)\">\n            <span class=\"text\">{{ item.title }}</span>\n\n            <span\n              class=\"item-badge\"\n              *ngIf=\"item.badge && item.badge.text\"\n              [ngStyle]=\"getStyles(item.badge)\"\n            >{{ item.badge.text }}</span>\n\n            <span class=\"caret\" *ngIf=\"item.sub\"></span>\n\n            <span class=\"icon\">\n              <i class=\"icon-wrap {{ item.icon.class }}\" *ngIf=\"item.icon && item.icon.class\" [ngStyle]=\"getStyles(item.icon)\"></i>\n            </span>\n          </a>\n\n          <!-- Menu sub -->\n          <ul class=\"sub\" *ngIf=\"!item.groupTitle && item.sub\">\n            <li\n              class=\"menu-item\"\n              *ngFor=\"let itemSub of item.sub\"\n              [ngClass]=\"getLiClasses(itemSub, rla.isActive)\"\n              #rla=\"routerLinkActive\"\n              routerLinkActive=\"active\"\n            >\n              <a href=\"#\" routerLink=\"{{ itemSub.routing }}\" class=\"item-link\">\n                <span class=\"text\">{{ itemSub.title }}</span>\n              </a>\n            </li>\n          </ul>\n        </ng-template>\n      </ng-template>\n    </li>\n  </ul>\n</nav>"
 
 /***/ }),
 
@@ -10737,7 +5104,7 @@ var MenuService = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MENUITEMS; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__settings_menu__ = __webpack_require__("../../../../../src/settings/menu.ts");
 
-var MENUITEMS = __WEBPACK_IMPORTED_MODULE_0__settings_menu__["a" /* MENU */];
+var MENUITEMS = __WEBPACK_IMPORTED_MODULE_0__settings_menu__["b" /* MENU */];
 //# sourceMappingURL=mock-menu-items.js.map
 
 /***/ }),
@@ -10812,13 +5179,14 @@ var VerticalNavbarComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_horizontal_navbar_horizontal_navbar_component__ = __webpack_require__("../../../../../src/app/ui/components/horizontal-navbar/horizontal-navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_vertical_navbar_vertical_navbar_component__ = __webpack_require__("../../../../../src/app/ui/components/vertical-navbar/vertical-navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_addition_navbar_addition_navbar_component__ = __webpack_require__("../../../../../src/app/ui/components/addition-navbar/addition-navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_logo_logo_component__ = __webpack_require__("../../../../../src/app/ui/components/logo/logo.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_menu_menu_component__ = __webpack_require__("../../../../../src/app/ui/components/menu/menu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_footer_footer_component__ = __webpack_require__("../../../../../src/app/ui/components/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_horizontal_navbar_horizontal_navbar_component__ = __webpack_require__("../../../../../src/app/ui/components/horizontal-navbar/horizontal-navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_vertical_navbar_vertical_navbar_component__ = __webpack_require__("../../../../../src/app/ui/components/vertical-navbar/vertical-navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_addition_navbar_addition_navbar_component__ = __webpack_require__("../../../../../src/app/ui/components/addition-navbar/addition-navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_logo_logo_component__ = __webpack_require__("../../../../../src/app/ui/components/logo/logo.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_menu_menu_component__ = __webpack_require__("../../../../../src/app/ui/components/menu/menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_footer_footer_component__ = __webpack_require__("../../../../../src/app/ui/components/footer/footer.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10836,62 +5204,64 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var UIModule = (function () {
     function UIModule() {
     }
     UIModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__components_horizontal_navbar_horizontal_navbar_component__["a" /* HorizontalNavbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__components_vertical_navbar_vertical_navbar_component__["a" /* VerticalNavbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__components_addition_navbar_addition_navbar_component__["a" /* AdditionNavbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__components_logo_logo_component__["a" /* LogoComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__components_menu_menu_component__["a" /* MenuComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__components_footer_footer_component__["a" /* FooterComponent */]
+                __WEBPACK_IMPORTED_MODULE_6__components_horizontal_navbar_horizontal_navbar_component__["a" /* HorizontalNavbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__components_vertical_navbar_vertical_navbar_component__["a" /* VerticalNavbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__components_addition_navbar_addition_navbar_component__["a" /* AdditionNavbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__components_logo_logo_component__["a" /* LogoComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__components_menu_menu_component__["a" /* MenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__components_footer_footer_component__["a" /* FooterComponent */]
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_5__components_horizontal_navbar_horizontal_navbar_component__["a" /* HorizontalNavbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__components_vertical_navbar_vertical_navbar_component__["a" /* VerticalNavbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__components_addition_navbar_addition_navbar_component__["a" /* AdditionNavbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__components_logo_logo_component__["a" /* LogoComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__components_menu_menu_component__["a" /* MenuComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__components_footer_footer_component__["a" /* FooterComponent */]
+                __WEBPACK_IMPORTED_MODULE_6__components_horizontal_navbar_horizontal_navbar_component__["a" /* HorizontalNavbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__components_vertical_navbar_vertical_navbar_component__["a" /* VerticalNavbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__components_addition_navbar_addition_navbar_component__["a" /* AdditionNavbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__components_logo_logo_component__["a" /* LogoComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__components_menu_menu_component__["a" /* MenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__components_footer_footer_component__["a" /* FooterComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
                 __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* RouterModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["b" /* MdAutocompleteModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["c" /* MdButtonModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["d" /* MdButtonToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["e" /* MdCardModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["f" /* MdCheckboxModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["g" /* MdChipsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["h" /* MdCoreModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["i" /* MdDatepickerModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["k" /* MdDialogModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["m" /* MdExpansionModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["n" /* MdGridListModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["o" /* MdIconModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["p" /* MdInputModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["q" /* MdListModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["r" /* MdMenuModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["s" /* MdNativeDateModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["t" /* MdPaginatorModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["u" /* MdProgressBarModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["v" /* MdProgressSpinnerModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["w" /* MdRadioModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["x" /* MdRippleModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["y" /* MdSelectModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["z" /* MdSidenavModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["B" /* MdSliderModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["A" /* MdSlideToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["D" /* MdSnackBarModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["E" /* MdSortModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["F" /* MdTableModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["G" /* MdTabsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["H" /* MdToolbarModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_material__["I" /* MdTooltipModule */]
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["a" /* MdAutocompleteModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["b" /* MdButtonModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["c" /* MdButtonToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["d" /* MdCardModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["e" /* MdCheckboxModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["f" /* MdChipsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["g" /* MdCoreModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["h" /* MdDatepickerModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["j" /* MdDialogModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["l" /* MdExpansionModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["m" /* MdGridListModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["n" /* MdIconModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["o" /* MdInputModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["p" /* MdListModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["q" /* MdMenuModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["r" /* MdNativeDateModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["s" /* MdPaginatorModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["t" /* MdProgressBarModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["u" /* MdProgressSpinnerModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["v" /* MdRadioModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["w" /* MdRippleModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["x" /* MdSelectModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["y" /* MdSidenavModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["A" /* MdSliderModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["z" /* MdSlideToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["B" /* MdSnackBarModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["C" /* MdSortModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["D" /* MdTableModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["E" /* MdTabsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["F" /* MdToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["G" /* MdTooltipModule */],
+                __WEBPACK_IMPORTED_MODULE_4__angular_forms__["FormsModule"]
             ]
         })
     ], UIModule);
@@ -10926,7 +5296,8 @@ module.exports = __webpack_require__.p + "signup-bg.81e23c8b8d4a46fb6187.jpg";
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 var environment = {
-    production: false
+    production: false,
+    serverUrl: 'https://www.rollincome.com:444/'
 };
 //# sourceMappingURL=environment.js.map
 
@@ -10963,407 +5334,48 @@ Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* pl
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MENU; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return MENU; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LANGUAGES; });
 var MENU = [
     {
-        title: 'Main',
-        groupTitle: true
+        title: 'Dashboard',
+        routing: '/default-layout/dashboard'
     },
     {
-        title: 'Dashboards',
-        icon: {
-            class: 'fa fa-home',
-            bg: '#ea8080',
-            color: 'rgba(0,0,0,.87)'
-        },
-        routing: '/default-layout/dashboard',
+        title: 'Groups',
         badge: {
-            text: 'New',
-            color: '#fff',
-            bg: '#E57373'
-        },
-        sub: [
-            {
-                title: 'Dashboard v1',
-                routing: '/default-layout/dashboard'
-            },
-            {
-                title: 'Dashboard v2',
-                routing: '/default-layout/dashboard-2'
-            },
-            {
-                title: 'Dashboard v3',
-                routing: '/default-layout/dashboard-3'
-            }
-        ]
-    },
-    {
-        title: 'Widgets',
-        icon: {
-            class: 'fa fa-th',
-            bg: '#E1BEE7',
-            color: 'rgba(0,0,0,.87)'
-        },
-        routing: '/default-layout/widgets'
-    },
-    {
-        title: 'Calendar',
-        icon: {
-            class: 'fa fa-calendar',
-            bg: '#C5CAE9',
-            color: 'rgba(0,0,0,.87)'
-        },
-        routing: '/default-layout/calendar'
-    },
-    {
-        title: 'Layouts',
-        icon: {
-            class: 'fa fa-columns',
-            bg: '#FF8A65',
-            color: 'rgba(0,0,0,.87)'
-        },
-        routing: '/default-layout/dashboard',
-        badge: {
-            text: '5',
+            text: '0',
             color: '#fff',
             bg: '#43A047'
         },
-        sub: [
-            {
-                title: 'Default',
-                routing: '/default-layout/layouts'
-            },
-            {
-                title: 'Compressed menu',
-                routing: '/default-c-layout/layouts'
-            },
-            {
-                title: 'Boxed',
-                routing: '/boxed-layout/layouts'
-            },
-            {
-                title: 'Boxed compressed menu',
-                routing: '/boxed-c-layout/layouts'
-            },
-            {
-                title: 'Extra',
-                routing: '/extra-layout/sign-in'
-            }
-        ]
+        routing: '/default-layout/groups'
     },
     {
-        title: 'UI Elements',
-        groupTitle: true
+        title: 'Transactions',
+        routing: '/default-layout/transactions'
     },
     {
-        title: 'Material components',
-        icon: {
-            class: 'fa fa-briefcase',
-            bg: '#B3E5FC',
-            color: 'rgba(0,0,0,.87)'
-        },
-        sub: [
-            {
-                title: 'Button',
-                routing: '/default-layout/button'
-            },
-            {
-                title: 'Card',
-                routing: '/default-layout/card'
-            },
-            {
-                title: 'Checkbox',
-                routing: '/default-layout/checkbox'
-            },
-            {
-                title: 'Chips',
-                routing: '/default-layout/chips'
-            },
-            {
-                title: 'Dialog',
-                routing: '/default-layout/dialog'
-            },
-            {
-                title: 'Icon',
-                routing: '/default-layout/icon'
-            },
-            {
-                title: 'Input',
-                routing: '/default-layout/input'
-            },
-            {
-                title: 'List',
-                routing: '/default-layout/list'
-            },
-            {
-                title: 'Menu',
-                routing: '/default-layout/menu'
-            },
-            {
-                title: 'Progress bar',
-                routing: '/default-layout/progress-bar'
-            },
-            {
-                title: 'Progress spinner',
-                routing: '/default-layout/progress-spinner'
-            },
-            {
-                title: 'Radio Button',
-                routing: '/default-layout/radio-button'
-            },
-            {
-                title: 'Select',
-                routing: '/default-layout/select'
-            },
-            {
-                title: 'Slider',
-                routing: '/default-layout/slider'
-            },
-            {
-                title: 'Slide toggle',
-                routing: '/default-layout/slide-toggle'
-            },
-            {
-                title: 'Snackbar',
-                routing: '/default-layout/snackbar'
-            },
-            {
-                title: 'Tabs',
-                routing: '/default-layout/tabs'
-            },
-            {
-                title: 'Toolbar',
-                routing: '/default-layout/toolbar'
-            },
-            {
-                title: 'Tooltip',
-                routing: '/default-layout/tooltip'
-            }
-        ]
+        title: 'Requests',
+        routing: '/default-layout/requests'
     },
     {
-        title: 'Theme components',
-        icon: {
-            class: 'fa fa-diamond',
-            bg: '#B2DFDB',
-            color: 'rgba(0,0,0,.87)'
-        },
-        sub: [
-            {
-                title: 'Alerts',
-                routing: '/default-layout/ni-alerts'
-            },
-            {
-                title: 'Badges',
-                routing: '/default-layout/ni-badges'
-            },
-            {
-                title: 'Breadcrumbs',
-                routing: '/default-layout/ni-breadcrumbs'
-            },
-            {
-                title: 'Buttons',
-                routing: '/default-layout/ni-buttons'
-            },
-            {
-                title: 'Cards',
-                routing: '/default-layout/ni-cards'
-            },
-            {
-                title: 'Chat',
-                routing: '/default-layout/ni-chat'
-            },
-            {
-                title: 'Files',
-                routing: '/default-layout/ni-files'
-            },
-            {
-                title: 'Horizontal timeline',
-                routing: '/default-layout/ni-h-timeline'
-            },
-        ]
+        title: 'Profile',
+        routing: '/default-layout/profile'
     },
     {
-        title: 'Typography',
-        icon: {
-            class: 'fa fa-font',
-            bg: '#F0F4C3',
-            color: 'rgba(0,0,0,.87)'
-        },
-        routing: '/default-layout/typography'
+        title: 'Simulation',
+        routing: '/default-layout/simulation'
     },
     {
-        title: 'Tables',
-        icon: {
-            class: 'fa fa-table',
-            bg: '#FFE082',
-            color: 'rgba(0,0,0,.87)'
-        },
-        sub: [
-            {
-                title: 'Simple table',
-                routing: '/default-layout/simple-table'
-            },
-            {
-                title: 'Editing table',
-                routing: '/default-layout/editing-table'
-            },
-            {
-                title: 'Filtering table',
-                routing: '/default-layout/filtering-table'
-            },
-            {
-                title: 'Pagination table',
-                routing: '/default-layout/pagination-table'
-            },
-            {
-                title: 'Bootstrap tables',
-                routing: '/default-layout/bootstrap-tables'
-            }
-        ]
-    },
-    {
-        title: 'Forms',
-        icon: {
-            class: 'fa fa-check-square-o',
-            bg: '#FFCCBC',
-            color: 'rgba(0,0,0,.87)'
-        },
-        sub: [
-            {
-                title: 'Form Elements',
-                routing: '/default-layout/form-elements'
-            },
-            {
-                title: 'Form Layout',
-                routing: '/default-layout/form-layout'
-            },
-            {
-                title: 'Form Validation',
-                routing: '/default-layout/form-validation'
-            }
-        ]
-    },
-    {
-        title: 'Charts',
-        icon: {
-            class: 'fa fa-pie-chart',
-            bg: '#BCAAA4',
-            color: 'rgba(0,0,0,.87)'
-        },
-        sub: [
-            {
-                title: 'Ng2 Charts',
-                routing: '/default-layout/ng2-charts'
-            },
-            {
-                title: 'Ngx Charts',
-                routing: '/default-layout/ngx-charts'
-            },
-            {
-                title: 'Amcharts',
-                routing: '/default-layout/amcharts'
-            }
-        ]
-    },
-    {
-        title: 'Maps',
-        icon: {
-            class: 'fa fa-map-marker',
-            bg: '#9E9E9E',
-            color: 'rgba(0,0,0,.87)'
-        },
-        sub: [
-            {
-                title: 'Google map',
-                routing: '/default-layout/google-map'
-            },
-            {
-                title: 'Leaflet map',
-                routing: '/default-layout/leaflet-map'
-            }
-        ]
-    },
-    {
-        title: 'Pages',
-        groupTitle: true
-    },
-    {
-        title: 'Pages service',
-        icon: {
-            class: 'fa fa-edit',
-            bg: '#FFAB91',
-            color: 'rgba(0,0,0,.87)'
-        },
-        sub: [
-            {
-                title: 'About Us',
-                routing: '/default-layout/about-us'
-            },
-            {
-                title: 'FAQ',
-                routing: '/default-layout/faq'
-            },
-            {
-                title: 'TimeLine',
-                routing: '/default-layout/timeline'
-            },
-            {
-                title: 'Invoice',
-                routing: '/default-layout/invoice'
-            }
-        ]
-    },
-    {
-        title: 'Extra pages',
-        icon: {
-            class: 'fa fa-clone',
-            bg: '#B0BEC5',
-            color: 'rgba(0,0,0,.87)'
-        },
-        sub: [
-            {
-                title: 'Sign In v1',
-                routing: '/extra-layout/sign-in'
-            },
-            {
-                title: 'Sign In v2',
-                routing: '/default-layout/sign-in'
-            },
-            {
-                title: 'Sign In with Social',
-                routing: '/extra-layout/sign-in-social'
-            },
-            {
-                title: 'Sign Up v1',
-                routing: '/extra-layout/sign-up'
-            },
-            {
-                title: 'Sign Up v2',
-                routing: '/default-layout/sign-up'
-            },
-            {
-                title: 'Forgot password',
-                routing: '/extra-layout/forgot'
-            },
-            {
-                title: 'Confirm email',
-                routing: '/extra-layout/confirm'
-            },
-            {
-                title: '404',
-                routing: '/extra-layout/page-404'
-            },
-            {
-                title: '500',
-                routing: '/extra-layout/page-500'
-            },
-            {
-                title: 'Not found',
-                routing: '/default-layout/not-found'
-            }
-        ]
+        title: 'About us',
+        routing: '/default-layout/aboutus'
     }
+];
+var LANGUAGES = [
+    { code: 'en', value: 'ENGLISH' },
+    { code: 'fr', value: 'FRENCH' },
+    { code: 'pt', value: 'PORTUGUESE' },
+    { code: 'es', value: 'SPANISH' }
 ];
 //# sourceMappingURL=menu.js.map
 

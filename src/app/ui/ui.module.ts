@@ -2,6 +2,7 @@ import { NgModule }                  from '@angular/core';
 import { CommonModule }              from '@angular/common';
 import { HttpModule }                from '@angular/http';
 import { RouterModule }              from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import {
   MdAutocompleteModule,
   MdButtonModule,
@@ -94,7 +95,8 @@ import { FooterComponent }           from './components/footer/footer.component'
     MdTableModule,
     MdTabsModule,
     MdToolbarModule,
-    MdTooltipModule
+    MdTooltipModule,
+    FormsModule    
   ]
 })
 export class UIModule { }

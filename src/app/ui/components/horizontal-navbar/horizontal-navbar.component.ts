@@ -1,4 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { TranslateService } from 'ng2-translate';
+import { AuthService } from '../../../services/auth.service';
+import { LANGUAGES } from '../../../../settings/menu';
 
 @Component({
   moduleId: module.id,
@@ -15,10 +18,19 @@ export class HorizontalNavbarComponent implements OnInit {
   @Input() openedSidebar: boolean;
   @Output() sidebarState = new EventEmitter();
   showOverlay: boolean;
+  languages = LANGUAGES;
+  langCode = 'en';
+  groupList = ['First', 'Second'];
 
-  constructor() {
+  constructor(private translate: TranslateService, private auth: AuthService) {
     this.openedSidebar = false;
     this.showOverlay = false;
+    translate.use('en');
+
+    this.auth.langCode.subscribe(code => {
+      translate.use(code);
+      this.langCode = code;
+    });
   }
 
   ngOnInit() {}
@@ -34,7 +46,6 @@ export class HorizontalNavbarComponent implements OnInit {
     }
     clickedComponent.classList.add('opened');
 
-    //Add class 'show-overlay'
     this.showOverlay = true;
   }
 
@@ -48,12 +59,16 @@ export class HorizontalNavbarComponent implements OnInit {
       items[i].classList.remove('opened');
     }
 
-    //Remove class 'show-overlay'
     this.showOverlay = false;
   }
 
   openSidebar() {
     this.openedSidebar = !this.openedSidebar;
     this.sidebarState.emit();
+  }
+
+  changeLanguage() {
+    this.translate.use(this.langCode);
+    this.auth.changeLanguage(this.langCode);
   }
 }

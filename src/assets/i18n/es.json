@@ -6,5 +6,22 @@
   "forgotPassword": "¿Olvidaste tu contraseña?",
   "keepSigned": "Manténme conectado",
   "email": "Email",
-  "selectLanguage": "Seleccione el idioma"
+  "selectLanguage": "Seleccione el idioma",
+  "firstname": "Nombre de pila",
+  "confirmPass": "Confirmar contraseña",
+  "gender": "Género",
+  "male": "Masculino",
+  "female": "Hembra",
+  "firstnameValid1": "Debe incluir un nombre.",
+  "firstnameValid2": "Su primer nombre debe tener al menos 5 caracteres.",
+  "firstnameValid3": "Su primer nombre no puede tener más de 10 caracteres.",
+  "emailValid1": "Debe incluir una dirección de correo electrónico.",
+  "emailValid2": "Debe incluir una dirección de correo electrónico válida.",
+  "passwordValid1": "Debe incluir contraseña.",
+  "confirmpasswordValid1": "Debe incluir confirmación de contraseña.",
+  "confirmpasswordValid2": "Las contraseñas no son matemáticas.",
+  "genderValid1": "Debe seleccionar un género.",
+  "agreeTermsofService": "He leído y acepto los términos del servicio.",
+  "agreeTermsValid": "Usted debe aceptar los términos del servicio.",
+  "alreadyHaveAccount": "¿Ya tienes una cuenta?"
 }

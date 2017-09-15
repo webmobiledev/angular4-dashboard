@@ -7,3 +7,12 @@
 @import './helpers';
 @import './components/material-components';
 @import './components/bootstrap';
+
+horizontal-navbar {
+  .mat-select {
+    width: 30px;
+    .mat-select-value {
+      color: white !important;
+    }
+  }
+}

@@ -12,160 +12,28 @@
 
   <div class="nav-items">
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
-      <a href="#" (click)="open($event)" class="nav-link">
-        <span class="icon sli-bell"></span>
-        <span class="marker"></span>
-      </a>
-
-      <div class="dropdown-menu">
-        <h4 class="menu-title">Notifications</h4>
-
-        <ul>
-          <li>
-            <a href="#">
-              <span class="icon sli-puzzle"></span>
-              <div class="content">
-                <span class="desc">This is a new message for my dear friend <strong>Rob</strong>.</span>
-                <span class="date">10 minutes ago</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="icon sli-playlist"></span>
-              <div class="content">
-                <span class="desc">Your site visits have increased <strong>15.5%</strong> more since the last week.</span>
-                <span class="date">23 minutes ago</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="icon sli-globe"></span>
-              <div class="content">
-                <span class="desc">Server loaded by 98% please recover soon</span>
-                <span class="date">25 minutes ago</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="icon sli-feed"></span>
-              <div class="content">
-                <span class="desc">We're looking to hire two more protypers to our team.</span>
-                <span class="date">32 minutes ago</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="icon sli-cup"></span>
-              <div class="content">
-                <span class="desc">This is a new message for my dear friend <strong>Rob</strong>.</span>
-                <span class="date">58 minutes ago</span>
-              </div>
-            </a>
-          </li>
-        </ul>
-
-        <div class="menu-footer">
-          <a href="#">View all notifications</a>
-        </div>
-      </div>
+      <button md-raised-button color="accent">Payment</button>
     </div>
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
-      <a href="#" (click)="open($event)" class="nav-link">
-        <span class="icon sli-event"></span>
-      </a>
-
-      <div class="dropdown-menu">
-        <h4 class="menu-title">Events</h4>
-
-        <ul>
-          <li>
-            <a href="#">
-              <span class="icon sli-emotsmile"></span>
-              <div class="content">
-                <span class="desc">This is a new message for my dear friend <strong>Rob</strong>.</span>
-                <span class="date">2 minutes ago</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="icon sli-layers"></span>
-              <div class="content">
-                <span class="desc">This is a new message for my dear friend <strong>Rob</strong>.</span>
-                <span class="date">14 minutes ago</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="icon sli-graduation"></span>
-              <div class="content">
-                <span class="desc">This is a new message for my dear friend <strong>Rob</strong>.</span>
-                <span class="date">15 minutes ago</span>
-              </div>
-            </a>
-          </li>
-        </ul>
-
-        <div class="menu-footer">
-          <a href="#">View all events</a>
-        </div>
-      </div>
+      <button md-raised-button color="accent">Create new group</button>
     </div>
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
-      <a href="#" (click)="open($event)" class="nav-link">
-        <span class="icon sli-bubbles"></span>
-      </a>
+      <button md-raised-button [mdMenuTriggerFor]="menu" color="accent">Group List</button>
+      <md-menu #menu="mdMenu">
+        <button *ngFor="let group of groupList" md-menu-item>
+          <span>{{group}}</span>
+        </button>
+      </md-menu>
+    </div>
 
-      <div class="dropdown-menu">
-        <h4 class="menu-title">You have 3 new messages</h4>
-
-        <ul>
-          <li>
-            <a href="#">
-              <img class="avatar" src="assets/content/avatar-1.jpg" width="42" height="42" alt="">
-
-              <div class="content">
-                <span class="meta">
-                  <strong class="name">Victor Jara</strong>
-                  <span class="date">3 Apr</span>
-                </span>
-                <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, odio.</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img class="avatar" src="assets/content/avatar-4.jpg" width="42" height="42" alt="">
-              <div class="content">
-                <span class="meta">
-                  <strong class="name">Nancy Allen</strong>
-                  <span class="date">2 Apr</span>
-                </span>
-                <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img class="avatar" src="assets/content/avatar-3.jpg" width="42" height="42" alt="">
-              <div class="content">
-                <span class="meta">
-                  <strong class="name">Emma Watson</strong>
-                  <span class="date">1 Apr</span>
-                </span>
-                <span class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing.</span>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
+    <div class="nav-item" [ngClass]="{ 'opened' : false }">
+      <md-select [placeholder]="'Group list'" (ngModelChange)="changeLanguage()" [(ngModel)]="langCode">
+        <md-option *ngFor="let lang of languages" [value]="lang.code">
+          {{ lang.code.toUpperCase() }}
+        </md-option>
+      </md-select>
     </div>
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">

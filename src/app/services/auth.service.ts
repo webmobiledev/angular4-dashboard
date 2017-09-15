@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, URLSearchParams } from '@angular/http';
+import { environment } from '../../environments/environment';
+import { BehaviorSubject } from 'rxjs/Rx';
 
 @Injectable()
 export class AuthService {
@@ -7,6 +9,8 @@ export class AuthService {
   isConfirm = false;
   confirmCode = '';
   confirmEmail = '';
+  langCode = new BehaviorSubject('en');
+  redirectPage = '';
   constructor(private http: Http) { }
 
   isLoggedIn() {
@@ -18,7 +22,7 @@ export class AuthService {
   }
 
   signup(data) {
-    const url = 'http://54.76.14.28:8888/create_account';
+    const url = environment.serverUrl + 'create_account';
     let params: URLSearchParams = new URLSearchParams();
     params.set('email', data.email);
     params.set('first_name', data.fname);
@@ -33,7 +37,7 @@ export class AuthService {
   }
 
   login(data) {
-    const url = 'http://54.76.14.28:8888/login';
+    const url = environment.serverUrl + 'login';
     let params: URLSearchParams = new URLSearchParams();
     params.set('email', data.email);
     params.set('password', data.password);
@@ -41,7 +45,7 @@ export class AuthService {
       this.http.get(url, {search: params}).subscribe(res => {
         this.isLogged = true;
         this.isConfirm = false;
-        resolve(res.json().login_exist);
+        resolve(res.json().email_validated);
       });
     });
   }
@@ -56,7 +60,7 @@ export class AuthService {
   }
 
   validateEmail() {
-    const url = 'http://54.76.14.28:8888/validate_user_email';
+    const url = environment.serverUrl + 'validate_user_email';
     let params: URLSearchParams = new URLSearchParams();
     params.set('email', this.confirmEmail);
     params.set('validation_code', this.confirmCode);
@@ -69,5 +73,9 @@ export class AuthService {
         console.log(err);
       });
     });
+  }
+
+  changeLanguage(lang) {
+    this.langCode.next(lang);
   }
 }

@@ -11,6 +11,7 @@ export class PageConfirmComponent implements OnInit {
   constructor(private auth: AuthService, private router: Router) { }
 
   ngOnInit() {
+    console.log("aaaa");
     this.auth.validateEmail().then(res => {
       if (res === 'yes') {
         this.router.navigate(['/default-layout/dashboard']);
