@@ -8,7 +8,7 @@ import { SharedService } from '../../../layouts/shared-service';
   styleUrls: ['./aboutus.component.scss']
 })
 export class PageAboutusComponent implements OnInit {
-  pageTitle: string = 'About Us';
+  pageTitle: string = 'aboutus';
 
   constructor( private _sharedService: SharedService ) {
     this._sharedService.emitChange(this.pageTitle);

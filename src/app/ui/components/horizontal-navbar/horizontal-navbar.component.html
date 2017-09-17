@@ -8,7 +8,7 @@
     <span></span>
   </div>
 
-  <h1 class="page-title">{{ title }}</h1>
+  <h1 class="page-title">{{ title | translate }}</h1>
 
   <div class="nav-items">
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
@@ -20,20 +20,33 @@
     </div>
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
-      <button md-raised-button [mdMenuTriggerFor]="menu" color="accent">Group List</button>
-      <md-menu #menu="mdMenu">
-        <button *ngFor="let group of groupList" md-menu-item>
-          <span>{{group}}</span>
-        </button>
-      </md-menu>
+      <a href="#" (click)="open($event)" class="nav-link btn-group">Group List</a>
+      <div class="dropdown-menu">
+        <ul>
+          <li *ngFor="let group of groupList">
+            <a>
+              <div class="content">
+                <span class="desc"><strong>{{group}}</strong></span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
-      <md-select [placeholder]="'Group list'" (ngModelChange)="changeLanguage()" [(ngModel)]="langCode">
-        <md-option *ngFor="let lang of languages" [value]="lang.code">
-          {{ lang.code.toUpperCase() }}
-        </md-option>
-      </md-select>
+      <a href="#" (click)="open($event)" class="nav-link">{{langCode.toUpperCase()}}</a>
+      <div class="dropdown-menu">
+        <ul>
+          <li *ngFor="let lang of languages">
+            <a (click)="changeLanguage(lang.code)">
+              <div class="content">
+                <span class="desc"><strong>{{lang.code.toUpperCase()}}</strong></span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">

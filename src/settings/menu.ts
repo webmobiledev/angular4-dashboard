@@ -1,10 +1,10 @@
 export const MENU: any = [
   {
-    title: 'Dashboard',
+    title: 'dashboard',
     routing: '/default-layout/dashboard'
   },
   {
-    title: 'Groups',
+    title: 'groups',
     badge: {
       text: '0',
       color: '#fff',
@@ -13,23 +13,23 @@ export const MENU: any = [
     routing: '/default-layout/groups'
   },
   {
-    title: 'Transactions',
+    title: 'transactions',
     routing: '/default-layout/transactions'
   },
   {
-    title: 'Requests',
+    title: 'requests',
     routing: '/default-layout/requests'
   },
   {
-    title: 'Profile',
+    title: 'profile',
     routing: '/default-layout/profile'
   },
   {
-    title: 'Simulation',
+    title: 'simulation',
     routing: '/default-layout/simulation'
   },
   {
-    title: 'About us',
+    title: 'aboutus',
     routing: '/default-layout/aboutus'
   }
 ];

@@ -8,6 +8,7 @@ import { TranslateModule, TranslateLoader, TranslateStaticLoader, TranslateServi
 
 import { UserAccessGuardService } from './services/user-access-guard.service';
 import { AuthService } from './services/auth.service';
+import { ApiService } from './services/api.service';
 
 import { routes, AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -43,6 +44,7 @@ export function translateLoader(http: Http) {
   providers: [
     UserAccessGuardService,
     AuthService,
+    ApiService,
     TranslateService,
     {
       provide: TranslateLoader,

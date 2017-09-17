@@ -23,5 +23,12 @@
   "genderValid1": "Vous devez sélectionner un genre.",
   "agreeTermsofService": "J'ai lu et j'accepte les termes du service.",
   "agreeTermsValid": "Vous devez accepter les conditions d'utilisation.",
-  "alreadyHaveAccount": "Vous avez déjà un compte?"
+  "alreadyHaveAccount": "Vous avez déjà un compte?",
+  "dashboard": "Tableau de bord",
+  "groups": "Groupes",
+  "transactions": "Transactions",
+  "requests": "Demandes",
+  "profile": "Profil",
+  "simulation": "Simulation",
+  "aboutus": "À propos de nous"
 }

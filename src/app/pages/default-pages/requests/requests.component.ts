@@ -80,7 +80,7 @@ const timelineData: any[] = [
   styleUrls: ['./requests.component.scss']
 })
 export class PageRequestsComponent {
-  pageTitle: string = 'Requests';
+  pageTitle: string = 'requests';
   folders: any[] = folders;
   timelineData: any[] = timelineData;
   private chart: any;

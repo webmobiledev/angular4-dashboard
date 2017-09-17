@@ -36,6 +36,7 @@ import {
   MdToolbarModule,
   MdTooltipModule
 } from '@angular/material';
+import { TranslateModule } from 'ng2-translate';
 
 import { HorizontalNavbarComponent } from './components/horizontal-navbar/horizontal-navbar.component';
 import { VerticalNavbarComponent }   from './components/vertical-navbar/vertical-navbar.component';
@@ -96,7 +97,8 @@ import { FooterComponent }           from './components/footer/footer.component'
     MdTabsModule,
     MdToolbarModule,
     MdTooltipModule,
-    FormsModule    
+    FormsModule,
+    TranslateModule
   ]
 })
 export class UIModule { }

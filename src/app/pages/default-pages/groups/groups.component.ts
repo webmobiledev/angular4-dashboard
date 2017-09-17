@@ -41,7 +41,7 @@ const timelineData: any[] = [
   styleUrls: ['./groups.component.scss']
 })
 export class PageGroupsComponent implements OnInit {
-  pageTitle: string = 'Groups';
+  pageTitle: string = 'groups';
   timelineData: any[] = timelineData;
   private chart: any;
 

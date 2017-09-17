@@ -45,6 +45,7 @@ export class AuthService {
       this.http.get(url, {search: params}).subscribe(res => {
         this.isLogged = true;
         this.isConfirm = false;
+        localStorage.setItem('token', res.json().token);
         resolve(res.json().email_validated);
       });
     });
@@ -76,6 +77,7 @@ export class AuthService {
   }
 
   changeLanguage(lang) {
+    console.log(lang);
     this.langCode.next(lang);
   }
 }

@@ -9,10 +9,8 @@
 @import './components/bootstrap';
 
 horizontal-navbar {
-  .mat-select {
-    width: 30px;
-    .mat-select-value {
-      color: white !important;
-    }
+
+  .btn-group {
+    font-size: 12px !important;
   }
 }

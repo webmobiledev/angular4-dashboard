@@ -85,7 +85,7 @@ const folders: any[] = [
   styleUrls: ['./profile.component.scss']
 })
 export class PageProfileComponent implements OnInit {
-  pageTitle: string = 'Profile';
+  pageTitle: string = 'profile';
   lat: number = 50.4664212;
   lng: number = 30.6;
   messages = messages;

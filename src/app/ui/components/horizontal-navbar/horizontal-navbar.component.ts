@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { TranslateService } from 'ng2-translate';
 import { AuthService } from '../../../services/auth.service';
 import { LANGUAGES } from '../../../../settings/menu';
 
@@ -22,13 +21,11 @@ export class HorizontalNavbarComponent implements OnInit {
   langCode = 'en';
   groupList = ['First', 'Second'];
 
-  constructor(private translate: TranslateService, private auth: AuthService) {
+  constructor(private auth: AuthService) {
     this.openedSidebar = false;
     this.showOverlay = false;
-    translate.use('en');
 
     this.auth.langCode.subscribe(code => {
-      translate.use(code);
       this.langCode = code;
     });
   }
@@ -67,8 +64,8 @@ export class HorizontalNavbarComponent implements OnInit {
     this.sidebarState.emit();
   }
 
-  changeLanguage() {
-    this.translate.use(this.langCode);
+  changeLanguage(code) {
+    this.langCode = code;
     this.auth.changeLanguage(this.langCode);
   }
 }

@@ -38,7 +38,7 @@ const timelineData: any[] = [
   styleUrls: ['./transactions.component.scss']
 })
 export class PageTransactionsComponent implements OnInit {
-  pageTitle: string = 'Transactions';
+  pageTitle: string = 'transactions';
   timelineData: any[] = timelineData;
   private chart: any;
   activeUser: User = {

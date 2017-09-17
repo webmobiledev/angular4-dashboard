@@ -211,19 +211,21 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_translate__ = __webpack_require__("../../../../ng2-translate/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_user_access_guard_service__ = __webpack_require__("../../../../../src/app/services/user-access-guard.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ui_ui_module__ = __webpack_require__("../../../../../src/app/ui/ui.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ni_components_ni_components_module__ = __webpack_require__("../../../../../src/app/ni-components/ni-components.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_pages_module__ = __webpack_require__("../../../../../src/app/pages/pages.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__layouts_default_default_component__ = __webpack_require__("../../../../../src/app/layouts/default/default.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__layouts_extra_extra_component__ = __webpack_require__("../../../../../src/app/layouts/extra/extra.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ui_ui_module__ = __webpack_require__("../../../../../src/app/ui/ui.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ni_components_ni_components_module__ = __webpack_require__("../../../../../src/app/ni-components/ni-components.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_pages_module__ = __webpack_require__("../../../../../src/app/pages/pages.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__layouts_default_default_component__ = __webpack_require__("../../../../../src/app/layouts/default/default.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__layouts_extra_extra_component__ = __webpack_require__("../../../../../src/app/layouts/extra/extra.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -249,25 +251,26 @@ var AppModule = (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__layouts_default_default_component__["a" /* DefaultLayoutComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__layouts_extra_extra_component__["a" /* ExtraLayoutComponent */]
+                __WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__layouts_default_default_component__["a" /* DefaultLayoutComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__layouts_extra_extra_component__["a" /* ExtraLayoutComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
                 __WEBPACK_IMPORTED_MODULE_3__angular_forms__["FormsModule"],
                 __WEBPACK_IMPORTED_MODULE_3__angular_forms__["ReactiveFormsModule"],
                 __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forRoot(__WEBPACK_IMPORTED_MODULE_9__app_routing_module__["b" /* routes */], { useHash: false }),
+                __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forRoot(__WEBPACK_IMPORTED_MODULE_10__app_routing_module__["b" /* routes */], { useHash: false }),
                 __WEBPACK_IMPORTED_MODULE_6_ng2_translate__["b" /* TranslateModule */].forRoot(),
-                __WEBPACK_IMPORTED_MODULE_9__app_routing_module__["a" /* AppRoutingModule */],
-                __WEBPACK_IMPORTED_MODULE_11__ui_ui_module__["a" /* UIModule */],
-                __WEBPACK_IMPORTED_MODULE_12__ni_components_ni_components_module__["a" /* NiComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_pages_module__["a" /* PagesModule */]
+                __WEBPACK_IMPORTED_MODULE_10__app_routing_module__["a" /* AppRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_12__ui_ui_module__["a" /* UIModule */],
+                __WEBPACK_IMPORTED_MODULE_13__ni_components_ni_components_module__["a" /* NiComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_pages_module__["a" /* PagesModule */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_7__services_user_access_guard_service__["a" /* UserAccessGuardService */],
                 __WEBPACK_IMPORTED_MODULE_8__services_auth_service__["a" /* AuthService */],
+                __WEBPACK_IMPORTED_MODULE_9__services_api_service__["a" /* ApiService */],
                 __WEBPACK_IMPORTED_MODULE_6_ng2_translate__["c" /* TranslateService */],
                 {
                     provide: __WEBPACK_IMPORTED_MODULE_6_ng2_translate__["a" /* TranslateLoader */],
@@ -275,7 +278,7 @@ var AppModule = (function () {
                     deps: [__WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Http */]]
                 }
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -1785,7 +1788,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var PageAboutusComponent = (function () {
     function PageAboutusComponent(_sharedService) {
         this._sharedService = _sharedService;
-        this.pageTitle = 'About Us';
+        this.pageTitle = 'aboutus';
         // lineChart
         this.lineChartData = [
             {
@@ -1885,7 +1888,7 @@ var PageAboutusComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-lg-8\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'Request'\">\r\n            <md-list>\r\n              <md-list-item>Pepper</md-list-item>\r\n              <md-list-item>Salt</md-list-item>\r\n              <md-list-item>Paprika</md-list-item>\r\n            </md-list>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <ni-card [title]=\"'Next payment'\">\r\n            <md-list>\r\n              <md-list-item>Pepper</md-list-item>\r\n              <md-list-item>Salt</md-list-item>\r\n              <md-list-item>Paprika</md-list-item>\r\n            </md-list>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <ni-card [title]=\"'Request'\">\r\n            <md-list>\r\n              <md-list-item>Pepper</md-list-item>\r\n              <md-list-item>Salt</md-list-item>\r\n              <md-list-item>Paprika</md-list-item>\r\n            </md-list>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-4\">\r\n      <ni-card [title]=\"'Time Line(Last)'\">\r\n        <md-list>\r\n          <md-list-item>Pepper</md-list-item>\r\n          <md-list-item>Salt</md-list-item>\r\n          <md-list-item>Paprika</md-list-item>\r\n        </md-list>\r\n      </ni-card>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-lg-7\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'Request'\">\r\n            <div class=\"table-responsive\">\r\n              <table class=\"table\">\r\n                <thead class=\"thead-default\">\r\n                <tr>\r\n                  <th>From</th>\r\n                  <th>Description</th>\r\n                  <th>Action</th>\r\n                </tr>\r\n                </thead>\r\n                <tbody *ngFor=\"let user of userRequests\">\r\n                  <tr></tr>\r\n                </tbody>\r\n              </table>\r\n            </div>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'Next payment'\">\r\n            <div class=\"table-responsive\">\r\n              <table class=\"table\">\r\n                <thead class=\"thead-default\">\r\n                <tr>\r\n                  <th>Date</th>\r\n                  <th>Type</th>\r\n                  <th>Fund name</th>\r\n                </tr>\r\n                </thead>\r\n                <tbody *ngFor=\"let user of userRequests\">\r\n                  <tr></tr>\r\n                </tbody>\r\n              </table>\r\n            </div>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-5\">\r\n      <ni-card [title]=\"'Time Line'\">\r\n        <ni-h-timeline [showYears]=\"true\" [showDate]=\"true\" [align]=\"'between'\" [data]=\"timelineData\"></ni-h-timeline>\r\n      </ni-card>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -1914,7 +1917,7 @@ module.exports = module.exports.toString();
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageDashboardComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__ = __webpack_require__("../../../../@amcharts/amcharts3-angular/es2015/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1927,412 +1930,110 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var folders = [
-    {
-        icon: 'android',
-        badge: false,
-        name: 'Android app',
-        updated: 'July 21, 2017'
-    },
-    {
-        icon: 'update',
-        badge: false,
-        name: 'Update plugins',
-        updated: 'July 19, 2017'
-    },
-    {
-        icon: 'bug_report',
-        badge: false,
-        name: 'Fix bugs',
-        updated: 'July 22, 2017'
-    },
-    {
-        icon: 'unarchive',
-        badge: false,
-        name: 'Create app design',
-        updated: 'July 25, 2017'
-    },
-    {
-        icon: 'content_copy',
-        badge: 8,
-        name: 'Create widgets',
-        updated: 'July 16, 2017'
-    },
-    {
-        icon: 'folder_open',
-        badge: false,
-        name: 'Documentation',
-        updated: 'July 28, 2017'
-    },
-    {
-        icon: 'folder_open',
-        badge: false,
-        name: 'Upload',
-        updated: 'July 30, 2017'
-    }
-];
-var timelineData = [
-    {
-        'timeline': [
-            {
-                'content': "Aenean lacinia bibendum nulla sed consectetur.",
-                'pointColor': '#ea8080'
-            },
-            {
-                'content': "Aenean lacinia bibendum nulla.",
-                'pointColor': '#915035'
-            },
-            {
-                'content': "Lorem ipsum dolor sit amet.",
-                'pointColor': '#B925FF'
-            },
-            {
-                'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-                'pointColor': '#C5CAE9'
-            },
-            {
-                'content': "Lorem ipsum dolor sit.",
-                'pointColor': '#FF8A65'
-            }
-        ]
-    }
-];
 var PageDashboardComponent = (function () {
-    function PageDashboardComponent(AmCharts, _sharedService) {
-        this.AmCharts = AmCharts;
+    function PageDashboardComponent(_sharedService, apiService) {
+        var _this = this;
         this._sharedService = _sharedService;
-        this.pageTitle = 'Dashboard';
-        this.folders = folders;
-        this.timelineData = timelineData;
+        this.apiService = apiService;
+        this.pageTitle = 'dashboard';
+        this.timelineData = [
+            {
+                'label': '2017',
+                'timeline': [
+                    {
+                        'date': '2 hours ago',
+                        'content': "Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+                        'pointColor': '#ea8080'
+                    },
+                    {
+                        'date': '5 hours ago',
+                        'content': "Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.\n           Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+                        'pointColor': '#915035'
+                    },
+                    {
+                        'date': '8 hours ago',
+                        'content': "Lorem ipsum dolor sit amet.",
+                        'pointColor': '#B925FF'
+                    },
+                    {
+                        'date': '2 days ago',
+                        'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+                        'pointColor': '#C5CAE9'
+                    },
+                    {
+                        'date': '3 days ago',
+                        'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis doloremque earum itaque laborum, nobis non ratione rerum similique vel?",
+                        'pointColor': '#FF8A65'
+                    },
+                    {
+                        'date': '5 days ago',
+                        'content': "Lorem ipsum dolor sit.",
+                        'pointColor': '#B3E5FC'
+                    },
+                    {
+                        'date': 'July 10, 2017',
+                        'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate.",
+                        'pointColor': '#B2DFDB'
+                    },
+                    {
+                        'date': 'July 7, 2017',
+                        'content': "Lorem ipsum dolor sit amet, consectetur.",
+                        'pointColor': '#3E5EFF'
+                    }
+                ]
+            },
+            {
+                'label': '2016',
+                'timeline': [
+                    {
+                        'date': 'December 27, 2016',
+                        'content': "Lorem ipsum dolor sit.",
+                        'pointColor': '#FFC6E6'
+                    },
+                    {
+                        'date': 'December 20, 2016',
+                        'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.",
+                        'pointColor': '#FFA78D'
+                    },
+                    {
+                        'date': 'December 17, 2016',
+                        'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate.",
+                        'pointColor': '#F0F4C3'
+                    },
+                    {
+                        'date': 'December 12, 2016',
+                        'content': "Lorem ipsum dolor sit amet, consectetur.",
+                        'pointColor': '#FFC6F1'
+                    },
+                    {
+                        'date': 'December 2, 2016',
+                        'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.",
+                        'pointColor': '#488034'
+                    },
+                ]
+            }
+        ];
         this._sharedService.emitChange(this.pageTitle);
+        apiService.getUserRequest(1).then(function (data) {
+            console.log('userrequest', data);
+            _this.userRequests = data.data;
+        });
+        apiService.getNextPayment(1).then(function (data) {
+            console.log('nextpayment', data);
+            _this.nextPayment = data.data;
+        });
+        apiService.getTimelineData(1).then(function (data) {
+            console.log('timeline', data);
+            // this.timelineData = data.data;
+        });
     }
-    PageDashboardComponent.prototype.ngOnInit = function () {
-        this.chart = this.AmCharts.makeChart('amchart-1', {
-            'type': 'serial',
-            'theme': 'light',
-            'dataDateFormat': 'YYYY-MM-DD',
-            'dataProvider': [
-                {
-                    'date': '2012-01-01',
-                    'distance': 227,
-                    'townName': 'New York',
-                    'townName2': 'New York',
-                    'townSize': 25,
-                    'latitude': 40.71,
-                    'duration': 408
-                }, {
-                    'date': '2012-01-02',
-                    'distance': 371,
-                    'townName': 'Washington',
-                    'townSize': 14,
-                    'latitude': 38.89,
-                    'duration': 482
-                }, {
-                    'date': '2012-01-03',
-                    'distance': 433,
-                    'townName': 'Wilmington',
-                    'townSize': 6,
-                    'latitude': 34.22,
-                    'duration': 562
-                }, {
-                    'date': '2012-01-04',
-                    'distance': 345,
-                    'townName': 'Jacksonville',
-                    'townSize': 7,
-                    'latitude': 30.35,
-                    'duration': 379
-                }, {
-                    'date': '2012-01-05',
-                    'distance': 480,
-                    'townName': 'Miami',
-                    'townName2': 'Miami',
-                    'townSize': 10,
-                    'latitude': 25.83,
-                    'duration': 501
-                }, {
-                    'date': '2012-01-06',
-                    'distance': 386,
-                    'townName': 'Tallahassee',
-                    'townSize': 7,
-                    'latitude': 30.46,
-                    'duration': 443
-                }, {
-                    'date': '2012-01-07',
-                    'distance': 348,
-                    'townName': 'New Orleans',
-                    'townSize': 10,
-                    'latitude': 29.94,
-                    'duration': 405
-                }, {
-                    'date': '2012-01-08',
-                    'distance': 238,
-                    'townName': 'Houston',
-                    'townName2': 'Houston',
-                    'townSize': 16,
-                    'latitude': 29.76,
-                    'duration': 309
-                }, {
-                    'date': '2012-01-09',
-                    'distance': 218,
-                    'townName': 'Dalas',
-                    'townSize': 17,
-                    'latitude': 32.8,
-                    'duration': 287
-                }, {
-                    'date': '2012-01-10',
-                    'distance': 349,
-                    'townName': 'Oklahoma City',
-                    'townSize': 11,
-                    'latitude': 35.49,
-                    'duration': 485
-                }, {
-                    'date': '2012-01-11',
-                    'distance': 603,
-                    'townName': 'Kansas City',
-                    'townSize': 10,
-                    'latitude': 39.1,
-                    'duration': 890
-                }, {
-                    'date': '2012-01-12',
-                    'distance': 534,
-                    'townName': 'Denver',
-                    'townName2': 'Denver',
-                    'townSize': 18,
-                    'latitude': 39.74,
-                    'duration': 810
-                }, {
-                    'date': '2012-01-13',
-                    'townName': 'Salt Lake City',
-                    'townSize': 12,
-                    'distance': 425,
-                    'duration': 670,
-                    'latitude': 40.75,
-                    'alpha': 0.4
-                }, {
-                    'date': '2012-01-14',
-                    'latitude': 36.1,
-                    'duration': 470,
-                    'townName': 'Las Vegas',
-                    'bulletClass': 'lastBullet'
-                }
-            ],
-            'addClassNames': true,
-            'startDuration': 1,
-            'categoryField': 'date',
-            'categoryAxis': {
-                'parseDates': true,
-                'minPeriod': 'DD',
-                'autoGridCount': false,
-                'gridCount': 50,
-                'gridAlpha': 0.1,
-                'gridColor': '#FFFFFF',
-                'axisColor': '#555555',
-                'dateFormats': [{
-                        'period': 'DD',
-                        'format': 'DD'
-                    }, {
-                        'period': 'WW',
-                        'format': 'MMM DD'
-                    }, {
-                        'period': 'MM',
-                        'format': 'MMM'
-                    }, {
-                        'period': 'YYYY',
-                        'format': 'YYYY'
-                    }]
-            },
-            'valueAxes': [{
-                    'id': 'a1',
-                    'title': 'distance',
-                    'gridAlpha': 0,
-                    'axisAlpha': 0
-                }, {
-                    'id': 'a2',
-                    'position': 'right',
-                    'gridAlpha': 0,
-                    'axisAlpha': 0,
-                    'labelsEnabled': false
-                }],
-            'graphs': [{
-                    'id': 'g1',
-                    'valueField': 'distance',
-                    'title': 'distance',
-                    'type': 'column',
-                    'fillAlphas': 0.9,
-                    'valueAxis': 'a1',
-                    'balloonText': '[[value]] miles',
-                    'legendValueText': '[[value]] mi',
-                    'legendPeriodValueText': 'total: [[value.sum]] mi',
-                    'lineColor': '#B3E5FC',
-                    'alphaField': 'alpha'
-                }, {
-                    'id': 'g2',
-                    'valueField': 'latitude',
-                    'classNameField': 'bulletClass',
-                    'title': 'latitude/city',
-                    'type': 'line',
-                    'valueAxis': 'a2',
-                    'lineColor': '#d50000',
-                    'lineThickness': 1,
-                    'legendValueText': '[[value]]/[[description]]',
-                    'descriptionField': 'townName',
-                    'bullet': 'round',
-                    'bulletSizeField': 'townSize',
-                    'bulletBorderColor': '#ca0000',
-                    'bulletBorderAlpha': 1,
-                    'bulletBorderThickness': 2,
-                    'bulletColor': '#f2b3b3',
-                    'labelText': '[[townName2]]',
-                    'labelPosition': 'right',
-                    'balloonText': 'latitude:[[value]]',
-                    'showBalloon': true,
-                    'animationPlayed': true
-                }, {
-                    'id': 'g3',
-                    'title': 'duration',
-                    'valueField': 'duration',
-                    'type': 'line',
-                    'valueAxis': 'a3',
-                    'lineColor': '#64B5F6',
-                    'balloonText': '[[value]]',
-                    'lineThickness': 1,
-                    'legendValueText': '[[value]]',
-                    'bullet': 'square',
-                    'bulletBorderColor': '#64B5F6',
-                    'bulletBorderThickness': 1,
-                    'bulletBorderAlpha': 1,
-                    'dashLengthField': 'dashLength',
-                    'animationPlayed': true
-                }],
-            'chartCursor': {
-                'zoomable': false,
-                'categoryBalloonDateFormat': 'DD',
-                'cursorAlpha': 0,
-                'valueBalloonsEnabled': false
-            },
-            'legend': {
-                'bulletType': 'round',
-                'equalWidths': false,
-                'valueWidth': 120,
-                'useGraphSettings': true
-            }
-        });
-        this.chart = this.AmCharts.makeChart('amchart-2', {
-            'type': 'pie',
-            'theme': 'light',
-            'dataProvider': [
-                {
-                    'country': 'Lithuania',
-                    'litres': 501.9
-                }, {
-                    'country': 'Czech Republic',
-                    'litres': 301.9
-                }, {
-                    'country': 'Ireland',
-                    'litres': 201.1
-                }, {
-                    'country': 'Germany',
-                    'litres': 165.8
-                }, {
-                    'country': 'Australia',
-                    'litres': 139.9
-                }, {
-                    'country': 'Austria',
-                    'litres': 128.3
-                }, {
-                    'country': 'UK',
-                    'litres': 99
-                }, {
-                    'country': 'Belgium',
-                    'litres': 60
-                }, {
-                    'country': 'The Netherlands',
-                    'litres': 50
-                }
-            ],
-            'pullOutRadius': 0,
-            'labelRadius': -40,
-            'valueField': 'litres',
-            'titleField': 'country',
-            'labelText': '[[litres]]',
-            'balloon': {
-                'fixedPosition': true
-            }
-        });
-        this.chart = this.AmCharts.makeChart('amchart-3', {
-            'type': 'pie',
-            'theme': 'light',
-            'dataProvider': [
-                {
-                    'title': 'Chrome',
-                    'value': 70
-                }, {
-                    'title': 'Firefox',
-                    'value': 15
-                }, {
-                    'title': 'Opera',
-                    'value': 10
-                }, {
-                    'title': 'Safari',
-                    'value': 12
-                }, {
-                    'title': 'Edge',
-                    'value': 5
-                }
-            ],
-            'titleField': 'title',
-            'valueField': 'value',
-            'labelRadius': -40,
-            'radius': '46%',
-            'innerRadius': '60%',
-            'labelText': '[[title]]'
-        });
-        this.chart = this.AmCharts.makeChart('amchart-4', {
-            'type': 'radar',
-            'theme': 'light',
-            'dataProvider': [
-                {
-                    'country': 'Czech Republic',
-                    'litres': 156.9
-                }, {
-                    'country': 'Ireland',
-                    'litres': 131.1
-                }, {
-                    'country': 'Germany',
-                    'litres': 115.8
-                }, {
-                    'country': 'Australia',
-                    'litres': 109.9
-                }, {
-                    'country': 'Austria',
-                    'litres': 108.3
-                }, {
-                    'country': 'UK',
-                    'litres': 99
-                }
-            ],
-            'valueAxes': [{
-                    'axisTitleOffset': 20,
-                    'minimum': 0,
-                    'axisAlpha': 0.15
-                }],
-            'startDuration': 1,
-            'graphs': [{
-                    'balloonText': '[[value]] litres of beer per year',
-                    'bullet': 'round',
-                    'lineThickness': 2,
-                    'valueField': 'litres'
-                }],
-            'categoryField': 'country'
-        });
-    };
     PageDashboardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-dashboard',
             template: __webpack_require__("../../../../../src/app/pages/default-pages/dashboard/dashboard.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/default-pages/dashboard/dashboard.component.scss")]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
     ], PageDashboardComponent);
     return PageDashboardComponent;
     var _a, _b;
@@ -2422,7 +2123,7 @@ var PageGroupsComponent = (function () {
     function PageGroupsComponent(AmCharts, _sharedService) {
         this.AmCharts = AmCharts;
         this._sharedService = _sharedService;
-        this.pageTitle = 'Groups';
+        this.pageTitle = 'groups';
         this.timelineData = timelineData;
         this._sharedService.emitChange(this.pageTitle);
     }
@@ -2802,7 +2503,7 @@ var folders = [
 var PageProfileComponent = (function () {
     function PageProfileComponent(_sharedService) {
         this._sharedService = _sharedService;
-        this.pageTitle = 'Profile';
+        this.pageTitle = 'profile';
         this.lat = 50.4664212;
         this.lng = 30.6;
         this.messages = messages;
@@ -3062,7 +2763,7 @@ var PageRequestsComponent = (function () {
     function PageRequestsComponent(AmCharts, _sharedService) {
         this.AmCharts = AmCharts;
         this._sharedService = _sharedService;
-        this.pageTitle = 'Requests';
+        this.pageTitle = 'requests';
         this.folders = folders;
         this.timelineData = timelineData;
         this._sharedService.emitChange(this.pageTitle);
@@ -3449,7 +3150,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var PageSimulationComponent = (function () {
     function PageSimulationComponent(_sharedService) {
         this._sharedService = _sharedService;
-        this.pageTitle = 'Simulation';
+        this.pageTitle = 'simulation';
         this._sharedService.emitChange(this.pageTitle);
     }
     PageSimulationComponent.prototype.ngOnInit = function () { };
@@ -3544,7 +3245,7 @@ var PageTransactionsComponent = (function () {
     function PageTransactionsComponent(AmCharts, _sharedService) {
         this.AmCharts = AmCharts;
         this._sharedService = _sharedService;
-        this.pageTitle = 'Transactions';
+        this.pageTitle = 'transactions';
         this.timelineData = timelineData;
         this.activeUser = {
             name: 'Amanda Li',
@@ -4477,6 +4178,77 @@ var PagesModule = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/services/api.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ApiService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ApiService = (function () {
+    function ApiService(http) {
+        this.http = http;
+    }
+    ApiService.prototype.getUserRequest = function (groupId) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_user_requests';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        params.set('group_id', groupId);
+        params.set('token', localStorage.getItem('token'));
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            });
+        });
+    };
+    ApiService.prototype.getNextPayment = function (groupId) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_group_obligations';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        params.set('group_id', groupId);
+        params.set('token', localStorage.getItem('token'));
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            });
+        });
+    };
+    ApiService.prototype.getTimelineData = function (groupId) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_events';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        params.set('token', localStorage.getItem('token'));
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            });
+        });
+    };
+    ApiService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
+    ], ApiService);
+    return ApiService;
+    var _a;
+}());
+
+//# sourceMappingURL=api.service.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/services/auth.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4541,6 +4313,7 @@ var AuthService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 _this.isLogged = true;
                 _this.isConfirm = false;
+                localStorage.setItem('token', res.json().token);
                 resolve(res.json().email_validated);
             });
         });
@@ -4570,6 +4343,7 @@ var AuthService = (function () {
         });
     };
     AuthService.prototype.changeLanguage = function (lang) {
+        console.log(lang);
         this.langCode.next(lang);
     };
     AuthService = __decorate([
@@ -4783,7 +4557,7 @@ var FooterComponent = (function () {
 /***/ "../../../../../src/app/ui/components/horizontal-navbar/horizontal-navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"navbar-wrap\">\r\n  <div class=\"navbar-button\" [ngClass]=\"{ 'open' : openedSidebar }\" (click)=\"openSidebar()\">\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n  </div>\r\n\r\n  <h1 class=\"page-title\">{{ title }}</h1>\r\n\r\n  <div class=\"nav-items\">\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\">Payment</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\">Create new group</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button [mdMenuTriggerFor]=\"menu\" color=\"accent\">Group List</button>\r\n      <md-menu #menu=\"mdMenu\">\r\n        <button *ngFor=\"let group of groupList\" md-menu-item>\r\n          <span>{{group}}</span>\r\n        </button>\r\n      </md-menu>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-select [placeholder]=\"'Group list'\" (ngModelChange)=\"changeLanguage()\" [(ngModel)]=\"langCode\">\r\n        <md-option *ngFor=\"let lang of languages\" [value]=\"lang.code\">\r\n          {{ lang.code.toUpperCase() }}\r\n        </md-option>\r\n      </md-select>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <div class=\"avatar\"><img src=\"assets/content/avatar-2.jpg\" width=\"40\" height=\"40\" alt=\"\"></div>\r\n        <div class=\"name\">Justin Adams</div>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu mini-menu\">\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-home\"></span> My Account</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-user\"></span> Profile</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"/default-layout/calendar\"><span class=\"icon sli-calendar\"></span> Calendar</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-settings\"></span> Settings</a>\r\n          </li>\r\n          <li>\r\n            <a [routerLink]=\"'/'\"><span class=\"icon sli-logout\"></span> Log Out</a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"items-overlay\" (click)=\"close($event)\"></div>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"navbar-wrap\">\r\n  <div class=\"navbar-button\" [ngClass]=\"{ 'open' : openedSidebar }\" (click)=\"openSidebar()\">\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n  </div>\r\n\r\n  <h1 class=\"page-title\">{{ title | translate }}</h1>\r\n\r\n  <div class=\"nav-items\">\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\">Payment</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\">Create new group</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link btn-group\">Group List</a>\r\n      <div class=\"dropdown-menu\">\r\n        <ul>\r\n          <li *ngFor=\"let group of groupList\">\r\n            <a>\r\n              <div class=\"content\">\r\n                <span class=\"desc\"><strong>{{group}}</strong></span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">{{langCode.toUpperCase()}}</a>\r\n      <div class=\"dropdown-menu\">\r\n        <ul>\r\n          <li *ngFor=\"let lang of languages\">\r\n            <a (click)=\"changeLanguage(lang.code)\">\r\n              <div class=\"content\">\r\n                <span class=\"desc\"><strong>{{lang.code.toUpperCase()}}</strong></span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <div class=\"avatar\"><img src=\"assets/content/avatar-2.jpg\" width=\"40\" height=\"40\" alt=\"\"></div>\r\n        <div class=\"name\">Justin Adams</div>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu mini-menu\">\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-home\"></span> My Account</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-user\"></span> Profile</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"/default-layout/calendar\"><span class=\"icon sli-calendar\"></span> Calendar</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-settings\"></span> Settings</a>\r\n          </li>\r\n          <li>\r\n            <a [routerLink]=\"'/'\"><span class=\"icon sli-logout\"></span> Log Out</a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"items-overlay\" (click)=\"close($event)\"></div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -4811,9 +4585,8 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HorizontalNavbarComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_translate__ = __webpack_require__("../../../../ng2-translate/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__settings_menu__ = __webpack_require__("../../../../../src/settings/menu.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings_menu__ = __webpack_require__("../../../../../src/settings/menu.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4826,21 +4599,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var HorizontalNavbarComponent = (function () {
-    function HorizontalNavbarComponent(translate, auth) {
+    function HorizontalNavbarComponent(auth) {
         var _this = this;
-        this.translate = translate;
         this.auth = auth;
         this.sidebarState = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.languages = __WEBPACK_IMPORTED_MODULE_3__settings_menu__["a" /* LANGUAGES */];
+        this.languages = __WEBPACK_IMPORTED_MODULE_2__settings_menu__["a" /* LANGUAGES */];
         this.langCode = 'en';
         this.groupList = ['First', 'Second'];
         this.openedSidebar = false;
         this.showOverlay = false;
-        translate.use('en');
         this.auth.langCode.subscribe(function (code) {
-            translate.use(code);
             _this.langCode = code;
         });
     }
@@ -4868,8 +4637,8 @@ var HorizontalNavbarComponent = (function () {
         this.openedSidebar = !this.openedSidebar;
         this.sidebarState.emit();
     };
-    HorizontalNavbarComponent.prototype.changeLanguage = function () {
-        this.translate.use(this.langCode);
+    HorizontalNavbarComponent.prototype.changeLanguage = function (code) {
+        this.langCode = code;
         this.auth.changeLanguage(this.langCode);
     };
     __decorate([
@@ -4894,10 +4663,10 @@ var HorizontalNavbarComponent = (function () {
                 '[class.show-overlay]': 'showOverlay'
             }
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ng2_translate__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ng2_translate__["c" /* TranslateService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object])
     ], HorizontalNavbarComponent);
     return HorizontalNavbarComponent;
-    var _a, _b;
+    var _a;
 }());
 
 //# sourceMappingURL=horizontal-navbar.component.js.map
@@ -4968,7 +4737,7 @@ var LogoComponent = (function () {
 /***/ "../../../../../src/app/ui/components/menu/menu.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"main-menu\">\n  <div class=\"text-center pt-3 pb-3\">\n      <img src=\"assets/content/person-4.jpg\" class=\"circle\" width=\"150\" height=\"150\" alt=\"\">      \n  </div>\n  <ul>\n    <li\n      class=\"menu-item\"\n      *ngFor=\"let item of menuItems\"\n      [ngClass]=\"getLiClasses(item, rla.isActive)\"\n      #rla=\"routerLinkActive\"\n      routerLinkActive=\"active\"\n      [routerLinkActiveOptions]=\"{exact:true}\"\n    >\n      <div *ngIf=\"item.groupTitle; then group else default\"></div>\n\n      <!-- Group title -->\n      <ng-template #group>\n        <span class=\"group-title\">{{ item.title }}</span>\n      </ng-template>\n      <!-- end Group title -->\n\n      <!-- Default item -->\n      <ng-template #default>\n        <div *ngIf=\"!item.sub; then simple else sub\"></div>\n\n        <ng-template #simple>\n          <a href=\"#\" class=\"item-link\" routerLink=\"{{ item.routing }}\" (click)=\"toggle($event, item, this)\">\n            <span class=\"text\">{{ item.title }}</span>\n\n            <span\n              class=\"item-badge\"\n              *ngIf=\"item.badge && item.badge.text\"\n              [ngStyle]=\"getStyles(item.badge)\"\n            >{{ item.badge.text }}</span>\n\n            <span class=\"icon\">\n              <i class=\"icon-wrap {{ item.icon.class }}\" *ngIf=\"item.icon && item.icon.class\" [ngStyle]=\"getStyles(item.icon)\"></i>\n            </span>\n          </a>\n        </ng-template>\n\n        <ng-template #sub>\n          <!-- Item with sub -->\n          <a href=\"#\" class=\"item-link\" (click)=\"toggle($event, item, this)\">\n            <span class=\"text\">{{ item.title }}</span>\n\n            <span\n              class=\"item-badge\"\n              *ngIf=\"item.badge && item.badge.text\"\n              [ngStyle]=\"getStyles(item.badge)\"\n            >{{ item.badge.text }}</span>\n\n            <span class=\"caret\" *ngIf=\"item.sub\"></span>\n\n            <span class=\"icon\">\n              <i class=\"icon-wrap {{ item.icon.class }}\" *ngIf=\"item.icon && item.icon.class\" [ngStyle]=\"getStyles(item.icon)\"></i>\n            </span>\n          </a>\n\n          <!-- Menu sub -->\n          <ul class=\"sub\" *ngIf=\"!item.groupTitle && item.sub\">\n            <li\n              class=\"menu-item\"\n              *ngFor=\"let itemSub of item.sub\"\n              [ngClass]=\"getLiClasses(itemSub, rla.isActive)\"\n              #rla=\"routerLinkActive\"\n              routerLinkActive=\"active\"\n            >\n              <a href=\"#\" routerLink=\"{{ itemSub.routing }}\" class=\"item-link\">\n                <span class=\"text\">{{ itemSub.title }}</span>\n              </a>\n            </li>\n          </ul>\n        </ng-template>\n      </ng-template>\n    </li>\n  </ul>\n</nav>"
+module.exports = "<nav class=\"main-menu\">\n  <div class=\"text-center pt-3 pb-3\">\n      <img src=\"assets/content/person-4.jpg\" class=\"circle\" width=\"150\" height=\"150\" alt=\"\">      \n  </div>\n  <ul>\n    <li\n      class=\"menu-item\"\n      *ngFor=\"let item of menuItems\"\n      [ngClass]=\"getLiClasses(item, rla.isActive)\"\n      #rla=\"routerLinkActive\"\n      routerLinkActive=\"active\"\n      [routerLinkActiveOptions]=\"{exact:true}\"\n    >\n      <div *ngIf=\"item.groupTitle; then group else default\"></div>\n\n      <!-- Default item -->\n      <ng-template #default>\n        <div *ngIf=\"!item.sub; then simple else sub\"></div>\n\n        <ng-template #simple>\n          <a href=\"#\" class=\"item-link\" routerLink=\"{{ item.routing }}\" (click)=\"toggle($event, item, this)\">\n            <span class=\"text\">{{ item.title | translate }}</span>\n\n            <span\n              class=\"item-badge\"\n              *ngIf=\"item.badge && item.badge.text\"\n              [ngStyle]=\"getStyles(item.badge)\"\n            >{{ item.badge.text }}</span>\n\n            <span class=\"icon\">\n              <i class=\"icon-wrap {{ item.icon.class }}\" *ngIf=\"item.icon && item.icon.class\" [ngStyle]=\"getStyles(item.icon)\"></i>\n            </span>\n          </a>\n        </ng-template>\n      </ng-template>\n    </li>\n  </ul>\n</nav>"
 
 /***/ }),
 
@@ -4997,6 +4766,7 @@ module.exports = module.exports.toString();
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__menu_service__ = __webpack_require__("../../../../../src/app/ui/components/menu/menu.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5008,9 +4778,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var MenuComponent = (function () {
-    function MenuComponent(menuService) {
+    function MenuComponent(menuService, auth) {
         this.menuService = menuService;
+        this.auth = auth;
     }
     MenuComponent.prototype.getMenuItems = function () {
         var _this = this;
@@ -5056,10 +4828,10 @@ var MenuComponent = (function () {
                 'class': 'app-menu'
             }
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__menu_service__["a" /* MenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__menu_service__["a" /* MenuService */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__menu_service__["a" /* MenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__menu_service__["a" /* MenuService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _b || Object])
     ], MenuComponent);
     return MenuComponent;
-    var _a;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=menu.component.js.map
@@ -5181,12 +4953,13 @@ var VerticalNavbarComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_horizontal_navbar_horizontal_navbar_component__ = __webpack_require__("../../../../../src/app/ui/components/horizontal-navbar/horizontal-navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_vertical_navbar_vertical_navbar_component__ = __webpack_require__("../../../../../src/app/ui/components/vertical-navbar/vertical-navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_addition_navbar_addition_navbar_component__ = __webpack_require__("../../../../../src/app/ui/components/addition-navbar/addition-navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_logo_logo_component__ = __webpack_require__("../../../../../src/app/ui/components/logo/logo.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_menu_menu_component__ = __webpack_require__("../../../../../src/app/ui/components/menu/menu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_footer_footer_component__ = __webpack_require__("../../../../../src/app/ui/components/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_translate__ = __webpack_require__("../../../../ng2-translate/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_horizontal_navbar_horizontal_navbar_component__ = __webpack_require__("../../../../../src/app/ui/components/horizontal-navbar/horizontal-navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_vertical_navbar_vertical_navbar_component__ = __webpack_require__("../../../../../src/app/ui/components/vertical-navbar/vertical-navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_addition_navbar_addition_navbar_component__ = __webpack_require__("../../../../../src/app/ui/components/addition-navbar/addition-navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_logo_logo_component__ = __webpack_require__("../../../../../src/app/ui/components/logo/logo.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_menu_menu_component__ = __webpack_require__("../../../../../src/app/ui/components/menu/menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_footer_footer_component__ = __webpack_require__("../../../../../src/app/ui/components/footer/footer.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5205,26 +4978,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var UIModule = (function () {
     function UIModule() {
     }
     UIModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__components_horizontal_navbar_horizontal_navbar_component__["a" /* HorizontalNavbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__components_vertical_navbar_vertical_navbar_component__["a" /* VerticalNavbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__components_addition_navbar_addition_navbar_component__["a" /* AdditionNavbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__components_logo_logo_component__["a" /* LogoComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__components_menu_menu_component__["a" /* MenuComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__components_footer_footer_component__["a" /* FooterComponent */]
+                __WEBPACK_IMPORTED_MODULE_7__components_horizontal_navbar_horizontal_navbar_component__["a" /* HorizontalNavbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__components_vertical_navbar_vertical_navbar_component__["a" /* VerticalNavbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__components_addition_navbar_addition_navbar_component__["a" /* AdditionNavbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__components_logo_logo_component__["a" /* LogoComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__components_menu_menu_component__["a" /* MenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__components_footer_footer_component__["a" /* FooterComponent */]
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_6__components_horizontal_navbar_horizontal_navbar_component__["a" /* HorizontalNavbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__components_vertical_navbar_vertical_navbar_component__["a" /* VerticalNavbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__components_addition_navbar_addition_navbar_component__["a" /* AdditionNavbarComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__components_logo_logo_component__["a" /* LogoComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__components_menu_menu_component__["a" /* MenuComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__components_footer_footer_component__["a" /* FooterComponent */]
+                __WEBPACK_IMPORTED_MODULE_7__components_horizontal_navbar_horizontal_navbar_component__["a" /* HorizontalNavbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__components_vertical_navbar_vertical_navbar_component__["a" /* VerticalNavbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__components_addition_navbar_addition_navbar_component__["a" /* AdditionNavbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__components_logo_logo_component__["a" /* LogoComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__components_menu_menu_component__["a" /* MenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__components_footer_footer_component__["a" /* FooterComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* HttpModule */],
@@ -5261,7 +5035,8 @@ var UIModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_5__angular_material__["E" /* MdTabsModule */],
                 __WEBPACK_IMPORTED_MODULE_5__angular_material__["F" /* MdToolbarModule */],
                 __WEBPACK_IMPORTED_MODULE_5__angular_material__["G" /* MdTooltipModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_forms__["FormsModule"]
+                __WEBPACK_IMPORTED_MODULE_4__angular_forms__["FormsModule"],
+                __WEBPACK_IMPORTED_MODULE_6_ng2_translate__["b" /* TranslateModule */]
             ]
         })
     ], UIModule);
@@ -5338,11 +5113,11 @@ Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* pl
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LANGUAGES; });
 var MENU = [
     {
-        title: 'Dashboard',
+        title: 'dashboard',
         routing: '/default-layout/dashboard'
     },
     {
-        title: 'Groups',
+        title: 'groups',
         badge: {
             text: '0',
             color: '#fff',
@@ -5351,23 +5126,23 @@ var MENU = [
         routing: '/default-layout/groups'
     },
     {
-        title: 'Transactions',
+        title: 'transactions',
         routing: '/default-layout/transactions'
     },
     {
-        title: 'Requests',
+        title: 'requests',
         routing: '/default-layout/requests'
     },
     {
-        title: 'Profile',
+        title: 'profile',
         routing: '/default-layout/profile'
     },
     {
-        title: 'Simulation',
+        title: 'simulation',
         routing: '/default-layout/simulation'
     },
     {
-        title: 'About us',
+        title: 'aboutus',
         routing: '/default-layout/aboutus'
     }
 ];

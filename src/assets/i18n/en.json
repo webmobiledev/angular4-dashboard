@@ -23,5 +23,12 @@
   "genderValid1": "You must select a gender.",
   "agreeTermsofService": "I have read and agree to the terms of service.",
   "agreeTermsValid": "You must agree to the terms of service.",
-  "alreadyHaveAccount": "Already have an account?"
+  "alreadyHaveAccount": "Already have an account?",
+  "dashboard": "Dashboard",
+  "groups": "Groups",
+  "transactions": "Transactions",
+  "requests": "Requests",
+  "profile": "Profile",
+  "simulation": "Simulation",
+  "aboutus": "About us"
 }
