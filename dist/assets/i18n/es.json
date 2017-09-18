@@ -30,5 +30,17 @@
   "requests": "Peticiones",
   "profile": "Perfil",
   "simulation": "Simulación",
-  "aboutus": "Sobre nosotros"
+  "aboutus": "Sobre nosotros",
+  "payment": "Pago",
+  "createNewGroup": "Crear nuevo grupo",
+  "groupList": "Lista de grupos",
+  "request": "Solicitud",
+  "timeline": "Línea de tiempo",
+  "nextpayment": "Siguiente pago",
+  "from": "De",
+  "description": "Descripción",
+  "action": "Acción",
+  "date": "Fecha",
+  "type": "Tipo",
+  "fundname": "Nombre del fondo"
 }

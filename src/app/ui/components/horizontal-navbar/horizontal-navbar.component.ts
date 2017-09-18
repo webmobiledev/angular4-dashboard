@@ -19,7 +19,7 @@ export class HorizontalNavbarComponent implements OnInit {
   showOverlay: boolean;
   languages = LANGUAGES;
   langCode = 'en';
-  groupList = ['First', 'Second'];
+  groupList = [1, 2];
 
   constructor(private auth: AuthService) {
     this.openedSidebar = false;

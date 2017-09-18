@@ -30,5 +30,17 @@
   "requests": "Requests",
   "profile": "Profile",
   "simulation": "Simulation",
-  "aboutus": "About us"
+  "aboutus": "About us",
+  "payment": "Payment",
+  "createNewGroup": "Create new group",
+  "groupList": "Group List",
+  "request": "Request",
+  "timeline": "Time Line",
+  "nextpayment": "Next Payment",
+  "from": "From",
+  "description": "Description",
+  "action": "Action",
+  "date": "Date",
+  "type": "Type",
+  "fundname": "Fund name"
 }

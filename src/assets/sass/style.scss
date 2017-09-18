@@ -9,8 +9,16 @@
 @import './components/bootstrap';
 
 horizontal-navbar {
-
-  .btn-group {
+  .btn-group-list {
     font-size: 12px !important;
+  }
+  .btn-code {
+    font-size: 14px !important;
+  }
+  .btn-group {
+    width: 210px;
+  }
+  .btn-payment {
+    width: 150px;
   }
 }

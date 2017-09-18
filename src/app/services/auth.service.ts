@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, URLSearchParams } from '@angular/http';
 import { environment } from '../../environments/environment';
 import { BehaviorSubject } from 'rxjs/Rx';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Injectable()
 export class AuthService {
@@ -51,10 +52,9 @@ export class AuthService {
     });
   }
 
-  getConfirmParams(url) {
-    const searchUrl = new URL(url);
-    this.confirmCode = searchUrl.searchParams.get('validation_code');
-    this.confirmEmail = searchUrl.searchParams.get('email');
+  setConfirmParams(code, email) {
+    this.confirmCode = code;
+    this.confirmEmail = email;
     if (this.confirmCode && this.confirmEmail) {
       this.isConfirm = true;
     }

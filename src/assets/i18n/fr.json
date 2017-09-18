@@ -30,5 +30,17 @@
   "requests": "Demandes",
   "profile": "Profil",
   "simulation": "Simulation",
-  "aboutus": "À propos de nous"
+  "aboutus": "À propos de nous",
+  "payment": "Paiement",
+  "createNewGroup": "Créer un nouveau groupe",
+  "groupList": "Liste de groupe",
+  "request": "Demande",
+  "timeline": "Chronologie",
+  "nextpayment": "Prochain paiement",
+  "from": "De",
+  "description": "La description",
+  "action": "action",
+  "date": "Rendez-vous amoureux",
+  "type": "Type",
+  "fundname": "Nom du fonds"
 }

@@ -2,14 +2,14 @@
     <div class="col-lg-7">
       <div class="row">
         <div class="col-md-12">
-          <ni-card [title]="'Request'">
+          <ni-card [title]="'request' | translate">
             <div class="table-responsive">
               <table class="table">
                 <thead class="thead-default">
                 <tr>
-                  <th>From</th>
-                  <th>Description</th>
-                  <th>Action</th>
+                  <th>{{'from' | translate}}</th>
+                  <th>{{'description' | translate}}</th>
+                  <th>{{'action' | translate}}</th>
                 </tr>
                 </thead>
                 <tbody *ngFor="let user of userRequests">
@@ -20,14 +20,14 @@
           </ni-card>
         </div>
         <div class="col-md-12">
-          <ni-card [title]="'Next payment'">
+          <ni-card [title]="'nextpayment' | translate">
             <div class="table-responsive">
               <table class="table">
                 <thead class="thead-default">
                 <tr>
-                  <th>Date</th>
-                  <th>Type</th>
-                  <th>Fund name</th>
+                  <th>{{'date' | translate}}</th>
+                  <th>{{'type' | translate}}</th>
+                  <th>{{'fundname' | translate}}</th>
                 </tr>
                 </thead>
                 <tbody *ngFor="let user of userRequests">
@@ -40,7 +40,7 @@
       </div>
     </div>
     <div class="col-lg-5">
-      <ni-card [title]="'Time Line'">
+      <ni-card [title]="'timeline' | translate">
         <ni-h-timeline [showYears]="true" [showDate]="true" [align]="'between'" [data]="timelineData"></ni-h-timeline>
       </ni-card>
     </div>

@@ -12,15 +12,15 @@
 
   <div class="nav-items">
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
-      <button md-raised-button color="accent">Payment</button>
+      <button md-raised-button color="accent" class="btn-payment">{{'payment' | translate}}</button>
     </div>
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
-      <button md-raised-button color="accent">Create new group</button>
+      <button md-raised-button color="accent" class="btn-group">{{'createNewGroup' | translate}}</button>
     </div>
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
-      <a href="#" (click)="open($event)" class="nav-link btn-group">Group List</a>
+      <a href="#" (click)="open($event)" class="nav-link btn-group-list">{{'groupList' | translate}}</a>
       <div class="dropdown-menu">
         <ul>
           <li *ngFor="let group of groupList">
@@ -35,7 +35,7 @@
     </div>
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
-      <a href="#" (click)="open($event)" class="nav-link">{{langCode.toUpperCase()}}</a>
+      <a href="#" (click)="open($event)" class="nav-link btn-code">{{langCode.toUpperCase()}}</a>
       <div class="dropdown-menu">
         <ul>
           <li *ngFor="let lang of languages">
