@@ -13,7 +13,11 @@
                 </tr>
                 </thead>
                 <tbody *ngFor="let user of userRequests">
-                  <tr></tr>
+                  <tr>
+                    <td>{{user.sender}}</td>
+                    <td>{{user.comments}}</td>
+                    <td>{{user.request_status}}</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -27,11 +31,15 @@
                 <tr>
                   <th>{{'date' | translate}}</th>
                   <th>{{'type' | translate}}</th>
-                  <th>{{'fundname' | translate}}</th>
+                  <th>Fund Amount</th>
                 </tr>
                 </thead>
-                <tbody *ngFor="let user of userRequests">
-                  <tr></tr>
+                <tbody *ngFor="let p of nextPayment">
+                  <tr>
+                    <td>{{p.projected_payment_due_date}}</td>
+                    <td>{{p.type}}</td>
+                    <td>{{p.projected_amount_due}}</td>
+                  </tr>
                 </tbody>
               </table>
             </div>

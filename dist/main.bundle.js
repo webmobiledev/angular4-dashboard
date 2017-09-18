@@ -1895,7 +1895,7 @@ var PageAboutusComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-lg-7\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'request' | translate\">\r\n            <div class=\"table-responsive\">\r\n              <table class=\"table\">\r\n                <thead class=\"thead-default\">\r\n                <tr>\r\n                  <th>{{'from' | translate}}</th>\r\n                  <th>{{'description' | translate}}</th>\r\n                  <th>{{'action' | translate}}</th>\r\n                </tr>\r\n                </thead>\r\n                <tbody *ngFor=\"let user of userRequests\">\r\n                  <tr></tr>\r\n                </tbody>\r\n              </table>\r\n            </div>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'nextpayment' | translate\">\r\n            <div class=\"table-responsive\">\r\n              <table class=\"table\">\r\n                <thead class=\"thead-default\">\r\n                <tr>\r\n                  <th>{{'date' | translate}}</th>\r\n                  <th>{{'type' | translate}}</th>\r\n                  <th>{{'fundname' | translate}}</th>\r\n                </tr>\r\n                </thead>\r\n                <tbody *ngFor=\"let user of userRequests\">\r\n                  <tr></tr>\r\n                </tbody>\r\n              </table>\r\n            </div>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-5\">\r\n      <ni-card [title]=\"'timeline' | translate\">\r\n        <ni-h-timeline [showYears]=\"true\" [showDate]=\"true\" [align]=\"'between'\" [data]=\"timelineData\"></ni-h-timeline>\r\n      </ni-card>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-lg-7\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'request' | translate\">\r\n            <div class=\"table-responsive\">\r\n              <table class=\"table\">\r\n                <thead class=\"thead-default\">\r\n                <tr>\r\n                  <th>{{'from' | translate}}</th>\r\n                  <th>{{'description' | translate}}</th>\r\n                  <th>{{'action' | translate}}</th>\r\n                </tr>\r\n                </thead>\r\n                <tbody *ngFor=\"let user of userRequests\">\r\n                  <tr>\r\n                    <td>{{user.sender}}</td>\r\n                    <td>{{user.comments}}</td>\r\n                    <td>{{user.request_status}}</td>\r\n                  </tr>\r\n                </tbody>\r\n              </table>\r\n            </div>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'nextpayment' | translate\">\r\n            <div class=\"table-responsive\">\r\n              <table class=\"table\">\r\n                <thead class=\"thead-default\">\r\n                <tr>\r\n                  <th>{{'date' | translate}}</th>\r\n                  <th>{{'type' | translate}}</th>\r\n                  <th>Fund Amount</th>\r\n                </tr>\r\n                </thead>\r\n                <tbody *ngFor=\"let p of nextPayment\">\r\n                  <tr>\r\n                    <td>{{p.projected_payment_due_date}}</td>\r\n                    <td>{{p.type}}</td>\r\n                    <td>{{p.projected_amount_due}}</td>\r\n                  </tr>\r\n                </tbody>\r\n              </table>\r\n            </div>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-5\">\r\n      <ni-card [title]=\"'timeline' | translate\">\r\n        <ni-h-timeline [showYears]=\"true\" [showDate]=\"true\" [align]=\"'between'\" [data]=\"timelineData\"></ni-h-timeline>\r\n      </ni-card>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -1943,95 +1943,25 @@ var PageDashboardComponent = (function () {
         this._sharedService = _sharedService;
         this.apiService = apiService;
         this.pageTitle = 'dashboard';
-        this.timelineData = [
-            {
-                'label': '2017',
-                'timeline': [
-                    {
-                        'date': '2 hours ago',
-                        'content': "Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.",
-                        'pointColor': '#ea8080'
-                    },
-                    {
-                        'date': '5 hours ago',
-                        'content': "Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.\n           Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.",
-                        'pointColor': '#915035'
-                    },
-                    {
-                        'date': '8 hours ago',
-                        'content': "Lorem ipsum dolor sit amet.",
-                        'pointColor': '#B925FF'
-                    },
-                    {
-                        'date': '2 days ago',
-                        'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-                        'pointColor': '#C5CAE9'
-                    },
-                    {
-                        'date': '3 days ago',
-                        'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis doloremque earum itaque laborum, nobis non ratione rerum similique vel?",
-                        'pointColor': '#FF8A65'
-                    },
-                    {
-                        'date': '5 days ago',
-                        'content': "Lorem ipsum dolor sit.",
-                        'pointColor': '#B3E5FC'
-                    },
-                    {
-                        'date': 'July 10, 2017',
-                        'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate.",
-                        'pointColor': '#B2DFDB'
-                    },
-                    {
-                        'date': 'July 7, 2017',
-                        'content': "Lorem ipsum dolor sit amet, consectetur.",
-                        'pointColor': '#3E5EFF'
-                    }
-                ]
-            },
-            {
-                'label': '2016',
-                'timeline': [
-                    {
-                        'date': 'December 27, 2016',
-                        'content': "Lorem ipsum dolor sit.",
-                        'pointColor': '#FFC6E6'
-                    },
-                    {
-                        'date': 'December 20, 2016',
-                        'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.",
-                        'pointColor': '#FFA78D'
-                    },
-                    {
-                        'date': 'December 17, 2016',
-                        'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate.",
-                        'pointColor': '#F0F4C3'
-                    },
-                    {
-                        'date': 'December 12, 2016',
-                        'content': "Lorem ipsum dolor sit amet, consectetur.",
-                        'pointColor': '#FFC6F1'
-                    },
-                    {
-                        'date': 'December 2, 2016',
-                        'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nam nisi veniam.",
-                        'pointColor': '#488034'
-                    },
-                ]
-            }
-        ];
+        this.timelineData = [];
         this._sharedService.emitChange(this.pageTitle);
-        apiService.getUserRequest(1).then(function (data) {
+        apiService.getUserRequest('test_group6').then(function (data) {
             console.log('userrequest', data);
             _this.userRequests = data.data;
         });
-        apiService.getNextPayment(1).then(function (data) {
+        apiService.getNextPayment('test_group6').then(function (data) {
             console.log('nextpayment', data);
             _this.nextPayment = data.data;
         });
-        apiService.getTimelineData(1).then(function (data) {
+        apiService.getTimelineData('test_group6').then(function (data) {
             console.log('timeline', data);
-            // this.timelineData = data.data;
+            _this.timelineData = [{
+                    label: '2017',
+                    timeline: []
+                }];
+            data.data.map(function (d) {
+                _this.timelineData[0].timeline.push({ date: d.date_event, content: d.event_type, pointColor: '#FFC6F1' });
+            });
         });
     }
     PageDashboardComponent = __decorate([
@@ -4213,7 +4143,6 @@ var ApiService = (function () {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_user_requests';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
-        params.set('group_id', groupId);
         params.set('token', localStorage.getItem('token'));
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
@@ -4223,9 +4152,8 @@ var ApiService = (function () {
     };
     ApiService.prototype.getNextPayment = function (groupId) {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_group_obligations';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_user_obligations';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
-        params.set('group_id', groupId);
         params.set('token', localStorage.getItem('token'));
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
