@@ -1905,7 +1905,7 @@ var PageAboutusComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-lg-7\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'request' | translate\">\r\n            <div class=\"table-responsive\">\r\n              <table class=\"table\">\r\n                <tbody *ngFor=\"let user of userRequests\">\r\n                  <tr>\r\n                    <td>{{user.request_date}} : {{user.sender}}<span *ngIf=\"user.request_type === 'REQUEST_TO_JOIN_GROUP'\"> {{'would_you_to_join_the_group' | translate}} </span>{{user.group}} [{{user.request_status}}]</td>\r\n                  </tr>\r\n                </tbody>\r\n              </table>\r\n            </div>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'nextpayment' | translate\">\r\n            <div class=\"table-responsive\">\r\n              <table class=\"table\">\r\n                <tbody *ngFor=\"let p of nextPayment\">\r\n                  <tr>\r\n                    <td>{{p.to}} {{p.type}} {{p.projected_payment_due_date}} {{p.projected_amount_due}} {{p.currency}}</td>\r\n                  </tr>\r\n                </tbody>\r\n              </table>\r\n            </div>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-5\">\r\n      <ni-card [title]=\"'timeline' | translate\">\r\n        <ni-h-timeline [showYears]=\"true\" [showDate]=\"true\" [align]=\"'between'\" [data]=\"timelineData\"></ni-h-timeline>\r\n      </ni-card>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-lg-7\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'request' | translate\">\r\n            <div class=\"table-responsive\">\r\n              <table class=\"table\">\r\n                <tbody *ngFor=\"let user of userRequests\">\r\n                  <tr>\r\n                    <td>{{user.request_date}} : {{user.sender}}<span *ngIf=\"user.request_type === 'REQUEST_TO_JOIN_GROUP'\"> {{'would_you_to_join_the_group' | translate}} </span>{{user.group}} \r\n                      <button md-raised-button color=\"accent\">Accept</button>\r\n                      <button md-raised-button color=\"warn\">Reject</button>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n              </table>\r\n            </div>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'nextpayment' | translate\">\r\n            <div class=\"table-responsive\">\r\n              <table class=\"table\">\r\n                <tbody *ngFor=\"let p of nextPayment\">\r\n                  <tr>\r\n                    <td>{{p.to}} {{p.type}} {{p.projected_payment_due_date}} {{p.projected_amount_due}} {{p.currency}}</td>\r\n                  </tr>\r\n                </tbody>\r\n              </table>\r\n            </div>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-5\">\r\n      <ni-card [title]=\"'timeline' | translate\">\r\n        <ni-h-timeline [showYears]=\"true\" [showDate]=\"true\" [align]=\"'between'\" [data]=\"timelineData\"></ni-h-timeline>\r\n      </ni-card>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -4446,7 +4446,7 @@ var FooterComponent = (function () {
 /***/ "../../../../../src/app/ui/components/horizontal-navbar/horizontal-navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"navbar-wrap\">\r\n  <div class=\"navbar-button\" [ngClass]=\"{ 'open' : openedSidebar }\" (click)=\"openSidebar()\">\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n  </div>\r\n\r\n  <h1 class=\"page-title\">{{ title | translate }}</h1>\r\n\r\n  <div class=\"nav-items\">\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\" class=\"btn-payment\">{{'payment' | translate}}</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\" class=\"btn-group\">{{'createNewGroup' | translate}}</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link btn-group-list\">{{'groupList' | translate}}</a>\r\n      <div class=\"dropdown-menu\">\r\n        <ul>\r\n          <li *ngFor=\"let group of groupList\">\r\n            <a>\r\n              <div class=\"content\">\r\n                <span class=\"desc\"><strong>{{group}}</strong></span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link btn-code\">\r\n          <img [src]=\"'assets/content/' + langUrl\" width=\"30\" height=\"20\">\r\n      </a>\r\n      <div class=\"dropdown-menu\">\r\n        <ul>\r\n          <li *ngFor=\"let lang of languages\">\r\n            <a (click)=\"changeLanguage(lang.code)\">\r\n              <div class=\"content\">\r\n                <img [src]=\"'assets/content/' + lang.url\" width=\"30\" height=\"20\">\r\n                <span class=\"desc\"><strong>{{lang.code.toUpperCase()}}</strong></span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <div class=\"avatar\"><img src=\"assets/content/avatar-2.jpg\" width=\"40\" height=\"40\" alt=\"\"></div>\r\n        <div class=\"name\">Justin Adams</div>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu mini-menu\">\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-home\"></span> My Account</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-user\"></span> Profile</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"/default-layout/calendar\"><span class=\"icon sli-calendar\"></span> Calendar</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-settings\"></span> Settings</a>\r\n          </li>\r\n          <li>\r\n            <a [routerLink]=\"'/'\"><span class=\"icon sli-logout\"></span> Log Out</a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"items-overlay\" (click)=\"close($event)\"></div>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"navbar-wrap\">\r\n  <div class=\"navbar-button\" [ngClass]=\"{ 'open' : openedSidebar }\" (click)=\"openSidebar()\">\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n  </div>\r\n\r\n  <h1 class=\"page-title\">{{ title | translate }}</h1>\r\n\r\n  <div class=\"nav-items\">\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\" class=\"btn-payment\">{{'payment' | translate}}</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\" class=\"btn-group\">{{'createNewGroup' | translate}}</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-input-container class=\"mb-0\">\r\n        <input mdInput [placeholder]=\"'groupList' | translate\" [mdAutocomplete]=\"auto\" [formControl]=\"groupCtrl\">\r\n      </md-input-container>\r\n      <md-autocomplete #auto=\"mdAutocomplete\">\r\n        <md-option *ngFor=\"let group of filteredGroup | async\" [value]=\"group\">\r\n          {{ group }}\r\n        </md-option>\r\n      </md-autocomplete>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link btn-code\">\r\n          <img [src]=\"'assets/content/' + langUrl\" width=\"30\" height=\"20\">\r\n      </a>\r\n      <div class=\"dropdown-menu\">\r\n        <ul>\r\n          <li *ngFor=\"let lang of languages\">\r\n            <a (click)=\"changeLanguage(lang.code)\">\r\n              <div class=\"content\">\r\n                <img [src]=\"'assets/content/' + lang.url\" width=\"30\" height=\"20\">\r\n                <span class=\"desc\"><strong>{{lang.code.toUpperCase()}}</strong></span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <div class=\"avatar\"><img src=\"assets/content/avatar-2.jpg\" width=\"40\" height=\"40\" alt=\"\"></div>\r\n        <div class=\"name\">Justin Adams</div>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu mini-menu\">\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-home\"></span> My Account</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-user\"></span> Profile</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"/default-layout/calendar\"><span class=\"icon sli-calendar\"></span> Calendar</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-settings\"></span> Settings</a>\r\n          </li>\r\n          <li>\r\n            <a [routerLink]=\"'/'\"><span class=\"icon sli-logout\"></span> Log Out</a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"items-overlay\" (click)=\"close($event)\"></div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -4476,6 +4476,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings_menu__ = __webpack_require__("../../../../../src/settings/menu.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4488,6 +4489,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HorizontalNavbarComponent = (function () {
     function HorizontalNavbarComponent(auth) {
         var _this = this;
@@ -4496,9 +4498,13 @@ var HorizontalNavbarComponent = (function () {
         this.languages = __WEBPACK_IMPORTED_MODULE_2__settings_menu__["a" /* LANGUAGES */];
         this.langCode = 'en';
         this.langUrl = 'flag-uk.png';
-        this.groupList = [1, 2];
+        this.groupList = ['1', '2', '3', '4', '5', '6', '7'];
         this.openedSidebar = false;
         this.showOverlay = false;
+        this.groupCtrl = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["FormControl"]();
+        this.filteredGroup = this.groupCtrl.valueChanges
+            .startWith(null)
+            .map(function (name) { return _this.filterStates(name); });
         this.auth.langCode.subscribe(function (code) {
             _this.langCode = code;
             _this.languages.map(function (l) {
@@ -4535,6 +4541,9 @@ var HorizontalNavbarComponent = (function () {
     HorizontalNavbarComponent.prototype.changeLanguage = function (code) {
         this.langCode = code;
         this.auth.changeLanguage(this.langCode);
+    };
+    HorizontalNavbarComponent.prototype.filterStates = function (val) {
+        return val ? this.groupList.filter(function (s) { return new RegExp(val, 'gi').test(s); }) : this.groupList;
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
@@ -4927,6 +4936,7 @@ var UIModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_5__angular_material__["F" /* MdToolbarModule */],
                 __WEBPACK_IMPORTED_MODULE_5__angular_material__["G" /* MdTooltipModule */],
                 __WEBPACK_IMPORTED_MODULE_4__angular_forms__["FormsModule"],
+                __WEBPACK_IMPORTED_MODULE_4__angular_forms__["ReactiveFormsModule"],
                 __WEBPACK_IMPORTED_MODULE_6_ng2_translate__["b" /* TranslateModule */]
             ]
         })

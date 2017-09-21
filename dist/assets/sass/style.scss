@@ -18,4 +18,10 @@ horizontal-navbar {
   .page-title {
     width: initial !important;
   }
+  md-input-container {
+    width: 100px !important;
+    span label {
+      color: white !important;
+    }
+  }
 }

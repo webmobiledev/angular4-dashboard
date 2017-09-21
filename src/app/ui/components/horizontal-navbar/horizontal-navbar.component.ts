@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AuthService } from '../../../services/auth.service';
 import { LANGUAGES } from '../../../../settings/menu';
+import { FormControl } from '@angular/forms';
 
 @Component({
   moduleId: module.id,
@@ -20,11 +21,17 @@ export class HorizontalNavbarComponent implements OnInit {
   languages = LANGUAGES;
   langCode = 'en';
   langUrl = 'flag-uk.png';
-  groupList = [1, 2];
-
+  groupList = ['1', '2', '3', '4', '5', '6', '7'];
+  filteredGroup: any;
+  groupCtrl: FormControl;
+  
   constructor(private auth: AuthService) {
     this.openedSidebar = false;
     this.showOverlay = false;
+    this.groupCtrl = new FormControl();
+    this.filteredGroup = this.groupCtrl.valueChanges
+      .startWith(null)
+      .map(name => this.filterStates(name));
 
     this.auth.langCode.subscribe(code => {
       this.langCode = code;
@@ -73,5 +80,9 @@ export class HorizontalNavbarComponent implements OnInit {
   changeLanguage(code) {
     this.langCode = code;
     this.auth.changeLanguage(this.langCode);
+  }
+
+  filterStates(val: string) {
+    return val ? this.groupList.filter((s) => new RegExp(val, 'gi').test(s)) : this.groupList;
   }
 }
