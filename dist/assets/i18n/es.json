@@ -42,5 +42,6 @@
   "action": "Acción",
   "date": "Fecha",
   "type": "Tipo",
-  "fundname": "Nombre del fondo"
+  "fundname": "Nombre del fondo",
+  "would_you_to_join_the_group": "podrías unirte al grupo"
 }

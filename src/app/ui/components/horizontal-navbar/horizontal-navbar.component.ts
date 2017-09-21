@@ -19,6 +19,7 @@ export class HorizontalNavbarComponent implements OnInit {
   showOverlay: boolean;
   languages = LANGUAGES;
   langCode = 'en';
+  langUrl = 'flag-uk.png';
   groupList = [1, 2];
 
   constructor(private auth: AuthService) {
@@ -27,6 +28,11 @@ export class HorizontalNavbarComponent implements OnInit {
 
     this.auth.langCode.subscribe(code => {
       this.langCode = code;
+      this.languages.map(l => {
+        if (l.code === code) {
+          this.langUrl = l.url;
+        }
+      });
     });
   }
 

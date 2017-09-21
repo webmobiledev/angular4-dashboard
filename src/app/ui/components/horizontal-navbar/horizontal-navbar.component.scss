@@ -424,3 +424,18 @@
     }
   }
 }
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.content img {
+  height: 20px !important;
+  margin-right: 20px;
+}
+
+.btn-code img {
+  background-color: #ffffff !important;
+}

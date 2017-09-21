@@ -42,5 +42,6 @@
   "action": "action",
   "date": "Rendez-vous amoureux",
   "type": "Type",
-  "fundname": "Nom du fonds"
+  "fundname": "Nom du fonds",
+  "would_you_to_join_the_group": "voulez-vous rejoindre le groupe"
 }

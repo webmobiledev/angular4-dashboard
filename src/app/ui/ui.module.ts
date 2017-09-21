@@ -40,7 +40,6 @@ import { TranslateModule } from 'ng2-translate';
 
 import { HorizontalNavbarComponent } from './components/horizontal-navbar/horizontal-navbar.component';
 import { VerticalNavbarComponent }   from './components/vertical-navbar/vertical-navbar.component';
-import { AdditionNavbarComponent }   from './components/addition-navbar/addition-navbar.component';
 import { LogoComponent }             from './components/logo/logo.component';
 import { MenuComponent }             from './components/menu/menu.component';
 import { FooterComponent }           from './components/footer/footer.component';
@@ -49,7 +48,6 @@ import { FooterComponent }           from './components/footer/footer.component'
   declarations: [
     HorizontalNavbarComponent,
     VerticalNavbarComponent,
-    AdditionNavbarComponent,
     LogoComponent,
     MenuComponent,
     FooterComponent
@@ -57,7 +55,6 @@ import { FooterComponent }           from './components/footer/footer.component'
   exports: [
     HorizontalNavbarComponent,
     VerticalNavbarComponent,
-    AdditionNavbarComponent,
     LogoComponent,
     MenuComponent,
     FooterComponent

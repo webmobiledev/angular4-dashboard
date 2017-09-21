@@ -5,18 +5,9 @@
           <ni-card [title]="'request' | translate">
             <div class="table-responsive">
               <table class="table">
-                <thead class="thead-default">
-                <tr>
-                  <th>{{'from' | translate}}</th>
-                  <th>{{'description' | translate}}</th>
-                  <th>{{'action' | translate}}</th>
-                </tr>
-                </thead>
                 <tbody *ngFor="let user of userRequests">
                   <tr>
-                    <td>{{user.sender}}</td>
-                    <td>{{user.comments}}</td>
-                    <td>{{user.request_status}}</td>
+                    <td>{{user.request_date}} : {{user.sender}}<span *ngIf="user.request_type === 'REQUEST_TO_JOIN_GROUP'"> {{'would_you_to_join_the_group' | translate}} </span>{{user.group}} [{{user.request_status}}]</td>
                   </tr>
                 </tbody>
               </table>
@@ -27,18 +18,9 @@
           <ni-card [title]="'nextpayment' | translate">
             <div class="table-responsive">
               <table class="table">
-                <thead class="thead-default">
-                <tr>
-                  <th>{{'date' | translate}}</th>
-                  <th>{{'type' | translate}}</th>
-                  <th>Fund Amount</th>
-                </tr>
-                </thead>
                 <tbody *ngFor="let p of nextPayment">
                   <tr>
-                    <td>{{p.projected_payment_due_date}}</td>
-                    <td>{{p.type}}</td>
-                    <td>{{p.projected_amount_due}}</td>
+                    <td>{{p.to}} {{p.type}} {{p.projected_payment_due_date}} {{p.projected_amount_due}} {{p.currency}}</td>
                   </tr>
                 </tbody>
               </table>

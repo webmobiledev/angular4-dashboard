@@ -42,5 +42,6 @@
   "action": "Action",
   "date": "Date",
   "type": "Type",
-  "fundname": "Fund name"
+  "fundname": "Fund name",
+  "would_you_to_join_the_group": "would you to join the group"
 }

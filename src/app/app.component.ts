@@ -14,5 +14,16 @@ export class AppComponent {
       let email = params['email'];
       auth.setConfirmParams(code, email);
     });
+    this.getLocation();
+  }
+
+  getLocation() {
+      if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(res => {
+          // this.auth.getLocation(res.coords.latitude, res.coords.longitude).then(res => {
+          //   console.log(res);
+          // });
+        });
+      }
   }
 }

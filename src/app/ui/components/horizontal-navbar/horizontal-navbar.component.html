@@ -35,12 +35,15 @@
     </div>
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
-      <a href="#" (click)="open($event)" class="nav-link btn-code">{{langCode.toUpperCase()}}</a>
+      <a href="#" (click)="open($event)" class="nav-link btn-code">
+          <img [src]="'assets/content/' + langUrl" width="30" height="20">
+      </a>
       <div class="dropdown-menu">
         <ul>
           <li *ngFor="let lang of languages">
             <a (click)="changeLanguage(lang.code)">
               <div class="content">
+                <img [src]="'assets/content/' + lang.url" width="30" height="20">
                 <span class="desc"><strong>{{lang.code.toUpperCase()}}</strong></span>
               </div>
             </a>

@@ -10,7 +10,9 @@
   .logo {
     align-items: flex-start;
     color: inherit;
-    display: flex;
+    display: block;
+    text-align: center;
+    font-size: 28px;
     height: 100%;
     padding: $module-rem ($module-rem * 2);
     text-decoration: none;

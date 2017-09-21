@@ -42,5 +42,6 @@
   "action": "Açao",
   "date": "Encontro",
   "type": "Tipo",
-  "fundname": "Nome do fundo"
+  "fundname": "Nome do fundo",
+  "would_you_to_join_the_group": "você poderia se juntar ao grupo"
 }
