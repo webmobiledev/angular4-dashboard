@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AuthService } from '../../../services/auth.service';
+import { ApiService } from '../../../services/api.service';
 import { LANGUAGES } from '../../../../settings/menu';
 import { FormControl } from '@angular/forms';
 
@@ -21,11 +22,11 @@ export class HorizontalNavbarComponent implements OnInit {
   languages = LANGUAGES;
   langCode = 'en';
   langUrl = 'flag-uk.png';
-  groupList = ['1', '2', '3', '4', '5', '6', '7'];
+  groupList = [];
   filteredGroup: any;
   groupCtrl: FormControl;
   
-  constructor(private auth: AuthService) {
+  constructor(private auth: AuthService, private apiService: ApiService) {
     this.openedSidebar = false;
     this.showOverlay = false;
     this.groupCtrl = new FormControl();
@@ -43,7 +44,14 @@ export class HorizontalNavbarComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.apiService.getGroups().then((data: any) => {
+      console.log(data);
+      data.data.map(d => {
+        this.groupList.push(d.name);
+      });
+    });
+  }
 
   open(event) {
     let clickedComponent = event.target.closest('.nav-item');

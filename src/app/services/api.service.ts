@@ -39,4 +39,15 @@ export class ApiService {
       });
     });
   }
+
+  getGroups() {
+    const url = environment.serverUrl + 'list_groups';
+    let params: URLSearchParams = new URLSearchParams();
+    params.set('token', localStorage.getItem('token'));
+    return new Promise((resolve, reject) => {
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      });
+    });
+  }
 }

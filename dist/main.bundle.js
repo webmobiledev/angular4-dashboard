@@ -1659,7 +1659,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ":host {\n  direction: ltr;\n  display: block;\n  position: relative; }\n  :host .line {\n    border-left: 2px solid #e5e6e9;\n    height: 100%;\n    left: 6px;\n    margin-left: -1px;\n    position: absolute;\n    top: 0; }\n  :host .timeline-box .box-label {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    padding: 0.6875rem 0; }\n    :host .timeline-box .box-label .label-text {\n      background: #2196f3;\n      border-radius: 3px;\n      color: #ffffff;\n      display: inline-block;\n      min-width: 5.5rem;\n      padding: 0.34375rem 0.6875rem;\n      position: relative;\n      text-align: center; }\n  :host .timeline-box .box-items {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column; }\n    :host .timeline-box .box-items .item {\n      margin: 1.375rem 0;\n      padding-left: 50px;\n      position: relative; }\n      @media (max-width: 543px) {\n        :host .timeline-box .box-items .item {\n          padding-left: 32px; } }\n      :host .timeline-box .box-items .item .item-point {\n        background: #fff;\n        border: 2px solid #252d47;\n        border-radius: 50%;\n        display: block;\n        height: 12px;\n        left: 0;\n        position: absolute;\n        top: calc(1.03125rem + 1px);\n        width: 12px; }\n      :host .timeline-box .box-items .item .item-date {\n        font-size: 0.875rem;\n        margin-bottom: 0.6875rem; }\n      :host .timeline-box .box-items .item .item-content {\n        background: #fff;\n        border-radius: 3px;\n        display: inline-block;\n        padding: 1.03125rem 1.375rem;\n        position: relative;\n        width: auto; }\n        .rtl :host .timeline-box .box-items .item .item-content {\n          direction: rtl; }\n        :host .timeline-box .box-items .item .item-content:before, :host .timeline-box .box-items .item .item-content:after {\n          border: 10px solid transparent;\n          content: '';\n          display: block;\n          height: 0;\n          position: absolute;\n          top: 14px;\n          width: 0; }\n        :host .timeline-box .box-items .item .item-content:before {\n          border-right-color: #fff;\n          right: 100%; }\n        :host .timeline-box .box-items .item .item-content:after {\n          display: none;\n          left: 100%;\n          border-left-color: #fff; }\n        :host .timeline-box .box-items .item .item-content .item-title {\n          margin-top: 0; }\n  :host.show-date .timeline-box .box-items .item .item-point {\n    top: calc(2.8875rem + 1px); }\n  :host.align-right .line {\n    left: auto;\n    margin: 0 -1px 0 auto;\n    right: 6px; }\n  :host.align-right .timeline-box .box-label {\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end; }\n  :host.align-right .timeline-box .box-items {\n    -webkit-box-align: end;\n        -ms-flex-align: end;\n            align-items: flex-end; }\n    :host.align-right .timeline-box .box-items .item {\n      padding: 0 50px 0 0; }\n      @media (max-width: 543px) {\n        :host.align-right .timeline-box .box-items .item {\n          padding: 0 32px 0 0; } }\n      :host.align-right .timeline-box .box-items .item .item-point {\n        left: auto;\n        right: 0; }\n      :host.align-right .timeline-box .box-items .item .item-date {\n        text-align: right; }\n      :host.align-right .timeline-box .box-items .item .item-content:before {\n        display: none; }\n      :host.align-right .timeline-box .box-items .item .item-content:after {\n        display: block; }\n  :host.align-center .line {\n    left: 50%; }\n  :host.align-center .timeline-box .box-label {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center; }\n  :host.align-center .timeline-box .box-items {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center; }\n    :host.align-center .timeline-box .box-items .item {\n      padding: 0;\n      text-align: center; }\n      @media (max-width: 543px) {\n        :host.align-center .timeline-box .box-items .item {\n          padding: 0; } }\n      :host.align-center .timeline-box .box-items .item .item-point {\n        left: 50%;\n        margin: -26px 0 0 -6px;\n        top: 0; }\n      :host.align-center .timeline-box .box-items .item .item-date {\n        margin-bottom: 33px;\n        text-align: center; }\n        :host.align-center .timeline-box .box-items .item .item-date span {\n          background: #fff;\n          border: 1px solid #e5e6e9;\n          border-radius: 3px;\n          display: inline-block;\n          padding: 0.34375rem 0.6875rem; }\n      :host.align-center .timeline-box .box-items .item .item-content:before {\n        border-color: transparent transparent #fff transparent;\n        left: 50%;\n        margin: -20px 0 0 -10px;\n        top: 0; }\n  :host.align-center.show-date .timeline-box .box-items .item .item-point {\n    margin-top: 40px; }\n  @media (min-width: 768px) {\n    :host.align-between .line {\n      left: 50%; }\n    :host.align-between .timeline-box .box-label {\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center; }\n    :host.align-between .timeline-box .box-items .item {\n      width: 50%; }\n      :host.align-between .timeline-box .box-items .item:nth-child(even) {\n        -ms-flex-item-align: end;\n            align-self: flex-end; }\n        :host.align-between .timeline-box .box-items .item:nth-child(even) .item-point {\n          left: 0;\n          margin-left: -6px; }\n      :host.align-between .timeline-box .box-items .item:nth-child(odd) {\n        padding: 0 50px 0 0;\n        text-align: right; } }\n    @media (min-width: 768px) and (max-width: 543px) {\n      :host.align-between .timeline-box .box-items .item:nth-child(odd) {\n        padding: 0 32px 0 0; } }\n  @media (min-width: 768px) {\n        :host.align-between .timeline-box .box-items .item:nth-child(odd) .item-point {\n          left: 100%;\n          margin-left: -6px; }\n        :host.align-between .timeline-box .box-items .item:nth-child(odd) .item-content {\n          text-align: left; }\n          .rtl :host.align-between .timeline-box .box-items .item:nth-child(odd) .item-content {\n            text-align: right; }\n          :host.align-between .timeline-box .box-items .item:nth-child(odd) .item-content:before {\n            display: none; }\n          :host.align-between .timeline-box .box-items .item:nth-child(odd) .item-content:after {\n            display: block; } }\n", ""]);
+exports.push([module.i, ":host {\n  direction: ltr;\n  display: block;\n  position: relative; }\n  :host .line {\n    border-left: 2px solid #e5e6e9;\n    height: 100%;\n    left: 6px;\n    margin-left: -1px;\n    position: absolute;\n    top: 0; }\n  :host .timeline-box .box-label {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    padding: 0.6875rem 0; }\n    :host .timeline-box .box-label .label-text {\n      background: #2196f3;\n      border-radius: 3px;\n      color: #ffffff;\n      display: inline-block;\n      min-width: 5.5rem;\n      padding: 0;\n      position: relative;\n      text-align: center; }\n  :host .timeline-box .box-items {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column; }\n    :host .timeline-box .box-items .item {\n      margin: 1.375rem 0;\n      position: relative; }\n      :host .timeline-box .box-items .item .item-point {\n        background: #fff;\n        border: 2px solid #252d47;\n        border-radius: 50%;\n        display: block;\n        height: 12px;\n        left: 0;\n        position: absolute;\n        width: 12px; }\n      :host .timeline-box .box-items .item .item-date {\n        width: 27%;\n        text-align: right;\n        font-size: 0.875rem; }\n      :host .timeline-box .box-items .item .item-content {\n        background: #fff;\n        border-radius: 3px;\n        display: inline-block;\n        padding: 0;\n        position: relative;\n        width: 67%; }\n        .rtl :host .timeline-box .box-items .item .item-content {\n          direction: rtl; }\n        :host .timeline-box .box-items .item .item-content:before, :host .timeline-box .box-items .item .item-content:after {\n          border: 10px solid transparent;\n          content: '';\n          display: block;\n          height: 0;\n          position: absolute;\n          top: 14px;\n          width: 0; }\n        :host .timeline-box .box-items .item .item-content:before {\n          border-right-color: #fff;\n          right: 100%; }\n        :host .timeline-box .box-items .item .item-content:after {\n          display: none;\n          left: 100%;\n          border-left-color: #fff; }\n        :host .timeline-box .box-items .item .item-content .item-title {\n          margin-top: 0; }\n  :host.show-date .timeline-box .box-items .item .item-point {\n    top: 5px; }\n  :host.align-right .line {\n    left: auto;\n    margin: 0 -1px 0 auto;\n    right: 6px; }\n  :host.align-right .timeline-box .box-label {\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end; }\n  :host.align-right .timeline-box .box-items {\n    -webkit-box-align: end;\n        -ms-flex-align: end;\n            align-items: flex-end; }\n    :host.align-right .timeline-box .box-items .item {\n      padding: 0 50px 0 0; }\n      @media (max-width: 543px) {\n        :host.align-right .timeline-box .box-items .item {\n          padding: 0 32px 0 0; } }\n      :host.align-right .timeline-box .box-items .item .item-point {\n        left: auto;\n        right: 0; }\n      :host.align-right .timeline-box .box-items .item .item-date {\n        text-align: right; }\n      :host.align-right .timeline-box .box-items .item .item-content:before {\n        display: none; }\n      :host.align-right .timeline-box .box-items .item .item-content:after {\n        display: block; }\n  :host.align-center .line {\n    left: 50%; }\n  :host.align-center .timeline-box .box-label {\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center; }\n  :host.align-center .timeline-box .box-items {\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center; }\n    :host.align-center .timeline-box .box-items .item {\n      padding: 0;\n      text-align: center; }\n      @media (max-width: 543px) {\n        :host.align-center .timeline-box .box-items .item {\n          padding: 0; } }\n      :host.align-center .timeline-box .box-items .item .item-point {\n        left: 50%;\n        margin: -26px 0 0 -6px;\n        top: 0; }\n      :host.align-center .timeline-box .box-items .item .item-date {\n        margin-bottom: 33px;\n        text-align: center; }\n        :host.align-center .timeline-box .box-items .item .item-date span {\n          background: #fff;\n          border: 1px solid #e5e6e9;\n          border-radius: 3px;\n          display: inline-block;\n          padding: 0.34375rem 0.6875rem; }\n      :host.align-center .timeline-box .box-items .item .item-content:before {\n        border-color: transparent transparent #fff transparent;\n        left: 50%;\n        margin: -20px 0 0 -10px;\n        top: 0; }\n  :host.align-center.show-date .timeline-box .box-items .item .item-point {\n    margin-top: 40px; }\n  @media (min-width: 768px) {\n    :host.align-between .line {\n      left: 30%; }\n    :host.align-between .timeline-box .box-label {\n      padding-left: calc(30% - 45px); }\n    :host.align-between .timeline-box .box-items .item {\n      width: 100%;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      -webkit-box-pack: justify;\n          -ms-flex-pack: justify;\n              justify-content: space-between; }\n      :host.align-between .timeline-box .box-items .item:nth-child(even) {\n        -ms-flex-item-align: end;\n            align-self: flex-end; }\n        :host.align-between .timeline-box .box-items .item:nth-child(even) .item-point {\n          left: 30%;\n          margin-left: -6px; }\n      :host.align-between .timeline-box .box-items .item:nth-child(odd) .item-point {\n        left: 30%;\n        margin-left: -6px; }\n      .rtl :host.align-between .timeline-box .box-items .item:nth-child(odd) .item-content {\n        text-align: right; }\n      :host.align-between .timeline-box .box-items .item:nth-child(odd) .item-content:before {\n        display: none; }\n      :host.align-between .timeline-box .box-items .item:nth-child(odd) .item-content:after {\n        display: block; } }\n", ""]);
 
 // exports
 
@@ -1970,10 +1970,19 @@ var PageDashboardComponent = (function () {
                     timeline: []
                 }];
             data.data.map(function (d) {
-                _this.timelineData[0].timeline.push({ date: d.date_event, content: d.event_type, pointColor: '#FFC6F1' });
+                _this.timelineData[0].timeline.push({ date: _this.getDuration(d.duration_seconds), content: d.event_type === 'GROUP_CREATED' ? 'A new group has been created' : 'A new request to join group has been created', pointColor: '#FFC6F1' });
             });
         });
     }
+    PageDashboardComponent.prototype.getDuration = function (seconds) {
+        var h = this.format(((seconds / 3600) % 24).toFixed());
+        var m = this.format(((seconds % 3600) / 60).toFixed());
+        var s = this.format((((seconds % 3600) % 60)).toFixed());
+        return h + ':' + m + ':' + s + ' ago';
+    };
+    PageDashboardComponent.prototype.format = function (d) {
+        return (d < 10) ? '0' + d.toString() : d.toString();
+    };
     PageDashboardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-dashboard',
@@ -4182,6 +4191,17 @@ var ApiService = (function () {
             });
         });
     };
+    ApiService.prototype.getGroups = function () {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_groups';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        params.set('token', localStorage.getItem('token'));
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            });
+        });
+    };
     ApiService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
@@ -4475,8 +4495,9 @@ module.exports = module.exports.toString();
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HorizontalNavbarComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings_menu__ = __webpack_require__("../../../../../src/settings/menu.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__settings_menu__ = __webpack_require__("../../../../../src/settings/menu.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4490,18 +4511,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HorizontalNavbarComponent = (function () {
-    function HorizontalNavbarComponent(auth) {
+    function HorizontalNavbarComponent(auth, apiService) {
         var _this = this;
         this.auth = auth;
+        this.apiService = apiService;
         this.sidebarState = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.languages = __WEBPACK_IMPORTED_MODULE_2__settings_menu__["a" /* LANGUAGES */];
+        this.languages = __WEBPACK_IMPORTED_MODULE_3__settings_menu__["a" /* LANGUAGES */];
         this.langCode = 'en';
         this.langUrl = 'flag-uk.png';
-        this.groupList = ['1', '2', '3', '4', '5', '6', '7'];
+        this.groupList = [];
         this.openedSidebar = false;
         this.showOverlay = false;
-        this.groupCtrl = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["FormControl"]();
+        this.groupCtrl = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["FormControl"]();
         this.filteredGroup = this.groupCtrl.valueChanges
             .startWith(null)
             .map(function (name) { return _this.filterStates(name); });
@@ -4514,7 +4537,15 @@ var HorizontalNavbarComponent = (function () {
             });
         });
     }
-    HorizontalNavbarComponent.prototype.ngOnInit = function () { };
+    HorizontalNavbarComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.apiService.getGroups().then(function (data) {
+            console.log(data);
+            data.data.map(function (d) {
+                _this.groupList.push(d.name);
+            });
+        });
+    };
     HorizontalNavbarComponent.prototype.open = function (event) {
         var clickedComponent = event.target.closest('.nav-item');
         var items = clickedComponent.parentElement.children;
@@ -4567,10 +4598,10 @@ var HorizontalNavbarComponent = (function () {
                 '[class.show-overlay]': 'showOverlay'
             }
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
     ], HorizontalNavbarComponent);
     return HorizontalNavbarComponent;
-    var _a;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=horizontal-navbar.component.js.map

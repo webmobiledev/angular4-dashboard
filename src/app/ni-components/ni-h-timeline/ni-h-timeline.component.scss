@@ -29,7 +29,7 @@ $line-color: main-color(50);
         color: accent-contrast(500);
         display: inline-block;
         min-width: ($module-rem * 8);
-        padding: ($module-rem / 2) $module-rem;
+        padding: 0;
         position: relative;
         text-align: center;
       }
@@ -40,10 +40,8 @@ $line-color: main-color(50);
 
       .item {
         margin: ($module-rem * 2) 0;
-        padding-left: 50px;
         position: relative;
         @media #{$max543} {
-          padding-left: 32px;
         }
         
         .item-point {
@@ -54,20 +52,20 @@ $line-color: main-color(50);
           height: 12px;
           left: 0;
           position: absolute;
-          top: calc(#{$module-rem * 1.5} + 1px);
           width: 12px;
         }
         .item-date {
+          width: 27%;
+          text-align: right;
           font-size: 0.875rem;
-          margin-bottom: $module-rem;
         }
         .item-content {
           background: $item-bg;
           border-radius: $shape;
           display: inline-block;
-          padding: ($module-rem * 1.5) ($module-rem * 2);
+          padding: 0;
           position: relative;
-          width: auto;
+          width: 67%;
 
           .rtl & {
             direction: rtl;
@@ -103,7 +101,7 @@ $line-color: main-color(50);
       .box-items {
         .item {
           .item-point {
-            top: calc(#{$module-rem * 4.2} + 1px);
+            top: 5px;
           }
         }
       }
@@ -208,38 +206,36 @@ $line-color: main-color(50);
   &.align-between {
     @media #{$min768} {
       .line {
-        left: 50%;
+        left: 30%;
       }
       .timeline-box {
         .box-label {
-          justify-content: center;
+          padding-left: calc(30% - 45px);
         }
         .box-items {
           .item {
-            width: 50%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
             &:nth-child(even) {
               align-self: flex-end;
 
               .item-point {
-                left: 0;
+                left: 30%;
                 margin-left: -6px;
               }
             }
             &:nth-child(odd) {
-              padding: 0 50px 0 0;
-              text-align: right;
               @media #{$max543} {
-                padding: 0 32px 0 0;
               }
 
               .item-point {
-                left: 100%;
+                left: 30%;
                 margin-left: -6px;
               }
               .item-content {
-                text-align: left;
-
                 .rtl & {
                   text-align: right;
                 }
