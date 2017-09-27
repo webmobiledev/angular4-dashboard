@@ -32,12 +32,13 @@ webpackEmptyAsyncContext.id = "../../../../../src lazy recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_default_pages_aboutus_aboutus_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/aboutus/aboutus.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_default_pages_profile_profile_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/profile/profile.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_default_pages_simulation_simulation_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/simulation/simulation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_extra_pages_signin_signin_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/signin/signin.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_extra_pages_signup_signup_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/signup/signup.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_extra_pages_forgot_forgot_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/forgot/forgot.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_extra_pages_confirm_confirm_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/confirm/confirm.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_extra_pages_page_404_page_404_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-404/page-404.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_extra_pages_page_500_page_500_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-500/page-500.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_default_pages_chatroom_chatroom_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/chatroom/chatroom.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_extra_pages_signin_signin_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/signin/signin.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_extra_pages_signup_signup_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/signup/signup.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_extra_pages_forgot_forgot_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/forgot/forgot.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_extra_pages_confirm_confirm_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/confirm/confirm.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_extra_pages_page_404_page_404_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-404/page-404.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_extra_pages_page_500_page_500_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-500/page-500.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -63,21 +64,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+var groupsRoutes = [
+    { path: '**', component: __WEBPACK_IMPORTED_MODULE_6__pages_default_pages_groups_groups_component__["b" /* PageGroupsComponent */] },
+];
 var defaultRoutes = [
     { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_5__pages_default_pages_dashboard_dashboard_component__["a" /* PageDashboardComponent */] },
-    { path: 'groups', component: __WEBPACK_IMPORTED_MODULE_6__pages_default_pages_groups_groups_component__["a" /* PageGroupsComponent */] },
+    { path: 'groups', component: __WEBPACK_IMPORTED_MODULE_6__pages_default_pages_groups_groups_component__["b" /* PageGroupsComponent */] },
     { path: 'transactions', component: __WEBPACK_IMPORTED_MODULE_7__pages_default_pages_transactions_transactions_component__["a" /* PageTransactionsComponent */] },
     { path: 'requests', component: __WEBPACK_IMPORTED_MODULE_8__pages_default_pages_requests_requests_component__["a" /* PageRequestsComponent */] },
     { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_11__pages_default_pages_profile_profile_component__["a" /* PageProfileComponent */] },
     { path: 'simulation', component: __WEBPACK_IMPORTED_MODULE_12__pages_default_pages_simulation_simulation_component__["a" /* PageSimulationComponent */] },
     { path: 'aboutus', component: __WEBPACK_IMPORTED_MODULE_10__pages_default_pages_aboutus_aboutus_component__["a" /* PageAboutusComponent */] },
+    { path: 'chatroom', component: __WEBPACK_IMPORTED_MODULE_13__pages_default_pages_chatroom_chatroom_component__["a" /* ChatroomComponent */] },
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_9__pages_default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */] },
 ];
 var extraRoutes = [
-    { path: 'sign-in', component: __WEBPACK_IMPORTED_MODULE_13__pages_extra_pages_signin_signin_component__["a" /* PageSigninComponent */] },
+    { path: 'sign-in', component: __WEBPACK_IMPORTED_MODULE_14__pages_extra_pages_signin_signin_component__["a" /* PageSigninComponent */] },
     {
         path: 'sign-up',
-        component: __WEBPACK_IMPORTED_MODULE_14__pages_extra_pages_signup_signup_component__["b" /* PageSignupComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_15__pages_extra_pages_signup_signup_component__["b" /* PageSignupComponent */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
         data: {
             authGuardRedirect: 'signup'
@@ -85,7 +91,7 @@ var extraRoutes = [
     },
     {
         path: 'forgot',
-        component: __WEBPACK_IMPORTED_MODULE_15__pages_extra_pages_forgot_forgot_component__["a" /* PageForgotComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_16__pages_extra_pages_forgot_forgot_component__["a" /* PageForgotComponent */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
         data: {
             authGuardRedirect: 'forgot'
@@ -93,7 +99,7 @@ var extraRoutes = [
     },
     {
         path: 'confirm',
-        component: __WEBPACK_IMPORTED_MODULE_16__pages_extra_pages_confirm_confirm_component__["a" /* PageConfirmComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_17__pages_extra_pages_confirm_confirm_component__["a" /* PageConfirmComponent */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
         data: {
             authGuardRedirect: 'confirm'
@@ -101,7 +107,7 @@ var extraRoutes = [
     },
     {
         path: 'page-404',
-        component: __WEBPACK_IMPORTED_MODULE_17__pages_extra_pages_page_404_page_404_component__["a" /* Page404Component */],
+        component: __WEBPACK_IMPORTED_MODULE_18__pages_extra_pages_page_404_page_404_component__["a" /* Page404Component */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
         data: {
             authGuardRedirect: 'page404'
@@ -109,7 +115,7 @@ var extraRoutes = [
     },
     {
         path: 'page-500',
-        component: __WEBPACK_IMPORTED_MODULE_18__pages_extra_pages_page_500_page_500_component__["a" /* Page500Component */],
+        component: __WEBPACK_IMPORTED_MODULE_19__pages_extra_pages_page_500_page_500_component__["a" /* Page500Component */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
         data: {
             authGuardRedirect: 'page500'
@@ -1013,7 +1019,7 @@ var NiBadgeComponent = (function () {
 /***/ "../../../../../src/app/ni-components/ni-breadcrumb/ni-breadcrumb.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"breadcrumb\" [ngClass]=\"getClasses()\">\n  <li *ngFor=\"let item of menu; let last = last\">\n    <a href=\"{{item.link}}\" *ngIf=\"item.link\"><span class=\"icon {{item.icon}}\" *ngIf=\"item.icon\"></span>{{item.title}}</a><!--\n    --><span class=\"static\" *ngIf=\"!item.link\"><span class=\"icon {{item.icon}}\" *ngIf=\"item.icon\"></span>{{item.title}}</span><!--\n    --><span class=\"separator\" *ngIf=\"!last\">{{separator}}</span>\n  </li>\n</ul>"
+module.exports = "<ul class=\"breadcrumb\" [ngClass]=\"getClasses()\">\n  <li *ngFor=\"let item of menu; let last = last ; let first = first\">\n    <a href=\"{{item.link}}\" *ngIf=\"item.link\"><span class=\"icon {{item.icon}}\" *ngIf=\"item.icon\"></span>{{item.title}}</a>\n    <span class=\"static\" *ngIf=\"!item.link && !first\"><span class=\"icon {{item.icon}}\" *ngIf=\"item.icon\"></span>{{item.title}}</span>\n    <span class=\"static\" *ngIf=\"!item.link && first\" (click)=\"initialize()\"><span class=\"icon {{item.icon}}\" *ngIf=\"item.icon\"></span>{{item.title}}</span>\n    <span class=\"separator\" *ngIf=\"!last\">{{separator}}</span>\n  </li>\n</ul>"
 
 /***/ }),
 
@@ -1041,6 +1047,7 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NiBreadcrumbComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1051,8 +1058,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var NiBreadcrumbComponent = (function () {
-    function NiBreadcrumbComponent() {
+    function NiBreadcrumbComponent(apiService) {
+        this.apiService = apiService;
         this.menu = [];
         this.separator = '/';
         this.style = 'default'; //custom1 | custom2
@@ -1063,6 +1072,9 @@ var NiBreadcrumbComponent = (function () {
             'custom-1': this.style === 'custom1',
             'custom-2': this.style === 'custom2'
         };
+    };
+    NiBreadcrumbComponent.prototype.initialize = function () {
+        this.apiService.isClickedDetails.next(false);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
@@ -1082,9 +1094,10 @@ var NiBreadcrumbComponent = (function () {
             template: __webpack_require__("../../../../../src/app/ni-components/ni-breadcrumb/ni-breadcrumb.component.html"),
             styles: [__webpack_require__("../../../../../src/app/ni-components/ni-breadcrumb/ni-breadcrumb.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === "function" && _a || Object])
     ], NiBreadcrumbComponent);
     return NiBreadcrumbComponent;
+    var _a;
 }());
 
 //# sourceMappingURL=ni-breadcrumb.component.js.map
@@ -1477,18 +1490,20 @@ var NiChatComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ni_button_ni_button_component__ = __webpack_require__("../../../../../src/app/ni-components/ni-button/ni-button.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ni_card_ni_card_component__ = __webpack_require__("../../../../../src/app/ni-components/ni-card/ni-card.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ni_chat_ni_chat_component__ = __webpack_require__("../../../../../src/app/ni-components/ni-chat/ni-chat.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ni_file_ni_file_component__ = __webpack_require__("../../../../../src/app/ni-components/ni-file/ni-file.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ni_h_timeline_ni_h_timeline_component__ = __webpack_require__("../../../../../src/app/ni-components/ni-h-timeline/ni-h-timeline.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__directives_color_color_directive__ = __webpack_require__("../../../../../src/app/ni-components/directives/color/color.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__directives_bg_bg_directive__ = __webpack_require__("../../../../../src/app/ni-components/directives/bg/bg.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__directives_gradient_gradient_directive__ = __webpack_require__("../../../../../src/app/ni-components/directives/gradient/gradient.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__directives_auto_grow_auto_grow_directive__ = __webpack_require__("../../../../../src/app/ni-components/directives/auto-grow/auto-grow.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ni_table_ni_table_component__ = __webpack_require__("../../../../../src/app/ni-components/ni-table/ni-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ni_file_ni_file_component__ = __webpack_require__("../../../../../src/app/ni-components/ni-file/ni-file.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ni_h_timeline_ni_h_timeline_component__ = __webpack_require__("../../../../../src/app/ni-components/ni-h-timeline/ni-h-timeline.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__directives_color_color_directive__ = __webpack_require__("../../../../../src/app/ni-components/directives/color/color.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__directives_bg_bg_directive__ = __webpack_require__("../../../../../src/app/ni-components/directives/bg/bg.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__directives_gradient_gradient_directive__ = __webpack_require__("../../../../../src/app/ni-components/directives/gradient/gradient.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__directives_auto_grow_auto_grow_directive__ = __webpack_require__("../../../../../src/app/ni-components/directives/auto-grow/auto-grow.directive.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1520,12 +1535,13 @@ var NiComponentsModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_6__ni_button_ni_button_component__["a" /* NiButtonComponent */],
                 __WEBPACK_IMPORTED_MODULE_7__ni_card_ni_card_component__["a" /* NiCardComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__ni_chat_ni_chat_component__["a" /* NiChatComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__ni_file_ni_file_component__["a" /* NiFileComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__ni_h_timeline_ni_h_timeline_component__["a" /* NiHTimelineComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__directives_color_color_directive__["a" /* ColorDirective */],
-                __WEBPACK_IMPORTED_MODULE_12__directives_bg_bg_directive__["a" /* BgDirective */],
-                __WEBPACK_IMPORTED_MODULE_13__directives_gradient_gradient_directive__["a" /* GradientDirective */],
-                __WEBPACK_IMPORTED_MODULE_14__directives_auto_grow_auto_grow_directive__["a" /* AutoGrowDirective */]
+                __WEBPACK_IMPORTED_MODULE_10__ni_file_ni_file_component__["a" /* NiFileComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__ni_h_timeline_ni_h_timeline_component__["a" /* NiHTimelineComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__ni_table_ni_table_component__["a" /* NiTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__directives_color_color_directive__["a" /* ColorDirective */],
+                __WEBPACK_IMPORTED_MODULE_13__directives_bg_bg_directive__["a" /* BgDirective */],
+                __WEBPACK_IMPORTED_MODULE_14__directives_gradient_gradient_directive__["a" /* GradientDirective */],
+                __WEBPACK_IMPORTED_MODULE_15__directives_auto_grow_auto_grow_directive__["a" /* AutoGrowDirective */]
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_3__ni_alert_ni_alert_component__["a" /* NiAlertComponent */],
@@ -1534,11 +1550,12 @@ var NiComponentsModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_6__ni_button_ni_button_component__["a" /* NiButtonComponent */],
                 __WEBPACK_IMPORTED_MODULE_7__ni_card_ni_card_component__["a" /* NiCardComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__ni_chat_ni_chat_component__["a" /* NiChatComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__ni_file_ni_file_component__["a" /* NiFileComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__ni_h_timeline_ni_h_timeline_component__["a" /* NiHTimelineComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__directives_color_color_directive__["a" /* ColorDirective */],
-                __WEBPACK_IMPORTED_MODULE_12__directives_bg_bg_directive__["a" /* BgDirective */],
-                __WEBPACK_IMPORTED_MODULE_13__directives_gradient_gradient_directive__["a" /* GradientDirective */]
+                __WEBPACK_IMPORTED_MODULE_10__ni_file_ni_file_component__["a" /* NiFileComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__ni_h_timeline_ni_h_timeline_component__["a" /* NiHTimelineComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__ni_table_ni_table_component__["a" /* NiTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__directives_color_color_directive__["a" /* ColorDirective */],
+                __WEBPACK_IMPORTED_MODULE_13__directives_bg_bg_directive__["a" /* BgDirective */],
+                __WEBPACK_IMPORTED_MODULE_14__directives_gradient_gradient_directive__["a" /* GradientDirective */]
             ]
         })
     ], NiComponentsModule);
@@ -1759,6 +1776,88 @@ var NiHTimelineComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/ni-components/ni-table/ni-table.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div>\n  <div class=\"table-responsive\">\n    <table class=\"table\">\n      <thead class=\"thead-default\">\n      <tr>\n        <th *ngFor=\"let h of headers\">\n          <span *ngIf=\"!h.type\">{{ h }}</span>\n          <span *ngIf=\"h.type\">{{ h.type }}</span>\n        </th>\n      </tr>\n      </thead>\n      <tbody>\n      <tr *ngFor=\"let d of data\">\n        <td *ngFor=\"let s of d\">\n          <span *ngIf=\"!s.type\">{{ s }}</span>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'details'\" (click)=\"changePage(s.id)\">details</button>\n          <button md-button color=\"warn\" *ngIf=\"s.type && (s.type)[0] === 'remove'\">remove</button>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'paynow'\">pay now</button>\n        </td>\n      </tr>\n      </tbody>\n    </table>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/ni-components/ni-table/ni-table.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ":host {\n  display: block;\n  margin: 0 0 1.375rem; }\n  :host .card-wrap {\n    background-color: #fff;\n    background-position: 50% 50%;\n    background-repeat: no-repeat;\n    background-size: cover;\n    border: 1px solid #e5e6e9;\n    border-radius: 3px;\n    box-shadow: 1px 1px 5px 0px rgba(37, 45, 71, 0.25);\n    position: relative; }\n    :host .card-wrap:not(.outline-card) {\n      border: 0 !important; }\n    :host .card-wrap .card-header {\n      background: #e5e6e9;\n      border-radius: 3px 3px 0 0;\n      color: #000000;\n      display: block;\n      margin: 0;\n      padding: 0.6875rem 1.375rem;\n      position: relative; }\n      :host .card-wrap .card-header + .card-content {\n        border-radius: 0 0 3px 3px; }\n    :host .card-wrap .card-content {\n      border-radius: 3px;\n      display: block;\n      padding: 1.375rem;\n      position: relative; }\n    :host .card-wrap.success-card {\n      background: #81C784;\n      border-color: #81C784; }\n      :host .card-wrap.success-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.info-card {\n      background: #64B5F6;\n      border-color: #64B5F6; }\n      :host .card-wrap.info-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.warning-card {\n      background: #FFB74D;\n      border-color: #FFB74D; }\n      :host .card-wrap.warning-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.danger-card {\n      background: #e24d4d;\n      border-color: #e24d4d; }\n      :host .card-wrap.danger-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.success-color-card {\n      color: #81C784; }\n    :host .card-wrap.info-color-card {\n      color: #64B5F6; }\n    :host .card-wrap.warning-color-card {\n      color: #FFB74D; }\n    :host .card-wrap.danger-color-card {\n      color: #e24d4d; }\n    :host .card-wrap.outline-card {\n      background: none !important;\n      box-shadow: none !important; }\n    :host .card-wrap.bg-image-card {\n      border: none !important; }\n      :host .card-wrap.bg-image-card:before {\n        background-color: inherit;\n        border-radius: 3px;\n        content: '';\n        display: block;\n        height: 100%;\n        left: 0;\n        position: absolute;\n        top: 0;\n        width: 100%; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/ni-components/ni-table/ni-table.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NiTableComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var NiTableComponent = (function () {
+    function NiTableComponent(apiService) {
+        this.apiService = apiService;
+        this.headers = [];
+        this.data = [];
+    }
+    NiTableComponent.prototype.ngOnInit = function () {
+    };
+    NiTableComponent.prototype.changePage = function (id) {
+        this.apiService.groupId.next(id);
+        this.apiService.isClickedDetails.next(true);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], NiTableComponent.prototype, "headers", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], NiTableComponent.prototype, "data", void 0);
+    NiTableComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'ni-table',
+            template: __webpack_require__("../../../../../src/app/ni-components/ni-table/ni-table.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/ni-components/ni-table/ni-table.component.scss")],
+            host: {
+                '[class.ni-table]': 'true'
+            }
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === "function" && _a || Object])
+    ], NiTableComponent);
+    return NiTableComponent;
+    var _a;
+}());
+
+//# sourceMappingURL=ni-table.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/pages/default-pages/aboutus/aboutus.component.html":
 /***/ (function(module, exports) {
 
@@ -1902,6 +2001,104 @@ var PageAboutusComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/pages/default-pages/chatroom/chatroom.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row members-header\">\n  <div class=\"col-sm-12 text-right p-3\">\n    <md-input-container class=\"search-group\">\n      <input mdInput placeholder=\"search\" value=\"\">\n    </md-input-container>\n  </div>\n  <div class=\"col-md-12\">\n    <ni-chat [activeUser]=\"activeUser\" [messages]=\"messages\" [style.height.px]=\"474\"></ni-chat>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/chatroom/chatroom.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/chatroom/chatroom.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatroomComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ChatroomComponent = (function () {
+    function ChatroomComponent() {
+        this.activeUser = {
+            name: 'Amanda Li',
+            lastSeen: 'last seen 10 minutes ago',
+            avatar: 'assets/content/avatar-4.jpg'
+        };
+        this.messages = [
+            {
+                'date': '8 hours ago',
+                'content': "Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+                'my': false
+            },
+            {
+                'date': '7 hours ago',
+                'content': "Aenean lacinia bibendum nulla sed consectetur.",
+                'my': true
+            },
+            {
+                'date': '2 hours ago',
+                'content': "Contrary to popular belief,",
+                'my': false
+            },
+            {
+                'date': '15 minutes ago',
+                'content': "Lorem ipsum dolor sit.",
+                'my': true
+            },
+            {
+                'date': '14 minutes ago',
+                'content': "Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+                'my': false
+            },
+            {
+                'date': '12 minutes ago',
+                'content': "Aenean lacinia bibendum nulla sed consectetur.",
+                'my': true
+            }
+        ];
+    }
+    ChatroomComponent.prototype.ngOnInit = function () {
+    };
+    ChatroomComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-chatroom',
+            template: __webpack_require__("../../../../../src/app/pages/default-pages/chatroom/chatroom.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/default-pages/chatroom/chatroom.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ChatroomComponent);
+    return ChatroomComponent;
+}());
+
+//# sourceMappingURL=chatroom.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/pages/default-pages/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
@@ -1932,9 +2129,11 @@ module.exports = module.exports.toString();
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageDashboardComponent; });
+/* unused harmony export DialogResultComponent */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1947,6 +2146,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var PageDashboardComponent = (function () {
     function PageDashboardComponent(_sharedService, apiService) {
         var _this = this;
@@ -1955,15 +2155,15 @@ var PageDashboardComponent = (function () {
         this.pageTitle = 'dashboard';
         this.timelineData = [];
         this._sharedService.emitChange(this.pageTitle);
-        apiService.getUserRequest('test_group6').then(function (data) {
+        apiService.getUserRequest().then(function (data) {
             console.log('userrequest', data);
             _this.userRequests = data.data;
         });
-        apiService.getNextPayment('test_group6').then(function (data) {
+        apiService.getNextPayment().then(function (data) {
             console.log('nextpayment', data);
             _this.nextPayment = data.data;
         });
-        apiService.getTimelineData('test_group6').then(function (data) {
+        apiService.getTimelineData().then(function (data) {
             console.log('timeline', data);
             _this.timelineData = [{
                     label: '2017',
@@ -1995,14 +2195,43 @@ var PageDashboardComponent = (function () {
     var _a, _b;
 }());
 
+var DialogResultComponent = (function () {
+    function DialogResultComponent(dialogRef) {
+        this.dialogRef = dialogRef;
+    }
+    DialogResultComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'dialog-result',
+            template: __webpack_require__("../../../../../src/app/pages/default-pages/dashboard/dialog-privacy.html"),
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_material__["k" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_material__["k" /* MdDialogRef */]) === "function" && _a || Object])
+    ], DialogResultComponent);
+    return DialogResultComponent;
+    var _a;
+}());
+
 //# sourceMappingURL=dashboard.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/dashboard/dialog-privacy.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h2 md-dialog-title>Privacy and Terms</h2>\n<div md-dialog-content>Combining data\n    We also combine data among our services and across your devices for these purposes. For example, we show you ads based on information from your use of Search and Gmail, and we use data from trillions of search queries to build spell-correction models that we use across all of our services.</div>\n<div md-dialog-actions>\n  <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n  <button md-raised-button (click)=\"dialogRef.close('yes')\" color=\"accent\">I AGREE</button>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/groups/dialog-add-member.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h2 md-dialog-title>Add member</h2>\n<div md-dialog-content>\n  <md-input-container>\n    <input mdInput placeholder=\"Member to add\" value=\"\" [(ngModel)]=\"member\">\n  </md-input-container>\n</div>\n<div md-dialog-actions>\n  <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n  <button md-raised-button (click)=\"addMember()\" color=\"accent\">Add</button>\n</div>"
 
 /***/ }),
 
 /***/ "../../../../../src/app/pages/default-pages/groups/groups.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"row\">\r\n  <div class=\"col-md-8\">\r\n    <ni-card title=\"Column chart\">\r\n      <div id=\"amchart-1\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\r\n    </ni-card>\r\n\r\n    <ni-card title=\"Lines chart\">\r\n      <div id=\"amchart-2\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\r\n    </ni-card>\r\n\r\n    <ni-card [title]=\"'What we doing'\" class=\"mb-md-0\">\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente. Ad architecto at aut\r\n        et ex facilis fuga, laboriosam, magnam modi obcaecati officia officiis, omnis praesentium quam quas reiciendis\r\n        rerum ullam velit veritatis vitae.</p>\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-md-6\">\r\n          <p class=\"mb-1\"><strong>Wordpress</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"90\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Magento</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"80\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Opencart</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"60\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Drupal</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"30\"></md-progress-bar>\r\n          <div class=\"clearfix\"></div>\r\n        </div>\r\n\r\n        <div class=\"col-md-6\">\r\n          <p class=\"mb-1\"><strong>Angular</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"98\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>React</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"85\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Vue.js</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"40\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Backbone.js</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"38\"></md-progress-bar>\r\n          <div class=\"clearfix\"></div>\r\n        </div>\r\n      </div>\r\n\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam cumque dicta earum, iure maiores neque\r\n        nesciunt officia quisquam ullam.</p>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-4\">\r\n    <ni-card [title]=\"'Recent activities'\" [outline]=\"true\">\r\n      <ni-h-timeline [showYears]=\"false\" [align]=\"'left'\" [data]=\"timelineData\"></ni-h-timeline>\r\n    </ni-card>\r\n\r\n    <ni-card [customBgColor]=\"'rgba(226,77,77,0.6)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-4.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Orders</div>\r\n      <div class=\"count\">2,145</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+17%</ni-badge> <small>from previous period</small>\r\n    </ni-card>\r\n\r\n    <ni-card [customBgColor]=\"'rgba(255,183,77,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-5.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Revenue</div>\r\n      <div class=\"count\">$ 50,24</div>\r\n      <small>11750</small>\r\n    </ni-card>\r\n\r\n    <ni-card [customBgColor]=\"'rgba(100,181,246,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-6.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Products</div>\r\n      <div class=\"count\">2,543</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+210</ni-badge>\r\n    </ni-card>\r\n\r\n    <ni-card [customBgColor]=\"'rgba(129,199,132,0.8)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-7.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Sold</div>\r\n      <div class=\"count\">1,005</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+24%</ni-badge>\r\n    </ni-card>\r\n\r\n    <ni-card title=\"Last uploaded files\" class=\"mb-0\">\r\n      <ni-file [size]=\"'small'\" [type]=\"'jpg'\" [title]=\"'bulb'\" [image]=\"'assets/content/file-1.jpg'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'doc'\" [title]=\"'resume'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'jpg'\" [title]=\"'main-image'\" [image]=\"'assets/content/file-2.jpg'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'jpg'\" [title]=\"'watch'\" [image]=\"'assets/content/file-3.jpg'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'jpg'\" [title]=\"'camera'\" [image]=\"'assets/content/file-4.jpg'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'pdf'\" [title]=\"'documentation'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'mp4'\" [title]=\"'video-tutorial'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'jpg'\" [title]=\"'best-work'\" [image]=\"'assets/content/file.jpg'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'jpg'\" [title]=\"'smart'\" [image]=\"'assets/content/file-5.jpg'\"></ni-file>\r\n      <ni-file [size]=\"'small'\" [type]=\"'zip'\" [title]=\"'theme'\"></ni-file>\r\n    </ni-card>\r\n  </div>\r\n</div>"
+module.exports = "<div *ngIf=\"showGroupList\">\r\n  <div class=\"row members-header\">\r\n    <div class=\"col-sm-12 text-right p-3\">\r\n      <md-input-container class=\"search-group\">\r\n        <input mdInput placeholder=\"search\" value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12 p-3\">\r\n      <ni-table [headers]=\"groupHeaders\" [data]=\"groups\"></ni-table>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"!showGroupList\">\r\n  <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n  \r\n  <md-tab-group>\r\n    <md-tab label=\"Home\">\r\n      <div class=\"row\">\r\n        <div class=\"col-sm-8 p-3\">\r\n          <md-card class=\"example-card mb-3\" *ngIf=\"groupInfo && groupInfo.group_info\">\r\n            <ul>\r\n              <li>Name: {{groupInfo.group_info.name}}</li>\r\n              <li>Description: {{groupInfo.group_info.description}}</li>\r\n              <li>Date creation: {{groupInfo.group_info.date_creation}}</li>\r\n              <li>Type: {{groupInfo.group_info.g_type}}</li>\r\n              <li>Currency: {{groupInfo.group_info.currency}}</li>\r\n              <li>Creator: {{groupInfo.group_info.creator}}</li>\r\n              <li>Status: {{groupInfo.group_info.status}}</li>\r\n              <li>Rate: {{groupInfo.group_info.rate}}</li>\r\n              <li>Frequency: {{groupInfo.group_info.frequency}}</li>\r\n              <li>Due date: {{groupInfo.group_info.due_day}}</li>\r\n              <li>nb members: {{groupInfo.group_info.nb_members}}</li>\r\n            </ul>\r\n          </md-card>\r\n          <button md-raised-button color=\"accent\">Start</button>\r\n          <button md-raised-button color=\"accent\">Add a member</button>\r\n        </div>\r\n        <div class=\"col-sm-4 p-3\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.previous_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Previous Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.previous_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.previous_rotation_data.email}}</li>\r\n              <li>Date creation: {{groupInfo.previous_rotation_data.creation_date}}</li>\r\n              <li>Type: {{groupInfo.previous_rotation_data.member_type}}</li>\r\n              <li>Gender: {{groupInfo.previous_rotation_data.gender}}</li>\r\n              <li>Position: {{groupInfo.previous_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.previous_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n          <md-card class=\"example-card mt-3\" *ngIf=\"groupInfo && groupInfo.next_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Next Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.next_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.next_rotation_data.email}}</li>\r\n              <li>Date creation: {{groupInfo.next_rotation_data.creation_date}}</li>\r\n              <li>Type: {{groupInfo.next_rotation_data.member_type}}</li>\r\n              <li>Gender: {{groupInfo.next_rotation_data.gender}}</li>\r\n              <li>Position: {{groupInfo.next_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.next_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab label=\"Members\">\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"accent\" (click)=\"openDialog()\">Add a member</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group\">\r\n            <input mdInput placeholder=\"search\" value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table [headers]=\"memberHeaders\" [data]=\"members\"></ni-table>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab label=\"Obligation\">\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group\">\r\n            <input mdInput placeholder=\"search\" value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table [headers]=\"obligationHeaders\" [data]=\"obligations\"></ni-table>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab label=\"Requests\">\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group\">\r\n            <input mdInput placeholder=\"search\" value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab label=\"Event\">\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group\">\r\n            <input mdInput placeholder=\"search\" value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table [headers]=\"eventHeaders\" [data]=\"events\"></ni-table>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n  </md-tab-group>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -2014,7 +2243,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ":host /deep/.ni-h-timeline .timeline-box .box-items .item {\n  margin: 0.6875rem 0 !important;\n  padding-left: 30px !important; }\n  :host /deep/.ni-h-timeline .timeline-box .box-items .item .item-content {\n    padding: 0.6875rem !important; }\n", ""]);
+exports.push([module.i, ":host /deep/.ni-h-timeline .timeline-box .box-items .item {\n  margin: 0.6875rem 0 !important;\n  padding-left: 30px !important; }\n  :host /deep/.ni-h-timeline .timeline-box .box-items .item .item-content {\n    padding: 0.6875rem !important; }\n\n.members-header {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n\n.search-group {\n  width: 150px; }\n", ""]);
 
 // exports
 
@@ -2028,10 +2257,12 @@ module.exports = module.exports.toString();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageGroupsComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PageGroupsComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogAddMemberComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__ = __webpack_require__("../../../../@amcharts/amcharts3-angular/es2015/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2044,235 +2275,95 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var timelineData = [
-    {
-        'timeline': [
-            {
-                'date': '12 minutes ago',
-                'content': "You <span class=\"text-info\">recommended</span> Sem B.",
-                'pointColor': '#ea8080'
-            },
-            {
-                'date': '37 minutes ago',
-                'content': "You followed Sydney N.",
-                'pointColor': '#915035'
-            },
-            {
-                'date': '2 hours ago',
-                'content': "You <span class=\"text-danger\">subscribed</span> to Harold Fuller",
-                'pointColor': '#B925FF'
-            },
-            {
-                'date': '7 hours ago',
-                'content': "You updated your profile picture",
-                'pointColor': '#C5CAE9'
-            },
-            {
-                'date': '8 hours ago',
-                'content': "You deleted <i>homepage.psd</i>",
-                'pointColor': '#FF8A65'
-            }
-        ]
-    }
-];
+
 var PageGroupsComponent = (function () {
-    function PageGroupsComponent(AmCharts, _sharedService) {
-        this.AmCharts = AmCharts;
+    function PageGroupsComponent(_sharedService, dialog, apiService) {
         this._sharedService = _sharedService;
+        this.dialog = dialog;
+        this.apiService = apiService;
         this.pageTitle = 'groups';
-        this.timelineData = timelineData;
+        this.breadcrumb = [];
+        this.groups = [];
+        this.groupHeaders = [];
+        this.members = [];
+        this.memberHeaders = [];
+        this.obligations = [];
+        this.obligationHeaders = [];
+        this.requests = [];
+        this.requestHeaders = [];
+        this.events = [];
+        this.eventHeaders = [];
+        this.groupInfo = {};
+        this.showGroupList = true;
         this._sharedService.emitChange(this.pageTitle);
     }
     PageGroupsComponent.prototype.ngOnInit = function () {
-        this.chart = this.AmCharts.makeChart('amchart-1', {
-            'type': 'serial',
-            'theme': 'light',
-            'dataProvider': [
-                {
-                    'country': 'Angular',
-                    'visits': 1232
-                }, {
-                    'country': 'AngularJS',
-                    'visits': 1882
-                }, {
-                    'country': 'React',
-                    'visits': 1809
-                }, {
-                    'country': 'Vue.js',
-                    'visits': 1322
-                }, {
-                    'country': 'Backbone.js',
-                    'visits': 1542
-                }, {
-                    'country': 'Ember.js',
-                    'visits': 1497
-                }, {
-                    'country': 'Meteor.js',
-                    'visits': 1240
-                }, {
-                    'country': 'jQuery',
-                    'visits': 711
-                }
-            ],
-            'valueAxes': [{
-                    'gridColor': '#FFFFFF',
-                    'gridAlpha': 0.2,
-                    'dashLength': 0
-                }],
-            'gridAboveGraphs': true,
-            'startDuration': 1,
-            'graphs': [{
-                    'balloonText': '[[category]]: <b>[[value]]</b>',
-                    'fillAlphas': 0.8,
-                    'lineAlpha': 0.2,
-                    'type': 'column',
-                    'valueField': 'visits'
-                }],
-            'chartCursor': {
-                'categoryBalloonEnabled': false,
-                'cursorAlpha': 0,
-                'zoomable': false
-            },
-            'categoryField': 'country',
-            'categoryAxis': {
-                'gridPosition': 'start',
-                'gridAlpha': 0,
-                'tickPosition': 'start',
-                'tickLength': 20
+        var _this = this;
+        this.showGroupList = true;
+        this.apiService.isClickedDetails.subscribe(function (data) {
+            if (data === true) {
+                _this.showGroupList = false;
+            }
+            else {
+                _this.showGroupList = true;
             }
         });
-        this.chart = this.AmCharts.makeChart('amchart-2', {
-            'type': 'serial',
-            'theme': 'light',
-            //'autoMarginOffset':20,
-            'dataDateFormat': 'YYYY-MM-DD HH:NN',
-            'dataProvider': [
-                {
-                    'date': '2012-01-01',
-                    'value': 8
-                }, {
-                    'date': '2012-01-02',
-                    'color': '#CC0000',
-                    'value': 10
-                }, {
-                    'date': '2012-01-03',
-                    'value': 12
-                }, {
-                    'date': '2012-01-04',
-                    'value': 14
-                }, {
-                    'date': '2012-01-05',
-                    'value': 11
-                }, {
-                    'date': '2012-01-06',
-                    'value': 6
-                }, {
-                    'date': '2012-01-07',
-                    'value': 7
-                }, {
-                    'date': '2012-01-08',
-                    'value': 9
-                }, {
-                    'date': '2012-01-09',
-                    'value': 13
-                }, {
-                    'date': '2012-01-10',
-                    'value': 15
-                }, {
-                    'date': '2012-01-11',
-                    'color': '#CC0000',
-                    'value': 19
-                }, {
-                    'date': '2012-01-12',
-                    'value': 21
-                }, {
-                    'date': '2012-01-13',
-                    'value': 22
-                }, {
-                    'date': '2012-01-14',
-                    'value': 20
-                }, {
-                    'date': '2012-01-15',
-                    'value': 18
-                }, {
-                    'date': '2012-01-16',
-                    'value': 14
-                }, {
-                    'date': '2012-01-17',
-                    'color': '#CC0000',
-                    'value': 16
-                }, {
-                    'date': '2012-01-18',
-                    'value': 18
-                }, {
-                    'date': '2012-01-19',
-                    'value': 17
-                }, {
-                    'date': '2012-01-20',
-                    'value': 15
-                }, {
-                    'date': '2012-01-21',
-                    'value': 12
-                }, {
-                    'date': '2012-01-22',
-                    'color': '#CC0000',
-                    'value': 10
-                }, {
-                    'date': '2012-01-23',
-                    'value': 8
-                }
-            ],
-            'valueAxes': [{
-                    'axisAlpha': 0,
-                    'guides': [{
-                            'fillAlpha': 0.1,
-                            'fillColor': '#888888',
-                            'lineAlpha': 0,
-                            'toValue': 16,
-                            'value': 10
-                        }],
-                    'position': 'left',
-                    'tickLength': 0
-                }],
-            'graphs': [{
-                    'balloonText': '[[category]]<br><b><span style="font-size:14px;">value:[[value]]</span></b>',
-                    'bullet': 'round',
-                    'dashLength': 3,
-                    'colorField': 'color',
-                    'valueField': 'value'
-                }],
-            'trendLines': [{
-                    'finalDate': '2012-01-11 12',
-                    'finalValue': 19,
-                    'initialDate': '2012-01-02 12',
-                    'initialValue': 10,
-                    'lineColor': '#CC0000'
-                }, {
-                    'finalDate': '2012-01-22 12',
-                    'finalValue': 10,
-                    'initialDate': '2012-01-17 12',
-                    'initialValue': 16,
-                    'lineColor': '#CC0000'
-                }],
-            'chartCursor': {
-                'fullWidth': true,
-                'valueLineEabled': true,
-                'valueLineBalloonEnabled': true,
-                'valueLineAlpha': 0.5,
-                'cursorAlpha': 0
-            },
-            'categoryField': 'date',
-            'categoryAxis': {
-                'parseDates': true,
-                'axisAlpha': 0,
-                'gridAlpha': 0.1,
-                'minorGridAlpha': 0.1,
-                'minorGridEnabled': true
-            }
+        this.apiService.groupId.subscribe(function (data) {
+            _this.apiService.getGroups().then(function (res) {
+                _this.groups = [];
+                _this.groupHeaders = ['Group name', 'nb members', 'Creator', 'Actual nb members', 'Amount', 'Currency', 'Creation Date', 'Description', 'Due date', 'Frequency', 'Type', 'PS Type', 'Rate', { type: 'Action' }];
+                res.data.map(function (d) {
+                    if (d.id === data) {
+                        _this.breadcrumb = [];
+                        _this.breadcrumb.push({ title: _this.pageTitle });
+                        _this.breadcrumb.push({ title: d.name });
+                    }
+                    _this.groups.push([d.name, d.nb_members, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.due_day, d.frequency, d.g_type, d.position_selection_type, d.rate, { type: ['details'], id: d.id }]);
+                });
+            });
+            _this.apiService.getGroupMembers().then(function (res) {
+                _this.members = [];
+                _this.memberHeaders = ['Name', 'Email', 'Type', 'Picture', 'Position', 'Date', { type: 'Action' }];
+                res.data.map(function (d) {
+                    _this.members.push([d.first_name, d.email, d.member_type, d.photo_path, d.position, d.user_position_date, { type: ['remove'], id: d.id }]);
+                });
+            });
+            _this.apiService.getGroupObligations().then(function (res) {
+                _this.obligations = [];
+                _this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Type', { type: 'Action' }];
+                res.data.map(function (d) {
+                    _this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status, d.type, { type: ['paynow'], id: d.id }]);
+                });
+            });
+            _this.apiService.getGroupRequests().then(function (res) {
+                _this.requests = [];
+                _this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date'];
+                res.data.map(function (d) {
+                    _this.requests.push([d.sender, d.receiver, d.group, d.request_type, d.request_status, d.request_date]);
+                });
+            });
+            _this.apiService.getGroupEvents().then(function (res) {
+                _this.events = [];
+                _this.eventHeaders = ['Type', 'Initiator', 'Group', 'Date'];
+                res.data.map(function (d) {
+                    _this.events.push([d.event_type, d.initiator, d.group, d.date_event]);
+                });
+            });
+            _this.apiService.getGroupInfo().then(function (res) {
+                _this.groupInfo = res.data[0];
+            });
         });
     };
     PageGroupsComponent.prototype.ngOnDestroy = function () {
-        this.AmCharts.destroyChart(this.chart);
+    };
+    PageGroupsComponent.prototype.openDialog = function () {
+        var dialogRef = this.dialog.open(DialogAddMemberComponent);
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result === 'yes') {
+            }
+            else {
+            }
+        });
     };
     PageGroupsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -2280,9 +2371,30 @@ var PageGroupsComponent = (function () {
             template: __webpack_require__("../../../../../src/app/pages/default-pages/groups/groups.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/default-pages/groups/groups.component.scss")]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["i" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["i" /* MdDialog */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */]) === "function" && _c || Object])
     ], PageGroupsComponent);
     return PageGroupsComponent;
+    var _a, _b, _c;
+}());
+
+var DialogAddMemberComponent = (function () {
+    function DialogAddMemberComponent(dialogRef, apiService) {
+        this.dialogRef = dialogRef;
+        this.apiService = apiService;
+    }
+    DialogAddMemberComponent.prototype.addMember = function () {
+        this.dialogRef.close();
+        this.apiService.addMember(this.member).then(function (res) {
+        });
+    };
+    DialogAddMemberComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'dialog-add-member',
+            template: __webpack_require__("../../../../../src/app/pages/default-pages/groups/dialog-add-member.html"),
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MdDialogRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
+    ], DialogAddMemberComponent);
+    return DialogAddMemberComponent;
     var _a, _b;
 }());
 
@@ -3998,12 +4110,15 @@ var DialogResultComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__default_pages_aboutus_aboutus_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/aboutus/aboutus.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/profile/profile.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__default_pages_simulation_simulation_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/simulation/simulation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__default_pages_chatroom_chatroom_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/chatroom/chatroom.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -4088,7 +4203,7 @@ var PagesModule = (function () {
             ],
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__["a" /* PageDashboardComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["a" /* PageGroupsComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["b" /* PageGroupsComponent */],
                 __WEBPACK_IMPORTED_MODULE_23__default_pages_requests_requests_component__["a" /* PageRequestsComponent */],
                 __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["a" /* PageProfileComponent */],
                 __WEBPACK_IMPORTED_MODULE_25__default_pages_aboutus_aboutus_component__["a" /* PageAboutusComponent */],
@@ -4102,11 +4217,13 @@ var PagesModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_17__extra_pages_confirm_confirm_component__["a" /* PageConfirmComponent */],
                 __WEBPACK_IMPORTED_MODULE_18__extra_pages_page_404_page_404_component__["a" /* Page404Component */],
                 __WEBPACK_IMPORTED_MODULE_19__extra_pages_page_500_page_500_component__["a" /* Page500Component */],
-                __WEBPACK_IMPORTED_MODULE_24__default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */]
+                __WEBPACK_IMPORTED_MODULE_24__default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["a" /* DialogAddMemberComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__default_pages_chatroom_chatroom_component__["a" /* ChatroomComponent */]
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__["a" /* PageDashboardComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["a" /* PageGroupsComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["b" /* PageGroupsComponent */],
                 __WEBPACK_IMPORTED_MODULE_23__default_pages_requests_requests_component__["a" /* PageRequestsComponent */],
                 __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["a" /* PageProfileComponent */],
                 __WEBPACK_IMPORTED_MODULE_25__default_pages_aboutus_aboutus_component__["a" /* PageAboutusComponent */],
@@ -4120,10 +4237,12 @@ var PagesModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_17__extra_pages_confirm_confirm_component__["a" /* PageConfirmComponent */],
                 __WEBPACK_IMPORTED_MODULE_18__extra_pages_page_404_page_404_component__["a" /* Page404Component */],
                 __WEBPACK_IMPORTED_MODULE_19__extra_pages_page_500_page_500_component__["a" /* Page500Component */],
-                __WEBPACK_IMPORTED_MODULE_24__default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */]
+                __WEBPACK_IMPORTED_MODULE_24__default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["a" /* DialogAddMemberComponent */]
             ],
             entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_15__extra_pages_signup_signup_component__["a" /* DialogResultComponent */]
+                __WEBPACK_IMPORTED_MODULE_15__extra_pages_signup_signup_component__["a" /* DialogResultComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["a" /* DialogAddMemberComponent */]
             ]
         })
     ], PagesModule);
@@ -4142,6 +4261,8 @@ var PagesModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__("../../../../rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4154,11 +4275,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ApiService = (function () {
     function ApiService(http) {
         this.http = http;
+        this.groupId = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"]('');
+        this.isClickedDetails = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"](false);
     }
-    ApiService.prototype.getUserRequest = function (groupId) {
+    ApiService.prototype.getUserRequest = function () {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_user_requests';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
@@ -4169,7 +4293,7 @@ var ApiService = (function () {
             });
         });
     };
-    ApiService.prototype.getNextPayment = function (groupId) {
+    ApiService.prototype.getNextPayment = function () {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_user_obligations';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
@@ -4180,7 +4304,7 @@ var ApiService = (function () {
             });
         });
     };
-    ApiService.prototype.getTimelineData = function (groupId) {
+    ApiService.prototype.getTimelineData = function () {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_events';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
@@ -4199,6 +4323,139 @@ var ApiService = (function () {
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
+            });
+        });
+    };
+    ApiService.prototype.getGroupInfo = function () {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_groups';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
+        params.set('token', localStorage.getItem('token'));
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            });
+        });
+    };
+    ApiService.prototype.addGroup = function (group) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'add_group';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        params.set('name', group.name);
+        params.set('rate', group.rate);
+        params.set('description', group.description);
+        params.set('amount', group.amount);
+        params.set('due_day', group.duedate);
+        params.set('currency_code', group.currency);
+        params.set('type_code', group.grouptype);
+        params.set('early_prepayment_penalty', group.preppenal);
+        params.set('number_of_days_before_penalty', group.nbdpenal);
+        params.set('delay_payment_penalty', group.penalty);
+        params.set('frequency', group.frequency);
+        params.set('position_selection_type_code', group.pstype);
+        params.set('token', localStorage.getItem('token'));
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                console.log(res);
+                resolve(res.json());
+            });
+        });
+    };
+    ApiService.prototype.getListData = function (type) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'lists';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        params.set('data', type);
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    ApiService.prototype.addMember = function (member) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'add_group_member';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
+        params.set('email_list', member);
+        params.set('token', localStorage.getItem('token'));
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    ApiService.prototype.getGroupMembers = function () {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_group_members';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
+        params.set('token', localStorage.getItem('token'));
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    ApiService.prototype.getGroupObligations = function () {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_group_obligations';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
+        params.set('token', localStorage.getItem('token'));
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    ApiService.prototype.getGroupRequests = function () {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_requests';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
+        // params.set('status_code', 'PENDING,REJECTED');
+        params.set('token', localStorage.getItem('token'));
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    ApiService.prototype.getGroupEvents = function () {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_events';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
+        params.set('token', localStorage.getItem('token'));
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
             });
         });
     };
@@ -4248,6 +4505,7 @@ var AuthService = (function () {
         this.redirectPage = '';
     }
     AuthService.prototype.isLoggedIn = function () {
+        console.log(this.isLogged);
         return this.isLogged;
     };
     AuthService.prototype.isConfirmRequired = function () {
@@ -4279,6 +4537,7 @@ var AuthService = (function () {
                 _this.isLogged = true;
                 _this.isConfirm = false;
                 localStorage.setItem('token', res.json().token);
+                localStorage.setItem('email', data.email);
                 resolve(res.json().email_validated);
             });
         });
@@ -4463,10 +4722,17 @@ var FooterComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/ui/components/horizontal-navbar/group-create.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h2 md-dialog-title>Group Creation</h2>\n<form (ngSubmit)=\"onSubmit()\" [formGroup]=\"form\">\n  <div md-dialog-content *ngIf=\"step === 'first'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"name\" placeholder=\"Name\" type=\"text\" value=\"\" [formControl]=\"form.controls['name']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"Group type\" [formControl]=\"form.controls['grouptype']\">\n          <md-option *ngFor=\"let g of groupTypes\" [value]=\"g.id\">\n            {{ g.code }}\n          </md-option>\n        </md-select>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"frequency\" placeholder=\"Every ? month\" type=\"number\" value=\"\" [formControl]=\"form.controls['frequency']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"Currency\" [formControl]=\"form.controls['currency']\">\n          <md-option *ngFor=\"let c of currencies\" [value]=\"c.id\">\n            {{ c.code }}\n          </md-option>\n        </md-select>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-12\">\n        <md-input-container>\n          <textarea mdInput placeholder=\"Description\" rows=\"3\" [formControl]=\"form.controls['description']\"></textarea>\n        </md-input-container>\n      </div>\n    </div>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'first'\">\n    <button md-raised-button (click)=\"dialogRef.close('no')\">Cancel</button>\n    <button md-raised-button color=\"accent\" layout-align=\"end\" (click)=\"step = 'second'\">Next >></button>\n  </div>\n  <div md-dialog-content *ngIf=\"step === 'second'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"amount\" placeholder=\"Amount\" type=\"number\" value=\"\" [formControl]=\"form.controls['amount']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"rate\" placeholder=\"Rate\" type=\"number\" value=\"\" [formControl]=\"form.controls['rate']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"duedate\" placeholder=\"Due date\" type=\"number\" value=\"\" [formControl]=\"form.controls['duedate']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"preppenal\" placeholder=\"Prep penal\" type=\"number\" value=\"\" [formControl]=\"form.controls['preppenal']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"nbdpenal\" placeholder=\"Nb d penal\" type=\"number\" value=\"\" [formControl]=\"form.controls['nbdpenal']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"penalty\" placeholder=\"Penalty\" type=\"number\" value=\"\" [formControl]=\"form.controls['penalty']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-12\">\n        <md-select placeholder=\"PS type\" [formControl]=\"form.controls['pstype']\">\n          <md-option *ngFor=\"let p of psTypes\" [value]=\"p.id\">\n            {{ p.code }}\n          </md-option>\n        </md-select>\n      </div>\n    </div>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'second'\">\n    <button md-raised-button (click)=\"step = 'first'\" color=\"accent\" layout-align=\"end\"><< Previous</button>\n    <button md-raised-button (click)=\"dialogRef.close('no')\">Cancel</button>\n    <button md-raised-button color=\"accent\" layout-align=\"end\" type=\"submit\" [disabled]=\"!form.valid\">Finish</button>\n  </div>\n</form>"
+
+/***/ }),
+
 /***/ "../../../../../src/app/ui/components/horizontal-navbar/horizontal-navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"navbar-wrap\">\r\n  <div class=\"navbar-button\" [ngClass]=\"{ 'open' : openedSidebar }\" (click)=\"openSidebar()\">\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n  </div>\r\n\r\n  <h1 class=\"page-title\">{{ title | translate }}</h1>\r\n\r\n  <div class=\"nav-items\">\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\" class=\"btn-payment\">{{'payment' | translate}}</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\" class=\"btn-group\">{{'createNewGroup' | translate}}</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-input-container class=\"mb-0\">\r\n        <input mdInput [placeholder]=\"'groupList' | translate\" [mdAutocomplete]=\"auto\" [formControl]=\"groupCtrl\">\r\n      </md-input-container>\r\n      <md-autocomplete #auto=\"mdAutocomplete\">\r\n        <md-option *ngFor=\"let group of filteredGroup | async\" [value]=\"group\">\r\n          {{ group }}\r\n        </md-option>\r\n      </md-autocomplete>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link btn-code\">\r\n          <img [src]=\"'assets/content/' + langUrl\" width=\"30\" height=\"20\">\r\n      </a>\r\n      <div class=\"dropdown-menu\">\r\n        <ul>\r\n          <li *ngFor=\"let lang of languages\">\r\n            <a (click)=\"changeLanguage(lang.code)\">\r\n              <div class=\"content\">\r\n                <img [src]=\"'assets/content/' + lang.url\" width=\"30\" height=\"20\">\r\n                <span class=\"desc\"><strong>{{lang.code.toUpperCase()}}</strong></span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <div class=\"avatar\"><img src=\"assets/content/avatar-2.jpg\" width=\"40\" height=\"40\" alt=\"\"></div>\r\n        <div class=\"name\">Justin Adams</div>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu mini-menu\">\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-home\"></span> My Account</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-user\"></span> Profile</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"/default-layout/calendar\"><span class=\"icon sli-calendar\"></span> Calendar</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-settings\"></span> Settings</a>\r\n          </li>\r\n          <li>\r\n            <a [routerLink]=\"'/'\"><span class=\"icon sli-logout\"></span> Log Out</a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"items-overlay\" (click)=\"close($event)\"></div>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"navbar-wrap\">\r\n  <div class=\"navbar-button\" [ngClass]=\"{ 'open' : openedSidebar }\" (click)=\"openSidebar()\">\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n  </div>\r\n\r\n  <h1 class=\"page-title\">{{ title | translate }}</h1>\r\n\r\n  <div class=\"nav-items\">\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\" class=\"btn-payment\">{{'payment' | translate}}</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\" class=\"btn-group\" (click)=\"openCreateGroupDialog()\">{{'createNewGroup' | translate}}</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-input-container class=\"mb-0\">\r\n        <input mdInput [placeholder]=\"'groupList' | translate\" [mdAutocomplete]=\"auto\" [formControl]=\"groupCtrl\">\r\n      </md-input-container>\r\n      <md-autocomplete #auto=\"mdAutocomplete\">\r\n        <md-option *ngFor=\"let group of filteredGroup | async\" [value]=\"group\">\r\n          {{ group }}\r\n        </md-option>\r\n      </md-autocomplete>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link btn-code\">\r\n          <img [src]=\"'assets/content/' + langUrl\" width=\"30\" height=\"20\">\r\n      </a>\r\n      <div class=\"dropdown-menu\">\r\n        <ul>\r\n          <li *ngFor=\"let lang of languages\">\r\n            <a (click)=\"changeLanguage(lang.code)\">\r\n              <div class=\"content\">\r\n                <img [src]=\"'assets/content/' + lang.url\" width=\"30\" height=\"20\">\r\n                <span class=\"desc\"><strong>{{lang.code.toUpperCase()}}</strong></span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <div class=\"avatar\"><img src=\"assets/content/avatar-2.jpg\" width=\"40\" height=\"40\" alt=\"\"></div>\r\n        <div class=\"name\">Justin Adams</div>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu mini-menu\">\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-home\"></span> My Account</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-user\"></span> Profile</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"/default-layout/calendar\"><span class=\"icon sli-calendar\"></span> Calendar</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-settings\"></span> Settings</a>\r\n          </li>\r\n          <li>\r\n            <a [routerLink]=\"'/'\"><span class=\"icon sli-logout\"></span> Log Out</a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"items-overlay\" (click)=\"close($event)\"></div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -4492,12 +4758,14 @@ module.exports = module.exports.toString();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HorizontalNavbarComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return HorizontalNavbarComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogGroupCreateComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__settings_menu__ = __webpack_require__("../../../../../src/settings/menu.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4512,11 +4780,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HorizontalNavbarComponent = (function () {
-    function HorizontalNavbarComponent(auth, apiService) {
+    function HorizontalNavbarComponent(auth, apiService, dialog) {
         var _this = this;
         this.auth = auth;
         this.apiService = apiService;
+        this.dialog = dialog;
         this.sidebarState = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.languages = __WEBPACK_IMPORTED_MODULE_3__settings_menu__["a" /* LANGUAGES */];
         this.langCode = 'en';
@@ -4524,7 +4794,7 @@ var HorizontalNavbarComponent = (function () {
         this.groupList = [];
         this.openedSidebar = false;
         this.showOverlay = false;
-        this.groupCtrl = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["FormControl"]();
+        this.groupCtrl = new __WEBPACK_IMPORTED_MODULE_5__angular_forms__["FormControl"]();
         this.filteredGroup = this.groupCtrl.valueChanges
             .startWith(null)
             .map(function (name) { return _this.filterStates(name); });
@@ -4576,6 +4846,16 @@ var HorizontalNavbarComponent = (function () {
     HorizontalNavbarComponent.prototype.filterStates = function (val) {
         return val ? this.groupList.filter(function (s) { return new RegExp(val, 'gi').test(s); }) : this.groupList;
     };
+    HorizontalNavbarComponent.prototype.openCreateGroupDialog = function () {
+        var dialogRef = this.dialog.open(DialogGroupCreateComponent);
+        dialogRef.afterClosed().subscribe(function (result) {
+            console.log(result);
+            if (result === 'yes') {
+            }
+            else {
+            }
+        });
+    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
@@ -4598,10 +4878,66 @@ var HorizontalNavbarComponent = (function () {
                 '[class.show-overlay]': 'showOverlay'
             }
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["i" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["i" /* MdDialog */]) === "function" && _c || Object])
     ], HorizontalNavbarComponent);
     return HorizontalNavbarComponent;
-    var _a, _b;
+    var _a, _b, _c;
+}());
+
+var DialogGroupCreateComponent = (function () {
+    function DialogGroupCreateComponent(dialogRef, fb, apiService) {
+        var _this = this;
+        this.dialogRef = dialogRef;
+        this.fb = fb;
+        this.apiService = apiService;
+        this.step = 'first';
+        this.groupTypes = [];
+        this.currencies = [];
+        this.psTypes = [];
+        this.form = this.fb.group({
+            name: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].minLength(3), __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].maxLength(10)])],
+            frequency: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            grouptype: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            pstype: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            currency: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            description: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].minLength(3)])],
+            amount: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            rate: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            duedate: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            preppenal: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            nbdpenal: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            penalty: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+        });
+        this.apiService.getListData('Currency').then(function (res) {
+            _this.currencies = res.data;
+            console.log(res);
+        });
+        this.apiService.getListData('GroupType').then(function (res) {
+            _this.groupTypes = res.data;
+            console.log(res);
+        });
+        this.apiService.getListData('PositionSelectionType').then(function (res) {
+            _this.psTypes = res.data;
+            console.log(res);
+        });
+    }
+    DialogGroupCreateComponent.prototype.onSubmit = function () {
+        this.dialogRef.close('yes');
+        this.apiService.addGroup(this.form.value).then(function (res) {
+            console.log(res);
+        }).catch(function (err) {
+            console.log(err);
+        });
+    };
+    DialogGroupCreateComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'group-create',
+            template: __webpack_require__("../../../../../src/app/ui/components/horizontal-navbar/group-create.html")
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["k" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["k" /* MdDialogRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_forms__["FormBuilder"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _c || Object])
+    ], DialogGroupCreateComponent);
+    return DialogGroupCreateComponent;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=horizontal-navbar.component.js.map
@@ -4672,7 +5008,7 @@ var LogoComponent = (function () {
 /***/ "../../../../../src/app/ui/components/menu/menu.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"main-menu\">\n  <ul>\n    <li\n      class=\"menu-item\"\n      *ngFor=\"let item of menuItems\"\n      [ngClass]=\"getLiClasses(item, rla.isActive)\"\n      #rla=\"routerLinkActive\"\n      routerLinkActive=\"active\"\n      [routerLinkActiveOptions]=\"{exact:true}\"\n    >\n      <div *ngIf=\"item.groupTitle; then group else default\"></div>\n\n      <!-- Default item -->\n      <ng-template #default>\n        <div *ngIf=\"!item.sub; then simple else sub\"></div>\n\n        <ng-template #simple>\n          <a href=\"#\" class=\"item-link\" routerLink=\"{{ item.routing }}\" (click)=\"toggle($event, item, this)\">\n            <span class=\"text\">{{ item.title | translate }}</span>\n\n            <span\n              class=\"item-badge\"\n              *ngIf=\"item.badge && item.badge.text\"\n              [ngStyle]=\"getStyles(item.badge)\"\n            >{{ item.badge.text }}</span>\n\n            <span class=\"icon\">\n              <i class=\"icon-wrap {{ item.icon.class }}\" *ngIf=\"item.icon && item.icon.class\" [ngStyle]=\"getStyles(item.icon)\"></i>\n            </span>\n          </a>\n        </ng-template>\n      </ng-template>\n    </li>\n  </ul>\n</nav>"
+module.exports = "<nav class=\"main-menu\">\n  <ul>\n    <li\n      class=\"menu-item\"\n      *ngFor=\"let item of menuItems\"\n      [ngClass]=\"getLiClasses(item, rla.isActive)\"\n      #rla=\"routerLinkActive\"\n      routerLinkActive=\"active\"\n      [routerLinkActiveOptions]=\"{exact:true}\"\n    >\n      <div *ngIf=\"item.groupTitle; then group else default\"></div>\n\n      <!-- Default item -->\n      <ng-template #default>\n        <div *ngIf=\"!item.sub; then simple else sub\"></div>\n\n        <ng-template #simple>\n          <a href=\"#\" class=\"item-link\" routerLink=\"{{ item.routing }}\" (click)=\"toggle($event, item, this)\">\n            <span class=\"text\">{{ item.title | translate }}</span>\n\n            <span\n              class=\"item-badge\"\n              *ngIf=\"item.badge && item.badge.text\"\n              [ngStyle]=\"getStyles(item.badge)\"\n            >{{ item.badge.text }}</span>\n\n            <span class=\"icon\">\n              <i class=\"icon-wrap {{ item.icon.class }}\" *ngIf=\"item.icon && item.icon.class\" [ngStyle]=\"getStyles(item.icon)\"></i>\n            </span>\n          </a>\n        </ng-template>\n\n        <ng-template #sub>\n          <!-- Item with sub -->\n          <a href=\"#\" class=\"item-link\" (click)=\"toggle($event, item, this)\">\n            <span class=\"text\">{{ item.title }}</span>\n\n            <span\n              class=\"item-badge\"\n              *ngIf=\"item.badge && item.badge.text\"\n              [ngStyle]=\"getStyles(item.badge)\"\n            >{{ item.badge.text }}</span>\n\n            <span class=\"caret\" *ngIf=\"item.sub\"></span>\n\n            <span class=\"icon\">\n              <i class=\"icon-wrap {{ item.icon.class }}\" *ngIf=\"item.icon && item.icon.class\" [ngStyle]=\"getStyles(item.icon)\"></i>\n            </span>\n          </a>\n\n          <!-- Menu sub -->\n          <ul class=\"sub\" *ngIf=\"!item.groupTitle && item.sub\">\n            <li\n              class=\"menu-item\"\n              *ngFor=\"let itemSub of item.sub\"\n              [ngClass]=\"getLiClasses(itemSub, rla.isActive)\"\n              #rla=\"routerLinkActive\"\n              routerLinkActive=\"active\"\n              (click)=\"changeGroup(itemSub)\"\n            >\n              <a href=\"#\" routerLink=\"{{ itemSub.routing }}\" class=\"item-link\">\n                <span class=\"text\">{{ itemSub.title }}</span>\n              </a>\n            </li>\n          </ul>\n        </ng-template>\n      </ng-template>\n    </li>\n  </ul>\n</nav>"
 
 /***/ }),
 
@@ -4702,6 +5038,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__menu_service__ = __webpack_require__("../../../../../src/app/ui/components/menu/menu.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4714,14 +5051,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var MenuComponent = (function () {
-    function MenuComponent(menuService, auth) {
+    function MenuComponent(menuService, auth, apiService) {
         this.menuService = menuService;
         this.auth = auth;
+        this.apiService = apiService;
     }
     MenuComponent.prototype.getMenuItems = function () {
         var _this = this;
-        this.menuService.getMenuItems().then(function (menuItems) { return _this.menuItems = menuItems; });
+        this.menuService.getMenuItems().then(function (menuItems) {
+            _this.menuItems = menuItems;
+            _this.apiService.getGroups().then(function (res) {
+                res.data.map(function (r, index) {
+                    _this.menuItems[1].badge.text = res.data.length;
+                    // this.menuItems[1].sub.push({title: r.name, routing: '/default-layout/groups/' + r.id, data: r.id});
+                    // if (index === 0) {
+                    //   this.apiService.groupId.next(r.id);
+                    // }
+                });
+            });
+        });
     };
     MenuComponent.prototype.getLiClasses = function (item, isActive) {
         return {
@@ -4742,6 +5092,7 @@ var MenuComponent = (function () {
     };
     MenuComponent.prototype.toggle = function (event, item, el) {
         event.preventDefault();
+        this.apiService.isClickedDetails.next(false);
         var items = el.menuItems;
         if (item.active) {
             item.active = false;
@@ -4753,6 +5104,9 @@ var MenuComponent = (function () {
             item.active = true;
         }
     };
+    MenuComponent.prototype.changeGroup = function (item) {
+        this.apiService.groupId.next(item.data);
+    };
     MenuComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-menu',
@@ -4763,10 +5117,10 @@ var MenuComponent = (function () {
                 'class': 'app-menu'
             }
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__menu_service__["a" /* MenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__menu_service__["a" /* MenuService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__menu_service__["a" /* MenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__menu_service__["a" /* MenuService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */]) === "function" && _c || Object])
     ], MenuComponent);
     return MenuComponent;
-    var _a, _b;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=menu.component.js.map
@@ -4831,7 +5185,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ":host {\n  background: #e5e6e9;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n  height: 100%;\n  left: 0;\n  position: absolute;\n  top: 0;\n  -webkit-transform: translate3d(0, 0, 0);\n          transform: translate3d(0, 0, 0);\n  transition: left 0.2s ease-in-out, right 0.2s ease-in-out;\n  width: 15.125rem;\n  will-change: left, right, width;\n  z-index: 9996; }\n  @media (max-width: 991px) {\n    :host {\n      left: -15.125rem; } }\n  .rtl :host {\n    left: auto;\n    right: 0; }\n    @media (max-width: 991px) {\n      .rtl :host {\n        left: auto;\n        right: -15.125rem; } }\n  :host .vertical-navbar-wrap {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    height: 100%;\n    width: 15.125rem; }\n    @media (max-width: 991px) {\n      :host .vertical-navbar-wrap {\n        position: relative;\n        z-index: 9999; } }\n  :host .sidebar-overlay {\n    background: rgba(229, 230, 233, 0.2);\n    height: 100%;\n    left: 0;\n    opacity: 0;\n    position: fixed;\n    top: 0;\n    transition: 0.2s opacity 0s ease-in-out, 0s visibility 0.2s ease-in-out;\n    visibility: hidden;\n    width: 100%;\n    z-index: 9998; }\n", ""]);
+exports.push([module.i, ":host {\n  background: #e5e6e9;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end;\n  height: 100%;\n  left: 0;\n  position: absolute;\n  top: 0;\n  -webkit-transform: translate3d(0, 0, 0);\n          transform: translate3d(0, 0, 0);\n  transition: left 0.2s ease-in-out, right 0.2s ease-in-out;\n  width: 15.125rem;\n  will-change: left, right, width;\n  z-index: 1000; }\n  @media (max-width: 991px) {\n    :host {\n      left: -15.125rem; } }\n  .rtl :host {\n    left: auto;\n    right: 0; }\n    @media (max-width: 991px) {\n      .rtl :host {\n        left: auto;\n        right: -15.125rem; } }\n  :host .vertical-navbar-wrap {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    height: 100%;\n    width: 15.125rem; }\n    @media (max-width: 991px) {\n      :host .vertical-navbar-wrap {\n        position: relative;\n        z-index: 9999; } }\n  :host .sidebar-overlay {\n    background: rgba(229, 230, 233, 0.2);\n    height: 100%;\n    left: 0;\n    opacity: 0;\n    position: fixed;\n    top: 0;\n    transition: 0.2s opacity 0s ease-in-out, 0s visibility 0.2s ease-in-out;\n    visibility: hidden;\n    width: 100%;\n    z-index: 9998; }\n", ""]);
 
 // exports
 
@@ -4912,24 +5266,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var UIModule = (function () {
     function UIModule() {
     }
     UIModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_7__components_horizontal_navbar_horizontal_navbar_component__["a" /* HorizontalNavbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__components_horizontal_navbar_horizontal_navbar_component__["b" /* HorizontalNavbarComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__components_vertical_navbar_vertical_navbar_component__["a" /* VerticalNavbarComponent */],
                 __WEBPACK_IMPORTED_MODULE_9__components_logo_logo_component__["a" /* LogoComponent */],
                 __WEBPACK_IMPORTED_MODULE_10__components_menu_menu_component__["a" /* MenuComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__components_footer_footer_component__["a" /* FooterComponent */]
+                __WEBPACK_IMPORTED_MODULE_11__components_footer_footer_component__["a" /* FooterComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__components_horizontal_navbar_horizontal_navbar_component__["a" /* DialogGroupCreateComponent */]
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_7__components_horizontal_navbar_horizontal_navbar_component__["a" /* HorizontalNavbarComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__components_horizontal_navbar_horizontal_navbar_component__["b" /* HorizontalNavbarComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__components_vertical_navbar_vertical_navbar_component__["a" /* VerticalNavbarComponent */],
                 __WEBPACK_IMPORTED_MODULE_9__components_logo_logo_component__["a" /* LogoComponent */],
                 __WEBPACK_IMPORTED_MODULE_10__components_menu_menu_component__["a" /* MenuComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__components_footer_footer_component__["a" /* FooterComponent */]
+                __WEBPACK_IMPORTED_MODULE_11__components_footer_footer_component__["a" /* FooterComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__components_horizontal_navbar_horizontal_navbar_component__["a" /* DialogGroupCreateComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* HttpModule */],
@@ -4969,6 +5326,9 @@ var UIModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_4__angular_forms__["FormsModule"],
                 __WEBPACK_IMPORTED_MODULE_4__angular_forms__["ReactiveFormsModule"],
                 __WEBPACK_IMPORTED_MODULE_6_ng2_translate__["b" /* TranslateModule */]
+            ],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_7__components_horizontal_navbar_horizontal_navbar_component__["a" /* DialogGroupCreateComponent */]
             ]
         })
     ], UIModule);
@@ -5066,6 +5426,15 @@ var MENU = [
             color: 'rgba(0,0,0,.87)'
         },
         routing: '/default-layout/groups'
+    },
+    {
+        title: 'chatroom',
+        icon: {
+            class: 'fa fa-wechat',
+            bg: '#BCAAA4',
+            color: 'rgba(0,0,0,.87)'
+        },
+        routing: '/default-layout/chatroom'
     },
     {
         title: 'transactions',

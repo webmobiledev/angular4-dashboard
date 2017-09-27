@@ -29,6 +29,41 @@
             </span>
           </a>
         </ng-template>
+
+        <ng-template #sub>
+          <!-- Item with sub -->
+          <a href="#" class="item-link" (click)="toggle($event, item, this)">
+            <span class="text">{{ item.title }}</span>
+
+            <span
+              class="item-badge"
+              *ngIf="item.badge && item.badge.text"
+              [ngStyle]="getStyles(item.badge)"
+            >{{ item.badge.text }}</span>
+
+            <span class="caret" *ngIf="item.sub"></span>
+
+            <span class="icon">
+              <i class="icon-wrap {{ item.icon.class }}" *ngIf="item.icon && item.icon.class" [ngStyle]="getStyles(item.icon)"></i>
+            </span>
+          </a>
+
+          <!-- Menu sub -->
+          <ul class="sub" *ngIf="!item.groupTitle && item.sub">
+            <li
+              class="menu-item"
+              *ngFor="let itemSub of item.sub"
+              [ngClass]="getLiClasses(itemSub, rla.isActive)"
+              #rla="routerLinkActive"
+              routerLinkActive="active"
+              (click)="changeGroup(itemSub)"
+            >
+              <a href="#" routerLink="{{ itemSub.routing }}" class="item-link">
+                <span class="text">{{ itemSub.title }}</span>
+              </a>
+            </li>
+          </ul>
+        </ng-template>
       </ng-template>
     </li>
   </ul>

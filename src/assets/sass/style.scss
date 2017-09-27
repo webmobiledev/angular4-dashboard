@@ -25,3 +25,19 @@ horizontal-navbar {
     }
   }
 }
+
+group-create {
+  .mat-input-infix {
+    border: 0;
+    padding: 0;
+    padding-bottom: 0.4375rem;
+  }
+
+  md-select {
+    width: 100%;
+  }
+
+  .mat-dialog-actions {
+    justify-content: space-between;
+  }
+}

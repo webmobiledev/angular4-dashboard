@@ -1,0 +1,24 @@
+<div>
+  <div class="table-responsive">
+    <table class="table">
+      <thead class="thead-default">
+      <tr>
+        <th *ngFor="let h of headers">
+          <span *ngIf="!h.type">{{ h }}</span>
+          <span *ngIf="h.type">{{ h.type }}</span>
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let d of data">
+        <td *ngFor="let s of d">
+          <span *ngIf="!s.type">{{ s }}</span>
+          <button md-button color="accent" *ngIf="s.type && (s.type)[0] === 'details'" (click)="changePage(s.id)">details</button>
+          <button md-button color="warn" *ngIf="s.type && (s.type)[0] === 'remove'">remove</button>
+          <button md-button color="accent" *ngIf="s.type && (s.type)[0] === 'paynow'">pay now</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

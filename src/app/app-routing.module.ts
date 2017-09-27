@@ -14,6 +14,7 @@ import { PageNotFoundComponent } from './pages/default-pages/not-found/not-foun
 import { PageAboutusComponent } from './pages/default-pages/aboutus/aboutus.component';
 import { PageProfileComponent } from './pages/default-pages/profile/profile.component';
 import { PageSimulationComponent } from './pages/default-pages/simulation/simulation.component';
+import { ChatroomComponent } from './pages/default-pages/chatroom/chatroom.component';
 
 import { PageSigninComponent } from './pages/extra-pages/signin/signin.component';
 import { PageSignupComponent } from './pages/extra-pages/signup/signup.component';
@@ -21,6 +22,10 @@ import { PageForgotComponent } from './pages/extra-pages/forgot/forgot.component
 import { PageConfirmComponent } from './pages/extra-pages/confirm/confirm.component';
 import { Page404Component } from './pages/extra-pages/page-404/page-404.component';
 import { Page500Component } from './pages/extra-pages/page-500/page-500.component';
+
+const groupsRoutes: Routes = [
+  { path: '**', component: PageGroupsComponent },
+];
 
 const defaultRoutes: Routes = [
   { path: 'dashboard', component: PageDashboardComponent },
@@ -30,6 +35,7 @@ const defaultRoutes: Routes = [
   { path: 'profile', component: PageProfileComponent },
   { path: 'simulation', component: PageSimulationComponent },
   { path: 'aboutus', component: PageAboutusComponent },
+  { path: 'chatroom', component: ChatroomComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

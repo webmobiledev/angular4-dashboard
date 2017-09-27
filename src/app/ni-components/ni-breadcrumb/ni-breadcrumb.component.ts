@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Item } from './item';
+import { ApiService } from '../../services/api.service'
 
 @Component({
   selector: 'ni-breadcrumb',
@@ -11,7 +12,7 @@ export class NiBreadcrumbComponent implements OnInit {
   @Input() separator: string = '/';
   @Input() style: string = 'default';//custom1 | custom2
 
-  constructor() {}
+  constructor(private apiService: ApiService) {}
 
   ngOnInit() {}
 
@@ -20,5 +21,9 @@ export class NiBreadcrumbComponent implements OnInit {
       'custom-1': this.style === 'custom1',
       'custom-2': this.style === 'custom2'
     };
+  }
+
+  initialize() {
+    this.apiService.isClickedDetails.next(false);
   }
 }

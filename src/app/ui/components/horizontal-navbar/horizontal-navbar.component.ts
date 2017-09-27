@@ -2,7 +2,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AuthService } from '../../../services/auth.service';
 import { ApiService } from '../../../services/api.service';
 import { LANGUAGES } from '../../../../settings/menu';
-import { FormControl } from '@angular/forms';
+import { MdDialog, MdDialogRef, MdDialogConfig } from '@angular/material';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 
 @Component({
   moduleId: module.id,
@@ -26,7 +27,7 @@ export class HorizontalNavbarComponent implements OnInit {
   filteredGroup: any;
   groupCtrl: FormControl;
   
-  constructor(private auth: AuthService, private apiService: ApiService) {
+  constructor(private auth: AuthService, private apiService: ApiService, private dialog: MdDialog) {
     this.openedSidebar = false;
     this.showOverlay = false;
     this.groupCtrl = new FormControl();
@@ -92,5 +93,67 @@ export class HorizontalNavbarComponent implements OnInit {
 
   filterStates(val: string) {
     return val ? this.groupList.filter((s) => new RegExp(val, 'gi').test(s)) : this.groupList;
+  }
+
+  openCreateGroupDialog() {
+    let dialogRef = this.dialog.open(DialogGroupCreateComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result)
+      if (result === 'yes') {
+      } else {
+      }
+    });
+  }
+}
+
+@Component({
+  selector: 'group-create',
+  templateUrl: 'group-create.html'
+})
+export class DialogGroupCreateComponent {
+  public form: FormGroup;
+  step = 'first';
+  groupTypes = [];
+  currencies = [];
+  psTypes = [];
+  constructor(public dialogRef: MdDialogRef<DialogGroupCreateComponent>, private fb: FormBuilder, private apiService: ApiService) {
+    this.form = this.fb.group({
+      name: [null, Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(10)])],
+      frequency: [null, Validators.compose([Validators.required])],
+      grouptype: [null, Validators.compose([Validators.required])],
+      pstype: [null, Validators.compose([Validators.required])],
+      currency: [null, Validators.compose([Validators.required])],
+      description: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
+      amount: [null, Validators.compose([Validators.required])],
+      rate: [null, Validators.compose([Validators.required])],
+      duedate: [null, Validators.compose([Validators.required])],
+      preppenal: [null, Validators.compose([Validators.required])],
+      nbdpenal: [null, Validators.compose([Validators.required])],
+      penalty: [null, Validators.compose([Validators.required])],
+    });
+
+    this.apiService.getListData('Currency').then((res: any) => {
+      this.currencies = res.data;
+      console.log(res);
+    });
+
+    this.apiService.getListData('GroupType').then((res: any) => {
+      this.groupTypes = res.data;
+      console.log(res);
+    });
+
+    this.apiService.getListData('PositionSelectionType').then((res: any) => {
+      this.psTypes = res.data;
+      console.log(res);
+    });
+  }
+
+  onSubmit() {
+    this.dialogRef.close('yes');
+    this.apiService.addGroup(this.form.value).then(res => {
+      console.log(res);
+    }).catch(err => {
+      console.log(err);
+    });
   }
 }

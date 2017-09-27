@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { IMenuItem } from './menu-item';
 import { MenuService } from './menu.service';
 import { AuthService } from '../../../services/auth.service';
+import { ApiService } from '../../../services/api.service';
 
 @Component({
   moduleId: module.id,
@@ -17,11 +18,22 @@ import { AuthService } from '../../../services/auth.service';
 export class MenuComponent implements OnInit {
   menuItems: IMenuItem[];
 
-  constructor( private menuService: MenuService, private auth: AuthService ) {
+  constructor( private menuService: MenuService, private auth: AuthService, private apiService: ApiService ) {
   }
 
   getMenuItems(): void {
-    this.menuService.getMenuItems().then(menuItems => this.menuItems = menuItems);
+    this.menuService.getMenuItems().then(menuItems => {
+      this.menuItems = menuItems;
+      this.apiService.getGroups().then((res: any) => {
+        res.data.map((r, index) => {
+          this.menuItems[1].badge.text = res.data.length;
+          // this.menuItems[1].sub.push({title: r.name, routing: '/default-layout/groups/' + r.id, data: r.id});
+          // if (index === 0) {
+          //   this.apiService.groupId.next(r.id);
+          // }
+        });
+      });
+    });
   }
 
   getLiClasses(item: any, isActive: any) {
@@ -45,6 +57,7 @@ export class MenuComponent implements OnInit {
 
   toggle(event: Event, item: any, el: any) {
     event.preventDefault();
+    this.apiService.isClickedDetails.next(false);
 
     let items: any[] = el.menuItems;
 
@@ -56,5 +69,9 @@ export class MenuComponent implements OnInit {
       }
       item.active = true;
     }
+  }
+
+  changeGroup(item) {
+    this.apiService.groupId.next(item.data);
   }
 }

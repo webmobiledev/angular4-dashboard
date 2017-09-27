@@ -57,12 +57,14 @@ import { Page500Component } from './extra-pages/page-500/page-500.component';
 
 import { PageDashboardComponent } from './default-pages/dashboard/dashboard.component';
 import { PageGroupsComponent } from './default-pages/groups/groups.component';
+import { DialogAddMemberComponent } from './default-pages/groups/groups.component';
 import { PageTransactionsComponent } from './default-pages/transactions/transactions.component';
 import { PageRequestsComponent } from './default-pages/requests/requests.component';
 import { PageNotFoundComponent } from './default-pages/not-found/not-found.component';
 import { PageAboutusComponent } from './default-pages/aboutus/aboutus.component';
 import { PageProfileComponent } from './default-pages/profile/profile.component';
 import { PageSimulationComponent } from './default-pages/simulation/simulation.component';
+import { ChatroomComponent } from './default-pages/chatroom/chatroom.component';
 
 @NgModule({
   imports: [
@@ -131,7 +133,9 @@ import { PageSimulationComponent } from './default-pages/simulation/simulation.c
     PageConfirmComponent,
     Page404Component,
     Page500Component,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DialogAddMemberComponent,
+    ChatroomComponent
   ],
   exports: [
     PageDashboardComponent,
@@ -149,10 +153,12 @@ import { PageSimulationComponent } from './default-pages/simulation/simulation.c
     PageConfirmComponent,
     Page404Component,
     Page500Component,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DialogAddMemberComponent
   ],
   entryComponents: [
-    DialogResultComponent
+    DialogResultComponent,
+    DialogAddMemberComponent
   ]
 })
 export class PagesModule {}

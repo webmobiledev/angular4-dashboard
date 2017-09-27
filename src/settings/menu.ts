@@ -23,6 +23,15 @@ export const MENU: any = [
     routing: '/default-layout/groups'
   },
   {
+    title: 'chatroom',
+    icon: {
+      class: 'fa fa-wechat',
+      bg: '#BCAAA4',
+      color: 'rgba(0,0,0,.87)'
+    },
+    routing: '/default-layout/chatroom'
+  },
+  {
     title: 'transactions',
     icon: {
       class: 'fa fa-transgender',

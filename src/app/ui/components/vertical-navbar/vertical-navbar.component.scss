@@ -14,7 +14,7 @@
     right .2s $animation;
   width: $vertical-navbar-width;
   will-change: left, right, width;
-  z-index: 9996;
+  z-index: 1000;
   @media #{$max991} {
     left: -($vertical-navbar-width);
   }

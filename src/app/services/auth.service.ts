@@ -15,6 +15,7 @@ export class AuthService {
   constructor(private http: Http) { }
 
   isLoggedIn() {
+    console.log(this.isLogged);
     return this.isLogged;
   }
 
@@ -47,6 +48,7 @@ export class AuthService {
         this.isLogged = true;
         this.isConfirm = false;
         localStorage.setItem('token', res.json().token);
+        localStorage.setItem('email', data.email);
         resolve(res.json().email_validated);
       });
     });

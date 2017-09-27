@@ -39,6 +39,7 @@ import {
 import { TranslateModule } from 'ng2-translate';
 
 import { HorizontalNavbarComponent } from './components/horizontal-navbar/horizontal-navbar.component';
+import { DialogGroupCreateComponent } from './components/horizontal-navbar/horizontal-navbar.component';
 import { VerticalNavbarComponent }   from './components/vertical-navbar/vertical-navbar.component';
 import { LogoComponent }             from './components/logo/logo.component';
 import { MenuComponent }             from './components/menu/menu.component';
@@ -50,14 +51,16 @@ import { FooterComponent }           from './components/footer/footer.component'
     VerticalNavbarComponent,
     LogoComponent,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    DialogGroupCreateComponent
   ],
   exports: [
     HorizontalNavbarComponent,
     VerticalNavbarComponent,
     LogoComponent,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    DialogGroupCreateComponent
   ],
   imports: [
     HttpModule,
@@ -97,6 +100,9 @@ import { FooterComponent }           from './components/footer/footer.component'
     FormsModule,
     ReactiveFormsModule,
     TranslateModule
+  ],
+  entryComponents: [
+    DialogGroupCreateComponent
   ]
 })
 export class UIModule { }

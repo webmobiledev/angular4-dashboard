@@ -1,0 +1,96 @@
+<h2 md-dialog-title>Group Creation</h2>
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+  <div md-dialog-content *ngIf="step === 'first'">
+    <div class="row pt-3">
+      <div class="col-sm-6">
+        <md-input-container>
+          <input mdInput id="name" placeholder="Name" type="text" value="" [formControl]="form.controls['name']">
+        </md-input-container>
+      </div>
+      <div class="col-sm-6">
+        <md-select placeholder="Group type" [formControl]="form.controls['grouptype']">
+          <md-option *ngFor="let g of groupTypes" [value]="g.id">
+            {{ g.code }}
+          </md-option>
+        </md-select>
+      </div>
+    </div>
+    <div class="row pt-3">
+      <div class="col-sm-6">
+        <md-input-container>
+          <input mdInput id="frequency" placeholder="Every ? month" type="number" value="" [formControl]="form.controls['frequency']">
+        </md-input-container>
+      </div>
+      <div class="col-sm-6">
+        <md-select placeholder="Currency" [formControl]="form.controls['currency']">
+          <md-option *ngFor="let c of currencies" [value]="c.id">
+            {{ c.code }}
+          </md-option>
+        </md-select>
+      </div>
+    </div>
+    <div class="row pt-3">
+      <div class="col-sm-12">
+        <md-input-container>
+          <textarea mdInput placeholder="Description" rows="3" [formControl]="form.controls['description']"></textarea>
+        </md-input-container>
+      </div>
+    </div>
+  </div>
+  <div md-dialog-actions *ngIf="step === 'first'">
+    <button md-raised-button (click)="dialogRef.close('no')">Cancel</button>
+    <button md-raised-button color="accent" layout-align="end" (click)="step = 'second'">Next >></button>
+  </div>
+  <div md-dialog-content *ngIf="step === 'second'">
+    <div class="row pt-3">
+      <div class="col-sm-6">
+        <md-input-container>
+          <input mdInput id="amount" placeholder="Amount" type="number" value="" [formControl]="form.controls['amount']">
+        </md-input-container>
+      </div>
+      <div class="col-sm-6">
+        <md-input-container>
+          <input mdInput id="rate" placeholder="Rate" type="number" value="" [formControl]="form.controls['rate']">
+        </md-input-container>
+      </div>
+    </div>
+    <div class="row pt-3">
+      <div class="col-sm-6">
+        <md-input-container>
+          <input mdInput id="duedate" placeholder="Due date" type="number" value="" [formControl]="form.controls['duedate']">
+        </md-input-container>
+      </div>
+      <div class="col-sm-6">
+        <md-input-container>
+          <input mdInput id="preppenal" placeholder="Prep penal" type="number" value="" [formControl]="form.controls['preppenal']">
+        </md-input-container>
+      </div>
+    </div>
+    <div class="row pt-3">
+      <div class="col-sm-6">
+        <md-input-container>
+          <input mdInput id="nbdpenal" placeholder="Nb d penal" type="number" value="" [formControl]="form.controls['nbdpenal']">
+        </md-input-container>
+      </div>
+      <div class="col-sm-6">
+        <md-input-container>
+          <input mdInput id="penalty" placeholder="Penalty" type="number" value="" [formControl]="form.controls['penalty']">
+        </md-input-container>
+      </div>
+    </div>
+    <div class="row pt-3">
+      <div class="col-sm-12">
+        <md-select placeholder="PS type" [formControl]="form.controls['pstype']">
+          <md-option *ngFor="let p of psTypes" [value]="p.id">
+            {{ p.code }}
+          </md-option>
+        </md-select>
+      </div>
+    </div>
+  </div>
+  <div md-dialog-actions *ngIf="step === 'second'">
+    <button md-raised-button (click)="step = 'first'" color="accent" layout-align="end"><< Previous</button>
+    <button md-raised-button (click)="dialogRef.close('no')">Cancel</button>
+    <button md-raised-button color="accent" layout-align="end" type="submit" [disabled]="!form.valid">Finish</button>
+  </div>
+</form>

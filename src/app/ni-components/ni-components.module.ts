@@ -8,6 +8,7 @@ import { NiBreadcrumbComponent } from './ni-breadcrumb/ni-breadcrumb.component';
 import { NiButtonComponent }     from './ni-button/ni-button.component';
 import { NiCardComponent }       from './ni-card/ni-card.component';
 import { NiChatComponent }       from './ni-chat/ni-chat.component';
+import { NiTableComponent }       from './ni-table/ni-table.component';
 import { NiFileComponent }       from './ni-file/ni-file.component';
 import { NiHTimelineComponent }  from './ni-h-timeline/ni-h-timeline.component';
 
@@ -30,6 +31,7 @@ import { AutoGrowDirective }     from './directives/auto-grow/auto-grow.directiv
     NiChatComponent,
     NiFileComponent,
     NiHTimelineComponent,
+    NiTableComponent,
     ColorDirective,
     BgDirective,
     GradientDirective,
@@ -44,6 +46,7 @@ import { AutoGrowDirective }     from './directives/auto-grow/auto-grow.directiv
     NiChatComponent,
     NiFileComponent,
     NiHTimelineComponent,
+    NiTableComponent,
     ColorDirective,
     BgDirective,
     GradientDirective

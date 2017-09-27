@@ -1,39 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from '../../../layouts/shared-service';
-import { AmChartsService } from '@amcharts/amcharts3-angular';
-
-
-const timelineData: any[] = [
-  {
-    'timeline': [
-      {
-        'date': '12 minutes ago',
-        'content': `You <span class="text-info">recommended</span> Sem B.`,
-        'pointColor': '#ea8080'
-      },
-      {
-        'date': '37 minutes ago',
-        'content': `You followed Sydney N.`,
-        'pointColor': '#915035'
-      },
-      {
-        'date': '2 hours ago',
-        'content': `You <span class="text-danger">subscribed</span> to Harold Fuller`,
-        'pointColor': '#B925FF'
-      },
-      {
-        'date': '7 hours ago',
-        'content': `You updated your profile picture`,
-        'pointColor': '#C5CAE9'
-      },
-      {
-        'date': '8 hours ago',
-        'content': `You deleted <i>homepage.psd</i>`,
-        'pointColor': '#FF8A65'
-      }
-    ]
-  }
-];
+import { MdDialog, MdDialogRef, MdDialogConfig } from '@angular/material';
+import { ApiService } from '../../../services/api.service';
 
 @Component({
   selector: 'page-groups',
@@ -42,204 +10,113 @@ const timelineData: any[] = [
 })
 export class PageGroupsComponent implements OnInit {
   pageTitle: string = 'groups';
-  timelineData: any[] = timelineData;
-  private chart: any;
+  breadcrumb = [];
+  groups = [];
+  groupHeaders = [];
 
-  constructor( private AmCharts: AmChartsService, private _sharedService: SharedService ) {
+  members = [];
+  memberHeaders = [];
+  obligations = [];
+  obligationHeaders = [];
+  requests = [];
+  requestHeaders = [];
+  events = [];
+  eventHeaders = [];
+  groupInfo = {};
+  showGroupList = true;
+  
+  constructor( private _sharedService: SharedService, private dialog: MdDialog, private apiService: ApiService ) {
     this._sharedService.emitChange(this.pageTitle);
   }
 
   ngOnInit() {
-    this.chart = this.AmCharts.makeChart('amchart-1', {
-      'type': 'serial',
-      'theme': 'light',
-      'dataProvider': [
-        {
-          'country': 'Angular',
-          'visits': 1232
-        }, {
-          'country': 'AngularJS',
-          'visits': 1882
-        }, {
-          'country': 'React',
-          'visits': 1809
-        }, {
-          'country': 'Vue.js',
-          'visits': 1322
-        }, {
-          'country': 'Backbone.js',
-          'visits': 1542
-        }, {
-          'country': 'Ember.js',
-          'visits': 1497
-        }, {
-          'country': 'Meteor.js',
-          'visits': 1240
-        }, {
-          'country': 'jQuery',
-          'visits': 711
-        }
-      ],
-      'valueAxes': [ {
-        'gridColor': '#FFFFFF',
-        'gridAlpha': 0.2,
-        'dashLength': 0
-      } ],
-      'gridAboveGraphs': true,
-      'startDuration': 1,
-      'graphs': [ {
-        'balloonText': '[[category]]: <b>[[value]]</b>',
-        'fillAlphas': 0.8,
-        'lineAlpha': 0.2,
-        'type': 'column',
-        'valueField': 'visits'
-      } ],
-      'chartCursor': {
-        'categoryBalloonEnabled': false,
-        'cursorAlpha': 0,
-        'zoomable': false
-      },
-      'categoryField': 'country',
-      'categoryAxis': {
-        'gridPosition': 'start',
-        'gridAlpha': 0,
-        'tickPosition': 'start',
-        'tickLength': 20
+    this.showGroupList = true;
+    this.apiService.isClickedDetails.subscribe(data => {
+      if (data === true) {
+        this.showGroupList = false;
+      } else {
+        this.showGroupList = true;
       }
     });
 
-    this.chart = this.AmCharts.makeChart('amchart-2', {
-      'type': 'serial',
-      'theme': 'light',
-      //'autoMarginOffset':20,
-      'dataDateFormat': 'YYYY-MM-DD HH:NN',
-      'dataProvider': [
-        {
-          'date': '2012-01-01',
-          'value': 8
-        }, {
-          'date': '2012-01-02',
-          'color':'#CC0000',
-          'value': 10
-        }, {
-          'date': '2012-01-03',
-          'value': 12
-        }, {
-          'date': '2012-01-04',
-          'value': 14
-        }, {
-          'date': '2012-01-05',
-          'value': 11
-        }, {
-          'date': '2012-01-06',
-          'value': 6
-        }, {
-          'date': '2012-01-07',
-          'value': 7
-        }, {
-          'date': '2012-01-08',
-          'value': 9
-        }, {
-          'date': '2012-01-09',
-          'value': 13
-        }, {
-          'date': '2012-01-10',
-          'value': 15
-        }, {
-          'date': '2012-01-11',
-          'color':'#CC0000',
-          'value': 19
-        }, {
-          'date': '2012-01-12',
-          'value': 21
-        }, {
-          'date': '2012-01-13',
-          'value': 22
-        }, {
-          'date': '2012-01-14',
-          'value': 20
-        }, {
-          'date': '2012-01-15',
-          'value': 18
-        }, {
-          'date': '2012-01-16',
-          'value': 14
-        }, {
-          'date': '2012-01-17',
-          'color':'#CC0000',
-          'value': 16
-        }, {
-          'date': '2012-01-18',
-          'value': 18
-        }, {
-          'date': '2012-01-19',
-          'value': 17
-        }, {
-          'date': '2012-01-20',
-          'value': 15
-        }, {
-          'date': '2012-01-21',
-          'value': 12
-        }, {
-          'date': '2012-01-22',
-          'color':'#CC0000',
-          'value': 10
-        }, {
-          'date': '2012-01-23',
-          'value': 8
-        }
-      ],
-      'valueAxes': [{
-        'axisAlpha': 0,
-        'guides': [{
-          'fillAlpha': 0.1,
-          'fillColor': '#888888',
-          'lineAlpha': 0,
-          'toValue': 16,
-          'value': 10
-        }],
-        'position': 'left',
-        'tickLength': 0
-      }],
-      'graphs': [{
-        'balloonText': '[[category]]<br><b><span style="font-size:14px;">value:[[value]]</span></b>',
-        'bullet': 'round',
-        'dashLength': 3,
-        'colorField':'color',
-        'valueField': 'value'
-      }],
-      'trendLines': [{
-        'finalDate': '2012-01-11 12',
-        'finalValue': 19,
-        'initialDate': '2012-01-02 12',
-        'initialValue': 10,
-        'lineColor': '#CC0000'
-      }, {
-        'finalDate': '2012-01-22 12',
-        'finalValue': 10,
-        'initialDate': '2012-01-17 12',
-        'initialValue': 16,
-        'lineColor': '#CC0000'
-      }],
-      'chartCursor': {
-        'fullWidth':true,
-        'valueLineEabled':true,
-        'valueLineBalloonEnabled':true,
-        'valueLineAlpha':0.5,
-        'cursorAlpha':0
-      },
-      'categoryField': 'date',
-      'categoryAxis': {
-        'parseDates': true,
-        'axisAlpha': 0,
-        'gridAlpha': 0.1,
-        'minorGridAlpha': 0.1,
-        'minorGridEnabled': true
-      }
+    this.apiService.groupId.subscribe(data => {
+
+      this.apiService.getGroups().then((res: any) => {
+        this.groups = [];
+        this.groupHeaders = ['Group name', 'nb members', 'Creator', 'Actual nb members', 'Amount', 'Currency', 'Creation Date', 'Description', 'Due date', 'Frequency', 'Type', 'PS Type', 'Rate', {type: 'Action'}];
+        res.data.map(d => {
+          if (d.id === data) {
+            this.breadcrumb = [];
+            this.breadcrumb.push({title: this.pageTitle});
+            this.breadcrumb.push({title: d.name});
+          }
+          this.groups.push([d.name, d.nb_members, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.due_day, d.frequency, d.g_type, d.position_selection_type, d.rate, {type: ['details'], id: d.id}]);
+        });
+      });
+      
+      this.apiService.getGroupMembers().then((res: any) => {
+        this.members = [];
+        this.memberHeaders = ['Name', 'Email', 'Type', 'Picture', 'Position', 'Date', {type: 'Action'}];
+        res.data.map(d => {
+          this.members.push([d.first_name, d.email, d.member_type, d.photo_path, d.position, d.user_position_date, {type: ['remove'], id: d.id}]);
+        });
+      });
+
+      this.apiService.getGroupObligations().then((res: any) => {
+        this.obligations = [];
+        this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Type', {type: 'Action'}];
+        res.data.map(d => {
+          this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status, d.type, {type: ['paynow'], id: d.id}]);
+        });
+      });
+
+      this.apiService.getGroupRequests().then((res: any) => {
+        this.requests = [];
+        this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date'];
+        res.data.map(d => {
+          this.requests.push([d.sender, d.receiver, d.group, d.request_type, d.request_status, d.request_date]);
+        });
+      });
+
+      this.apiService.getGroupEvents().then((res: any) => {
+        this.events = [];
+        this.eventHeaders = ['Type', 'Initiator', 'Group', 'Date'];
+        res.data.map(d => {
+          this.events.push([d.event_type, d.initiator, d.group, d.date_event]);
+        });
+      });
+
+      this.apiService.getGroupInfo().then((res: any) => {
+        this.groupInfo = res.data[0];
+      });
     });
   }
 
   ngOnDestroy() {
-    this.AmCharts.destroyChart(this.chart);
+  }
+
+  openDialog() {
+    let dialogRef = this.dialog.open(DialogAddMemberComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'yes') {
+      } else {
+      }
+    });
+  }
+}
+
+@Component({
+  selector: 'dialog-add-member',
+  templateUrl: 'dialog-add-member.html',
+})
+export class DialogAddMemberComponent {
+  member: string;
+  constructor(public dialogRef: MdDialogRef<DialogAddMemberComponent>, private apiService: ApiService) {
+
+  }
+  addMember() {
+    this.dialogRef.close();
+    this.apiService.addMember(this.member).then(res => {
+    });
   }
 }

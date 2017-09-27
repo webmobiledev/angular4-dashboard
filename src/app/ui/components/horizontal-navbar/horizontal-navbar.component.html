@@ -16,7 +16,7 @@
     </div>
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
-      <button md-raised-button color="accent" class="btn-group">{{'createNewGroup' | translate}}</button>
+      <button md-raised-button color="accent" class="btn-group" (click)="openCreateGroupDialog()">{{'createNewGroup' | translate}}</button>
     </div>
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
