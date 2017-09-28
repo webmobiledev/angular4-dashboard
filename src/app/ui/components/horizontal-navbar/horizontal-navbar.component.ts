@@ -46,10 +46,12 @@ export class HorizontalNavbarComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.apiService.getGroups().then((data: any) => {
-      console.log(data);
-      data.data.map(d => {
-        this.groupList.push(d.name);
+    this.apiService.groupCounts.subscribe(res => {
+      this.groupList = [];
+      this.apiService.getGroups().then((data: any) => {
+        data.data.map(d => {
+          this.groupList.push(d.name);
+        });
       });
     });
   }
@@ -113,6 +115,7 @@ export class HorizontalNavbarComponent implements OnInit {
 export class DialogGroupCreateComponent {
   public form: FormGroup;
   step = 'first';
+  groupCounts = 0;
   groupTypes = [];
   currencies = [];
   psTypes = [];
@@ -146,12 +149,17 @@ export class DialogGroupCreateComponent {
       this.psTypes = res.data;
       console.log(res);
     });
+
+    this.apiService.groupCounts.subscribe(res => {
+      this.groupCounts = res;
+    });
   }
 
   onSubmit() {
     this.dialogRef.close('yes');
     this.apiService.addGroup(this.form.value).then(res => {
       console.log(res);
+      this.apiService.groupCounts.next(this.groupCounts + 1);
     }).catch(err => {
       console.log(err);
     });

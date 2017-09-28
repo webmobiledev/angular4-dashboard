@@ -171,7 +171,8 @@ var AppRoutingModule = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -184,16 +185,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var AppComponent = (function () {
-    function AppComponent(auth, activatedRoute) {
+    function AppComponent(auth, activatedRoute, apiService) {
+        var _this = this;
         this.auth = auth;
         this.activatedRoute = activatedRoute;
+        this.apiService = apiService;
         this.activatedRoute.params.subscribe(function (params) {
             var code = params['validation_code'];
             var email = params['email'];
             auth.setConfirmParams(code, email);
         });
         this.getLocation();
+        this.apiService.getGroups().then(function (data) {
+            _this.apiService.groupCounts.next(typeof data.data !== 'undefined' ? data.data.length : 0);
+        });
     }
     AppComponent.prototype.getLocation = function () {
         if (navigator.geolocation) {
@@ -209,10 +216,10 @@ var AppComponent = (function () {
             selector: 'app',
             template: "<router-outlet></router-outlet>"
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _c || Object])
     ], AppComponent);
     return AppComponent;
-    var _a, _b;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=app.component.js.map
@@ -2004,7 +2011,7 @@ var PageAboutusComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/chatroom/chatroom.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row members-header\">\n  <div class=\"col-sm-12 text-right p-3\">\n    <md-input-container class=\"search-group\">\n      <input mdInput placeholder=\"search\" value=\"\">\n    </md-input-container>\n  </div>\n  <div class=\"col-md-12\">\n    <ni-chat [activeUser]=\"activeUser\" [messages]=\"messages\" [style.height.px]=\"474\"></ni-chat>\n  </div>\n</div>"
+module.exports = "<div class=\"row members-header\">\n  <div class=\"col-sm-12 text-right p-3\">\n    <md-input-container class=\"search-group\">\n      <input mdInput placeholder=\"search\" value=\"\">\n    </md-input-container>\n  </div>\n  <div class=\"col-md-12\">\n    <ni-chat [activeUser]=\"activeUser\" [messages]=\"messages\" [style.height.px]=\"600\"></ni-chat>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -2016,7 +2023,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".search-group {\n  width: 150px; }\n", ""]);
 
 // exports
 
@@ -2224,7 +2231,7 @@ module.exports = "<h2 md-dialog-title>Privacy and Terms</h2>\n<div md-dialog-con
 /***/ "../../../../../src/app/pages/default-pages/groups/dialog-add-member.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 md-dialog-title>Add member</h2>\n<div md-dialog-content>\n  <md-input-container>\n    <input mdInput placeholder=\"Member to add\" value=\"\" [(ngModel)]=\"member\">\n  </md-input-container>\n</div>\n<div md-dialog-actions>\n  <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n  <button md-raised-button (click)=\"addMember()\" color=\"accent\">Add</button>\n</div>"
+module.exports = "<h2 md-dialog-title>Add member</h2>\n<div md-dialog-content>\n  <md-input-container>\n    <input mdInput placeholder=\"Member to add\" value=\"\" [(ngModel)]=\"member\">\n  </md-input-container>\n</div>\n<div md-dialog-actions>\n  <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n  <button md-raised-button (click)=\"addMember()\" color=\"accent\" [disabled]=\"member === ''\">Add</button>\n</div>"
 
 /***/ }),
 
@@ -2308,17 +2315,23 @@ var PageGroupsComponent = (function () {
                 _this.showGroupList = true;
             }
         });
-        this.apiService.groupId.subscribe(function (data) {
+        this.apiService.groupCounts.subscribe(function (res) {
             _this.apiService.getGroups().then(function (res) {
                 _this.groups = [];
                 _this.groupHeaders = ['Group name', 'nb members', 'Creator', 'Actual nb members', 'Amount', 'Currency', 'Creation Date', 'Description', 'Due date', 'Frequency', 'Type', 'PS Type', 'Rate', { type: 'Action' }];
+                res.data.map(function (d) {
+                    _this.groups.push([d.name, d.nb_members, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.due_day, d.frequency, d.g_type, d.position_selection_type, d.rate, { type: ['details'], id: d.id }]);
+                });
+            });
+        });
+        this.apiService.groupId.subscribe(function (data) {
+            _this.apiService.getGroups().then(function (res) {
                 res.data.map(function (d) {
                     if (d.id === data) {
                         _this.breadcrumb = [];
                         _this.breadcrumb.push({ title: _this.pageTitle });
                         _this.breadcrumb.push({ title: d.name });
                     }
-                    _this.groups.push([d.name, d.nb_members, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.due_day, d.frequency, d.g_type, d.position_selection_type, d.rate, { type: ['details'], id: d.id }]);
                 });
             });
             _this.apiService.getGroupMembers().then(function (res) {
@@ -2350,6 +2363,7 @@ var PageGroupsComponent = (function () {
                 });
             });
             _this.apiService.getGroupInfo().then(function (res) {
+                console.log(res);
                 _this.groupInfo = res.data[0];
             });
         });
@@ -2381,6 +2395,7 @@ var DialogAddMemberComponent = (function () {
     function DialogAddMemberComponent(dialogRef, apiService) {
         this.dialogRef = dialogRef;
         this.apiService = apiService;
+        this.member = '';
     }
     DialogAddMemberComponent.prototype.addMember = function () {
         this.dialogRef.close();
@@ -2715,7 +2730,7 @@ var PageProfileComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/requests/requests.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<ni-card>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12 col-xl-6 mb-lg-4\">\r\n      <div class=\"chart-container\">\r\n        <div id=\"amchart-1\" [style.width.%]=\"100\" [style.height.%]=\"100\"></div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-md-6 col-xl-3 flex-xl-first mb-4 mb-md-0\">\r\n      <h5 class=\"mt-0\">Last sales</h5>\r\n      <div class=\"table-responsive mb-3\">\r\n        <table class=\"table table-sm\">\r\n          <tbody>\r\n          <tr>\r\n            <td>Samsung Galaxy S8</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Meizu M3</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Meizu Pro 6</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">5</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Apple iPhone SE</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'warning'\" [borderRadius]=\"false\">7</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>iPhone 6</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>iPhone 7</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Huawei P8</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">4</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Xiaomi Mi Band 2</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'danger'\" [borderRadius]=\"false\">10</ni-badge>\r\n            </td>\r\n          </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n      <button ni-button block=\"true\" type=\"accent\" outline=\"true\" lineStyle=\"dashed\" beforeIcon=\"fa fa-shopping-basket\">Look all</button>\r\n    </div>\r\n    <div class=\"col-md-6 col-xl-3\">\r\n      <p class=\"mb-1\"><strong>Angular</strong></p>\r\n      <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"98\"></md-progress-bar>\r\n\r\n      <p class=\"mb-1\"><strong>React</strong></p>\r\n      <md-progress-bar mode=\"determinate\" color=\"warn\" [value]=\"85\"></md-progress-bar>\r\n\r\n      <p class=\"mb-1\"><strong>Vue.js</strong></p>\r\n      <md-progress-bar mode=\"determinate\" [value]=\"40\"></md-progress-bar>\r\n\r\n      <p class=\"mb-1\"><strong>Backbone.js</strong></p>\r\n      <md-progress-bar mode=\"determinate\" [value]=\"38\"></md-progress-bar>\r\n\r\n      <p class=\"mb-1\"><strong>Ember.js</strong></p>\r\n      <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"54\"></md-progress-bar>\r\n\r\n      <p class=\"mb-1\"><strong>Meteor.js</strong></p>\r\n      <md-progress-bar mode=\"determinate\" color=\"warn\" [value]=\"38\"></md-progress-bar>\r\n\r\n      <p class=\"mb-1\"><strong>jQuery</strong></p>\r\n      <md-progress-bar mode=\"determinate\" color=\"warn\" [value]=\"61\"></md-progress-bar>\r\n    </div>\r\n  </div>\r\n</ni-card>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'info'\" [outline]=\"true\" class=\"info-card\">\r\n      <h6 class=\"mt-0 title\">Orders</h6>\r\n      <div class=\"count\">2,145</div>\r\n      <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">+17%</ni-badge> <small>from previous period</small>\r\n      <md-icon>shopping_basket</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'info'\" [outline]=\"true\" class=\"info-card\">\r\n      <h6 class=\"mt-0 title\">Revenue</h6>\r\n      <div class=\"count\">$ 50,24</div>\r\n      <small>11750</small>\r\n      <md-icon>equalizer</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'info'\" [outline]=\"true\" class=\"info-card\">\r\n      <h6 class=\"mt-0 title\">Products</h6>\r\n      <div class=\"count\">2,543</div>\r\n      <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">+210</ni-badge>\r\n      <md-icon>monetization_on</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'info'\" [outline]=\"true\" class=\"info-card\">\r\n      <h6 class=\"mt-0 title\">Sold</h6>\r\n      <div class=\"count\">1,005</div>\r\n      <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">+24%</ni-badge>\r\n      <md-icon>donut_large</md-icon>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<ni-card>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-4\">\r\n      <div id=\"amchart-2\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\r\n    </div>\r\n\r\n    <div class=\"col-lg-4\">\r\n      <div id=\"amchart-3\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\r\n    </div>\r\n\r\n    <div class=\"col-lg-4\">\r\n      <div id=\"amchart-4\" [style.width.%]=\"100\" [style.height.px]=\"400\"></div>\r\n    </div>\r\n  </div>\r\n</ni-card>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-6\">\r\n    <ni-card [title]=\"'Changelog'\" [outline]=\"true\" class=\"mb-lg-0\">\r\n      <ni-h-timeline [showYears]=\"false\" [showDate]=\"false\" [align]=\"'left'\" [data]=\"timelineData\"></ni-h-timeline>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-lg-6\">\r\n    <ni-card [title]=\"'To do list'\" class=\"mb-0\">\r\n      <md-list>\r\n        <md-list-item *ngFor=\"let folder of folders\">\r\n          <md-icon md-list-avatar>{{folder.icon}}<ni-badge *ngIf=\"folder.badge\" [color]=\"'danger'\" [position]=\"'top-right'\">{{folder.badge}}</ni-badge></md-icon>\r\n          <h4 md-line>{{folder.name}}</h4>\r\n          <p md-line><i>{{folder.updated}}</i></p>\r\n        </md-list-item>\r\n      </md-list>\r\n    </ni-card>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"row members-header\">\r\n  <div class=\"col-sm-12 text-left p-3\">\r\n    <md-input-container class=\"search-group\">\r\n      <input mdInput placeholder=\"search\" value=\"\">\r\n    </md-input-container>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 p-3\">\r\n    <ni-table [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -2727,7 +2742,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".chart-container {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  height: 400px;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  width: 100%; }\n  @media (max-width: 767px) {\n    .chart-container {\n      height: 300px; } }\n  .chart-container canvas {\n    margin: 0 auto;\n    max-height: 100%;\n    width: auto !important; }\n\n:host /deep/ .amcharts-graph-g2 .amcharts-graph-stroke {\n  stroke-dasharray: 3px 3px;\n  stroke-linejoin: round;\n  stroke-linecap: round;\n  -webkit-animation: am-moving-dashes 1s linear infinite;\n          animation: am-moving-dashes 1s linear infinite; }\n\n@-webkit-keyframes am-moving-dashes {\n  100% {\n    stroke-dashoffset: -31px; } }\n\n@keyframes am-moving-dashes {\n  100% {\n    stroke-dashoffset: -31px; } }\n\n:host /deep/ .lastBullet {\n  -webkit-animation: am-pulsating 1s ease-out infinite;\n          animation: am-pulsating 1s ease-out infinite; }\n\n@-webkit-keyframes am-pulsating {\n  0% {\n    stroke-opacity: 1;\n    stroke-width: 0px; }\n  100% {\n    stroke-opacity: 0;\n    stroke-width: 50px; } }\n\n@keyframes am-pulsating {\n  0% {\n    stroke-opacity: 1;\n    stroke-width: 0px; }\n  100% {\n    stroke-opacity: 0;\n    stroke-width: 50px; } }\n\n:host /deep/ .amcharts-graph-column-front {\n  transition: all .3s .3s ease-out; }\n\n:host /deep/ .amcharts-graph-column-front:hover {\n  fill: #496375;\n  stroke: #496375;\n  transition: all .3s ease-out; }\n\n:host /deep/ .amcharts-graph-g3 {\n  stroke-linejoin: round;\n  stroke-linecap: round;\n  stroke-dasharray: 500%;\n  stroke-dasharray: 0;\n  stroke-dashoffset: 0;\n  -webkit-animation: am-draw 40s;\n          animation: am-draw 40s; }\n\n@-webkit-keyframes am-draw {\n  0% {\n    stroke-dashoffset: 500%; }\n  100% {\n    stroke-dashoffset: 0%; } }\n\n@keyframes am-draw {\n  0% {\n    stroke-dashoffset: 500%; }\n  100% {\n    stroke-dashoffset: 0%; } }\n", ""]);
+exports.push([module.i, ".chart-container {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  height: 400px;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  width: 100%; }\n  @media (max-width: 767px) {\n    .chart-container {\n      height: 300px; } }\n  .chart-container canvas {\n    margin: 0 auto;\n    max-height: 100%;\n    width: auto !important; }\n\n:host /deep/ .amcharts-graph-g2 .amcharts-graph-stroke {\n  stroke-dasharray: 3px 3px;\n  stroke-linejoin: round;\n  stroke-linecap: round;\n  -webkit-animation: am-moving-dashes 1s linear infinite;\n          animation: am-moving-dashes 1s linear infinite; }\n\n@-webkit-keyframes am-moving-dashes {\n  100% {\n    stroke-dashoffset: -31px; } }\n\n@keyframes am-moving-dashes {\n  100% {\n    stroke-dashoffset: -31px; } }\n\n:host /deep/ .lastBullet {\n  -webkit-animation: am-pulsating 1s ease-out infinite;\n          animation: am-pulsating 1s ease-out infinite; }\n\n@-webkit-keyframes am-pulsating {\n  0% {\n    stroke-opacity: 1;\n    stroke-width: 0px; }\n  100% {\n    stroke-opacity: 0;\n    stroke-width: 50px; } }\n\n@keyframes am-pulsating {\n  0% {\n    stroke-opacity: 1;\n    stroke-width: 0px; }\n  100% {\n    stroke-opacity: 0;\n    stroke-width: 50px; } }\n\n:host /deep/ .amcharts-graph-column-front {\n  transition: all .3s .3s ease-out; }\n\n:host /deep/ .amcharts-graph-column-front:hover {\n  fill: #496375;\n  stroke: #496375;\n  transition: all .3s ease-out; }\n\n:host /deep/ .amcharts-graph-g3 {\n  stroke-linejoin: round;\n  stroke-linecap: round;\n  stroke-dasharray: 500%;\n  stroke-dasharray: 0;\n  stroke-dashoffset: 0;\n  -webkit-animation: am-draw 40s;\n          animation: am-draw 40s; }\n\n@-webkit-keyframes am-draw {\n  0% {\n    stroke-dashoffset: 500%; }\n  100% {\n    stroke-dashoffset: 0%; } }\n\n@keyframes am-draw {\n  0% {\n    stroke-dashoffset: 500%; }\n  100% {\n    stroke-dashoffset: 0%; } }\n\n.search-group {\n  width: 150px; }\n", ""]);
 
 // exports
 
@@ -2744,7 +2759,7 @@ module.exports = module.exports.toString();
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageRequestsComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__ = __webpack_require__("../../../../@amcharts/amcharts3-angular/es2015/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2757,403 +2772,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var folders = [
-    {
-        icon: 'android',
-        badge: false,
-        name: 'Android app',
-        updated: 'July 21, 2017'
-    },
-    {
-        icon: 'update',
-        badge: false,
-        name: 'Update plugins',
-        updated: 'July 19, 2017'
-    },
-    {
-        icon: 'bug_report',
-        badge: false,
-        name: 'Fix bugs',
-        updated: 'July 22, 2017'
-    },
-    {
-        icon: 'unarchive',
-        badge: false,
-        name: 'Create app design',
-        updated: 'July 25, 2017'
-    },
-    {
-        icon: 'content_copy',
-        badge: 8,
-        name: 'Create widgets',
-        updated: 'July 16, 2017'
-    },
-    {
-        icon: 'folder_open',
-        badge: false,
-        name: 'Documentation',
-        updated: 'July 28, 2017'
-    },
-    {
-        icon: 'folder_open',
-        badge: false,
-        name: 'Upload',
-        updated: 'July 30, 2017'
-    }
-];
-var timelineData = [
-    {
-        'timeline': [
-            {
-                'content': "Aenean lacinia bibendum nulla sed consectetur.",
-                'pointColor': '#ea8080'
-            },
-            {
-                'content': "Aenean lacinia bibendum nulla.",
-                'pointColor': '#915035'
-            },
-            {
-                'content': "Lorem ipsum dolor sit amet.",
-                'pointColor': '#B925FF'
-            },
-            {
-                'content': "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-                'pointColor': '#C5CAE9'
-            },
-            {
-                'content': "Lorem ipsum dolor sit.",
-                'pointColor': '#FF8A65'
-            }
-        ]
-    }
-];
 var PageRequestsComponent = (function () {
-    function PageRequestsComponent(AmCharts, _sharedService) {
-        this.AmCharts = AmCharts;
+    function PageRequestsComponent(_sharedService, apiService) {
         this._sharedService = _sharedService;
+        this.apiService = apiService;
         this.pageTitle = 'requests';
-        this.folders = folders;
-        this.timelineData = timelineData;
+        this.requests = [];
+        this.requestHeaders = [];
         this._sharedService.emitChange(this.pageTitle);
     }
     PageRequestsComponent.prototype.ngOnInit = function () {
-        this.chart = this.AmCharts.makeChart('amchart-1', {
-            'type': 'serial',
-            'theme': 'light',
-            'dataDateFormat': 'YYYY-MM-DD',
-            'dataProvider': [
-                {
-                    'date': '2012-01-01',
-                    'distance': 227,
-                    'townName': 'New York',
-                    'townName2': 'New York',
-                    'townSize': 25,
-                    'latitude': 40.71,
-                    'duration': 408
-                }, {
-                    'date': '2012-01-02',
-                    'distance': 371,
-                    'townName': 'Washington',
-                    'townSize': 14,
-                    'latitude': 38.89,
-                    'duration': 482
-                }, {
-                    'date': '2012-01-03',
-                    'distance': 433,
-                    'townName': 'Wilmington',
-                    'townSize': 6,
-                    'latitude': 34.22,
-                    'duration': 562
-                }, {
-                    'date': '2012-01-04',
-                    'distance': 345,
-                    'townName': 'Jacksonville',
-                    'townSize': 7,
-                    'latitude': 30.35,
-                    'duration': 379
-                }, {
-                    'date': '2012-01-05',
-                    'distance': 480,
-                    'townName': 'Miami',
-                    'townName2': 'Miami',
-                    'townSize': 10,
-                    'latitude': 25.83,
-                    'duration': 501
-                }, {
-                    'date': '2012-01-06',
-                    'distance': 386,
-                    'townName': 'Tallahassee',
-                    'townSize': 7,
-                    'latitude': 30.46,
-                    'duration': 443
-                }, {
-                    'date': '2012-01-07',
-                    'distance': 348,
-                    'townName': 'New Orleans',
-                    'townSize': 10,
-                    'latitude': 29.94,
-                    'duration': 405
-                }, {
-                    'date': '2012-01-08',
-                    'distance': 238,
-                    'townName': 'Houston',
-                    'townName2': 'Houston',
-                    'townSize': 16,
-                    'latitude': 29.76,
-                    'duration': 309
-                }, {
-                    'date': '2012-01-09',
-                    'distance': 218,
-                    'townName': 'Dalas',
-                    'townSize': 17,
-                    'latitude': 32.8,
-                    'duration': 287
-                }, {
-                    'date': '2012-01-10',
-                    'distance': 349,
-                    'townName': 'Oklahoma City',
-                    'townSize': 11,
-                    'latitude': 35.49,
-                    'duration': 485
-                }, {
-                    'date': '2012-01-11',
-                    'distance': 603,
-                    'townName': 'Kansas City',
-                    'townSize': 10,
-                    'latitude': 39.1,
-                    'duration': 890
-                }, {
-                    'date': '2012-01-12',
-                    'distance': 534,
-                    'townName': 'Denver',
-                    'townName2': 'Denver',
-                    'townSize': 18,
-                    'latitude': 39.74,
-                    'duration': 810
-                }, {
-                    'date': '2012-01-13',
-                    'townName': 'Salt Lake City',
-                    'townSize': 12,
-                    'distance': 425,
-                    'duration': 670,
-                    'latitude': 40.75,
-                    'alpha': 0.4
-                }, {
-                    'date': '2012-01-14',
-                    'latitude': 36.1,
-                    'duration': 470,
-                    'townName': 'Las Vegas',
-                    'bulletClass': 'lastBullet'
-                }
-            ],
-            'addClassNames': true,
-            'startDuration': 1,
-            'categoryField': 'date',
-            'categoryAxis': {
-                'parseDates': true,
-                'minPeriod': 'DD',
-                'autoGridCount': false,
-                'gridCount': 50,
-                'gridAlpha': 0.1,
-                'gridColor': '#FFFFFF',
-                'axisColor': '#555555',
-                'dateFormats': [{
-                        'period': 'DD',
-                        'format': 'DD'
-                    }, {
-                        'period': 'WW',
-                        'format': 'MMM DD'
-                    }, {
-                        'period': 'MM',
-                        'format': 'MMM'
-                    }, {
-                        'period': 'YYYY',
-                        'format': 'YYYY'
-                    }]
-            },
-            'valueAxes': [{
-                    'id': 'a1',
-                    'title': 'distance',
-                    'gridAlpha': 0,
-                    'axisAlpha': 0
-                }, {
-                    'id': 'a2',
-                    'position': 'right',
-                    'gridAlpha': 0,
-                    'axisAlpha': 0,
-                    'labelsEnabled': false
-                }],
-            'graphs': [{
-                    'id': 'g1',
-                    'valueField': 'distance',
-                    'title': 'distance',
-                    'type': 'column',
-                    'fillAlphas': 0.9,
-                    'valueAxis': 'a1',
-                    'balloonText': '[[value]] miles',
-                    'legendValueText': '[[value]] mi',
-                    'legendPeriodValueText': 'total: [[value.sum]] mi',
-                    'lineColor': '#B3E5FC',
-                    'alphaField': 'alpha'
-                }, {
-                    'id': 'g2',
-                    'valueField': 'latitude',
-                    'classNameField': 'bulletClass',
-                    'title': 'latitude/city',
-                    'type': 'line',
-                    'valueAxis': 'a2',
-                    'lineColor': '#d50000',
-                    'lineThickness': 1,
-                    'legendValueText': '[[value]]/[[description]]',
-                    'descriptionField': 'townName',
-                    'bullet': 'round',
-                    'bulletSizeField': 'townSize',
-                    'bulletBorderColor': '#ca0000',
-                    'bulletBorderAlpha': 1,
-                    'bulletBorderThickness': 2,
-                    'bulletColor': '#f2b3b3',
-                    'labelText': '[[townName2]]',
-                    'labelPosition': 'right',
-                    'balloonText': 'latitude:[[value]]',
-                    'showBalloon': true,
-                    'animationPlayed': true
-                }, {
-                    'id': 'g3',
-                    'title': 'duration',
-                    'valueField': 'duration',
-                    'type': 'line',
-                    'valueAxis': 'a3',
-                    'lineColor': '#64B5F6',
-                    'balloonText': '[[value]]',
-                    'lineThickness': 1,
-                    'legendValueText': '[[value]]',
-                    'bullet': 'square',
-                    'bulletBorderColor': '#64B5F6',
-                    'bulletBorderThickness': 1,
-                    'bulletBorderAlpha': 1,
-                    'dashLengthField': 'dashLength',
-                    'animationPlayed': true
-                }],
-            'chartCursor': {
-                'zoomable': false,
-                'categoryBalloonDateFormat': 'DD',
-                'cursorAlpha': 0,
-                'valueBalloonsEnabled': false
-            },
-            'legend': {
-                'bulletType': 'round',
-                'equalWidths': false,
-                'valueWidth': 120,
-                'useGraphSettings': true
-            }
-        });
-        this.chart = this.AmCharts.makeChart('amchart-2', {
-            'type': 'pie',
-            'theme': 'light',
-            'dataProvider': [
-                {
-                    'country': 'Lithuania',
-                    'litres': 501.9
-                }, {
-                    'country': 'Czech Republic',
-                    'litres': 301.9
-                }, {
-                    'country': 'Ireland',
-                    'litres': 201.1
-                }, {
-                    'country': 'Germany',
-                    'litres': 165.8
-                }, {
-                    'country': 'Australia',
-                    'litres': 139.9
-                }, {
-                    'country': 'Austria',
-                    'litres': 128.3
-                }, {
-                    'country': 'UK',
-                    'litres': 99
-                }, {
-                    'country': 'Belgium',
-                    'litres': 60
-                }, {
-                    'country': 'The Netherlands',
-                    'litres': 50
-                }
-            ],
-            'pullOutRadius': 0,
-            'labelRadius': -40,
-            'valueField': 'litres',
-            'titleField': 'country',
-            'labelText': '[[litres]]',
-            'balloon': {
-                'fixedPosition': true
-            }
-        });
-        this.chart = this.AmCharts.makeChart('amchart-3', {
-            'type': 'pie',
-            'theme': 'light',
-            'dataProvider': [
-                {
-                    'title': 'Chrome',
-                    'value': 70
-                }, {
-                    'title': 'Firefox',
-                    'value': 15
-                }, {
-                    'title': 'Opera',
-                    'value': 10
-                }, {
-                    'title': 'Safari',
-                    'value': 12
-                }, {
-                    'title': 'Edge',
-                    'value': 5
-                }
-            ],
-            'titleField': 'title',
-            'valueField': 'value',
-            'labelRadius': -40,
-            'radius': '46%',
-            'innerRadius': '60%',
-            'labelText': '[[title]]'
-        });
-        this.chart = this.AmCharts.makeChart('amchart-4', {
-            'type': 'radar',
-            'theme': 'light',
-            'dataProvider': [
-                {
-                    'country': 'Czech Republic',
-                    'litres': 156.9
-                }, {
-                    'country': 'Ireland',
-                    'litres': 131.1
-                }, {
-                    'country': 'Germany',
-                    'litres': 115.8
-                }, {
-                    'country': 'Australia',
-                    'litres': 109.9
-                }, {
-                    'country': 'Austria',
-                    'litres': 108.3
-                }, {
-                    'country': 'UK',
-                    'litres': 99
-                }
-            ],
-            'valueAxes': [{
-                    'axisTitleOffset': 20,
-                    'minimum': 0,
-                    'axisAlpha': 0.15
-                }],
-            'startDuration': 1,
-            'graphs': [{
-                    'balloonText': '[[value]] litres of beer per year',
-                    'bullet': 'round',
-                    'lineThickness': 2,
-                    'valueField': 'litres'
-                }],
-            'categoryField': 'country'
+        var _this = this;
+        this.apiService.getUserRequest().then(function (data) {
+            console.log('userrequest', data);
+            _this.requests = [];
+            _this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date'];
+            data.data.map(function (d) {
+                _this.requests.push([d.sender, d.receiver, d.group, d.request_type, d.request_status, d.request_date]);
+            });
         });
     };
     PageRequestsComponent = __decorate([
@@ -3162,7 +2798,7 @@ var PageRequestsComponent = (function () {
             template: __webpack_require__("../../../../../src/app/pages/default-pages/requests/requests.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/default-pages/requests/requests.component.scss")]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
     ], PageRequestsComponent);
     return PageRequestsComponent;
     var _a, _b;
@@ -4280,6 +3916,7 @@ var ApiService = (function () {
     function ApiService(http) {
         this.http = http;
         this.groupId = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"]('');
+        this.groupCounts = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"](0);
         this.isClickedDetails = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"](false);
     }
     ApiService.prototype.getUserRequest = function () {
@@ -4330,13 +3967,13 @@ var ApiService = (function () {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_groups';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
-        this.groupId.subscribe(function (data) {
-            params.set('group_id', data);
-        });
-        params.set('token', localStorage.getItem('token'));
         return new Promise(function (resolve, reject) {
-            _this.http.get(url, { search: params }).subscribe(function (res) {
-                resolve(res.json());
+            _this.groupId.subscribe(function (data) {
+                params.set('group_id', data);
+                params.set('token', localStorage.getItem('token'));
+                _this.http.get(url, { search: params }).subscribe(function (res) {
+                    resolve(res.json());
+                });
             });
         });
     };
@@ -4381,16 +4018,17 @@ var ApiService = (function () {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'add_group_member';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
-        this.groupId.subscribe(function (data) {
-            params.set('group_id', data);
-        });
-        params.set('email_list', member);
-        params.set('token', localStorage.getItem('token'));
         return new Promise(function (resolve, reject) {
-            _this.http.get(url, { search: params }).subscribe(function (res) {
-                resolve(res.json());
-            }, function (err) {
-                console.log(err);
+            _this.groupId.subscribe(function (data) {
+                params.set('group_id', data);
+                params.set('email_list', member);
+                params.set('token', localStorage.getItem('token'));
+                _this.http.get(url, { search: params }).subscribe(function (res) {
+                    console.log(res);
+                    // resolve(res.json());
+                }, function (err) {
+                    console.log(err);
+                });
             });
         });
     };
@@ -4398,15 +4036,15 @@ var ApiService = (function () {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_group_members';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
-        this.groupId.subscribe(function (data) {
-            params.set('group_id', data);
-        });
-        params.set('token', localStorage.getItem('token'));
         return new Promise(function (resolve, reject) {
-            _this.http.get(url, { search: params }).subscribe(function (res) {
-                resolve(res.json());
-            }, function (err) {
-                console.log(err);
+            _this.groupId.subscribe(function (data) {
+                params.set('group_id', data);
+                params.set('token', localStorage.getItem('token'));
+                _this.http.get(url, { search: params }).subscribe(function (res) {
+                    resolve(res.json());
+                }, function (err) {
+                    console.log(err);
+                });
             });
         });
     };
@@ -4414,15 +4052,15 @@ var ApiService = (function () {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_group_obligations';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
-        this.groupId.subscribe(function (data) {
-            params.set('group_id', data);
-        });
-        params.set('token', localStorage.getItem('token'));
         return new Promise(function (resolve, reject) {
-            _this.http.get(url, { search: params }).subscribe(function (res) {
-                resolve(res.json());
-            }, function (err) {
-                console.log(err);
+            _this.groupId.subscribe(function (data) {
+                params.set('group_id', data);
+                params.set('token', localStorage.getItem('token'));
+                _this.http.get(url, { search: params }).subscribe(function (res) {
+                    resolve(res.json());
+                }, function (err) {
+                    console.log(err);
+                });
             });
         });
     };
@@ -4430,16 +4068,15 @@ var ApiService = (function () {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_requests';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
-        this.groupId.subscribe(function (data) {
-            params.set('group_id', data);
-        });
-        // params.set('status_code', 'PENDING,REJECTED');
-        params.set('token', localStorage.getItem('token'));
         return new Promise(function (resolve, reject) {
-            _this.http.get(url, { search: params }).subscribe(function (res) {
-                resolve(res.json());
-            }, function (err) {
-                console.log(err);
+            _this.groupId.subscribe(function (data) {
+                params.set('group_id', data);
+                params.set('token', localStorage.getItem('token'));
+                _this.http.get(url, { search: params }).subscribe(function (res) {
+                    resolve(res.json());
+                }, function (err) {
+                    console.log(err);
+                });
             });
         });
     };
@@ -4447,15 +4084,15 @@ var ApiService = (function () {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_events';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
-        this.groupId.subscribe(function (data) {
-            params.set('group_id', data);
-        });
-        params.set('token', localStorage.getItem('token'));
         return new Promise(function (resolve, reject) {
-            _this.http.get(url, { search: params }).subscribe(function (res) {
-                resolve(res.json());
-            }, function (err) {
-                console.log(err);
+            _this.groupId.subscribe(function (data) {
+                params.set('group_id', data);
+                params.set('token', localStorage.getItem('token'));
+                _this.http.get(url, { search: params }).subscribe(function (res) {
+                    resolve(res.json());
+                }, function (err) {
+                    console.log(err);
+                });
             });
         });
     };
@@ -4725,7 +4362,7 @@ var FooterComponent = (function () {
 /***/ "../../../../../src/app/ui/components/horizontal-navbar/group-create.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 md-dialog-title>Group Creation</h2>\n<form (ngSubmit)=\"onSubmit()\" [formGroup]=\"form\">\n  <div md-dialog-content *ngIf=\"step === 'first'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"name\" placeholder=\"Name\" type=\"text\" value=\"\" [formControl]=\"form.controls['name']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"Group type\" [formControl]=\"form.controls['grouptype']\">\n          <md-option *ngFor=\"let g of groupTypes\" [value]=\"g.id\">\n            {{ g.code }}\n          </md-option>\n        </md-select>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"frequency\" placeholder=\"Every ? month\" type=\"number\" value=\"\" [formControl]=\"form.controls['frequency']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"Currency\" [formControl]=\"form.controls['currency']\">\n          <md-option *ngFor=\"let c of currencies\" [value]=\"c.id\">\n            {{ c.code }}\n          </md-option>\n        </md-select>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-12\">\n        <md-input-container>\n          <textarea mdInput placeholder=\"Description\" rows=\"3\" [formControl]=\"form.controls['description']\"></textarea>\n        </md-input-container>\n      </div>\n    </div>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'first'\">\n    <button md-raised-button (click)=\"dialogRef.close('no')\">Cancel</button>\n    <button md-raised-button color=\"accent\" layout-align=\"end\" (click)=\"step = 'second'\">Next >></button>\n  </div>\n  <div md-dialog-content *ngIf=\"step === 'second'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"amount\" placeholder=\"Amount\" type=\"number\" value=\"\" [formControl]=\"form.controls['amount']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"rate\" placeholder=\"Rate\" type=\"number\" value=\"\" [formControl]=\"form.controls['rate']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"duedate\" placeholder=\"Due date\" type=\"number\" value=\"\" [formControl]=\"form.controls['duedate']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"preppenal\" placeholder=\"Prep penal\" type=\"number\" value=\"\" [formControl]=\"form.controls['preppenal']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"nbdpenal\" placeholder=\"Nb d penal\" type=\"number\" value=\"\" [formControl]=\"form.controls['nbdpenal']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"penalty\" placeholder=\"Penalty\" type=\"number\" value=\"\" [formControl]=\"form.controls['penalty']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-12\">\n        <md-select placeholder=\"PS type\" [formControl]=\"form.controls['pstype']\">\n          <md-option *ngFor=\"let p of psTypes\" [value]=\"p.id\">\n            {{ p.code }}\n          </md-option>\n        </md-select>\n      </div>\n    </div>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'second'\">\n    <button md-raised-button (click)=\"step = 'first'\" color=\"accent\" layout-align=\"end\"><< Previous</button>\n    <button md-raised-button (click)=\"dialogRef.close('no')\">Cancel</button>\n    <button md-raised-button color=\"accent\" layout-align=\"end\" type=\"submit\" [disabled]=\"!form.valid\">Finish</button>\n  </div>\n</form>"
+module.exports = "<h2 md-dialog-title>Group Creation</h2>\n<form [formGroup]=\"form\">\n  <div md-dialog-content *ngIf=\"step === 'first'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"name\" placeholder=\"Name\" type=\"text\" value=\"\" [formControl]=\"form.controls['name']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"Group type\" [formControl]=\"form.controls['grouptype']\">\n          <md-option *ngFor=\"let g of groupTypes\" [value]=\"g.id\">\n            {{ g.code }}\n          </md-option>\n        </md-select>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"frequency\" placeholder=\"Every ? month\" type=\"number\" value=\"\" [formControl]=\"form.controls['frequency']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"Currency\" [formControl]=\"form.controls['currency']\">\n          <md-option *ngFor=\"let c of currencies\" [value]=\"c.id\">\n            {{ c.code }}\n          </md-option>\n        </md-select>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-12\">\n        <md-input-container>\n          <textarea mdInput placeholder=\"Description\" rows=\"3\" [formControl]=\"form.controls['description']\"></textarea>\n        </md-input-container>\n      </div>\n    </div>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'first'\">\n    <button md-raised-button (click)=\"dialogRef.close('no')\">Cancel</button>\n    <button md-raised-button color=\"accent\" layout-align=\"end\" (click)=\"step = 'second'\">Next >></button>\n  </div>\n  <div md-dialog-content *ngIf=\"step === 'second'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"amount\" placeholder=\"Amount\" type=\"number\" value=\"\" [formControl]=\"form.controls['amount']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"rate\" placeholder=\"Rate\" type=\"number\" value=\"\" [formControl]=\"form.controls['rate']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"duedate\" placeholder=\"Due date\" type=\"number\" value=\"\" [formControl]=\"form.controls['duedate']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"preppenal\" placeholder=\"Prep penal\" type=\"number\" value=\"\" [formControl]=\"form.controls['preppenal']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"nbdpenal\" placeholder=\"Nb d penal\" type=\"number\" value=\"\" [formControl]=\"form.controls['nbdpenal']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"penalty\" placeholder=\"Penalty\" type=\"number\" value=\"\" [formControl]=\"form.controls['penalty']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-12\">\n        <md-select placeholder=\"PS type\" [formControl]=\"form.controls['pstype']\">\n          <md-option *ngFor=\"let p of psTypes\" [value]=\"p.id\">\n            {{ p.code }}\n          </md-option>\n        </md-select>\n      </div>\n    </div>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'second'\">\n    <button md-raised-button (click)=\"step = 'first'\" color=\"accent\" layout-align=\"end\"><< Previous</button>\n    <button md-raised-button (click)=\"dialogRef.close('no')\">Cancel</button>\n    <button md-raised-button color=\"accent\" layout-align=\"end\" type=\"submit\" (click)=\"onSubmit()\" [disabled]=\"!form.valid\">Finish</button>\n  </div>\n</form>"
 
 /***/ }),
 
@@ -4809,10 +4446,12 @@ var HorizontalNavbarComponent = (function () {
     }
     HorizontalNavbarComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.apiService.getGroups().then(function (data) {
-            console.log(data);
-            data.data.map(function (d) {
-                _this.groupList.push(d.name);
+        this.apiService.groupCounts.subscribe(function (res) {
+            _this.groupList = [];
+            _this.apiService.getGroups().then(function (data) {
+                data.data.map(function (d) {
+                    _this.groupList.push(d.name);
+                });
             });
         });
     };
@@ -4891,6 +4530,7 @@ var DialogGroupCreateComponent = (function () {
         this.fb = fb;
         this.apiService = apiService;
         this.step = 'first';
+        this.groupCounts = 0;
         this.groupTypes = [];
         this.currencies = [];
         this.psTypes = [];
@@ -4920,11 +4560,16 @@ var DialogGroupCreateComponent = (function () {
             _this.psTypes = res.data;
             console.log(res);
         });
+        this.apiService.groupCounts.subscribe(function (res) {
+            _this.groupCounts = res;
+        });
     }
     DialogGroupCreateComponent.prototype.onSubmit = function () {
+        var _this = this;
         this.dialogRef.close('yes');
         this.apiService.addGroup(this.form.value).then(function (res) {
             console.log(res);
+            _this.apiService.groupCounts.next(_this.groupCounts + 1);
         }).catch(function (err) {
             console.log(err);
         });
@@ -5062,14 +4707,8 @@ var MenuComponent = (function () {
         var _this = this;
         this.menuService.getMenuItems().then(function (menuItems) {
             _this.menuItems = menuItems;
-            _this.apiService.getGroups().then(function (res) {
-                res.data.map(function (r, index) {
-                    _this.menuItems[1].badge.text = res.data.length;
-                    // this.menuItems[1].sub.push({title: r.name, routing: '/default-layout/groups/' + r.id, data: r.id});
-                    // if (index === 0) {
-                    //   this.apiService.groupId.next(r.id);
-                    // }
-                });
+            _this.apiService.groupCounts.subscribe(function (data) {
+                _this.menuItems[1].badge.text = data;
             });
         });
     };

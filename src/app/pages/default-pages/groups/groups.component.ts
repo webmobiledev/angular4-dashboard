@@ -39,18 +39,25 @@ export class PageGroupsComponent implements OnInit {
       }
     });
 
-    this.apiService.groupId.subscribe(data => {
-
+    this.apiService.groupCounts.subscribe(res => {
       this.apiService.getGroups().then((res: any) => {
         this.groups = [];
         this.groupHeaders = ['Group name', 'nb members', 'Creator', 'Actual nb members', 'Amount', 'Currency', 'Creation Date', 'Description', 'Due date', 'Frequency', 'Type', 'PS Type', 'Rate', {type: 'Action'}];
+        res.data.map(d => {
+          this.groups.push([d.name, d.nb_members, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.due_day, d.frequency, d.g_type, d.position_selection_type, d.rate, {type: ['details'], id: d.id}]);
+        });
+      });
+    });
+
+    this.apiService.groupId.subscribe(data => {
+
+      this.apiService.getGroups().then((res: any) => {
         res.data.map(d => {
           if (d.id === data) {
             this.breadcrumb = [];
             this.breadcrumb.push({title: this.pageTitle});
             this.breadcrumb.push({title: d.name});
           }
-          this.groups.push([d.name, d.nb_members, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.due_day, d.frequency, d.g_type, d.position_selection_type, d.rate, {type: ['details'], id: d.id}]);
         });
       });
       
@@ -87,6 +94,7 @@ export class PageGroupsComponent implements OnInit {
       });
 
       this.apiService.getGroupInfo().then((res: any) => {
+        console.log(res);
         this.groupInfo = res.data[0];
       });
     });
@@ -110,7 +118,7 @@ export class PageGroupsComponent implements OnInit {
   templateUrl: 'dialog-add-member.html',
 })
 export class DialogAddMemberComponent {
-  member: string;
+  member = '';
   constructor(public dialogRef: MdDialogRef<DialogAddMemberComponent>, private apiService: ApiService) {
 
   }

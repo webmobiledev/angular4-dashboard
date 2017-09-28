@@ -24,14 +24,8 @@ export class MenuComponent implements OnInit {
   getMenuItems(): void {
     this.menuService.getMenuItems().then(menuItems => {
       this.menuItems = menuItems;
-      this.apiService.getGroups().then((res: any) => {
-        res.data.map((r, index) => {
-          this.menuItems[1].badge.text = res.data.length;
-          // this.menuItems[1].sub.push({title: r.name, routing: '/default-layout/groups/' + r.id, data: r.id});
-          // if (index === 0) {
-          //   this.apiService.groupId.next(r.id);
-          // }
-        });
+      this.apiService.groupCounts.subscribe((data: any) => {
+        this.menuItems[1].badge.text = data;
       });
     });
   }

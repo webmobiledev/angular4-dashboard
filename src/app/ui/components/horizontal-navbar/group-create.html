@@ -1,5 +1,5 @@
 <h2 md-dialog-title>Group Creation</h2>
-<form (ngSubmit)="onSubmit()" [formGroup]="form">
+<form [formGroup]="form">
   <div md-dialog-content *ngIf="step === 'first'">
     <div class="row pt-3">
       <div class="col-sm-6">
@@ -91,6 +91,6 @@
   <div md-dialog-actions *ngIf="step === 'second'">
     <button md-raised-button (click)="step = 'first'" color="accent" layout-align="end"><< Previous</button>
     <button md-raised-button (click)="dialogRef.close('no')">Cancel</button>
-    <button md-raised-button color="accent" layout-align="end" type="submit" [disabled]="!form.valid">Finish</button>
+    <button md-raised-button color="accent" layout-align="end" type="submit" (click)="onSubmit()" [disabled]="!form.valid">Finish</button>
   </div>
 </form>

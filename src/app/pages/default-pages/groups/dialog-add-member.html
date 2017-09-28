@@ -6,5 +6,5 @@
 </div>
 <div md-dialog-actions>
   <button md-raised-button (click)="dialogRef.close('no')">CANCEL</button>
-  <button md-raised-button (click)="addMember()" color="accent">Add</button>
+  <button md-raised-button (click)="addMember()" color="accent" [disabled]="member === ''">Add</button>
 </div>
