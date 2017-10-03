@@ -1,8 +1,8 @@
 <ul class="breadcrumb" [ngClass]="getClasses()">
   <li *ngFor="let item of menu; let last = last ; let first = first">
-    <a href="{{item.link}}" *ngIf="item.link"><span class="icon {{item.icon}}" *ngIf="item.icon"></span>{{item.title}}</a>
-    <span class="static" *ngIf="!item.link && !first"><span class="icon {{item.icon}}" *ngIf="item.icon"></span>{{item.title}}</span>
-    <span class="static" *ngIf="!item.link && first" (click)="initialize()"><span class="icon {{item.icon}}" *ngIf="item.icon"></span>{{item.title}}</span>
-    <span class="separator" *ngIf="!last">{{separator}}</span>
+    <a href="{{item.link}}" *ngIf="item.link"><span class="icon {{item.icon}}" *ngIf="item.icon"></span>{{item.title | translate}}</a>
+    <span class="static" *ngIf="!item.link && !first"><span class="icon {{item.icon}}" *ngIf="item.icon"></span>{{item.title | translate}}</span>
+    <span class="static" *ngIf="!item.link && first" (click)="initialize()"><span class="icon {{item.icon}}" *ngIf="item.icon"></span>{{item.title | translate}}</span>
+    <span class="separator" *ngIf="!last">{{separator | translate}}</span>
   </li>
 </ul>

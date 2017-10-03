@@ -12,6 +12,7 @@ export class PageRequestsComponent {
   pageTitle: string = 'requests';
   requests = [];
   requestHeaders = [];
+  breadcrumb = [{title: 'requests'}];
 
   constructor( private _sharedService: SharedService, private apiService: ApiService ) {
     this._sharedService.emitChange(this.pageTitle);

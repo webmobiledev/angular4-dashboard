@@ -78,7 +78,7 @@
           overflow: hidden;
           transition: width .2s $animation;
           width: $vertical-navbar-compress-width;
-          z-index: 9997;
+          z-index: 1000;
 
           /deep/ .vertical-navbar-wrap {
             .app-menu {

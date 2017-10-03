@@ -23,7 +23,8 @@ export class NiHTimelineComponent implements OnInit {
   @HostBinding('class.align-right') alignRight: boolean = false;
   @HostBinding('class.align-between') alignBetween: boolean = false;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     this.alignLeft = (this.align === 'left');

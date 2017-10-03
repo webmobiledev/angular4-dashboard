@@ -8,6 +8,7 @@ export class ApiService {
   groupId = new BehaviorSubject('');
   groupCounts = new BehaviorSubject(0);
   isClickedDetails = new BehaviorSubject(false);
+  showSpinner = new BehaviorSubject(false);
 
   constructor(private http: Http) { }
 

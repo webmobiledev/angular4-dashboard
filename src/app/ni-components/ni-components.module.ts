@@ -2,6 +2,8 @@ import { NgModule }              from '@angular/core';
 import { CommonModule }          from '@angular/common';
 import { FormsModule }           from '@angular/forms';
 
+import { TranslateModule } from 'ng2-translate';
+
 import { NiAlertComponent }      from './ni-alert/ni-alert.component';
 import { NiBadgeComponent }      from './ni-badge/ni-badge.component';
 import { NiBreadcrumbComponent } from './ni-breadcrumb/ni-breadcrumb.component';
@@ -17,10 +19,20 @@ import { BgDirective }           from './directives/bg/bg.directive';
 import { GradientDirective }     from './directives/gradient/gradient.directive';
 import { AutoGrowDirective }     from './directives/auto-grow/auto-grow.directive';
 
+import { MdIconModule, MdProgressBarModule, MdProgressSpinnerModule, MdOptionModule, MdButtonModule, MdSelectModule } from '@angular/material';
+import { NiLoadingComponent } from './ni-loading/ni-loading.component';
+import { NiPaginationComponent } from './ni-pagination/ni-pagination.component';
+
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    TranslateModule,
+    MdIconModule,
+    MdProgressSpinnerModule,
+    MdOptionModule,
+    MdButtonModule,
+    MdSelectModule
   ],
   declarations: [
     NiAlertComponent,
@@ -35,7 +47,9 @@ import { AutoGrowDirective }     from './directives/auto-grow/auto-grow.directiv
     ColorDirective,
     BgDirective,
     GradientDirective,
-    AutoGrowDirective
+    AutoGrowDirective,
+    NiLoadingComponent,
+    NiPaginationComponent
   ],
   exports: [
     NiAlertComponent,
@@ -47,9 +61,11 @@ import { AutoGrowDirective }     from './directives/auto-grow/auto-grow.directiv
     NiFileComponent,
     NiHTimelineComponent,
     NiTableComponent,
+    NiLoadingComponent,
     ColorDirective,
     BgDirective,
-    GradientDirective
+    GradientDirective,
+    NiPaginationComponent
   ]
 })
 export class NiComponentsModule { }

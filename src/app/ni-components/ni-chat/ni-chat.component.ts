@@ -13,7 +13,6 @@ import { User } from './user';
 })
 export class NiChatComponent implements OnInit {
   @Input() contacts: any[] = [];
-  @Input() activeUser: User;
   @Input() messages: Message[] = [];
   message: Message;
   firstLetter: string;
@@ -24,7 +23,6 @@ export class NiChatComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.firstLetter = this.activeUser.name.charAt(0);
     this.scrollToBottom(this.dialogMessages);
   }
 
@@ -41,7 +39,8 @@ export class NiChatComponent implements OnInit {
       this.message = {
         date: date.getHours() + ' : ' + ((minutes > 9) ? minutes : '0' + minutes),
         content: messageContent,
-        my: true
+        my: true,
+        avatar: 'assets/content/avatar-4.jpg'
       };
       this.messages.push(this.message);
 

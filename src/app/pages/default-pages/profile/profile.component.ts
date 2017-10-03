@@ -90,6 +90,7 @@ export class PageProfileComponent implements OnInit {
   lng: number = 30.6;
   messages = messages;
   folders = folders;
+  breadcrumb = [{title: 'profile'}];
 
   constructor( private _sharedService: SharedService ) {
     this._sharedService.emitChange(this.pageTitle);

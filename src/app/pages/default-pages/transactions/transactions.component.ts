@@ -40,44 +40,13 @@ const timelineData: any[] = [
 export class PageTransactionsComponent implements OnInit {
   pageTitle: string = 'transactions';
   timelineData: any[] = timelineData;
+  breadcrumb = [{title: 'transactions'}];
   private chart: any;
   activeUser: User = {
     name: 'Amanda Li',
     lastSeen: 'last seen 10 minutes ago',
     avatar: 'assets/content/avatar-4.jpg'
   };
-  messages: Message[] = [
-    {
-      'date': '8 hours ago',
-      'content': `Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.`,
-      'my': false
-    },
-    {
-      'date': '7 hours ago',
-      'content': `Aenean lacinia bibendum nulla sed consectetur.`,
-      'my': true
-    },
-    {
-      'date': '2 hours ago',
-      'content': `Contrary to popular belief,`,
-      'my': false
-    },
-    {
-      'date': '15 minutes ago',
-      'content': `Lorem ipsum dolor sit.`,
-      'my': true
-    },
-    {
-      'date': '14 minutes ago',
-      'content': `Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.`,
-      'my': false
-    },
-    {
-      'date': '12 minutes ago',
-      'content': `Aenean lacinia bibendum nulla sed consectetur.`,
-      'my': true
-    }
-  ];
 
   constructor( private AmCharts: AmChartsService, private _sharedService: SharedService ) {
     this._sharedService.emitChange(this.pageTitle);

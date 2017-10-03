@@ -8,15 +8,15 @@
     <span></span>
   </div>
 
-  <h1 class="page-title">{{ title | translate }}</h1>
+  <h1 class="page-title"></h1>
 
   <div class="nav-items">
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
-      <button md-raised-button color="accent" class="btn-payment">{{'payment' | translate}}</button>
+      <button md-raised-button color="accent" class="btn-payment"><md-icon>payment</md-icon> {{'payment' | translate}}</button>
     </div>
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
-      <button md-raised-button color="accent" class="btn-group" (click)="openCreateGroupDialog()">{{'createNewGroup' | translate}}</button>
+      <button md-raised-button color="accent" class="btn-group" (click)="openCreateGroupDialog()"><md-icon>create_new_folder</md-icon> {{'createNewGroup' | translate}}</button>
     </div>
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
@@ -24,7 +24,7 @@
         <input mdInput [placeholder]="'groupList' | translate" [mdAutocomplete]="auto" [formControl]="groupCtrl">
       </md-input-container>
       <md-autocomplete #auto="mdAutocomplete">
-        <md-option *ngFor="let group of filteredGroup | async" [value]="group">
+        <md-option *ngFor="let group of filteredGroup | async" [value]="group" (click)="goToGroup(group)">
           {{ group }}
         </md-option>
       </md-autocomplete>

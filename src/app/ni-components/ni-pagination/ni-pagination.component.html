@@ -1,0 +1,11 @@
+<div>
+  <button md-icon-button (click)="first()"><md-icon>skip_previous</md-icon></button>
+  <button md-icon-button (click)="prev()"><md-icon>keyboard_arrow_left</md-icon></button>
+  <md-select [(ngModel)]="currentPage">
+    <md-option *ngFor="let p of pages" [value]="p">
+      {{ p }}
+    </md-option>
+  </md-select>
+  <button md-icon-button (click)="next()"><md-icon>keyboard_arrow_right</md-icon></button>
+  <button md-icon-button (click)="last()"><md-icon>skip_next</md-icon></button>
+</div>

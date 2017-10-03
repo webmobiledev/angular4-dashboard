@@ -20,6 +20,7 @@ export class NiTableComponent implements OnInit {
   }
 
   changePage(id) {
+    this.apiService.showSpinner.next(true);
     this.apiService.groupId.next(id);
     this.apiService.isClickedDetails.next(true);
   }

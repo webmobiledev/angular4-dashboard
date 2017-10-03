@@ -10,8 +10,8 @@
       <div class="item-point" [ngStyle]="{ 'border-color': item.pointColor }"></div>
       <div class="item-date" *ngIf="showDate && item.date"><span>{{ item.date }}</span></div>
       <div class="item-content">
-        <h2 class="h6 item-title" *ngIf="item.title">{{ item.title }}</h2>
-        <div class="item-desc" [innerHTML]="item.content"></div>
+        <h2 class="h6 item-title" *ngIf="item.title">{{ item.title | translate }}</h2>
+        <div class="item-desc" [innerHTML]="item.content | translate"></div>
       </div>
     </div>
   </div>

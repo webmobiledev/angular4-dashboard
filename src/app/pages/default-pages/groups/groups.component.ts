@@ -10,7 +10,7 @@ import { ApiService } from '../../../services/api.service';
 })
 export class PageGroupsComponent implements OnInit {
   pageTitle: string = 'groups';
-  breadcrumb = [];
+  breadcrumb = [{title: 'groups'}];
   groups = [];
   groupHeaders = [];
 
@@ -24,6 +24,7 @@ export class PageGroupsComponent implements OnInit {
   eventHeaders = [];
   groupInfo = {};
   showGroupList = true;
+  timelineData: any[] = [];
   
   constructor( private _sharedService: SharedService, private dialog: MdDialog, private apiService: ApiService ) {
     this._sharedService.emitChange(this.pageTitle);
@@ -31,6 +32,7 @@ export class PageGroupsComponent implements OnInit {
 
   ngOnInit() {
     this.showGroupList = true;
+    this.apiService.showSpinner.next(true);
     this.apiService.isClickedDetails.subscribe(data => {
       if (data === true) {
         this.showGroupList = false;
@@ -42,9 +44,9 @@ export class PageGroupsComponent implements OnInit {
     this.apiService.groupCounts.subscribe(res => {
       this.apiService.getGroups().then((res: any) => {
         this.groups = [];
-        this.groupHeaders = ['Group name', 'nb members', 'Creator', 'Actual nb members', 'Amount', 'Currency', 'Creation Date', 'Description', 'Due date', 'Frequency', 'Type', 'PS Type', 'Rate', {type: 'Action'}];
+        this.groupHeaders = ['Group name', 'Creator', 'number of member', 'Amount', 'Currency', 'Creation Date', 'Description', 'Due date', 'Frequency Every x month(s)', 'Type', 'PS Type', 'Rate', {type: 'Action'}];
         res.data.map(d => {
-          this.groups.push([d.name, d.nb_members, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.due_day, d.frequency, d.g_type, d.position_selection_type, d.rate, {type: ['details'], id: d.id}]);
+          this.groups.push([d.name, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.due_day, d.frequency, d.g_type, d.position_selection_type, d.rate, {type: ['details'], id: d.id}]);
         });
       });
     });
@@ -59,6 +61,7 @@ export class PageGroupsComponent implements OnInit {
             this.breadcrumb.push({title: d.name});
           }
         });
+        this.apiService.showSpinner.next(false);
       });
       
       this.apiService.getGroupMembers().then((res: any) => {
@@ -67,6 +70,7 @@ export class PageGroupsComponent implements OnInit {
         res.data.map(d => {
           this.members.push([d.first_name, d.email, d.member_type, d.photo_path, d.position, d.user_position_date, {type: ['remove'], id: d.id}]);
         });
+        this.apiService.showSpinner.next(false);
       });
 
       this.apiService.getGroupObligations().then((res: any) => {
@@ -75,6 +79,7 @@ export class PageGroupsComponent implements OnInit {
         res.data.map(d => {
           this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status, d.type, {type: ['paynow'], id: d.id}]);
         });
+        this.apiService.showSpinner.next(false);
       });
 
       this.apiService.getGroupRequests().then((res: any) => {
@@ -83,6 +88,7 @@ export class PageGroupsComponent implements OnInit {
         res.data.map(d => {
           this.requests.push([d.sender, d.receiver, d.group, d.request_type, d.request_status, d.request_date]);
         });
+        this.apiService.showSpinner.next(false);
       });
 
       this.apiService.getGroupEvents().then((res: any) => {
@@ -91,11 +97,23 @@ export class PageGroupsComponent implements OnInit {
         res.data.map(d => {
           this.events.push([d.event_type, d.initiator, d.group, d.date_event]);
         });
+        this.apiService.showSpinner.next(false);
       });
 
       this.apiService.getGroupInfo().then((res: any) => {
         console.log(res);
         this.groupInfo = res.data[0];
+      });
+    });
+
+    this.apiService.getTimelineData().then((data: any) => {
+      console.log('timeline', data);
+      this.timelineData = [{
+        label: '2017',
+        timeline: []
+      }];
+      data.data.map(d => {
+        this.timelineData[0].timeline.push({date: this.getDuration(d.duration_seconds), content: d.event_type === 'GROUP_CREATED' ? 'A new group has been created' : 'A new request to join group has been created', pointColor: '#FFC6F1'});
       });
     });
   }
@@ -110,6 +128,17 @@ export class PageGroupsComponent implements OnInit {
       } else {
       }
     });
+  }
+
+  getDuration(seconds) {
+    let h = this.format(((seconds / 3600) % 24).toFixed());
+    let m = this.format(((seconds % 3600) / 60).toFixed());
+    let s = this.format((((seconds % 3600) % 60)).toFixed());
+    return h + ':' + m + ':' + s + ' ago';
+  }
+
+  format(d) {
+    return (d < 10) ? '0' + d.toString() : d.toString();
   }
 }
 

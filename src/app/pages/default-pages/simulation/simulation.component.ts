@@ -8,6 +8,7 @@ import { SharedService } from '../../../layouts/shared-service';
 })
 export class PageSimulationComponent implements OnInit {
   pageTitle: string = 'simulation';
+  breadcrumb = [{title: 'simulation'}];
 
   constructor( private _sharedService: SharedService ) {
     this._sharedService.emitChange(this.pageTitle);

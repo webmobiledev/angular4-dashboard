@@ -1,18 +1,22 @@
 <div>
   <div class="table-responsive">
-    <table class="table">
-      <thead class="thead-default">
+    <table class="table table-striped">
+      <thead>
       <tr>
         <th *ngFor="let h of headers">
-          <span *ngIf="!h.type">{{ h }}</span>
-          <span *ngIf="h.type">{{ h.type }}</span>
+          <span *ngIf="!h.type">{{ h | translate }}</span>
+          <span *ngIf="h.type">{{ h.type | translate }}</span>
         </th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let d of data">
         <td *ngFor="let s of d">
-          <span *ngIf="!s.type">{{ s }}</span>
+          <span *ngIf="!s.type && s !== 'PRIVATE' && s !== 'PUBLIC' && s !== 'FIRST_ARRIVED_FIRST_SERVED' && s !== 'RANDOM'">{{ s }}</span>
+          <md-icon *ngIf="s === 'PRIVATE'">person</md-icon>
+          <md-icon *ngIf="s === 'PUBLIC'">people</md-icon>
+          <md-icon *ngIf="s === 'FIRST_ARRIVED_FIRST_SERVED'">arrow_forward</md-icon>
+          <md-icon *ngIf="s === 'RANDOM'">shuffle</md-icon>
           <button md-button color="accent" *ngIf="s.type && (s.type)[0] === 'details'" (click)="changePage(s.id)">details</button>
           <button md-button color="warn" *ngIf="s.type && (s.type)[0] === 'remove'">remove</button>
           <button md-button color="accent" *ngIf="s.type && (s.type)[0] === 'paynow'">pay now</button>

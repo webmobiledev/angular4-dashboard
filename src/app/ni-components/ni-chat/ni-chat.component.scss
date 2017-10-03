@@ -232,3 +232,19 @@ $chat-messages-bg: #fff;
     }
   }
 }
+
+.avatar-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .image-avatar {
+    img {
+      border-radius: 50%;
+    }
+  }
+}
+.my-message {
+  .avatar-div {
+    justify-content: flex-end;
+  }
+}

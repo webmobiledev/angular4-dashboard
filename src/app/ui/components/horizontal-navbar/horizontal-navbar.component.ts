@@ -4,6 +4,7 @@ import { ApiService } from '../../../services/api.service';
 import { LANGUAGES } from '../../../../settings/menu';
 import { MdDialog, MdDialogRef, MdDialogConfig } from '@angular/material';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   moduleId: module.id,
@@ -27,7 +28,7 @@ export class HorizontalNavbarComponent implements OnInit {
   filteredGroup: any;
   groupCtrl: FormControl;
   
-  constructor(private auth: AuthService, private apiService: ApiService, private dialog: MdDialog) {
+  constructor(private auth: AuthService, private apiService: ApiService, private dialog: MdDialog, private router: Router) {
     this.openedSidebar = false;
     this.showOverlay = false;
     this.groupCtrl = new FormControl();
@@ -104,6 +105,18 @@ export class HorizontalNavbarComponent implements OnInit {
       if (result === 'yes') {
       } else {
       }
+    });
+  }
+
+  goToGroup(group) {
+    this.apiService.getGroups().then((data: any) => {
+      data.data.map(d => {
+        if (d.name === group) {
+          this.apiService.groupId.next(d.id);
+          this.apiService.isClickedDetails.next(true);
+          this.router.navigate(['/default-layout/groups']);
+        }
+      });
     });
   }
 }

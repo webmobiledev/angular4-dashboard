@@ -10,7 +10,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 9997;
+  z-index: 1000;
   @media #{$max991} {
     left: 0;
   }
@@ -419,7 +419,7 @@
           0s visibility .2s $animation;
         visibility: hidden;
         width: 100%;
-        z-index: 9997;
+        z-index: 1005;
       }
     }
   }
@@ -438,4 +438,10 @@
 
 .btn-code img {
   background-color: #ffffff !important;
+}
+md-input-container {
+  width: 400px;
+}
+group-create {
+  width: 500px;
 }

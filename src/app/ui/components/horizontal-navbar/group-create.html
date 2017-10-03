@@ -10,7 +10,7 @@
       <div class="col-sm-6">
         <md-select placeholder="Group type" [formControl]="form.controls['grouptype']">
           <md-option *ngFor="let g of groupTypes" [value]="g.id">
-            {{ g.code }}
+            {{ g.code | translate }}
           </md-option>
         </md-select>
       </div>
@@ -82,7 +82,7 @@
       <div class="col-sm-12">
         <md-select placeholder="PS type" [formControl]="form.controls['pstype']">
           <md-option *ngFor="let p of psTypes" [value]="p.id">
-            {{ p.code }}
+            {{ p.code | translate }}
           </md-option>
         </md-select>
       </div>

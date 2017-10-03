@@ -13,7 +13,9 @@ export class PageDashboardComponent {
   pageTitle: string = 'dashboard';
   userRequests: any;
   nextPayment: any;
+  nextPaymentHeader: any;
   timelineData: any[] = [];
+  breadcrumb = [{title: 'dashboard'}];
 
   constructor( private _sharedService: SharedService, private apiService: ApiService ) {
     this._sharedService.emitChange(this.pageTitle);
@@ -25,7 +27,11 @@ export class PageDashboardComponent {
 
     apiService.getNextPayment().then((data: any) => {
       console.log('nextpayment', data);
-      this.nextPayment = data.data;
+      this.nextPayment = [];
+      this.nextPaymentHeader = ['To', 'Amount', 'Date'];
+      data.data.map(d => {
+        this.nextPayment.push([d.to, d.projected_amount_due, d.projected_payment_due_date]);
+      });
     });
 
     apiService.getTimelineData().then((data: any) => {

@@ -19,7 +19,6 @@ horizontal-navbar {
     width: initial !important;
   }
   md-input-container {
-    width: 120px !important;
     span label {
       color: white !important;
     }
@@ -39,5 +38,30 @@ group-create {
 
   .mat-dialog-actions {
     justify-content: space-between;
+  }
+}
+md-dialog-container {
+  padding: 0 !important;
+  width: 500px !important;
+  h2 {
+    background: #e5e6e9 !important;
+    padding: 24px !important;
+    text-align: center !important;
+  }
+  form {
+    padding: 0 24px 24px 24px !important;
+  }
+}
+.mat-tab-label-active {
+  background: #252d47 !important;
+  color: white !important;
+  opacity: .6 !important;
+}
+ni-pagination {
+  md-select {
+    width: 40px;
+    .mat-select-trigger {
+      min-width: 40px !important;
+    }
   }
 }
