@@ -38,6 +38,7 @@ export class PageGroupsComponent implements OnInit {
         this.showGroupList = false;
       } else {
         this.showGroupList = true;
+        this.breadcrumb = [{title: 'groups'}];
       }
     });
 
@@ -52,10 +53,13 @@ export class PageGroupsComponent implements OnInit {
     });
 
     this.apiService.groupId.subscribe(data => {
+      if (this.showGroupList) {
+        this.breadcrumb = [{title: 'groups'}];
+      }
 
       this.apiService.getGroups().then((res: any) => {
         res.data.map(d => {
-          if (d.id === data) {
+          if (d.id === data && !this.showGroupList) {
             this.breadcrumb = [];
             this.breadcrumb.push({title: this.pageTitle});
             this.breadcrumb.push({title: d.name});

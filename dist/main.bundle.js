@@ -2491,6 +2491,7 @@ var PageGroupsComponent = (function () {
             }
             else {
                 _this.showGroupList = true;
+                _this.breadcrumb = [{ title: 'groups' }];
             }
         });
         this.apiService.groupCounts.subscribe(function (res) {
@@ -2503,9 +2504,12 @@ var PageGroupsComponent = (function () {
             });
         });
         this.apiService.groupId.subscribe(function (data) {
+            if (_this.showGroupList) {
+                _this.breadcrumb = [{ title: 'groups' }];
+            }
             _this.apiService.getGroups().then(function (res) {
                 res.data.map(function (d) {
-                    if (d.id === data) {
+                    if (d.id === data && !_this.showGroupList) {
                         _this.breadcrumb = [];
                         _this.breadcrumb.push({ title: _this.pageTitle });
                         _this.breadcrumb.push({ title: d.name });
@@ -4537,7 +4541,7 @@ var FooterComponent = (function () {
 /***/ "../../../../../src/app/ui/components/horizontal-navbar/group-create.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 md-dialog-title>Group Creation</h2>\n<form [formGroup]=\"form\">\n  <div md-dialog-content *ngIf=\"step === 'first'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"name\" placeholder=\"Name\" type=\"text\" value=\"\" [formControl]=\"form.controls['name']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"Group type\" [formControl]=\"form.controls['grouptype']\">\n          <md-option *ngFor=\"let g of groupTypes\" [value]=\"g.id\">\n            {{ g.code | translate }}\n          </md-option>\n        </md-select>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"frequency\" placeholder=\"Every ? month\" type=\"number\" value=\"\" [formControl]=\"form.controls['frequency']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"Currency\" [formControl]=\"form.controls['currency']\">\n          <md-option *ngFor=\"let c of currencies\" [value]=\"c.id\">\n            {{ c.code }}\n          </md-option>\n        </md-select>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-12\">\n        <md-input-container>\n          <textarea mdInput placeholder=\"Description\" rows=\"3\" [formControl]=\"form.controls['description']\"></textarea>\n        </md-input-container>\n      </div>\n    </div>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'first'\">\n    <button md-raised-button (click)=\"dialogRef.close('no')\">Cancel</button>\n    <button md-raised-button color=\"accent\" layout-align=\"end\" (click)=\"step = 'second'\">Next >></button>\n  </div>\n  <div md-dialog-content *ngIf=\"step === 'second'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"amount\" placeholder=\"Amount\" type=\"number\" value=\"\" [formControl]=\"form.controls['amount']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"rate\" placeholder=\"Rate\" type=\"number\" value=\"\" [formControl]=\"form.controls['rate']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"duedate\" placeholder=\"Due date\" type=\"number\" value=\"\" [formControl]=\"form.controls['duedate']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"preppenal\" placeholder=\"Prep penal\" type=\"number\" value=\"\" [formControl]=\"form.controls['preppenal']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"nbdpenal\" placeholder=\"Nb d penal\" type=\"number\" value=\"\" [formControl]=\"form.controls['nbdpenal']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"penalty\" placeholder=\"Penalty\" type=\"number\" value=\"\" [formControl]=\"form.controls['penalty']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-12\">\n        <md-select placeholder=\"PS type\" [formControl]=\"form.controls['pstype']\">\n          <md-option *ngFor=\"let p of psTypes\" [value]=\"p.id\">\n            {{ p.code | translate }}\n          </md-option>\n        </md-select>\n      </div>\n    </div>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'second'\">\n    <button md-raised-button (click)=\"step = 'first'\" color=\"accent\" layout-align=\"end\"><< Previous</button>\n    <button md-raised-button (click)=\"dialogRef.close('no')\">Cancel</button>\n    <button md-raised-button color=\"accent\" layout-align=\"end\" type=\"submit\" (click)=\"onSubmit()\" [disabled]=\"!form.valid\">Finish</button>\n  </div>\n</form>"
+module.exports = "<h2 md-dialog-title>Group Creation</h2>\n<form [formGroup]=\"form\">\n  <div md-dialog-content *ngIf=\"step === 'first'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"name\" placeholder=\"Name\" type=\"text\" value=\"\" [formControl]=\"form.controls['name']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"Group type\" [formControl]=\"form.controls['grouptype']\">\n          <md-option *ngFor=\"let g of groupTypes\" [value]=\"g.id\">\n            {{ g.code | translate }}\n          </md-option>\n        </md-select>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"frequency\" placeholder=\"Every ? month\" type=\"number\" value=\"\" [formControl]=\"form.controls['frequency']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"Currency\" [formControl]=\"form.controls['currency']\">\n          <md-option *ngFor=\"let c of currencies\" [value]=\"c.id\">\n            {{ c.code }}\n          </md-option>\n        </md-select>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-12\">\n        <md-input-container>\n          <textarea mdInput placeholder=\"Description\" rows=\"3\" [formControl]=\"form.controls['description']\"></textarea>\n        </md-input-container>\n      </div>\n    </div>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'first'\">\n    <button md-raised-button (click)=\"dialogRef.close('no')\" type=\"button\">Cancel</button>\n    <button md-raised-button color=\"accent\" layout-align=\"end\" (click)=\"step = 'second'\">Next >></button>\n  </div>\n  <div md-dialog-content *ngIf=\"step === 'second'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"amount\" placeholder=\"Amount\" type=\"number\" value=\"\" [formControl]=\"form.controls['amount']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"rate\" placeholder=\"Rate\" type=\"number\" value=\"\" [formControl]=\"form.controls['rate']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"duedate\" placeholder=\"Due date\" type=\"number\" value=\"\" [formControl]=\"form.controls['duedate']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"preppenal\" placeholder=\"Prep penal\" type=\"number\" value=\"\" [formControl]=\"form.controls['preppenal']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"nbdpenal\" placeholder=\"Nb d penal\" type=\"number\" value=\"\" [formControl]=\"form.controls['nbdpenal']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"penalty\" placeholder=\"Penalty\" type=\"number\" value=\"\" [formControl]=\"form.controls['penalty']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-12\">\n        <md-select placeholder=\"PS type\" [formControl]=\"form.controls['pstype']\">\n          <md-option *ngFor=\"let p of psTypes\" [value]=\"p.id\">\n            {{ p.code | translate }}\n          </md-option>\n        </md-select>\n      </div>\n    </div>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'second'\">\n    <button md-raised-button (click)=\"step = 'first'\" color=\"accent\" layout-align=\"end\"><< Previous</button>\n    <button md-raised-button (click)=\"dialogRef.close('no')\" type=\"button\">Cancel</button>\n    <button md-raised-button color=\"accent\" layout-align=\"end\" (click)=\"onSubmit()\" [disabled]=\"!form.valid\" type=\"button\">Finish</button>\n  </div>\n</form>"
 
 /***/ }),
 
@@ -4666,10 +4670,11 @@ var HorizontalNavbarComponent = (function () {
     HorizontalNavbarComponent.prototype.openCreateGroupDialog = function () {
         var dialogRef = this.dialog.open(DialogGroupCreateComponent);
         dialogRef.afterClosed().subscribe(function (result) {
-            console.log(result);
             if (result === 'yes') {
+                console.log("safasdf");
             }
             else {
+                console.log("safasdfsdfsdaf");
             }
         });
     };
@@ -4740,15 +4745,12 @@ var DialogGroupCreateComponent = (function () {
         });
         this.apiService.getListData('Currency').then(function (res) {
             _this.currencies = res.data;
-            console.log(res);
         });
         this.apiService.getListData('GroupType').then(function (res) {
             _this.groupTypes = res.data;
-            console.log(res);
         });
         this.apiService.getListData('PositionSelectionType').then(function (res) {
             _this.psTypes = res.data;
-            console.log(res);
         });
         this.apiService.groupCounts.subscribe(function (res) {
             _this.groupCounts = res;
@@ -4758,7 +4760,6 @@ var DialogGroupCreateComponent = (function () {
         var _this = this;
         this.dialogRef.close('yes');
         this.apiService.addGroup(this.form.value).then(function (res) {
-            console.log(res);
             _this.apiService.groupCounts.next(_this.groupCounts + 1);
         }).catch(function (err) {
             console.log(err);

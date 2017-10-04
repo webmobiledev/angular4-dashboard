@@ -101,9 +101,10 @@ export class HorizontalNavbarComponent implements OnInit {
   openCreateGroupDialog() {
     let dialogRef = this.dialog.open(DialogGroupCreateComponent);
     dialogRef.afterClosed().subscribe(result => {
-      console.log(result)
       if (result === 'yes') {
+        console.log("safasdf");
       } else {
+        console.log("safasdfsdfsdaf");
       }
     });
   }
@@ -150,17 +151,14 @@ export class DialogGroupCreateComponent {
 
     this.apiService.getListData('Currency').then((res: any) => {
       this.currencies = res.data;
-      console.log(res);
     });
 
     this.apiService.getListData('GroupType').then((res: any) => {
       this.groupTypes = res.data;
-      console.log(res);
     });
 
     this.apiService.getListData('PositionSelectionType').then((res: any) => {
       this.psTypes = res.data;
-      console.log(res);
     });
 
     this.apiService.groupCounts.subscribe(res => {
@@ -171,7 +169,6 @@ export class DialogGroupCreateComponent {
   onSubmit() {
     this.dialogRef.close('yes');
     this.apiService.addGroup(this.form.value).then(res => {
-      console.log(res);
       this.apiService.groupCounts.next(this.groupCounts + 1);
     }).catch(err => {
       console.log(err);

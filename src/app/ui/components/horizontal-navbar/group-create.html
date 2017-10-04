@@ -38,7 +38,7 @@
     </div>
   </div>
   <div md-dialog-actions *ngIf="step === 'first'">
-    <button md-raised-button (click)="dialogRef.close('no')">Cancel</button>
+    <button md-raised-button (click)="dialogRef.close('no')" type="button">Cancel</button>
     <button md-raised-button color="accent" layout-align="end" (click)="step = 'second'">Next >></button>
   </div>
   <div md-dialog-content *ngIf="step === 'second'">
@@ -90,7 +90,7 @@
   </div>
   <div md-dialog-actions *ngIf="step === 'second'">
     <button md-raised-button (click)="step = 'first'" color="accent" layout-align="end"><< Previous</button>
-    <button md-raised-button (click)="dialogRef.close('no')">Cancel</button>
-    <button md-raised-button color="accent" layout-align="end" type="submit" (click)="onSubmit()" [disabled]="!form.valid">Finish</button>
+    <button md-raised-button (click)="dialogRef.close('no')" type="button">Cancel</button>
+    <button md-raised-button color="accent" layout-align="end" (click)="onSubmit()" [disabled]="!form.valid" type="button">Finish</button>
   </div>
 </form>
