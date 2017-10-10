@@ -26,7 +26,7 @@
   "alreadyHaveAccount": "¿Ya tienes una cuenta?",
   "dashboard": "Tablero",
   "groups": "Grupos",
-  "transactions": "Actas",
+  "transaction": "Actas",
   "requests": "Peticiones",
   "profile": "Perfil",
   "simulation": "Simulación",
@@ -81,5 +81,8 @@
   "PUBLIC": "PÚBLICO",
   "RANDOM": "ALEATORIO",
   "FIRST_ARRIVED_FIRST_SERVED": "PRIMERO_LLEGADO_PRIMERO_SERVIDO",
-  "chatroom": "Sala de chat"
+  "chatroom": "Sala de chat",
+  "Join the group": "Únete al grupo",
+  "Pending": "Pendiente",
+  "Approved": "Aprobado"
 }

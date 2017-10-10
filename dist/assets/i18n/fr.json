@@ -26,7 +26,7 @@
   "alreadyHaveAccount": "Vous avez déjà un compte?",
   "dashboard": "Tableau de bord",
   "groups": "Groupes",
-  "transactions": "Transactions",
+  "transaction": "Transactions",
   "requests": "Demandes",
   "profile": "Profil",
   "simulation": "Simulation",
@@ -81,5 +81,8 @@
   "PUBLIC": "PUBLIC",
   "RANDOM": "AU HASARD",
   "FIRST_ARRIVED_FIRST_SERVED": "PREMIER_ARRIVÉE_PREMIER_SERVI",
-  "chatroom": "Tchat"
+  "chatroom": "Tchat",
+  "Join the group": "Rejoins le groupe",
+  "Pending": "en attendant",
+  "Approved": "Approuvé"
 }

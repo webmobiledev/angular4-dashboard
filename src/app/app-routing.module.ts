@@ -15,6 +15,7 @@ import { PageAboutusComponent } from './pages/default-pages/aboutus/aboutus.comp
 import { PageProfileComponent } from './pages/default-pages/profile/profile.component';
 import { PageSimulationComponent } from './pages/default-pages/simulation/simulation.component';
 import { ChatroomComponent } from './pages/default-pages/chatroom/chatroom.component';
+import { PageObligationComponent } from './pages/default-pages/obligation/obligation.component';
 
 import { PageSigninComponent } from './pages/extra-pages/signin/signin.component';
 import { PageSignupComponent } from './pages/extra-pages/signup/signup.component';
@@ -36,6 +37,7 @@ const defaultRoutes: Routes = [
   { path: 'simulation', component: PageSimulationComponent },
   { path: 'aboutus', component: PageAboutusComponent },
   { path: 'chatroom', component: ChatroomComponent },
+  { path: 'obligation', component: PageObligationComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

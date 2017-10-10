@@ -14,8 +14,7 @@ export class NiPaginationComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.total);
-    for (let i = 1 ; i <= parseInt(this.total) ; i ++) {
+    for (let i = 1 ; i <= Math.floor(this.total) ; i ++) {
       this.pages.push(i);
     }
   }
@@ -29,7 +28,7 @@ export class NiPaginationComponent implements OnInit {
   }
 
   next() {
-    if (this.currentPage < this.total) {
+    if (this.currentPage < Math.floor(this.total)) {
       this.currentPage += 1;
     }
   }

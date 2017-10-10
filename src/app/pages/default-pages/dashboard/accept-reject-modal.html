@@ -1,0 +1,36 @@
+<div *ngIf="type === 'accept' && requestType === 'REQUEST_TO_JOIN_GROUP' && groupRotationType === 'FIRST_ARRIVED_FIRST_SERVED'">
+  <div md-dialog-content>
+    <md-input-container>
+      <input mdInput placeholder="Position" value="" [(ngModel)]="position" type="number">
+    </md-input-container>
+    <md-select placeholder="Selected Positions">
+      <md-option *ngFor="let p of positions" [value]="p.code">{{p.value}}</md-option>
+    </md-select>
+    <div md-dialog-actions>
+      <button md-raised-button (click)="dialogRef.close('no')">CANCEL</button>
+      <button md-raised-button (click)="validate('accept')" color="accent">Validate</button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="type === 'accept' && requestType === 'REQUEST_TO_JOIN_GROUP' && groupRotationType !== 'FIRST_ARRIVED_FIRST_SERVED'">
+  <div md-dialog-content>
+    Do you really want to join the group ?
+    <div md-dialog-actions>
+      <button md-raised-button (click)="dialogRef.close('no')">CANCEL</button>
+      <button md-raised-button (click)="validate('accept')" color="accent">Validate</button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="type === 'reject'">
+  <div md-dialog-content>
+    <md-input-container>
+      <input mdInput placeholder="Justification" value="" [(ngModel)]="comment" type="text">
+    </md-input-container>
+    <div md-dialog-actions>
+      <button md-raised-button (click)="dialogRef.close('no')">CANCEL</button>
+      <button md-raised-button (click)="validate('reject')" color="accent">Validate</button>
+    </div>
+  </div>
+</div>

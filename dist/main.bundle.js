@@ -33,12 +33,13 @@ webpackEmptyAsyncContext.id = "../../../../../src lazy recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_default_pages_profile_profile_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/profile/profile.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_default_pages_simulation_simulation_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/simulation/simulation.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_default_pages_chatroom_chatroom_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/chatroom/chatroom.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_extra_pages_signin_signin_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/signin/signin.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_extra_pages_signup_signup_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/signup/signup.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_extra_pages_forgot_forgot_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/forgot/forgot.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_extra_pages_confirm_confirm_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/confirm/confirm.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_extra_pages_page_404_page_404_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-404/page-404.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_extra_pages_page_500_page_500_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-500/page-500.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_default_pages_obligation_obligation_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/obligation/obligation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_extra_pages_signin_signin_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/signin/signin.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_extra_pages_signup_signup_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/signup/signup.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_extra_pages_forgot_forgot_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/forgot/forgot.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_extra_pages_confirm_confirm_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/confirm/confirm.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_extra_pages_page_404_page_404_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-404/page-404.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_extra_pages_page_500_page_500_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-500/page-500.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -65,25 +66,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var groupsRoutes = [
-    { path: '**', component: __WEBPACK_IMPORTED_MODULE_6__pages_default_pages_groups_groups_component__["b" /* PageGroupsComponent */] },
+    { path: '**', component: __WEBPACK_IMPORTED_MODULE_6__pages_default_pages_groups_groups_component__["c" /* PageGroupsComponent */] },
 ];
 var defaultRoutes = [
-    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_5__pages_default_pages_dashboard_dashboard_component__["a" /* PageDashboardComponent */] },
-    { path: 'groups', component: __WEBPACK_IMPORTED_MODULE_6__pages_default_pages_groups_groups_component__["b" /* PageGroupsComponent */] },
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_5__pages_default_pages_dashboard_dashboard_component__["b" /* PageDashboardComponent */] },
+    { path: 'groups', component: __WEBPACK_IMPORTED_MODULE_6__pages_default_pages_groups_groups_component__["c" /* PageGroupsComponent */] },
     { path: 'transactions', component: __WEBPACK_IMPORTED_MODULE_7__pages_default_pages_transactions_transactions_component__["a" /* PageTransactionsComponent */] },
     { path: 'requests', component: __WEBPACK_IMPORTED_MODULE_8__pages_default_pages_requests_requests_component__["a" /* PageRequestsComponent */] },
     { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_11__pages_default_pages_profile_profile_component__["a" /* PageProfileComponent */] },
     { path: 'simulation', component: __WEBPACK_IMPORTED_MODULE_12__pages_default_pages_simulation_simulation_component__["a" /* PageSimulationComponent */] },
     { path: 'aboutus', component: __WEBPACK_IMPORTED_MODULE_10__pages_default_pages_aboutus_aboutus_component__["a" /* PageAboutusComponent */] },
     { path: 'chatroom', component: __WEBPACK_IMPORTED_MODULE_13__pages_default_pages_chatroom_chatroom_component__["a" /* ChatroomComponent */] },
+    { path: 'obligation', component: __WEBPACK_IMPORTED_MODULE_14__pages_default_pages_obligation_obligation_component__["a" /* PageObligationComponent */] },
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_9__pages_default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */] },
 ];
 var extraRoutes = [
-    { path: 'sign-in', component: __WEBPACK_IMPORTED_MODULE_14__pages_extra_pages_signin_signin_component__["a" /* PageSigninComponent */] },
+    { path: 'sign-in', component: __WEBPACK_IMPORTED_MODULE_15__pages_extra_pages_signin_signin_component__["a" /* PageSigninComponent */] },
     {
         path: 'sign-up',
-        component: __WEBPACK_IMPORTED_MODULE_15__pages_extra_pages_signup_signup_component__["b" /* PageSignupComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_16__pages_extra_pages_signup_signup_component__["b" /* PageSignupComponent */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
         data: {
             authGuardRedirect: 'signup'
@@ -91,7 +94,7 @@ var extraRoutes = [
     },
     {
         path: 'forgot',
-        component: __WEBPACK_IMPORTED_MODULE_16__pages_extra_pages_forgot_forgot_component__["a" /* PageForgotComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_17__pages_extra_pages_forgot_forgot_component__["a" /* PageForgotComponent */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
         data: {
             authGuardRedirect: 'forgot'
@@ -99,7 +102,7 @@ var extraRoutes = [
     },
     {
         path: 'confirm',
-        component: __WEBPACK_IMPORTED_MODULE_17__pages_extra_pages_confirm_confirm_component__["a" /* PageConfirmComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_18__pages_extra_pages_confirm_confirm_component__["a" /* PageConfirmComponent */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
         data: {
             authGuardRedirect: 'confirm'
@@ -107,7 +110,7 @@ var extraRoutes = [
     },
     {
         path: 'page-404',
-        component: __WEBPACK_IMPORTED_MODULE_18__pages_extra_pages_page_404_page_404_component__["a" /* Page404Component */],
+        component: __WEBPACK_IMPORTED_MODULE_19__pages_extra_pages_page_404_page_404_component__["a" /* Page404Component */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
         data: {
             authGuardRedirect: 'page404'
@@ -115,7 +118,7 @@ var extraRoutes = [
     },
     {
         path: 'page-500',
-        component: __WEBPACK_IMPORTED_MODULE_19__pages_extra_pages_page_500_page_500_component__["a" /* Page500Component */],
+        component: __WEBPACK_IMPORTED_MODULE_20__pages_extra_pages_page_500_page_500_component__["a" /* Page500Component */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
         data: {
             authGuardRedirect: 'page500'
@@ -1905,8 +1908,7 @@ var NiPaginationComponent = (function () {
         this.currentPage = 1;
     }
     NiPaginationComponent.prototype.ngOnInit = function () {
-        console.log(this.total);
-        for (var i = 1; i <= parseInt(this.total); i++) {
+        for (var i = 1; i <= Math.floor(this.total); i++) {
             this.pages.push(i);
         }
     };
@@ -1917,7 +1919,7 @@ var NiPaginationComponent = (function () {
         this.currentPage = this.pages.length;
     };
     NiPaginationComponent.prototype.next = function () {
-        if (this.currentPage < this.total) {
+        if (this.currentPage < Math.floor(this.total)) {
             this.currentPage += 1;
         }
     };
@@ -1948,7 +1950,7 @@ var NiPaginationComponent = (function () {
 /***/ "../../../../../src/app/ni-components/ni-table/ni-table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <div class=\"table-responsive\">\n    <table class=\"table table-striped\">\n      <thead>\n      <tr>\n        <th *ngFor=\"let h of headers\">\n          <span *ngIf=\"!h.type\">{{ h | translate }}</span>\n          <span *ngIf=\"h.type\">{{ h.type | translate }}</span>\n        </th>\n      </tr>\n      </thead>\n      <tbody>\n      <tr *ngFor=\"let d of data\">\n        <td *ngFor=\"let s of d\">\n          <span *ngIf=\"!s.type && s !== 'PRIVATE' && s !== 'PUBLIC' && s !== 'FIRST_ARRIVED_FIRST_SERVED' && s !== 'RANDOM'\">{{ s }}</span>\n          <md-icon *ngIf=\"s === 'PRIVATE'\">person</md-icon>\n          <md-icon *ngIf=\"s === 'PUBLIC'\">people</md-icon>\n          <md-icon *ngIf=\"s === 'FIRST_ARRIVED_FIRST_SERVED'\">arrow_forward</md-icon>\n          <md-icon *ngIf=\"s === 'RANDOM'\">shuffle</md-icon>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'details'\" (click)=\"changePage(s.id)\">details</button>\n          <button md-button color=\"warn\" *ngIf=\"s.type && (s.type)[0] === 'remove'\">remove</button>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'paynow'\">pay now</button>\n        </td>\n      </tr>\n      </tbody>\n    </table>\n  </div>\n</div>"
+module.exports = "<div>\n  <div class=\"table-responsive\">\n    <table class=\"table table-striped\">\n      <thead>\n      <tr>\n        <th *ngFor=\"let h of headers\">\n          <span *ngIf=\"!h.type\">{{ h | translate }}</span>\n          <span *ngIf=\"h.type\">{{ h.type | translate }}</span>\n        </th>\n      </tr>\n      </thead>\n      <tbody>\n      <tr *ngFor=\"let d of data\">\n        <td *ngFor=\"let s of d\">\n          <span *ngIf=\"!s.type && s !== 'PRIVATE' && s !== 'PUBLIC' && s !== 'FIRST_ARRIVED_FIRST_SERVED' && s !== 'RANDOM' && s !== 'REQUEST_TO_JOIN_GROUP' && s !== 'PENDING' && s !== 'APPROVED'\">{{ s }}</span>\n          <span *ngIf=\"s === 'REQUEST_TO_JOIN_GROUP'\">{{'Join the group' | translate}}</span>\n          <span *ngIf=\"s === 'PENDING'\">{{'Pending' | translate}}</span>\n          <span *ngIf=\"s === 'APPROVED'\">{{'Approved' | translate}}</span>\n          <md-icon *ngIf=\"s === 'PRIVATE'\">person</md-icon>\n          <md-icon *ngIf=\"s === 'PUBLIC'\">people</md-icon>\n          <md-icon *ngIf=\"s === 'FIRST_ARRIVED_FIRST_SERVED'\">arrow_forward</md-icon>\n          <md-icon *ngIf=\"s === 'RANDOM'\">shuffle</md-icon>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'details'\" (click)=\"changePage(s.id)\">details</button>\n          <button md-button color=\"warn\" *ngIf=\"s.type && (s.type)[0] === 'remove'\">remove</button>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'paynow'\">pay now</button>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'Accept'\" (click)=\"showDialog('accept', s.id, s.requestType, s.rotationType)\">Accept</button>\n          <button md-button color=\"warn\" *ngIf=\"s.type && (s.type)[1] === 'Reject'\" (click)=\"showDialog('reject', s.id, s.requestType, s.rotationType)\">Reject</button>\n        </td>\n      </tr>\n      </tbody>\n    </table>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1977,6 +1979,8 @@ module.exports = module.exports.toString();
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NiTableComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_default_pages_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/dashboard/dashboard.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1988,9 +1992,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
 var NiTableComponent = (function () {
-    function NiTableComponent(apiService) {
+    function NiTableComponent(apiService, dialog) {
         this.apiService = apiService;
+        this.dialog = dialog;
         this.headers = [];
         this.data = [];
     }
@@ -2000,6 +2007,22 @@ var NiTableComponent = (function () {
         this.apiService.showSpinner.next(true);
         this.apiService.groupId.next(id);
         this.apiService.isClickedDetails.next(true);
+    };
+    NiTableComponent.prototype.showDialog = function (type, id, requestType, rotationType) {
+        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_3__pages_default_pages_dashboard_dashboard_component__["a" /* DialogAcceptAndRejectComponent */]);
+        this.apiService.groupId.subscribe(function (res) {
+            dialogRef.componentInstance.groupId = res;
+        });
+        dialogRef.componentInstance.id = id;
+        dialogRef.componentInstance.type = type;
+        dialogRef.componentInstance.requestType = requestType;
+        dialogRef.componentInstance.groupRotationType = rotationType;
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result === 'yes') {
+            }
+            else {
+            }
+        });
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
@@ -2018,10 +2041,10 @@ var NiTableComponent = (function () {
                 '[class.ni-table]': 'true'
             }
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["i" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["i" /* MdDialog */]) === "function" && _b || Object])
     ], NiTableComponent);
     return NiTableComponent;
-    var _a;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=ni-table.component.js.map
@@ -2277,10 +2300,17 @@ var ChatroomComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/pages/default-pages/dashboard/accept-reject-modal.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"type === 'accept' && requestType === 'REQUEST_TO_JOIN_GROUP' && groupRotationType === 'FIRST_ARRIVED_FIRST_SERVED'\">\n  <div md-dialog-content>\n    <md-input-container>\n      <input mdInput placeholder=\"Position\" value=\"\" [(ngModel)]=\"position\" type=\"number\">\n    </md-input-container>\n    <md-select placeholder=\"Selected Positions\">\n      <md-option *ngFor=\"let p of positions\" [value]=\"p.code\">{{p.value}}</md-option>\n    </md-select>\n    <div md-dialog-actions>\n      <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n      <button md-raised-button (click)=\"validate('accept')\" color=\"accent\">Validate</button>\n    </div>\n  </div>\n</div>\n\n<div *ngIf=\"type === 'accept' && requestType === 'REQUEST_TO_JOIN_GROUP' && groupRotationType !== 'FIRST_ARRIVED_FIRST_SERVED'\">\n  <div md-dialog-content>\n    Do you really want to join the group ?\n    <div md-dialog-actions>\n      <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n      <button md-raised-button (click)=\"validate('accept')\" color=\"accent\">Validate</button>\n    </div>\n  </div>\n</div>\n\n<div *ngIf=\"type === 'reject'\">\n  <div md-dialog-content>\n    <md-input-container>\n      <input mdInput placeholder=\"Justification\" value=\"\" [(ngModel)]=\"comment\" type=\"text\">\n    </md-input-container>\n    <div md-dialog-actions>\n      <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n      <button md-raised-button (click)=\"validate('reject')\" color=\"accent\">Validate</button>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
 /***/ "../../../../../src/app/pages/default-pages/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n<div class=\"row\">\r\n    <div class=\"col-lg-7\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'request' | translate\">\r\n            <div class=\"table-responsive\">\r\n              <table class=\"table\">\r\n                <tbody *ngFor=\"let user of userRequests\">\r\n                  <tr>\r\n                    <td>{{user.request_date}} : {{user.sender}}<span *ngIf=\"user.request_type === 'REQUEST_TO_JOIN_GROUP'\"> {{'would_you_to_join_the_group' | translate}} </span>{{user.group}} \r\n                      <button md-raised-button color=\"accent\">Accept</button>\r\n                      <button md-raised-button color=\"warn\">Reject</button>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n              </table>\r\n            </div>\r\n            <ni-pagination [total]=\"'5'\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'nextpayment' | translate\">\r\n            <ni-table [headers]=\"nextPaymentHeader\" [data]=\"nextPayment\"></ni-table>\r\n            <ni-pagination [total]=\"'5'\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-5\">\r\n      <ni-card [title]=\"'timeline' | translate\">\r\n        <ni-h-timeline [showYears]=\"true\" [showDate]=\"true\" [align]=\"'between'\" [data]=\"timelineData\"></ni-h-timeline>\r\n      </ni-card>\r\n    </div>\r\n</div>"
+module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n<div class=\"row\">\r\n    <div class=\"col-lg-7\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'request' | translate\">\r\n            <div class=\"table-responsive\">\r\n              <table class=\"table\">\r\n                <tbody *ngFor=\"let user of userRequests\">\r\n                  <tr>\r\n                    <td>{{user.request_date}} : {{user.sender}}<span *ngIf=\"user.request_type === 'REQUEST_TO_JOIN_GROUP'\"> {{'would_you_to_join_the_group' | translate}} </span>{{user.group}} \r\n                      <button md-raised-button color=\"accent\" class=\"btn-action\" (click)=\"showDialog('accept', user)\">Accept</button>\r\n                      <button md-raised-button color=\"warn\" class=\"btn-action\" (click)=\"showDialog('reject', user)\">Reject</button>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n              </table>\r\n            </div>\r\n            <ni-pagination [total]=\"userPages\" *ngIf=\"userPages > 0\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'nextpayment' | translate\">\r\n            <ni-table [headers]=\"nextPaymentHeader\" [data]=\"nextPayment\"></ni-table>\r\n            <ni-pagination [total]=\"nextPages\" *ngIf=\"nextPages > 0\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-5\">\r\n      <ni-card [title]=\"'timeline' | translate\">\r\n        <ni-h-timeline [showYears]=\"true\" [showDate]=\"true\" [align]=\"'between'\" [data]=\"timelineData\"></ni-h-timeline>\r\n      </ni-card>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -2292,7 +2322,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".chart-container {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  height: 400px;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  width: 100%; }\n  @media (max-width: 767px) {\n    .chart-container {\n      height: 300px; } }\n  .chart-container canvas {\n    margin: 0 auto;\n    max-height: 100%;\n    width: auto !important; }\n\n:host /deep/ .amcharts-graph-g2 .amcharts-graph-stroke {\n  stroke-dasharray: 3px 3px;\n  stroke-linejoin: round;\n  stroke-linecap: round;\n  -webkit-animation: am-moving-dashes 1s linear infinite;\n          animation: am-moving-dashes 1s linear infinite; }\n\n@-webkit-keyframes am-moving-dashes {\n  100% {\n    stroke-dashoffset: -31px; } }\n\n@keyframes am-moving-dashes {\n  100% {\n    stroke-dashoffset: -31px; } }\n\n:host /deep/ .lastBullet {\n  -webkit-animation: am-pulsating 1s ease-out infinite;\n          animation: am-pulsating 1s ease-out infinite; }\n\n@-webkit-keyframes am-pulsating {\n  0% {\n    stroke-opacity: 1;\n    stroke-width: 0px; }\n  100% {\n    stroke-opacity: 0;\n    stroke-width: 50px; } }\n\n@keyframes am-pulsating {\n  0% {\n    stroke-opacity: 1;\n    stroke-width: 0px; }\n  100% {\n    stroke-opacity: 0;\n    stroke-width: 50px; } }\n\n:host /deep/ .amcharts-graph-column-front {\n  transition: all .3s .3s ease-out; }\n\n:host /deep/ .amcharts-graph-column-front:hover {\n  fill: #496375;\n  stroke: #496375;\n  transition: all .3s ease-out; }\n\n:host /deep/ .amcharts-graph-g3 {\n  stroke-linejoin: round;\n  stroke-linecap: round;\n  stroke-dasharray: 500%;\n  stroke-dasharray: 0;\n  stroke-dashoffset: 0;\n  -webkit-animation: am-draw 40s;\n          animation: am-draw 40s; }\n\n@-webkit-keyframes am-draw {\n  0% {\n    stroke-dashoffset: 500%; }\n  100% {\n    stroke-dashoffset: 0%; } }\n\n@keyframes am-draw {\n  0% {\n    stroke-dashoffset: 500%; }\n  100% {\n    stroke-dashoffset: 0%; } }\n", ""]);
+exports.push([module.i, ".chart-container {\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  height: 400px;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  width: 100%; }\n  @media (max-width: 767px) {\n    .chart-container {\n      height: 300px; } }\n  .chart-container canvas {\n    margin: 0 auto;\n    max-height: 100%;\n    width: auto !important; }\n\n:host /deep/ .amcharts-graph-g2 .amcharts-graph-stroke {\n  stroke-dasharray: 3px 3px;\n  stroke-linejoin: round;\n  stroke-linecap: round;\n  -webkit-animation: am-moving-dashes 1s linear infinite;\n          animation: am-moving-dashes 1s linear infinite; }\n\n@-webkit-keyframes am-moving-dashes {\n  100% {\n    stroke-dashoffset: -31px; } }\n\n@keyframes am-moving-dashes {\n  100% {\n    stroke-dashoffset: -31px; } }\n\n:host /deep/ .lastBullet {\n  -webkit-animation: am-pulsating 1s ease-out infinite;\n          animation: am-pulsating 1s ease-out infinite; }\n\n@-webkit-keyframes am-pulsating {\n  0% {\n    stroke-opacity: 1;\n    stroke-width: 0px; }\n  100% {\n    stroke-opacity: 0;\n    stroke-width: 50px; } }\n\n@keyframes am-pulsating {\n  0% {\n    stroke-opacity: 1;\n    stroke-width: 0px; }\n  100% {\n    stroke-opacity: 0;\n    stroke-width: 50px; } }\n\n:host /deep/ .amcharts-graph-column-front {\n  transition: all .3s .3s ease-out; }\n\n:host /deep/ .amcharts-graph-column-front:hover {\n  fill: #496375;\n  stroke: #496375;\n  transition: all .3s ease-out; }\n\n:host /deep/ .amcharts-graph-g3 {\n  stroke-linejoin: round;\n  stroke-linecap: round;\n  stroke-dasharray: 500%;\n  stroke-dasharray: 0;\n  stroke-dashoffset: 0;\n  -webkit-animation: am-draw 40s;\n          animation: am-draw 40s; }\n\n@-webkit-keyframes am-draw {\n  0% {\n    stroke-dashoffset: 500%; }\n  100% {\n    stroke-dashoffset: 0%; } }\n\n@keyframes am-draw {\n  0% {\n    stroke-dashoffset: 500%; }\n  100% {\n    stroke-dashoffset: 0%; } }\n\n:host /deep/ table .btn-action {\n  line-height: 25px; }\n", ""]);
 
 // exports
 
@@ -2306,8 +2336,8 @@ module.exports = module.exports.toString();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageDashboardComponent; });
-/* unused harmony export DialogResultComponent */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PageDashboardComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogAcceptAndRejectComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
@@ -2326,28 +2356,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var PageDashboardComponent = (function () {
-    function PageDashboardComponent(_sharedService, apiService) {
+    function PageDashboardComponent(_sharedService, apiService, dialog) {
         var _this = this;
         this._sharedService = _sharedService;
         this.apiService = apiService;
+        this.dialog = dialog;
         this.pageTitle = 'dashboard';
         this.timelineData = [];
+        this.userPages = 0;
+        this.nextPages = 0;
         this.breadcrumb = [{ title: 'dashboard' }];
         this._sharedService.emitChange(this.pageTitle);
         apiService.getUserRequest().then(function (data) {
-            console.log('userrequest', data);
             _this.userRequests = data.data;
+            console.log(data.data);
+            _this.userPages = _this.userRequests.length / 10 + 1;
         });
         apiService.getNextPayment().then(function (data) {
-            console.log('nextpayment', data);
             _this.nextPayment = [];
             _this.nextPaymentHeader = ['To', 'Amount', 'Date'];
             data.data.map(function (d) {
                 _this.nextPayment.push([d.to, d.projected_amount_due, d.projected_payment_due_date]);
             });
+            _this.nextPages = _this.nextPayment.length / 10 + 1;
         });
         apiService.getTimelineData().then(function (data) {
-            console.log('timeline', data);
             _this.timelineData = [{
                     label: '2017',
                     timeline: []
@@ -2366,55 +2399,101 @@ var PageDashboardComponent = (function () {
     PageDashboardComponent.prototype.format = function (d) {
         return (d < 10) ? '0' + d.toString() : d.toString();
     };
+    PageDashboardComponent.prototype.showDialog = function (type, user) {
+        var dialogRef = this.dialog.open(DialogAcceptAndRejectComponent);
+        dialogRef.componentInstance.id = user.id;
+        dialogRef.componentInstance.groupId = user.group_id;
+        dialogRef.componentInstance.type = type;
+        dialogRef.componentInstance.requestType = user.request_type;
+        dialogRef.componentInstance.groupRotationType = user.group_rotation_type;
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result === 'yes') {
+            }
+            else {
+            }
+        });
+    };
     PageDashboardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-dashboard',
             template: __webpack_require__("../../../../../src/app/pages/default-pages/dashboard/dashboard.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/default-pages/dashboard/dashboard.component.scss")]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_material__["i" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_material__["i" /* MdDialog */]) === "function" && _c || Object])
     ], PageDashboardComponent);
     return PageDashboardComponent;
-    var _a, _b;
+    var _a, _b, _c;
 }());
 
-var DialogResultComponent = (function () {
-    function DialogResultComponent(dialogRef) {
+var DialogAcceptAndRejectComponent = (function () {
+    function DialogAcceptAndRejectComponent(dialogRef, apiService) {
         this.dialogRef = dialogRef;
+        this.apiService = apiService;
+        this.id = '';
+        this.groupId = '';
+        this.type = '';
+        this.positions = [];
+        this.comment = '';
+        this.groupRotationType = '';
+        this.requestType = '';
     }
-    DialogResultComponent = __decorate([
+    DialogAcceptAndRejectComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.apiService.getGroupTakenPositions(this.groupId).then(function (res) {
+            _this.positions = res.taken_rotation_positions;
+        });
+    };
+    DialogAcceptAndRejectComponent.prototype.validate = function (type) {
+        var _this = this;
+        if (type === 'accept') {
+            this.apiService.validateAccept(this.id).then(function (res) {
+                if (res.status === 'ok') {
+                    _this.dialogRef.close();
+                }
+            });
+        }
+        else {
+            this.apiService.validateReject(this.id, this.comment).then(function (res) {
+                if (res.status === 'ok') {
+                    console.log(res);
+                    _this.dialogRef.close();
+                }
+            });
+        }
+    };
+    DialogAcceptAndRejectComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'dialog-result',
-            template: __webpack_require__("../../../../../src/app/pages/default-pages/dashboard/dialog-privacy.html"),
+            selector: 'accept-reject-modal',
+            template: __webpack_require__("../../../../../src/app/pages/default-pages/dashboard/accept-reject-modal.html"),
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_material__["k" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_material__["k" /* MdDialogRef */]) === "function" && _a || Object])
-    ], DialogResultComponent);
-    return DialogResultComponent;
-    var _a;
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_material__["k" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_material__["k" /* MdDialogRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
+    ], DialogAcceptAndRejectComponent);
+    return DialogAcceptAndRejectComponent;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=dashboard.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/default-pages/dashboard/dialog-privacy.html":
-/***/ (function(module, exports) {
-
-module.exports = "<h2 md-dialog-title>Privacy and Terms</h2>\n<div md-dialog-content>Combining data\n    We also combine data among our services and across your devices for these purposes. For example, we show you ads based on information from your use of Search and Gmail, and we use data from trillions of search queries to build spell-correction models that we use across all of our services.</div>\n<div md-dialog-actions>\n  <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n  <button md-raised-button (click)=\"dialogRef.close('yes')\" color=\"accent\">I AGREE</button>\n</div>"
-
-/***/ }),
-
 /***/ "../../../../../src/app/pages/default-pages/groups/dialog-add-member.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 md-dialog-title>Add member</h2>\n<div md-dialog-content>\n  <md-input-container>\n    <input mdInput placeholder=\"Member to add\" value=\"\" [(ngModel)]=\"member\">\n  </md-input-container>\n</div>\n<div md-dialog-actions>\n  <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n  <button md-raised-button (click)=\"addMember()\" color=\"accent\" [disabled]=\"member === ''\">Add</button>\n</div>"
+module.exports = "<h2 md-dialog-title>Add member</h2>\n<div md-dialog-content>\n  <md-input-container>\n    <input mdInput placeholder=\"Member to add\" value=\"\" [(ngModel)]=\"member\">\n  </md-input-container>\n  <div md-dialog-actions>\n    <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n    <button md-raised-button (click)=\"addMember()\" color=\"accent\" [disabled]=\"member === ''\">Add</button>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/groups/dialog-start.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h2 md-dialog-title>Start Group</h2>\n<div md-dialog-content *ngIf=\"!isPendingRequest\">\n  <md-input-container class=\"mb-0\">\n    <input mdInput type=\"text\" [mdDatepicker]=\"picker\" [(ngModel)]=\"date\">\n    <button mdSuffix [mdDatepickerToggle]=\"picker\"></button>\n  </md-input-container>\n  <md-datepicker #picker></md-datepicker>\n  <div md-dialog-actions>\n    <button md-raised-button (click)=\"dialogRef.close('no')\">Cancel</button>\n    <button md-raised-button (click)=\"start()\" color=\"accent\">Start</button>\n  </div>\n</div>\n<div md-dialog-content *ngIf=\"isPendingRequest\">\n  <p>There is {{pendingRequest}} pending request, do you want to start anyway ?</p>\n  <div md-dialog-actions>\n    <button md-raised-button (click)=\"dialogRef.close('no')\">Cancel</button>\n    <button md-raised-button (click)=\"forceStart()\" color=\"accent\">Force Start</button>\n  </div>\n</div>"
 
 /***/ }),
 
 /***/ "../../../../../src/app/pages/default-pages/groups/groups.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"showGroupList\">\r\n  <div class=\"row members-header\">\r\n    <div class=\"col-sm-6\">\r\n      <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \r\n    </div>\r\n    <div class=\"col-sm-6 text-right\">\r\n      <md-input-container class=\"search-group md-icon-left\">\r\n        <md-icon>search</md-icon>\r\n        <input mdInput value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12 p-3\">\r\n      <ni-table [headers]=\"groupHeaders\" [data]=\"groups\"></ni-table>\r\n      <ni-pagination [total]=\"'5'\"></ni-pagination>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"!showGroupList\">\r\n  <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n  <md-tab-group>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>home</md-icon> {{'Home' | translate}}\r\n      </ng-template>\r\n      <div class=\"row p-2\">\r\n        <div class=\"col-md-5\">\r\n          <ni-card [customBgColor]=\"'rgba(100,181,246,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-6.jpg'\" class=\"info-card\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'\">\r\n            <div class=\"title text-uppercase\">{{'Amount' | translate}}</div>\r\n            <div class=\"count\">2,543</div>\r\n          </ni-card>\r\n          <ni-card [title]=\"'timeline' | translate\" [customBgColor]=\"'transparent'\">\r\n            <ni-h-timeline [data]=\"timelineData\"></ni-h-timeline>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-7 mb-3\">\r\n          <md-card class=\"example-card mb-3\" *ngIf=\"groupInfo && groupInfo.group_info\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Name:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.name}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Description:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.description}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Date creation:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [mdDatepicker]=\"picker\" value=\"{{groupInfo.group_info.date_creation}}\" disabled>\r\n                  <button mdSuffix [mdDatepickerToggle]=\"picker\" disabled></button>\r\n                </md-input-container>\r\n                <md-datepicker #picker></md-datepicker>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">\r\n                <md-icon *ngIf=\"groupInfo.group_info.g_type === 'PRIVATE'\">person</md-icon>\r\n                <md-icon *ngIf=\"groupInfo.group_info.g_type === 'PUBLIC'\">people</md-icon>\r\n                Type:\r\n              </label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.g_type\">\r\n                  <md-option [value]=\"groupInfo.group_info.g_type\">{{groupInfo.group_info.g_type}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Currency:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.currency\">\r\n                  <md-option [value]=\"groupInfo.group_info.currency\">{{groupInfo.group_info.currency}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Creator:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.creator}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">\r\n                  <md-icon *ngIf=\"groupInfo.group_info.status === 'RUNNING'\">rotate_right</md-icon>\r\n                  <md-icon *ngIf=\"groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\">pause_circle_outline</md-icon>\r\n                  Status:\r\n              </label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.status\">\r\n                  <md-option [value]=\"groupInfo.group_info.status\">{{groupInfo.group_info.status}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Rate:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.rate}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Frequency:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.frequency}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Due date:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.due_day}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">nb members:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.nb_members}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n          </md-card>\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\">Start</button>\r\n          <button md-raised-button color=\"accent\">Add a member</button>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.previous_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Previous Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.previous_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.previous_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.previous_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.previous_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.next_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Next Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.next_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.next_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.next_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.next_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>card_membership</md-icon> {{'Members' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"accent\" (click)=\"openDialog()\">Add a member</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table [headers]=\"memberHeaders\" [data]=\"members\"></ni-table>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>check_box</md-icon> {{'Obligation' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table [headers]=\"obligationHeaders\" [data]=\"obligations\"></ni-table>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>sms_failed</md-icon> {{'Requests' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>event</md-icon> {{'Event' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table [headers]=\"eventHeaders\" [data]=\"events\"></ni-table>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n  </md-tab-group>\r\n</div>\r\n\r\n<ni-loading></ni-loading>"
+module.exports = "<ni-alert [color]=\"'success'\" *ngIf=\"showGroupAlert === true\"><strong>Group has been created!</strong></ni-alert>\r\n<div *ngIf=\"showGroupList\">\r\n  <div class=\"row members-header\">\r\n    <div class=\"col-sm-6\">\r\n      <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \r\n    </div>\r\n    <div class=\"col-sm-6 text-right\">\r\n      <md-input-container class=\"search-group md-icon-left\">\r\n        <md-icon>search</md-icon>\r\n        <input mdInput value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12 p-3\">\r\n      <ni-table [headers]=\"groupHeaders\" [data]=\"groups\"></ni-table>\r\n      <ni-pagination [total]=\"groupsPage\" *ngIf=\"groupsPage > 0\"></ni-pagination>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"!showGroupList\">\r\n  <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n  <md-tab-group>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>home</md-icon> {{'Home' | translate}}\r\n      </ng-template>\r\n      <div class=\"row p-2\">\r\n        <div class=\"col-md-7 mb-3\">\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\" (click)=\"openStartDialog()\">Start</button>\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\" (click)=\"openDialog()\">Add a member</button>\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\">Save changes</button>\r\n          <md-card class=\"example-card mt-3\" *ngIf=\"groupInfo && groupInfo.group_info\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Name:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.name}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Description:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.description}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Date creation:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [mdDatepicker]=\"picker\" value=\"{{groupInfo.group_info.date_creation}}\" disabled>\r\n                  <button mdSuffix [mdDatepickerToggle]=\"picker\" disabled></button>\r\n                </md-input-container>\r\n                <md-datepicker #picker></md-datepicker>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">\r\n                <md-icon *ngIf=\"groupInfo.group_info.g_type === 'PRIVATE'\">person</md-icon>\r\n                <md-icon *ngIf=\"groupInfo.group_info.g_type === 'PUBLIC'\">people</md-icon>\r\n                Type:\r\n              </label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.g_type\">\r\n                  <md-option [value]=\"groupInfo.group_info.g_type\">{{groupInfo.group_info.g_type}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Currency:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.currency\">\r\n                  <md-option [value]=\"groupInfo.group_info.currency\">{{groupInfo.group_info.currency}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Creator:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.creator}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">\r\n                  <md-icon *ngIf=\"groupInfo.group_info.status === 'RUNNING'\">rotate_right</md-icon>\r\n                  <md-icon *ngIf=\"groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\">pause_circle_outline</md-icon>\r\n                  Status:\r\n              </label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.status\">\r\n                  <md-option [value]=\"groupInfo.group_info.status\">{{groupInfo.group_info.status}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Rate:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.rate}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Frequency:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.frequency}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Due date:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.due_day}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">nb members:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.nb_members}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-5\">\r\n          <ni-card [customBgColor]=\"'rgba(100,181,246,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-6.jpg'\" class=\"info-card\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'\">\r\n            <div class=\"title text-uppercase\">{{'Amount' | translate}}</div>\r\n            <div class=\"count\">2,543</div>\r\n          </ni-card>\r\n          <ni-card [title]=\"'timeline' | translate\" [customBgColor]=\"'transparent'\">\r\n            <ni-h-timeline [data]=\"timelineData\"></ni-h-timeline>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.previous_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Previous Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.previous_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.previous_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.previous_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.previous_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.next_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Next Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.next_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.next_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.next_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.next_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>card_membership</md-icon> {{'Members' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"accent\" (click)=\"openDialog()\">Add a member</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table [headers]=\"memberHeaders\" [data]=\"members\"></ni-table>\r\n          <ni-pagination [total]=\"memberPage\" *ngIf=\"memberPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>check_box</md-icon> {{'Obligation' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table [headers]=\"obligationHeaders\" [data]=\"obligations\"></ni-table>\r\n          <ni-pagination [total]=\"obligationPage\" *ngIf=\"obligationPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>sms_failed</md-icon> {{'Requests' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n          <ni-pagination [total]=\"requestPage\" *ngIf=\"requestPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>event</md-icon> {{'Event' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table [headers]=\"eventHeaders\" [data]=\"events\"></ni-table>\r\n          <ni-pagination [total]=\"eventPage\" *ngIf=\"eventPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>local_atm</md-icon> {{'transaction' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table [headers]=\"transactionHeaders\" [data]=\"transactions\"></ni-table>\r\n          <ni-pagination [total]=\"transactionPage\" *ngIf=\"transactionPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n  </md-tab-group>\r\n</div>\r\n\r\n<ni-loading></ni-loading>"
 
 /***/ }),
 
@@ -2440,8 +2519,9 @@ module.exports = module.exports.toString();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PageGroupsComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return PageGroupsComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogAddMemberComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return DialogStartComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
@@ -2467,18 +2547,24 @@ var PageGroupsComponent = (function () {
         this.pageTitle = 'groups';
         this.breadcrumb = [{ title: 'groups' }];
         this.groups = [];
+        this.groupsPage = 0;
         this.groupHeaders = [];
         this.members = [];
         this.memberHeaders = [];
+        this.memberPage = 0;
         this.obligations = [];
         this.obligationHeaders = [];
+        this.obligationPage = 0;
         this.requests = [];
         this.requestHeaders = [];
+        this.requestPage = 0;
         this.events = [];
         this.eventHeaders = [];
+        this.eventPage = 0;
         this.groupInfo = {};
         this.showGroupList = true;
         this.timelineData = [];
+        this.showGroupAlert = false;
         this._sharedService.emitChange(this.pageTitle);
     }
     PageGroupsComponent.prototype.ngOnInit = function () {
@@ -2494,6 +2580,15 @@ var PageGroupsComponent = (function () {
                 _this.breadcrumb = [{ title: 'groups' }];
             }
         });
+        this.apiService.groupCreated.subscribe(function (res) {
+            if (res) {
+                _this.showGroupAlert = true;
+                setTimeout(function (data) {
+                    _this.showGroupAlert = false;
+                    _this.apiService.groupCreated.next(false);
+                }, 5000);
+            }
+        });
         this.apiService.groupCounts.subscribe(function (res) {
             _this.apiService.getGroups().then(function (res) {
                 _this.groups = [];
@@ -2501,6 +2596,7 @@ var PageGroupsComponent = (function () {
                 res.data.map(function (d) {
                     _this.groups.push([d.name, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.due_day, d.frequency, d.g_type, d.position_selection_type, d.rate, { type: ['details'], id: d.id }]);
                 });
+                _this.groupsPage = _this.groups.length / 10 + 1;
             });
         });
         this.apiService.groupId.subscribe(function (data) {
@@ -2523,6 +2619,7 @@ var PageGroupsComponent = (function () {
                 res.data.map(function (d) {
                     _this.members.push([d.first_name, d.email, d.member_type, d.photo_path, d.position, d.user_position_date, { type: ['remove'], id: d.id }]);
                 });
+                _this.memberPage = _this.members.length / 10 + 1;
                 _this.apiService.showSpinner.next(false);
             });
             _this.apiService.getGroupObligations().then(function (res) {
@@ -2531,14 +2628,16 @@ var PageGroupsComponent = (function () {
                 res.data.map(function (d) {
                     _this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status, d.type, { type: ['paynow'], id: d.id }]);
                 });
+                _this.obligationPage = _this.obligations.length / 10 + 1;
                 _this.apiService.showSpinner.next(false);
             });
             _this.apiService.getGroupRequests().then(function (res) {
                 _this.requests = [];
-                _this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date'];
+                _this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date', { type: 'Action' }];
                 res.data.map(function (d) {
-                    _this.requests.push([d.sender, d.receiver, d.group, d.request_type, d.request_status, d.request_date]);
+                    _this.requests.push([d.sender, d.receiver, d.group, d.request_type, d.request_status, d.request_date, { type: ['Accept', 'Reject'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type }]);
                 });
+                _this.requestPage = _this.requests.length / 10 + 1;
                 _this.apiService.showSpinner.next(false);
             });
             _this.apiService.getGroupEvents().then(function (res) {
@@ -2547,15 +2646,14 @@ var PageGroupsComponent = (function () {
                 res.data.map(function (d) {
                     _this.events.push([d.event_type, d.initiator, d.group, d.date_event]);
                 });
+                _this.eventPage = _this.events.length / 10 + 1;
                 _this.apiService.showSpinner.next(false);
             });
             _this.apiService.getGroupInfo().then(function (res) {
-                console.log(res);
                 _this.groupInfo = res.data[0];
             });
         });
         this.apiService.getTimelineData().then(function (data) {
-            console.log('timeline', data);
             _this.timelineData = [{
                     label: '2017',
                     timeline: []
@@ -2569,6 +2667,15 @@ var PageGroupsComponent = (function () {
     };
     PageGroupsComponent.prototype.openDialog = function () {
         var dialogRef = this.dialog.open(DialogAddMemberComponent);
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result === 'yes') {
+            }
+            else {
+            }
+        });
+    };
+    PageGroupsComponent.prototype.openStartDialog = function () {
+        var dialogRef = this.dialog.open(DialogStartComponent);
         dialogRef.afterClosed().subscribe(function (result) {
             if (result === 'yes') {
             }
@@ -2616,6 +2723,43 @@ var DialogAddMemberComponent = (function () {
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MdDialogRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
     ], DialogAddMemberComponent);
     return DialogAddMemberComponent;
+    var _a, _b;
+}());
+
+var DialogStartComponent = (function () {
+    function DialogStartComponent(dialogRef, apiService) {
+        this.dialogRef = dialogRef;
+        this.apiService = apiService;
+        this.date = '';
+        this.pendingRequest = '';
+        this.isPendingRequest = false;
+    }
+    DialogStartComponent.prototype.start = function () {
+        var _this = this;
+        this.apiService.startGroup(this.date).then(function (res) {
+            if (typeof res.nb_pending_request !== 'undefined') {
+                _this.isPendingRequest = true;
+                _this.pendingRequest = res.nb_pending_request;
+            }
+            else {
+                _this.dialogRef.close();
+            }
+        });
+    };
+    DialogStartComponent.prototype.forceStart = function () {
+        this.dialogRef.close();
+        this.apiService.forceStartGroup(this.date).then(function (res) {
+            console.log(res);
+        });
+    };
+    DialogStartComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'dialog-start',
+            template: __webpack_require__("../../../../../src/app/pages/default-pages/groups/dialog-start.html"),
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MdDialogRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
+    ], DialogStartComponent);
+    return DialogStartComponent;
     var _a, _b;
 }());
 
@@ -2667,6 +2811,88 @@ var PageNotFoundComponent = (function () {
 }());
 
 //# sourceMappingURL=not-found.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/obligation/obligation.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n  <div class=\"col-sm-6\">\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \n  </div>\n  <div class=\"col-lg-12\">\n    <ni-table [headers]=\"obligationHeaders\" [data]=\"obligations\"></ni-table>\n    <ni-pagination [total]=\"page\" *ngIf=\"page > 0\"></ni-pagination>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/obligation/obligation.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/obligation/obligation.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageObligationComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var PageObligationComponent = (function () {
+    function PageObligationComponent(apiService) {
+        this.apiService = apiService;
+        this.breadcrumb = [{ title: 'groups' }];
+        this.obligations = [];
+        this.obligationHeaders = [];
+        this.page = 0;
+    }
+    PageObligationComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.apiService.showSpinner.next(true);
+        this.apiService.groupId.subscribe(function (data) {
+            _this.apiService.getGroupObligations().then(function (res) {
+                _this.obligations = [];
+                _this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Type', { type: 'Action' }];
+                res.data.map(function (d) {
+                    _this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status, d.type, { type: ['paynow'], id: d.id }]);
+                });
+                _this.page = _this.obligations.length / 10 + 1;
+                _this.apiService.showSpinner.next(false);
+            });
+        });
+    };
+    PageObligationComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-obligation',
+            template: __webpack_require__("../../../../../src/app/pages/default-pages/obligation/obligation.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/default-pages/obligation/obligation.component.scss")]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === "function" && _a || Object])
+    ], PageObligationComponent);
+    return PageObligationComponent;
+    var _a;
+}());
+
+//# sourceMappingURL=obligation.component.js.map
 
 /***/ }),
 
@@ -3925,6 +4151,7 @@ var DialogResultComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/profile/profile.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__default_pages_simulation_simulation_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/simulation/simulation.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__default_pages_chatroom_chatroom_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/chatroom/chatroom.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__default_pages_obligation_obligation_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/obligation/obligation.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4016,8 +4243,8 @@ var PagesModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* RouterModule */]
             ],
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__["a" /* PageDashboardComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["b" /* PageGroupsComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__["b" /* PageDashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["c" /* PageGroupsComponent */],
                 __WEBPACK_IMPORTED_MODULE_23__default_pages_requests_requests_component__["a" /* PageRequestsComponent */],
                 __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["a" /* PageProfileComponent */],
                 __WEBPACK_IMPORTED_MODULE_25__default_pages_aboutus_aboutus_component__["a" /* PageAboutusComponent */],
@@ -4033,11 +4260,14 @@ var PagesModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_19__extra_pages_page_500_page_500_component__["a" /* Page500Component */],
                 __WEBPACK_IMPORTED_MODULE_24__default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */],
                 __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["a" /* DialogAddMemberComponent */],
-                __WEBPACK_IMPORTED_MODULE_28__default_pages_chatroom_chatroom_component__["a" /* ChatroomComponent */]
+                __WEBPACK_IMPORTED_MODULE_28__default_pages_chatroom_chatroom_component__["a" /* ChatroomComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__default_pages_obligation_obligation_component__["a" /* PageObligationComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__["a" /* DialogAcceptAndRejectComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["b" /* DialogStartComponent */]
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__["a" /* PageDashboardComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["b" /* PageGroupsComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__["b" /* PageDashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["c" /* PageGroupsComponent */],
                 __WEBPACK_IMPORTED_MODULE_23__default_pages_requests_requests_component__["a" /* PageRequestsComponent */],
                 __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["a" /* PageProfileComponent */],
                 __WEBPACK_IMPORTED_MODULE_25__default_pages_aboutus_aboutus_component__["a" /* PageAboutusComponent */],
@@ -4051,12 +4281,13 @@ var PagesModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_17__extra_pages_confirm_confirm_component__["a" /* PageConfirmComponent */],
                 __WEBPACK_IMPORTED_MODULE_18__extra_pages_page_404_page_404_component__["a" /* Page404Component */],
                 __WEBPACK_IMPORTED_MODULE_19__extra_pages_page_500_page_500_component__["a" /* Page500Component */],
-                __WEBPACK_IMPORTED_MODULE_24__default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["a" /* DialogAddMemberComponent */]
+                __WEBPACK_IMPORTED_MODULE_24__default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */]
             ],
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_15__extra_pages_signup_signup_component__["a" /* DialogResultComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["a" /* DialogAddMemberComponent */]
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["a" /* DialogAddMemberComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__["a" /* DialogAcceptAndRejectComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["b" /* DialogStartComponent */]
             ]
         })
     ], PagesModule);
@@ -4097,6 +4328,7 @@ var ApiService = (function () {
         this.groupCounts = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"](0);
         this.isClickedDetails = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"](false);
         this.showSpinner = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"](false);
+        this.groupCreated = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"](false);
     }
     ApiService.prototype.getUserRequest = function () {
         var _this = this;
@@ -4146,13 +4378,13 @@ var ApiService = (function () {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_groups';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
         return new Promise(function (resolve, reject) {
-            _this.groupId.subscribe(function (data) {
-                params.set('group_id', data);
-                params.set('token', localStorage.getItem('token'));
-                _this.http.get(url, { search: params }).subscribe(function (res) {
-                    resolve(res.json());
-                });
+            params.set('token', localStorage.getItem('token'));
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
             });
         });
     };
@@ -4197,17 +4429,17 @@ var ApiService = (function () {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'add_group_member';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
         return new Promise(function (resolve, reject) {
-            _this.groupId.subscribe(function (data) {
-                params.set('group_id', data);
-                params.set('email_list', member);
-                params.set('token', localStorage.getItem('token'));
-                _this.http.get(url, { search: params }).subscribe(function (res) {
-                    console.log(res);
-                    // resolve(res.json());
-                }, function (err) {
-                    console.log(err);
-                });
+            params.set('email_list', member);
+            params.set('token', localStorage.getItem('token'));
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                console.log(res);
+                // resolve(res.json());
+            }, function (err) {
+                console.log(err);
             });
         });
     };
@@ -4215,15 +4447,15 @@ var ApiService = (function () {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_group_members';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
         return new Promise(function (resolve, reject) {
-            _this.groupId.subscribe(function (data) {
-                params.set('group_id', data);
-                params.set('token', localStorage.getItem('token'));
-                _this.http.get(url, { search: params }).subscribe(function (res) {
-                    resolve(res.json());
-                }, function (err) {
-                    console.log(err);
-                });
+            params.set('token', localStorage.getItem('token'));
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
             });
         });
     };
@@ -4231,15 +4463,15 @@ var ApiService = (function () {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_group_obligations';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
         return new Promise(function (resolve, reject) {
-            _this.groupId.subscribe(function (data) {
-                params.set('group_id', data);
-                params.set('token', localStorage.getItem('token'));
-                _this.http.get(url, { search: params }).subscribe(function (res) {
-                    resolve(res.json());
-                }, function (err) {
-                    console.log(err);
-                });
+            params.set('token', localStorage.getItem('token'));
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
             });
         });
     };
@@ -4247,15 +4479,15 @@ var ApiService = (function () {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_requests';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
         return new Promise(function (resolve, reject) {
-            _this.groupId.subscribe(function (data) {
-                params.set('group_id', data);
-                params.set('token', localStorage.getItem('token'));
-                _this.http.get(url, { search: params }).subscribe(function (res) {
-                    resolve(res.json());
-                }, function (err) {
-                    console.log(err);
-                });
+            params.set('token', localStorage.getItem('token'));
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
             });
         });
     };
@@ -4263,15 +4495,95 @@ var ApiService = (function () {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_events';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
         return new Promise(function (resolve, reject) {
-            _this.groupId.subscribe(function (data) {
-                params.set('group_id', data);
-                params.set('token', localStorage.getItem('token'));
-                _this.http.get(url, { search: params }).subscribe(function (res) {
-                    resolve(res.json());
-                }, function (err) {
-                    console.log(err);
-                });
+            params.set('token', localStorage.getItem('token'));
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    ApiService.prototype.getGroupTakenPositions = function (groupId) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group_taken_positions';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        return new Promise(function (resolve, reject) {
+            params.set('group_id', groupId);
+            params.set('token', localStorage.getItem('token'));
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    ApiService.prototype.validateAccept = function (id) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'accept_join_group_request';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        return new Promise(function (resolve, reject) {
+            params.set('request_answer_code', 'APPROVE');
+            params.set('request_id', id);
+            params.set('token', localStorage.getItem('token'));
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                console.log(res._body);
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    ApiService.prototype.validateReject = function (id, comment) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'reject_join_group_request';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        return new Promise(function (resolve, reject) {
+            params.set('request_answer_code', 'REJECT');
+            params.set('request_id', id);
+            params.set('comments', comment);
+            params.set('token', localStorage.getItem('token'));
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    ApiService.prototype.startGroup = function (date) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'start_group';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
+        return new Promise(function (resolve, reject) {
+            params.set('token', localStorage.getItem('token'));
+            params.set('first_payment_date', date);
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    ApiService.prototype.forceStartGroup = function (date) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'force_start_group';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
+        return new Promise(function (resolve, reject) {
+            params.set('token', localStorage.getItem('token'));
+            params.set('first_payment_date', date);
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
             });
         });
     };
@@ -4719,11 +5031,12 @@ var HorizontalNavbarComponent = (function () {
 }());
 
 var DialogGroupCreateComponent = (function () {
-    function DialogGroupCreateComponent(dialogRef, fb, apiService) {
+    function DialogGroupCreateComponent(dialogRef, fb, apiService, router) {
         var _this = this;
         this.dialogRef = dialogRef;
         this.fb = fb;
         this.apiService = apiService;
+        this.router = router;
         this.step = 'first';
         this.groupCounts = 0;
         this.groupTypes = [];
@@ -4761,6 +5074,8 @@ var DialogGroupCreateComponent = (function () {
         this.dialogRef.close('yes');
         this.apiService.addGroup(this.form.value).then(function (res) {
             _this.apiService.groupCounts.next(_this.groupCounts + 1);
+            _this.apiService.groupCreated.next(true);
+            _this.router.navigate(['/default-layout/groups']);
         }).catch(function (err) {
             console.log(err);
         });
@@ -4770,10 +5085,10 @@ var DialogGroupCreateComponent = (function () {
             selector: 'group-create',
             template: __webpack_require__("../../../../../src/app/ui/components/horizontal-navbar/group-create.html")
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["k" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["k" /* MdDialogRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_forms__["FormBuilder"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["k" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["k" /* MdDialogRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_forms__["FormBuilder"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */]) === "function" && _d || Object])
     ], DialogGroupCreateComponent);
     return DialogGroupCreateComponent;
-    var _a, _b, _c;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=horizontal-navbar.component.js.map
@@ -5267,13 +5582,22 @@ var MENU = [
         routing: '/default-layout/chatroom'
     },
     {
-        title: 'transactions',
+        title: 'transaction',
         icon: {
             class: 'fa fa-transgender',
             bg: '#C5CAE9',
             color: 'rgba(0,0,0,.87)'
         },
         routing: '/default-layout/transactions'
+    },
+    {
+        title: 'Obligation',
+        icon: {
+            class: 'fa fa-calendar-check-o',
+            bg: '#FFE082',
+            color: 'rgba(0,0,0,.87)'
+        },
+        routing: '/default-layout/obligation'
     },
     {
         title: 'requests',

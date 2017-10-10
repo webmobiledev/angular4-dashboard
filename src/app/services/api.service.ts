@@ -9,6 +9,7 @@ export class ApiService {
   groupCounts = new BehaviorSubject(0);
   isClickedDetails = new BehaviorSubject(false);
   showSpinner = new BehaviorSubject(false);
+  groupCreated = new BehaviorSubject(false);
 
   constructor(private http: Http) { }
 
@@ -59,13 +60,13 @@ export class ApiService {
   getGroupInfo() {
     const url = environment.serverUrl + 'list_groups';
     let params: URLSearchParams = new URLSearchParams();
-    return new Promise((resolve, reject) => {
-      this.groupId.subscribe(data => {
+    this.groupId.subscribe(data => {
       params.set('group_id', data);
+    });
+    return new Promise((resolve, reject) => {
       params.set('token', localStorage.getItem('token'));
-        this.http.get(url, {search: params}).subscribe(res => {
-          resolve(res.json());
-        });
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
       });
     });
   }
@@ -110,17 +111,17 @@ export class ApiService {
   addMember(member) {
     const url = environment.serverUrl + 'add_group_member';
     let params: URLSearchParams = new URLSearchParams();
-    return new Promise((resolve, reject) => {
-      this.groupId.subscribe(data => {
+    this.groupId.subscribe(data => {
       params.set('group_id', data);
+    });
+    return new Promise((resolve, reject) => {
       params.set('email_list', member);
       params.set('token', localStorage.getItem('token'));
-        this.http.get(url, {search: params}).subscribe(res => {
-          console.log(res);
-          // resolve(res.json());
-        }, err => {
-          console.log(err);
-        });
+      this.http.get(url, {search: params}).subscribe(res => {
+        console.log(res);
+        // resolve(res.json());
+      }, err => {
+        console.log(err);
       });
     });
   }
@@ -128,15 +129,15 @@ export class ApiService {
   getGroupMembers() {
     const url = environment.serverUrl + 'list_group_members';
     let params: URLSearchParams = new URLSearchParams();
-    return new Promise((resolve, reject) => {
-      this.groupId.subscribe(data => {
+    this.groupId.subscribe(data => {
       params.set('group_id', data);
+    });
+    return new Promise((resolve, reject) => {
       params.set('token', localStorage.getItem('token'));
-        this.http.get(url, {search: params}).subscribe(res => {
-          resolve(res.json());
-        }, err => {
-          console.log(err);
-        });
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        console.log(err);
       });
     });
   }
@@ -144,15 +145,15 @@ export class ApiService {
   getGroupObligations() {
     const url = environment.serverUrl + 'list_group_obligations';
     let params: URLSearchParams = new URLSearchParams();
-    return new Promise((resolve, reject) => {
-      this.groupId.subscribe(data => {
+    this.groupId.subscribe(data => {
       params.set('group_id', data);
+    });
+    return new Promise((resolve, reject) => {
       params.set('token', localStorage.getItem('token'));
-        this.http.get(url, {search: params}).subscribe(res => {
-          resolve(res.json());
-        }, err => {
-          console.log(err);
-        });
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        console.log(err);
       });
     });
   }
@@ -160,15 +161,15 @@ export class ApiService {
   getGroupRequests() {
     const url = environment.serverUrl + 'list_requests';
     let params: URLSearchParams = new URLSearchParams();
-    return new Promise((resolve, reject) => {
-      this.groupId.subscribe(data => {
+    this.groupId.subscribe(data => {
       params.set('group_id', data);
+    });
+    return new Promise((resolve, reject) => {
       params.set('token', localStorage.getItem('token'));
-        this.http.get(url, {search: params}).subscribe(res => {
-          resolve(res.json());
-        }, err => {
-          console.log(err);
-        });
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        console.log(err);
       });
     });
   }
@@ -176,15 +177,95 @@ export class ApiService {
   getGroupEvents() {
     const url = environment.serverUrl + 'list_events';
     let params: URLSearchParams = new URLSearchParams();
-    return new Promise((resolve, reject) => {
-      this.groupId.subscribe(data => {
+    this.groupId.subscribe(data => {
       params.set('group_id', data);
+    });
+    return new Promise((resolve, reject) => {
       params.set('token', localStorage.getItem('token'));
-        this.http.get(url, {search: params}).subscribe(res => {
-          resolve(res.json());
-        }, err => {
-          console.log(err);
-        });
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  getGroupTakenPositions(groupId) {
+    const url = environment.serverUrl + 'group_taken_positions';
+    let params: URLSearchParams = new URLSearchParams();
+    return new Promise((resolve, reject) => {
+      params.set('group_id', groupId);
+      params.set('token', localStorage.getItem('token'));
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  validateAccept(id) {
+    const url = environment.serverUrl + 'accept_join_group_request';
+    let params: URLSearchParams = new URLSearchParams();
+    return new Promise((resolve, reject) => {
+      params.set('request_answer_code', 'APPROVE');
+      params.set('request_id', id);
+      params.set('token', localStorage.getItem('token'));
+      this.http.get(url, {search: params}).subscribe((res: any) => {
+        console.log(res._body);
+        resolve(res.json());
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  validateReject(id, comment) {
+    const url = environment.serverUrl + 'reject_join_group_request';
+    let params: URLSearchParams = new URLSearchParams();
+    return new Promise((resolve, reject) => {
+      params.set('request_answer_code', 'REJECT');
+      params.set('request_id', id);
+      params.set('comments', comment);
+      params.set('token', localStorage.getItem('token'));
+      this.http.get(url, {search: params}).subscribe((res) => {
+        resolve(res.json());
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  startGroup(date) {
+    const url = environment.serverUrl + 'start_group';
+    let params: URLSearchParams = new URLSearchParams();
+    this.groupId.subscribe(data => {
+      params.set('group_id', data);
+    });
+    return new Promise((resolve, reject) => {
+      params.set('token', localStorage.getItem('token'));
+      params.set('first_payment_date', date);
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  forceStartGroup(date) {
+    const url = environment.serverUrl + 'force_start_group';
+    let params: URLSearchParams = new URLSearchParams();
+    this.groupId.subscribe(data => {
+      params.set('group_id', data);
+    });
+    return new Promise((resolve, reject) => {
+      params.set('token', localStorage.getItem('token'));
+      params.set('first_payment_date', date);
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        console.log(err);
       });
     });
   }

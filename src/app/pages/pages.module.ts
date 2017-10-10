@@ -55,9 +55,8 @@ import { PageConfirmComponent } from './extra-pages/confirm/confirm.component';
 import { Page404Component } from './extra-pages/page-404/page-404.component';
 import { Page500Component } from './extra-pages/page-500/page-500.component';
 
-import { PageDashboardComponent } from './default-pages/dashboard/dashboard.component';
-import { PageGroupsComponent } from './default-pages/groups/groups.component';
-import { DialogAddMemberComponent } from './default-pages/groups/groups.component';
+import { PageDashboardComponent, DialogAcceptAndRejectComponent } from './default-pages/dashboard/dashboard.component';
+import { PageGroupsComponent, DialogAddMemberComponent, DialogStartComponent } from './default-pages/groups/groups.component';
 import { PageTransactionsComponent } from './default-pages/transactions/transactions.component';
 import { PageRequestsComponent } from './default-pages/requests/requests.component';
 import { PageNotFoundComponent } from './default-pages/not-found/not-found.component';
@@ -65,6 +64,7 @@ import { PageAboutusComponent } from './default-pages/aboutus/aboutus.component'
 import { PageProfileComponent } from './default-pages/profile/profile.component';
 import { PageSimulationComponent } from './default-pages/simulation/simulation.component';
 import { ChatroomComponent } from './default-pages/chatroom/chatroom.component';
+import { PageObligationComponent } from './default-pages/obligation/obligation.component';
 
 @NgModule({
   imports: [
@@ -135,7 +135,10 @@ import { ChatroomComponent } from './default-pages/chatroom/chatroom.component';
     Page500Component,
     PageNotFoundComponent,
     DialogAddMemberComponent,
-    ChatroomComponent
+    ChatroomComponent,
+    PageObligationComponent,
+    DialogAcceptAndRejectComponent,
+    DialogStartComponent
   ],
   exports: [
     PageDashboardComponent,
@@ -153,12 +156,13 @@ import { ChatroomComponent } from './default-pages/chatroom/chatroom.component';
     PageConfirmComponent,
     Page404Component,
     Page500Component,
-    PageNotFoundComponent,
-    DialogAddMemberComponent
+    PageNotFoundComponent
   ],
   entryComponents: [
     DialogResultComponent,
-    DialogAddMemberComponent
+    DialogAddMemberComponent,
+    DialogAcceptAndRejectComponent,
+    DialogStartComponent
   ]
 })
 export class PagesModule {}

@@ -133,7 +133,7 @@ export class DialogGroupCreateComponent {
   groupTypes = [];
   currencies = [];
   psTypes = [];
-  constructor(public dialogRef: MdDialogRef<DialogGroupCreateComponent>, private fb: FormBuilder, private apiService: ApiService) {
+  constructor(public dialogRef: MdDialogRef<DialogGroupCreateComponent>, private fb: FormBuilder, private apiService: ApiService, private router: Router) {
     this.form = this.fb.group({
       name: [null, Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(10)])],
       frequency: [null, Validators.compose([Validators.required])],
@@ -170,6 +170,8 @@ export class DialogGroupCreateComponent {
     this.dialogRef.close('yes');
     this.apiService.addGroup(this.form.value).then(res => {
       this.apiService.groupCounts.next(this.groupCounts + 1);
+      this.apiService.groupCreated.next(true);
+      this.router.navigate(['/default-layout/groups']);
     }).catch(err => {
       console.log(err);
     });

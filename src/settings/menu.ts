@@ -32,13 +32,22 @@ export const MENU: any = [
     routing: '/default-layout/chatroom'
   },
   {
-    title: 'transactions',
+    title: 'transaction',
     icon: {
       class: 'fa fa-transgender',
       bg: '#C5CAE9',
       color: 'rgba(0,0,0,.87)'
     },
     routing: '/default-layout/transactions'
+  },
+  {
+    title: 'Obligation',
+    icon: {
+      class: 'fa fa-calendar-check-o',
+      bg: '#FFE082',
+      color: 'rgba(0,0,0,.87)'
+    },
+    routing: '/default-layout/obligation'
   },
   {
     title: 'requests',

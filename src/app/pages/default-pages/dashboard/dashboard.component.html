@@ -9,20 +9,20 @@
                 <tbody *ngFor="let user of userRequests">
                   <tr>
                     <td>{{user.request_date}} : {{user.sender}}<span *ngIf="user.request_type === 'REQUEST_TO_JOIN_GROUP'"> {{'would_you_to_join_the_group' | translate}} </span>{{user.group}} 
-                      <button md-raised-button color="accent">Accept</button>
-                      <button md-raised-button color="warn">Reject</button>
+                      <button md-raised-button color="accent" class="btn-action" (click)="showDialog('accept', user)">Accept</button>
+                      <button md-raised-button color="warn" class="btn-action" (click)="showDialog('reject', user)">Reject</button>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <ni-pagination [total]="'5'"></ni-pagination>
+            <ni-pagination [total]="userPages" *ngIf="userPages > 0"></ni-pagination>
           </ni-card>
         </div>
         <div class="col-md-12">
           <ni-card [title]="'nextpayment' | translate">
             <ni-table [headers]="nextPaymentHeader" [data]="nextPayment"></ni-table>
-            <ni-pagination [total]="'5'"></ni-pagination>
+            <ni-pagination [total]="nextPages" *ngIf="nextPages > 0"></ni-pagination>
           </ni-card>
         </div>
       </div>

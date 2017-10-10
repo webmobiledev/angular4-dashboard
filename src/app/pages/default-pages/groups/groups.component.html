@@ -1,3 +1,4 @@
+<ni-alert [color]="'success'" *ngIf="showGroupAlert === true"><strong>Group has been created!</strong></ni-alert>
 <div *ngIf="showGroupList">
   <div class="row members-header">
     <div class="col-sm-6">
@@ -13,7 +14,7 @@
   <div class="row">
     <div class="col-lg-12 p-3">
       <ni-table [headers]="groupHeaders" [data]="groups"></ni-table>
-      <ni-pagination [total]="'5'"></ni-pagination>
+      <ni-pagination [total]="groupsPage" *ngIf="groupsPage > 0"></ni-pagination>
     </div>
   </div>
 </div>
@@ -26,17 +27,11 @@
         <md-icon>home</md-icon> {{'Home' | translate}}
       </ng-template>
       <div class="row p-2">
-        <div class="col-md-5">
-          <ni-card [customBgColor]="'rgba(100,181,246,0.9)'" [customColor]="'#fff'" [bgImage]="'assets/content/card-6.jpg'" class="info-card" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'">
-            <div class="title text-uppercase">{{'Amount' | translate}}</div>
-            <div class="count">2,543</div>
-          </ni-card>
-          <ni-card [title]="'timeline' | translate" [customBgColor]="'transparent'">
-            <ni-h-timeline [data]="timelineData"></ni-h-timeline>
-          </ni-card>
-        </div>
         <div class="col-md-7 mb-3">
-          <md-card class="example-card mb-3" *ngIf="groupInfo && groupInfo.group_info">
+          <button md-raised-button color="accent" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'" (click)="openStartDialog()">Start</button>
+          <button md-raised-button color="accent" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'" (click)="openDialog()">Add a member</button>
+          <button md-raised-button color="accent" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'">Save changes</button>
+          <md-card class="example-card mt-3" *ngIf="groupInfo && groupInfo.group_info">
             <div class="form-group row">
               <label class="col-sm-3 col-md-2 col-form-label mb-0">Name:</label>
               <div class="col-sm-9 col-md-10">
@@ -49,7 +44,7 @@
               <label class="col-sm-3 col-md-2 col-form-label mb-0">Description:</label>
               <div class="col-sm-9 col-md-10">
                 <md-input-container class="mb-0">
-                  <input mdInput type="text" value="{{groupInfo.group_info.description}}" disabled>
+                  <input mdInput type="text" value="{{groupInfo.group_info.description}}" [disabled]="groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'">
                 </md-input-container>
               </div>
             </div>
@@ -107,7 +102,7 @@
               <label class="col-sm-3 col-md-2 col-form-label mb-0">Rate:</label>
               <div class="col-sm-9 col-md-10">
                 <md-input-container class="mb-0">
-                  <input mdInput type="number" value="{{groupInfo.group_info.rate}}" disabled>
+                  <input mdInput type="number" value="{{groupInfo.group_info.rate}}" [disabled]="groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'">
                 </md-input-container>
               </div>
             </div>
@@ -115,7 +110,7 @@
               <label class="col-sm-3 col-md-2 col-form-label mb-0">Frequency:</label>
               <div class="col-sm-9 col-md-10">
                 <md-input-container class="mb-0">
-                  <input mdInput type="number" value="{{groupInfo.group_info.frequency}}" disabled>
+                  <input mdInput type="number" value="{{groupInfo.group_info.frequency}}" [disabled]="groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'">
                 </md-input-container>
               </div>
             </div>
@@ -123,7 +118,7 @@
               <label class="col-sm-3 col-md-2 col-form-label mb-0">Due date:</label>
               <div class="col-sm-9 col-md-10">
                 <md-input-container class="mb-0">
-                  <input mdInput type="number" value="{{groupInfo.group_info.due_day}}" disabled>
+                  <input mdInput type="number" value="{{groupInfo.group_info.due_day}}" [disabled]="groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'">
                 </md-input-container>
               </div>
             </div>
@@ -136,8 +131,15 @@
               </div>
             </div>
           </md-card>
-          <button md-raised-button color="accent" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'">Start</button>
-          <button md-raised-button color="accent">Add a member</button>
+        </div>
+        <div class="col-md-5">
+          <ni-card [customBgColor]="'rgba(100,181,246,0.9)'" [customColor]="'#fff'" [bgImage]="'assets/content/card-6.jpg'" class="info-card" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'">
+            <div class="title text-uppercase">{{'Amount' | translate}}</div>
+            <div class="count">2,543</div>
+          </ni-card>
+          <ni-card [title]="'timeline' | translate" [customBgColor]="'transparent'">
+            <ni-h-timeline [data]="timelineData"></ni-h-timeline>
+          </ni-card>
         </div>
         <div class="col-md-6">
           <md-card class="example-card" *ngIf="groupInfo && groupInfo.previous_rotation_data">
@@ -185,6 +187,7 @@
       <div class="row">
         <div class="col-lg-12 p-3">
           <ni-table [headers]="memberHeaders" [data]="members"></ni-table>
+          <ni-pagination [total]="memberPage" *ngIf="memberPage > 0"></ni-pagination>
         </div>
       </div>
     </md-tab>
@@ -203,6 +206,7 @@
       <div class="row">
         <div class="col-lg-12 p-3">
           <ni-table [headers]="obligationHeaders" [data]="obligations"></ni-table>
+          <ni-pagination [total]="obligationPage" *ngIf="obligationPage > 0"></ni-pagination>
         </div>
       </div>
     </md-tab>
@@ -221,6 +225,7 @@
       <div class="row">
         <div class="col-lg-12 p-3">
           <ni-table [headers]="requestHeaders" [data]="requests"></ni-table>
+          <ni-pagination [total]="requestPage" *ngIf="requestPage > 0"></ni-pagination>
         </div>
       </div>
     </md-tab>
@@ -239,6 +244,26 @@
       <div class="row">
         <div class="col-lg-12 p-3">
           <ni-table [headers]="eventHeaders" [data]="events"></ni-table>
+          <ni-pagination [total]="eventPage" *ngIf="eventPage > 0"></ni-pagination>
+        </div>
+      </div>
+    </md-tab>
+    <md-tab>
+      <ng-template md-tab-label>
+        <md-icon>local_atm</md-icon> {{'transaction' | translate}}
+      </ng-template>
+      <div class="row members-header">
+        <div class="col-sm-12 text-right p-3">
+          <md-input-container class="search-group md-icon-left">
+            <md-icon>search</md-icon>
+            <input mdInput value="">
+          </md-input-container>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 p-3">
+          <ni-table [headers]="transactionHeaders" [data]="transactions"></ni-table>
+          <ni-pagination [total]="transactionPage" *ngIf="transactionPage > 0"></ni-pagination>
         </div>
       </div>
     </md-tab>

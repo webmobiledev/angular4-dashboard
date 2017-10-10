@@ -26,7 +26,7 @@
   "alreadyHaveAccount": "Already have an account?",
   "dashboard": "Dashboard",
   "groups": "Groups",
-  "transactions": "Transactions",
+  "transaction": "Transactions",
   "requests": "Requests",
   "profile": "Profile",
   "simulation": "Simulation",
@@ -81,5 +81,8 @@
   "PUBLIC": "PUBLIC",
   "RANDOM": "RANDOM",
   "FIRST_ARRIVED_FIRST_SERVED": "FIRST_APPRIVED_FIRST_SERVED",
-  "chatroom": "Chatroom"
+  "chatroom": "Chatroom",
+  "Join the group": "Join the group",
+  "Pending": "Pending",
+  "Approved": "Approved"
 }

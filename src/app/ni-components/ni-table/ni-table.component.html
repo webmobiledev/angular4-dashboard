@@ -12,7 +12,10 @@
       <tbody>
       <tr *ngFor="let d of data">
         <td *ngFor="let s of d">
-          <span *ngIf="!s.type && s !== 'PRIVATE' && s !== 'PUBLIC' && s !== 'FIRST_ARRIVED_FIRST_SERVED' && s !== 'RANDOM'">{{ s }}</span>
+          <span *ngIf="!s.type && s !== 'PRIVATE' && s !== 'PUBLIC' && s !== 'FIRST_ARRIVED_FIRST_SERVED' && s !== 'RANDOM' && s !== 'REQUEST_TO_JOIN_GROUP' && s !== 'PENDING' && s !== 'APPROVED'">{{ s }}</span>
+          <span *ngIf="s === 'REQUEST_TO_JOIN_GROUP'">{{'Join the group' | translate}}</span>
+          <span *ngIf="s === 'PENDING'">{{'Pending' | translate}}</span>
+          <span *ngIf="s === 'APPROVED'">{{'Approved' | translate}}</span>
           <md-icon *ngIf="s === 'PRIVATE'">person</md-icon>
           <md-icon *ngIf="s === 'PUBLIC'">people</md-icon>
           <md-icon *ngIf="s === 'FIRST_ARRIVED_FIRST_SERVED'">arrow_forward</md-icon>
@@ -20,6 +23,8 @@
           <button md-button color="accent" *ngIf="s.type && (s.type)[0] === 'details'" (click)="changePage(s.id)">details</button>
           <button md-button color="warn" *ngIf="s.type && (s.type)[0] === 'remove'">remove</button>
           <button md-button color="accent" *ngIf="s.type && (s.type)[0] === 'paynow'">pay now</button>
+          <button md-button color="accent" *ngIf="s.type && (s.type)[0] === 'Accept'" (click)="showDialog('accept', s.id, s.requestType, s.rotationType)">Accept</button>
+          <button md-button color="warn" *ngIf="s.type && (s.type)[1] === 'Reject'" (click)="showDialog('reject', s.id, s.requestType, s.rotationType)">Reject</button>
         </td>
       </tr>
       </tbody>
