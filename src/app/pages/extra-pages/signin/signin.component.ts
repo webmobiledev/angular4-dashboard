@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { TranslateService } from 'ng2-translate';
+import { CustomValidators } from 'ng2-validation';
 
 import { AuthService } from '../../../services/auth.service';
 import { LANGUAGES } from '../../../../settings/menu';
@@ -17,8 +18,8 @@ export class PageSigninComponent implements OnInit {
 
   constructor(private router: Router, private auth: AuthService, private fb: FormBuilder, private translate: TranslateService) {
     this.form = this.fb.group({
-      email: [null, Validators.required],
-      password: [null, Validators.required],
+      email: [null, Validators.compose([Validators.required, , CustomValidators.email])],
+      password: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
       langCode: ['en']
     });
 
@@ -35,6 +36,7 @@ export class PageSigninComponent implements OnInit {
   onSubmit() {
     this.auth.login(this.form.value).then(res => {
       if (res === 'yes') {
+        localStorage.setItem('login', 'true');
         this.router.navigate(['/default-layout/dashboard']);
       }
     });

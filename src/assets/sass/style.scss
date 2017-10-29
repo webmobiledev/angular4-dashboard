@@ -31,7 +31,6 @@ group-create {
   }
 }
 md-dialog-container {
-  padding: 0 !important;
   width: 500px !important;
   h2 {
     background: #e5e6e9 !important;
@@ -63,5 +62,10 @@ ni-pagination {
     .mat-select-trigger {
       min-width: 40px !important;
     }
+  }
+}
+dialog-result {
+  .mat-dialog-actions {
+    padding: 0 20px 20px;
   }
 }

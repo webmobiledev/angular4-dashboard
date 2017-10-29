@@ -12,10 +12,12 @@ export class AuthService {
   confirmEmail = '';
   langCode = new BehaviorSubject('en');
   redirectPage = '';
-  constructor(private http: Http) { }
+  constructor(private http: Http) {
+    this.isLogged = localStorage.getItem('login') === 'true' ? true : false;
+    this.isConfirm = localStorage.getItem('confirm') === 'true' ? true : false;
+  }
 
   isLoggedIn() {
-    console.log(this.isLogged);
     return this.isLogged;
   }
 
@@ -32,6 +34,7 @@ export class AuthService {
     params.set('gender', data.gender);
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
+        localStorage.setItem('confirm', 'true');
         this.isConfirm = true;
         resolve(res.json());
       });
@@ -71,6 +74,7 @@ export class AuthService {
       this.http.get(url, {search: params}).subscribe(res => {
         this.isConfirm = false;
         this.isLogged = true;
+        console.log(res);
         resolve(res.json().email_validated);
       }, err => {
         console.log(err);

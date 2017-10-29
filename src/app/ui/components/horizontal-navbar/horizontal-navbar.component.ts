@@ -120,6 +120,11 @@ export class HorizontalNavbarComponent implements OnInit {
       });
     });
   }
+
+  logout() {
+    localStorage.setItem('login', 'false');
+    this.router.navigate(['/']);
+  }
 }
 
 @Component({

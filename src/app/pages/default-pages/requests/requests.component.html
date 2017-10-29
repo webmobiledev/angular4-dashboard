@@ -12,5 +12,6 @@
 <div class="row">
   <div class="col-lg-12 p-3">
     <ni-table [headers]="requestHeaders" [data]="requests"></ni-table>
+    <ni-pagination [total]="this.requests.length / 10 + 1"></ni-pagination>
   </div>
 </div>

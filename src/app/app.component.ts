@@ -10,7 +10,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 export class AppComponent {
   constructor(private auth: AuthService, private activatedRoute: ActivatedRoute, private apiService: ApiService) {
-    this.activatedRoute.params.subscribe((params: Params) => {
+    this.activatedRoute.queryParams.subscribe((params: Params) => {
       let code = params['validation_code'];
       let email = params['email'];
       auth.setConfirmParams(code, email);

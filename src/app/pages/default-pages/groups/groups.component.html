@@ -94,7 +94,7 @@
               </label>
               <div class="col-sm-9 col-md-10">
                 <md-select disabled [(ngModel)]="groupInfo.group_info.status">
-                  <md-option [value]="groupInfo.group_info.status">{{groupInfo.group_info.status}}</md-option>
+                  <md-option [value]="groupInfo.group_info.status">{{groupInfo.group_info.status === 'RUNNING' ? 'Login' : groupInfo.group_info.status}}</md-option>
                 </md-select>
               </div>
             </div>

@@ -21,7 +21,7 @@
   "confirmpasswordValid1": "Vous devez inclure le mot de passe de confirmation.",
   "confirmpasswordValid2": "Les mots de passe ne sont pas des mathématiques.",
   "genderValid1": "Vous devez sélectionner un genre.",
-  "agreeTermsofService": "J'ai lu et j'accepte les termes du service.",
+  "agreeTermsofService": "Vous devez lire et accepter les conditions d'utilisation.",
   "agreeTermsValid": "Vous devez accepter les conditions d'utilisation.",
   "alreadyHaveAccount": "Vous avez déjà un compte?",
   "dashboard": "Tableau de bord",

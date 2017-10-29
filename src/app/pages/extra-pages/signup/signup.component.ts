@@ -7,7 +7,7 @@ import { TranslateService } from 'ng2-translate';
 
 import { AuthService } from '../../../services/auth.service';
 
-const password = new FormControl('', Validators.required);
+const password = new FormControl('', Validators.compose([Validators.required, Validators.minLength(6)]));
 const confirmPassword = new FormControl('', CustomValidators.equalTo(password));
 
 @Component({
