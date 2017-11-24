@@ -27,7 +27,11 @@ horizontal-navbar {
 
 group-create {
   md-select {
-    width: 100%;
+    width: 90%;
+  }
+
+  .col-sm-6 {
+    display: flex;
   }
 }
 md-dialog-container {
@@ -39,16 +43,11 @@ md-dialog-container {
     margin: 0 !important;
   }
   .mat-dialog-content {
-    padding: 24px;
+    padding: 20px 0;
     margin: 0;
   }
   .mat-dialog-actions {
     justify-content: space-between;
-  }
-  .mat-input-infix {
-    border: 0;
-    padding: 0;
-    padding-bottom: 0.4375rem;
   }
 }
 .mat-tab-label-active {
@@ -68,4 +67,14 @@ dialog-result {
   .mat-dialog-actions {
     padding: 0 20px 20px;
   }
+}
+
+.mat-input-infix {
+  border: 0;
+  padding: 0;
+  padding-bottom: 0.4375rem;
+}
+
+md-select {
+  width: calc(100% - 20px);
 }

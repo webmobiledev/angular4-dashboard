@@ -21,10 +21,14 @@
       background: $card-header-bg;
       border-radius: 3px 3px 0 0;
       color: $card-header-color;
-      display: block;
+      display: flex;
       margin: 0;
       padding: $module-rem $module-rem * 2;
       position: relative;
+
+      md-icon {
+        margin-left: 10px;
+      }
 
       + .card-content {
         border-radius: 0 0 3px 3px;

@@ -1,218 +1,333 @@
 
 <ni-breadcrumb [menu]="breadcrumb" [style]="'custom2'" class="mb-4"></ni-breadcrumb>
-<div class="row">
-  <div class="col-md-6 col-xl-3">
-    <ni-card [bgColor]="'danger'" class="info-card">
-      <div class="title text-uppercase">Orders</div>
-      <div class="count">2,145</div>
-      <ni-badge [customColor]="'rgba(255,255,255,0.3)'" [borderRadius]="false">+17%</ni-badge> <small>from previous period</small>
-      <md-icon>shopping_basket</md-icon>
-    </ni-card>
-  </div>
-
-  <div class="col-md-6 col-xl-3">
-    <ni-card [bgColor]="'warning'" class="info-card">
-      <div class="title text-uppercase">Revenue</div>
-      <div class="count">$ 50,24</div>
-      <small>11750</small>
-      <md-icon>equalizer</md-icon>
-    </ni-card>
-  </div>
-
-  <div class="col-md-6 col-xl-3">
-    <ni-card [bgColor]="'info'" class="info-card">
-      <div class="title text-uppercase">Products</div>
-      <div class="count">2,543</div>
-      <ni-badge [customColor]="'rgba(255,255,255,0.3)'" [borderRadius]="false">+210</ni-badge>
-      <md-icon>monetization_on</md-icon>
-    </ni-card>
-  </div>
-
-  <div class="col-md-6 col-xl-3">
-    <ni-card [bgColor]="'success'" class="info-card">
-      <div class="title text-uppercase">Sold</div>
-      <div class="count">1,005</div>
-      <ni-badge [customColor]="'rgba(255,255,255,0.3)'" [borderRadius]="false">+24%</ni-badge>
-      <md-icon>donut_large</md-icon>
-    </ni-card>
-  </div>
-
-  <div class="clearfix"></div>
-
-  <div class="col-md-6 col-xl-3">
-    <ni-card [customBgColor]="'rgba(226,77,77,0.6)'" [customColor]="'#fff'" [bgImage]="'assets/content/card-4.jpg'" class="info-card">
-      <div class="title text-uppercase">Orders</div>
-      <div class="count">2,145</div>
-      <ni-badge [customColor]="'rgba(255,255,255,0.3)'" [borderRadius]="false">+17%</ni-badge> <small>from previous period</small>
-    </ni-card>
-  </div>
-
-  <div class="col-md-6 col-xl-3">
-    <ni-card [customBgColor]="'rgba(255,183,77,0.9)'" [customColor]="'#fff'" [bgImage]="'assets/content/card-5.jpg'" class="info-card">
-      <div class="title text-uppercase">Revenue</div>
-      <div class="count">$ 50,24</div>
-      <small>11750</small>
-    </ni-card>
-  </div>
-
-  <div class="col-md-6 col-xl-3">
-    <ni-card [customBgColor]="'rgba(100,181,246,0.9)'" [customColor]="'#fff'" [bgImage]="'assets/content/card-6.jpg'" class="info-card">
-      <div class="title text-uppercase">Products</div>
-      <div class="count">2,543</div>
-      <ni-badge [customColor]="'rgba(255,255,255,0.3)'" [borderRadius]="false">+210</ni-badge>
-    </ni-card>
-  </div>
-
-  <div class="col-md-6 col-xl-3">
-    <ni-card [customBgColor]="'rgba(129,199,132,0.8)'" [customColor]="'#fff'" [bgImage]="'assets/content/card-7.jpg'" class="info-card">
-      <div class="title text-uppercase">Sold</div>
-      <div class="count">1,005</div>
-      <ni-badge [customColor]="'rgba(255,255,255,0.3)'" [borderRadius]="false">+24%</ni-badge>
-    </ni-card>
-  </div>
-
-  <div class="clearfix"></div>
-
-  <div class="col-md-6 col-xl-3">
-    <ni-card [outline]="true" [bgColor]="'danger'" class="info-card">
-      <div class="title text-uppercase">Orders</div>
-      <div class="count">2,145</div>
-      <ni-badge [color]="'danger'">+17%</ni-badge> <small>from previous period</small>
-    </ni-card>
-  </div>
-
-  <div class="col-md-6 col-xl-3">
-    <ni-card [outline]="true" [bgColor]="'warning'" class="info-card">
-      <div class="title text-uppercase">Revenue</div>
-      <div class="count">$ 50,24</div>
-      <small>11750</small>
-    </ni-card>
-  </div>
-
-  <div class="col-md-6 col-xl-3">
-    <ni-card [outline]="true" [bgColor]="'info'" class="info-card">
-      <div class="title text-uppercase">Products</div>
-      <div class="count">2,543</div>
-      <ni-badge [color]="'info'">+210</ni-badge>
-    </ni-card>
-  </div>
-
-  <div class="col-md-6 col-xl-3">
-    <ni-card [outline]="true" [bgColor]="'success'" class="info-card">
-      <div class="title text-uppercase">Sold</div>
-      <div class="count">1,005</div>
-      <ni-badge [color]="'success'">+24%</ni-badge>
-    </ni-card>
-  </div>
-
-  <div class="clearfix"></div>
-
-  <div class="col-xl-4">
-    <ni-card [bgColor]="''" class="chart-card">
-      <div class="chart">
-        <canvas
-          baseChart
-          [data]="pieChartData"
-          [colors]="pieChartColors"
-          [labels]="pieChartLabels"
-          [legend]="false"
-          [options]="pieChartOptions"
-          [chartType]="pieChartType"></canvas>
+<md-tab-group>
+  <md-tab>
+    <ng-template md-tab-label>
+      {{'Identification' | translate}}
+    </ng-template>
+    <div class="row p-2">
+      <div class="col-md-12 mb-3">
+        <md-card class="example-card mt-3">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'First Name' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text" value="">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Middle Name' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text" value="">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Surname' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text" value="">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Gender' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-select class="w-full" [(ngModel)]="gender">
+                    <md-option>{{'Male' | translate}}</md-option>
+                    <md-option>{{'Female' | translate}}</md-option>
+                  </md-select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Password' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="password">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Password verification' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="password">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Email' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="email">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Photo' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <!-- <md-input-container class="mb-0"> -->
+                    <input type="file">
+                  <!-- </md-input-container> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Date of Birth'}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text" [mdDatepicker]="picker">
+                    <button mdSuffix [mdDatepickerToggle]="picker"></button>
+                  </md-input-container>
+                  <md-datepicker #picker></md-datepicker>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Country of Birth' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'State of Birth' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Town of Birth' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Account validation status' | translate}}:</label>
+            <div class="col-sm-6 col-md-8">
+              <p></p>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Account validation start date' | translate}}:</label>
+            <div class="col-sm-6 col-md-8">
+              <p></p>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Account validation end date' | translate}}:</label>
+            <div class="col-sm-6 col-md-8">
+              <p></p>
+            </div>
+          </div>
+        </md-card>
+        <button md-raised-button color="accent" (click)="validate()" class="mt-3">{{'Validate' | translate}}</button>
       </div>
-      <div class="info">
-        <div class="title"><strong>930</strong> <small>Resolved</small></div>
-        <div class="small">More than 70% resolved issues</div>
+    </div>
+  </md-tab>
+  <md-tab>
+    <ng-template md-tab-label>
+      {{'Address and occupation' | translate}}
+    </ng-template>
+    <div class="row p-2">
+      <div class="col-md-12 mb-3">
+        <md-card class="mt-3">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Address number' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Address street name' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Address post code' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Address town' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Address state' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Address country' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Address extra info' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Contact home phone' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Contact office phone' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Contact mobile phone' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Occupation' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Occupation sector' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group row">
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Yearly income' | translate}}:</label>
+                <div class="col-sm-6 col-md-8">
+                  <md-input-container class="mb-0">
+                    <input mdInput type="text">
+                  </md-input-container>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card>
+        <button md-raised-button color="accent" class="mt-3" (click)="validate()">{{'Validate' | translate}}</button>
       </div>
-    </ni-card>
-  </div>
-
-  <div class="col-xl-4">
-    <ni-card [bgColor]="''" class="chart-card">
-      <div class="chart">
-        <canvas
-          baseChart
-          [data]="doughnutChartData"
-          [colors]="doughnutChartColors"
-          [labels]="doughnutChartLabels"
-          [legend]="false"
-          [options]="doughnutChartOptions"
-          [chartType]="doughnutChartType"></canvas>
-      </div>
-      <div class="info">
-        <div class="title"><strong>466</strong> <small>Unresolved</small></div>
-        <div class="small">Less than 30% unresolved issues</div>
-      </div>
-    </ni-card>
-  </div>
-
-  <div class="col-xl-4">
-    <ni-card [bgColor]="''" class="chart-card">
-      <div class="chart">
-        <canvas
-          baseChart
-          [data]="polarAreaChartData"
-          [colors]="polarAreaChartColors"
-          [labels]="polarAreaChartLabels"
-          [legend]="false"
-          [options]="polarAreaChartOptions"
-          [chartType]="polarAreaChartType"></canvas>
-      </div>
-      <div class="info">
-        <div class="title"><strong>1,547</strong> <small>Issues</small></div>
-        <div class="small">8 issues are unassigned</div>
-      </div>
-    </ni-card>
-  </div>
-</div>
-
-<div class="row mb-lg-4">
-  <div class="col-lg-6 map-col mb-4 mb-lg-0">
-    <ni-card [indents]="0" class="mb-0">
-      <agm-map [latitude]="lat" [longitude]="lng">
-        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-      </agm-map>
-    </ni-card>
-    <div class="clearfix"></div>
-  </div>
-
-  <div class="col-lg-6">
-    <ni-card class="mb-lg-0">
-      <canvas
-        baseChart
-        [datasets]="barChartData"
-        [labels]="barChartLabels"
-        [options]="barChartOptions"
-        [legend]="barChartLegend"
-        [chartType]="barChartType"></canvas>
-    </ni-card>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-lg-6">
-    <ni-card [title]="'Users'" class="mb-lg-0">
-      <md-list>
-        <md-list-item *ngFor="let message of messages">
-          <img md-list-avatar src="{{ message.avatar }}" width="40" height="40" alt="">
-          <h3 md-line class="h3">{{ message.from }}</h3>
-          <p md-line><i>
-            <span>{{message.subject}}</span>
-            <span> -- {{ message.content }}</span>
-          </i></p>
-        </md-list-item>
-      </md-list>
-    </ni-card>
-  </div>
-
-  <div class="col-lg-6">
-    <ni-card [title]="'To do list'" class="mb-0">
-      <md-list>
-        <md-list-item *ngFor="let folder of folders">
-          <md-icon md-list-avatar>{{folder.icon}}<ni-badge *ngIf="folder.badge" [color]="'danger'" [position]="'top-right'">{{folder.badge}}</ni-badge></md-icon>
-          <h4 md-line>{{folder.name}}</h4>
-          <p md-line><i>{{folder.updated}}</i></p>
-        </md-list-item>
-      </md-list>
-    </ni-card>
-  </div>
-</div>
+    </div>
+  </md-tab>
+  <md-tab>
+    <ng-template md-tab-label>
+      {{'Payment means' | translate}}
+    </ng-template>
+    <div class="row p-2">
+      <div class="col-md-12 mb-3"></div>
+    </div>
+  </md-tab>
+</md-tab-group>

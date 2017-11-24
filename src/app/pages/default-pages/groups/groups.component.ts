@@ -172,6 +172,18 @@ export class PageGroupsComponent implements OnInit {
   format(d) {
     return (d < 10) ? '0' + d.toString() : d.toString();
   }
+
+  removeAll() {
+    this.apiService.removeAll().then(res => {
+      console.log(res);
+    });
+  }
+
+  cancelAll() {
+    this.apiService.cancelAll().then(res => {
+      console.log(res);
+    });
+  }
 }
 
 @Component({

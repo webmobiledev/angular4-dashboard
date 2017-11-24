@@ -42,4 +42,23 @@ export class NiTableComponent implements OnInit {
       }
     });
   }
+
+  removeUser(groupId, memberId) {
+    let dialogRef = this.dialog.open(DialogRemoveComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'ok') {
+        this.apiService.removeUser(groupId, memberId).then(res => {
+          console.log(res);
+        });
+      }
+    });
+  }
+}
+
+@Component({
+  selector: 'dialog-remove',
+  templateUrl: 'dialog-remove.html',
+})
+export class DialogRemoveComponent {
+  constructor(public dialogRef: MdDialogRef<DialogRemoveComponent>) {}
 }

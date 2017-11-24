@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, URLSearchParams } from '@angular/http';
 import { environment } from '../../environments/environment';
 import { BehaviorSubject } from 'rxjs/Rx';
+import { AuthService } from './auth.service';
 
 @Injectable()
 export class ApiService {
@@ -11,12 +12,44 @@ export class ApiService {
   showSpinner = new BehaviorSubject(false);
   groupCreated = new BehaviorSubject(false);
 
-  constructor(private http: Http) { }
+  langCode = "ENG";
 
-  getUserRequest() {
-    const url = environment.serverUrl + 'list_user_requests';
+  constructor(private http: Http, private auth: AuthService) {
+    this.auth.langCode.subscribe(res => {
+      switch (res) {
+        case 'en':
+          this.langCode = 'ENG';
+          break;
+        case 'fr':
+          this.langCode = 'FRE';
+          break;
+        case 'pt':
+          this.langCode = 'POR';
+          break;
+        case 'es':
+          this.langCode = 'SPA';
+          break;
+      }
+    });
+  }
+
+  getUserInfo() {
+    const url = environment.serverUrl + 'user';
     let params: URLSearchParams = new URLSearchParams();
     params.set('token', localStorage.getItem('token'));
+    params.set('lang', this.langCode);
+    return new Promise((resolve, reject) => {
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      });
+    });
+  }
+
+  getUserRequest() {
+    const url = environment.serverUrl + 'user/requests';
+    let params: URLSearchParams = new URLSearchParams();
+    params.set('token', localStorage.getItem('token'));
+    params.set('lang', this.langCode);
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
@@ -25,9 +58,10 @@ export class ApiService {
   }
 
   getNextPayment() {
-    const url = environment.serverUrl + 'list_user_obligations';
+    const url = environment.serverUrl + 'user/obligations';
     let params: URLSearchParams = new URLSearchParams();
     params.set('token', localStorage.getItem('token'));
+    params.set('lang', this.langCode);
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
@@ -36,9 +70,10 @@ export class ApiService {
   }
 
   getTimelineData() {
-    const url = environment.serverUrl + 'list_events';
+    const url = environment.serverUrl + 'group/events';
     let params: URLSearchParams = new URLSearchParams();
     params.set('token', localStorage.getItem('token'));
+    params.set('lang', this.langCode);
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
@@ -47,9 +82,10 @@ export class ApiService {
   }
 
   getGroups() {
-    const url = environment.serverUrl + 'list_groups';
+    const url = environment.serverUrl + 'groups';
     let params: URLSearchParams = new URLSearchParams();
     params.set('token', localStorage.getItem('token'));
+    params.set('lang', this.langCode);
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
@@ -58,13 +94,14 @@ export class ApiService {
   }
 
   getGroupInfo() {
-    const url = environment.serverUrl + 'list_groups';
+    const url = environment.serverUrl + 'group/members';
     let params: URLSearchParams = new URLSearchParams();
     this.groupId.subscribe(data => {
       params.set('group_id', data);
     });
     return new Promise((resolve, reject) => {
       params.set('token', localStorage.getItem('token'));
+      params.set('lang', this.langCode);
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       });
@@ -72,21 +109,32 @@ export class ApiService {
   }
 
   addGroup(group) {
-    const url = environment.serverUrl + 'add_group';
+    const url = environment.serverUrl + 'groups/add';
     let params: URLSearchParams = new URLSearchParams();
+    if (group.grouptype == 'PRIVATE') {
+      params.set('type_code', 'PRIVATE');
+    } else if (group.grouptype == 'PUBLIC') {
+      params.set('type_code', 'PUBLIC');
+      params.set('min_index', group.minIndex);
+      params.set('max_index', group.maxIndex);
+    }
+
+    if (group.rate > 0) {
+      params.set('smooth_payment', group.smoothpayment);
+    }
+
     params.set('name', group.name);
     params.set('rate', group.rate);
     params.set('description', group.description);
     params.set('amount', group.amount);
     params.set('due_day', group.duedate);
     params.set('currency_code', group.currency);
-    params.set('type_code', group.grouptype);
-    params.set('early_prepayment_penalty', group.preppenal);
     params.set('number_of_days_before_penalty', group.nbdpenal);
     params.set('delay_payment_penalty', group.penalty);
     params.set('frequency', group.frequency);
     params.set('position_selection_type_code', group.pstype);
     params.set('token', localStorage.getItem('token'));
+    params.set('lang', this.langCode);
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
         console.log(res);
@@ -99,6 +147,7 @@ export class ApiService {
     const url = environment.serverUrl + 'lists';
     let params: URLSearchParams = new URLSearchParams();
     params.set('data', type);
+    params.set('lang', this.langCode);
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
@@ -109,13 +158,14 @@ export class ApiService {
   }
 
   addMember(member) {
-    const url = environment.serverUrl + 'add_group_member';
+    const url = environment.serverUrl + 'group/users/add';
     let params: URLSearchParams = new URLSearchParams();
     this.groupId.subscribe(data => {
       params.set('group_id', data);
     });
     return new Promise((resolve, reject) => {
       params.set('email_list', member);
+      params.set('lang', this.langCode);
       params.set('token', localStorage.getItem('token'));
       this.http.get(url, {search: params}).subscribe(res => {
         console.log(res);
@@ -127,13 +177,14 @@ export class ApiService {
   }
 
   getGroupMembers() {
-    const url = environment.serverUrl + 'list_group_members';
+    const url = environment.serverUrl + 'group/members';
     let params: URLSearchParams = new URLSearchParams();
     this.groupId.subscribe(data => {
       params.set('group_id', data);
     });
     return new Promise((resolve, reject) => {
       params.set('token', localStorage.getItem('token'));
+      params.set('lang', this.langCode);
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
@@ -143,13 +194,14 @@ export class ApiService {
   }
 
   getGroupObligations() {
-    const url = environment.serverUrl + 'list_group_obligations';
+    const url = environment.serverUrl + 'group/obligations';
     let params: URLSearchParams = new URLSearchParams();
     this.groupId.subscribe(data => {
       params.set('group_id', data);
     });
     return new Promise((resolve, reject) => {
       params.set('token', localStorage.getItem('token'));
+      params.set('lang', this.langCode);
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
@@ -159,13 +211,14 @@ export class ApiService {
   }
 
   getGroupRequests() {
-    const url = environment.serverUrl + 'list_requests';
+    const url = environment.serverUrl + 'group/requests';
     let params: URLSearchParams = new URLSearchParams();
     this.groupId.subscribe(data => {
       params.set('group_id', data);
     });
     return new Promise((resolve, reject) => {
       params.set('token', localStorage.getItem('token'));
+      params.set('lang', this.langCode);
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
@@ -175,13 +228,14 @@ export class ApiService {
   }
 
   getGroupEvents() {
-    const url = environment.serverUrl + 'list_events';
+    const url = environment.serverUrl + 'group/events';
     let params: URLSearchParams = new URLSearchParams();
     this.groupId.subscribe(data => {
       params.set('group_id', data);
     });
     return new Promise((resolve, reject) => {
       params.set('token', localStorage.getItem('token'));
+      params.set('lang', this.langCode);
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
@@ -191,10 +245,11 @@ export class ApiService {
   }
 
   getGroupTakenPositions(groupId) {
-    const url = environment.serverUrl + 'group_taken_positions';
+    const url = environment.serverUrl + 'group/positions/available';
     let params: URLSearchParams = new URLSearchParams();
     return new Promise((resolve, reject) => {
       params.set('group_id', groupId);
+      params.set('lang', this.langCode);
       params.set('token', localStorage.getItem('token'));
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
@@ -205,11 +260,12 @@ export class ApiService {
   }
 
   validateAccept(id) {
-    const url = environment.serverUrl + 'accept_join_group_request';
+    const url = environment.serverUrl + 'group/requests/answer';
     let params: URLSearchParams = new URLSearchParams();
     return new Promise((resolve, reject) => {
-      params.set('request_answer_code', 'APPROVE');
+      params.set('code', 'APPROVE');
       params.set('request_id', id);
+      params.set('lang', this.langCode);
       params.set('token', localStorage.getItem('token'));
       this.http.get(url, {search: params}).subscribe((res: any) => {
         console.log(res._body);
@@ -221,12 +277,13 @@ export class ApiService {
   }
 
   validateReject(id, comment) {
-    const url = environment.serverUrl + 'reject_join_group_request';
+    const url = environment.serverUrl + 'group/requests/answer';
     let params: URLSearchParams = new URLSearchParams();
     return new Promise((resolve, reject) => {
-      params.set('request_answer_code', 'REJECT');
+      params.set('code', 'REJECT');
       params.set('request_id', id);
       params.set('comments', comment);
+      params.set('lang', this.langCode);
       params.set('token', localStorage.getItem('token'));
       this.http.get(url, {search: params}).subscribe((res) => {
         resolve(res.json());
@@ -237,7 +294,7 @@ export class ApiService {
   }
 
   startGroup(date) {
-    const url = environment.serverUrl + 'start_group';
+    const url = environment.serverUrl + 'group/start';
     let params: URLSearchParams = new URLSearchParams();
     this.groupId.subscribe(data => {
       params.set('group_id', data);
@@ -245,6 +302,7 @@ export class ApiService {
     return new Promise((resolve, reject) => {
       params.set('token', localStorage.getItem('token'));
       params.set('first_payment_date', date);
+      params.set('lang', this.langCode);
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
@@ -262,6 +320,7 @@ export class ApiService {
     return new Promise((resolve, reject) => {
       params.set('token', localStorage.getItem('token'));
       params.set('first_payment_date', date);
+      params.set('lang', this.langCode);
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
@@ -269,4 +328,78 @@ export class ApiService {
       });
     });
   }
+
+  removeUser(groupId, memberId) {
+    const url = environment.serverUrl + 'group/users/remove';
+    let params: URLSearchParams = new URLSearchParams();
+    params.set('group_id', groupId);
+    params.set('member_id', memberId);
+    params.set('token', localStorage.getItem('token'));
+    params.set('lang', this.langCode);
+    return new Promise((resolve, reject) => {
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  removeAll() {
+    const url = environment.serverUrl + 'group/users/remove/all';
+    let params: URLSearchParams = new URLSearchParams();
+    this.groupId.subscribe(data => {
+      params.set('group_id', data);
+    });
+    return new Promise((resolve, reject) => {
+      params.set('token', localStorage.getItem('token'));
+      params.set('lang', this.langCode);
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  cancelAll() {
+    const url = environment.serverUrl + 'group/requests/cancel/all';
+    let params: URLSearchParams = new URLSearchParams();
+    this.groupId.subscribe(data => {
+      params.set('group_id', data);
+    });
+    return new Promise((resolve, reject) => {
+      params.set('token', localStorage.getItem('token'));
+      params.set('lang', this.langCode);
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  simulate(group) {
+    const url = environment.serverUrl + 'group/sumlilate';
+    let params: URLSearchParams = new URLSearchParams();
+    params.set('type_code', group.grouptype);
+    params.set('rate', group.rate);
+    params.set('amount', group.amount);
+    params.set('due_day', group.duedate);
+    params.set('currency_code', group.currency);
+    params.set('number_of_members', group.totalnum);
+    params.set('frequency', group.frequency);
+    params.set('token', localStorage.getItem('token'));
+    params.set('lang', this.langCode);
+    if (group.position !== '') {
+      params.set('position', group.position);
+    }
+    return new Promise((resolve, reject) => {
+      this.http.get(url, {search: params}).subscribe(res => {
+        console.log(res);
+        resolve(res.json());
+      });
+    });
+  }
+
 }

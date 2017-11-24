@@ -1254,7 +1254,7 @@ var NiButtonComponent = (function () {
 /***/ "../../../../../src/app/ni-components/ni-card/ni-card.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div\n  class=\"card-wrap\"\n  [ngClass]=\"{\n    'success-card': bgColor === 'success',\n    'info-card': bgColor === 'info',\n    'warning-card': bgColor === 'warning',\n    'danger-card': bgColor === 'danger',\n    'success-color-card': color === 'success',\n    'info-color-card': color === 'info',\n    'warning-color-card': color === 'warning',\n    'danger-color-card': color === 'danger',\n    'bg-image-card': bgImage,\n    'outline-card': outline\n  }\"\n  [ngStyle]=\"{\n   'background-color': customBgColor,\n   'background-image': 'url(' + bgImage + ')',\n   'border-color': customBgColor,\n   'color': customColor\n  }\"\n>\n  <h3\n    class=\"card-header h5\"\n    *ngIf=\"title\"\n    [ngClass]=\"{\n      'text-right': align === 'right',\n      'text-center': align === 'center'\n    }\"\n  >{{title}}</h3>\n\n  <div\n    class=\"card-content\"\n    [ngClass]=\"{\n      'text-right': align === 'right',\n      'text-center': align === 'center'\n    }\"\n    [ngStyle]=\"{'padding': indents}\"\n  >\n    <ng-content></ng-content>\n  </div>\n</div>"
+module.exports = "<div\n  class=\"card-wrap\"\n  [ngClass]=\"{\n    'success-card': bgColor === 'success',\n    'info-card': bgColor === 'info',\n    'warning-card': bgColor === 'warning',\n    'danger-card': bgColor === 'danger',\n    'success-color-card': color === 'success',\n    'info-color-card': color === 'info',\n    'warning-color-card': color === 'warning',\n    'danger-color-card': color === 'danger',\n    'bg-image-card': bgImage,\n    'outline-card': outline\n  }\"\n  [ngStyle]=\"{\n   'background-color': customBgColor,\n   'background-image': 'url(' + bgImage + ')',\n   'border-color': customBgColor,\n   'color': customColor\n  }\"\n>\n  <h3\n    class=\"card-header h5\"\n    *ngIf=\"title\"\n    [ngClass]=\"{\n      'text-right': align === 'right',\n      'text-center': align === 'center'\n    }\"\n  >{{title}} <md-icon *ngIf=\"info\" mdTooltip=\"{{info}}\" mdTooltipPosition=\"below\">info_outline</md-icon></h3>\n\n  <div\n    class=\"card-content\"\n    [ngClass]=\"{\n      'text-right': align === 'right',\n      'text-center': align === 'center'\n    }\"\n    [ngStyle]=\"{'padding': indents}\"\n  >\n    <ng-content></ng-content>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1266,7 +1266,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ":host {\n  display: block;\n  margin: 0 0 1.375rem; }\n  :host .card-wrap {\n    background-color: #fff;\n    background-position: 50% 50%;\n    background-repeat: no-repeat;\n    background-size: cover;\n    border: 1px solid #e5e6e9;\n    border-radius: 3px;\n    box-shadow: 1px 1px 5px 0px rgba(37, 45, 71, 0.25);\n    position: relative; }\n    :host .card-wrap:not(.outline-card) {\n      border: 0 !important; }\n    :host .card-wrap .card-header {\n      background: #e5e6e9;\n      border-radius: 3px 3px 0 0;\n      color: #000000;\n      display: block;\n      margin: 0;\n      padding: 0.6875rem 1.375rem;\n      position: relative; }\n      :host .card-wrap .card-header + .card-content {\n        border-radius: 0 0 3px 3px; }\n    :host .card-wrap .card-content {\n      border-radius: 3px;\n      display: block;\n      padding: 1.375rem;\n      position: relative; }\n    :host .card-wrap.success-card {\n      background: #81C784;\n      border-color: #81C784; }\n      :host .card-wrap.success-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.info-card {\n      background: #64B5F6;\n      border-color: #64B5F6; }\n      :host .card-wrap.info-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.warning-card {\n      background: #FFB74D;\n      border-color: #FFB74D; }\n      :host .card-wrap.warning-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.danger-card {\n      background: #e24d4d;\n      border-color: #e24d4d; }\n      :host .card-wrap.danger-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.success-color-card {\n      color: #81C784; }\n    :host .card-wrap.info-color-card {\n      color: #64B5F6; }\n    :host .card-wrap.warning-color-card {\n      color: #FFB74D; }\n    :host .card-wrap.danger-color-card {\n      color: #e24d4d; }\n    :host .card-wrap.outline-card {\n      background: none !important;\n      box-shadow: none !important; }\n    :host .card-wrap.bg-image-card {\n      border: none !important; }\n      :host .card-wrap.bg-image-card:before {\n        background-color: inherit;\n        border-radius: 3px;\n        content: '';\n        display: block;\n        height: 100%;\n        left: 0;\n        position: absolute;\n        top: 0;\n        width: 100%; }\n", ""]);
+exports.push([module.i, ":host {\n  display: block;\n  margin: 0 0 1.375rem; }\n  :host .card-wrap {\n    background-color: #fff;\n    background-position: 50% 50%;\n    background-repeat: no-repeat;\n    background-size: cover;\n    border: 1px solid #e5e6e9;\n    border-radius: 3px;\n    box-shadow: 1px 1px 5px 0px rgba(37, 45, 71, 0.25);\n    position: relative; }\n    :host .card-wrap:not(.outline-card) {\n      border: 0 !important; }\n    :host .card-wrap .card-header {\n      background: #e5e6e9;\n      border-radius: 3px 3px 0 0;\n      color: #000000;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      margin: 0;\n      padding: 0.6875rem 1.375rem;\n      position: relative; }\n      :host .card-wrap .card-header md-icon {\n        margin-left: 10px; }\n      :host .card-wrap .card-header + .card-content {\n        border-radius: 0 0 3px 3px; }\n    :host .card-wrap .card-content {\n      border-radius: 3px;\n      display: block;\n      padding: 1.375rem;\n      position: relative; }\n    :host .card-wrap.success-card {\n      background: #81C784;\n      border-color: #81C784; }\n      :host .card-wrap.success-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.info-card {\n      background: #64B5F6;\n      border-color: #64B5F6; }\n      :host .card-wrap.info-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.warning-card {\n      background: #FFB74D;\n      border-color: #FFB74D; }\n      :host .card-wrap.warning-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.danger-card {\n      background: #e24d4d;\n      border-color: #e24d4d; }\n      :host .card-wrap.danger-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.success-color-card {\n      color: #81C784; }\n    :host .card-wrap.info-color-card {\n      color: #64B5F6; }\n    :host .card-wrap.warning-color-card {\n      color: #FFB74D; }\n    :host .card-wrap.danger-color-card {\n      color: #e24d4d; }\n    :host .card-wrap.outline-card {\n      background: none !important;\n      box-shadow: none !important; }\n    :host .card-wrap.bg-image-card {\n      border: none !important; }\n      :host .card-wrap.bg-image-card:before {\n        background-color: inherit;\n        border-radius: 3px;\n        content: '';\n        display: block;\n        height: 100%;\n        left: 0;\n        position: absolute;\n        top: 0;\n        width: 100%; }\n", ""]);
 
 // exports
 
@@ -1303,6 +1303,7 @@ var NiCardComponent = (function () {
         this.outline = false;
         this.indents = '';
         this.align = 'left';
+        this.info = '';
     }
     NiCardComponent.prototype.ngOnInit = function () { };
     __decorate([
@@ -1341,6 +1342,10 @@ var NiCardComponent = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], NiCardComponent.prototype, "align", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", String)
+    ], NiCardComponent.prototype, "info", void 0);
     NiCardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'ni-card',
@@ -1536,7 +1541,8 @@ var NiComponentsModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_17__angular_material__["v" /* MdProgressSpinnerModule */],
                 __WEBPACK_IMPORTED_MODULE_17__angular_material__["s" /* MdOptionModule */],
                 __WEBPACK_IMPORTED_MODULE_17__angular_material__["b" /* MdButtonModule */],
-                __WEBPACK_IMPORTED_MODULE_17__angular_material__["y" /* MdSelectModule */]
+                __WEBPACK_IMPORTED_MODULE_17__angular_material__["y" /* MdSelectModule */],
+                __WEBPACK_IMPORTED_MODULE_17__angular_material__["H" /* MdTooltipModule */]
             ],
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_4__ni_alert_ni_alert_component__["a" /* NiAlertComponent */],
@@ -1547,13 +1553,14 @@ var NiComponentsModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_9__ni_chat_ni_chat_component__["a" /* NiChatComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__ni_file_ni_file_component__["a" /* NiFileComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__ni_h_timeline_ni_h_timeline_component__["a" /* NiHTimelineComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__ni_table_ni_table_component__["a" /* NiTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__ni_table_ni_table_component__["b" /* NiTableComponent */],
                 __WEBPACK_IMPORTED_MODULE_13__directives_color_color_directive__["a" /* ColorDirective */],
                 __WEBPACK_IMPORTED_MODULE_14__directives_bg_bg_directive__["a" /* BgDirective */],
                 __WEBPACK_IMPORTED_MODULE_15__directives_gradient_gradient_directive__["a" /* GradientDirective */],
                 __WEBPACK_IMPORTED_MODULE_16__directives_auto_grow_auto_grow_directive__["a" /* AutoGrowDirective */],
                 __WEBPACK_IMPORTED_MODULE_18__ni_loading_ni_loading_component__["a" /* NiLoadingComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__ni_pagination_ni_pagination_component__["a" /* NiPaginationComponent */]
+                __WEBPACK_IMPORTED_MODULE_19__ni_pagination_ni_pagination_component__["a" /* NiPaginationComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__ni_table_ni_table_component__["a" /* DialogRemoveComponent */]
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_4__ni_alert_ni_alert_component__["a" /* NiAlertComponent */],
@@ -1564,12 +1571,13 @@ var NiComponentsModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_9__ni_chat_ni_chat_component__["a" /* NiChatComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__ni_file_ni_file_component__["a" /* NiFileComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__ni_h_timeline_ni_h_timeline_component__["a" /* NiHTimelineComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__ni_table_ni_table_component__["a" /* NiTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__ni_table_ni_table_component__["b" /* NiTableComponent */],
                 __WEBPACK_IMPORTED_MODULE_18__ni_loading_ni_loading_component__["a" /* NiLoadingComponent */],
                 __WEBPACK_IMPORTED_MODULE_13__directives_color_color_directive__["a" /* ColorDirective */],
                 __WEBPACK_IMPORTED_MODULE_14__directives_bg_bg_directive__["a" /* BgDirective */],
                 __WEBPACK_IMPORTED_MODULE_15__directives_gradient_gradient_directive__["a" /* GradientDirective */],
-                __WEBPACK_IMPORTED_MODULE_19__ni_pagination_ni_pagination_component__["a" /* NiPaginationComponent */]
+                __WEBPACK_IMPORTED_MODULE_19__ni_pagination_ni_pagination_component__["a" /* NiPaginationComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__ni_table_ni_table_component__["a" /* DialogRemoveComponent */]
             ]
         })
     ], NiComponentsModule);
@@ -1947,10 +1955,17 @@ var NiPaginationComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/ni-components/ni-table/dialog-remove.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div md-dialog-content>What would you like to do?</div>\n<div md-dialog-actions>\n  <button md-button (click)=\"dialogRef.close('ok')\" color=\"accent\">{{'Ok' | translate}}</button>\n  <button md-button (click)=\"dialogRef.close('cancel')\" color=\"warn\">{{'Cancel' | translate}}</button>\n</div>"
+
+/***/ }),
+
 /***/ "../../../../../src/app/ni-components/ni-table/ni-table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <div class=\"table-responsive\">\n    <table class=\"table table-striped\">\n      <thead>\n      <tr>\n        <th *ngFor=\"let h of headers\">\n          <span *ngIf=\"!h.type\">{{ h | translate }}</span>\n          <span *ngIf=\"h.type\">{{ h.type | translate }}</span>\n        </th>\n      </tr>\n      </thead>\n      <tbody>\n      <tr *ngFor=\"let d of data\">\n        <td *ngFor=\"let s of d\">\n          <span *ngIf=\"!s.type && s !== 'PRIVATE' && s !== 'PUBLIC' && s !== 'FIRST_ARRIVED_FIRST_SERVED' && s !== 'RANDOM' && s !== 'REQUEST_TO_JOIN_GROUP' && s !== 'PENDING' && s !== 'APPROVED'\">{{ s }}</span>\n          <span *ngIf=\"s === 'REQUEST_TO_JOIN_GROUP'\">{{'Join the group' | translate}}</span>\n          <span *ngIf=\"s === 'PENDING'\">{{'Pending' | translate}}</span>\n          <span *ngIf=\"s === 'APPROVED'\">{{'Approved' | translate}}</span>\n          <md-icon *ngIf=\"s === 'PRIVATE'\">person</md-icon>\n          <md-icon *ngIf=\"s === 'PUBLIC'\">people</md-icon>\n          <md-icon *ngIf=\"s === 'FIRST_ARRIVED_FIRST_SERVED'\">arrow_forward</md-icon>\n          <md-icon *ngIf=\"s === 'RANDOM'\">shuffle</md-icon>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'details'\" (click)=\"changePage(s.id)\">details</button>\n          <button md-button color=\"warn\" *ngIf=\"s.type && (s.type)[0] === 'remove'\">remove</button>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'paynow'\">pay now</button>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'Accept'\" (click)=\"showDialog('accept', s.id, s.requestType, s.rotationType)\">Accept</button>\n          <button md-button color=\"warn\" *ngIf=\"s.type && (s.type)[1] === 'Reject'\" (click)=\"showDialog('reject', s.id, s.requestType, s.rotationType)\">Reject</button>\n        </td>\n      </tr>\n      </tbody>\n    </table>\n  </div>\n</div>"
+module.exports = "<div>\n  <div class=\"table-responsive\">\n    <table class=\"table table-striped\">\n      <thead>\n      <tr>\n        <th *ngFor=\"let h of headers\">\n          <span *ngIf=\"!h.type\">{{ h | translate }}</span>\n          <span *ngIf=\"h.type\">{{ h.type | translate }}</span>\n        </th>\n      </tr>\n      </thead>\n      <tbody>\n      <tr *ngFor=\"let d of data\">\n        <td *ngFor=\"let s of d\">\n          <span *ngIf=\"!s.type && s !== 'PRIVATE' && s !== 'PUBLIC' && s !== 'FIRST_ARRIVED_FIRST_SERVED' && s !== 'RANDOM' && s !== 'REQUEST_TO_JOIN_GROUP' && s !== 'PENDING' && s !== 'APPROVED'\">{{ s }}</span>\n          <span *ngIf=\"s === 'REQUEST_TO_JOIN_GROUP'\">{{'Join the group' | translate}}</span>\n          <span *ngIf=\"s === 'PENDING'\">{{'Pending' | translate}}</span>\n          <span *ngIf=\"s === 'APPROVED'\">{{'Approved' | translate}}</span>\n          <md-icon *ngIf=\"s === 'PRIVATE'\">person</md-icon>\n          <md-icon *ngIf=\"s === 'PUBLIC'\">people</md-icon>\n          <md-icon *ngIf=\"s === 'FIRST_ARRIVED_FIRST_SERVED'\">arrow_forward</md-icon>\n          <md-icon *ngIf=\"s === 'RANDOM'\">shuffle</md-icon>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'details'\" (click)=\"changePage(s.id)\">details</button>\n          <button md-button color=\"warn\" *ngIf=\"s.type && (s.type)[0] === 'remove'\" (click)=\"removeUser(s.id)\">remove</button>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'paynow'\">pay now</button>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'Accept'\" (click)=\"showDialog('accept', s.id, s.requestType, s.rotationType)\">Accept</button>\n          <button md-button color=\"warn\" *ngIf=\"s.type && (s.type)[1] === 'Reject'\" (click)=\"showDialog('reject', s.id, s.requestType, s.rotationType)\">Reject</button>\n        </td>\n      </tr>\n      </tbody>\n    </table>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1976,7 +1991,8 @@ module.exports = module.exports.toString();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NiTableComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return NiTableComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogRemoveComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
@@ -2024,6 +2040,17 @@ var NiTableComponent = (function () {
             }
         });
     };
+    NiTableComponent.prototype.removeUser = function (groupId, memberId) {
+        var _this = this;
+        var dialogRef = this.dialog.open(DialogRemoveComponent);
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result === 'ok') {
+                _this.apiService.removeUser(groupId, memberId).then(function (res) {
+                    console.log(res);
+                });
+            }
+        });
+    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Object)
@@ -2045,6 +2072,21 @@ var NiTableComponent = (function () {
     ], NiTableComponent);
     return NiTableComponent;
     var _a, _b;
+}());
+
+var DialogRemoveComponent = (function () {
+    function DialogRemoveComponent(dialogRef) {
+        this.dialogRef = dialogRef;
+    }
+    DialogRemoveComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'dialog-remove',
+            template: __webpack_require__("../../../../../src/app/ni-components/ni-table/dialog-remove.html"),
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MdDialogRef */]) === "function" && _a || Object])
+    ], DialogRemoveComponent);
+    return DialogRemoveComponent;
+    var _a;
 }());
 
 //# sourceMappingURL=ni-table.component.js.map
@@ -2310,7 +2352,7 @@ module.exports = "<div *ngIf=\"type === 'accept' && requestType === 'REQUEST_TO_
 /***/ "../../../../../src/app/pages/default-pages/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n<div class=\"row\">\r\n    <div class=\"col-lg-7\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'request' | translate\">\r\n            <div class=\"table-responsive\">\r\n              <table class=\"table\">\r\n                <tbody *ngFor=\"let user of userRequests\">\r\n                  <tr>\r\n                    <td>{{user.request_date}} : {{user.sender}}<span *ngIf=\"user.request_type === 'REQUEST_TO_JOIN_GROUP'\"> {{'would_you_to_join_the_group' | translate}} </span>{{user.group}} \r\n                      <button md-raised-button color=\"accent\" class=\"btn-action\" (click)=\"showDialog('accept', user)\">Accept</button>\r\n                      <button md-raised-button color=\"warn\" class=\"btn-action\" (click)=\"showDialog('reject', user)\">Reject</button>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n              </table>\r\n            </div>\r\n            <ni-pagination [total]=\"userPages\" *ngIf=\"userPages > 0\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'nextpayment' | translate\">\r\n            <ni-table [headers]=\"nextPaymentHeader\" [data]=\"nextPayment\"></ni-table>\r\n            <ni-pagination [total]=\"nextPages\" *ngIf=\"nextPages > 0\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-5\">\r\n      <ni-card [title]=\"'timeline' | translate\">\r\n        <ni-h-timeline [showYears]=\"true\" [showDate]=\"true\" [align]=\"'between'\" [data]=\"timelineData\"></ni-h-timeline>\r\n      </ni-card>\r\n    </div>\r\n</div>"
+module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n<div class=\"row\">\r\n    <div class=\"col-lg-7\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'request' | translate\" [info]=\"'requestinfo' | translate\">\r\n            <div class=\"table-responsive\">\r\n              <table class=\"table\" *ngIf=\"userRequests.length > 0\">\r\n                <tbody *ngFor=\"let user of userRequests\">\r\n                  <tr>\r\n                    <td>{{user.request_date}} : {{user.sender}}<span *ngIf=\"user.request_type === 'REQUEST_TO_JOIN_GROUP'\"> {{'would_you_to_join_the_group' | translate}} </span>{{user.group}} \r\n                      <button md-raised-button color=\"accent\" class=\"btn-action\" (click)=\"showDialog('accept', user)\">Accept</button>\r\n                      <button md-raised-button color=\"warn\" class=\"btn-action\" (click)=\"showDialog('reject', user)\">Reject</button>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n              </table>\r\n              <ni-alert *ngIf=\"userRequests.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'norequest' | translate}}</strong></ni-alert>\r\n            </div>\r\n            <ni-pagination [total]=\"userPages\" *ngIf=\"userPages > 0\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'nextpayment' | translate\" [info]=\"'paymentinfo' | translate\">\r\n            <ni-table *ngIf=\"nextPayment.length > 0\" [headers]=\"nextPaymentHeader\" [data]=\"nextPayment\"></ni-table>\r\n            <ni-alert *ngIf=\"nextPayment.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nopayment' | translate}}</strong></ni-alert>\r\n            <ni-pagination [total]=\"nextPages\" *ngIf=\"nextPages > 0\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-5\">\r\n      <ni-card [title]=\"'timeline' | translate\" [info]=\"'timelineinfo' | translate\">\r\n        <ni-h-timeline [showYears]=\"true\" [showDate]=\"true\" [align]=\"'between'\" [data]=\"timelineData\"></ni-h-timeline>\r\n      </ni-card>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -2362,6 +2404,9 @@ var PageDashboardComponent = (function () {
         this.apiService = apiService;
         this.dialog = dialog;
         this.pageTitle = 'dashboard';
+        this.userRequests = [];
+        this.nextPayment = [];
+        this.nextPaymentHeader = [];
         this.timelineData = [];
         this.userPages = 0;
         this.nextPages = 0;
@@ -2493,7 +2538,7 @@ module.exports = "<h2 md-dialog-title>Start Group</h2>\n<div md-dialog-content *
 /***/ "../../../../../src/app/pages/default-pages/groups/groups.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-alert [color]=\"'success'\" *ngIf=\"showGroupAlert === true\"><strong>Group has been created!</strong></ni-alert>\r\n<div *ngIf=\"showGroupList\">\r\n  <div class=\"row members-header\">\r\n    <div class=\"col-sm-6\">\r\n      <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \r\n    </div>\r\n    <div class=\"col-sm-6 text-right\">\r\n      <md-input-container class=\"search-group md-icon-left\">\r\n        <md-icon>search</md-icon>\r\n        <input mdInput value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12 p-3\">\r\n      <ni-table [headers]=\"groupHeaders\" [data]=\"groups\"></ni-table>\r\n      <ni-pagination [total]=\"groupsPage\" *ngIf=\"groupsPage > 0\"></ni-pagination>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"!showGroupList\">\r\n  <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n  <md-tab-group>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>home</md-icon> {{'Home' | translate}}\r\n      </ng-template>\r\n      <div class=\"row p-2\">\r\n        <div class=\"col-md-7 mb-3\">\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\" (click)=\"openStartDialog()\">Start</button>\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\" (click)=\"openDialog()\">Add a member</button>\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\">Save changes</button>\r\n          <md-card class=\"example-card mt-3\" *ngIf=\"groupInfo && groupInfo.group_info\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Name:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.name}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Description:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.description}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Date creation:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [mdDatepicker]=\"picker\" value=\"{{groupInfo.group_info.date_creation}}\" disabled>\r\n                  <button mdSuffix [mdDatepickerToggle]=\"picker\" disabled></button>\r\n                </md-input-container>\r\n                <md-datepicker #picker></md-datepicker>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">\r\n                <md-icon *ngIf=\"groupInfo.group_info.g_type === 'PRIVATE'\">person</md-icon>\r\n                <md-icon *ngIf=\"groupInfo.group_info.g_type === 'PUBLIC'\">people</md-icon>\r\n                Type:\r\n              </label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.g_type\">\r\n                  <md-option [value]=\"groupInfo.group_info.g_type\">{{groupInfo.group_info.g_type}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Currency:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.currency\">\r\n                  <md-option [value]=\"groupInfo.group_info.currency\">{{groupInfo.group_info.currency}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Creator:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.creator}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">\r\n                  <md-icon *ngIf=\"groupInfo.group_info.status === 'RUNNING'\">rotate_right</md-icon>\r\n                  <md-icon *ngIf=\"groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\">pause_circle_outline</md-icon>\r\n                  Status:\r\n              </label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.status\">\r\n                  <md-option [value]=\"groupInfo.group_info.status\">{{groupInfo.group_info.status === 'RUNNING' ? 'Login' : groupInfo.group_info.status}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Rate:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.rate}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Frequency:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.frequency}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Due date:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.due_day}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">nb members:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.nb_members}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-5\">\r\n          <ni-card [customBgColor]=\"'rgba(100,181,246,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-6.jpg'\" class=\"info-card\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'\">\r\n            <div class=\"title text-uppercase\">{{'Amount' | translate}}</div>\r\n            <div class=\"count\">2,543</div>\r\n          </ni-card>\r\n          <ni-card [title]=\"'timeline' | translate\" [customBgColor]=\"'transparent'\">\r\n            <ni-h-timeline [data]=\"timelineData\"></ni-h-timeline>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.previous_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Previous Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.previous_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.previous_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.previous_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.previous_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.next_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Next Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.next_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.next_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.next_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.next_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>card_membership</md-icon> {{'Members' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"accent\" (click)=\"openDialog()\">Add a member</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table [headers]=\"memberHeaders\" [data]=\"members\"></ni-table>\r\n          <ni-pagination [total]=\"memberPage\" *ngIf=\"memberPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>check_box</md-icon> {{'Obligation' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table [headers]=\"obligationHeaders\" [data]=\"obligations\"></ni-table>\r\n          <ni-pagination [total]=\"obligationPage\" *ngIf=\"obligationPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>sms_failed</md-icon> {{'Requests' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n          <ni-pagination [total]=\"requestPage\" *ngIf=\"requestPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>event</md-icon> {{'Event' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table [headers]=\"eventHeaders\" [data]=\"events\"></ni-table>\r\n          <ni-pagination [total]=\"eventPage\" *ngIf=\"eventPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>local_atm</md-icon> {{'transaction' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table [headers]=\"transactionHeaders\" [data]=\"transactions\"></ni-table>\r\n          <ni-pagination [total]=\"transactionPage\" *ngIf=\"transactionPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n  </md-tab-group>\r\n</div>\r\n\r\n<ni-loading></ni-loading>"
+module.exports = "<ni-alert [color]=\"'success'\" *ngIf=\"showGroupAlert === true\"><strong>Group has been created!</strong></ni-alert>\r\n<div *ngIf=\"showGroupList\">\r\n  <div class=\"row members-header\">\r\n    <div class=\"col-sm-6\">\r\n      <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \r\n    </div>\r\n    <div class=\"col-sm-6 text-right\">\r\n      <md-input-container class=\"search-group md-icon-left\">\r\n        <md-icon>search</md-icon>\r\n        <input mdInput value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12 p-3\">\r\n      <ni-table *ngIf=\"groups.length > 0\" [headers]=\"groupHeaders\" [data]=\"groups\"></ni-table>\r\n      <ni-alert *ngIf=\"groups.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nogroup' | translate}}</strong></ni-alert>\r\n      <ni-pagination [total]=\"groupsPage\" *ngIf=\"groupsPage > 0\"></ni-pagination>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"!showGroupList\">\r\n  <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n  <md-tab-group>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>home</md-icon> {{'Home' | translate}}\r\n      </ng-template>\r\n      <div class=\"row p-2\">\r\n        <div class=\"col-md-7 mb-3\">\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\" (click)=\"openStartDialog()\">Start</button>\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\" (click)=\"openDialog()\">Add a member</button>\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\">Save changes</button>\r\n          <md-card class=\"example-card mt-3\" *ngIf=\"groupInfo && groupInfo.group_info\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Name:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.name}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Description:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.description}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Date creation:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [mdDatepicker]=\"picker\" value=\"{{groupInfo.group_info.date_creation}}\" disabled>\r\n                  <button mdSuffix [mdDatepickerToggle]=\"picker\" disabled></button>\r\n                </md-input-container>\r\n                <md-datepicker #picker></md-datepicker>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">\r\n                <md-icon *ngIf=\"groupInfo.group_info.g_type === 'PRIVATE'\">person</md-icon>\r\n                <md-icon *ngIf=\"groupInfo.group_info.g_type === 'PUBLIC'\">people</md-icon>\r\n                Type:\r\n              </label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.g_type\">\r\n                  <md-option [value]=\"groupInfo.group_info.g_type\">{{groupInfo.group_info.g_type}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Currency:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.currency\">\r\n                  <md-option [value]=\"groupInfo.group_info.currency\">{{groupInfo.group_info.currency}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Creator:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.creator}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">\r\n                  <md-icon *ngIf=\"groupInfo.group_info.status === 'RUNNING'\">rotate_right</md-icon>\r\n                  <md-icon *ngIf=\"groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\">pause_circle_outline</md-icon>\r\n                  Status:\r\n              </label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.status\">\r\n                  <md-option [value]=\"groupInfo.group_info.status\">{{groupInfo.group_info.status === 'RUNNING' ? 'Login' : groupInfo.group_info.status}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Rate:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.rate}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Frequency:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.frequency}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Due date:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.due_day}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">nb members:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.nb_members}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-5\" *ngIf=\"groupInfo.group_info.g_type !== 'PUBLIC'\">\r\n          <ni-card [customBgColor]=\"'rgba(100,181,246,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-6.jpg'\" class=\"info-card\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'\">\r\n            <div class=\"title text-uppercase\">{{'Amount' | translate}}</div>\r\n            <div class=\"count\">2,543</div>\r\n          </ni-card>\r\n          <ni-card [title]=\"'timeline' | translate\" [customBgColor]=\"'transparent'\">\r\n            <ni-h-timeline [data]=\"timelineData\"></ni-h-timeline>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.previous_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Previous Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.previous_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.previous_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.previous_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.previous_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.next_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Next Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.next_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.next_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.next_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.next_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>card_membership</md-icon> {{'Members' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"accent\" (click)=\"openDialog()\">{{'Add a member' | translate}}</button>\r\n          <button md-raised-button color=\"accent\" (click)=\"removeAll()\">{{'Remove all members' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table *ngIf=\"members.length > 0\" [headers]=\"memberHeaders\" [data]=\"members\"></ni-table>\r\n          <ni-alert *ngIf=\"members.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nomember' | translate}}</strong></ni-alert>\r\n          <ni-pagination [total]=\"memberPage\" *ngIf=\"memberPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>check_box</md-icon> {{'Obligation' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"accent\" (click)=\"cancelAll()\">{{'Cancel all outstanding request' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table *ngIf=\"obligations.length > 0\" [headers]=\"obligationHeaders\" [data]=\"obligations\"></ni-table>\r\n          <ni-alert *ngIf=\"obligations.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noobligation' | translate}}</strong></ni-alert>\r\n          <ni-pagination [total]=\"obligationPage\" *ngIf=\"obligationPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>sms_failed</md-icon> {{'Requests' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table *ngIf=\"requests.length > 0\" [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n          <ni-alert *ngIf=\"requests.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'norequest' | translate}}</strong></ni-alert>\r\n          <ni-pagination [total]=\"requestPage\" *ngIf=\"requestPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>event</md-icon> {{'Event' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table *ngIf=\"events.length > 0\" [headers]=\"eventHeaders\" [data]=\"events\"></ni-table>\r\n          <ni-alert *ngIf=\"events.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noevent' | translate}}</strong></ni-alert>\r\n          <ni-pagination [total]=\"eventPage\" *ngIf=\"eventPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>local_atm</md-icon> {{'transaction' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table *ngIf=\"transactions.length > 0\" [headers]=\"transactionHeaders\" [data]=\"transactions\"></ni-table>\r\n          <ni-alert *ngIf=\"transactions.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'notransaction' | translate}}</strong></ni-alert>\r\n          <ni-pagination [total]=\"transactionPage\" *ngIf=\"transactionPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n  </md-tab-group>\r\n</div>\r\n\r\n<ni-loading></ni-loading>"
 
 /***/ }),
 
@@ -2691,6 +2736,16 @@ var PageGroupsComponent = (function () {
     };
     PageGroupsComponent.prototype.format = function (d) {
         return (d < 10) ? '0' + d.toString() : d.toString();
+    };
+    PageGroupsComponent.prototype.removeAll = function () {
+        this.apiService.removeAll().then(function (res) {
+            console.log(res);
+        });
+    };
+    PageGroupsComponent.prototype.cancelAll = function () {
+        this.apiService.cancelAll().then(function (res) {
+            console.log(res);
+        });
     };
     PageGroupsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -2899,7 +2954,7 @@ var PageObligationComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/profile/profile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'danger'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Orders</div>\r\n      <div class=\"count\">2,145</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+17%</ni-badge> <small>from previous period</small>\r\n      <md-icon>shopping_basket</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'warning'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Revenue</div>\r\n      <div class=\"count\">$ 50,24</div>\r\n      <small>11750</small>\r\n      <md-icon>equalizer</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'info'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Products</div>\r\n      <div class=\"count\">2,543</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+210</ni-badge>\r\n      <md-icon>monetization_on</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [bgColor]=\"'success'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Sold</div>\r\n      <div class=\"count\">1,005</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+24%</ni-badge>\r\n      <md-icon>donut_large</md-icon>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"clearfix\"></div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [customBgColor]=\"'rgba(226,77,77,0.6)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-4.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Orders</div>\r\n      <div class=\"count\">2,145</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+17%</ni-badge> <small>from previous period</small>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [customBgColor]=\"'rgba(255,183,77,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-5.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Revenue</div>\r\n      <div class=\"count\">$ 50,24</div>\r\n      <small>11750</small>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [customBgColor]=\"'rgba(100,181,246,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-6.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Products</div>\r\n      <div class=\"count\">2,543</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+210</ni-badge>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [customBgColor]=\"'rgba(129,199,132,0.8)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-7.jpg'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Sold</div>\r\n      <div class=\"count\">1,005</div>\r\n      <ni-badge [customColor]=\"'rgba(255,255,255,0.3)'\" [borderRadius]=\"false\">+24%</ni-badge>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"clearfix\"></div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [outline]=\"true\" [bgColor]=\"'danger'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Orders</div>\r\n      <div class=\"count\">2,145</div>\r\n      <ni-badge [color]=\"'danger'\">+17%</ni-badge> <small>from previous period</small>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [outline]=\"true\" [bgColor]=\"'warning'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Revenue</div>\r\n      <div class=\"count\">$ 50,24</div>\r\n      <small>11750</small>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [outline]=\"true\" [bgColor]=\"'info'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Products</div>\r\n      <div class=\"count\">2,543</div>\r\n      <ni-badge [color]=\"'info'\">+210</ni-badge>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 col-xl-3\">\r\n    <ni-card [outline]=\"true\" [bgColor]=\"'success'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">Sold</div>\r\n      <div class=\"count\">1,005</div>\r\n      <ni-badge [color]=\"'success'\">+24%</ni-badge>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"clearfix\"></div>\r\n\r\n  <div class=\"col-xl-4\">\r\n    <ni-card [bgColor]=\"''\" class=\"chart-card\">\r\n      <div class=\"chart\">\r\n        <canvas\r\n          baseChart\r\n          [data]=\"pieChartData\"\r\n          [colors]=\"pieChartColors\"\r\n          [labels]=\"pieChartLabels\"\r\n          [legend]=\"false\"\r\n          [options]=\"pieChartOptions\"\r\n          [chartType]=\"pieChartType\"></canvas>\r\n      </div>\r\n      <div class=\"info\">\r\n        <div class=\"title\"><strong>930</strong> <small>Resolved</small></div>\r\n        <div class=\"small\">More than 70% resolved issues</div>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-xl-4\">\r\n    <ni-card [bgColor]=\"''\" class=\"chart-card\">\r\n      <div class=\"chart\">\r\n        <canvas\r\n          baseChart\r\n          [data]=\"doughnutChartData\"\r\n          [colors]=\"doughnutChartColors\"\r\n          [labels]=\"doughnutChartLabels\"\r\n          [legend]=\"false\"\r\n          [options]=\"doughnutChartOptions\"\r\n          [chartType]=\"doughnutChartType\"></canvas>\r\n      </div>\r\n      <div class=\"info\">\r\n        <div class=\"title\"><strong>466</strong> <small>Unresolved</small></div>\r\n        <div class=\"small\">Less than 30% unresolved issues</div>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-xl-4\">\r\n    <ni-card [bgColor]=\"''\" class=\"chart-card\">\r\n      <div class=\"chart\">\r\n        <canvas\r\n          baseChart\r\n          [data]=\"polarAreaChartData\"\r\n          [colors]=\"polarAreaChartColors\"\r\n          [labels]=\"polarAreaChartLabels\"\r\n          [legend]=\"false\"\r\n          [options]=\"polarAreaChartOptions\"\r\n          [chartType]=\"polarAreaChartType\"></canvas>\r\n      </div>\r\n      <div class=\"info\">\r\n        <div class=\"title\"><strong>1,547</strong> <small>Issues</small></div>\r\n        <div class=\"small\">8 issues are unassigned</div>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row mb-lg-4\">\r\n  <div class=\"col-lg-6 map-col mb-4 mb-lg-0\">\r\n    <ni-card [indents]=\"0\" class=\"mb-0\">\r\n      <agm-map [latitude]=\"lat\" [longitude]=\"lng\">\r\n        <agm-marker [latitude]=\"lat\" [longitude]=\"lng\"></agm-marker>\r\n      </agm-map>\r\n    </ni-card>\r\n    <div class=\"clearfix\"></div>\r\n  </div>\r\n\r\n  <div class=\"col-lg-6\">\r\n    <ni-card class=\"mb-lg-0\">\r\n      <canvas\r\n        baseChart\r\n        [datasets]=\"barChartData\"\r\n        [labels]=\"barChartLabels\"\r\n        [options]=\"barChartOptions\"\r\n        [legend]=\"barChartLegend\"\r\n        [chartType]=\"barChartType\"></canvas>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-lg-6\">\r\n    <ni-card [title]=\"'Users'\" class=\"mb-lg-0\">\r\n      <md-list>\r\n        <md-list-item *ngFor=\"let message of messages\">\r\n          <img md-list-avatar src=\"{{ message.avatar }}\" width=\"40\" height=\"40\" alt=\"\">\r\n          <h3 md-line class=\"h3\">{{ message.from }}</h3>\r\n          <p md-line><i>\r\n            <span>{{message.subject}}</span>\r\n            <span> -- {{ message.content }}</span>\r\n          </i></p>\r\n        </md-list-item>\r\n      </md-list>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-lg-6\">\r\n    <ni-card [title]=\"'To do list'\" class=\"mb-0\">\r\n      <md-list>\r\n        <md-list-item *ngFor=\"let folder of folders\">\r\n          <md-icon md-list-avatar>{{folder.icon}}<ni-badge *ngIf=\"folder.badge\" [color]=\"'danger'\" [position]=\"'top-right'\">{{folder.badge}}</ni-badge></md-icon>\r\n          <h4 md-line>{{folder.name}}</h4>\r\n          <p md-line><i>{{folder.updated}}</i></p>\r\n        </md-list-item>\r\n      </md-list>\r\n    </ni-card>\r\n  </div>\r\n</div>\r\n"
+module.exports = "\r\n<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n<md-tab-group>\r\n  <md-tab>\r\n    <ng-template md-tab-label>\r\n      {{'Identification' | translate}}\r\n    </ng-template>\r\n    <div class=\"row p-2\">\r\n      <div class=\"col-md-12 mb-3\">\r\n        <md-card class=\"example-card mt-3\">\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'First Name' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\" value=\"\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Middle Name' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\" value=\"\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Surname' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\" value=\"\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Gender' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-select class=\"w-full\" [(ngModel)]=\"gender\">\r\n                    <md-option>{{'Male' | translate}}</md-option>\r\n                    <md-option>{{'Female' | translate}}</md-option>\r\n                  </md-select>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Password' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"password\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Password verification' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"password\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Email' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"email\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Photo' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <!-- <md-input-container class=\"mb-0\"> -->\r\n                    <input type=\"file\">\r\n                  <!-- </md-input-container> -->\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Date of Birth'}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\" [mdDatepicker]=\"picker\">\r\n                    <button mdSuffix [mdDatepickerToggle]=\"picker\"></button>\r\n                  </md-input-container>\r\n                  <md-datepicker #picker></md-datepicker>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Country of Birth' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'State of Birth' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Town of Birth' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Account validation status' | translate}}:</label>\r\n            <div class=\"col-sm-6 col-md-8\">\r\n              <p></p>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Account validation start date' | translate}}:</label>\r\n            <div class=\"col-sm-6 col-md-8\">\r\n              <p></p>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Account validation end date' | translate}}:</label>\r\n            <div class=\"col-sm-6 col-md-8\">\r\n              <p></p>\r\n            </div>\r\n          </div>\r\n        </md-card>\r\n        <button md-raised-button color=\"accent\" (click)=\"validate()\" class=\"mt-3\">{{'Validate' | translate}}</button>\r\n      </div>\r\n    </div>\r\n  </md-tab>\r\n  <md-tab>\r\n    <ng-template md-tab-label>\r\n      {{'Address and occupation' | translate}}\r\n    </ng-template>\r\n    <div class=\"row p-2\">\r\n      <div class=\"col-md-12 mb-3\">\r\n        <md-card class=\"mt-3\">\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Address number' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Address street name' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Address post code' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Address town' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Address state' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Address country' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Address extra info' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Contact home phone' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Contact office phone' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Contact mobile phone' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Occupation' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Occupation sector' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Yearly income' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </md-card>\r\n        <button md-raised-button color=\"accent\" class=\"mt-3\" (click)=\"validate()\">{{'Validate' | translate}}</button>\r\n      </div>\r\n    </div>\r\n  </md-tab>\r\n  <md-tab>\r\n    <ng-template md-tab-label>\r\n      {{'Payment means' | translate}}\r\n    </ng-template>\r\n    <div class=\"row p-2\">\r\n      <div class=\"col-md-12 mb-3\"></div>\r\n    </div>\r\n  </md-tab>\r\n</md-tab-group>"
 
 /***/ }),
 
@@ -2911,7 +2966,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".map-col .ni-card {\n  height: 100%; }\n  .map-col .ni-card /deep/.card-wrap {\n    height: 100%; }\n    .map-col .ni-card /deep/.card-wrap .card-content {\n      height: 100%; }\n\n.sebm-google-map-container {\n  height: 100%;\n  min-height: 200px; }\n  .sebm-google-map-container /deep/.sebm-google-map-container-inner {\n    min-height: 200px; }\n", ""]);
+exports.push([module.i, "md-select {\n  width: 100%; }\n", ""]);
 
 // exports
 
@@ -2928,6 +2983,7 @@ module.exports = module.exports.toString();
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageProfileComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2939,209 +2995,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var messages = [
-    {
-        from: 'Nancy',
-        subject: 'HTML',
-        content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-        avatar: 'assets/content/avatar-4.jpg'
-    },
-    {
-        from: 'Mary',
-        subject: 'Css',
-        content: 'Lorem Ipsum has been the industrys standard',
-        avatar: 'assets/content/avatar-3.jpg'
-    },
-    {
-        from: 'Bobby',
-        subject: 'Angular 2',
-        content: 'It is a long established fact that a reader will be distracted by the readable content',
-        avatar: 'assets/content/avatar-2.jpg'
-    },
-    {
-        from: 'Roma',
-        subject: 'Type Script',
-        content: 'There are many variations of passages of',
-        avatar: 'assets/content/avatar-1.jpg'
-    },
-    {
-        from: 'Amanda',
-        subject: 'PHP',
-        content: 'Lorem Ipsum has been the industrys standard',
-        avatar: 'assets/content/avatar-5.jpg'
-    },
-    {
-        from: 'Tom',
-        subject: 'Sql',
-        content: 'There are many variations of passages of',
-        avatar: 'assets/content/avatar-6.jpg'
-    }
-];
-var folders = [
-    {
-        icon: 'android',
-        badge: false,
-        name: 'Android app',
-        updated: 'March 21, 2017'
-    },
-    {
-        icon: 'update',
-        badge: false,
-        name: 'Update plugins',
-        updated: 'March 19, 2017'
-    },
-    {
-        icon: 'bug_report',
-        badge: false,
-        name: 'Fix bugs',
-        updated: 'March 22, 2017'
-    },
-    {
-        icon: 'unarchive',
-        badge: false,
-        name: 'Create app design',
-        updated: 'March 25, 2017'
-    },
-    {
-        icon: 'content_copy',
-        badge: 8,
-        name: 'Create widgets',
-        updated: 'March 16, 2017'
-    },
-    {
-        icon: 'folder_open',
-        badge: false,
-        name: 'Documentation',
-        updated: 'March 28, 2017'
-    }
-];
+
 var PageProfileComponent = (function () {
-    function PageProfileComponent(_sharedService) {
+    function PageProfileComponent(_sharedService, api) {
         this._sharedService = _sharedService;
+        this.api = api;
         this.pageTitle = 'profile';
-        this.lat = 50.4664212;
-        this.lng = 30.6;
-        this.messages = messages;
-        this.folders = folders;
         this.breadcrumb = [{ title: 'profile' }];
-        // barChart
-        this.barChartOptions = {
-            scaleShowVerticalLines: false,
-            responsive: true,
-            responsiveAnimationDuration: 500
-        };
-        this.barChartLabels = [
-            '2012',
-            '2013',
-            '2014',
-            '2015',
-            '2016',
-            '2017'
-        ];
-        this.barChartType = 'bar';
-        this.barChartLegend = true;
-        this.barChartData = [
-            {
-                data: [59, 80, 81, 56, 55, 40],
-                label: 'Angular JS',
-                borderWidth: 1,
-                pointRadius: 1
-            },
-            {
-                data: [48, 40, 19, 86, 27, 90],
-                label: 'React JS',
-                borderWidth: 1,
-                pointRadius: 1
-            }
-        ];
-        // Pie
-        this.pieChartLabels = [
-            'Angular',
-            'PHP',
-            'HTML'
-        ];
-        this.pieChartData = [
-            300,
-            500,
-            100
-        ];
-        this.pieChartColors = [
-            {
-                backgroundColor: [
-                    "#778391",
-                    "#5dade0",
-                    "#3c4e62"
-                ],
-            }
-        ];
-        this.pieChartType = 'pie';
-        this.pieChartOptions = {
-            elements: {
-                arc: {
-                    borderWidth: 0
-                }
-            },
-            tooltips: false
-        };
-        //Doughnut
-        this.doughnutChartLabels = [
-            'Angular',
-            'PHP',
-            'HTML'
-        ];
-        this.doughnutChartData = [
-            350,
-            450,
-            100
-        ];
-        this.doughnutChartColors = [
-            {
-                backgroundColor: [
-                    "#778391",
-                    "#ff8c00",
-                    "#3c4e62"
-                ],
-            }
-        ];
-        this.doughnutChartType = 'doughnut';
-        this.doughnutChartOptions = {
-            elements: {
-                arc: {
-                    borderWidth: 0
-                }
-            },
-            tooltips: false
-        };
-        // PolarArea
-        this.polarAreaChartLabels = [
-            'Angular',
-            'PHP',
-            'HTML'
-        ];
-        this.polarAreaChartData = [
-            300,
-            400,
-            500
-        ];
-        this.polarAreaChartColors = [
-            {
-                backgroundColor: [
-                    "#778391",
-                    "#dc143c",
-                    "#3c4e62"
-                ],
-            }
-        ];
-        this.polarAreaChartType = 'polarArea';
-        this.polarAreaChartOptions = {
-            elements: {
-                arc: {
-                    borderWidth: 0
-                }
-            },
-            tooltips: false
-        };
+        this.gender = '';
         this._sharedService.emitChange(this.pageTitle);
+        api.getUserInfo().then(function (res) {
+            console.log(res);
+        });
     }
     PageProfileComponent.prototype.ngOnInit = function () { };
     PageProfileComponent = __decorate([
@@ -3150,10 +3015,10 @@ var PageProfileComponent = (function () {
             template: __webpack_require__("../../../../../src/app/pages/default-pages/profile/profile.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/default-pages/profile/profile.component.scss")]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
     ], PageProfileComponent);
     return PageProfileComponent;
-    var _a;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=profile.component.js.map
@@ -3245,7 +3110,7 @@ var PageRequestsComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/simulation/simulation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\n<ni-card [title]=\"'Headers'\">\n  <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>\n  <div class=\"row\">\n    <div class=\"col-md-6\">\n      <h1>Heading 1</h1>\n      <h2>Heading 2</h2>\n      <h3>Heading 3</h3>\n      <h4>Heading 4</h4>\n      <h5>Heading 5</h5>\n      <h6>Heading 6</h6>\n    </div>\n    <div class=\"col-md-6\">\n      <h1 class=\"text-uppercase\">Heading 1</h1>\n      <h2 class=\"text-uppercase\">Heading 2</h2>\n      <h3 class=\"text-uppercase\">Heading 3</h3>\n      <h4 class=\"text-uppercase\">Heading 4</h4>\n      <h5 class=\"text-uppercase\">Heading 5</h5>\n      <h6 class=\"text-uppercase\">Heading 6</h6>\n    </div>\n  </div>\n</ni-card>\n\n<ni-card [title]=\"'Text style'\">\n  <p><code>.mark</code> and <code>.small</code> classes are also available to apply the same styles as <code>&lt;mark&gt;</code> and <code>&lt;small&gt;</code> while avoiding any unwanted semantic implications that the tags would bring.</p>\n  <p>You can use the mark tag to <mark>highlight</mark> text.</p>\n  <p><del>This line of text is meant to be treated as deleted text.</del></p>\n  <p><s>This line of text is meant to be treated as no longer accurate.</s></p>\n  <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>\n  <p><u>This line of text will render as underlined</u></p>\n  <p><small>This line of text is meant to be treated as fine print.</small></p>\n  <p><strong>This line rendered as bold text.</strong></p>\n  <p><em>This line rendered as italicized text.</em></p>\n</ni-card>\n\n<ni-card [title]=\"'Blockquotes'\">\n  <p>For quoting blocks of content from another source within your document. Wrap <code>&lt;blockquote class=\"blockquote\"&gt;</code> around any <abbr title=\"HyperText Markup Language\">HTML</abbr> as the quote.</p>\n  <blockquote class=\"blockquote\">\n    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\n    <footer class=\"blockquote-footer\">Someone famous in <cite title=\"Source Title\">Source Title</cite></footer>\n  </blockquote>\n\n  <blockquote class=\"blockquote blockquote-reverse\">\n    <p class=\"mb-0\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\n    <footer class=\"blockquote-footer\">Someone famous in <cite title=\"Source Title\">Source Title</cite></footer>\n  </blockquote>\n</ni-card>\n\n<ni-card [title]=\"'Lists'\">\n  <div class=\"row\">\n    <div class=\"col-md-6\">\n      <ul>\n        <li>Lorem ipsum dolor sit amet</li>\n        <li>Consectetur adipiscing elit</li>\n        <li>Integer molestie lorem at massa</li>\n        <li>Facilisis in pretium nisl aliquet</li>\n        <li>Nulla volutpat aliquam velit\n          <ul>\n            <li>Phasellus iaculis neque</li>\n            <li>Purus sodales ultricies</li>\n            <li>Vestibulum laoreet porttitor sem</li>\n            <li>Ac tristique libero volutpat at</li>\n          </ul>\n        </li>\n        <li>Faucibus porta lacus fringilla vel</li>\n        <li>Aenean sit amet erat nunc</li>\n        <li>Eget porttitor lorem</li>\n      </ul>\n    </div>\n    <div class=\"col-md-6\">\n      <ol>\n        <li>Lorem ipsum dolor sit amet</li>\n        <li>Consectetur adipiscing elit</li>\n        <li>Integer molestie lorem at massa</li>\n        <li>Facilisis in pretium nisl aliquet</li>\n        <li>Nulla volutpat aliquam velit\n          <ol>\n            <li>Phasellus iaculis neque</li>\n            <li>Purus sodales ultricies</li>\n            <li>Vestibulum laoreet porttitor sem</li>\n            <li>Ac tristique libero volutpat at</li>\n          </ol>\n        </li>\n        <li>Faucibus porta lacus fringilla vel</li>\n        <li>Aenean sit amet erat nunc</li>\n        <li>Eget porttitor lorem</li>\n      </ol>\n    </div>\n  </div>\n</ni-card>\n\n<ni-card [title]=\"'Text alignment'\">\n  <p>Easily realign text to components with text alignment classes.</p>\n  <p class=\"text-left\">Left aligned text on all viewport sizes.</p>\n  <p class=\"text-center\">Center aligned text on all viewport sizes.</p>\n  <p class=\"text-right\">Right aligned text on all viewport sizes.</p>\n</ni-card>\n\n<ni-card [title]=\"'Text transform'\" class=\"mb-0\">\n  <p>Transform text in components with text capitalization classes.</p>\n  <p class=\"text-lowercase\">Lowercased text.</p>\n  <p class=\"text-uppercase\">Uppercased text.</p>\n  <p class=\"text-capitalize\">CapiTaliZed text.</p>\n</ni-card>"
+module.exports = "\n<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\n<md-card>\n  <form [formGroup]=\"form\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"amount\" class=\"text-right\" placeholder=\"{{'Amount' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['amount']\">\n        </md-input-container>\n        <span>{{currencySigns[form.value.currency]}}</span>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"frequency\" placeholder=\"{{'frequency' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['frequency']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'groupmonthinfo' | translate}}\" mdTooltipPosition=\"below\">info_outline</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"{{'Currency' | translate}}\" [formControl]=\"form.controls['currency']\">\n          <md-option *ngFor=\"let c of currencies\" [value]=\"c.code\">\n            {{ c.text }}\n          </md-option>\n        </md-select>\n        <md-icon mdTooltip=\"{{'groupcurrencyinfo' | translate}}\" mdTooltipPosition=\"below\">info_outline</md-icon>    \n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"{{'grouptype' | translate}}\" [formControl]=\"form.controls['grouptype']\">\n          <md-option *ngFor=\"let g of groupTypes\" [value]=\"g.code\">\n            {{ g.text }}\n          </md-option>\n        </md-select>\n        <md-icon mdTooltip=\"{{'grouptypeinfo' | translate}}\" mdTooltipPosition=\"below\">info_outline</md-icon>    \n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"rate\" placeholder=\"{{'Rate' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['rate']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'grouprateinfo' | translate}}\" mdTooltipPosition=\"below\">info_outline</md-icon>    \n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"duedate\" placeholder=\"{{'Due date' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['duedate']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'groupdayinfo' | translate}}\" mdTooltipPosition=\"below\">info_outline</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"totalnum\" placeholder=\"{{'Total number of member' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['totalnum']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"position\" placeholder=\"{{'Position' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['position']\">\n        </md-input-container>\n      </div>\n    </div>\n    <p>The payment will be done every {{form.value.frequency}} {{form.value.frequency > 1 ? 'months' : 'month'}}, and the receiver will get {{form.value.amount}} the amount in {{form.value.currency}} plus {{form.value.rate}} % interest. The payment will have to be made on the {{form.value.duedate}}.</p>\n    <button md-raised-button color=\"accent\" layout-align=\"end\" (click)=\"simulate()\" [disabled]=\"!form.valid\">{{'Simulate' | translate}}</button>\n  </form>\n</md-card>\n"
 
 /***/ }),
 
@@ -3257,7 +3122,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".col-sm-6 {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n", ""]);
 
 // exports
 
@@ -3273,7 +3138,10 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageSimulationComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3285,24 +3153,63 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
+
 var PageSimulationComponent = (function () {
-    function PageSimulationComponent(_sharedService) {
+    function PageSimulationComponent(_sharedService, fb, apiService, auth) {
         this._sharedService = _sharedService;
+        this.fb = fb;
+        this.apiService = apiService;
+        this.auth = auth;
         this.pageTitle = 'simulation';
         this.breadcrumb = [{ title: 'simulation' }];
+        this.currencySigns = { USD: '$', GBP: '£', EUR: '€', ZEC: 'Z' };
+        this.groupTypes = [];
+        this.currencies = [];
+        this.psTypes = [];
         this._sharedService.emitChange(this.pageTitle);
+        this.form = fb.group({
+            amount: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required],
+            frequency: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required],
+            currency: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required],
+            grouptype: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required],
+            rate: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required],
+            duedate: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required],
+            totalnum: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required],
+            position: [null]
+        });
     }
-    PageSimulationComponent.prototype.ngOnInit = function () { };
+    PageSimulationComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.auth.langCode.subscribe(function (code) {
+            _this.getData();
+        });
+    };
+    PageSimulationComponent.prototype.getData = function () {
+        var _this = this;
+        this.apiService.getListData('Currency').then(function (res) {
+            _this.currencies = res.data;
+        });
+        this.apiService.getListData('GroupType').then(function (res) {
+            _this.groupTypes = res.data;
+        });
+    };
+    PageSimulationComponent.prototype.simulate = function () {
+        this.apiService.simulate(this.form.value).then(function (res) {
+            console.log(res);
+        });
+    };
     PageSimulationComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-simulation',
             template: __webpack_require__("../../../../../src/app/pages/default-pages/simulation/simulation.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/default-pages/simulation/simulation.component.scss")]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */]) === "function" && _d || Object])
     ], PageSimulationComponent);
     return PageSimulationComponent;
-    var _a;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=simulation.component.js.map
@@ -3871,7 +3778,7 @@ var Page500Component = (function () {
 /***/ "../../../../../src/app/pages/extra-pages/signin/signin.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-card [title]=\"'signin' | translate\" [align]=\"'left'\">\r\n  <form (ngSubmit)=\"onSubmit()\" [formGroup]=\"form\">\r\n    <md-input-container>\r\n      <input mdInput [placeholder]=\"'email' | translate\" value=\"\" [formControl]=\"form.controls['email']\" type=\"email\">\r\n      <small *ngIf=\"form.controls['email'].hasError('required') && form.controls['email'].touched\" class=\"form-message text-danger\">{{'emailValid1' | translate}}</small>\r\n      <small *ngIf=\"form.controls['email'].errors?.email && form.controls['email'].touched\" class=\"form-message text-danger\">{{'emailValid2' | translate}}</small>        <small *ngIf=\"form.controls['email'].hasError('required') && form.controls['email'].touched\" class=\"form-message text-danger\">{{'emailValid1' | translate}}</small>\r\n    </md-input-container>\r\n\r\n    <md-input-container>\r\n      <input mdInput [placeholder]=\"'password' | translate\" value=\"\" [formControl]=\"form.controls['password']\" type=\"password\">\r\n      <small *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\" class=\"form-message text-danger\">{{'passwordValid1' | translate}}</small>\r\n    </md-input-container>\r\n\r\n    <div class=\"text-left mb-module\">\r\n      <md-checkbox>\r\n        {{'keepSigned' | translate}}\r\n      </md-checkbox>\r\n    </div>\r\n\r\n    <button md-raised-button color=\"primary\" type=\"submit\" [disabled]=\"!form.valid\">{{'signin' | translate}}</button>\r\n\r\n    <md-select [placeholder]=\"'selectLanguage' | translate\" class=\"mt-4 col-sm-12\" (ngModelChange)=\"changeLanguage()\" [formControl]=\"form.controls['langCode']\">\r\n      <md-option *ngFor=\"let lang of languages\" [value]=\"lang.code\">\r\n        {{ lang.value }}\r\n      </md-option>\r\n    </md-select>\r\n\r\n    <div class=\"additional-info\">\r\n      <a (click)=\"goSignupPage()\">{{'signup' | translate}}</a>\r\n      <span class=\"divider\"></span>\r\n      <a (click)=\"goForgotPage()\">{{'forgotPassword' | translate}}</a>\r\n    </div>\r\n  </form>\r\n</ni-card>\r\n"
+module.exports = "<ni-card [title]=\"'signin' | translate\" [align]=\"'left'\">\r\n  <form (ngSubmit)=\"onSubmit()\" [formGroup]=\"form\">\r\n    <md-input-container>\r\n      <input mdInput [placeholder]=\"'email' | translate\" value=\"\" [formControl]=\"form.controls['email']\" type=\"email\">\r\n      <small *ngIf=\"form.controls['email'].hasError('required') && form.controls['email'].touched\" class=\"form-message text-danger\">{{'emailValid1' | translate}}</small>\r\n      <small *ngIf=\"form.controls['email'].errors?.email && form.controls['email'].touched\" class=\"form-message text-danger\">{{'emailValid2' | translate}}</small>\r\n    </md-input-container>\r\n\r\n    <md-input-container>\r\n      <input mdInput [placeholder]=\"'password' | translate\" value=\"\" [formControl]=\"form.controls['password']\" type=\"password\">\r\n      <small *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\" class=\"form-message text-danger\">{{'passwordValid1' | translate}}</small>\r\n      <small *ngIf=\"form.controls['password'].hasError('minlength') && form.controls['password'].touched\" class=\"form-message text-danger\">{{'passwordValid2' | translate}}</small>\r\n      <small *ngIf=\"!isEmailCorrect\" class=\"form-message text-danger\">{{'emailValid3' | translate}}</small>\r\n    </md-input-container>\r\n\r\n    <div class=\"text-left mb-module\">\r\n      <md-checkbox>\r\n        {{'keepSigned' | translate}}\r\n      </md-checkbox>\r\n    </div>\r\n\r\n    <button md-raised-button color=\"primary\" type=\"submit\" [disabled]=\"!form.valid\">{{'signin' | translate}}</button>\r\n\r\n    <md-select [placeholder]=\"'selectLanguage' | translate\" class=\"mt-4 col-sm-12\" (ngModelChange)=\"changeLanguage()\" [formControl]=\"form.controls['langCode']\">\r\n      <md-option *ngFor=\"let lang of languages\" [value]=\"lang.code\">\r\n        {{ lang.value }}\r\n      </md-option>\r\n    </md-select>\r\n\r\n    <div class=\"additional-info\">\r\n      <a (click)=\"goSignupPage()\">{{'signup' | translate}}</a>\r\n      <span class=\"divider\"></span>\r\n      <a (click)=\"goForgotPage()\">{{'forgotPassword' | translate}}</a>\r\n    </div>\r\n  </form>\r\n</ni-card>\r\n"
 
 /***/ }),
 
@@ -3883,7 +3790,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ":host {\n  background: url(" + __webpack_require__("../../../../../src/assets/content/login-bg.jpg") + ") 50% 50% no-repeat;\n  background-size: cover;\n  display: table-cell;\n  height: 100%;\n  padding: 1.375rem 0;\n  vertical-align: middle;\n  width: 100%; }\n  :host .ni-card {\n    margin: 0 auto;\n    max-width: 400px; }\n    :host .ni-card /deep/ .card-wrap {\n      border: 0; }\n    :host .ni-card form button {\n      width: 100%; }\n    :host .ni-card form .additional-info {\n      background: rgba(0, 0, 0, 0.1);\n      margin: 1.375rem -1.375rem -1.375rem;\n      padding: 0.6875rem 1.375rem; }\n      :host .ni-card form .additional-info .divider {\n        border-left: 1px solid rgba(0, 0, 0, 0.2);\n        display: inline-block;\n        height: 18px;\n        margin: 0 10px;\n        vertical-align: bottom; }\n", ""]);
+exports.push([module.i, ":host {\n  background: url(" + __webpack_require__("../../../../../src/assets/content/login-bg.jpg") + ") 50% 50% no-repeat;\n  background-size: cover;\n  display: table-cell;\n  height: 100%;\n  padding: 1.375rem 0;\n  vertical-align: middle;\n  width: 100%; }\n  :host .ni-card {\n    margin: 0 auto;\n    max-width: 400px; }\n    :host .ni-card /deep/ .card-wrap {\n      border: 0; }\n    :host .ni-card form button {\n      width: 100%; }\n    :host .ni-card form .additional-info {\n      background: rgba(0, 0, 0, 0.1);\n      margin: 1.375rem -1.375rem -1.375rem;\n      padding: 0.6875rem 1.375rem; }\n      :host .ni-card form .additional-info a {\n        cursor: pointer; }\n      :host .ni-card form .additional-info .divider {\n        border-left: 1px solid rgba(0, 0, 0, 0.2);\n        display: inline-block;\n        height: 18px;\n        margin: 0 10px;\n        vertical-align: bottom; }\n", ""]);
 
 // exports
 
@@ -3929,9 +3836,10 @@ var PageSigninComponent = (function () {
         this.fb = fb;
         this.translate = translate;
         this.languages = __WEBPACK_IMPORTED_MODULE_6__settings_menu__["a" /* LANGUAGES */];
+        this.isEmailCorrect = true;
         this.form = this.fb.group({
             email: [null, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required, , __WEBPACK_IMPORTED_MODULE_4_ng2_validation__["CustomValidators"].email])],
-            password: [null, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].minLength(3)])],
+            password: [null, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].minLength(6)])],
             langCode: ['en']
         });
         this.auth.langCode.subscribe(function (code) {
@@ -3945,9 +3853,13 @@ var PageSigninComponent = (function () {
     PageSigninComponent.prototype.onSubmit = function () {
         var _this = this;
         this.auth.login(this.form.value).then(function (res) {
-            if (res === 'yes') {
+            if (res.email_validated === 'yes') {
+                _this.isEmailCorrect = true;
                 localStorage.setItem('login', 'true');
                 _this.router.navigate(['/default-layout/dashboard']);
+            }
+            else {
+                _this.isEmailCorrect = false;
             }
         });
     };
@@ -3992,7 +3904,7 @@ module.exports = "<h2 md-dialog-title>Privacy and Terms</h2>\n<div md-dialog-con
 /***/ "../../../../../src/app/pages/extra-pages/signup/signup.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-card [title]=\"'signup' | translate\" [align]=\"'left'\">\r\n  <form (ngSubmit)=\"onSubmit()\" [formGroup]=\"form\">\r\n    <md-input-container>\r\n      <input mdInput [placeholder]=\"'firstname' | translate\" [formControl]=\"form.controls['fname']\">\r\n      <small *ngIf=\"form.controls['fname'].hasError('required') && form.controls['fname'].touched\" class=\"form-message text-danger\">{{'firstnameValid1' | translate}}</small>\r\n      <small *ngIf=\"form.controls['fname'].hasError('minlength') && form.controls['fname'].touched\" class=\"form-message text-danger\">{{'firstnameValid2' | translate}}</small>\r\n      <small *ngIf=\"form.controls['fname'].hasError('maxlength') && form.controls['fname'].touched\" class=\"form-message text-danger\">{{'firstnameValid3' | translate}}</small>\r\n    </md-input-container>\r\n\r\n    <md-input-container>\r\n        <input mdInput [placeholder]=\"'email' | translate\" [formControl]=\"form.controls['email']\" type=\"email\">\r\n        <small *ngIf=\"form.controls['email'].hasError('required') && form.controls['email'].touched\" class=\"form-message text-danger\">{{'emailValid1' | translate}}</small>\r\n        <small *ngIf=\"form.controls['email'].errors?.email && form.controls['email'].touched\" class=\"form-message text-danger\">{{'emailValid2' | translate}}</small>\r\n    </md-input-container>\r\n\r\n    <md-input-container>\r\n      <input mdInput [placeholder]=\"'password' | translate\" [formControl]=\"form.controls['password']\" type=\"password\">\r\n      <small *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\" class=\"form-message text-danger\">{{'passwordValid1' | translate}}</small>\r\n    </md-input-container>\r\n\r\n    <md-input-container>\r\n      <input mdInput [placeholder]=\"'confirmPass' | translate\" [formControl]=\"form.controls['confirmPassword']\" type=\"password\">\r\n      <small *ngIf=\"form.controls['confirmPassword'].hasError('required') && form.controls['confirmPassword'].touched\" class=\"form-message text-danger\">{{'confirmpasswordValid1' | translate}}</small>\r\n      <small *ngIf=\"form.controls['confirmPassword'].errors?.equalTo\" class=\"form-message text-danger\">{{'confirmpasswordValid2' | translate}}</small>\r\n    </md-input-container>\r\n\r\n    <div class=\"text-left mb-4 mt-2\">\r\n      <label>{{'gender' | translate}}</label>\r\n      <md-radio-group [formControl]=\"form.controls['gender']\">\r\n        <md-radio-button value=\"male\">{{'male' | translate}}</md-radio-button>\r\n        <md-radio-button value=\"female\">{{'female' | translate}}</md-radio-button>\r\n        <small *ngIf=\"!form.controls['gender'].valid && form.controls['gender'].touched\" class=\"text-danger\">{{'genderValid1' | translate}}</small>\r\n      </md-radio-group>\r\n    </div>\r\n\r\n    <div class=\"text-left mb-module\">\r\n      <md-checkbox [formControl]=\"form.controls['agree']\" (click)=\"openDialog()\">\r\n        {{'agreeTermsofService' | translate}}\r\n      </md-checkbox>\r\n      <small *ngIf=\"!form.controls['agree'].valid && form.controls['agree'].touched\" class=\"text-danger\">{{'agreeTermsofService' | translate}}</small>\r\n    </div>\r\n\r\n    <button md-raised-button color=\"primary\" type=\"submit\" [disabled]=\"!form.valid\">{{'signup' | translate}}</button>\r\n\r\n    <div class=\"additional-info\">\r\n      {{'alreadyHaveAccount' | translate}}\r\n      <a [routerLink]=\"'/extra-layout/sign-in'\">{{'signin' | translate}}</a>\r\n    </div>\r\n  </form>\r\n</ni-card>\r\n"
+module.exports = "<ni-card [title]=\"'signup' | translate\" [align]=\"'left'\">\r\n  <form (ngSubmit)=\"onSubmit()\" [formGroup]=\"form\">\r\n    <md-input-container>\r\n      <input mdInput [placeholder]=\"'firstname' | translate\" [formControl]=\"form.controls['fname']\">\r\n      <small *ngIf=\"form.controls['fname'].hasError('required') && form.controls['fname'].touched\" class=\"form-message text-danger\">{{'firstnameValid1' | translate}}</small>\r\n      <small *ngIf=\"form.controls['fname'].hasError('minlength') && form.controls['fname'].touched\" class=\"form-message text-danger\">{{'firstnameValid2' | translate}}</small>\r\n      <small *ngIf=\"form.controls['fname'].hasError('maxlength') && form.controls['fname'].touched\" class=\"form-message text-danger\">{{'firstnameValid3' | translate}}</small>\r\n    </md-input-container>\r\n\r\n    <md-input-container>\r\n        <input mdInput [placeholder]=\"'email' | translate\" [formControl]=\"form.controls['email']\" type=\"email\">\r\n        <small *ngIf=\"form.controls['email'].hasError('required') && form.controls['email'].touched\" class=\"form-message text-danger\">{{'emailValid1' | translate}}</small>\r\n        <small *ngIf=\"form.controls['email'].errors?.email && form.controls['email'].touched\" class=\"form-message text-danger\">{{'emailValid2' | translate}}</small>\r\n    </md-input-container>\r\n\r\n    <md-input-container>\r\n      <input mdInput [placeholder]=\"'password' | translate\" [formControl]=\"form.controls['password']\" type=\"password\">\r\n      <small *ngIf=\"form.controls['password'].hasError('required') && form.controls['password'].touched\" class=\"form-message text-danger\">{{'passwordValid1' | translate}}</small>\r\n      <small *ngIf=\"form.controls['password'].hasError('minlength') && form.controls['password'].touched\" class=\"form-message text-danger\">{{'passwordValid2' | translate}}</small>\r\n    </md-input-container>\r\n\r\n    <md-input-container>\r\n      <input mdInput [placeholder]=\"'confirmPass' | translate\" [formControl]=\"form.controls['confirmPassword']\" type=\"password\">\r\n      <small *ngIf=\"form.controls['confirmPassword'].hasError('required') && form.controls['confirmPassword'].touched\" class=\"form-message text-danger\">{{'confirmpasswordValid1' | translate}}</small>\r\n      <small *ngIf=\"form.controls['confirmPassword'].errors?.equalTo\" class=\"form-message text-danger\">{{'confirmpasswordValid2' | translate}}</small>\r\n    </md-input-container>\r\n\r\n    <div class=\"text-left mb-4 mt-2\">\r\n      <label>{{'gender' | translate}}</label>\r\n      <md-radio-group [formControl]=\"form.controls['gender']\">\r\n        <md-radio-button value=\"male\">{{'male' | translate}}</md-radio-button>\r\n        <md-radio-button value=\"female\">{{'female' | translate}}</md-radio-button>\r\n        <small *ngIf=\"!form.controls['gender'].valid && form.controls['gender'].touched\" class=\"text-danger\">{{'genderValid1' | translate}}</small>\r\n      </md-radio-group>\r\n    </div>\r\n\r\n    <div class=\"text-left mb-module\">\r\n      <md-checkbox [formControl]=\"form.controls['agree']\" (click)=\"openDialog()\">\r\n        {{'agreeTermsofService' | translate}}\r\n      </md-checkbox>\r\n      <small *ngIf=\"!form.controls['agree'].valid && form.controls['agree'].touched\" class=\"text-danger\">{{'agreeTermsofService' | translate}}</small>\r\n    </div>\r\n\r\n    <button md-raised-button color=\"primary\" type=\"submit\" [disabled]=\"!form.valid\">{{'signup' | translate}}</button>\r\n\r\n    <div class=\"additional-info\">\r\n      {{'alreadyHaveAccount' | translate}}\r\n      <a [routerLink]=\"'/extra-layout/sign-in'\">{{'signin' | translate}}</a>\r\n    </div>\r\n  </form>\r\n</ni-card>\r\n"
 
 /***/ }),
 
@@ -4314,6 +4226,7 @@ var PagesModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__("../../../../rxjs/Rx.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4327,20 +4240,53 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ApiService = (function () {
-    function ApiService(http) {
+    function ApiService(http, auth) {
+        var _this = this;
         this.http = http;
+        this.auth = auth;
         this.groupId = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"]('');
         this.groupCounts = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"](0);
         this.isClickedDetails = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"](false);
         this.showSpinner = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"](false);
         this.groupCreated = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"](false);
+        this.langCode = "ENG";
+        this.auth.langCode.subscribe(function (res) {
+            switch (res) {
+                case 'en':
+                    _this.langCode = 'ENG';
+                    break;
+                case 'fr':
+                    _this.langCode = 'FRE';
+                    break;
+                case 'pt':
+                    _this.langCode = 'POR';
+                    break;
+                case 'es':
+                    _this.langCode = 'SPA';
+                    break;
+            }
+        });
     }
-    ApiService.prototype.getUserRequest = function () {
+    ApiService.prototype.getUserInfo = function () {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_user_requests';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'user';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         params.set('token', localStorage.getItem('token'));
+        params.set('lang', this.langCode);
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            });
+        });
+    };
+    ApiService.prototype.getUserRequest = function () {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'user/requests';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        params.set('token', localStorage.getItem('token'));
+        params.set('lang', this.langCode);
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
@@ -4349,9 +4295,10 @@ var ApiService = (function () {
     };
     ApiService.prototype.getNextPayment = function () {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_user_obligations';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'user/obligations';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         params.set('token', localStorage.getItem('token'));
+        params.set('lang', this.langCode);
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
@@ -4360,9 +4307,10 @@ var ApiService = (function () {
     };
     ApiService.prototype.getTimelineData = function () {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_events';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/events';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         params.set('token', localStorage.getItem('token'));
+        params.set('lang', this.langCode);
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
@@ -4371,9 +4319,10 @@ var ApiService = (function () {
     };
     ApiService.prototype.getGroups = function () {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_groups';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'groups';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         params.set('token', localStorage.getItem('token'));
+        params.set('lang', this.langCode);
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
@@ -4382,13 +4331,14 @@ var ApiService = (function () {
     };
     ApiService.prototype.getGroupInfo = function () {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_groups';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/members';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         this.groupId.subscribe(function (data) {
             params.set('group_id', data);
         });
         return new Promise(function (resolve, reject) {
             params.set('token', localStorage.getItem('token'));
+            params.set('lang', _this.langCode);
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             });
@@ -4396,21 +4346,31 @@ var ApiService = (function () {
     };
     ApiService.prototype.addGroup = function (group) {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'add_group';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'groups/add';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        if (group.grouptype == 'PRIVATE') {
+            params.set('type_code', 'PRIVATE');
+        }
+        else if (group.grouptype == 'PUBLIC') {
+            params.set('type_code', 'PUBLIC');
+            params.set('min_index', group.minIndex);
+            params.set('max_index', group.maxIndex);
+        }
+        if (group.rate > 0) {
+            params.set('smooth_payment', group.smoothpayment);
+        }
         params.set('name', group.name);
         params.set('rate', group.rate);
         params.set('description', group.description);
         params.set('amount', group.amount);
         params.set('due_day', group.duedate);
         params.set('currency_code', group.currency);
-        params.set('type_code', group.grouptype);
-        params.set('early_prepayment_penalty', group.preppenal);
         params.set('number_of_days_before_penalty', group.nbdpenal);
         params.set('delay_payment_penalty', group.penalty);
         params.set('frequency', group.frequency);
         params.set('position_selection_type_code', group.pstype);
         params.set('token', localStorage.getItem('token'));
+        params.set('lang', this.langCode);
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 console.log(res);
@@ -4423,6 +4383,7 @@ var ApiService = (function () {
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'lists';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         params.set('data', type);
+        params.set('lang', this.langCode);
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
@@ -4433,13 +4394,14 @@ var ApiService = (function () {
     };
     ApiService.prototype.addMember = function (member) {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'add_group_member';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/users/add';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         this.groupId.subscribe(function (data) {
             params.set('group_id', data);
         });
         return new Promise(function (resolve, reject) {
             params.set('email_list', member);
+            params.set('lang', _this.langCode);
             params.set('token', localStorage.getItem('token'));
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 console.log(res);
@@ -4451,13 +4413,14 @@ var ApiService = (function () {
     };
     ApiService.prototype.getGroupMembers = function () {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_group_members';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/members';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         this.groupId.subscribe(function (data) {
             params.set('group_id', data);
         });
         return new Promise(function (resolve, reject) {
             params.set('token', localStorage.getItem('token'));
+            params.set('lang', _this.langCode);
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
@@ -4467,13 +4430,14 @@ var ApiService = (function () {
     };
     ApiService.prototype.getGroupObligations = function () {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_group_obligations';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/obligations';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         this.groupId.subscribe(function (data) {
             params.set('group_id', data);
         });
         return new Promise(function (resolve, reject) {
             params.set('token', localStorage.getItem('token'));
+            params.set('lang', _this.langCode);
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
@@ -4483,13 +4447,14 @@ var ApiService = (function () {
     };
     ApiService.prototype.getGroupRequests = function () {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_requests';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/requests';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         this.groupId.subscribe(function (data) {
             params.set('group_id', data);
         });
         return new Promise(function (resolve, reject) {
             params.set('token', localStorage.getItem('token'));
+            params.set('lang', _this.langCode);
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
@@ -4499,13 +4464,14 @@ var ApiService = (function () {
     };
     ApiService.prototype.getGroupEvents = function () {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'list_events';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/events';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         this.groupId.subscribe(function (data) {
             params.set('group_id', data);
         });
         return new Promise(function (resolve, reject) {
             params.set('token', localStorage.getItem('token'));
+            params.set('lang', _this.langCode);
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
@@ -4515,10 +4481,11 @@ var ApiService = (function () {
     };
     ApiService.prototype.getGroupTakenPositions = function (groupId) {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group_taken_positions';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/positions/available';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         return new Promise(function (resolve, reject) {
             params.set('group_id', groupId);
+            params.set('lang', _this.langCode);
             params.set('token', localStorage.getItem('token'));
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
@@ -4529,11 +4496,12 @@ var ApiService = (function () {
     };
     ApiService.prototype.validateAccept = function (id) {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'accept_join_group_request';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/requests/answer';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         return new Promise(function (resolve, reject) {
-            params.set('request_answer_code', 'APPROVE');
+            params.set('code', 'APPROVE');
             params.set('request_id', id);
+            params.set('lang', _this.langCode);
             params.set('token', localStorage.getItem('token'));
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 console.log(res._body);
@@ -4545,12 +4513,13 @@ var ApiService = (function () {
     };
     ApiService.prototype.validateReject = function (id, comment) {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'reject_join_group_request';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/requests/answer';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         return new Promise(function (resolve, reject) {
-            params.set('request_answer_code', 'REJECT');
+            params.set('code', 'REJECT');
             params.set('request_id', id);
             params.set('comments', comment);
+            params.set('lang', _this.langCode);
             params.set('token', localStorage.getItem('token'));
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
@@ -4561,7 +4530,7 @@ var ApiService = (function () {
     };
     ApiService.prototype.startGroup = function (date) {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'start_group';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/start';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         this.groupId.subscribe(function (data) {
             params.set('group_id', data);
@@ -4569,6 +4538,7 @@ var ApiService = (function () {
         return new Promise(function (resolve, reject) {
             params.set('token', localStorage.getItem('token'));
             params.set('first_payment_date', date);
+            params.set('lang', _this.langCode);
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
@@ -4586,6 +4556,7 @@ var ApiService = (function () {
         return new Promise(function (resolve, reject) {
             params.set('token', localStorage.getItem('token'));
             params.set('first_payment_date', date);
+            params.set('lang', _this.langCode);
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
@@ -4593,12 +4564,85 @@ var ApiService = (function () {
             });
         });
     };
+    ApiService.prototype.removeUser = function (groupId, memberId) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/users/remove';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        params.set('group_id', groupId);
+        params.set('member_id', memberId);
+        params.set('token', localStorage.getItem('token'));
+        params.set('lang', this.langCode);
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    ApiService.prototype.removeAll = function () {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/users/remove/all';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
+        return new Promise(function (resolve, reject) {
+            params.set('token', localStorage.getItem('token'));
+            params.set('lang', _this.langCode);
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    ApiService.prototype.cancelAll = function () {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/requests/cancel/all';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
+        return new Promise(function (resolve, reject) {
+            params.set('token', localStorage.getItem('token'));
+            params.set('lang', _this.langCode);
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    ApiService.prototype.simulate = function (group) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/sumlilate';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        params.set('type_code', group.grouptype);
+        params.set('rate', group.rate);
+        params.set('amount', group.amount);
+        params.set('due_day', group.duedate);
+        params.set('currency_code', group.currency);
+        params.set('number_of_members', group.totalnum);
+        params.set('frequency', group.frequency);
+        params.set('token', localStorage.getItem('token'));
+        params.set('lang', this.langCode);
+        if (group.position !== '') {
+            params.set('position', group.position);
+        }
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                console.log(res);
+                resolve(res.json());
+            });
+        });
+    };
     ApiService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__auth_service__["a" /* AuthService */]) === "function" && _b || Object])
     ], ApiService);
     return ApiService;
-    var _a;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=api.service.js.map
@@ -4648,7 +4692,7 @@ var AuthService = (function () {
     };
     AuthService.prototype.signup = function (data) {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'create_account';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'users/add';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         params.set('email', data.email);
         params.set('first_name', data.fname);
@@ -4674,7 +4718,9 @@ var AuthService = (function () {
                 _this.isConfirm = false;
                 localStorage.setItem('token', res.json().token);
                 localStorage.setItem('email', data.email);
-                resolve(res.json().email_validated);
+                resolve(res.json());
+            }, function (err) {
+                reject(err);
             });
         });
     };
@@ -4687,7 +4733,7 @@ var AuthService = (function () {
     };
     AuthService.prototype.validateEmail = function () {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'validate_user_email';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'user/email/validate';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         params.set('email', this.confirmEmail);
         params.set('validation_code', this.confirmCode);
@@ -4703,7 +4749,6 @@ var AuthService = (function () {
         });
     };
     AuthService.prototype.changeLanguage = function (lang) {
-        console.log(lang);
         this.langCode.next(lang);
     };
     AuthService.prototype.getLocation = function (lat, lng) {
@@ -4862,14 +4907,14 @@ var FooterComponent = (function () {
 /***/ "../../../../../src/app/ui/components/horizontal-navbar/group-create.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 md-dialog-title>Group Creation</h2>\n<form [formGroup]=\"form\">\n  <div md-dialog-content *ngIf=\"step === 'first'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"name\" placeholder=\"Name\" type=\"text\" value=\"\" [formControl]=\"form.controls['name']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"Group type\" [formControl]=\"form.controls['grouptype']\">\n          <md-option *ngFor=\"let g of groupTypes\" [value]=\"g.id\">\n            {{ g.code | translate }}\n          </md-option>\n        </md-select>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"frequency\" placeholder=\"Every ? month\" type=\"number\" value=\"\" [formControl]=\"form.controls['frequency']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"Currency\" [formControl]=\"form.controls['currency']\">\n          <md-option *ngFor=\"let c of currencies\" [value]=\"c.id\">\n            {{ c.code }}\n          </md-option>\n        </md-select>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-12\">\n        <md-input-container>\n          <textarea mdInput placeholder=\"Description\" rows=\"3\" [formControl]=\"form.controls['description']\"></textarea>\n        </md-input-container>\n      </div>\n    </div>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'first'\">\n    <button md-raised-button (click)=\"dialogRef.close('no')\" type=\"button\">Cancel</button>\n    <button md-raised-button color=\"accent\" layout-align=\"end\" (click)=\"step = 'second'\">Next >></button>\n  </div>\n  <div md-dialog-content *ngIf=\"step === 'second'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"amount\" placeholder=\"Amount\" type=\"number\" value=\"\" [formControl]=\"form.controls['amount']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"rate\" placeholder=\"Rate\" type=\"number\" value=\"\" [formControl]=\"form.controls['rate']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"duedate\" placeholder=\"Due date\" type=\"number\" value=\"\" [formControl]=\"form.controls['duedate']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"preppenal\" placeholder=\"Prep penal\" type=\"number\" value=\"\" [formControl]=\"form.controls['preppenal']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"nbdpenal\" placeholder=\"Nb d penal\" type=\"number\" value=\"\" [formControl]=\"form.controls['nbdpenal']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"penalty\" placeholder=\"Penalty\" type=\"number\" value=\"\" [formControl]=\"form.controls['penalty']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-12\">\n        <md-select placeholder=\"PS type\" [formControl]=\"form.controls['pstype']\">\n          <md-option *ngFor=\"let p of psTypes\" [value]=\"p.id\">\n            {{ p.code | translate }}\n          </md-option>\n        </md-select>\n      </div>\n    </div>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'second'\">\n    <button md-raised-button (click)=\"step = 'first'\" color=\"accent\" layout-align=\"end\"><< Previous</button>\n    <button md-raised-button (click)=\"dialogRef.close('no')\" type=\"button\">Cancel</button>\n    <button md-raised-button color=\"accent\" layout-align=\"end\" (click)=\"onSubmit()\" [disabled]=\"!form.valid\" type=\"button\">Finish</button>\n  </div>\n</form>"
+module.exports = "<h2 md-dialog-title>{{'groupcreation' | translate}}</h2>\n<form [formGroup]=\"form\">\n  <div md-dialog-content *ngIf=\"step === 'first'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"name\" placeholder=\"{{'Name' | translate}}\" type=\"text\" value=\"\" [formControl]=\"form.controls['name']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'groupnameinfo' | translate}}\" mdTooltipPosition=\"below\">info_outline</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"{{'grouptype' | translate}}\" [formControl]=\"form.controls['grouptype']\">\n          <md-option *ngFor=\"let g of groupTypes\" [value]=\"g.code\">\n            {{ g.text }}\n          </md-option>\n        </md-select>\n        <md-icon mdTooltip=\"{{'grouptypeinfo' | translate}}\" mdTooltipPosition=\"below\">info_outline</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\" *ngIf=\"form.value.grouptype == 'PUBLIC'\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"minIndex\" placeholder=\"{{'Minimum index credit' | translate}}\" type=\"number\" value=\"0\" [formControl]=\"form.controls['minIndex']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"maxIndex\" placeholder=\"{{'Maximum index credit' | translate}}\" type=\"number\" value=\"1000\" [formControl]=\"form.controls['maxIndex']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"frequency\" placeholder=\"{{'frequency' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['frequency']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'groupmonthinfo' | translate}}\" mdTooltipPosition=\"below\">info_outline</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"{{'Currency' | translate}}\" [formControl]=\"form.controls['currency']\">\n          <md-option *ngFor=\"let c of currencies\" [value]=\"c.code\">\n            {{ c.code }}\n          </md-option>\n        </md-select>\n        <md-icon mdTooltip=\"{{'groupcurrencyinfo' | translate}}\" mdTooltipPosition=\"below\">info_outline</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-12\">\n        <md-input-container>\n          <textarea mdInput placeholder=\"{{'Description' | translate}}\" rows=\"3\" [formControl]=\"form.controls['description']\"></textarea>\n        </md-input-container>\n      </div>\n    </div>\n    <p>You will create a {{form.value.grouptype}} fund named {{form.value.name}}. The payment will be done every {{form.value.frequency}} {{form.value.frequency > 1 ? 'months' : 'month'}}, and the receiver will get the amount in {{form.value.currency}}.</p>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'first'\">\n    <button md-raised-button (click)=\"dialogRef.close('no')\" type=\"button\">{{'Cancel' | translate}}</button>\n    <button md-raised-button color=\"accent\" layout-align=\"end\" (click)=\"step = 'second'\">{{'Next' | translate}} >></button>\n  </div>\n  <div md-dialog-content *ngIf=\"step === 'second'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"amount\" class=\"text-right\" placeholder=\"{{'Amount' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['amount']\">\n        </md-input-container>\n        <span>{{currencySigns[form.value.currency]}}</span>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"rate\" placeholder=\"{{'Rate' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['rate']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'grouprateinfo' | translate}}\" mdTooltipPosition=\"below\">info_outline</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"duedate\" placeholder=\"{{'Due date' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['duedate']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'groupdayinfo' | translate}}\" mdTooltipPosition=\"below\">info_outline</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"{{'Group position selection mode' | translate}}\" [formControl]=\"form.controls['pstype']\">\n          <md-option *ngFor=\"let p of psTypes\" [value]=\"p.code\">\n            {{ p.text }}\n          </md-option>\n        </md-select>\n        <md-icon mdTooltip=\"{{'grouppstypeinfo' | translate}}\" mdTooltipPosition=\"below\">info_outline</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"nbdpenal\" placeholder=\"{{'Number of days of delay allowed' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['nbdpenal']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'grouppenalinfo' | translate}}\" mdTooltipPosition=\"below\">info_outline</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"penalty\" placeholder=\"{{'Penalty' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['penalty']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\" *ngIf=\"form.value.rate > 0\">\n      <div class=\"col-sm-12\">\n        <md-checkbox [checked]=\"form.value.rate > 0\" color=\"accent\" [disabled]=\"form.value.grouptype == 'PUBLIC'\" [formControl]=\"form.controls['smoothpayment']\">\n          {{'Smooth payment' | translate}}\n        </md-checkbox>\n        <md-icon mdTooltip=\"{{'grouppaymentinfo' | translate}}\" mdTooltipPosition=\"below\">info_outline</md-icon>\n      </div>\n    </div>\n    <p>You will create a {{form.value.grouptype}} fund named {{form.value.name}}. The payment will be done every {{form.value.frequency}} {{form.value.frequency > 1 ? 'months' : 'month'}}, and the receiver will get {{form.value.amount}} the amount in {{form.value.currency}} plus {{form.value.rate}} % interest. The payment will have to be made on the {{form.value.duedate}}. In case of prepayment, you will have to pay extra {{form.value.payment}} of {{form.value.amount}}. After a delay of {{form.value.nbdpenal}} a penalty of {{form.value.penalty}} will apply. The members will select their position using {{form.value.pstype}} method.</p>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'second'\">\n    <button md-raised-button (click)=\"step = 'first'\" color=\"accent\" layout-align=\"end\"><< {{'Previous' | translate}}</button>\n    <button md-raised-button (click)=\"dialogRef.close('no')\" type=\"button\">{{'Cancel' | translate}}</button>\n    <button md-raised-button color=\"accent\" layout-align=\"end\" (click)=\"onSubmit()\" [disabled]=\"!form.valid\" type=\"button\">{{'Finish' | translate}}</button>\n  </div>\n</form>"
 
 /***/ }),
 
 /***/ "../../../../../src/app/ui/components/horizontal-navbar/horizontal-navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"navbar-wrap\">\r\n  <div class=\"navbar-button\" [ngClass]=\"{ 'open' : openedSidebar }\" (click)=\"openSidebar()\">\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n  </div>\r\n\r\n  <h1 class=\"page-title\"></h1>\r\n\r\n  <div class=\"nav-items\">\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\" class=\"btn-payment\"><md-icon>payment</md-icon> {{'payment' | translate}}</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\" class=\"btn-group\" (click)=\"openCreateGroupDialog()\"><md-icon>create_new_folder</md-icon> {{'createNewGroup' | translate}}</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-input-container class=\"mb-0\">\r\n        <input mdInput [placeholder]=\"'groupList' | translate\" [mdAutocomplete]=\"auto\" [formControl]=\"groupCtrl\">\r\n      </md-input-container>\r\n      <md-autocomplete #auto=\"mdAutocomplete\">\r\n        <md-option *ngFor=\"let group of filteredGroup | async\" [value]=\"group\" (click)=\"goToGroup(group)\">\r\n          {{ group }}\r\n        </md-option>\r\n      </md-autocomplete>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link btn-code\">\r\n          <img [src]=\"'assets/content/' + langUrl\" width=\"30\" height=\"20\">\r\n      </a>\r\n      <div class=\"dropdown-menu\">\r\n        <ul>\r\n          <li *ngFor=\"let lang of languages\">\r\n            <a (click)=\"changeLanguage(lang.code)\">\r\n              <div class=\"content\">\r\n                <img [src]=\"'assets/content/' + lang.url\" width=\"30\" height=\"20\">\r\n                <span class=\"desc\"><strong>{{lang.code.toUpperCase()}}</strong></span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <div class=\"avatar\"><img src=\"assets/content/avatar-2.jpg\" width=\"40\" height=\"40\" alt=\"\"></div>\r\n        <div class=\"name\">Justin Adams</div>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu mini-menu\">\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-home\"></span> My Account</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-user\"></span> Profile</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"/default-layout/calendar\"><span class=\"icon sli-calendar\"></span> Calendar</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-settings\"></span> Settings</a>\r\n          </li>\r\n          <li>\r\n            <a (click)=\"logout()\"><span class=\"icon sli-logout\"></span> Log Out</a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"items-overlay\" (click)=\"close($event)\"></div>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"navbar-wrap\">\r\n  <div class=\"navbar-button\" [ngClass]=\"{ 'open' : openedSidebar }\" (click)=\"openSidebar()\">\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n  </div>\r\n\r\n  <h1 class=\"page-title\"></h1>\r\n\r\n  <div class=\"nav-items\">\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\" class=\"btn-payment\" mdTooltip=\"{{'paymenttooltip' | translate}}\" mdTooltipPosition=\"below\"><md-icon>payment</md-icon> {{'payment' | translate}}</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\" class=\"btn-group\" mdTooltip=\"{{'creationtooltip' | translate}}\" mdTooltipPosition=\"below\" (click)=\"openCreateGroupDialog()\"><md-icon>create_new_folder</md-icon> {{'createNewGroup' | translate}}</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-input-container class=\"mb-0\">\r\n        <input mdInput [placeholder]=\"'groupList' | translate\" [mdAutocomplete]=\"auto\" [formControl]=\"groupCtrl\">\r\n      </md-input-container>\r\n      <md-autocomplete #auto=\"mdAutocomplete\">\r\n        <md-option *ngFor=\"let group of filteredGroup | async\" [value]=\"group\" (click)=\"goToGroup(group)\">\r\n          {{ group }}\r\n        </md-option>\r\n      </md-autocomplete>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link btn-code\">\r\n          <img [src]=\"'assets/content/' + langUrl\" width=\"30\" height=\"20\">\r\n      </a>\r\n      <div class=\"dropdown-menu\">\r\n        <ul>\r\n          <li *ngFor=\"let lang of languages\">\r\n            <a (click)=\"changeLanguage(lang.code)\">\r\n              <div class=\"content\">\r\n                <img [src]=\"'assets/content/' + lang.url\" width=\"30\" height=\"20\">\r\n                <span class=\"desc\"><strong>{{lang.code.toUpperCase()}}</strong></span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <div class=\"avatar\"><img src=\"assets/content/avatar-2.jpg\" width=\"40\" height=\"40\" alt=\"\"></div>\r\n        <div class=\"name\">Justin Adams</div>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu mini-menu\">\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-home\"></span> My Account</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-user\"></span> Profile</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"/default-layout/calendar\"><span class=\"icon sli-calendar\"></span> Calendar</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-settings\"></span> Settings</a>\r\n          </li>\r\n          <li>\r\n            <a (click)=\"logout()\"><span class=\"icon sli-logout\"></span> Log Out</a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"items-overlay\" (click)=\"close($event)\"></div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -4904,6 +4949,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_translate__ = __webpack_require__("../../../../ng2-translate/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4920,13 +4966,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HorizontalNavbarComponent = (function () {
-    function HorizontalNavbarComponent(auth, apiService, dialog, router) {
+    function HorizontalNavbarComponent(auth, apiService, dialog, router, translate) {
         var _this = this;
         this.auth = auth;
         this.apiService = apiService;
         this.dialog = dialog;
         this.router = router;
+        this.translate = translate;
         this.sidebarState = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.languages = __WEBPACK_IMPORTED_MODULE_3__settings_menu__["a" /* LANGUAGES */];
         this.langCode = 'en';
@@ -4945,6 +4993,7 @@ var HorizontalNavbarComponent = (function () {
                     _this.langUrl = l.url;
                 }
             });
+            translate.use(_this.langCode);
         });
     }
     HorizontalNavbarComponent.prototype.ngOnInit = function () {
@@ -5037,10 +5086,10 @@ var HorizontalNavbarComponent = (function () {
                 '[class.show-overlay]': 'showOverlay'
             }
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["i" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["i" /* MdDialog */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["i" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["i" /* MdDialog */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_7_ng2_translate__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7_ng2_translate__["c" /* TranslateService */]) === "function" && _e || Object])
     ], HorizontalNavbarComponent);
     return HorizontalNavbarComponent;
-    var _a, _b, _c, _d;
+    var _a, _b, _c, _d, _e;
 }());
 
 var DialogGroupCreateComponent = (function () {
@@ -5055,6 +5104,7 @@ var DialogGroupCreateComponent = (function () {
         this.groupTypes = [];
         this.currencies = [];
         this.psTypes = [];
+        this.currencySigns = { USD: '$', GBP: '£', EUR: '€', ZEC: 'Z' };
         this.form = this.fb.group({
             name: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].minLength(3), __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].maxLength(10)])],
             frequency: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
@@ -5065,9 +5115,11 @@ var DialogGroupCreateComponent = (function () {
             amount: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
             rate: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
             duedate: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
-            preppenal: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
             nbdpenal: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
             penalty: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            minIndex: [0],
+            maxIndex: [1000],
+            smoothpayment: [true]
         });
         this.apiService.getListData('Currency').then(function (res) {
             _this.currencies = res.data;
@@ -5184,7 +5236,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ":host .main-menu > ul .menu-item .item-link .caret {\n  display: inline-block;\n  font: normal normal normal 14px/1 FontAwesome;\n  font-size: inherit;\n  text-rendering: auto;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n:host {\n  display: block;\n  margin: 0;\n  overflow-x: hidden;\n  overflow-y: auto;\n  padding: 0;\n  width: inherit;\n  -webkit-overflow-scrolling: touch; }\n  :host .main-menu {\n    width: inherit;\n    padding-top: 20px; }\n    :host .main-menu > ul {\n      list-style-type: none;\n      margin: 0;\n      padding: 0; }\n      :host .main-menu > ul .menu-item {\n        position: relative; }\n        :host .main-menu > ul .menu-item:after {\n          background: #2196f3;\n          bottom: 0;\n          content: '';\n          position: absolute;\n          right: 100%;\n          top: 0;\n          transition: -webkit-transform 0.2s ease-in-out;\n          transition: transform 0.2s ease-in-out;\n          transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;\n          width: 4px; }\n          .rtl :host .main-menu > ul .menu-item:after {\n            left: 100%;\n            right: auto; }\n        :host .main-menu > ul .menu-item .item-link {\n          -webkit-box-align: center;\n              -ms-flex-align: center;\n                  align-items: center;\n          background: transparent;\n          color: #252d47;\n          display: -webkit-box;\n          display: -ms-flexbox;\n          display: flex;\n          font-size: 1rem;\n          font-weight: 400;\n          -webkit-box-pack: justify;\n              -ms-flex-pack: justify;\n                  justify-content: space-between;\n          min-height: 2.75rem;\n          padding: 0.34375rem 1.03125rem;\n          position: relative;\n          text-decoration: none;\n          transition: background 0.2s ease-in-out, color 0.2s ease-in-out; }\n          :host .main-menu > ul .menu-item .item-link .text {\n            -webkit-box-flex: 2;\n                -ms-flex-positive: 2;\n                    flex-grow: 2;\n            -ms-flex-negative: 1;\n                flex-shrink: 1;\n            margin: 0 0.34375rem; }\n          :host .main-menu > ul .menu-item .item-link .item-badge {\n            background: #2196f3;\n            border-radius: 8px;\n            color: rgba(33, 150, 243, 0.2);\n            float: right;\n            font-size: 10px;\n            line-height: 1;\n            margin: 0 0.34375rem;\n            padding: 3px 6px; }\n          :host .main-menu > ul .menu-item .item-link .icon {\n            color: inherit;\n            font-size: 15px;\n            margin: 0 0 0 0.34375rem;\n            min-width: 1.375rem;\n            text-align: center; }\n            .rtl :host .main-menu > ul .menu-item .item-link .icon {\n              margin: 0 0.34375rem 0 0; }\n            :host .main-menu > ul .menu-item .item-link .icon .icon-wrap {\n              -webkit-box-align: center;\n                  -ms-flex-align: center;\n                      align-items: center;\n              border-radius: 50%;\n              display: -webkit-box;\n              display: -ms-flexbox;\n              display: flex;\n              height: 2.0625rem;\n              -webkit-box-pack: center;\n                  -ms-flex-pack: center;\n                      justify-content: center;\n              margin: 0 auto;\n              width: 2.0625rem; }\n          :host .main-menu > ul .menu-item .item-link .caret {\n            margin: 0 0.171875rem;\n            transition: -webkit-transform 0.1s ease-in-out;\n            transition: transform 0.1s ease-in-out;\n            transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out; }\n            :host .main-menu > ul .menu-item .item-link .caret:before {\n              content: '\\F105'; }\n          :host .main-menu > ul .menu-item .item-link:hover {\n            background: transparent;\n            color: #2196f3; }\n            :host .main-menu > ul .menu-item .item-link:hover .icon {\n              color: inherit; }\n        :host .main-menu > ul .menu-item.menu-item-group:after {\n          display: none; }\n        :host .main-menu > ul .menu-item.menu-item-group .group-title {\n          color: #666c7e;\n          display: block;\n          font-size: .8rem;\n          font-weight: 600;\n          line-height: 1.71875;\n          padding: 1.03125rem 1.375rem 0.34375rem;\n          text-transform: uppercase; }\n        :host .main-menu > ul .menu-item .sub {\n          background: transparent;\n          list-style-type: none;\n          overflow: hidden;\n          margin: 0;\n          max-height: 0;\n          padding: 0;\n          transition: max-height 0.1s ease-in-out; }\n          :host .main-menu > ul .menu-item .sub .menu-item .item-link {\n            padding-left: 1.375rem;\n            padding-right: 1.375rem; }\n          :host .main-menu > ul .menu-item .sub .menu-item:first-child > .item-link:before {\n            border-top: 1px solid transparent;\n            content: '';\n            left: 0;\n            position: absolute;\n            right: 0;\n            top: 0;\n            transition: border 0.2s ease-in-out; }\n        :host .main-menu > ul .menu-item:hover:after {\n          -webkit-transform: translateX(4px);\n                  transform: translateX(4px); }\n          .rtl :host .main-menu > ul .menu-item:hover:after {\n            -webkit-transform: translateX(-4px);\n                    transform: translateX(-4px); }\n        :host .main-menu > ul .menu-item.active:after {\n          -webkit-transform: translateX(4px);\n                  transform: translateX(4px); }\n          .rtl :host .main-menu > ul .menu-item.active:after {\n            -webkit-transform: translateX(-4px);\n                    transform: translateX(-4px); }\n        :host .main-menu > ul .menu-item.active > .item-link {\n          background: transparent;\n          color: #2196f3; }\n          :host .main-menu > ul .menu-item.active > .item-link .icon {\n            color: #2196f3; }\n        :host .main-menu > ul .menu-item.has-sub {\n          position: relative; }\n          :host .main-menu > ul .menu-item.has-sub > .item-link {\n            position: relative; }\n            :host .main-menu > ul .menu-item.has-sub > .item-link .caret {\n              display: block; }\n          :host .main-menu > ul .menu-item.has-sub.active > .item-link .caret {\n            -webkit-transform: rotate(90deg);\n                    transform: rotate(90deg); }\n          :host .main-menu > ul .menu-item.has-sub.active > .sub {\n            max-height: 1000px; }\n            :host .main-menu > ul .menu-item.has-sub.active > .sub > .menu-item.active:first-child > .item-link:before {\n              border-top-color: #666c7e; }\n        :host .main-menu > ul .menu-item.disabled {\n          pointer-events: none; }\n    .menu-style-2 :host .main-menu > ul .menu-item .item-link .icon {\n      margin-left: 0;\n      margin-right: 0.34375rem;\n      -webkit-box-ordinal-group: 2;\n          -ms-flex-order: 1;\n              order: 1; }\n    .menu-style-2 :host .main-menu > ul .menu-item .item-link .text {\n      -webkit-box-ordinal-group: 3;\n          -ms-flex-order: 2;\n              order: 2; }\n    .menu-style-2 :host .main-menu > ul .menu-item .item-link .item-badge {\n      -webkit-box-ordinal-group: 4;\n          -ms-flex-order: 3;\n              order: 3; }\n    .menu-style-2 :host .main-menu > ul .menu-item .item-link .caret {\n      height: 11px;\n      -webkit-box-ordinal-group: 5;\n          -ms-flex-order: 4;\n              order: 4;\n      position: relative;\n      width: 11px; }\n      .menu-style-2 :host .main-menu > ul .menu-item .item-link .caret:before, .menu-style-2 :host .main-menu > ul .menu-item .item-link .caret:after {\n        background: #252d47;\n        content: '';\n        display: block;\n        height: 1px;\n        left: 0;\n        position: absolute;\n        top: 5px;\n        transition: -webkit-transform 0.2s ease-in-out;\n        transition: transform 0.2s ease-in-out;\n        transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;\n        width: 100%; }\n      .menu-style-2 :host .main-menu > ul .menu-item .item-link .caret:after {\n        -webkit-transform: rotate(90deg) scaleX(1);\n                transform: rotate(90deg) scaleX(1); }\n    .menu-style-2 :host .main-menu > ul .menu-item.has-sub.active > .item-link .caret {\n      -webkit-transform: rotate(0deg);\n              transform: rotate(0deg); }\n      .menu-style-2 :host .main-menu > ul .menu-item.has-sub.active > .item-link .caret:after {\n        -webkit-transform: rotate(90deg) scaleX(0);\n                transform: rotate(90deg) scaleX(0); }\n    .menu-style-2.rtl :host .main-menu > ul .menu-item .item-link .icon {\n      margin-left: 0.34375rem;\n      margin-right: 0; }\n    .menu-style-3 :host .main-menu > ul .menu-item:after {\n      display: none; }\n    .menu-style-3 :host .main-menu > ul .menu-item .item-link .icon {\n      margin-right: 0.34375rem;\n      margin-left: 0;\n      -webkit-box-ordinal-group: 2;\n          -ms-flex-order: 1;\n              order: 1; }\n    .menu-style-3 :host .main-menu > ul .menu-item .item-link .text {\n      -webkit-box-ordinal-group: 3;\n          -ms-flex-order: 2;\n              order: 2; }\n    .menu-style-3 :host .main-menu > ul .menu-item .item-link .item-badge {\n      -webkit-box-ordinal-group: 4;\n          -ms-flex-order: 3;\n              order: 3; }\n    .menu-style-3 :host .main-menu > ul .menu-item .item-link .caret {\n      -webkit-box-ordinal-group: 5;\n          -ms-flex-order: 4;\n              order: 4; }\n    .menu-style-3 :host .main-menu > ul .menu-item .sub {\n      position: relative; }\n      .menu-style-3 :host .main-menu > ul .menu-item .sub:before {\n        border-left: 1px dashed #666c7e;\n        bottom: 1.375rem;\n        content: '';\n        left: 2.0625rem;\n        margin-left: -1px;\n        position: absolute;\n        top: 0;\n        z-index: 2; }\n      .menu-style-3 :host .main-menu > ul .menu-item .sub .menu-item .item-link {\n        padding-left: 3.4375rem;\n        position: relative; }\n        .menu-style-3 :host .main-menu > ul .menu-item .sub .menu-item .item-link:before {\n          border-top: 1px dashed #666c7e;\n          content: '';\n          left: 2.0625rem;\n          margin-left: -1px;\n          position: absolute;\n          top: 1.375rem;\n          width: 1.1rem;\n          z-index: 2; }\n    .menu-style-3.rtl :host .main-menu > ul .menu-item .item-link .icon {\n      margin-left: 0.34375rem;\n      margin-right: 0; }\n    .menu-style-3.rtl :host .main-menu > ul .menu-item .sub:before {\n      left: auto;\n      right: 2.0625rem; }\n    .menu-style-3.rtl :host .main-menu > ul .menu-item .sub .menu-item .item-link {\n      padding-left: 1.375rem;\n      padding-right: 3.4375rem; }\n      .menu-style-3.rtl :host .main-menu > ul .menu-item .sub .menu-item .item-link:before {\n        left: auto;\n        right: 2.0625rem; }\n    .menu-style-4 :host .main-menu > ul .menu-item:after {\n      display: none; }\n    .menu-style-4 :host .main-menu > ul .menu-item .item-link .icon {\n      margin-right: 0.34375rem;\n      margin-left: 0;\n      -webkit-box-ordinal-group: 2;\n          -ms-flex-order: 1;\n              order: 1; }\n    .menu-style-4 :host .main-menu > ul .menu-item .item-link .text {\n      -webkit-box-ordinal-group: 3;\n          -ms-flex-order: 2;\n              order: 2; }\n    .menu-style-4 :host .main-menu > ul .menu-item .item-link .item-badge {\n      -webkit-box-ordinal-group: 4;\n          -ms-flex-order: 3;\n              order: 3; }\n    .menu-style-4 :host .main-menu > ul .menu-item .item-link .caret {\n      -webkit-box-ordinal-group: 5;\n          -ms-flex-order: 4;\n              order: 4; }\n    .menu-style-4 :host .main-menu > ul .menu-item .sub {\n      position: relative; }\n      .menu-style-4 :host .main-menu > ul .menu-item .sub:before {\n        border-left: 1px solid #666c7e;\n        bottom: 1.375rem;\n        content: '';\n        left: 2.0625rem;\n        margin-left: 0;\n        position: absolute;\n        top: -0.34375rem;\n        z-index: 2; }\n      .menu-style-4 :host .main-menu > ul .menu-item .sub .menu-item .item-link {\n        padding-left: 3.09375rem;\n        position: relative; }\n        .menu-style-4 :host .main-menu > ul .menu-item .sub .menu-item .item-link:before {\n          background: #666c7e;\n          border-radius: 50%;\n          content: '';\n          height: 5px;\n          left: 2.0625rem;\n          margin: -2.5px 0 0 -2px;\n          position: absolute;\n          top: 1.375rem;\n          width: 5px;\n          z-index: 2; }\n    .menu-style-4 :host .main-menu > ul .menu-item.active > .item-link:before {\n      background: #2196f3 !important; }\n    .menu-style-4.rtl :host .main-menu > ul .menu-item .item-link .icon {\n      margin-left: 0.34375rem;\n      margin-right: 0; }\n    .menu-style-4.rtl :host .main-menu > ul .menu-item .sub:before {\n      left: auto;\n      right: 2.0625rem;\n      margin-right: 0; }\n    .menu-style-4.rtl :host .main-menu > ul .menu-item .sub .menu-item .item-link {\n      padding-left: 1.375rem;\n      padding-right: 3.09375rem; }\n      .menu-style-4.rtl :host .main-menu > ul .menu-item .sub .menu-item .item-link:before {\n        left: auto;\n        right: 2.0625rem;\n        margin: -2.5px -2px 0 0; }\n", ""]);
+exports.push([module.i, ":host .main-menu > ul .menu-item .item-link .caret {\n  display: inline-block;\n  font: normal normal normal 14px/1 FontAwesome;\n  font-size: inherit;\n  text-rendering: auto;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n:host {\n  display: block;\n  margin: 0;\n  overflow-x: hidden;\n  overflow-y: auto;\n  padding: 0;\n  width: inherit;\n  -webkit-overflow-scrolling: touch; }\n  :host .main-menu {\n    width: inherit;\n    padding-top: 20px; }\n    :host .main-menu > ul {\n      list-style-type: none;\n      margin: 0;\n      padding: 0; }\n      :host .main-menu > ul .menu-item {\n        position: relative; }\n        :host .main-menu > ul .menu-item:after {\n          background: #2196f3;\n          bottom: 0;\n          content: '';\n          position: absolute;\n          right: 100%;\n          top: 0;\n          transition: -webkit-transform 0.2s ease-in-out;\n          transition: transform 0.2s ease-in-out;\n          transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;\n          width: 4px; }\n          .rtl :host .main-menu > ul .menu-item:after {\n            left: 100%;\n            right: auto; }\n        :host .main-menu > ul .menu-item .item-link {\n          -webkit-box-align: center;\n              -ms-flex-align: center;\n                  align-items: center;\n          background: transparent;\n          color: #252d47;\n          display: -webkit-box;\n          display: -ms-flexbox;\n          display: flex;\n          font-size: 1rem;\n          font-weight: 400;\n          -webkit-box-pack: justify;\n              -ms-flex-pack: justify;\n                  justify-content: space-between;\n          min-height: 2.75rem;\n          padding: 0.34375rem 1.03125rem;\n          position: relative;\n          text-decoration: none;\n          transition: background 0.2s ease-in-out, color 0.2s ease-in-out; }\n          :host .main-menu > ul .menu-item .item-link .text {\n            -webkit-box-flex: 2;\n                -ms-flex-positive: 2;\n                    flex-grow: 2;\n            -ms-flex-negative: 1;\n                flex-shrink: 1;\n            margin: 0 0.34375rem; }\n          :host .main-menu > ul .menu-item .item-link .item-badge {\n            background: #2196f3;\n            border-radius: 8px;\n            color: rgba(33, 150, 243, 0.2);\n            float: right;\n            font-size: 10px;\n            line-height: 1;\n            margin: 0 0.34375rem;\n            padding: 3px 6px; }\n          :host .main-menu > ul .menu-item .item-link .icon {\n            color: inherit;\n            font-size: 15px;\n            margin: 0 0 0 0.34375rem;\n            min-width: 1.375rem;\n            text-align: center; }\n            .rtl :host .main-menu > ul .menu-item .item-link .icon {\n              margin: 0 0.34375rem 0 0; }\n            :host .main-menu > ul .menu-item .item-link .icon .icon-wrap {\n              -webkit-box-align: center;\n                  -ms-flex-align: center;\n                      align-items: center;\n              border-radius: 50%;\n              display: -webkit-box;\n              display: -ms-flexbox;\n              display: flex;\n              height: 2.0625rem;\n              -webkit-box-pack: center;\n                  -ms-flex-pack: center;\n                      justify-content: center;\n              margin: 0 auto;\n              width: 2.0625rem; }\n          :host .main-menu > ul .menu-item .item-link .caret {\n            margin: 0 0.171875rem;\n            transition: -webkit-transform 0.1s ease-in-out;\n            transition: transform 0.1s ease-in-out;\n            transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out; }\n            :host .main-menu > ul .menu-item .item-link .caret:before {\n              content: '\\F105'; }\n          :host .main-menu > ul .menu-item .item-link:hover {\n            background: transparent;\n            color: #2196f3; }\n            :host .main-menu > ul .menu-item .item-link:hover .icon {\n              color: inherit; }\n        :host .main-menu > ul .menu-item.menu-item-group:after {\n          display: none; }\n        :host .main-menu > ul .menu-item.menu-item-group .group-title {\n          color: #666c7e;\n          display: block;\n          font-size: .8rem;\n          font-weight: 600;\n          line-height: 1.71875;\n          padding: 1.03125rem 1.375rem 0.34375rem;\n          text-transform: uppercase; }\n        :host .main-menu > ul .menu-item .sub {\n          background: transparent;\n          list-style-type: none;\n          overflow: hidden;\n          margin: 0;\n          max-height: 0;\n          padding: 0;\n          transition: max-height 0.1s ease-in-out; }\n          :host .main-menu > ul .menu-item .sub .menu-item .item-link {\n            padding-left: 1.375rem;\n            padding-right: 1.375rem; }\n          :host .main-menu > ul .menu-item .sub .menu-item:first-child > .item-link:before {\n            border-top: 1px solid transparent;\n            content: '';\n            left: 0;\n            position: absolute;\n            right: 0;\n            top: 0;\n            transition: border 0.2s ease-in-out; }\n        :host .main-menu > ul .menu-item:hover:after {\n          -webkit-transform: translateX(4px);\n                  transform: translateX(4px); }\n          .rtl :host .main-menu > ul .menu-item:hover:after {\n            -webkit-transform: translateX(-4px);\n                    transform: translateX(-4px); }\n        :host .main-menu > ul .menu-item.active:after {\n          -webkit-transform: translateX(4px);\n                  transform: translateX(4px); }\n          .rtl :host .main-menu > ul .menu-item.active:after {\n            -webkit-transform: translateX(-4px);\n                    transform: translateX(-4px); }\n        :host .main-menu > ul .menu-item.active > .item-link {\n          background: transparent;\n          color: #2196f3;\n          font-weight: bold; }\n          :host .main-menu > ul .menu-item.active > .item-link .icon {\n            color: #2196f3; }\n        :host .main-menu > ul .menu-item.has-sub {\n          position: relative; }\n          :host .main-menu > ul .menu-item.has-sub > .item-link {\n            position: relative; }\n            :host .main-menu > ul .menu-item.has-sub > .item-link .caret {\n              display: block; }\n          :host .main-menu > ul .menu-item.has-sub.active > .item-link .caret {\n            -webkit-transform: rotate(90deg);\n                    transform: rotate(90deg); }\n          :host .main-menu > ul .menu-item.has-sub.active > .sub {\n            max-height: 1000px; }\n            :host .main-menu > ul .menu-item.has-sub.active > .sub > .menu-item.active:first-child > .item-link:before {\n              border-top-color: #666c7e; }\n        :host .main-menu > ul .menu-item.disabled {\n          pointer-events: none; }\n    .menu-style-2 :host .main-menu > ul .menu-item .item-link .icon {\n      margin-left: 0;\n      margin-right: 0.34375rem;\n      -webkit-box-ordinal-group: 2;\n          -ms-flex-order: 1;\n              order: 1; }\n    .menu-style-2 :host .main-menu > ul .menu-item .item-link .text {\n      -webkit-box-ordinal-group: 3;\n          -ms-flex-order: 2;\n              order: 2; }\n    .menu-style-2 :host .main-menu > ul .menu-item .item-link .item-badge {\n      -webkit-box-ordinal-group: 4;\n          -ms-flex-order: 3;\n              order: 3; }\n    .menu-style-2 :host .main-menu > ul .menu-item .item-link .caret {\n      height: 11px;\n      -webkit-box-ordinal-group: 5;\n          -ms-flex-order: 4;\n              order: 4;\n      position: relative;\n      width: 11px; }\n      .menu-style-2 :host .main-menu > ul .menu-item .item-link .caret:before, .menu-style-2 :host .main-menu > ul .menu-item .item-link .caret:after {\n        background: #252d47;\n        content: '';\n        display: block;\n        height: 1px;\n        left: 0;\n        position: absolute;\n        top: 5px;\n        transition: -webkit-transform 0.2s ease-in-out;\n        transition: transform 0.2s ease-in-out;\n        transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;\n        width: 100%; }\n      .menu-style-2 :host .main-menu > ul .menu-item .item-link .caret:after {\n        -webkit-transform: rotate(90deg) scaleX(1);\n                transform: rotate(90deg) scaleX(1); }\n    .menu-style-2 :host .main-menu > ul .menu-item.has-sub.active > .item-link .caret {\n      -webkit-transform: rotate(0deg);\n              transform: rotate(0deg); }\n      .menu-style-2 :host .main-menu > ul .menu-item.has-sub.active > .item-link .caret:after {\n        -webkit-transform: rotate(90deg) scaleX(0);\n                transform: rotate(90deg) scaleX(0); }\n    .menu-style-2.rtl :host .main-menu > ul .menu-item .item-link .icon {\n      margin-left: 0.34375rem;\n      margin-right: 0; }\n    .menu-style-3 :host .main-menu > ul .menu-item:after {\n      display: none; }\n    .menu-style-3 :host .main-menu > ul .menu-item .item-link .icon {\n      margin-right: 0.34375rem;\n      margin-left: 0;\n      -webkit-box-ordinal-group: 2;\n          -ms-flex-order: 1;\n              order: 1; }\n    .menu-style-3 :host .main-menu > ul .menu-item .item-link .text {\n      -webkit-box-ordinal-group: 3;\n          -ms-flex-order: 2;\n              order: 2; }\n    .menu-style-3 :host .main-menu > ul .menu-item .item-link .item-badge {\n      -webkit-box-ordinal-group: 4;\n          -ms-flex-order: 3;\n              order: 3; }\n    .menu-style-3 :host .main-menu > ul .menu-item .item-link .caret {\n      -webkit-box-ordinal-group: 5;\n          -ms-flex-order: 4;\n              order: 4; }\n    .menu-style-3 :host .main-menu > ul .menu-item .sub {\n      position: relative; }\n      .menu-style-3 :host .main-menu > ul .menu-item .sub:before {\n        border-left: 1px dashed #666c7e;\n        bottom: 1.375rem;\n        content: '';\n        left: 2.0625rem;\n        margin-left: -1px;\n        position: absolute;\n        top: 0;\n        z-index: 2; }\n      .menu-style-3 :host .main-menu > ul .menu-item .sub .menu-item .item-link {\n        padding-left: 3.4375rem;\n        position: relative; }\n        .menu-style-3 :host .main-menu > ul .menu-item .sub .menu-item .item-link:before {\n          border-top: 1px dashed #666c7e;\n          content: '';\n          left: 2.0625rem;\n          margin-left: -1px;\n          position: absolute;\n          top: 1.375rem;\n          width: 1.1rem;\n          z-index: 2; }\n    .menu-style-3.rtl :host .main-menu > ul .menu-item .item-link .icon {\n      margin-left: 0.34375rem;\n      margin-right: 0; }\n    .menu-style-3.rtl :host .main-menu > ul .menu-item .sub:before {\n      left: auto;\n      right: 2.0625rem; }\n    .menu-style-3.rtl :host .main-menu > ul .menu-item .sub .menu-item .item-link {\n      padding-left: 1.375rem;\n      padding-right: 3.4375rem; }\n      .menu-style-3.rtl :host .main-menu > ul .menu-item .sub .menu-item .item-link:before {\n        left: auto;\n        right: 2.0625rem; }\n    .menu-style-4 :host .main-menu > ul .menu-item:after {\n      display: none; }\n    .menu-style-4 :host .main-menu > ul .menu-item .item-link .icon {\n      margin-right: 0.34375rem;\n      margin-left: 0;\n      -webkit-box-ordinal-group: 2;\n          -ms-flex-order: 1;\n              order: 1; }\n    .menu-style-4 :host .main-menu > ul .menu-item .item-link .text {\n      -webkit-box-ordinal-group: 3;\n          -ms-flex-order: 2;\n              order: 2; }\n    .menu-style-4 :host .main-menu > ul .menu-item .item-link .item-badge {\n      -webkit-box-ordinal-group: 4;\n          -ms-flex-order: 3;\n              order: 3; }\n    .menu-style-4 :host .main-menu > ul .menu-item .item-link .caret {\n      -webkit-box-ordinal-group: 5;\n          -ms-flex-order: 4;\n              order: 4; }\n    .menu-style-4 :host .main-menu > ul .menu-item .sub {\n      position: relative; }\n      .menu-style-4 :host .main-menu > ul .menu-item .sub:before {\n        border-left: 1px solid #666c7e;\n        bottom: 1.375rem;\n        content: '';\n        left: 2.0625rem;\n        margin-left: 0;\n        position: absolute;\n        top: -0.34375rem;\n        z-index: 2; }\n      .menu-style-4 :host .main-menu > ul .menu-item .sub .menu-item .item-link {\n        padding-left: 3.09375rem;\n        position: relative; }\n        .menu-style-4 :host .main-menu > ul .menu-item .sub .menu-item .item-link:before {\n          background: #666c7e;\n          border-radius: 50%;\n          content: '';\n          height: 5px;\n          left: 2.0625rem;\n          margin: -2.5px 0 0 -2px;\n          position: absolute;\n          top: 1.375rem;\n          width: 5px;\n          z-index: 2; }\n    .menu-style-4 :host .main-menu > ul .menu-item.active > .item-link:before {\n      background: #2196f3 !important; }\n    .menu-style-4.rtl :host .main-menu > ul .menu-item .item-link .icon {\n      margin-left: 0.34375rem;\n      margin-right: 0; }\n    .menu-style-4.rtl :host .main-menu > ul .menu-item .sub:before {\n      left: auto;\n      right: 2.0625rem;\n      margin-right: 0; }\n    .menu-style-4.rtl :host .main-menu > ul .menu-item .sub .menu-item .item-link {\n      padding-left: 1.375rem;\n      padding-right: 3.09375rem; }\n      .menu-style-4.rtl :host .main-menu > ul .menu-item .sub .menu-item .item-link:before {\n        left: auto;\n        right: 2.0625rem;\n        margin: -2.5px -2px 0 0; }\n", ""]);
 
 // exports
 

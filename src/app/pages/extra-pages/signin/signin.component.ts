@@ -15,11 +15,12 @@ import { LANGUAGES } from '../../../../settings/menu';
 export class PageSigninComponent implements OnInit {
   public form: FormGroup;
   languages = LANGUAGES;
+  isEmailCorrect = true;
 
   constructor(private router: Router, private auth: AuthService, private fb: FormBuilder, private translate: TranslateService) {
     this.form = this.fb.group({
       email: [null, Validators.compose([Validators.required, , CustomValidators.email])],
-      password: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
+      password: [null, Validators.compose([Validators.required, Validators.minLength(6)])],
       langCode: ['en']
     });
 
@@ -34,10 +35,13 @@ export class PageSigninComponent implements OnInit {
   }
 
   onSubmit() {
-    this.auth.login(this.form.value).then(res => {
-      if (res === 'yes') {
+    this.auth.login(this.form.value).then((res: any) => {
+      if (res.email_validated === 'yes') {
+        this.isEmailCorrect = true;
         localStorage.setItem('login', 'true');
         this.router.navigate(['/default-layout/dashboard']);
+      } else {
+        this.isEmailCorrect = false;
       }
     });
   }

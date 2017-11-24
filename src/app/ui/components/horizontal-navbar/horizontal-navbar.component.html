@@ -12,11 +12,11 @@
 
   <div class="nav-items">
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
-      <button md-raised-button color="accent" class="btn-payment"><md-icon>payment</md-icon> {{'payment' | translate}}</button>
+      <button md-raised-button color="accent" class="btn-payment" mdTooltip="{{'paymenttooltip' | translate}}" mdTooltipPosition="below"><md-icon>payment</md-icon> {{'payment' | translate}}</button>
     </div>
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
-      <button md-raised-button color="accent" class="btn-group" (click)="openCreateGroupDialog()"><md-icon>create_new_folder</md-icon> {{'createNewGroup' | translate}}</button>
+      <button md-raised-button color="accent" class="btn-group" mdTooltip="{{'creationtooltip' | translate}}" mdTooltipPosition="below" (click)="openCreateGroupDialog()"><md-icon>create_new_folder</md-icon> {{'createNewGroup' | translate}}</button>
     </div>
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">

@@ -26,7 +26,7 @@
       'text-right': align === 'right',
       'text-center': align === 'center'
     }"
-  >{{title}}</h3>
+  >{{title}} <md-icon *ngIf="info" mdTooltip="{{info}}" mdTooltipPosition="below">info_outline</md-icon></h3>
 
   <div
     class="card-content"

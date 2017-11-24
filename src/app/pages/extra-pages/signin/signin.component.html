@@ -3,12 +3,14 @@
     <md-input-container>
       <input mdInput [placeholder]="'email' | translate" value="" [formControl]="form.controls['email']" type="email">
       <small *ngIf="form.controls['email'].hasError('required') && form.controls['email'].touched" class="form-message text-danger">{{'emailValid1' | translate}}</small>
-      <small *ngIf="form.controls['email'].errors?.email && form.controls['email'].touched" class="form-message text-danger">{{'emailValid2' | translate}}</small>        <small *ngIf="form.controls['email'].hasError('required') && form.controls['email'].touched" class="form-message text-danger">{{'emailValid1' | translate}}</small>
+      <small *ngIf="form.controls['email'].errors?.email && form.controls['email'].touched" class="form-message text-danger">{{'emailValid2' | translate}}</small>
     </md-input-container>
 
     <md-input-container>
       <input mdInput [placeholder]="'password' | translate" value="" [formControl]="form.controls['password']" type="password">
       <small *ngIf="form.controls['password'].hasError('required') && form.controls['password'].touched" class="form-message text-danger">{{'passwordValid1' | translate}}</small>
+      <small *ngIf="form.controls['password'].hasError('minlength') && form.controls['password'].touched" class="form-message text-danger">{{'passwordValid2' | translate}}</small>
+      <small *ngIf="!isEmailCorrect" class="form-message text-danger">{{'emailValid3' | translate}}</small>
     </md-input-container>
 
     <div class="text-left mb-module">

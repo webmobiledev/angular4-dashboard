@@ -18,6 +18,7 @@ export class NiCardComponent implements OnInit {
   @Input() outline: boolean = false;
   @Input() indents: any = '';
   @Input() align: string = 'left';
+  @Input() info: string = '';
 
   constructor() {}
 

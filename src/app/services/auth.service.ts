@@ -26,7 +26,7 @@ export class AuthService {
   }
 
   signup(data) {
-    const url = environment.serverUrl + 'create_account';
+    const url = environment.serverUrl + 'users/add';
     let params: URLSearchParams = new URLSearchParams();
     params.set('email', data.email);
     params.set('first_name', data.fname);
@@ -52,7 +52,9 @@ export class AuthService {
         this.isConfirm = false;
         localStorage.setItem('token', res.json().token);
         localStorage.setItem('email', data.email);
-        resolve(res.json().email_validated);
+        resolve(res.json());
+      }, err => {
+        reject(err);
       });
     });
   }
@@ -66,7 +68,7 @@ export class AuthService {
   }
 
   validateEmail() {
-    const url = environment.serverUrl + 'validate_user_email';
+    const url = environment.serverUrl + 'user/email/validate';
     let params: URLSearchParams = new URLSearchParams();
     params.set('email', this.confirmEmail);
     params.set('validation_code', this.confirmCode);
@@ -83,7 +85,6 @@ export class AuthService {
   }
 
   changeLanguage(lang) {
-    console.log(lang);
     this.langCode.next(lang);
   }
 

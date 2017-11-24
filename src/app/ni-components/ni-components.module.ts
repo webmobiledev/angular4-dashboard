@@ -10,7 +10,7 @@ import { NiBreadcrumbComponent } from './ni-breadcrumb/ni-breadcrumb.component';
 import { NiButtonComponent }     from './ni-button/ni-button.component';
 import { NiCardComponent }       from './ni-card/ni-card.component';
 import { NiChatComponent }       from './ni-chat/ni-chat.component';
-import { NiTableComponent }       from './ni-table/ni-table.component';
+import { NiTableComponent, DialogRemoveComponent }       from './ni-table/ni-table.component';
 import { NiFileComponent }       from './ni-file/ni-file.component';
 import { NiHTimelineComponent }  from './ni-h-timeline/ni-h-timeline.component';
 
@@ -19,7 +19,7 @@ import { BgDirective }           from './directives/bg/bg.directive';
 import { GradientDirective }     from './directives/gradient/gradient.directive';
 import { AutoGrowDirective }     from './directives/auto-grow/auto-grow.directive';
 
-import { MdIconModule, MdProgressBarModule, MdProgressSpinnerModule, MdOptionModule, MdButtonModule, MdSelectModule } from '@angular/material';
+import { MdIconModule, MdProgressBarModule, MdProgressSpinnerModule, MdOptionModule, MdButtonModule, MdSelectModule, MdTooltipModule } from '@angular/material';
 import { NiLoadingComponent } from './ni-loading/ni-loading.component';
 import { NiPaginationComponent } from './ni-pagination/ni-pagination.component';
 
@@ -32,7 +32,8 @@ import { NiPaginationComponent } from './ni-pagination/ni-pagination.component';
     MdProgressSpinnerModule,
     MdOptionModule,
     MdButtonModule,
-    MdSelectModule
+    MdSelectModule,
+    MdTooltipModule
   ],
   declarations: [
     NiAlertComponent,
@@ -49,7 +50,8 @@ import { NiPaginationComponent } from './ni-pagination/ni-pagination.component';
     GradientDirective,
     AutoGrowDirective,
     NiLoadingComponent,
-    NiPaginationComponent
+    NiPaginationComponent,
+    DialogRemoveComponent
   ],
   exports: [
     NiAlertComponent,
@@ -65,7 +67,8 @@ import { NiPaginationComponent } from './ni-pagination/ni-pagination.component';
     ColorDirective,
     BgDirective,
     GradientDirective,
-    NiPaginationComponent
+    NiPaginationComponent,
+    DialogRemoveComponent
   ]
 })
 export class NiComponentsModule { }

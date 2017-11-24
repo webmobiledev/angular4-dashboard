@@ -11,9 +11,9 @@ import { MdDialog, MdDialogRef, MdDialogConfig } from '@angular/material';
 })
 export class PageDashboardComponent {
   pageTitle: string = 'dashboard';
-  userRequests: any;
-  nextPayment: any;
-  nextPaymentHeader: any;
+  userRequests: any = [];
+  nextPayment: any = [];
+  nextPaymentHeader: any = [];
   timelineData: any[] = [];
   userPages = 0;
   nextPages = 0;

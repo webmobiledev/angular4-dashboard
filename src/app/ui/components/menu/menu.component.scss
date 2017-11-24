@@ -168,6 +168,7 @@
           > .item-link {
             background: menu(item-active-bg);
             color: menu(item-active-color);
+            font-weight: bold;
 
             .icon {
               color: menu(icon-active-color);

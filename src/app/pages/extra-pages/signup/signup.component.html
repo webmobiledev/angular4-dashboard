@@ -16,6 +16,7 @@
     <md-input-container>
       <input mdInput [placeholder]="'password' | translate" [formControl]="form.controls['password']" type="password">
       <small *ngIf="form.controls['password'].hasError('required') && form.controls['password'].touched" class="form-message text-danger">{{'passwordValid1' | translate}}</small>
+      <small *ngIf="form.controls['password'].hasError('minlength') && form.controls['password'].touched" class="form-message text-danger">{{'passwordValid2' | translate}}</small>
     </md-input-container>
 
     <md-input-container>

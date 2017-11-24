@@ -5,6 +5,7 @@ import { LANGUAGES } from '../../../../settings/menu';
 import { MdDialog, MdDialogRef, MdDialogConfig } from '@angular/material';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TranslateService } from 'ng2-translate';
 
 @Component({
   moduleId: module.id,
@@ -28,7 +29,7 @@ export class HorizontalNavbarComponent implements OnInit {
   filteredGroup: any;
   groupCtrl: FormControl;
   
-  constructor(private auth: AuthService, private apiService: ApiService, private dialog: MdDialog, private router: Router) {
+  constructor(private auth: AuthService, private apiService: ApiService, private dialog: MdDialog, private router: Router, private translate: TranslateService) {
     this.openedSidebar = false;
     this.showOverlay = false;
     this.groupCtrl = new FormControl();
@@ -43,6 +44,7 @@ export class HorizontalNavbarComponent implements OnInit {
           this.langUrl = l.url;
         }
       });
+      translate.use(this.langCode);
     });
   }
 
@@ -138,6 +140,7 @@ export class DialogGroupCreateComponent {
   groupTypes = [];
   currencies = [];
   psTypes = [];
+  currencySigns = {USD: '$', GBP: '£', EUR: '€', ZEC: 'Z'};
   constructor(public dialogRef: MdDialogRef<DialogGroupCreateComponent>, private fb: FormBuilder, private apiService: ApiService, private router: Router) {
     this.form = this.fb.group({
       name: [null, Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(10)])],
@@ -149,9 +152,11 @@ export class DialogGroupCreateComponent {
       amount: [null, Validators.compose([Validators.required])],
       rate: [null, Validators.compose([Validators.required])],
       duedate: [null, Validators.compose([Validators.required])],
-      preppenal: [null, Validators.compose([Validators.required])],
       nbdpenal: [null, Validators.compose([Validators.required])],
       penalty: [null, Validators.compose([Validators.required])],
+      minIndex: [0],
+      maxIndex: [1000],
+      smoothpayment: [true]
     });
 
     this.apiService.getListData('Currency').then((res: any) => {
