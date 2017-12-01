@@ -69,6 +69,9 @@ import { NiPaginationComponent } from './ni-pagination/ni-pagination.component';
     GradientDirective,
     NiPaginationComponent,
     DialogRemoveComponent
+  ],
+  entryComponents: [
+    DialogRemoveComponent
   ]
 })
 export class NiComponentsModule { }

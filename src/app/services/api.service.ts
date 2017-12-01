@@ -94,7 +94,7 @@ export class ApiService {
   }
 
   getGroupInfo() {
-    const url = environment.serverUrl + 'group/members';
+    const url = environment.serverUrl + 'group';
     let params: URLSearchParams = new URLSearchParams();
     this.groupId.subscribe(data => {
       params.set('group_id', data);

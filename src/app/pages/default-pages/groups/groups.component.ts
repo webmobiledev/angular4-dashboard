@@ -31,6 +31,8 @@ export class PageGroupsComponent implements OnInit {
   showGroupList = true;
   timelineData: any[] = [];
   showGroupAlert = false;
+
+  isClickedDetails = false;
   
   constructor( private _sharedService: SharedService, private dialog: MdDialog, private apiService: ApiService ) {
     this._sharedService.emitChange(this.pageTitle);
@@ -41,9 +43,9 @@ export class PageGroupsComponent implements OnInit {
     this.apiService.showSpinner.next(true);
     this.apiService.isClickedDetails.subscribe(data => {
       if (data === true) {
-        this.showGroupList = false;
+        this.isClickedDetails = true;
       } else {
-        this.showGroupList = true;
+        this.isClickedDetails = false;
         this.breadcrumb = [{title: 'groups'}];
       }
     });
@@ -82,7 +84,9 @@ export class PageGroupsComponent implements OnInit {
             this.breadcrumb.push({title: d.name});
           }
         });
-        this.apiService.showSpinner.next(false);
+        if (!this.isClickedDetails) {
+          this.apiService.showSpinner.next(false);          
+        }
       });
       
       this.apiService.getGroupMembers().then((res: any) => {
@@ -92,7 +96,6 @@ export class PageGroupsComponent implements OnInit {
           this.members.push([d.first_name, d.email, d.member_type, d.photo_path, d.position, d.user_position_date, {type: ['remove'], id: d.id}]);
         });
         this.memberPage = this.members.length / 10 + 1;
-        this.apiService.showSpinner.next(false);
       });
 
       this.apiService.getGroupObligations().then((res: any) => {
@@ -102,7 +105,6 @@ export class PageGroupsComponent implements OnInit {
           this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status, d.type, {type: ['paynow'], id: d.id}]);
         });
         this.obligationPage = this.obligations.length / 10 + 1;
-        this.apiService.showSpinner.next(false);
       });
 
       this.apiService.getGroupRequests().then((res: any) => {
@@ -112,7 +114,6 @@ export class PageGroupsComponent implements OnInit {
           this.requests.push([d.sender, d.receiver, d.group, d.request_type, d.request_status, d.request_date, {type: ['Accept', 'Reject'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type}]);
         });
         this.requestPage = this.requests.length / 10 + 1;
-        this.apiService.showSpinner.next(false);
       });
 
       this.apiService.getGroupEvents().then((res: any) => {
@@ -122,11 +123,16 @@ export class PageGroupsComponent implements OnInit {
           this.events.push([d.event_type, d.initiator, d.group, d.date_event]);
         });
         this.eventPage = this.events.length / 10 + 1;
-        this.apiService.showSpinner.next(false);
       });
 
       this.apiService.getGroupInfo().then((res: any) => {
         this.groupInfo = res.data[0];
+        if (this.isClickedDetails) {
+          this.showGroupList = false;
+          this.apiService.showSpinner.next(false);          
+        } else {
+          this.showGroupList = true;
+        }
       });
     });
 
