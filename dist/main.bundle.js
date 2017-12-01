@@ -2684,7 +2684,7 @@ var PageGroupsComponent = (function () {
                 _this.requests = [];
                 _this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date', { type: 'Action' }];
                 res.data.map(function (d) {
-                    _this.requests.push([d.sender, d.receiver, d.group, d.request_type, d.request_status, d.request_date, { type: ['Accept', 'Reject'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type }]);
+                    _this.requests.push([d.sender, d.receiver, d.group, d.request_type, d.request_status, d.date_creation, { type: ['Accept', 'Reject'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type }]);
                 });
                 _this.requestPage = _this.requests.length / 10 + 1;
             });
