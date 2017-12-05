@@ -17,6 +17,9 @@
       border: 0;
     }
     form {
+      md-input-container:nth-child(1) {
+        margin-bottom: 30px;
+      }
       button {
         width: 100%;
       }

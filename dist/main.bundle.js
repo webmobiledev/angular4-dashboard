@@ -3091,12 +3091,13 @@ var PageRequestsComponent = (function () {
     }
     PageRequestsComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.apiService.showSpinner.next(true);
         this.apiService.getUserRequest().then(function (data) {
-            console.log('userrequest', data);
+            _this.apiService.showSpinner.next(false);
             _this.requests = [];
             _this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date'];
             data.data.map(function (d) {
-                _this.requests.push([d.sender, d.receiver, d.group, d.request_type, d.request_status, d.request_date]);
+                _this.requests.push([d.sender, d.receiver, d.group, d.request_type, d.request_status, d.date_creation]);
             });
         });
     };
@@ -3799,7 +3800,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ":host {\n  background: url(" + __webpack_require__("../../../../../src/assets/content/login-bg.jpg") + ") 50% 50% no-repeat;\n  background-size: cover;\n  display: table-cell;\n  height: 100%;\n  padding: 1.375rem 0;\n  vertical-align: middle;\n  width: 100%; }\n  :host .ni-card {\n    margin: 0 auto;\n    max-width: 400px; }\n    :host .ni-card /deep/ .card-wrap {\n      border: 0; }\n    :host .ni-card form button {\n      width: 100%; }\n    :host .ni-card form .additional-info {\n      background: rgba(0, 0, 0, 0.1);\n      margin: 1.375rem -1.375rem -1.375rem;\n      padding: 0.6875rem 1.375rem; }\n      :host .ni-card form .additional-info a {\n        cursor: pointer; }\n      :host .ni-card form .additional-info .divider {\n        border-left: 1px solid rgba(0, 0, 0, 0.2);\n        display: inline-block;\n        height: 18px;\n        margin: 0 10px;\n        vertical-align: bottom; }\n", ""]);
+exports.push([module.i, ":host {\n  background: url(" + __webpack_require__("../../../../../src/assets/content/login-bg.jpg") + ") 50% 50% no-repeat;\n  background-size: cover;\n  display: table-cell;\n  height: 100%;\n  padding: 1.375rem 0;\n  vertical-align: middle;\n  width: 100%; }\n  :host .ni-card {\n    margin: 0 auto;\n    max-width: 400px; }\n    :host .ni-card /deep/ .card-wrap {\n      border: 0; }\n    :host .ni-card form md-input-container:nth-child(1) {\n      margin-bottom: 30px; }\n    :host .ni-card form button {\n      width: 100%; }\n    :host .ni-card form .additional-info {\n      background: rgba(0, 0, 0, 0.1);\n      margin: 1.375rem -1.375rem -1.375rem;\n      padding: 0.6875rem 1.375rem; }\n      :host .ni-card form .additional-info a {\n        cursor: pointer; }\n      :host .ni-card form .additional-info .divider {\n        border-left: 1px solid rgba(0, 0, 0, 0.2);\n        display: inline-block;\n        height: 18px;\n        margin: 0 10px;\n        vertical-align: bottom; }\n", ""]);
 
 // exports
 
