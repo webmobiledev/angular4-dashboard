@@ -2717,9 +2717,9 @@ var PageGroupsComponent = (function () {
     PageGroupsComponent.prototype.getGroups = function () {
         var _this = this;
         this.groups = [];
+        this.groupHeaders = ['Group name', 'Creator', 'number of member', 'Amount', 'Currency', 'Creation Date', 'Description', 'Due date', 'Frequency Every x month(s)', 'Type', 'PS Type', 'Rate', { type: 'Action' }];
         this.apiService.getGroups().then(function (res) {
             _this.groups = [];
-            _this.groupHeaders = ['Group name', 'Creator', 'number of member', 'Amount', 'Currency', 'Creation Date', 'Description', 'Due date', 'Frequency Every x month(s)', 'Type', 'PS Type', 'Rate', { type: 'Action' }];
             res.data.map(function (d) {
                 _this.groups.push([d.name, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.due_day, d.frequency, d.g_type_text, d.position_selection_type_text, d.rate, { type: ['details'], id: d.id }]);
             });
@@ -2729,8 +2729,9 @@ var PageGroupsComponent = (function () {
     PageGroupsComponent.prototype.getGroupMembers = function () {
         var _this = this;
         this.members = [];
+        this.memberHeaders = ['Name', 'Email', 'Type', 'Picture', 'Position', 'Date', { type: 'Action' }];
         this.apiService.getGroupMembers().then(function (res) {
-            _this.memberHeaders = ['Name', 'Email', 'Type', 'Picture', 'Position', 'Date', { type: 'Action' }];
+            _this.members = [];
             res.data.map(function (d) {
                 _this.members.push([d.first_name, d.email, d.member_type_text, d.photo_path, d.position, d.user_position_date, { type: ['remove'], id: d.id }]);
             });
@@ -2740,8 +2741,9 @@ var PageGroupsComponent = (function () {
     PageGroupsComponent.prototype.getGroupObligations = function () {
         var _this = this;
         this.obligations = [];
+        this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Type', { type: 'Action' }];
         this.apiService.getGroupObligations().then(function (res) {
-            _this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Type', { type: 'Action' }];
+            _this.obligations = [];
             res.data.map(function (d) {
                 _this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status, d.type_text, { type: ['paynow'], id: d.id }]);
             });
@@ -2751,8 +2753,9 @@ var PageGroupsComponent = (function () {
     PageGroupsComponent.prototype.getGroupRequests = function () {
         var _this = this;
         this.requests = [];
+        this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date', { type: 'Action' }];
         this.apiService.getGroupRequests().then(function (res) {
-            _this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date', { type: 'Action' }];
+            _this.requests = [];
             res.data.map(function (d) {
                 _this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation, { type: ['Accept', 'Reject'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type }]);
             });
@@ -2762,8 +2765,9 @@ var PageGroupsComponent = (function () {
     PageGroupsComponent.prototype.getGroupEvents = function () {
         var _this = this;
         this.events = [];
+        this.eventHeaders = ['Type', 'Initiator', 'Group', 'Date'];
         this.apiService.getGroupEvents().then(function (res) {
-            _this.eventHeaders = ['Type', 'Initiator', 'Group', 'Date'];
+            _this.events = [];
             res.data.map(function (d) {
                 _this.events.push([d.event_type_text, d.initiator, d.group, d.date_event]);
             });
@@ -3038,6 +3042,7 @@ var PageObligationComponent = (function () {
         this.obligations = [];
         this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Type', { type: 'Action' }];
         this.apiService.getGroupObligations().then(function (res) {
+            _this.obligations = [];
             res.data.map(function (d) {
                 _this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status, d.type, { type: ['paynow'], id: d.id }]);
             });
@@ -3203,6 +3208,7 @@ var PageRequestsComponent = (function () {
         this.requests = [];
         this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date'];
         this.apiService.getUserRequest().then(function (data) {
+            _this.requests = [];
             _this.apiService.showSpinner.next(false);
             data.data.map(function (d) {
                 _this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation]);

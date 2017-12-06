@@ -107,9 +107,9 @@ export class PageGroupsComponent implements OnInit {
 
   getGroups() {
     this.groups = [];
+    this.groupHeaders = ['Group name', 'Creator', 'number of member', 'Amount', 'Currency', 'Creation Date', 'Description', 'Due date', 'Frequency Every x month(s)', 'Type', 'PS Type', 'Rate', {type: 'Action'}];
     this.apiService.getGroups().then((res: any) => {
       this.groups = [];
-      this.groupHeaders = ['Group name', 'Creator', 'number of member', 'Amount', 'Currency', 'Creation Date', 'Description', 'Due date', 'Frequency Every x month(s)', 'Type', 'PS Type', 'Rate', {type: 'Action'}];
       res.data.map(d => {
         this.groups.push([d.name, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.due_day, d.frequency, d.g_type_text, d.position_selection_type_text, d.rate, {type: ['details'], id: d.id}]);
       });
@@ -119,8 +119,9 @@ export class PageGroupsComponent implements OnInit {
 
   getGroupMembers() {
     this.members = [];
+    this.memberHeaders = ['Name', 'Email', 'Type', 'Picture', 'Position', 'Date', {type: 'Action'}];
     this.apiService.getGroupMembers().then((res: any) => {
-      this.memberHeaders = ['Name', 'Email', 'Type', 'Picture', 'Position', 'Date', {type: 'Action'}];
+      this.members = [];
       res.data.map(d => {
         this.members.push([d.first_name, d.email, d.member_type_text, d.photo_path, d.position, d.user_position_date, {type: ['remove'], id: d.id}]);
       });
@@ -130,8 +131,9 @@ export class PageGroupsComponent implements OnInit {
 
   getGroupObligations() {
     this.obligations = [];
+    this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Type', {type: 'Action'}];
     this.apiService.getGroupObligations().then((res: any) => {
-      this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Type', {type: 'Action'}];
+      this.obligations = [];
       res.data.map(d => {
         this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status, d.type_text, {type: ['paynow'], id: d.id}]);
       });
@@ -141,8 +143,9 @@ export class PageGroupsComponent implements OnInit {
 
   getGroupRequests() {
     this.requests = [];
+    this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date', {type: 'Action'}];
     this.apiService.getGroupRequests().then((res: any) => {
-      this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date', {type: 'Action'}];
+      this.requests = [];
       res.data.map(d => {
         this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation, {type: ['Accept', 'Reject'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type}]);
       });
@@ -152,8 +155,9 @@ export class PageGroupsComponent implements OnInit {
 
   getGroupEvents() {
     this.events = [];
+    this.eventHeaders = ['Type', 'Initiator', 'Group', 'Date'];
     this.apiService.getGroupEvents().then((res: any) => {
-      this.eventHeaders = ['Type', 'Initiator', 'Group', 'Date'];
+      this.events = [];
       res.data.map(d => {
         this.events.push([d.event_type_text, d.initiator, d.group, d.date_event]);
       });

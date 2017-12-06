@@ -27,6 +27,7 @@ export class PageRequestsComponent {
     this.requests = [];
     this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date'];
     this.apiService.getUserRequest().then((data: any) => {
+      this.requests = [];
       this.apiService.showSpinner.next(false);
       data.data.map(d => {
         this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation]);
