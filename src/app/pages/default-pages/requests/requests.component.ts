@@ -20,13 +20,21 @@ export class PageRequestsComponent {
 
   ngOnInit() {
     this.apiService.showSpinner.next(true);
+    this.getUserRequests();
+  }
+
+  getUserRequests() {
+    this.requests = [];
+    this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date'];
     this.apiService.getUserRequest().then((data: any) => {
       this.apiService.showSpinner.next(false);
-      this.requests = [];
-      this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date'];
       data.data.map(d => {
-        this.requests.push([d.sender, d.receiver, d.group, d.request_type, d.request_status, d.date_creation]);
+        this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation]);
       });
     });
+  }
+
+  doRefresh() {
+    this.getUserRequests();
   }
 }

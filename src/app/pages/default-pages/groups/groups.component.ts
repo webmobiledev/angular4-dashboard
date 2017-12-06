@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SharedService } from '../../../layouts/shared-service';
 import { MdDialog, MdDialogRef, MdDialogConfig } from '@angular/material';
 import { ApiService } from '../../../services/api.service';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'page-groups',
@@ -10,7 +11,7 @@ import { ApiService } from '../../../services/api.service';
 })
 export class PageGroupsComponent implements OnInit {
   pageTitle: string = 'groups';
-  breadcrumb = [{title: 'groups'}];
+  breadcrumb: any = [{title: 'groups'}];
   groups = [];
   groupsPage = 0;
   groupHeaders = [];
@@ -34,7 +35,7 @@ export class PageGroupsComponent implements OnInit {
 
   isClickedDetails = false;
   
-  constructor( private _sharedService: SharedService, private dialog: MdDialog, private apiService: ApiService ) {
+  constructor( private _sharedService: SharedService, private dialog: MdDialog, private apiService: ApiService, private auth: AuthService ) {
     this._sharedService.emitChange(this.pageTitle);
   }
 
@@ -61,93 +62,127 @@ export class PageGroupsComponent implements OnInit {
     });
 
     this.apiService.groupCounts.subscribe(res => {
-      this.apiService.getGroups().then((res: any) => {
-        this.groups = [];
-        this.groupHeaders = ['Group name', 'Creator', 'number of member', 'Amount', 'Currency', 'Creation Date', 'Description', 'Due date', 'Frequency Every x month(s)', 'Type', 'PS Type', 'Rate', {type: 'Action'}];
-        res.data.map(d => {
-          this.groups.push([d.name, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.due_day, d.frequency, d.g_type, d.position_selection_type, d.rate, {type: ['details'], id: d.id}]);
-        });
-        this.groupsPage = this.groups.length / 10 + 1;
-      });
+      this.getGroups();
+    });
+
+    this.auth.langCode.subscribe(res => {
+      this.getGroups();
+      this.getGroupEvents();
+      this.getGroupInfo();
+      this.getGroupMembers();
+      this.getGroupObligations();
+      this.getGroupRequests();
+      this.getTimeLineData();
     });
 
     this.apiService.groupId.subscribe(data => {
-      if (this.showGroupList) {
+      if (!this.isClickedDetails) {
         this.breadcrumb = [{title: 'groups'}];
       }
 
       this.apiService.getGroups().then((res: any) => {
         res.data.map(d => {
-          if (d.id === data && !this.showGroupList) {
+          if (d.id === data && this.isClickedDetails) {
             this.breadcrumb = [];
-            this.breadcrumb.push({title: this.pageTitle});
+            this.breadcrumb.push({title: this.pageTitle, link: 'default-layout/groups'});
             this.breadcrumb.push({title: d.name});
           }
         });
         if (!this.isClickedDetails) {
-          this.apiService.showSpinner.next(false);          
+          this.apiService.showSpinner.next(false);
         }
       });
-      
-      this.apiService.getGroupMembers().then((res: any) => {
-        this.members = [];
-        this.memberHeaders = ['Name', 'Email', 'Type', 'Picture', 'Position', 'Date', {type: 'Action'}];
-        res.data.map(d => {
-          this.members.push([d.first_name, d.email, d.member_type, d.photo_path, d.position, d.user_position_date, {type: ['remove'], id: d.id}]);
-        });
-        this.memberPage = this.members.length / 10 + 1;
-      });
 
-      this.apiService.getGroupObligations().then((res: any) => {
-        this.obligations = [];
-        this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Type', {type: 'Action'}];
-        res.data.map(d => {
-          this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status, d.type, {type: ['paynow'], id: d.id}]);
-        });
-        this.obligationPage = this.obligations.length / 10 + 1;
-      });
-
-      this.apiService.getGroupRequests().then((res: any) => {
-        this.requests = [];
-        this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date', {type: 'Action'}];
-        res.data.map(d => {
-          this.requests.push([d.sender, d.receiver, d.group, d.request_type, d.request_status, d.date_creation, {type: ['Accept', 'Reject'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type}]);
-        });
-        this.requestPage = this.requests.length / 10 + 1;
-      });
-
-      this.apiService.getGroupEvents().then((res: any) => {
-        this.events = [];
-        this.eventHeaders = ['Type', 'Initiator', 'Group', 'Date'];
-        res.data.map(d => {
-          this.events.push([d.event_type, d.initiator, d.group, d.date_event]);
-        });
-        this.eventPage = this.events.length / 10 + 1;
-      });
-
-      this.apiService.getGroupInfo().then((res: any) => {
-        this.groupInfo = res.data[0];
-        if (this.isClickedDetails) {
-          this.showGroupList = false;
-          this.apiService.showSpinner.next(false);          
-        } else {
-          this.showGroupList = true;
-        }
-      });
-    });
-
-    this.apiService.getTimelineData().then((data: any) => {
-      this.timelineData = [{
-        label: '2017',
-        timeline: []
-      }];
-      data.data.map(d => {
-        this.timelineData[0].timeline.push({date: this.getDuration(d.duration_seconds), content: d.event_type === 'GROUP_CREATED' ? 'A new group has been created' : 'A new request to join group has been created', pointColor: '#FFC6F1'});
-      });
+      this.getGroupEvents();
+      this.getGroupInfo();
+      this.getGroupMembers();
+      this.getGroupObligations();
+      this.getGroupRequests();
+      this.getTimeLineData();
     });
   }
 
   ngOnDestroy() {
+  }
+
+  getGroups() {
+    this.groups = [];
+    this.apiService.getGroups().then((res: any) => {
+      this.groups = [];
+      this.groupHeaders = ['Group name', 'Creator', 'number of member', 'Amount', 'Currency', 'Creation Date', 'Description', 'Due date', 'Frequency Every x month(s)', 'Type', 'PS Type', 'Rate', {type: 'Action'}];
+      res.data.map(d => {
+        this.groups.push([d.name, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.due_day, d.frequency, d.g_type_text, d.position_selection_type_text, d.rate, {type: ['details'], id: d.id}]);
+      });
+      this.groupsPage = this.groups.length / 10 + 1;
+    });
+  }
+
+  getGroupMembers() {
+    this.members = [];
+    this.apiService.getGroupMembers().then((res: any) => {
+      this.memberHeaders = ['Name', 'Email', 'Type', 'Picture', 'Position', 'Date', {type: 'Action'}];
+      res.data.map(d => {
+        this.members.push([d.first_name, d.email, d.member_type_text, d.photo_path, d.position, d.user_position_date, {type: ['remove'], id: d.id}]);
+      });
+      this.memberPage = this.members.length / 10 + 1;
+    });
+  }
+
+  getGroupObligations() {
+    this.obligations = [];
+    this.apiService.getGroupObligations().then((res: any) => {
+      this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Type', {type: 'Action'}];
+      res.data.map(d => {
+        this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status, d.type_text, {type: ['paynow'], id: d.id}]);
+      });
+      this.obligationPage = this.obligations.length / 10 + 1;
+    });
+  }
+
+  getGroupRequests() {
+    this.requests = [];
+    this.apiService.getGroupRequests().then((res: any) => {
+      this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date', {type: 'Action'}];
+      res.data.map(d => {
+        this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation, {type: ['Accept', 'Reject'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type}]);
+      });
+      this.requestPage = this.requests.length / 10 + 1;
+    });
+  }
+
+  getGroupEvents() {
+    this.events = [];
+    this.apiService.getGroupEvents().then((res: any) => {
+      this.eventHeaders = ['Type', 'Initiator', 'Group', 'Date'];
+      res.data.map(d => {
+        this.events.push([d.event_type_text, d.initiator, d.group, d.date_event]);
+      });
+      this.eventPage = this.events.length / 10 + 1;
+    });
+  }
+
+  getGroupInfo() {
+    this.apiService.getGroupInfo().then((res: any) => {
+      this.groupInfo = res.data[0];
+      if (this.isClickedDetails) {
+        this.showGroupList = false;
+        this.apiService.showSpinner.next(false);          
+      } else {
+        this.showGroupList = true;
+      }
+    });
+  }
+
+  getTimeLineData() {
+    this.timelineData = [{
+      label: '2017',
+      timeline: []
+    }];
+    this.apiService.getTimelineData().then((data: any) => {
+      data.data.map(d => {
+        this.timelineData[0].timeline.push({date: this.getDuration(d.duration_seconds), content: d.event_type === 'GROUP_CREATED' ? 'A new group has been created' : 'A new request to join group has been created', pointColor: '#FFC6F1'});
+      });
+    });
   }
 
   openDialog() {
@@ -190,7 +225,31 @@ export class PageGroupsComponent implements OnInit {
       console.log(res);
     });
   }
+
+  doRefresh(index) {
+    switch (index) {
+      case 1:
+        this.getGroups();
+      break;
+      case 2:
+        this.getGroupMembers();
+      break;
+      case 3:
+        this.getGroupObligations();
+      break;
+      case 4:
+        this.getGroupRequests();
+      break;
+      case 5:
+        this.getGroupEvents();
+      break;
+      case 6:
+      break;
+    }
+  }
 }
+
+
 
 @Component({
   selector: 'dialog-add-member',

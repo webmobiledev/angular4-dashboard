@@ -26,7 +26,9 @@
       'text-right': align === 'right',
       'text-center': align === 'center'
     }"
-  >{{title}} <md-icon *ngIf="info" mdTooltip="{{info}}" mdTooltipPosition="below">info_outline</md-icon></h3>
+  ><span>{{title}} <md-icon *ngIf="info" mdTooltip="{{info}}" mdTooltipPosition="below">info_outline</md-icon></span>
+    <md-icon *ngIf="refresh !== 0" class="btn-refresh" (click)="doRefresh(refresh)">refresh</md-icon>
+  </h3>
 
   <div
     class="card-content"

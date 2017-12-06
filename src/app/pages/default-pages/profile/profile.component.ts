@@ -17,6 +17,7 @@ export class PageProfileComponent implements OnInit {
     api.getUserInfo().then((res: any) => {
       console.log(res);
     });
+    this.api.initHeaderGroup.next('');
   }
 
   ngOnInit() {}

@@ -22,29 +22,18 @@ export class PageDashboardComponent {
   constructor( private _sharedService: SharedService, private apiService: ApiService, private dialog: MdDialog ) {
     this._sharedService.emitChange(this.pageTitle);
 
-    apiService.getUserRequest().then((data: any) => {
-      this.userRequests = data.data;
-      console.log(data.data);
-      this.userPages = this.userRequests.length / 10 + 1;
-    });
+    this.getRequests();
+    this.getNextPayments();
+    this.getTimeLineData();
 
-    apiService.getNextPayment().then((data: any) => {
-      this.nextPayment = [];
-      this.nextPaymentHeader = ['To', 'Amount', 'Date'];
-      data.data.map(d => {
-        this.nextPayment.push([d.to, d.projected_amount_due, d.projected_payment_due_date]);
-      });
-      this.nextPages = this.nextPayment.length / 10 + 1;
-    });
-
-    apiService.getTimelineData().then((data: any) => {
-      this.timelineData = [{
-        label: '2017',
-        timeline: []
-      }];
-      data.data.map(d => {
-        this.timelineData[0].timeline.push({date: this.getDuration(d.duration_seconds), content: d.event_type === 'GROUP_CREATED' ? 'A new group has been created' : 'A new request to join group has been created', pointColor: '#FFC6F1'});
-      });
+    this.apiService.refreshIndex.subscribe(res => {
+      if (res === 1) {
+        this.getRequests();
+      } else if (res === 2) {
+        this.getNextPayments();
+      } else if (res === 3) {
+        this.getTimeLineData();
+      }
     });
   }
 
@@ -70,6 +59,37 @@ export class PageDashboardComponent {
       if (result === 'yes') {
       } else {
       }
+    });
+  }
+
+  getRequests() {
+    this.userRequests = [];
+    this.apiService.getUserRequest().then((data: any) => {
+      this.userRequests = data.data;
+      this.userPages = this.userRequests.length / 10 + 1;
+    });
+  }
+
+  getNextPayments() {
+    this.nextPayment = [];
+    this.apiService.getNextPayment().then((data: any) => {
+      this.nextPaymentHeader = ['To', 'Amount', 'Date'];
+      data.data.map(d => {
+        this.nextPayment.push([d.to, d.projected_amount_due, d.projected_payment_due_date]);
+      });
+      this.nextPages = this.nextPayment.length / 10 + 1;
+    });
+  }
+
+  getTimeLineData() {
+    this.timelineData = [{
+      label: '2017',
+      timeline: []
+    }];
+    this.apiService.getTimelineData().then((data: any) => {
+      data.data.map(d => {
+        this.timelineData[0].timeline.push({date: this.getDuration(d.duration_seconds), content: d.event_type === 'GROUP_CREATED' ? 'A new group has been created' : 'A new request to join group has been created', pointColor: '#FFC6F1'});
+      });
     });
   }
 }

@@ -50,23 +50,17 @@
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
       <a href="#" (click)="open($event)" class="nav-link">
-        <div class="avatar"><img src="assets/content/avatar-2.jpg" width="40" height="40" alt=""></div>
-        <div class="name">Justin Adams</div>
+        <div class="avatar"><img [src]="'assets/' + photoUrl + '.png'" width="40" height="40" alt=""></div>
+        <div class="name">{{username}}</div>
       </a>
 
       <div class="dropdown-menu mini-menu">
         <ul>
           <li>
-            <a href="#"><span class="icon sli-home"></span> My Account</a>
+            <a href="#" routerLink="transactions"><span class="icon sli-home"></span> My Account</a>
           </li>
           <li>
-            <a href="#"><span class="icon sli-user"></span> Profile</a>
-          </li>
-          <li>
-            <a href="#" routerLink="/default-layout/calendar"><span class="icon sli-calendar"></span> Calendar</a>
-          </li>
-          <li>
-            <a href="#"><span class="icon sli-settings"></span> Settings</a>
+            <a href="#" routerLink="profile"><span class="icon sli-user"></span> Profile</a>
           </li>
           <li>
             <a (click)="logout()"><span class="icon sli-logout"></span> Log Out</a>

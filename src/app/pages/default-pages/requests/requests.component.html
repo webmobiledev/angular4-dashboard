@@ -2,11 +2,14 @@
   <div class="col-sm-6">
     <ni-breadcrumb [menu]="breadcrumb" [style]="'custom2'" class="mb-4"></ni-breadcrumb>      
   </div>
-  <div class="col-sm-6 text-right">
+  <div class="col-sm-5 text-right">
     <md-input-container class="search-group md-icon-left">
       <md-icon>search</md-icon>
       <input mdInput value="">
     </md-input-container>
+  </div>
+  <div class="col-sm-1 text-right">
+    <md-icon class="btn-refresh" (click)="doRefresh()">refresh</md-icon>
   </div>
 </div>
 <div class="row">

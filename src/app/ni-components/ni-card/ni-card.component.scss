@@ -22,9 +22,15 @@
       border-radius: 3px 3px 0 0;
       color: $card-header-color;
       display: flex;
+      justify-content: space-between;
       margin: 0;
       padding: $module-rem $module-rem * 2;
       position: relative;
+
+      span {
+        display: flex;
+        align-items: center;
+      }
 
       md-icon {
         margin-left: 10px;

@@ -3,7 +3,7 @@
     <div class="col-lg-7">
       <div class="row">
         <div class="col-md-12">
-          <ni-card [title]="'request' | translate" [info]="'requestinfo' | translate">
+          <ni-card [title]="'request' | translate" [info]="'requestinfo' | translate" [refresh]="1">
             <div class="table-responsive">
               <table class="table" *ngIf="userRequests.length > 0">
                 <tbody *ngFor="let user of userRequests">
@@ -21,7 +21,7 @@
           </ni-card>
         </div>
         <div class="col-md-12">
-          <ni-card [title]="'nextpayment' | translate" [info]="'paymentinfo' | translate">
+          <ni-card [title]="'nextpayment' | translate" [info]="'paymentinfo' | translate" [refresh]="2">
             <ni-table *ngIf="nextPayment.length > 0" [headers]="nextPaymentHeader" [data]="nextPayment"></ni-table>
             <ni-alert *ngIf="nextPayment.length === 0" [color]="'warning'" [outline]="true"><strong>{{'nopayment' | translate}}</strong></ni-alert>
             <ni-pagination [total]="nextPages" *ngIf="nextPages > 0"></ni-pagination>
@@ -30,7 +30,7 @@
       </div>
     </div>
     <div class="col-lg-5">
-      <ni-card [title]="'timeline' | translate" [info]="'timelineinfo' | translate">
+      <ni-card [title]="'timeline' | translate" [info]="'timelineinfo' | translate" [refresh]="3">
         <ni-h-timeline [showYears]="true" [showDate]="true" [align]="'between'" [data]="timelineData"></ni-h-timeline>
       </ni-card>
     </div>

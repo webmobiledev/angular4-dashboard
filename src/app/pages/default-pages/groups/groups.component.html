@@ -4,11 +4,14 @@
     <div class="col-sm-6">
       <ni-breadcrumb [menu]="breadcrumb" [style]="'custom2'" class="mb-4"></ni-breadcrumb>        
     </div>
-    <div class="col-sm-6 text-right">
+    <div class="col-sm-5 text-right">
       <md-input-container class="search-group md-icon-left">
         <md-icon>search</md-icon>
         <input mdInput value="">
       </md-input-container>
+    </div>
+    <div class="col-sm-1 text-right">
+      <md-icon class="btn-refresh" (click)="doRefresh(1)">refresh</md-icon>
     </div>
   </div>
   <div class="row">
@@ -179,11 +182,14 @@
           <button md-raised-button color="accent" (click)="openDialog()">{{'Add a member' | translate}}</button>
           <button md-raised-button color="accent" (click)="removeAll()">{{'Remove all members' | translate}}</button>
         </div>
-        <div class="col-sm-6 text-right p-3">
+        <div class="col-sm-5 text-right p-3">
           <md-input-container class="search-group md-icon-left">
             <md-icon>search</md-icon>
             <input mdInput value="">
           </md-input-container>
+        </div>
+        <div class="col-sm-1 text-right">
+          <md-icon class="btn-refresh" (click)="doRefresh(2)">refresh</md-icon>
         </div>
       </div>
       <div class="row">
@@ -202,11 +208,14 @@
         <div class="col-sm-6 p-3">
           <button md-raised-button color="accent" (click)="cancelAll()">{{'Cancel all outstanding request' | translate}}</button>
         </div>
-        <div class="col-sm-6 text-right p-3">
+        <div class="col-sm-5 text-right p-3">
           <md-input-container class="search-group md-icon-left">
             <md-icon>search</md-icon>
             <input mdInput value="">
           </md-input-container>
+        </div>
+        <div class="col-sm-1 text-right">
+          <md-icon class="btn-refresh" (click)="doRefresh(3)">refresh</md-icon>
         </div>
       </div>
       <div class="row">
@@ -222,11 +231,14 @@
         <md-icon>sms_failed</md-icon> {{'Requests' | translate}}
       </ng-template>
       <div class="row members-header">
-        <div class="col-sm-12 text-right p-3">
+        <div class="col-sm-11 text-right p-3">
           <md-input-container class="search-group md-icon-left">
             <md-icon>search</md-icon>
             <input mdInput value="">
           </md-input-container>
+        </div>
+        <div class="col-sm-1 text-right">
+          <md-icon class="btn-refresh" (click)="doRefresh(4)">refresh</md-icon>
         </div>
       </div>
       <div class="row">
@@ -242,11 +254,14 @@
         <md-icon>event</md-icon> {{'Event' | translate}}
       </ng-template>
       <div class="row members-header">
-        <div class="col-sm-12 text-right p-3">
+        <div class="col-sm-11 text-right p-3">
           <md-input-container class="search-group md-icon-left">
             <md-icon>search</md-icon>
             <input mdInput value="">
           </md-input-container>
+        </div>
+        <div class="col-sm-1 text-right">
+          <md-icon class="btn-refresh" (click)="doRefresh(5)">refresh</md-icon>
         </div>
       </div>
       <div class="row">
@@ -262,11 +277,14 @@
         <md-icon>local_atm</md-icon> {{'transaction' | translate}}
       </ng-template>
       <div class="row members-header">
-        <div class="col-sm-12 text-right p-3">
+        <div class="col-sm-11 text-right p-3">
           <md-input-container class="search-group md-icon-left">
             <md-icon>search</md-icon>
             <input mdInput value="">
           </md-input-container>
+        </div>
+        <div class="col-sm-1 text-right">
+          <md-icon class="btn-refresh" (click)="doRefresh(6)">refresh</md-icon>
         </div>
       </div>
       <div class="row">

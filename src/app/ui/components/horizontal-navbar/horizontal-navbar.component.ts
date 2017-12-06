@@ -28,6 +28,8 @@ export class HorizontalNavbarComponent implements OnInit {
   groupList = [];
   filteredGroup: any;
   groupCtrl: FormControl;
+  username = '';
+  photoUrl = '';
   
   constructor(private auth: AuthService, private apiService: ApiService, private dialog: MdDialog, private router: Router, private translate: TranslateService) {
     this.openedSidebar = false;
@@ -36,6 +38,10 @@ export class HorizontalNavbarComponent implements OnInit {
     this.filteredGroup = this.groupCtrl.valueChanges
       .startWith(null)
       .map(name => this.filterStates(name));
+
+    this.apiService.initHeaderGroup.subscribe(res => {
+      this.groupCtrl.setValue('');      
+    });
 
     this.auth.langCode.subscribe(code => {
       this.langCode = code;
@@ -46,12 +52,15 @@ export class HorizontalNavbarComponent implements OnInit {
       });
       translate.use(this.langCode);
     });
+
+    this.username = localStorage.getItem('username');
+    this.photoUrl = localStorage.getItem('userphoto').substring(0, localStorage.getItem('userphoto').indexOf('.'));
   }
 
   ngOnInit() {
     this.apiService.groupCounts.subscribe(res => {
-      this.groupList = [];
       this.apiService.getGroups().then((data: any) => {
+        this.groupList = [];
         data.data.map(d => {
           this.groupList.push(d.name);
         });
@@ -125,6 +134,8 @@ export class HorizontalNavbarComponent implements OnInit {
 
   logout() {
     localStorage.setItem('login', 'false');
+    localStorage.setItem('username', '');
+    localStorage.setItem('userphoto', '');
     this.router.navigate(['/']);
   }
 }

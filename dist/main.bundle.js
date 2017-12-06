@@ -1254,7 +1254,7 @@ var NiButtonComponent = (function () {
 /***/ "../../../../../src/app/ni-components/ni-card/ni-card.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div\n  class=\"card-wrap\"\n  [ngClass]=\"{\n    'success-card': bgColor === 'success',\n    'info-card': bgColor === 'info',\n    'warning-card': bgColor === 'warning',\n    'danger-card': bgColor === 'danger',\n    'success-color-card': color === 'success',\n    'info-color-card': color === 'info',\n    'warning-color-card': color === 'warning',\n    'danger-color-card': color === 'danger',\n    'bg-image-card': bgImage,\n    'outline-card': outline\n  }\"\n  [ngStyle]=\"{\n   'background-color': customBgColor,\n   'background-image': 'url(' + bgImage + ')',\n   'border-color': customBgColor,\n   'color': customColor\n  }\"\n>\n  <h3\n    class=\"card-header h5\"\n    *ngIf=\"title\"\n    [ngClass]=\"{\n      'text-right': align === 'right',\n      'text-center': align === 'center'\n    }\"\n  >{{title}} <md-icon *ngIf=\"info\" mdTooltip=\"{{info}}\" mdTooltipPosition=\"below\">info_outline</md-icon></h3>\n\n  <div\n    class=\"card-content\"\n    [ngClass]=\"{\n      'text-right': align === 'right',\n      'text-center': align === 'center'\n    }\"\n    [ngStyle]=\"{'padding': indents}\"\n  >\n    <ng-content></ng-content>\n  </div>\n</div>"
+module.exports = "<div\n  class=\"card-wrap\"\n  [ngClass]=\"{\n    'success-card': bgColor === 'success',\n    'info-card': bgColor === 'info',\n    'warning-card': bgColor === 'warning',\n    'danger-card': bgColor === 'danger',\n    'success-color-card': color === 'success',\n    'info-color-card': color === 'info',\n    'warning-color-card': color === 'warning',\n    'danger-color-card': color === 'danger',\n    'bg-image-card': bgImage,\n    'outline-card': outline\n  }\"\n  [ngStyle]=\"{\n   'background-color': customBgColor,\n   'background-image': 'url(' + bgImage + ')',\n   'border-color': customBgColor,\n   'color': customColor\n  }\"\n>\n  <h3\n    class=\"card-header h5\"\n    *ngIf=\"title\"\n    [ngClass]=\"{\n      'text-right': align === 'right',\n      'text-center': align === 'center'\n    }\"\n  ><span>{{title}} <md-icon *ngIf=\"info\" mdTooltip=\"{{info}}\" mdTooltipPosition=\"below\">info_outline</md-icon></span>\n    <md-icon *ngIf=\"refresh !== 0\" class=\"btn-refresh\" (click)=\"doRefresh(refresh)\">refresh</md-icon>\n  </h3>\n\n  <div\n    class=\"card-content\"\n    [ngClass]=\"{\n      'text-right': align === 'right',\n      'text-center': align === 'center'\n    }\"\n    [ngStyle]=\"{'padding': indents}\"\n  >\n    <ng-content></ng-content>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1266,7 +1266,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ":host {\n  display: block;\n  margin: 0 0 1.375rem; }\n  :host .card-wrap {\n    background-color: #fff;\n    background-position: 50% 50%;\n    background-repeat: no-repeat;\n    background-size: cover;\n    border: 1px solid #e5e6e9;\n    border-radius: 3px;\n    box-shadow: 1px 1px 5px 0px rgba(37, 45, 71, 0.25);\n    position: relative; }\n    :host .card-wrap:not(.outline-card) {\n      border: 0 !important; }\n    :host .card-wrap .card-header {\n      background: #e5e6e9;\n      border-radius: 3px 3px 0 0;\n      color: #000000;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      margin: 0;\n      padding: 0.6875rem 1.375rem;\n      position: relative; }\n      :host .card-wrap .card-header md-icon {\n        margin-left: 10px; }\n      :host .card-wrap .card-header + .card-content {\n        border-radius: 0 0 3px 3px; }\n    :host .card-wrap .card-content {\n      border-radius: 3px;\n      display: block;\n      padding: 1.375rem;\n      position: relative; }\n    :host .card-wrap.success-card {\n      background: #81C784;\n      border-color: #81C784; }\n      :host .card-wrap.success-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.info-card {\n      background: #64B5F6;\n      border-color: #64B5F6; }\n      :host .card-wrap.info-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.warning-card {\n      background: #FFB74D;\n      border-color: #FFB74D; }\n      :host .card-wrap.warning-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.danger-card {\n      background: #e24d4d;\n      border-color: #e24d4d; }\n      :host .card-wrap.danger-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.success-color-card {\n      color: #81C784; }\n    :host .card-wrap.info-color-card {\n      color: #64B5F6; }\n    :host .card-wrap.warning-color-card {\n      color: #FFB74D; }\n    :host .card-wrap.danger-color-card {\n      color: #e24d4d; }\n    :host .card-wrap.outline-card {\n      background: none !important;\n      box-shadow: none !important; }\n    :host .card-wrap.bg-image-card {\n      border: none !important; }\n      :host .card-wrap.bg-image-card:before {\n        background-color: inherit;\n        border-radius: 3px;\n        content: '';\n        display: block;\n        height: 100%;\n        left: 0;\n        position: absolute;\n        top: 0;\n        width: 100%; }\n", ""]);
+exports.push([module.i, ":host {\n  display: block;\n  margin: 0 0 1.375rem; }\n  :host .card-wrap {\n    background-color: #fff;\n    background-position: 50% 50%;\n    background-repeat: no-repeat;\n    background-size: cover;\n    border: 1px solid #e5e6e9;\n    border-radius: 3px;\n    box-shadow: 1px 1px 5px 0px rgba(37, 45, 71, 0.25);\n    position: relative; }\n    :host .card-wrap:not(.outline-card) {\n      border: 0 !important; }\n    :host .card-wrap .card-header {\n      background: #e5e6e9;\n      border-radius: 3px 3px 0 0;\n      color: #000000;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: justify;\n          -ms-flex-pack: justify;\n              justify-content: space-between;\n      margin: 0;\n      padding: 0.6875rem 1.375rem;\n      position: relative; }\n      :host .card-wrap .card-header span {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center; }\n      :host .card-wrap .card-header md-icon {\n        margin-left: 10px; }\n      :host .card-wrap .card-header + .card-content {\n        border-radius: 0 0 3px 3px; }\n    :host .card-wrap .card-content {\n      border-radius: 3px;\n      display: block;\n      padding: 1.375rem;\n      position: relative; }\n    :host .card-wrap.success-card {\n      background: #81C784;\n      border-color: #81C784; }\n      :host .card-wrap.success-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.info-card {\n      background: #64B5F6;\n      border-color: #64B5F6; }\n      :host .card-wrap.info-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.warning-card {\n      background: #FFB74D;\n      border-color: #FFB74D; }\n      :host .card-wrap.warning-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.danger-card {\n      background: #e24d4d;\n      border-color: #e24d4d; }\n      :host .card-wrap.danger-card:not(.outline-card) {\n        color: #fff; }\n    :host .card-wrap.success-color-card {\n      color: #81C784; }\n    :host .card-wrap.info-color-card {\n      color: #64B5F6; }\n    :host .card-wrap.warning-color-card {\n      color: #FFB74D; }\n    :host .card-wrap.danger-color-card {\n      color: #e24d4d; }\n    :host .card-wrap.outline-card {\n      background: none !important;\n      box-shadow: none !important; }\n    :host .card-wrap.bg-image-card {\n      border: none !important; }\n      :host .card-wrap.bg-image-card:before {\n        background-color: inherit;\n        border-radius: 3px;\n        content: '';\n        display: block;\n        height: 100%;\n        left: 0;\n        position: absolute;\n        top: 0;\n        width: 100%; }\n", ""]);
 
 // exports
 
@@ -1282,6 +1282,7 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NiCardComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1292,8 +1293,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var NiCardComponent = (function () {
-    function NiCardComponent() {
+    function NiCardComponent(apiService) {
+        this.apiService = apiService;
         this.title = '';
         this.bgColor = '';
         this.customBgColor = '';
@@ -1304,8 +1307,12 @@ var NiCardComponent = (function () {
         this.indents = '';
         this.align = 'left';
         this.info = '';
+        this.refresh = 0;
     }
     NiCardComponent.prototype.ngOnInit = function () { };
+    NiCardComponent.prototype.doRefresh = function (index) {
+        this.apiService.refreshIndex.next(index);
+    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
@@ -1346,6 +1353,10 @@ var NiCardComponent = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], NiCardComponent.prototype, "info", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Number)
+    ], NiCardComponent.prototype, "refresh", void 0);
     NiCardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'ni-card',
@@ -1355,9 +1366,10 @@ var NiCardComponent = (function () {
                 '[class.ni-card]': 'true'
             }
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === "function" && _a || Object])
     ], NiCardComponent);
     return NiCardComponent;
+    var _a;
 }());
 
 //# sourceMappingURL=ni-card.component.js.map
@@ -1968,7 +1980,7 @@ module.exports = "<div md-dialog-content>What would you like to do?</div>\n<div 
 /***/ "../../../../../src/app/ni-components/ni-table/ni-table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <div class=\"table-responsive\">\n    <table class=\"table table-striped\">\n      <thead>\n      <tr>\n        <th *ngFor=\"let h of headers\">\n          <span *ngIf=\"!h.type\">{{ h | translate }}</span>\n          <span *ngIf=\"h.type\">{{ h.type | translate }}</span>\n        </th>\n      </tr>\n      </thead>\n      <tbody>\n      <tr *ngFor=\"let d of data\">\n        <td *ngFor=\"let s of d\">\n          <span *ngIf=\"!s.type && s !== 'PRIVATE' && s !== 'PUBLIC' && s !== 'FIRST_ARRIVED_FIRST_SERVED' && s !== 'RANDOM' && s !== 'REQUEST_TO_JOIN_GROUP' && s !== 'PENDING' && s !== 'APPROVED'\">{{ s }}</span>\n          <span *ngIf=\"s === 'REQUEST_TO_JOIN_GROUP'\">{{'Join the group' | translate}}</span>\n          <span *ngIf=\"s === 'PENDING'\">{{'Pending' | translate}}</span>\n          <span *ngIf=\"s === 'APPROVED'\">{{'Approved' | translate}}</span>\n          <md-icon *ngIf=\"s === 'PRIVATE'\">person</md-icon>\n          <md-icon *ngIf=\"s === 'PUBLIC'\">people</md-icon>\n          <md-icon *ngIf=\"s === 'FIRST_ARRIVED_FIRST_SERVED'\">arrow_forward</md-icon>\n          <md-icon *ngIf=\"s === 'RANDOM'\">shuffle</md-icon>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'details'\" (click)=\"changePage(s.id)\">details</button>\n          <button md-button color=\"warn\" *ngIf=\"s.type && (s.type)[0] === 'remove'\" (click)=\"removeUser(s.id)\">remove</button>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'paynow'\">pay now</button>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'Accept'\" (click)=\"showDialog('accept', s.id, s.requestType, s.rotationType)\">Accept</button>\n          <button md-button color=\"warn\" *ngIf=\"s.type && (s.type)[1] === 'Reject'\" (click)=\"showDialog('reject', s.id, s.requestType, s.rotationType)\">Reject</button>\n        </td>\n      </tr>\n      </tbody>\n    </table>\n  </div>\n</div>"
+module.exports = "<div>\n  <div class=\"table-responsive\">\n    <table class=\"table table-striped\">\n      <thead>\n      <tr>\n        <th *ngFor=\"let h of headers\">\n          <span *ngIf=\"!h.type\">{{ h | translate }}</span>\n          <span *ngIf=\"h.type\">{{ h.type | translate }}</span>\n        </th>\n      </tr>\n      </thead>\n      <tbody>\n      <tr *ngFor=\"let d of data\">\n        <td *ngFor=\"let s of d\">\n          <span *ngIf=\"!s.type\">{{ s }}</span>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'details'\" (click)=\"changePage(s.id)\">details</button>\n          <button md-button color=\"warn\" *ngIf=\"s.type && (s.type)[0] === 'remove'\" (click)=\"removeUser(s.id)\">remove</button>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'paynow'\">pay now</button>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'Accept'\" (click)=\"showDialog('accept', s.id, s.requestType, s.rotationType)\">Accept</button>\n          <button md-button color=\"warn\" *ngIf=\"s.type && (s.type)[1] === 'Reject'\" (click)=\"showDialog('reject', s.id, s.requestType, s.rotationType)\">Reject</button>\n        </td>\n      </tr>\n      </tbody>\n    </table>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -2348,14 +2360,14 @@ var ChatroomComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/dashboard/accept-reject-modal.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"type === 'accept' && requestType === 'REQUEST_TO_JOIN_GROUP' && groupRotationType === 'FIRST_ARRIVED_FIRST_SERVED'\">\n  <div md-dialog-content>\n    <md-input-container>\n      <input mdInput placeholder=\"Position\" value=\"\" [(ngModel)]=\"position\" type=\"number\">\n    </md-input-container>\n    <md-select placeholder=\"Selected Positions\">\n      <md-option *ngFor=\"let p of positions\" [value]=\"p.code\">{{p.value}}</md-option>\n    </md-select>\n    <div md-dialog-actions>\n      <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n      <button md-raised-button (click)=\"validate('accept')\" color=\"accent\">Validate</button>\n    </div>\n  </div>\n</div>\n\n<div *ngIf=\"type === 'accept' && requestType === 'REQUEST_TO_JOIN_GROUP' && groupRotationType !== 'FIRST_ARRIVED_FIRST_SERVED'\">\n  <div md-dialog-content>\n    Do you really want to join the group ?\n    <div md-dialog-actions>\n      <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n      <button md-raised-button (click)=\"validate('accept')\" color=\"accent\">Validate</button>\n    </div>\n  </div>\n</div>\n\n<div *ngIf=\"type === 'reject'\">\n  <div md-dialog-content>\n    <md-input-container>\n      <input mdInput placeholder=\"Justification\" value=\"\" [(ngModel)]=\"comment\" type=\"text\">\n    </md-input-container>\n    <div md-dialog-actions>\n      <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n      <button md-raised-button (click)=\"validate('reject')\" color=\"accent\">Validate</button>\n    </div>\n  </div>\n</div>"
+module.exports = "<div *ngIf=\"type === 'accept' && requestType === 'REQUEST_TO_JOIN_GROUP' && groupRotationType === 'FIRST_ARRIVED_FIRST_SERVED'\">\n  <div md-dialog-content>\n    <md-input-container>\n      <input mdInput placeholder=\"Position\" value=\"\" [(ngModel)]=\"position\" type=\"number\">\n    </md-input-container>\n    <md-select placeholder=\"Selected Positions\">\n      <md-option *ngFor=\"let p of positions\" [value]=\"p.code\">{{p.value}}</md-option>\n    </md-select>\n    <div md-dialog-actions>\n      <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n      <button md-raised-button (click)=\"validate('accept')\" color=\"accent\">Validate</button>\n    </div>\n  </div>\n</div>\n\n<div *ngIf=\"type === 'accept' && requestType === 'REQUEST_TO_JOIN_GROUP' && groupRotationType !== 'FIRST_ARRIVED_FIRST_SERVED'\">\n  <div md-dialog-content>\n    Do you really accept the request ?\n    <div md-dialog-actions>\n      <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n      <button md-raised-button (click)=\"validate('accept')\" color=\"accent\">Validate</button>\n    </div>\n  </div>\n</div>\n\n<div *ngIf=\"type === 'reject'\">\n  <div md-dialog-content>\n    Do you really reject the request ?\n    <md-input-container class=\"mt-3\">\n      <input mdInput placeholder=\"Justification\" value=\"\" [(ngModel)]=\"comment\" type=\"text\">\n    </md-input-container>\n    <div md-dialog-actions>\n      <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n      <button md-raised-button (click)=\"validate('reject')\" color=\"accent\">Validate</button>\n    </div>\n  </div>\n</div>\n\n<div *ngIf=\"type === 'accept' && requestType === 'START_AND_SELECT_POSTION_GROUP' && groupRotationType === 'RANDOM'\">\n    <div md-dialog-content>\n      Do you really accept the request ?\n      <div md-dialog-actions>\n        <button md-raised-button>CANCEL</button>\n        <button md-raised-button color=\"accent\">Validate</button>\n      </div>\n    </div>\n  </div>"
 
 /***/ }),
 
 /***/ "../../../../../src/app/pages/default-pages/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n<div class=\"row\">\r\n    <div class=\"col-lg-7\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'request' | translate\" [info]=\"'requestinfo' | translate\">\r\n            <div class=\"table-responsive\">\r\n              <table class=\"table\" *ngIf=\"userRequests.length > 0\">\r\n                <tbody *ngFor=\"let user of userRequests\">\r\n                  <tr>\r\n                    <td>{{user.request_date}} : {{user.sender}}<span *ngIf=\"user.request_type === 'REQUEST_TO_JOIN_GROUP'\"> {{'would_you_to_join_the_group' | translate}} </span>{{user.group}} \r\n                      <button md-raised-button color=\"accent\" class=\"btn-action\" (click)=\"showDialog('accept', user)\">Accept</button>\r\n                      <button md-raised-button color=\"warn\" class=\"btn-action\" (click)=\"showDialog('reject', user)\">Reject</button>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n              </table>\r\n              <ni-alert *ngIf=\"userRequests.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'norequest' | translate}}</strong></ni-alert>\r\n            </div>\r\n            <ni-pagination [total]=\"userPages\" *ngIf=\"userPages > 0\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'nextpayment' | translate\" [info]=\"'paymentinfo' | translate\">\r\n            <ni-table *ngIf=\"nextPayment.length > 0\" [headers]=\"nextPaymentHeader\" [data]=\"nextPayment\"></ni-table>\r\n            <ni-alert *ngIf=\"nextPayment.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nopayment' | translate}}</strong></ni-alert>\r\n            <ni-pagination [total]=\"nextPages\" *ngIf=\"nextPages > 0\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-5\">\r\n      <ni-card [title]=\"'timeline' | translate\" [info]=\"'timelineinfo' | translate\">\r\n        <ni-h-timeline [showYears]=\"true\" [showDate]=\"true\" [align]=\"'between'\" [data]=\"timelineData\"></ni-h-timeline>\r\n      </ni-card>\r\n    </div>\r\n</div>"
+module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n<div class=\"row\">\r\n    <div class=\"col-lg-7\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'request' | translate\" [info]=\"'requestinfo' | translate\" [refresh]=\"1\">\r\n            <div class=\"table-responsive\">\r\n              <table class=\"table\" *ngIf=\"userRequests.length > 0\">\r\n                <tbody *ngFor=\"let user of userRequests\">\r\n                  <tr>\r\n                    <td>{{user.request_date}} : {{user.sender}}<span *ngIf=\"user.request_type === 'REQUEST_TO_JOIN_GROUP'\"> {{'would_you_to_join_the_group' | translate}} </span>{{user.group}} \r\n                      <button md-raised-button color=\"accent\" class=\"btn-action\" (click)=\"showDialog('accept', user)\">Accept</button>\r\n                      <button md-raised-button color=\"warn\" class=\"btn-action\" (click)=\"showDialog('reject', user)\">Reject</button>\r\n                    </td>\r\n                  </tr>\r\n                </tbody>\r\n              </table>\r\n              <ni-alert *ngIf=\"userRequests.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'norequest' | translate}}</strong></ni-alert>\r\n            </div>\r\n            <ni-pagination [total]=\"userPages\" *ngIf=\"userPages > 0\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'nextpayment' | translate\" [info]=\"'paymentinfo' | translate\" [refresh]=\"2\">\r\n            <ni-table *ngIf=\"nextPayment.length > 0\" [headers]=\"nextPaymentHeader\" [data]=\"nextPayment\"></ni-table>\r\n            <ni-alert *ngIf=\"nextPayment.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nopayment' | translate}}</strong></ni-alert>\r\n            <ni-pagination [total]=\"nextPages\" *ngIf=\"nextPages > 0\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-5\">\r\n      <ni-card [title]=\"'timeline' | translate\" [info]=\"'timelineinfo' | translate\" [refresh]=\"3\">\r\n        <ni-h-timeline [showYears]=\"true\" [showDate]=\"true\" [align]=\"'between'\" [data]=\"timelineData\"></ni-h-timeline>\r\n      </ni-card>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -2415,27 +2427,19 @@ var PageDashboardComponent = (function () {
         this.nextPages = 0;
         this.breadcrumb = [{ title: 'dashboard' }];
         this._sharedService.emitChange(this.pageTitle);
-        apiService.getUserRequest().then(function (data) {
-            _this.userRequests = data.data;
-            console.log(data.data);
-            _this.userPages = _this.userRequests.length / 10 + 1;
-        });
-        apiService.getNextPayment().then(function (data) {
-            _this.nextPayment = [];
-            _this.nextPaymentHeader = ['To', 'Amount', 'Date'];
-            data.data.map(function (d) {
-                _this.nextPayment.push([d.to, d.projected_amount_due, d.projected_payment_due_date]);
-            });
-            _this.nextPages = _this.nextPayment.length / 10 + 1;
-        });
-        apiService.getTimelineData().then(function (data) {
-            _this.timelineData = [{
-                    label: '2017',
-                    timeline: []
-                }];
-            data.data.map(function (d) {
-                _this.timelineData[0].timeline.push({ date: _this.getDuration(d.duration_seconds), content: d.event_type === 'GROUP_CREATED' ? 'A new group has been created' : 'A new request to join group has been created', pointColor: '#FFC6F1' });
-            });
+        this.getRequests();
+        this.getNextPayments();
+        this.getTimeLineData();
+        this.apiService.refreshIndex.subscribe(function (res) {
+            if (res === 1) {
+                _this.getRequests();
+            }
+            else if (res === 2) {
+                _this.getNextPayments();
+            }
+            else if (res === 3) {
+                _this.getTimeLineData();
+            }
         });
     }
     PageDashboardComponent.prototype.getDuration = function (seconds) {
@@ -2459,6 +2463,37 @@ var PageDashboardComponent = (function () {
             }
             else {
             }
+        });
+    };
+    PageDashboardComponent.prototype.getRequests = function () {
+        var _this = this;
+        this.userRequests = [];
+        this.apiService.getUserRequest().then(function (data) {
+            _this.userRequests = data.data;
+            _this.userPages = _this.userRequests.length / 10 + 1;
+        });
+    };
+    PageDashboardComponent.prototype.getNextPayments = function () {
+        var _this = this;
+        this.nextPayment = [];
+        this.apiService.getNextPayment().then(function (data) {
+            _this.nextPaymentHeader = ['To', 'Amount', 'Date'];
+            data.data.map(function (d) {
+                _this.nextPayment.push([d.to, d.projected_amount_due, d.projected_payment_due_date]);
+            });
+            _this.nextPages = _this.nextPayment.length / 10 + 1;
+        });
+    };
+    PageDashboardComponent.prototype.getTimeLineData = function () {
+        var _this = this;
+        this.timelineData = [{
+                label: '2017',
+                timeline: []
+            }];
+        this.apiService.getTimelineData().then(function (data) {
+            data.data.map(function (d) {
+                _this.timelineData[0].timeline.push({ date: _this.getDuration(d.duration_seconds), content: d.event_type === 'GROUP_CREATED' ? 'A new group has been created' : 'A new request to join group has been created', pointColor: '#FFC6F1' });
+            });
         });
     };
     PageDashboardComponent = __decorate([
@@ -2541,7 +2576,7 @@ module.exports = "<h2 md-dialog-title>Start Group</h2>\n<div md-dialog-content *
 /***/ "../../../../../src/app/pages/default-pages/groups/groups.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-alert [color]=\"'success'\" *ngIf=\"showGroupAlert === true\"><strong>Group has been created!</strong></ni-alert>\r\n<div *ngIf=\"showGroupList\">\r\n  <div class=\"row members-header\">\r\n    <div class=\"col-sm-6\">\r\n      <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \r\n    </div>\r\n    <div class=\"col-sm-6 text-right\">\r\n      <md-input-container class=\"search-group md-icon-left\">\r\n        <md-icon>search</md-icon>\r\n        <input mdInput value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12 p-3\">\r\n      <ni-table *ngIf=\"groups.length > 0\" [headers]=\"groupHeaders\" [data]=\"groups\"></ni-table>\r\n      <ni-alert *ngIf=\"groups.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nogroup' | translate}}</strong></ni-alert>\r\n      <ni-pagination [total]=\"groupsPage\" *ngIf=\"groupsPage > 0\"></ni-pagination>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"!showGroupList\">\r\n  <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n  <md-tab-group>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>home</md-icon> {{'Home' | translate}}\r\n      </ng-template>\r\n      <div class=\"row p-2\">\r\n        <div class=\"col-md-7 mb-3\">\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\" (click)=\"openStartDialog()\">Start</button>\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\" (click)=\"openDialog()\">Add a member</button>\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\">Save changes</button>\r\n          <md-card class=\"example-card mt-3\" *ngIf=\"groupInfo && groupInfo.group_info\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Name:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.name}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Description:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.description}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Date creation:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [mdDatepicker]=\"picker\" value=\"{{groupInfo.group_info.date_creation}}\" disabled>\r\n                  <button mdSuffix [mdDatepickerToggle]=\"picker\" disabled></button>\r\n                </md-input-container>\r\n                <md-datepicker #picker></md-datepicker>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">\r\n                <md-icon *ngIf=\"groupInfo.group_info.g_type === 'PRIVATE'\">person</md-icon>\r\n                <md-icon *ngIf=\"groupInfo.group_info.g_type === 'PUBLIC'\">people</md-icon>\r\n                Type:\r\n              </label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.g_type\">\r\n                  <md-option [value]=\"groupInfo.group_info.g_type\">{{groupInfo.group_info.g_type}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Currency:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.currency\">\r\n                  <md-option [value]=\"groupInfo.group_info.currency\">{{groupInfo.group_info.currency}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Creator:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.creator}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">\r\n                  <md-icon *ngIf=\"groupInfo.group_info.status === 'RUNNING'\">rotate_right</md-icon>\r\n                  <md-icon *ngIf=\"groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\">pause_circle_outline</md-icon>\r\n                  Status:\r\n              </label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.status\">\r\n                  <md-option [value]=\"groupInfo.group_info.status\">{{groupInfo.group_info.status === 'RUNNING' ? 'Login' : groupInfo.group_info.status}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Rate:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.rate}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Frequency:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.frequency}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Due date:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.due_day}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">nb members:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.nb_members}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-5\" *ngIf=\"groupInfo.group_info.g_type !== 'PUBLIC'\">\r\n          <ni-card [customBgColor]=\"'rgba(100,181,246,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-6.jpg'\" class=\"info-card\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'\">\r\n            <div class=\"title text-uppercase\">{{'Amount' | translate}}</div>\r\n            <div class=\"count\">2,543</div>\r\n          </ni-card>\r\n          <ni-card [title]=\"'timeline' | translate\" [customBgColor]=\"'transparent'\">\r\n            <ni-h-timeline [data]=\"timelineData\"></ni-h-timeline>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.previous_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Previous Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.previous_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.previous_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.previous_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.previous_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.next_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Next Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.next_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.next_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.next_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.next_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>card_membership</md-icon> {{'Members' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"accent\" (click)=\"openDialog()\">{{'Add a member' | translate}}</button>\r\n          <button md-raised-button color=\"accent\" (click)=\"removeAll()\">{{'Remove all members' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table *ngIf=\"members.length > 0\" [headers]=\"memberHeaders\" [data]=\"members\"></ni-table>\r\n          <ni-alert *ngIf=\"members.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nomember' | translate}}</strong></ni-alert>\r\n          <ni-pagination [total]=\"memberPage\" *ngIf=\"memberPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>check_box</md-icon> {{'Obligation' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"accent\" (click)=\"cancelAll()\">{{'Cancel all outstanding request' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table *ngIf=\"obligations.length > 0\" [headers]=\"obligationHeaders\" [data]=\"obligations\"></ni-table>\r\n          <ni-alert *ngIf=\"obligations.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noobligation' | translate}}</strong></ni-alert>\r\n          <ni-pagination [total]=\"obligationPage\" *ngIf=\"obligationPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>sms_failed</md-icon> {{'Requests' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table *ngIf=\"requests.length > 0\" [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n          <ni-alert *ngIf=\"requests.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'norequest' | translate}}</strong></ni-alert>\r\n          <ni-pagination [total]=\"requestPage\" *ngIf=\"requestPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>event</md-icon> {{'Event' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table *ngIf=\"events.length > 0\" [headers]=\"eventHeaders\" [data]=\"events\"></ni-table>\r\n          <ni-alert *ngIf=\"events.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noevent' | translate}}</strong></ni-alert>\r\n          <ni-pagination [total]=\"eventPage\" *ngIf=\"eventPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>local_atm</md-icon> {{'transaction' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <!-- <div class=\"col-lg-12 p-3\">\r\n          <ni-table *ngIf=\"transactions.length > 0\" [headers]=\"transactionHeaders\" [data]=\"transactions\"></ni-table>\r\n          <ni-alert *ngIf=\"transactions.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'notransaction' | translate}}</strong></ni-alert>\r\n          <ni-pagination [total]=\"transactionPage\" *ngIf=\"transactionPage > 0\"></ni-pagination>\r\n        </div> -->\r\n      </div>\r\n    </md-tab>\r\n  </md-tab-group>\r\n</div>\r\n\r\n<ni-loading></ni-loading>"
+module.exports = "<ni-alert [color]=\"'success'\" *ngIf=\"showGroupAlert === true\"><strong>Group has been created!</strong></ni-alert>\r\n<div *ngIf=\"showGroupList\">\r\n  <div class=\"row members-header\">\r\n    <div class=\"col-sm-6\">\r\n      <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \r\n    </div>\r\n    <div class=\"col-sm-5 text-right\">\r\n      <md-input-container class=\"search-group md-icon-left\">\r\n        <md-icon>search</md-icon>\r\n        <input mdInput value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n    <div class=\"col-sm-1 text-right\">\r\n      <md-icon class=\"btn-refresh\" (click)=\"doRefresh(1)\">refresh</md-icon>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12 p-3\">\r\n      <ni-table *ngIf=\"groups.length > 0\" [headers]=\"groupHeaders\" [data]=\"groups\"></ni-table>\r\n      <ni-alert *ngIf=\"groups.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nogroup' | translate}}</strong></ni-alert>\r\n      <ni-pagination [total]=\"groupsPage\" *ngIf=\"groupsPage > 0\"></ni-pagination>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"!showGroupList\">\r\n  <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n  <md-tab-group>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>home</md-icon> {{'Home' | translate}}\r\n      </ng-template>\r\n      <div class=\"row p-2\">\r\n        <div class=\"col-md-7 mb-3\">\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\" (click)=\"openStartDialog()\">Start</button>\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\" (click)=\"openDialog()\">Add a member</button>\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\">Save changes</button>\r\n          <md-card class=\"example-card mt-3\" *ngIf=\"groupInfo && groupInfo.group_info\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Name:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.name}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Description:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.description}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Date creation:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [mdDatepicker]=\"picker\" value=\"{{groupInfo.group_info.date_creation}}\" disabled>\r\n                  <button mdSuffix [mdDatepickerToggle]=\"picker\" disabled></button>\r\n                </md-input-container>\r\n                <md-datepicker #picker></md-datepicker>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">\r\n                <md-icon *ngIf=\"groupInfo.group_info.g_type === 'PRIVATE'\">person</md-icon>\r\n                <md-icon *ngIf=\"groupInfo.group_info.g_type === 'PUBLIC'\">people</md-icon>\r\n                Type:\r\n              </label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.g_type\">\r\n                  <md-option [value]=\"groupInfo.group_info.g_type\">{{groupInfo.group_info.g_type}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Currency:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.currency\">\r\n                  <md-option [value]=\"groupInfo.group_info.currency\">{{groupInfo.group_info.currency}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Creator:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.creator}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">\r\n                  <md-icon *ngIf=\"groupInfo.group_info.status === 'RUNNING'\">rotate_right</md-icon>\r\n                  <md-icon *ngIf=\"groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\">pause_circle_outline</md-icon>\r\n                  Status:\r\n              </label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.status\">\r\n                  <md-option [value]=\"groupInfo.group_info.status\">{{groupInfo.group_info.status === 'RUNNING' ? 'Login' : groupInfo.group_info.status}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Rate:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.rate}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Frequency:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.frequency}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Due date:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.due_day}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">nb members:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.nb_members}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-5\" *ngIf=\"groupInfo.group_info.g_type !== 'PUBLIC'\">\r\n          <ni-card [customBgColor]=\"'rgba(100,181,246,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-6.jpg'\" class=\"info-card\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'\">\r\n            <div class=\"title text-uppercase\">{{'Amount' | translate}}</div>\r\n            <div class=\"count\">2,543</div>\r\n          </ni-card>\r\n          <ni-card [title]=\"'timeline' | translate\" [customBgColor]=\"'transparent'\">\r\n            <ni-h-timeline [data]=\"timelineData\"></ni-h-timeline>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.previous_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Previous Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.previous_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.previous_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.previous_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.previous_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.next_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Next Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.next_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.next_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.next_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.next_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>card_membership</md-icon> {{'Members' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"accent\" (click)=\"openDialog()\">{{'Add a member' | translate}}</button>\r\n          <button md-raised-button color=\"accent\" (click)=\"removeAll()\">{{'Remove all members' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-5 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n        <div class=\"col-sm-1 text-right\">\r\n          <md-icon class=\"btn-refresh\" (click)=\"doRefresh(2)\">refresh</md-icon>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table *ngIf=\"members.length > 0\" [headers]=\"memberHeaders\" [data]=\"members\"></ni-table>\r\n          <ni-alert *ngIf=\"members.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nomember' | translate}}</strong></ni-alert>\r\n          <ni-pagination [total]=\"memberPage\" *ngIf=\"memberPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>check_box</md-icon> {{'Obligation' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"accent\" (click)=\"cancelAll()\">{{'Cancel all outstanding request' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-5 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n        <div class=\"col-sm-1 text-right\">\r\n          <md-icon class=\"btn-refresh\" (click)=\"doRefresh(3)\">refresh</md-icon>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table *ngIf=\"obligations.length > 0\" [headers]=\"obligationHeaders\" [data]=\"obligations\"></ni-table>\r\n          <ni-alert *ngIf=\"obligations.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noobligation' | translate}}</strong></ni-alert>\r\n          <ni-pagination [total]=\"obligationPage\" *ngIf=\"obligationPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>sms_failed</md-icon> {{'Requests' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-11 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n        <div class=\"col-sm-1 text-right\">\r\n          <md-icon class=\"btn-refresh\" (click)=\"doRefresh(4)\">refresh</md-icon>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table *ngIf=\"requests.length > 0\" [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n          <ni-alert *ngIf=\"requests.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'norequest' | translate}}</strong></ni-alert>\r\n          <ni-pagination [total]=\"requestPage\" *ngIf=\"requestPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>event</md-icon> {{'Event' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-11 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n        <div class=\"col-sm-1 text-right\">\r\n          <md-icon class=\"btn-refresh\" (click)=\"doRefresh(5)\">refresh</md-icon>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 p-3\">\r\n          <ni-table *ngIf=\"events.length > 0\" [headers]=\"eventHeaders\" [data]=\"events\"></ni-table>\r\n          <ni-alert *ngIf=\"events.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noevent' | translate}}</strong></ni-alert>\r\n          <ni-pagination [total]=\"eventPage\" *ngIf=\"eventPage > 0\"></ni-pagination>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>local_atm</md-icon> {{'transaction' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-11 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n        <div class=\"col-sm-1 text-right\">\r\n          <md-icon class=\"btn-refresh\" (click)=\"doRefresh(6)\">refresh</md-icon>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <!-- <div class=\"col-lg-12 p-3\">\r\n          <ni-table *ngIf=\"transactions.length > 0\" [headers]=\"transactionHeaders\" [data]=\"transactions\"></ni-table>\r\n          <ni-alert *ngIf=\"transactions.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'notransaction' | translate}}</strong></ni-alert>\r\n          <ni-pagination [total]=\"transactionPage\" *ngIf=\"transactionPage > 0\"></ni-pagination>\r\n        </div> -->\r\n      </div>\r\n    </md-tab>\r\n  </md-tab-group>\r\n</div>\r\n\r\n<ni-loading></ni-loading>"
 
 /***/ }),
 
@@ -2574,6 +2609,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2587,11 +2623,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var PageGroupsComponent = (function () {
-    function PageGroupsComponent(_sharedService, dialog, apiService) {
+    function PageGroupsComponent(_sharedService, dialog, apiService, auth) {
         this._sharedService = _sharedService;
         this.dialog = dialog;
         this.apiService = apiService;
+        this.auth = auth;
         this.pageTitle = 'groups';
         this.breadcrumb = [{ title: 'groups' }];
         this.groups = [];
@@ -2639,24 +2677,26 @@ var PageGroupsComponent = (function () {
             }
         });
         this.apiService.groupCounts.subscribe(function (res) {
-            _this.apiService.getGroups().then(function (res) {
-                _this.groups = [];
-                _this.groupHeaders = ['Group name', 'Creator', 'number of member', 'Amount', 'Currency', 'Creation Date', 'Description', 'Due date', 'Frequency Every x month(s)', 'Type', 'PS Type', 'Rate', { type: 'Action' }];
-                res.data.map(function (d) {
-                    _this.groups.push([d.name, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.due_day, d.frequency, d.g_type, d.position_selection_type, d.rate, { type: ['details'], id: d.id }]);
-                });
-                _this.groupsPage = _this.groups.length / 10 + 1;
-            });
+            _this.getGroups();
+        });
+        this.auth.langCode.subscribe(function (res) {
+            _this.getGroups();
+            _this.getGroupEvents();
+            _this.getGroupInfo();
+            _this.getGroupMembers();
+            _this.getGroupObligations();
+            _this.getGroupRequests();
+            _this.getTimeLineData();
         });
         this.apiService.groupId.subscribe(function (data) {
-            if (_this.showGroupList) {
+            if (!_this.isClickedDetails) {
                 _this.breadcrumb = [{ title: 'groups' }];
             }
             _this.apiService.getGroups().then(function (res) {
                 res.data.map(function (d) {
-                    if (d.id === data && !_this.showGroupList) {
+                    if (d.id === data && _this.isClickedDetails) {
                         _this.breadcrumb = [];
-                        _this.breadcrumb.push({ title: _this.pageTitle });
+                        _this.breadcrumb.push({ title: _this.pageTitle, link: 'default-layout/groups' });
                         _this.breadcrumb.push({ title: d.name });
                     }
                 });
@@ -2664,60 +2704,96 @@ var PageGroupsComponent = (function () {
                     _this.apiService.showSpinner.next(false);
                 }
             });
-            _this.apiService.getGroupMembers().then(function (res) {
-                _this.members = [];
-                _this.memberHeaders = ['Name', 'Email', 'Type', 'Picture', 'Position', 'Date', { type: 'Action' }];
-                res.data.map(function (d) {
-                    _this.members.push([d.first_name, d.email, d.member_type, d.photo_path, d.position, d.user_position_date, { type: ['remove'], id: d.id }]);
-                });
-                _this.memberPage = _this.members.length / 10 + 1;
-            });
-            _this.apiService.getGroupObligations().then(function (res) {
-                _this.obligations = [];
-                _this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Type', { type: 'Action' }];
-                res.data.map(function (d) {
-                    _this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status, d.type, { type: ['paynow'], id: d.id }]);
-                });
-                _this.obligationPage = _this.obligations.length / 10 + 1;
-            });
-            _this.apiService.getGroupRequests().then(function (res) {
-                _this.requests = [];
-                _this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date', { type: 'Action' }];
-                res.data.map(function (d) {
-                    _this.requests.push([d.sender, d.receiver, d.group, d.request_type, d.request_status, d.date_creation, { type: ['Accept', 'Reject'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type }]);
-                });
-                _this.requestPage = _this.requests.length / 10 + 1;
-            });
-            _this.apiService.getGroupEvents().then(function (res) {
-                _this.events = [];
-                _this.eventHeaders = ['Type', 'Initiator', 'Group', 'Date'];
-                res.data.map(function (d) {
-                    _this.events.push([d.event_type, d.initiator, d.group, d.date_event]);
-                });
-                _this.eventPage = _this.events.length / 10 + 1;
-            });
-            _this.apiService.getGroupInfo().then(function (res) {
-                _this.groupInfo = res.data[0];
-                if (_this.isClickedDetails) {
-                    _this.showGroupList = false;
-                    _this.apiService.showSpinner.next(false);
-                }
-                else {
-                    _this.showGroupList = true;
-                }
-            });
+            _this.getGroupEvents();
+            _this.getGroupInfo();
+            _this.getGroupMembers();
+            _this.getGroupObligations();
+            _this.getGroupRequests();
+            _this.getTimeLineData();
         });
+    };
+    PageGroupsComponent.prototype.ngOnDestroy = function () {
+    };
+    PageGroupsComponent.prototype.getGroups = function () {
+        var _this = this;
+        this.groups = [];
+        this.apiService.getGroups().then(function (res) {
+            _this.groups = [];
+            _this.groupHeaders = ['Group name', 'Creator', 'number of member', 'Amount', 'Currency', 'Creation Date', 'Description', 'Due date', 'Frequency Every x month(s)', 'Type', 'PS Type', 'Rate', { type: 'Action' }];
+            res.data.map(function (d) {
+                _this.groups.push([d.name, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.due_day, d.frequency, d.g_type_text, d.position_selection_type_text, d.rate, { type: ['details'], id: d.id }]);
+            });
+            _this.groupsPage = _this.groups.length / 10 + 1;
+        });
+    };
+    PageGroupsComponent.prototype.getGroupMembers = function () {
+        var _this = this;
+        this.members = [];
+        this.apiService.getGroupMembers().then(function (res) {
+            _this.memberHeaders = ['Name', 'Email', 'Type', 'Picture', 'Position', 'Date', { type: 'Action' }];
+            res.data.map(function (d) {
+                _this.members.push([d.first_name, d.email, d.member_type_text, d.photo_path, d.position, d.user_position_date, { type: ['remove'], id: d.id }]);
+            });
+            _this.memberPage = _this.members.length / 10 + 1;
+        });
+    };
+    PageGroupsComponent.prototype.getGroupObligations = function () {
+        var _this = this;
+        this.obligations = [];
+        this.apiService.getGroupObligations().then(function (res) {
+            _this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Type', { type: 'Action' }];
+            res.data.map(function (d) {
+                _this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status, d.type_text, { type: ['paynow'], id: d.id }]);
+            });
+            _this.obligationPage = _this.obligations.length / 10 + 1;
+        });
+    };
+    PageGroupsComponent.prototype.getGroupRequests = function () {
+        var _this = this;
+        this.requests = [];
+        this.apiService.getGroupRequests().then(function (res) {
+            _this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date', { type: 'Action' }];
+            res.data.map(function (d) {
+                _this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation, { type: ['Accept', 'Reject'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type }]);
+            });
+            _this.requestPage = _this.requests.length / 10 + 1;
+        });
+    };
+    PageGroupsComponent.prototype.getGroupEvents = function () {
+        var _this = this;
+        this.events = [];
+        this.apiService.getGroupEvents().then(function (res) {
+            _this.eventHeaders = ['Type', 'Initiator', 'Group', 'Date'];
+            res.data.map(function (d) {
+                _this.events.push([d.event_type_text, d.initiator, d.group, d.date_event]);
+            });
+            _this.eventPage = _this.events.length / 10 + 1;
+        });
+    };
+    PageGroupsComponent.prototype.getGroupInfo = function () {
+        var _this = this;
+        this.apiService.getGroupInfo().then(function (res) {
+            _this.groupInfo = res.data[0];
+            if (_this.isClickedDetails) {
+                _this.showGroupList = false;
+                _this.apiService.showSpinner.next(false);
+            }
+            else {
+                _this.showGroupList = true;
+            }
+        });
+    };
+    PageGroupsComponent.prototype.getTimeLineData = function () {
+        var _this = this;
+        this.timelineData = [{
+                label: '2017',
+                timeline: []
+            }];
         this.apiService.getTimelineData().then(function (data) {
-            _this.timelineData = [{
-                    label: '2017',
-                    timeline: []
-                }];
             data.data.map(function (d) {
                 _this.timelineData[0].timeline.push({ date: _this.getDuration(d.duration_seconds), content: d.event_type === 'GROUP_CREATED' ? 'A new group has been created' : 'A new request to join group has been created', pointColor: '#FFC6F1' });
             });
         });
-    };
-    PageGroupsComponent.prototype.ngOnDestroy = function () {
     };
     PageGroupsComponent.prototype.openDialog = function () {
         var dialogRef = this.dialog.open(DialogAddMemberComponent);
@@ -2756,16 +2832,37 @@ var PageGroupsComponent = (function () {
             console.log(res);
         });
     };
+    PageGroupsComponent.prototype.doRefresh = function (index) {
+        switch (index) {
+            case 1:
+                this.getGroups();
+                break;
+            case 2:
+                this.getGroupMembers();
+                break;
+            case 3:
+                this.getGroupObligations();
+                break;
+            case 4:
+                this.getGroupRequests();
+                break;
+            case 5:
+                this.getGroupEvents();
+                break;
+            case 6:
+                break;
+        }
+    };
     PageGroupsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-groups',
             template: __webpack_require__("../../../../../src/app/pages/default-pages/groups/groups.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/default-pages/groups/groups.component.scss")]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["i" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["i" /* MdDialog */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["i" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["i" /* MdDialog */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */]) === "function" && _d || Object])
     ], PageGroupsComponent);
     return PageGroupsComponent;
-    var _a, _b, _c;
+    var _a, _b, _c, _d;
 }());
 
 var DialogAddMemberComponent = (function () {
@@ -2881,7 +2978,7 @@ var PageNotFoundComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/obligation/obligation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-sm-6\">\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \n  </div>\n  <div class=\"col-lg-12\">\n    <ni-table [headers]=\"obligationHeaders\" [data]=\"obligations\"></ni-table>\n    <ni-pagination [total]=\"page\" *ngIf=\"page > 0\"></ni-pagination>\n  </div>\n</div>"
+module.exports = "<div class=\"row\">\n  <div class=\"col-sm-6\">\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \n  </div>\n  <div class=\"col-sm-6 text-right\">\n    <md-icon class=\"btn-refresh\" (click)=\"doRefresh()\">refresh</md-icon>\n  </div>\n  <div class=\"col-lg-12\">\n    <ni-table [headers]=\"obligationHeaders\" [data]=\"obligations\"></ni-table>\n    <ni-pagination [total]=\"page\" *ngIf=\"page > 0\"></ni-pagination>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -2933,16 +3030,23 @@ var PageObligationComponent = (function () {
         var _this = this;
         this.apiService.showSpinner.next(true);
         this.apiService.groupId.subscribe(function (data) {
-            _this.apiService.getGroupObligations().then(function (res) {
-                _this.obligations = [];
-                _this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Type', { type: 'Action' }];
-                res.data.map(function (d) {
-                    _this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status, d.type, { type: ['paynow'], id: d.id }]);
-                });
-                _this.page = _this.obligations.length / 10 + 1;
-                _this.apiService.showSpinner.next(false);
-            });
+            _this.getGroupObligations();
         });
+    };
+    PageObligationComponent.prototype.getGroupObligations = function () {
+        var _this = this;
+        this.obligations = [];
+        this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Type', { type: 'Action' }];
+        this.apiService.getGroupObligations().then(function (res) {
+            res.data.map(function (d) {
+                _this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status, d.type, { type: ['paynow'], id: d.id }]);
+            });
+            _this.page = _this.obligations.length / 10 + 1;
+            _this.apiService.showSpinner.next(false);
+        });
+    };
+    PageObligationComponent.prototype.doRefresh = function () {
+        this.getGroupObligations();
     };
     PageObligationComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -3016,6 +3120,7 @@ var PageProfileComponent = (function () {
         api.getUserInfo().then(function (res) {
             console.log(res);
         });
+        this.api.initHeaderGroup.next('');
     }
     PageProfileComponent.prototype.ngOnInit = function () { };
     PageProfileComponent = __decorate([
@@ -3037,7 +3142,7 @@ var PageProfileComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/requests/requests.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row members-header\">\r\n  <div class=\"col-sm-6\">\r\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>      \r\n  </div>\r\n  <div class=\"col-sm-6 text-right\">\r\n    <md-input-container class=\"search-group md-icon-left\">\r\n      <md-icon>search</md-icon>\r\n      <input mdInput value=\"\">\r\n    </md-input-container>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 p-3\">\r\n    <ni-table [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n    <ni-pagination [total]=\"this.requests.length / 10 + 1\"></ni-pagination>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"row members-header\">\r\n  <div class=\"col-sm-6\">\r\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>      \r\n  </div>\r\n  <div class=\"col-sm-5 text-right\">\r\n    <md-input-container class=\"search-group md-icon-left\">\r\n      <md-icon>search</md-icon>\r\n      <input mdInput value=\"\">\r\n    </md-input-container>\r\n  </div>\r\n  <div class=\"col-sm-1 text-right\">\r\n    <md-icon class=\"btn-refresh\" (click)=\"doRefresh()\">refresh</md-icon>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12 p-3\">\r\n    <ni-table [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n    <ni-pagination [total]=\"this.requests.length / 10 + 1\"></ni-pagination>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -3090,16 +3195,22 @@ var PageRequestsComponent = (function () {
         this._sharedService.emitChange(this.pageTitle);
     }
     PageRequestsComponent.prototype.ngOnInit = function () {
-        var _this = this;
         this.apiService.showSpinner.next(true);
+        this.getUserRequests();
+    };
+    PageRequestsComponent.prototype.getUserRequests = function () {
+        var _this = this;
+        this.requests = [];
+        this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date'];
         this.apiService.getUserRequest().then(function (data) {
             _this.apiService.showSpinner.next(false);
-            _this.requests = [];
-            _this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date'];
             data.data.map(function (d) {
-                _this.requests.push([d.sender, d.receiver, d.group, d.request_type, d.request_status, d.date_creation]);
+                _this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation]);
             });
         });
+    };
+    PageRequestsComponent.prototype.doRefresh = function () {
+        this.getUserRequests();
     };
     PageRequestsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -3259,6 +3370,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__ = __webpack_require__("../../../../@amcharts/amcharts3-angular/es2015/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3268,6 +3380,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -3298,9 +3411,10 @@ var timelineData = [
     }
 ];
 var PageTransactionsComponent = (function () {
-    function PageTransactionsComponent(AmCharts, _sharedService) {
+    function PageTransactionsComponent(AmCharts, _sharedService, apiService) {
         this.AmCharts = AmCharts;
         this._sharedService = _sharedService;
+        this.apiService = apiService;
         this.pageTitle = 'transactions';
         this.timelineData = timelineData;
         this.breadcrumb = [{ title: 'transactions' }];
@@ -3397,6 +3511,7 @@ var PageTransactionsComponent = (function () {
             tooltips: false
         };
         this._sharedService.emitChange(this.pageTitle);
+        this.apiService.initHeaderGroup.next('');
     }
     PageTransactionsComponent.prototype.ngOnInit = function () {
         this.chart = this.AmCharts.makeChart('amchart-1', {
@@ -3517,10 +3632,10 @@ var PageTransactionsComponent = (function () {
             template: __webpack_require__("../../../../../src/app/pages/default-pages/transactions/transactions.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/default-pages/transactions/transactions.component.scss")]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */]) === "function" && _c || Object])
     ], PageTransactionsComponent);
     return PageTransactionsComponent;
-    var _a, _b;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=transactions.component.js.map
@@ -3866,6 +3981,8 @@ var PageSigninComponent = (function () {
             if (res.email_validated === 'yes') {
                 _this.isEmailCorrect = true;
                 localStorage.setItem('login', 'true');
+                localStorage.setItem('username', res.data[0].first_name + ' ' + res.data[0].middle_name + ' ' + res.data[0].sur_name);
+                localStorage.setItem('userphoto', res.data[0].photo_path);
                 _this.router.navigate(['/default-layout/dashboard']);
             }
             else {
@@ -4261,6 +4378,8 @@ var ApiService = (function () {
         this.isClickedDetails = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"](false);
         this.showSpinner = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"](false);
         this.groupCreated = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"](false);
+        this.initHeaderGroup = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"]('');
+        this.refreshIndex = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"](0);
         this.langCode = "ENG";
         this.auth.langCode.subscribe(function (res) {
             switch (res) {
@@ -4924,7 +5043,7 @@ module.exports = "<h2 md-dialog-title>{{'groupcreation' | translate}}</h2>\n<for
 /***/ "../../../../../src/app/ui/components/horizontal-navbar/horizontal-navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"navbar-wrap\">\r\n  <div class=\"navbar-button\" [ngClass]=\"{ 'open' : openedSidebar }\" (click)=\"openSidebar()\">\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n  </div>\r\n\r\n  <h1 class=\"page-title\"></h1>\r\n\r\n  <div class=\"nav-items\">\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\" class=\"btn-payment\" mdTooltip=\"{{'paymenttooltip' | translate}}\" mdTooltipPosition=\"below\"><md-icon>payment</md-icon> {{'payment' | translate}}</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\" class=\"btn-group\" mdTooltip=\"{{'creationtooltip' | translate}}\" mdTooltipPosition=\"below\" (click)=\"openCreateGroupDialog()\"><md-icon>create_new_folder</md-icon> {{'createNewGroup' | translate}}</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-input-container class=\"mb-0\">\r\n        <input mdInput [placeholder]=\"'groupList' | translate\" [mdAutocomplete]=\"auto\" [formControl]=\"groupCtrl\">\r\n      </md-input-container>\r\n      <md-autocomplete #auto=\"mdAutocomplete\">\r\n        <md-option *ngFor=\"let group of filteredGroup | async\" [value]=\"group\" (click)=\"goToGroup(group)\">\r\n          {{ group }}\r\n        </md-option>\r\n      </md-autocomplete>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link btn-code\">\r\n          <img [src]=\"'assets/content/' + langUrl\" width=\"30\" height=\"20\">\r\n      </a>\r\n      <div class=\"dropdown-menu\">\r\n        <ul>\r\n          <li *ngFor=\"let lang of languages\">\r\n            <a (click)=\"changeLanguage(lang.code)\">\r\n              <div class=\"content\">\r\n                <img [src]=\"'assets/content/' + lang.url\" width=\"30\" height=\"20\">\r\n                <span class=\"desc\"><strong>{{lang.code.toUpperCase()}}</strong></span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <div class=\"avatar\"><img src=\"assets/content/avatar-2.jpg\" width=\"40\" height=\"40\" alt=\"\"></div>\r\n        <div class=\"name\">Justin Adams</div>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu mini-menu\">\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-home\"></span> My Account</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-user\"></span> Profile</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"/default-layout/calendar\"><span class=\"icon sli-calendar\"></span> Calendar</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\"><span class=\"icon sli-settings\"></span> Settings</a>\r\n          </li>\r\n          <li>\r\n            <a (click)=\"logout()\"><span class=\"icon sli-logout\"></span> Log Out</a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"items-overlay\" (click)=\"close($event)\"></div>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"navbar-wrap\">\r\n  <div class=\"navbar-button\" [ngClass]=\"{ 'open' : openedSidebar }\" (click)=\"openSidebar()\">\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n  </div>\r\n\r\n  <h1 class=\"page-title\"></h1>\r\n\r\n  <div class=\"nav-items\">\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\" class=\"btn-payment\" mdTooltip=\"{{'paymenttooltip' | translate}}\" mdTooltipPosition=\"below\"><md-icon>payment</md-icon> {{'payment' | translate}}</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <button md-raised-button color=\"accent\" class=\"btn-group\" mdTooltip=\"{{'creationtooltip' | translate}}\" mdTooltipPosition=\"below\" (click)=\"openCreateGroupDialog()\"><md-icon>create_new_folder</md-icon> {{'createNewGroup' | translate}}</button>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-input-container class=\"mb-0\">\r\n        <input mdInput [placeholder]=\"'groupList' | translate\" [mdAutocomplete]=\"auto\" [formControl]=\"groupCtrl\">\r\n      </md-input-container>\r\n      <md-autocomplete #auto=\"mdAutocomplete\">\r\n        <md-option *ngFor=\"let group of filteredGroup | async\" [value]=\"group\" (click)=\"goToGroup(group)\">\r\n          {{ group }}\r\n        </md-option>\r\n      </md-autocomplete>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link btn-code\">\r\n          <img [src]=\"'assets/content/' + langUrl\" width=\"30\" height=\"20\">\r\n      </a>\r\n      <div class=\"dropdown-menu\">\r\n        <ul>\r\n          <li *ngFor=\"let lang of languages\">\r\n            <a (click)=\"changeLanguage(lang.code)\">\r\n              <div class=\"content\">\r\n                <img [src]=\"'assets/content/' + lang.url\" width=\"30\" height=\"20\">\r\n                <span class=\"desc\"><strong>{{lang.code.toUpperCase()}}</strong></span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <div class=\"avatar\"><img [src]=\"'assets/' + photoUrl + '.png'\" width=\"40\" height=\"40\" alt=\"\"></div>\r\n        <div class=\"name\">{{username}}</div>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu mini-menu\">\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"transactions\"><span class=\"icon sli-home\"></span> My Account</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"profile\"><span class=\"icon sli-user\"></span> Profile</a>\r\n          </li>\r\n          <li>\r\n            <a (click)=\"logout()\"><span class=\"icon sli-logout\"></span> Log Out</a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"items-overlay\" (click)=\"close($event)\"></div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -4990,12 +5109,17 @@ var HorizontalNavbarComponent = (function () {
         this.langCode = 'en';
         this.langUrl = 'flag-uk.png';
         this.groupList = [];
+        this.username = '';
+        this.photoUrl = '';
         this.openedSidebar = false;
         this.showOverlay = false;
         this.groupCtrl = new __WEBPACK_IMPORTED_MODULE_5__angular_forms__["FormControl"]();
         this.filteredGroup = this.groupCtrl.valueChanges
             .startWith(null)
             .map(function (name) { return _this.filterStates(name); });
+        this.apiService.initHeaderGroup.subscribe(function (res) {
+            _this.groupCtrl.setValue('');
+        });
         this.auth.langCode.subscribe(function (code) {
             _this.langCode = code;
             _this.languages.map(function (l) {
@@ -5005,12 +5129,14 @@ var HorizontalNavbarComponent = (function () {
             });
             translate.use(_this.langCode);
         });
+        this.username = localStorage.getItem('username');
+        this.photoUrl = localStorage.getItem('userphoto').substring(0, localStorage.getItem('userphoto').indexOf('.'));
     }
     HorizontalNavbarComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.apiService.groupCounts.subscribe(function (res) {
-            _this.groupList = [];
             _this.apiService.getGroups().then(function (data) {
+                _this.groupList = [];
                 data.data.map(function (d) {
                     _this.groupList.push(d.name);
                 });
@@ -5072,6 +5198,8 @@ var HorizontalNavbarComponent = (function () {
     };
     HorizontalNavbarComponent.prototype.logout = function () {
         localStorage.setItem('login', 'false');
+        localStorage.setItem('username', '');
+        localStorage.setItem('userphoto', '');
         this.router.navigate(['/']);
     };
     __decorate([
@@ -5313,6 +5441,7 @@ var MenuComponent = (function () {
     MenuComponent.prototype.toggle = function (event, item, el) {
         event.preventDefault();
         this.apiService.isClickedDetails.next(false);
+        this.apiService.initHeaderGroup.next('');
         var items = el.menuItems;
         if (item.active) {
             item.active = false;

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'ni-card',
@@ -19,8 +20,13 @@ export class NiCardComponent implements OnInit {
   @Input() indents: any = '';
   @Input() align: string = 'left';
   @Input() info: string = '';
+  @Input() refresh: number = 0;
 
-  constructor() {}
+  constructor(private apiService: ApiService) {}
 
   ngOnInit() {}
+
+  doRefresh(index) {
+    this.apiService.refreshIndex.next(index);
+  }
 }

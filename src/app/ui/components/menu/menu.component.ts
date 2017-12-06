@@ -52,6 +52,7 @@ export class MenuComponent implements OnInit {
   toggle(event: Event, item: any, el: any) {
     event.preventDefault();
     this.apiService.isClickedDetails.next(false);
+    this.apiService.initHeaderGroup.next('');
 
     let items: any[] = el.menuItems;
 

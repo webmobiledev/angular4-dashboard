@@ -3,6 +3,7 @@ import { SharedService } from '../../../layouts/shared-service';
 import { AmChartsService } from '@amcharts/amcharts3-angular';
 import { User } from '../../../ni-components/ni-chat/user';
 import { Message } from '../../../ni-components/ni-chat/message';
+import { ApiService } from '../../../services/api.service';
 
 
 const timelineData: any[] = [
@@ -48,8 +49,9 @@ export class PageTransactionsComponent implements OnInit {
     avatar: 'assets/content/avatar-4.jpg'
   };
 
-  constructor( private AmCharts: AmChartsService, private _sharedService: SharedService ) {
+  constructor( private AmCharts: AmChartsService, private _sharedService: SharedService, private apiService: ApiService) {
     this._sharedService.emitChange(this.pageTitle);
+    this.apiService.initHeaderGroup.next('');
   }
 
   ngOnInit() {

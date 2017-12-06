@@ -15,7 +15,7 @@
 
 <div *ngIf="type === 'accept' && requestType === 'REQUEST_TO_JOIN_GROUP' && groupRotationType !== 'FIRST_ARRIVED_FIRST_SERVED'">
   <div md-dialog-content>
-    Do you really want to join the group ?
+    Do you really accept the request ?
     <div md-dialog-actions>
       <button md-raised-button (click)="dialogRef.close('no')">CANCEL</button>
       <button md-raised-button (click)="validate('accept')" color="accent">Validate</button>
@@ -25,7 +25,8 @@
 
 <div *ngIf="type === 'reject'">
   <div md-dialog-content>
-    <md-input-container>
+    Do you really reject the request ?
+    <md-input-container class="mt-3">
       <input mdInput placeholder="Justification" value="" [(ngModel)]="comment" type="text">
     </md-input-container>
     <div md-dialog-actions>
@@ -34,3 +35,13 @@
     </div>
   </div>
 </div>
+
+<div *ngIf="type === 'accept' && requestType === 'START_AND_SELECT_POSTION_GROUP' && groupRotationType === 'RANDOM'">
+    <div md-dialog-content>
+      Do you really accept the request ?
+      <div md-dialog-actions>
+        <button md-raised-button>CANCEL</button>
+        <button md-raised-button color="accent">Validate</button>
+      </div>
+    </div>
+  </div>
