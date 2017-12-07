@@ -26,6 +26,7 @@ export class HorizontalNavbarComponent implements OnInit {
   langCode = 'en';
   langUrl = 'flag-uk.png';
   groupList = [];
+  groupDetailList = [];
   filteredGroup: any;
   groupCtrl: FormControl;
   username = '';
@@ -59,12 +60,20 @@ export class HorizontalNavbarComponent implements OnInit {
 
   ngOnInit() {
     this.apiService.groupCounts.subscribe(res => {
-      this.apiService.getGroups().then((data: any) => {
-        this.groupList = [];
-        data.data.map(d => {
-          this.groupList.push(d.name);
+      if (!this.apiService.isMenuClicked) {
+        this.apiService.getGroups().then((data: any) => {
+          this.groupList = [];
+          this.groupDetailList = [];
+          data.data.map(d => {
+            this.groupDetailList.push(d);
+            this.groupList.push(d.name);
+          });
+          this.apiService.groupList = this.groupDetailList;
+          if (res !== data.data.length) {
+            this.apiService.groupCounts.next(data.data.length);
+          }
         });
-      });
+      }
     });
   }
 
@@ -121,14 +130,12 @@ export class HorizontalNavbarComponent implements OnInit {
   }
 
   goToGroup(group) {
-    this.apiService.getGroups().then((data: any) => {
-      data.data.map(d => {
-        if (d.name === group) {
-          this.apiService.groupId.next(d.id);
-          this.apiService.isClickedDetails.next(true);
-          this.router.navigate(['/default-layout/groups']);
-        }
-      });
+    this.groupDetailList.map(d => {
+      if (d.name === group) {
+        this.apiService.isClickedDetails.next(true);
+        this.apiService.groupId.next(d.id);
+        this.router.navigate(['/default-layout/groups']);
+      }
     });
   }
 

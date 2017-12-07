@@ -1,6 +1,7 @@
 import { NgModule }              from '@angular/core';
 import { CommonModule }          from '@angular/common';
 import { FormsModule }           from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { TranslateModule } from 'ng2-translate';
 
@@ -27,6 +28,7 @@ import { NiPaginationComponent } from './ni-pagination/ni-pagination.component';
   imports: [
     CommonModule,
     FormsModule,
+    RouterModule,
     TranslateModule,
     MdIconModule,
     MdProgressSpinnerModule,

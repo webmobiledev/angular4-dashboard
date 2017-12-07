@@ -16,9 +16,6 @@ export class AppComponent {
       auth.setConfirmParams(code, email);
     });
     this.getLocation();
-    this.apiService.getGroups().then((data: any) => {
-      this.apiService.groupCounts.next(typeof data.data !== 'undefined' ? data.data.length : 0);
-    });
   }
 
   getLocation() {

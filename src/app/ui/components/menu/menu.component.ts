@@ -17,6 +17,7 @@ import { ApiService } from '../../../services/api.service';
 })
 export class MenuComponent implements OnInit {
   menuItems: IMenuItem[];
+  groupCounts = 0;
 
   constructor( private menuService: MenuService, private auth: AuthService, private apiService: ApiService ) {
   }
@@ -26,11 +27,19 @@ export class MenuComponent implements OnInit {
       this.menuItems = menuItems;
       this.apiService.groupCounts.subscribe((data: any) => {
         this.menuItems[1].badge.text = data;
+        this.groupCounts = data;
       });
     });
   }
 
   getLiClasses(item: any, isActive: any) {
+    this.menuItems.map(d => {
+      if (d.title === item.title && (item.active || isActive)) {
+        d.active = true;
+      } else {
+        d.active = false;
+      }
+    });
     return {
       'has-sub': item.sub,
       'active': item.active || isActive,
@@ -51,6 +60,7 @@ export class MenuComponent implements OnInit {
 
   toggle(event: Event, item: any, el: any) {
     event.preventDefault();
+    this.apiService.isMenuClicked = true;
     this.apiService.isClickedDetails.next(false);
     this.apiService.initHeaderGroup.next('');
 

@@ -1,22 +1,11 @@
 <ni-breadcrumb [menu]="breadcrumb" [style]="'custom2'" class="mb-4"></ni-breadcrumb>
 <div class="row">
-    <div class="col-lg-7">
+    <div class="col-lg-8">
       <div class="row">
         <div class="col-md-12">
           <ni-card [title]="'request' | translate" [info]="'requestinfo' | translate" [refresh]="1">
-            <div class="table-responsive">
-              <table class="table" *ngIf="userRequests.length > 0">
-                <tbody *ngFor="let user of userRequests">
-                  <tr>
-                    <td>{{user.request_date}} : {{user.sender}}<span *ngIf="user.request_type === 'REQUEST_TO_JOIN_GROUP'"> {{'would_you_to_join_the_group' | translate}} </span>{{user.group}} 
-                      <button md-raised-button color="accent" class="btn-action" (click)="showDialog('accept', user)">Accept</button>
-                      <button md-raised-button color="warn" class="btn-action" (click)="showDialog('reject', user)">Reject</button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <ni-alert *ngIf="userRequests.length === 0" [color]="'warning'" [outline]="true"><strong>{{'norequest' | translate}}</strong></ni-alert>
-            </div>
+            <ni-table *ngIf="userRequests.length > 0" [headers]="userRequestHeader" [data]="userRequests"></ni-table>
+            <ni-alert *ngIf="userRequests.length === 0" [color]="'warning'" [outline]="true"><strong>{{'nopayment' | translate}}</strong></ni-alert>
             <ni-pagination [total]="userPages" *ngIf="userPages > 0"></ni-pagination>
           </ni-card>
         </div>
@@ -29,7 +18,7 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-5">
+    <div class="col-lg-4">
       <ni-card [title]="'timeline' | translate" [info]="'timelineinfo' | translate" [refresh]="3">
         <ni-h-timeline [showYears]="true" [showDate]="true" [align]="'between'" [data]="timelineData"></ni-h-timeline>
       </ni-card>

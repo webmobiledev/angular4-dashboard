@@ -6,7 +6,7 @@
         <md-input-container>
           <input mdInput id="name" placeholder="{{'Name' | translate}}" type="text" value="" [formControl]="form.controls['name']">
         </md-input-container>
-        <md-icon mdTooltip="{{'groupnameinfo' | translate}}" mdTooltipPosition="below">info_outline</md-icon>
+        <md-icon mdTooltip="{{'groupnameinfo' | translate}}" mdTooltipPosition="below">info</md-icon>
       </div>
       <div class="col-sm-6">
         <md-select placeholder="{{'grouptype' | translate}}" [formControl]="form.controls['grouptype']">
@@ -14,7 +14,7 @@
             {{ g.text }}
           </md-option>
         </md-select>
-        <md-icon mdTooltip="{{'grouptypeinfo' | translate}}" mdTooltipPosition="below">info_outline</md-icon>
+        <md-icon mdTooltip="{{'grouptypeinfo' | translate}}" mdTooltipPosition="below">info</md-icon>
       </div>
     </div>
     <div class="row pt-3" *ngIf="form.value.grouptype == 'PUBLIC'">
@@ -34,7 +34,7 @@
         <md-input-container>
           <input mdInput id="frequency" placeholder="{{'frequency' | translate}}" type="number" value="" [formControl]="form.controls['frequency']">
         </md-input-container>
-        <md-icon mdTooltip="{{'groupmonthinfo' | translate}}" mdTooltipPosition="below">info_outline</md-icon>
+        <md-icon mdTooltip="{{'groupmonthinfo' | translate}}" mdTooltipPosition="below">info</md-icon>
       </div>
       <div class="col-sm-6">
         <md-select placeholder="{{'Currency' | translate}}" [formControl]="form.controls['currency']">
@@ -42,7 +42,7 @@
             {{ c.code }}
           </md-option>
         </md-select>
-        <md-icon mdTooltip="{{'groupcurrencyinfo' | translate}}" mdTooltipPosition="below">info_outline</md-icon>
+        <md-icon mdTooltip="{{'groupcurrencyinfo' | translate}}" mdTooltipPosition="below">info</md-icon>
       </div>
     </div>
     <div class="row pt-3">
@@ -70,7 +70,7 @@
         <md-input-container>
           <input mdInput id="rate" placeholder="{{'Rate' | translate}}" type="number" value="" [formControl]="form.controls['rate']">
         </md-input-container>
-        <md-icon mdTooltip="{{'grouprateinfo' | translate}}" mdTooltipPosition="below">info_outline</md-icon>
+        <md-icon mdTooltip="{{'grouprateinfo' | translate}}" mdTooltipPosition="below">info</md-icon>
       </div>
     </div>
     <div class="row pt-3">
@@ -78,7 +78,7 @@
         <md-input-container>
           <input mdInput id="duedate" placeholder="{{'Due date' | translate}}" type="number" value="" [formControl]="form.controls['duedate']">
         </md-input-container>
-        <md-icon mdTooltip="{{'groupdayinfo' | translate}}" mdTooltipPosition="below">info_outline</md-icon>
+        <md-icon mdTooltip="{{'groupdayinfo' | translate}}" mdTooltipPosition="below">info</md-icon>
       </div>
       <div class="col-sm-6">
         <md-select placeholder="{{'Group position selection mode' | translate}}" [formControl]="form.controls['pstype']">
@@ -86,7 +86,7 @@
             {{ p.text }}
           </md-option>
         </md-select>
-        <md-icon mdTooltip="{{'grouppstypeinfo' | translate}}" mdTooltipPosition="below">info_outline</md-icon>
+        <md-icon mdTooltip="{{'grouppstypeinfo' | translate}}" mdTooltipPosition="below">info</md-icon>
       </div>
     </div>
     <div class="row pt-3">
@@ -94,7 +94,7 @@
         <md-input-container>
           <input mdInput id="nbdpenal" placeholder="{{'Number of days of delay allowed' | translate}}" type="number" value="" [formControl]="form.controls['nbdpenal']">
         </md-input-container>
-        <md-icon mdTooltip="{{'grouppenalinfo' | translate}}" mdTooltipPosition="below">info_outline</md-icon>
+        <md-icon mdTooltip="{{'grouppenalinfo' | translate}}" mdTooltipPosition="below">info</md-icon>
       </div>
       <div class="col-sm-6">
         <md-input-container>
@@ -107,7 +107,7 @@
         <md-checkbox [checked]="form.value.rate > 0" color="accent" [disabled]="form.value.grouptype == 'PUBLIC'" [formControl]="form.controls['smoothpayment']">
           {{'Smooth payment' | translate}}
         </md-checkbox>
-        <md-icon mdTooltip="{{'grouppaymentinfo' | translate}}" mdTooltipPosition="below">info_outline</md-icon>
+        <md-icon mdTooltip="{{'grouppaymentinfo' | translate}}" mdTooltipPosition="below">info</md-icon>
       </div>
     </div>
     <p>You will create a {{form.value.grouptype}} fund named {{form.value.name}}. The payment will be done every {{form.value.frequency}} {{form.value.frequency > 1 ? 'months' : 'month'}}, and the receiver will get {{form.value.amount}} the amount in {{form.value.currency}} plus {{form.value.rate}} % interest. The payment will have to be made on the {{form.value.duedate}}. In case of prepayment, you will have to pay extra {{form.value.payment}} of {{form.value.amount}}. After a delay of {{form.value.nbdpenal}} a penalty of {{form.value.penalty}} will apply. The members will select their position using {{form.value.pstype}} method.</p>

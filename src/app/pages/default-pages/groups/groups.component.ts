@@ -15,6 +15,7 @@ export class PageGroupsComponent implements OnInit {
   groups = [];
   groupsPage = 0;
   groupHeaders = [];
+  groupList = [];
 
   members = [];
   memberHeaders = [];
@@ -34,6 +35,8 @@ export class PageGroupsComponent implements OnInit {
   showGroupAlert = false;
 
   isClickedDetails = false;
+
+  subscribeList: any = [];
   
   constructor( private _sharedService: SharedService, private dialog: MdDialog, private apiService: ApiService, private auth: AuthService ) {
     this._sharedService.emitChange(this.pageTitle);
@@ -41,11 +44,12 @@ export class PageGroupsComponent implements OnInit {
 
   ngOnInit() {
     this.showGroupList = true;
+    this.groupList = this.apiService.groupList;
     this.apiService.showSpinner.next(true);
     this.apiService.isClickedDetails.subscribe(data => {
       if (data === true) {
         this.isClickedDetails = true;
-      } else {
+      } else if (!this.apiService.isMenuClicked && data === false) {
         this.isClickedDetails = false;
         this.breadcrumb = [{title: 'groups'}];
       }
@@ -61,58 +65,63 @@ export class PageGroupsComponent implements OnInit {
       }
     });
 
-    this.apiService.groupCounts.subscribe(res => {
-      this.getGroups();
+    this.subscribeList[1] = this.apiService.groupCounts.subscribe(res => {
+      this.showGroupList = true;
+      if (res !== 0) {
+        this.getGroups();
+      }
     });
 
     this.auth.langCode.subscribe(res => {
-      this.getGroups();
-      this.getGroupEvents();
-      this.getGroupInfo();
-      this.getGroupMembers();
-      this.getGroupObligations();
-      this.getGroupRequests();
-      this.getTimeLineData();
+      // this.getGroups();
+      // this.getGroupEvents();
+      // this.getGroupInfo();
+      // this.getGroupMembers();
+      // this.getGroupObligations();
+      // this.getGroupRequests();
+      // this.getTimeLineData();
     });
 
-    this.apiService.groupId.subscribe(data => {
+    this.subscribeList[0] = this.apiService.groupId.subscribe(data => {
       if (!this.isClickedDetails) {
         this.breadcrumb = [{title: 'groups'}];
-      }
-
-      this.apiService.getGroups().then((res: any) => {
-        res.data.map(d => {
+        this.apiService.showSpinner.next(false);
+      } else {
+        this.groupList.map(d => {
+          console.log(d.id, data, this.isClickedDetails);
           if (d.id === data && this.isClickedDetails) {
             this.breadcrumb = [];
-            this.breadcrumb.push({title: this.pageTitle, link: 'default-layout/groups'});
+            this.breadcrumb.push({title: this.pageTitle, link: '/default-layout/groups/'});
             this.breadcrumb.push({title: d.name});
           }
         });
-        if (!this.isClickedDetails) {
-          this.apiService.showSpinner.next(false);
-        }
-      });
-
-      this.getGroupEvents();
-      this.getGroupInfo();
-      this.getGroupMembers();
-      this.getGroupObligations();
-      this.getGroupRequests();
-      this.getTimeLineData();
+        this.getGroupEvents();
+        this.getGroupInfo();
+        this.getGroupMembers();
+        this.getGroupObligations();
+        this.getGroupRequests();
+        this.getTimeLineData();
+      }
     });
   }
 
   ngOnDestroy() {
+    this.subscribeList.map(d => {
+      d.unsubscribe();
+    });
   }
 
   getGroups() {
     this.groups = [];
-    this.groupHeaders = ['Group name', 'Creator', 'number of member', 'Amount', 'Currency', 'Creation Date', 'Description', 'Due date', 'Frequency Every x month(s)', 'Type', 'PS Type', 'Rate', {type: 'Action'}];
+    this.groupHeaders = ['Group name', 'Creator', 'number of member', 'Amount', 'Currency', 'Creation Date', 'Description', 'Frequency Every x month(s)', 'Type', 'Rate', {type: 'Action'}];
     this.apiService.getGroups().then((res: any) => {
       this.groups = [];
+      this.groupList = [];
       res.data.map(d => {
-        this.groups.push([d.name, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.due_day, d.frequency, d.g_type_text, d.position_selection_type_text, d.rate, {type: ['details'], id: d.id}]);
+        this.groupList.push(d);
+        this.groups.push([d.name, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.frequency, d.g_type_text, d.rate, {type: ['details'], id: d.id}]);
       });
+      this.apiService.groupList = this.groupList;
       this.groupsPage = this.groups.length / 10 + 1;
     });
   }
@@ -131,11 +140,11 @@ export class PageGroupsComponent implements OnInit {
 
   getGroupObligations() {
     this.obligations = [];
-    this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Type', {type: 'Action'}];
+    this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Position selection', {type: 'Action'}];
     this.apiService.getGroupObligations().then((res: any) => {
       this.obligations = [];
       res.data.map(d => {
-        this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status, d.type_text, {type: ['paynow'], id: d.id}]);
+        this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status_text, d.p_type_text, {type: ['paynow'], id: d.id}]);
       });
       this.obligationPage = this.obligations.length / 10 + 1;
     });
@@ -208,10 +217,17 @@ export class PageGroupsComponent implements OnInit {
   }
 
   getDuration(seconds) {
+    let d = this.format(((seconds / 3600) / 24).toFixed());
     let h = this.format(((seconds / 3600) % 24).toFixed());
     let m = this.format(((seconds % 3600) / 60).toFixed());
     let s = this.format((((seconds % 3600) % 60)).toFixed());
-    return h + ':' + m + ':' + s + ' ago';
+    let day = '';
+    if (d == 1) {
+      day = 1 + ' day ';
+    } else if (d > 1) {
+      day = d + ' days ';
+    }
+    return day + h + ' hours ' + m + ' mins ' + s + ' secs ago';
   }
 
   format(d) {

@@ -12,6 +12,7 @@ import { MdDialog, MdDialogRef, MdDialogConfig } from '@angular/material';
 export class PageDashboardComponent {
   pageTitle: string = 'dashboard';
   userRequests: any = [];
+  userRequestHeader: any = [];
   nextPayment: any = [];
   nextPaymentHeader: any = [];
   timelineData: any[] = [];
@@ -38,10 +39,17 @@ export class PageDashboardComponent {
   }
 
   getDuration(seconds) {
+    let d = this.format(((seconds / 3600) / 24).toFixed());
     let h = this.format(((seconds / 3600) % 24).toFixed());
     let m = this.format(((seconds % 3600) / 60).toFixed());
     let s = this.format((((seconds % 3600) % 60)).toFixed());
-    return h + ':' + m + ':' + s + ' ago';
+    let day = '';
+    if (d == 1) {
+      day = 1 + ' day ';
+    } else if (d > 1) {
+      day = d + ' days ';
+    }
+    return day + h + ' hours ' + m + ' mins ' + s + ' secs ago';
   }
 
   format(d) {
@@ -64,18 +72,21 @@ export class PageDashboardComponent {
 
   getRequests() {
     this.userRequests = [];
+    this.userRequestHeader = ['Type', 'From', 'Group', {type: 'Action'}];
     this.apiService.getUserRequest().then((data: any) => {
-      this.userRequests = data.data;
+      data.data.map(d => {
+        this.userRequests.push([d.request_type_text, d.sender, d.group, {type: ['Accept', 'Reject'], id: d.id}]);
+      });
       this.userPages = this.userRequests.length / 10 + 1;
     });
   }
 
   getNextPayments() {
     this.nextPayment = [];
+    this.nextPaymentHeader = ['Type', 'Amount', 'To', 'Date', {type: 'Action'}];
     this.apiService.getNextPayment().then((data: any) => {
-      this.nextPaymentHeader = ['To', 'Amount', 'Date'];
       data.data.map(d => {
-        this.nextPayment.push([d.to, d.projected_amount_due, d.projected_payment_due_date]);
+        this.nextPayment.push([d.p_type_text, d.projected_amount_due, d.to, d.projected_payment_due_date, {type: ['paynow'], id: d.id}]);
       });
       this.nextPages = this.nextPayment.length / 10 + 1;
     });

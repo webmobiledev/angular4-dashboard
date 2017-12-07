@@ -22,11 +22,11 @@ export class PageObligationComponent implements OnInit {
 
   getGroupObligations() {
     this.obligations = [];
-    this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Type', {type: 'Action'}];
+    this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Position selection', {type: 'Action'}];
     this.apiService.getGroupObligations().then((res: any) => {
       this.obligations = [];
       res.data.map(d => {
-        this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status, d.type, {type: ['paynow'], id: d.id}]);
+        this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status_text, d.p_type_text, {type: ['paynow'], id: d.id}]);
       });
       this.page = this.obligations.length / 10 + 1;
       this.apiService.showSpinner.next(false);

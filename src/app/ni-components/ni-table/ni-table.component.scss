@@ -104,4 +104,10 @@
 
 table {
   font-size: 15px !important;
+
+  button {
+    padding: 0 10px;
+    line-height: 1.5;
+    min-width: 0;
+  }
 }

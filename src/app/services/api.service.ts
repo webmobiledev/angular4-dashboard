@@ -15,6 +15,8 @@ export class ApiService {
   refreshIndex = new BehaviorSubject(0);
 
   langCode = "ENG";
+  isMenuClicked = false;
+  groupList: any = [];
 
   constructor(private http: Http, private auth: AuthService) {
     this.auth.langCode.subscribe(res => {
