@@ -12,7 +12,6 @@ export class ApiService {
   showSpinner = new BehaviorSubject(false);
   groupCreated = new BehaviorSubject(false);
   initHeaderGroup = new BehaviorSubject('');
-  refreshIndex = new BehaviorSubject(0);
 
   langCode = "ENG";
   isMenuClicked = false;

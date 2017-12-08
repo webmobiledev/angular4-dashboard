@@ -13,6 +13,7 @@ export class PageRequestsComponent {
   requests = [];
   requestHeaders = [];
   breadcrumb = [{title: 'requests'}];
+  subscribeList: any = [];
 
   constructor( private _sharedService: SharedService, private apiService: ApiService ) {
     this._sharedService.emitChange(this.pageTitle);
@@ -21,6 +22,12 @@ export class PageRequestsComponent {
   ngOnInit() {
     this.apiService.showSpinner.next(true);
     this.getUserRequests();
+  }
+
+  ngOnDestroy() {
+    this.subscribeList.map(d => {
+      d.unsubscribe();
+    });
   }
 
   getUserRequests() {
@@ -35,7 +42,11 @@ export class PageRequestsComponent {
     });
   }
 
-  doRefresh() {
+  doRefresh(res) {
     this.getUserRequests();
+  }
+
+  changePage(res) {
+
   }
 }

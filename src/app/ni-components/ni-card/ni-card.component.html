@@ -27,7 +27,7 @@
       'text-center': align === 'center'
     }"
   ><span>{{title}} <md-icon *ngIf="info" mdTooltip="{{info}}" mdTooltipPosition="below">info</md-icon></span>
-    <md-icon *ngIf="refresh !== 0" class="btn-refresh" (click)="doRefresh(refresh)">autorenew</md-icon>
+    <md-icon *ngIf="refreshIndex !== 0 || showRefresh === true" class="btn-refresh" (click)="doRefresh(refreshIndex)">autorenew</md-icon>
   </h3>
 
   <div

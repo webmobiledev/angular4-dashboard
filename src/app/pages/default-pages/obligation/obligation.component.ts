@@ -7,16 +7,20 @@ import { ApiService } from '../../../services/api.service'
   styleUrls: ['./obligation.component.scss']
 })
 export class PageObligationComponent implements OnInit {
-  breadcrumb = [{title: 'groups'}];
+  breadcrumb = [{title: 'Obligation'}];
   obligations = [];
   obligationHeaders = [];
-  page = 0;
+  subscribeList: any = [];
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
     this.apiService.showSpinner.next(true);
-    this.apiService.groupId.subscribe(data => {
-      this.getGroupObligations();
+    this.getGroupObligations();
+  }
+
+  ngOnDestroy() {
+    this.subscribeList.map(d => {
+      d.unsubscribe();
     });
   }
 
@@ -28,12 +32,15 @@ export class PageObligationComponent implements OnInit {
       res.data.map(d => {
         this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status_text, d.p_type_text, {type: ['paynow'], id: d.id}]);
       });
-      this.page = this.obligations.length / 10 + 1;
       this.apiService.showSpinner.next(false);
     });
   }
-  
-  doRefresh() {
+
+  doRefresh(res) {
     this.getGroupObligations();
+  }
+
+  changePage(res) {
+
   }
 }

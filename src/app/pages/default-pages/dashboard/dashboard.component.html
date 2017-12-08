@@ -3,23 +3,23 @@
     <div class="col-lg-8">
       <div class="row">
         <div class="col-md-12">
-          <ni-card [title]="'request' | translate" [info]="'requestinfo' | translate" [refresh]="1">
-            <ni-table *ngIf="userRequests.length > 0" [headers]="userRequestHeader" [data]="userRequests"></ni-table>
+          <ni-card [title]="'request' | translate" [info]="'requestinfo' | translate" [refreshIndex]="1" (refresh)="doRefresh($event)">
+            <ni-table [headers]="userRequestHeader" [data]="userRequests"></ni-table>
             <ni-alert *ngIf="userRequests.length === 0" [color]="'warning'" [outline]="true"><strong>{{'nopayment' | translate}}</strong></ni-alert>
-            <ni-pagination [total]="userPages" *ngIf="userPages > 0"></ni-pagination>
+            <ni-pagination [totalItems]="userRequests.length" *ngIf="userRequests.length > 0" (changePage)="changeRequestPage($event)"></ni-pagination>
           </ni-card>
         </div>
         <div class="col-md-12">
-          <ni-card [title]="'nextpayment' | translate" [info]="'paymentinfo' | translate" [refresh]="2">
-            <ni-table *ngIf="nextPayment.length > 0" [headers]="nextPaymentHeader" [data]="nextPayment"></ni-table>
+          <ni-card [title]="'nextpayment' | translate" [info]="'paymentinfo' | translate" [refreshIndex]="2" (refresh)="doRefresh($event)">
+            <ni-table [headers]="nextPaymentHeader" [data]="nextPayment"></ni-table>
             <ni-alert *ngIf="nextPayment.length === 0" [color]="'warning'" [outline]="true"><strong>{{'nopayment' | translate}}</strong></ni-alert>
-            <ni-pagination [total]="nextPages" *ngIf="nextPages > 0"></ni-pagination>
+            <ni-pagination [totalItems]="nextPayment.length" *ngIf="nextPayment.length > 0" (changePage)="changePaymentPage($event)"></ni-pagination>
           </ni-card>
         </div>
       </div>
     </div>
     <div class="col-lg-4">
-      <ni-card [title]="'timeline' | translate" [info]="'timelineinfo' | translate" [refresh]="3">
+      <ni-card [title]="'timeline' | translate" [info]="'timelineinfo' | translate" [refreshIndex]="3" (refresh)="doRefresh($event)">
         <ni-h-timeline [showYears]="true" [showDate]="true" [align]="'between'" [data]="timelineData"></ni-h-timeline>
       </ni-card>
     </div>

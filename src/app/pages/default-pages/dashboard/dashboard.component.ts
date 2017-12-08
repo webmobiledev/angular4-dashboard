@@ -16,9 +16,8 @@ export class PageDashboardComponent {
   nextPayment: any = [];
   nextPaymentHeader: any = [];
   timelineData: any[] = [];
-  userPages = 0;
-  nextPages = 0;
   breadcrumb = [{title: 'dashboard'}];
+  subscribeList: any = [];
 
   constructor( private _sharedService: SharedService, private apiService: ApiService, private dialog: MdDialog ) {
     this._sharedService.emitChange(this.pageTitle);
@@ -26,15 +25,11 @@ export class PageDashboardComponent {
     this.getRequests();
     this.getNextPayments();
     this.getTimeLineData();
+  }
 
-    this.apiService.refreshIndex.subscribe(res => {
-      if (res === 1) {
-        this.getRequests();
-      } else if (res === 2) {
-        this.getNextPayments();
-      } else if (res === 3) {
-        this.getTimeLineData();
-      }
+  ngOnDestroy() {
+    this.subscribeList.map(d => {
+      d.unsubscribe();
     });
   }
 
@@ -74,10 +69,10 @@ export class PageDashboardComponent {
     this.userRequests = [];
     this.userRequestHeader = ['Type', 'From', 'Group', {type: 'Action'}];
     this.apiService.getUserRequest().then((data: any) => {
+      this.userRequests = [];
       data.data.map(d => {
         this.userRequests.push([d.request_type_text, d.sender, d.group, {type: ['Accept', 'Reject'], id: d.id}]);
       });
-      this.userPages = this.userRequests.length / 10 + 1;
     });
   }
 
@@ -85,10 +80,10 @@ export class PageDashboardComponent {
     this.nextPayment = [];
     this.nextPaymentHeader = ['Type', 'Amount', 'To', 'Date', {type: 'Action'}];
     this.apiService.getNextPayment().then((data: any) => {
+      this.nextPayment = [];
       data.data.map(d => {
         this.nextPayment.push([d.p_type_text, d.projected_amount_due, d.to, d.projected_payment_due_date, {type: ['paynow'], id: d.id}]);
       });
-      this.nextPages = this.nextPayment.length / 10 + 1;
     });
   }
 
@@ -102,6 +97,24 @@ export class PageDashboardComponent {
         this.timelineData[0].timeline.push({date: this.getDuration(d.duration_seconds), content: d.event_type === 'GROUP_CREATED' ? 'A new group has been created' : 'A new request to join group has been created', pointColor: '#FFC6F1'});
       });
     });
+  }
+
+  doRefresh(event) {
+    if (event === 1) {
+      this.getRequests();
+    } else if (event === 2) {
+      this.getNextPayments();
+    } else if (event === 3) {
+      this.getTimeLineData();
+    }
+  }
+
+  changeRequestPage(res) {
+    console.log(res);
+  }
+
+  changePaymentPage(res) {
+    console.log(res);
   }
 }
 

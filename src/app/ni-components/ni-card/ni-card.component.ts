@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 
 @Component({
@@ -20,13 +20,15 @@ export class NiCardComponent implements OnInit {
   @Input() indents: any = '';
   @Input() align: string = 'left';
   @Input() info: string = '';
-  @Input() refresh: number = 0;
+  @Input() refreshIndex: number = 0;
+  @Input() showRefresh: boolean = false;
+  @Output() refresh = new EventEmitter();
 
   constructor(private apiService: ApiService) {}
 
   ngOnInit() {}
 
   doRefresh(index) {
-    this.apiService.refreshIndex.next(index);
+    this.refresh.emit(index);
   }
 }

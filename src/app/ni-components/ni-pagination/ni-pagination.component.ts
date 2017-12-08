@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'ni-pagination',
@@ -6,36 +6,50 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./ni-pagination.component.scss']
 })
 export class NiPaginationComponent implements OnInit {
-  @Input() total: any = 1;
-  pages = [];
-  currentPage = 1;
+  @Input() totalItems: any = 1;
+  @Output() changePage = new EventEmitter();
+
+  itemPerPage: any = 5;
+  itemsPerPage = [5, 10, 25, 100];
+  firstItem = 1;
+  lastItem = 5;
+  currentPage: any = 1;
+
   constructor() {
 
   }
 
   ngOnInit() {
-    for (let i = 1 ; i <= Math.floor(this.total) ; i ++) {
-      this.pages.push(i);
-    }
+    this.getPageItem();
   }
 
-  first() {
-    this.currentPage = 1;
-  }
-
-  last() {
-    this.currentPage = this.pages.length;
-  }
-
-  next() {
-    if (this.currentPage < Math.floor(this.total)) {
+  goNext() {
+    if (this.itemPerPage * this.currentPage < this.totalItems) {
       this.currentPage += 1;
+      this.getPageItem();
+      this.changePage.emit([this.itemPerPage, this.currentPage]);
     }
   }
 
-  prev() {
+  goPrev() {
     if (this.currentPage > 1) {
       this.currentPage -= 1;
+      this.getPageItem();
+      this.changePage.emit([this.itemPerPage, this.currentPage]);
     }
+  }
+
+  getPageItem() {
+    if (this.currentPage * this.itemPerPage > this.totalItems) {
+      this.lastItem = this.totalItems;
+    } else {
+      this.lastItem = this.currentPage * this.itemPerPage;
+    }
+    this.firstItem = 1 + (this.currentPage - 1) * this.itemPerPage;
+  }
+
+  changeItemsPerPage() {
+    this.currentPage = 1;
+    this.getPageItem();
   }
 }
