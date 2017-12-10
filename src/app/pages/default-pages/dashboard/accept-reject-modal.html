@@ -1,3 +1,4 @@
+<h2 md-dialog-title>{{'request' | translate}}</h2>
 <div class="request-dialog">
   <div md-dialog-content>
     <p>You have received a request to <span>{{request.request_type_text}}</span> from <span>{{request.sender}}</span> on <span>{{request.request_date}}</span>.</p>
@@ -17,26 +18,6 @@
     <p *ngIf="request.frequency == 1">This will allow you to pay a single amount every month.</p>
     <p *ngIf="request.frequency > 1">This will allow you to pay a single amount every <span>{{request.frequency}}</span> months.</p>
     <p>When the group is kicked off, the members will select their position using <span>{{request.group_rotation_type_text}}</span> method.</p>
-    <div class="row mt-3" *ngIf="request.request_type == 'REQUEST_TO_JOIN_GROUP' || request.request_type == 'START_AND_SELECT_POSTION_GROUP'">
-      <div class="col-sm-6">
-        <p>Group: <span>{{request.group}}</span></p>
-        <p>Frequency: <span>{{request.frequency}}</span></p>
-        <p>Due date: <span>{{request.due_day}}</span></p>
-        <p>Penalty: <span>{{request.delay_payment_penalty}}</span></p>
-        <p>Type: <span>{{request.g_type}}</span></p>
-        <p>Smooth payment: <span>{{request.smooth_payment}}</span></p>
-        <p>Rotation type: <span>{{request.group_rotation_type_text}}</span></p>
-      </div>
-      <div class="col-sm-6">
-        <p>Rate: <span>{{request.rate}}</span></p>
-        <p>Minimum index credit: <span>{{request.index_credit_min}}</span></p>
-        <p>Maximum index credit: <span>{{request.index_credit_max}}</span></p>
-        <p>Amount: <span>{{request.amount}}</span></p>
-        <p>Description: <span>{{request.group_description}}</span></p>
-        <p>Currency: <span>{{request.currency}}</span></p>
-        <p>Request date: <span>{{request.request_date}}</span></p>
-      </div>
-    </div>
     <div md-dialog-actions>
       <button mdTooltip="{{'Click here to accept the request' | translate}}" mdTooltipPosition="below" md-raised-button (click)="answer('APPROVE')" color="accent">{{'Accept' | translate}}</button>
       <button mdTooltip="{{'Click here to reject the request' | translate}}" mdTooltipPosition="below" md-raised-button (click)="answer('REJECT')" color="accent">{{'Reject' | translate}}</button>
