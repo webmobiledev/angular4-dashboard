@@ -16,7 +16,7 @@
       <ni-card [refreshIndex]="1" [title]="'Groups' | translate" (refresh)="doRefresh($event)">
         <ni-table [headers]="groupHeaders" [data]="groups"></ni-table>
         <ni-alert *ngIf="groups.length === 0" [color]="'warning'" [outline]="true"><strong>{{'nogroup' | translate}}</strong></ni-alert>
-        <ni-pagination [totalItems]="groups.length" *ngIf="groups.length > 0" (changePage)="changeGroupPage($event)"></ni-pagination>
+        <ni-pagination [totalItems]="totalGroup" [itemPerPage]="maxGroup" [currentPage]="pageGroup" *ngIf="groups.length > 0" (changePage)="changeGroupPage($event)"></ni-pagination>
       </ni-card>
     </div>
   </div>
@@ -36,24 +36,32 @@
           <button md-raised-button color="accent" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'">Save changes</button>
           <md-card class="example-card mt-3" *ngIf="groupInfo && groupInfo.group_info">
             <div class="form-group row">
-              <label class="col-sm-3 col-md-2 col-form-label mb-0">Name:</label>
-              <div class="col-sm-9 col-md-10">
+              <label class="col-sm-4 col-md-4 col-form-label mb-0">Name:</label>
+              <div class="col-sm-8 col-md-8">
                 <md-input-container class="mb-0">
                   <input mdInput type="text" value="{{groupInfo.group_info.name}}" disabled>
                 </md-input-container>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-3 col-md-2 col-form-label mb-0">Description:</label>
-              <div class="col-sm-9 col-md-10">
+              <label class="col-sm-4 col-md-4 col-form-label mb-0">Description:</label>
+              <div class="col-sm-8 col-md-8">
                 <md-input-container class="mb-0">
                   <input mdInput type="text" value="{{groupInfo.group_info.description}}" [disabled]="groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'">
                 </md-input-container>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-3 col-md-2 col-form-label mb-0">Date creation:</label>
-              <div class="col-sm-9 col-md-10">
+              <label class="col-sm-4 col-md-4 col-form-label mb-0">First Payment:</label>
+              <div class="col-sm-8 col-md-8">
+                <md-input-container class="mb-0">
+                  <input mdInput type="text" value="{{groupInfo.group_info.date_first_payment}}" [disabled]="groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'">
+                </md-input-container>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-4 col-md-4 col-form-label mb-0">Date creation:</label>
+              <div class="col-sm-8 col-md-8">
                 <md-input-container class="mb-0">
                   <input mdInput type="text" [mdDatepicker]="picker" value="{{groupInfo.group_info.date_creation}}" disabled>
                   <button mdSuffix [mdDatepickerToggle]="picker" disabled></button>
@@ -62,72 +70,72 @@
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-3 col-md-2 col-form-label mb-0">Type:</label>
-              <div class="col-sm-9 col-md-10">
+              <label class="col-sm-4 col-md-4 col-form-label mb-0">Type:</label>
+              <div class="col-sm-8 col-md-8">
                 <md-select disabled [(ngModel)]="groupInfo.group_info.g_type_text">
                   <md-option [value]="groupInfo.group_info.g_type_text">{{groupInfo.group_info.g_type_text}}</md-option>
                 </md-select>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-3 col-md-2 col-form-label mb-0">Currency:</label>
-              <div class="col-sm-9 col-md-10">
+              <label class="col-sm-4 col-md-4 col-form-label mb-0">Currency:</label>
+              <div class="col-sm-8 col-md-8">
                 <md-select disabled [(ngModel)]="groupInfo.group_info.currency">
                   <md-option [value]="groupInfo.group_info.currency">{{groupInfo.group_info.currency}}</md-option>
                 </md-select>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-3 col-md-2 col-form-label mb-0">Creator:</label>
-              <div class="col-sm-9 col-md-10">
+              <label class="col-sm-4 col-md-4 col-form-label mb-0">Creator:</label>
+              <div class="col-sm-8 col-md-8">
                 <md-input-container class="mb-0">
                   <input mdInput type="text" value="{{groupInfo.group_info.creator}}" disabled>
                 </md-input-container>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-3 col-md-2 col-form-label mb-0">Status:</label>
-              <div class="col-sm-9 col-md-10">
+              <label class="col-sm-4 col-md-4 col-form-label mb-0">Status:</label>
+              <div class="col-sm-8 col-md-8">
                 <md-select disabled [(ngModel)]="groupInfo.group_info.status_text">
                   <md-option [value]="groupInfo.group_info.status_text">{{groupInfo.group_info.status_text}}</md-option>
                 </md-select>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-3 col-md-2 col-form-label mb-0">Position selection:</label>
-              <div class="col-sm-9 col-md-10">
+              <label class="col-sm-4 col-md-4 col-form-label mb-0">Position selection:</label>
+              <div class="col-sm-8 col-md-8">
                 <md-select disabled [(ngModel)]="groupInfo.group_info.position_selection_type_text">
                   <md-option [value]="groupInfo.group_info.position_selection_type_text">{{groupInfo.group_info.position_selection_type_text}}</md-option>
                 </md-select>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-3 col-md-2 col-form-label mb-0">Rate:</label>
-              <div class="col-sm-9 col-md-10">
+              <label class="col-sm-4 col-md-4 col-form-label mb-0">Rate:</label>
+              <div class="col-sm-8 col-md-8">
                 <md-input-container class="mb-0">
                   <input mdInput type="number" value="{{groupInfo.group_info.rate}}" [disabled]="groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'">
                 </md-input-container>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-3 col-md-2 col-form-label mb-0">Frequency:</label>
-              <div class="col-sm-9 col-md-10">
+              <label class="col-sm-4 col-md-4 col-form-label mb-0">Frequency:</label>
+              <div class="col-sm-8 col-md-8">
                 <md-input-container class="mb-0">
                   <input mdInput type="number" value="{{groupInfo.group_info.frequency}}" [disabled]="groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'">
                 </md-input-container>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-3 col-md-2 col-form-label mb-0">Due date:</label>
-              <div class="col-sm-9 col-md-10">
+              <label class="col-sm-4 col-md-4 col-form-label mb-0">Due date:</label>
+              <div class="col-sm-8 col-md-8">
                 <md-input-container class="mb-0">
                   <input mdInput type="number" value="{{groupInfo.group_info.due_day}}" [disabled]="groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'">
                 </md-input-container>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-3 col-md-2 col-form-label mb-0">nb members:</label>
-              <div class="col-sm-9 col-md-10">
+              <label class="col-sm-4 col-md-4 col-form-label mb-0">nb members:</label>
+              <div class="col-sm-8 col-md-8">
                 <md-input-container class="mb-0">
                   <input mdInput type="number" value="{{groupInfo.group_info.nb_members}}" disabled>
                 </md-input-container>
@@ -193,7 +201,7 @@
           <ni-card [refreshIndex]="2" [title]="'Members' | translate" (refresh)="doRefresh($event)">
             <ni-table [headers]="memberHeaders" [data]="members"></ni-table>
             <ni-alert *ngIf="members.length === 0" [color]="'warning'" [outline]="true"><strong>{{'nomember' | translate}}</strong></ni-alert>
-            <ni-pagination [totalItems]="members.length" *ngIf="members.length > 0" (changePage)="changeMemberPage($event)"></ni-pagination>
+            <ni-pagination [totalItems]="totalMember" [itemPerPage]="maxMember" [currentPage]="pageMember" *ngIf="members.length > 0" (changePage)="changeMemberPage($event)"></ni-pagination>
           </ni-card>
         </div>
       </div>
@@ -218,7 +226,7 @@
           <ni-card [refreshIndex]="3" [title]="'Obligation' | translate" (refresh)="doRefresh($event)">
             <ni-table [headers]="obligationHeaders" [data]="obligations"></ni-table>
             <ni-alert *ngIf="obligations.length === 0" [color]="'warning'" [outline]="true"><strong>{{'noobligation' | translate}}</strong></ni-alert>
-            <ni-pagination [totalItems]="obligations.length" *ngIf="obligations.length > 0" (changePage)="changeObligationPage($event)"></ni-pagination>
+            <ni-pagination [totalItems]="totalObligation" [itemPerPage]="maxObligation" [currentPage]="pageObligation" *ngIf="obligations.length > 0" (changePage)="changeObligationPage($event)"></ni-pagination>
           </ni-card>
         </div>
       </div>
@@ -240,7 +248,7 @@
           <ni-card [refreshIndex]="4" [title]="'Requests' | translate" (refresh)="doRefresh($event)">
             <ni-table [headers]="requestHeaders" [data]="requests"></ni-table>
             <ni-alert *ngIf="requests.length === 0" [color]="'warning'" [outline]="true"><strong>{{'norequest' | translate}}</strong></ni-alert>
-            <ni-pagination [totalItems]="requests.length" *ngIf="requests.length > 0" (changePage)="changeRequestPage($event)"></ni-pagination>
+            <ni-pagination [totalItems]="totalRequest" [itemPerPage]="maxRequest" [currentPage]="pageRequest" *ngIf="requests.length > 0" (changePage)="changeRequestPage($event)"></ni-pagination>
           </ni-card>
         </div>
       </div>
@@ -262,7 +270,7 @@
           <ni-card [refreshIndex]="5" [title]="'Event' | translate" (refresh)="doRefresh($event)">
             <ni-table [headers]="eventHeaders" [data]="events"></ni-table>
             <ni-alert *ngIf="events.length === 0" [color]="'warning'" [outline]="true"><strong>{{'noevent' | translate}}</strong></ni-alert>
-            <ni-pagination [totalItems]="events.length" *ngIf="events.length > 0" (changePage)="changeEventPage($event)"></ni-pagination>
+            <ni-pagination [totalItems]="totalEvent" [itemPerPage]="maxEvent" [currentPage]="pageEvent" *ngIf="events.length > 0" (changePage)="changeEventPage($event)"></ni-pagination>
           </ni-card>
         </div>
       </div>

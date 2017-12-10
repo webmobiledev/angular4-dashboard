@@ -7,13 +7,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class NiPaginationComponent implements OnInit {
   @Input() totalItems: any = 1;
+  @Input() itemPerPage: any = 5;
   @Output() changePage = new EventEmitter();
-
-  itemPerPage: any = 5;
+  @Input() currentPage: any = 1;
+  
   itemsPerPage = [5, 10, 25, 100];
   firstItem = 1;
   lastItem = 5;
-  currentPage: any = 1;
 
   constructor() {
 
@@ -51,5 +51,6 @@ export class NiPaginationComponent implements OnInit {
   changeItemsPerPage() {
     this.currentPage = 1;
     this.getPageItem();
+    this.changePage.emit([this.itemPerPage, this.currentPage]);
   }
 }

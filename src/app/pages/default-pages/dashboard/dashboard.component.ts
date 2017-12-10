@@ -11,6 +11,7 @@ import { MdDialog, MdDialogRef, MdDialogConfig } from '@angular/material';
 })
 export class PageDashboardComponent {
   pageTitle: string = 'dashboard';
+  requests: any = [];
   userRequests: any = [];
   userRequestHeader: any = [];
   nextPayment: any = [];
@@ -19,11 +20,18 @@ export class PageDashboardComponent {
   breadcrumb = [{title: 'dashboard'}];
   subscribeList: any = [];
 
+  maxRequest = 5;
+  maxPayment = 5;
+  pageRequest = 1;
+  pagePayment = 1;
+  totalRequest = 0;
+  totalPayment = 0;
+
   constructor( private _sharedService: SharedService, private apiService: ApiService, private dialog: MdDialog ) {
     this._sharedService.emitChange(this.pageTitle);
 
-    this.getRequests();
-    this.getNextPayments();
+    this.getRequests(this.maxRequest, this.pageRequest);
+    this.getNextPayments(this.maxPayment, this.pagePayment);
     this.getTimeLineData();
   }
 
@@ -44,20 +52,22 @@ export class PageDashboardComponent {
     } else if (d > 1) {
       day = d + ' days ';
     }
-    return day + h + ' hours ' + m + ' mins ' + s + ' secs ago';
+    return day + h + ' hours ' + m + ' min ' + s + ' sec ago';
   }
 
   format(d) {
-    return (d < 10) ? '0' + d.toString() : d.toString();
+    return d.toString();
   }
 
-  showDialog(type, user) {
+  showDialog(res) {
     let dialogRef = this.dialog.open(DialogAcceptAndRejectComponent);
-    dialogRef.componentInstance.id = user.id;
-    dialogRef.componentInstance.groupId = user.group_id;
-    dialogRef.componentInstance.type = type;
-    dialogRef.componentInstance.requestType = user.request_type;
-    dialogRef.componentInstance.groupRotationType = user.group_rotation_type;
+    let user: any = {};
+    this.requests.map(d => {
+      if (res === d.id) {
+        user = d;
+      }
+    });
+    dialogRef.componentInstance.request = user;
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'yes') {
       } else {
@@ -65,22 +75,26 @@ export class PageDashboardComponent {
     });
   }
 
-  getRequests() {
+  getRequests(max, page) {
     this.userRequests = [];
     this.userRequestHeader = ['Type', 'From', 'Group', {type: 'Action'}];
-    this.apiService.getUserRequest().then((data: any) => {
+    this.apiService.getUserRequest(max, page).then((data: any) => {
       this.userRequests = [];
+      this.requests = [];
+      this.totalRequest = data.count;
       data.data.map(d => {
-        this.userRequests.push([d.request_type_text, d.sender, d.group, {type: ['Accept', 'Reject'], id: d.id}]);
+        this.requests = data.data;
+        this.userRequests.push([d.request_type_text, d.sender, d.group, {type: ['Open'], id: d.id}]);
       });
     });
   }
 
-  getNextPayments() {
+  getNextPayments(max, page) {
     this.nextPayment = [];
     this.nextPaymentHeader = ['Type', 'Amount', 'To', 'Date', {type: 'Action'}];
-    this.apiService.getNextPayment().then((data: any) => {
+    this.apiService.getNextPayment(max, page).then((data: any) => {
       this.nextPayment = [];
+      this.totalPayment = data.count;
       data.data.map(d => {
         this.nextPayment.push([d.p_type_text, d.projected_amount_due, d.to, d.projected_payment_due_date, {type: ['paynow'], id: d.id}]);
       });
@@ -101,20 +115,24 @@ export class PageDashboardComponent {
 
   doRefresh(event) {
     if (event === 1) {
-      this.getRequests();
+      this.getRequests(this.maxRequest, this.pageRequest);
     } else if (event === 2) {
-      this.getNextPayments();
+      this.getNextPayments(this.maxPayment, this.pagePayment);
     } else if (event === 3) {
       this.getTimeLineData();
     }
   }
 
   changeRequestPage(res) {
-    console.log(res);
+    this.maxRequest = res[0];
+    this.pageRequest = res[1];
+    this.getRequests(res[0], res[1]);
   }
 
   changePaymentPage(res) {
-    console.log(res);
+    this.maxPayment = res[0];
+    this.pagePayment = res[1];
+    this.getNextPayments(res[0], res[1]);
   }
 }
 
@@ -124,8 +142,8 @@ export class PageDashboardComponent {
 })
 export class DialogAcceptAndRejectComponent {
   id = '';
+  request: any;
   groupId = '';
-  type = '';
   positions = [];
   comment = '';
   groupRotationType = '';
@@ -134,25 +152,16 @@ export class DialogAcceptAndRejectComponent {
   }
 
   ngOnInit() {
-    this.apiService.getGroupTakenPositions(this.groupId).then((res: any) => {
-      this.positions = res.taken_rotation_positions;
+    this.apiService.getGroupTakenPositions(this.request.group_id).then((res: any) => {
+      this.positions = res.available_rotation_positions;
     });
   }
 
-  validate(type) {
-    if (type === 'accept') {
-      this.apiService.validateAccept(this.id).then((res: any) => {
-        if (res.status === 'ok') {
-          this.dialogRef.close();
-        }
-      });
-    } else {
-      this.apiService.validateReject(this.id, this.comment).then((res: any) => {
-        if (res.status === 'ok') {
-          console.log(res);
-          this.dialogRef.close();
-        }
-      });
-    }
+  answer(type) {
+    this.apiService.answerRequest(this.id, type).then((res: any) => {
+      if (res.status === 'ok') {
+        this.dialogRef.close();
+      }
+    });
   }
 }

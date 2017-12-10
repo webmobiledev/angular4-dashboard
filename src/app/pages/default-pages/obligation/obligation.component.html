@@ -6,7 +6,7 @@
     <ni-card [title]="'Obligation' | translate" (refresh)="doRefresh($event)" [showRefresh]="true">
       <ni-table [headers]="obligationHeaders" [data]="obligations"></ni-table>
       <ni-alert *ngIf="obligations.length === 0" [color]="'warning'" [outline]="true"><strong>{{'noobligation' | translate}}</strong></ni-alert>
-      <ni-pagination [totalItems]="obligations.length" *ngIf="obligations.length > 0" (changePage)="changePage($event)"></ni-pagination>
+      <ni-pagination [totalItems]="total" [itemPerPage]="max" [currentPage]="page" *ngIf="obligations.length > 0" (changePage)="changePage($event)"></ni-pagination>
     </ni-card>
   </div>
 </div>

@@ -113,7 +113,7 @@
   "frequency": "Cada ? mes",
   "Cancel": "Cancelar",
   "Next": "Siguiente",
-  "Group position selection mode": "Modo de selección de posición de grupo",
+  "Position Selection": "Selección de posición",
   "Number of days of delay allowed": "Cantidad de días de retraso permitidos",
   "Penalty": "Pena",
   "Previous": "Anterior",
@@ -157,5 +157,10 @@
   "Total number of member": "Número total de membros",
   "Simulate": "Simular",
   "Select a group": "Seleccione un grupo",
-  "Items per page": "Artículos por página"
+  "Items per page": "Artículos por página",
+  "Open": "Abierto",
+  "Click here to accept the request": "Haga clic aquí para aceptar la solicitud",
+  "Click here to reject the request": "Haga clic aquí para rechazar la solicitud",
+  "Click here to close the window without any change": "Haga clic aquí para cerrar la ventana sin ningún cambio",
+  "Select your position in the group": "Seleccione su posición en el grupo"
 }

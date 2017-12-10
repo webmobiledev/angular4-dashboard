@@ -11,11 +11,15 @@ export class PageObligationComponent implements OnInit {
   obligations = [];
   obligationHeaders = [];
   subscribeList: any = [];
+  max = 5;
+  page = 1;
+  total = 0;
+
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
     this.apiService.showSpinner.next(true);
-    this.getGroupObligations();
+    this.getGroupObligations(this.max, this.page);
   }
 
   ngOnDestroy() {
@@ -24,11 +28,12 @@ export class PageObligationComponent implements OnInit {
     });
   }
 
-  getGroupObligations() {
+  getGroupObligations(max, page) {
     this.obligations = [];
     this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Position selection', {type: 'Action'}];
-    this.apiService.getGroupObligations().then((res: any) => {
+    this.apiService.getGroupObligations(this.max, this.page).then((res: any) => {
       this.obligations = [];
+      this.total = res.count;
       res.data.map(d => {
         this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status_text, d.p_type_text, {type: ['paynow'], id: d.id}]);
       });
@@ -37,10 +42,12 @@ export class PageObligationComponent implements OnInit {
   }
 
   doRefresh(res) {
-    this.getGroupObligations();
+    this.getGroupObligations(this.max, this.page);
   }
 
   changePage(res) {
-
+    this.max = res[0];
+    this.page = res[1];
+    this.getGroupObligations(this.max, this.page);
   }
 }

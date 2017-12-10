@@ -41,7 +41,7 @@ export class HorizontalNavbarComponent implements OnInit {
       .map(name => this.filterStates(name));
 
     this.apiService.initHeaderGroup.subscribe(res => {
-      this.groupCtrl.setValue('');      
+      this.groupCtrl.setValue('');
     });
 
     this.auth.langCode.subscribe(code => {
@@ -61,7 +61,7 @@ export class HorizontalNavbarComponent implements OnInit {
   ngOnInit() {
     this.apiService.groupCounts.subscribe(res => {
       if (!this.apiService.isMenuClicked) {
-        this.apiService.getGroups().then((data: any) => {
+        this.apiService.getGroups(500, 1).then((data: any) => {
           this.groupList = [];
           this.groupDetailList = [];
           data.data.map(d => {
@@ -161,17 +161,17 @@ export class DialogGroupCreateComponent {
   currencySigns = {USD: '$', GBP: '£', EUR: '€', ZEC: 'Z'};
   constructor(public dialogRef: MdDialogRef<DialogGroupCreateComponent>, private fb: FormBuilder, private apiService: ApiService, private router: Router) {
     this.form = this.fb.group({
-      name: [null, Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(10)])],
-      frequency: [null, Validators.compose([Validators.required])],
-      grouptype: [null, Validators.compose([Validators.required])],
-      pstype: [null, Validators.compose([Validators.required])],
-      currency: [null, Validators.compose([Validators.required])],
-      description: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
-      amount: [null, Validators.compose([Validators.required])],
-      rate: [null, Validators.compose([Validators.required])],
-      duedate: [null, Validators.compose([Validators.required])],
-      nbdpenal: [null, Validators.compose([Validators.required])],
-      penalty: [null, Validators.compose([Validators.required])],
+      name: ['My group', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(10)])],
+      frequency: [1, Validators.compose([Validators.required])],
+      grouptype: ['PRIVATE', Validators.compose([Validators.required])],
+      pstype: ['', Validators.compose([Validators.required])],
+      currency: ['GBP', Validators.compose([Validators.required])],
+      description: ['', Validators.compose([Validators.required, Validators.minLength(3)])],
+      amount: [500, Validators.compose([Validators.required])],
+      rate: [0, Validators.compose([Validators.required])],
+      duedate: [5, Validators.compose([Validators.required])],
+      nbdpenal: [0, Validators.compose([Validators.required])],
+      penalty: [0, Validators.compose([Validators.required])],
       minIndex: [0],
       maxIndex: [1000],
       smoothpayment: [true]
@@ -197,6 +197,7 @@ export class DialogGroupCreateComponent {
   onSubmit() {
     this.dialogRef.close('yes');
     this.apiService.addGroup(this.form.value).then(res => {
+      this.apiService.isMenuClicked = false;
       this.apiService.groupCounts.next(this.groupCounts + 1);
       this.apiService.groupCreated.next(true);
       this.router.navigate(['/default-layout/groups']);

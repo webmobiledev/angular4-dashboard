@@ -1946,12 +1946,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var NiPaginationComponent = (function () {
     function NiPaginationComponent() {
         this.totalItems = 1;
-        this.changePage = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.itemPerPage = 5;
+        this.changePage = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.currentPage = 1;
         this.itemsPerPage = [5, 10, 25, 100];
         this.firstItem = 1;
         this.lastItem = 5;
-        this.currentPage = 1;
     }
     NiPaginationComponent.prototype.ngOnInit = function () {
         this.getPageItem();
@@ -1982,15 +1982,24 @@ var NiPaginationComponent = (function () {
     NiPaginationComponent.prototype.changeItemsPerPage = function () {
         this.currentPage = 1;
         this.getPageItem();
+        this.changePage.emit([this.itemPerPage, this.currentPage]);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Object)
     ], NiPaginationComponent.prototype, "totalItems", void 0);
     __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], NiPaginationComponent.prototype, "itemPerPage", void 0);
+    __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
         __metadata("design:type", Object)
     ], NiPaginationComponent.prototype, "changePage", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], NiPaginationComponent.prototype, "currentPage", void 0);
     NiPaginationComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'ni-pagination',
@@ -2016,7 +2025,7 @@ module.exports = "<div md-dialog-content>What would you like to do?</div>\n<div 
 /***/ "../../../../../src/app/ni-components/ni-table/ni-table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <div class=\"table-responsive\">\n    <table class=\"table table-striped table-sm\">\n      <thead>\n      <tr>\n        <th *ngFor=\"let h of headers\">\n          <span *ngIf=\"!h.type\">{{ h | translate }}</span>\n          <span *ngIf=\"h.type\">{{ h.type | translate }}</span>\n        </th>\n      </tr>\n      </thead>\n      <tbody>\n      <tr *ngFor=\"let d of data\">\n        <td *ngFor=\"let s of d\">\n          <span *ngIf=\"!s.type\">{{ s }}</span>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'details'\" (click)=\"changePage(s.id)\">details</button>\n          <button md-button color=\"warn\" *ngIf=\"s.type && (s.type)[0] === 'remove'\" (click)=\"removeUser(s.id)\">remove</button>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'paynow'\">pay now</button>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'Accept'\" (click)=\"showDialog('accept', s.id, s.requestType, s.rotationType)\">Accept</button>\n          <button md-button color=\"warn\" *ngIf=\"s.type && (s.type)[1] === 'Reject'\" (click)=\"showDialog('reject', s.id, s.requestType, s.rotationType)\">Reject</button>\n        </td>\n      </tr>\n      </tbody>\n    </table>\n  </div>\n</div>"
+module.exports = "<div>\n  <div class=\"table-responsive\">\n    <table class=\"table table-striped table-sm\">\n      <thead>\n      <tr>\n        <th *ngFor=\"let h of headers\">\n          <span *ngIf=\"!h.type\">{{ h | translate }}</span>\n          <span *ngIf=\"h.type\">{{ h.type | translate }}</span>\n        </th>\n      </tr>\n      </thead>\n      <tbody>\n      <tr *ngFor=\"let d of data\">\n        <td *ngFor=\"let s of d\">\n          <span *ngIf=\"!s.type\">{{ s }}</span>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'details'\" (click)=\"changePage(s.id)\">details</button>\n          <button md-button color=\"warn\" *ngIf=\"s.type && (s.type)[0] === 'remove'\" (click)=\"removeUser(s.id)\">remove</button>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'paynow'\">pay now</button>\n          <button md-button color=\"accent\" *ngIf=\"s.type && (s.type)[0] === 'Open'\" (click)=\"showDialog(s.id)\">{{'Open' | translate}}</button>\n        </td>\n      </tr>\n      </tbody>\n    </table>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -2047,7 +2056,6 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_default_pages_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/dashboard/dashboard.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2060,13 +2068,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var NiTableComponent = (function () {
     function NiTableComponent(apiService, dialog) {
         this.apiService = apiService;
         this.dialog = dialog;
         this.headers = [];
         this.data = [];
+        this.showRequestDialog = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
     NiTableComponent.prototype.ngOnInit = function () {
     };
@@ -2075,21 +2083,8 @@ var NiTableComponent = (function () {
         this.apiService.isClickedDetails.next(true);
         this.apiService.groupId.next(id);
     };
-    NiTableComponent.prototype.showDialog = function (type, id, requestType, rotationType) {
-        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_3__pages_default_pages_dashboard_dashboard_component__["a" /* DialogAcceptAndRejectComponent */]);
-        this.apiService.groupId.subscribe(function (res) {
-            dialogRef.componentInstance.groupId = res;
-        });
-        dialogRef.componentInstance.id = id;
-        dialogRef.componentInstance.type = type;
-        dialogRef.componentInstance.requestType = requestType;
-        dialogRef.componentInstance.groupRotationType = rotationType;
-        dialogRef.afterClosed().subscribe(function (result) {
-            if (result === 'yes') {
-            }
-            else {
-            }
-        });
+    NiTableComponent.prototype.showDialog = function (groupId) {
+        this.showRequestDialog.emit(groupId);
     };
     NiTableComponent.prototype.removeUser = function (groupId, memberId) {
         var _this = this;
@@ -2110,6 +2105,10 @@ var NiTableComponent = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Object)
     ], NiTableComponent.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+        __metadata("design:type", Object)
+    ], NiTableComponent.prototype, "showRequestDialog", void 0);
     NiTableComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'ni-table',
@@ -2396,14 +2395,14 @@ var ChatroomComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/dashboard/accept-reject-modal.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"type === 'accept' && requestType === 'REQUEST_TO_JOIN_GROUP' && groupRotationType === 'FIRST_ARRIVED_FIRST_SERVED'\">\n  <div md-dialog-content>\n    <md-input-container>\n      <input mdInput placeholder=\"Position\" value=\"\" [(ngModel)]=\"position\" type=\"number\">\n    </md-input-container>\n    <md-select placeholder=\"Selected Positions\">\n      <md-option *ngFor=\"let p of positions\" [value]=\"p.code\">{{p.value}}</md-option>\n    </md-select>\n    <div md-dialog-actions>\n      <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n      <button md-raised-button (click)=\"validate('accept')\" color=\"accent\">Validate</button>\n    </div>\n  </div>\n</div>\n\n<div *ngIf=\"type === 'accept' && requestType === 'REQUEST_TO_JOIN_GROUP' && groupRotationType !== 'FIRST_ARRIVED_FIRST_SERVED'\">\n  <div md-dialog-content>\n    Do you really accept the request ?\n    <div md-dialog-actions>\n      <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n      <button md-raised-button (click)=\"validate('accept')\" color=\"accent\">Validate</button>\n    </div>\n  </div>\n</div>\n\n<div *ngIf=\"type === 'reject'\">\n  <div md-dialog-content>\n    Do you really reject the request ?\n    <md-input-container class=\"mt-3\">\n      <input mdInput placeholder=\"Justification\" value=\"\" [(ngModel)]=\"comment\" type=\"text\">\n    </md-input-container>\n    <div md-dialog-actions>\n      <button md-raised-button (click)=\"dialogRef.close('no')\">CANCEL</button>\n      <button md-raised-button (click)=\"validate('reject')\" color=\"accent\">Validate</button>\n    </div>\n  </div>\n</div>\n\n<div *ngIf=\"type === 'accept' && requestType === 'START_AND_SELECT_POSTION_GROUP' && groupRotationType === 'RANDOM'\">\n    <div md-dialog-content>\n      Do you really accept the request ?\n      <div md-dialog-actions>\n        <button md-raised-button>CANCEL</button>\n        <button md-raised-button color=\"accent\">Validate</button>\n      </div>\n    </div>\n  </div>"
+module.exports = "<div class=\"request-dialog\">\n  <div md-dialog-content>\n    <p>You have received a request to <span>{{request.request_type_text}}</span> from <span>{{request.sender}}</span> on <span>{{request.request_date}}</span>.</p>\n    <p *ngIf=\"request.request_type == 'REQUEST_FOR_OTHER_PAYMENT'\">The admin of the group has requested the amount to be pay is <span>{{request.payment_amount}} {{request.currency}}</span>.</p>\n    <md-select [placeholder]=\"'Select your position in the group' | translate\" *ngIf=\"request.request_type == 'START_AND_SELECT_POSTION_GROUP' && (request.group_rotation_type == 'FIRST_ARRIVED_FIRST_SERVED' || request.group_rotation_type == 'PRIORITY_BASED_ON_INDEX_CREDIT')\">\n      <md-option *ngFor=\"let p of positions\" [value]=\"p.code\">{{p.value}}</md-option>\n    </md-select>\n    <p *ngIf=\"request.request_type == 'REQUEST_FOR_OTHER_PAYMENT' || request.request_type == 'START_AND_SELECT_POSTION_GROUP'\">\n      You will join a <span>{{request.g_type}}</span> Rolling Group named <span>{{request.group}}</span>\n    </p>\n    <p *ngIf=\"request.rate > 0\">and the amount due will be <span>{{request.amount}} {{request.currency}}</span> with <span>{{request.rate}}</span> % interest applied.</p>\n    <p *ngIf=\"request.rate == 0\">and the amount due will be <span>{{request.amount}} {{request.currency}}</span>.</p>\n    <p *ngIf=\"request.frequency == 1\">This payment will have to be made at latest on <span>{{request.due_day}}</span> each month.</p>\n    <p *ngIf=\"request.frequency > 1\">This payment will have to be made at latest on <span>{{request.due_day}}</span> every <span>{{request.frequency}}</span> month.</p>\n    <p *ngIf=\"request.delay_payment_penalty > 0 && request.nb_days_delay_before_penalty > 0\">After a payment delay of <span>{{request.nb_days_delay_before_penalty}}</span> days, a penalty of <span>{{request.delay_payment_penalty}}</span> % will apply.</p>\n    <p *ngIf=\"request.g_type_code == 'PRIVATE' && request.smooth_payment == '1' && request.rate > 0\">The total payment (amount + interest) to pay will be smoothed.</p>\n    <p *ngIf=\"request.frequency == 1\">This will allow you to pay a single amount every month.</p>\n    <p *ngIf=\"request.frequency > 1\">This will allow you to pay a single amount every <span>{{request.frequency}}</span> months.</p>\n    <p>When the group is kicked off, the members will select their position using <span>{{request.group_rotation_type_text}}</span> method.</p>\n    <div class=\"row mt-3\" *ngIf=\"request.request_type == 'REQUEST_TO_JOIN_GROUP' || request.request_type == 'START_AND_SELECT_POSTION_GROUP'\">\n      <div class=\"col-sm-6\">\n        <p>Group: <span>{{request.group}}</span></p>\n        <p>Frequency: <span>{{request.frequency}}</span></p>\n        <p>Due date: <span>{{request.due_day}}</span></p>\n        <p>Penalty: <span>{{request.delay_payment_penalty}}</span></p>\n        <p>Type: <span>{{request.g_type}}</span></p>\n        <p>Smooth payment: <span>{{request.smooth_payment}}</span></p>\n        <p>Rotation type: <span>{{request.group_rotation_type_text}}</span></p>\n      </div>\n      <div class=\"col-sm-6\">\n        <p>Rate: <span>{{request.rate}}</span></p>\n        <p>Minimum index credit: <span>{{request.index_credit_min}}</span></p>\n        <p>Maximum index credit: <span>{{request.index_credit_max}}</span></p>\n        <p>Amount: <span>{{request.amount}}</span></p>\n        <p>Description: <span>{{request.group_description}}</span></p>\n        <p>Currency: <span>{{request.currency}}</span></p>\n        <p>Request date: <span>{{request.request_date}}</span></p>\n      </div>\n    </div>\n    <div md-dialog-actions>\n      <button mdTooltip=\"{{'Click here to accept the request' | translate}}\" mdTooltipPosition=\"below\" md-raised-button (click)=\"answer('APPROVE')\" color=\"accent\">{{'Accept' | translate}}</button>\n      <button mdTooltip=\"{{'Click here to reject the request' | translate}}\" mdTooltipPosition=\"below\" md-raised-button (click)=\"answer('REJECT')\" color=\"accent\">{{'Reject' | translate}}</button>\n      <button mdTooltip=\"{{'Click here to close the window without any change' | translate}}\" mdTooltipPosition=\"below\" md-raised-button (click)=\"dialogRef.close('no')\" color=\"warn\">{{'Cancel' | translate}}</button>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
 /***/ "../../../../../src/app/pages/default-pages/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n<div class=\"row\">\r\n    <div class=\"col-lg-8\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'request' | translate\" [info]=\"'requestinfo' | translate\" [refreshIndex]=\"1\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"userRequestHeader\" [data]=\"userRequests\"></ni-table>\r\n            <ni-alert *ngIf=\"userRequests.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nopayment' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"userRequests.length\" *ngIf=\"userRequests.length > 0\" (changePage)=\"changeRequestPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'nextpayment' | translate\" [info]=\"'paymentinfo' | translate\" [refreshIndex]=\"2\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"nextPaymentHeader\" [data]=\"nextPayment\"></ni-table>\r\n            <ni-alert *ngIf=\"nextPayment.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nopayment' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"nextPayment.length\" *ngIf=\"nextPayment.length > 0\" (changePage)=\"changePaymentPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-4\">\r\n      <ni-card [title]=\"'timeline' | translate\" [info]=\"'timelineinfo' | translate\" [refreshIndex]=\"3\" (refresh)=\"doRefresh($event)\">\r\n        <ni-h-timeline [showYears]=\"true\" [showDate]=\"true\" [align]=\"'between'\" [data]=\"timelineData\"></ni-h-timeline>\r\n      </ni-card>\r\n    </div>\r\n</div>"
+module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n<div class=\"row\">\r\n    <div class=\"col-lg-8\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'request' | translate\" [info]=\"'requestinfo' | translate\" [refreshIndex]=\"1\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"userRequestHeader\" [data]=\"userRequests\" (showRequestDialog)=\"showDialog($event)\"></ni-table>\r\n            <ni-alert *ngIf=\"userRequests.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nopayment' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalRequest\" [itemPerPage]=\"maxRequest\" [currentPage]=\"pageRequest\" *ngIf=\"userRequests.length > 0\" (changePage)=\"changeRequestPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'nextpayment' | translate\" [info]=\"'paymentinfo' | translate\" [refreshIndex]=\"2\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"nextPaymentHeader\" [data]=\"nextPayment\"></ni-table>\r\n            <ni-alert *ngIf=\"nextPayment.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nopayment' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalPayment\" [itemPerPage]=\"maxPayment\" [currentPage]=\"pagePayment\" *ngIf=\"nextPayment.length > 0\" (changePage)=\"changePaymentPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-4\">\r\n      <ni-card [title]=\"'timeline' | translate\" [info]=\"'timelineinfo' | translate\" [refreshIndex]=\"3\" (refresh)=\"doRefresh($event)\">\r\n        <ni-h-timeline [showYears]=\"true\" [showDate]=\"true\" [align]=\"'between'\" [data]=\"timelineData\"></ni-h-timeline>\r\n      </ni-card>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -2454,6 +2453,7 @@ var PageDashboardComponent = (function () {
         this.apiService = apiService;
         this.dialog = dialog;
         this.pageTitle = 'dashboard';
+        this.requests = [];
         this.userRequests = [];
         this.userRequestHeader = [];
         this.nextPayment = [];
@@ -2461,9 +2461,15 @@ var PageDashboardComponent = (function () {
         this.timelineData = [];
         this.breadcrumb = [{ title: 'dashboard' }];
         this.subscribeList = [];
+        this.maxRequest = 5;
+        this.maxPayment = 5;
+        this.pageRequest = 1;
+        this.pagePayment = 1;
+        this.totalRequest = 0;
+        this.totalPayment = 0;
         this._sharedService.emitChange(this.pageTitle);
-        this.getRequests();
-        this.getNextPayments();
+        this.getRequests(this.maxRequest, this.pageRequest);
+        this.getNextPayments(this.maxPayment, this.pagePayment);
         this.getTimeLineData();
     }
     PageDashboardComponent.prototype.ngOnDestroy = function () {
@@ -2483,18 +2489,20 @@ var PageDashboardComponent = (function () {
         else if (d > 1) {
             day = d + ' days ';
         }
-        return day + h + ' hours ' + m + ' mins ' + s + ' secs ago';
+        return day + h + ' hours ' + m + ' min ' + s + ' sec ago';
     };
     PageDashboardComponent.prototype.format = function (d) {
-        return (d < 10) ? '0' + d.toString() : d.toString();
+        return d.toString();
     };
-    PageDashboardComponent.prototype.showDialog = function (type, user) {
+    PageDashboardComponent.prototype.showDialog = function (res) {
         var dialogRef = this.dialog.open(DialogAcceptAndRejectComponent);
-        dialogRef.componentInstance.id = user.id;
-        dialogRef.componentInstance.groupId = user.group_id;
-        dialogRef.componentInstance.type = type;
-        dialogRef.componentInstance.requestType = user.request_type;
-        dialogRef.componentInstance.groupRotationType = user.group_rotation_type;
+        var user = {};
+        this.requests.map(function (d) {
+            if (res === d.id) {
+                user = d;
+            }
+        });
+        dialogRef.componentInstance.request = user;
         dialogRef.afterClosed().subscribe(function (result) {
             if (result === 'yes') {
             }
@@ -2502,23 +2510,27 @@ var PageDashboardComponent = (function () {
             }
         });
     };
-    PageDashboardComponent.prototype.getRequests = function () {
+    PageDashboardComponent.prototype.getRequests = function (max, page) {
         var _this = this;
         this.userRequests = [];
         this.userRequestHeader = ['Type', 'From', 'Group', { type: 'Action' }];
-        this.apiService.getUserRequest().then(function (data) {
+        this.apiService.getUserRequest(max, page).then(function (data) {
             _this.userRequests = [];
+            _this.requests = [];
+            _this.totalRequest = data.count;
             data.data.map(function (d) {
-                _this.userRequests.push([d.request_type_text, d.sender, d.group, { type: ['Accept', 'Reject'], id: d.id }]);
+                _this.requests = data.data;
+                _this.userRequests.push([d.request_type_text, d.sender, d.group, { type: ['Open'], id: d.id }]);
             });
         });
     };
-    PageDashboardComponent.prototype.getNextPayments = function () {
+    PageDashboardComponent.prototype.getNextPayments = function (max, page) {
         var _this = this;
         this.nextPayment = [];
         this.nextPaymentHeader = ['Type', 'Amount', 'To', 'Date', { type: 'Action' }];
-        this.apiService.getNextPayment().then(function (data) {
+        this.apiService.getNextPayment(max, page).then(function (data) {
             _this.nextPayment = [];
+            _this.totalPayment = data.count;
             data.data.map(function (d) {
                 _this.nextPayment.push([d.p_type_text, d.projected_amount_due, d.to, d.projected_payment_due_date, { type: ['paynow'], id: d.id }]);
             });
@@ -2538,20 +2550,24 @@ var PageDashboardComponent = (function () {
     };
     PageDashboardComponent.prototype.doRefresh = function (event) {
         if (event === 1) {
-            this.getRequests();
+            this.getRequests(this.maxRequest, this.pageRequest);
         }
         else if (event === 2) {
-            this.getNextPayments();
+            this.getNextPayments(this.maxPayment, this.pagePayment);
         }
         else if (event === 3) {
             this.getTimeLineData();
         }
     };
     PageDashboardComponent.prototype.changeRequestPage = function (res) {
-        console.log(res);
+        this.maxRequest = res[0];
+        this.pageRequest = res[1];
+        this.getRequests(res[0], res[1]);
     };
     PageDashboardComponent.prototype.changePaymentPage = function (res) {
-        console.log(res);
+        this.maxPayment = res[0];
+        this.pagePayment = res[1];
+        this.getNextPayments(res[0], res[1]);
     };
     PageDashboardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -2571,7 +2587,6 @@ var DialogAcceptAndRejectComponent = (function () {
         this.apiService = apiService;
         this.id = '';
         this.groupId = '';
-        this.type = '';
         this.positions = [];
         this.comment = '';
         this.groupRotationType = '';
@@ -2579,27 +2594,17 @@ var DialogAcceptAndRejectComponent = (function () {
     }
     DialogAcceptAndRejectComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.apiService.getGroupTakenPositions(this.groupId).then(function (res) {
-            _this.positions = res.taken_rotation_positions;
+        this.apiService.getGroupTakenPositions(this.request.group_id).then(function (res) {
+            _this.positions = res.available_rotation_positions;
         });
     };
-    DialogAcceptAndRejectComponent.prototype.validate = function (type) {
+    DialogAcceptAndRejectComponent.prototype.answer = function (type) {
         var _this = this;
-        if (type === 'accept') {
-            this.apiService.validateAccept(this.id).then(function (res) {
-                if (res.status === 'ok') {
-                    _this.dialogRef.close();
-                }
-            });
-        }
-        else {
-            this.apiService.validateReject(this.id, this.comment).then(function (res) {
-                if (res.status === 'ok') {
-                    console.log(res);
-                    _this.dialogRef.close();
-                }
-            });
-        }
+        this.apiService.answerRequest(this.id, type).then(function (res) {
+            if (res.status === 'ok') {
+                _this.dialogRef.close();
+            }
+        });
     };
     DialogAcceptAndRejectComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -2633,7 +2638,7 @@ module.exports = "<h2 md-dialog-title>Start Group</h2>\n<div md-dialog-content *
 /***/ "../../../../../src/app/pages/default-pages/groups/groups.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-alert [color]=\"'success'\" *ngIf=\"showGroupAlert === true\"><strong>Group has been created!</strong></ni-alert>\r\n<div *ngIf=\"showGroupList\">\r\n  <div class=\"row members-header\">\r\n    <div class=\"col-sm-6\">\r\n      <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \r\n    </div>\r\n    <div class=\"col-sm-6 text-right\">\r\n      <md-input-container class=\"search-group md-icon-left\">\r\n        <md-icon>search</md-icon>\r\n        <input mdInput value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12\">\r\n      <ni-card [refreshIndex]=\"1\" [title]=\"'Groups' | translate\" (refresh)=\"doRefresh($event)\">\r\n        <ni-table [headers]=\"groupHeaders\" [data]=\"groups\"></ni-table>\r\n        <ni-alert *ngIf=\"groups.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nogroup' | translate}}</strong></ni-alert>\r\n        <ni-pagination [totalItems]=\"groups.length\" *ngIf=\"groups.length > 0\" (changePage)=\"changeGroupPage($event)\"></ni-pagination>\r\n      </ni-card>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"!showGroupList\">\r\n  <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n  <md-tab-group>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>home</md-icon> {{'Home' | translate}}\r\n      </ng-template>\r\n      <div class=\"row p-2\">\r\n        <div class=\"col-md-7 mb-3\">\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\" (click)=\"openStartDialog()\">Start</button>\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\" (click)=\"openDialog()\">Add a member</button>\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\">Save changes</button>\r\n          <md-card class=\"example-card mt-3\" *ngIf=\"groupInfo && groupInfo.group_info\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Name:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.name}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Description:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.description}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Date creation:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [mdDatepicker]=\"picker\" value=\"{{groupInfo.group_info.date_creation}}\" disabled>\r\n                  <button mdSuffix [mdDatepickerToggle]=\"picker\" disabled></button>\r\n                </md-input-container>\r\n                <md-datepicker #picker></md-datepicker>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Type:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.g_type_text\">\r\n                  <md-option [value]=\"groupInfo.group_info.g_type_text\">{{groupInfo.group_info.g_type_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Currency:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.currency\">\r\n                  <md-option [value]=\"groupInfo.group_info.currency\">{{groupInfo.group_info.currency}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Creator:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.creator}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Status:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.status_text\">\r\n                  <md-option [value]=\"groupInfo.group_info.status_text\">{{groupInfo.group_info.status_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Position selection:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.position_selection_type_text\">\r\n                  <md-option [value]=\"groupInfo.group_info.position_selection_type_text\">{{groupInfo.group_info.position_selection_type_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Rate:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.rate}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Frequency:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.frequency}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">Due date:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.due_day}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-3 col-md-2 col-form-label mb-0\">nb members:</label>\r\n              <div class=\"col-sm-9 col-md-10\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.nb_members}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-5 pt-3\" *ngIf=\"groupInfo.group_info.g_type !== 'PUBLIC'\">\r\n          <ni-card [customBgColor]=\"'rgba(100,181,246,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-6.jpg'\" class=\"info-card\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'\">\r\n            <div class=\"title text-uppercase\">{{'Amount' | translate}}</div>\r\n            <div class=\"count\">2,543</div>\r\n          </ni-card>\r\n          <ni-card [title]=\"'timeline' | translate\" [customBgColor]=\"'transparent'\">\r\n            <ni-h-timeline [data]=\"timelineData\"></ni-h-timeline>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.previous_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Previous Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.previous_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.previous_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.previous_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.previous_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.next_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Next Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.next_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.next_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.next_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.next_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>card_membership</md-icon> {{'Members' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"accent\" (click)=\"openDialog()\">{{'Add a member' | translate}}</button>\r\n          <button md-raised-button color=\"accent\" (click)=\"removeAll()\">{{'Remove all members' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"2\" [title]=\"'Members' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"memberHeaders\" [data]=\"members\"></ni-table>\r\n            <ni-alert *ngIf=\"members.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nomember' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"members.length\" *ngIf=\"members.length > 0\" (changePage)=\"changeMemberPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>check_box</md-icon> {{'Obligation' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"accent\" (click)=\"cancelAll()\">{{'Cancel all outstanding request' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"3\" [title]=\"'Obligation' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"obligationHeaders\" [data]=\"obligations\"></ni-table>\r\n            <ni-alert *ngIf=\"obligations.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noobligation' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"obligations.length\" *ngIf=\"obligations.length > 0\" (changePage)=\"changeObligationPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>sms_failed</md-icon> {{'Requests' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"4\" [title]=\"'Requests' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n            <ni-alert *ngIf=\"requests.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'norequest' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"requests.length\" *ngIf=\"requests.length > 0\" (changePage)=\"changeRequestPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>event</md-icon> {{'Event' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"5\" [title]=\"'Event' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"eventHeaders\" [data]=\"events\"></ni-table>\r\n            <ni-alert *ngIf=\"events.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noevent' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"events.length\" *ngIf=\"events.length > 0\" (changePage)=\"changeEventPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>local_atm</md-icon> {{'transaction' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"6\" [title]=\"'transaction' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <!-- <ni-table [headers]=\"transactionHeaders\" [data]=\"transactions\"></ni-table>\r\n            <ni-alert *ngIf=\"transactions.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'notransaction' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"transactions.length\" *ngIf=\"transactions.length > 0\" (changePage)=\"changeTransactionPage($event)\"></ni-pagination> -->\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n  </md-tab-group>\r\n</div>\r\n\r\n<ni-loading></ni-loading>"
+module.exports = "<ni-alert [color]=\"'success'\" *ngIf=\"showGroupAlert === true\"><strong>Group has been created!</strong></ni-alert>\r\n<div *ngIf=\"showGroupList\">\r\n  <div class=\"row members-header\">\r\n    <div class=\"col-sm-6\">\r\n      <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \r\n    </div>\r\n    <div class=\"col-sm-6 text-right\">\r\n      <md-input-container class=\"search-group md-icon-left\">\r\n        <md-icon>search</md-icon>\r\n        <input mdInput value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12\">\r\n      <ni-card [refreshIndex]=\"1\" [title]=\"'Groups' | translate\" (refresh)=\"doRefresh($event)\">\r\n        <ni-table [headers]=\"groupHeaders\" [data]=\"groups\"></ni-table>\r\n        <ni-alert *ngIf=\"groups.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nogroup' | translate}}</strong></ni-alert>\r\n        <ni-pagination [totalItems]=\"totalGroup\" [itemPerPage]=\"maxGroup\" [currentPage]=\"pageGroup\" *ngIf=\"groups.length > 0\" (changePage)=\"changeGroupPage($event)\"></ni-pagination>\r\n      </ni-card>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"!showGroupList\">\r\n  <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n  <md-tab-group>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>home</md-icon> {{'Home' | translate}}\r\n      </ng-template>\r\n      <div class=\"row p-2\">\r\n        <div class=\"col-md-7 mb-3\">\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\" (click)=\"openStartDialog()\">Start</button>\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\" (click)=\"openDialog()\">Add a member</button>\r\n          <button md-raised-button color=\"accent\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\">Save changes</button>\r\n          <md-card class=\"example-card mt-3\" *ngIf=\"groupInfo && groupInfo.group_info\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Name:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.name}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Description:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.description}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">First Payment:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.date_first_payment}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Date creation:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [mdDatepicker]=\"picker\" value=\"{{groupInfo.group_info.date_creation}}\" disabled>\r\n                  <button mdSuffix [mdDatepickerToggle]=\"picker\" disabled></button>\r\n                </md-input-container>\r\n                <md-datepicker #picker></md-datepicker>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Type:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.g_type_text\">\r\n                  <md-option [value]=\"groupInfo.group_info.g_type_text\">{{groupInfo.group_info.g_type_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Currency:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.currency\">\r\n                  <md-option [value]=\"groupInfo.group_info.currency\">{{groupInfo.group_info.currency}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Creator:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.creator}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Status:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.status_text\">\r\n                  <md-option [value]=\"groupInfo.group_info.status_text\">{{groupInfo.group_info.status_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Position selection:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-select disabled [(ngModel)]=\"groupInfo.group_info.position_selection_type_text\">\r\n                  <md-option [value]=\"groupInfo.group_info.position_selection_type_text\">{{groupInfo.group_info.position_selection_type_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Rate:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.rate}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Frequency:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.frequency}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Due date:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.due_day}}\" [disabled]=\"groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">nb members:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.nb_members}}\" disabled>\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-5 pt-3\" *ngIf=\"groupInfo.group_info.g_type !== 'PUBLIC'\">\r\n          <ni-card [customBgColor]=\"'rgba(100,181,246,0.9)'\" [customColor]=\"'#fff'\" [bgImage]=\"'assets/content/card-6.jpg'\" class=\"info-card\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'\">\r\n            <div class=\"title text-uppercase\">{{'Amount' | translate}}</div>\r\n            <div class=\"count\">2,543</div>\r\n          </ni-card>\r\n          <ni-card [title]=\"'timeline' | translate\" [customBgColor]=\"'transparent'\">\r\n            <ni-h-timeline [data]=\"timelineData\"></ni-h-timeline>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.previous_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Previous Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.previous_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.previous_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.previous_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.previous_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.next_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Next Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.next_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.next_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.next_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.next_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>card_membership</md-icon> {{'Members' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"accent\" (click)=\"openDialog()\">{{'Add a member' | translate}}</button>\r\n          <button md-raised-button color=\"accent\" (click)=\"removeAll()\">{{'Remove all members' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"2\" [title]=\"'Members' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"memberHeaders\" [data]=\"members\"></ni-table>\r\n            <ni-alert *ngIf=\"members.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nomember' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalMember\" [itemPerPage]=\"maxMember\" [currentPage]=\"pageMember\" *ngIf=\"members.length > 0\" (changePage)=\"changeMemberPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>check_box</md-icon> {{'Obligation' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"accent\" (click)=\"cancelAll()\">{{'Cancel all outstanding request' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"3\" [title]=\"'Obligation' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"obligationHeaders\" [data]=\"obligations\"></ni-table>\r\n            <ni-alert *ngIf=\"obligations.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noobligation' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalObligation\" [itemPerPage]=\"maxObligation\" [currentPage]=\"pageObligation\" *ngIf=\"obligations.length > 0\" (changePage)=\"changeObligationPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>sms_failed</md-icon> {{'Requests' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"4\" [title]=\"'Requests' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n            <ni-alert *ngIf=\"requests.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'norequest' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalRequest\" [itemPerPage]=\"maxRequest\" [currentPage]=\"pageRequest\" *ngIf=\"requests.length > 0\" (changePage)=\"changeRequestPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>event</md-icon> {{'Event' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"5\" [title]=\"'Event' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"eventHeaders\" [data]=\"events\"></ni-table>\r\n            <ni-alert *ngIf=\"events.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noevent' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalEvent\" [itemPerPage]=\"maxEvent\" [currentPage]=\"pageEvent\" *ngIf=\"events.length > 0\" (changePage)=\"changeEventPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>local_atm</md-icon> {{'transaction' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"6\" [title]=\"'transaction' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <!-- <ni-table [headers]=\"transactionHeaders\" [data]=\"transactions\"></ni-table>\r\n            <ni-alert *ngIf=\"transactions.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'notransaction' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"transactions.length\" *ngIf=\"transactions.length > 0\" (changePage)=\"changeTransactionPage($event)\"></ni-pagination> -->\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n  </md-tab-group>\r\n</div>\r\n\r\n<ni-loading></ni-loading>"
 
 /***/ }),
 
@@ -2706,6 +2711,21 @@ var PageGroupsComponent = (function () {
         this.showGroupAlert = false;
         this.isClickedDetails = false;
         this.subscribeList = [];
+        this.maxGroup = 5;
+        this.maxMember = 5;
+        this.maxObligation = 5;
+        this.maxRequest = 5;
+        this.maxEvent = 5;
+        this.pageGroup = 1;
+        this.pageMember = 1;
+        this.pageObligation = 1;
+        this.pageRequest = 1;
+        this.pageEvent = 1;
+        this.totalGroup = 0;
+        this.totalMember = 0;
+        this.totalObligation = 0;
+        this.totalRequest = 0;
+        this.totalEvent = 0;
         this._sharedService.emitChange(this.pageTitle);
     }
     PageGroupsComponent.prototype.ngOnInit = function () {
@@ -2733,9 +2753,7 @@ var PageGroupsComponent = (function () {
         });
         this.subscribeList[1] = this.apiService.groupCounts.subscribe(function (res) {
             _this.showGroupList = true;
-            if (res !== 0) {
-                _this.getGroups();
-            }
+            _this.getGroups(_this.maxGroup, _this.pageGroup);
         });
         this.auth.langCode.subscribe(function (res) {
             // this.getGroups();
@@ -2760,11 +2778,12 @@ var PageGroupsComponent = (function () {
                         _this.breadcrumb.push({ title: d.name });
                     }
                 });
-                _this.getGroupEvents();
+                _this.getGroupEvents(_this.maxEvent, _this.pageEvent);
                 _this.getGroupInfo();
-                _this.getGroupMembers();
-                _this.getGroupObligations();
-                _this.getGroupRequests();
+                _this.getTimeLineData();
+                _this.getGroupMembers(_this.maxMember, _this.pageMember);
+                _this.getGroupObligations(_this.maxObligation, _this.pageObligation);
+                _this.getGroupRequests(_this.maxRequest, _this.pageRequest);
             }
         });
     };
@@ -2773,13 +2792,15 @@ var PageGroupsComponent = (function () {
             d.unsubscribe();
         });
     };
-    PageGroupsComponent.prototype.getGroups = function () {
+    PageGroupsComponent.prototype.getGroups = function (max, page) {
         var _this = this;
+        console.log("group");
         this.groups = [];
         this.groupHeaders = ['Group name', 'Creator', 'number of member', 'Amount', 'Currency', 'Creation Date', 'Description', 'Frequency Every x month(s)', 'Type', 'Rate', { type: 'Action' }];
-        this.apiService.getGroups().then(function (res) {
+        this.apiService.getGroups(max, page).then(function (res) {
             _this.groups = [];
             _this.groupList = [];
+            _this.totalGroup = res.count;
             res.data.map(function (d) {
                 _this.groupList.push(d);
                 _this.groups.push([d.name, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.frequency, d.g_type_text, d.rate, { type: ['details'], id: d.id }]);
@@ -2787,52 +2808,63 @@ var PageGroupsComponent = (function () {
             _this.apiService.groupList = _this.groupList;
         });
     };
-    PageGroupsComponent.prototype.getGroupMembers = function () {
+    PageGroupsComponent.prototype.getGroupMembers = function (max, page) {
         var _this = this;
         this.members = [];
         this.memberHeaders = ['Name', 'Email', 'Type', 'Picture', 'Position', 'Date', { type: 'Action' }];
-        this.apiService.getGroupMembers().then(function (res) {
+        this.apiService.getGroupMembers(max, page).then(function (res) {
             _this.members = [];
+            _this.totalMember = res.count;
             res.data.map(function (d) {
                 _this.members.push([d.first_name, d.email, d.member_type_text, d.photo_path, d.position, d.user_position_date, { type: ['remove'], id: d.id }]);
             });
         });
     };
-    PageGroupsComponent.prototype.getGroupObligations = function () {
+    PageGroupsComponent.prototype.getGroupObligations = function (max, page) {
         var _this = this;
         this.obligations = [];
         this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Position selection', { type: 'Action' }];
-        this.apiService.getGroupObligations().then(function (res) {
+        this.apiService.getGroupObligations(max, page).then(function (res) {
             _this.obligations = [];
+            _this.totalObligation = res.count;
             res.data.map(function (d) {
                 _this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status_text, d.p_type_text, { type: ['paynow'], id: d.id }]);
             });
         });
     };
-    PageGroupsComponent.prototype.getGroupRequests = function () {
+    PageGroupsComponent.prototype.getGroupRequests = function (max, page) {
         var _this = this;
         this.requests = [];
         this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date', { type: 'Action' }];
-        this.apiService.getGroupRequests().then(function (res) {
+        this.apiService.getGroupRequests(max, page).then(function (res) {
             _this.requests = [];
+            _this.totalRequest = res.count;
             res.data.map(function (d) {
                 _this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation, { type: ['Accept', 'Reject'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type }]);
             });
         });
     };
-    PageGroupsComponent.prototype.getGroupEvents = function () {
+    PageGroupsComponent.prototype.getGroupEvents = function (max, page) {
         var _this = this;
         this.events = [];
         this.eventHeaders = ['Type', 'Initiator', 'Group', 'Date'];
+        this.apiService.getGroupEvents(max, page).then(function (res) {
+            _this.events = [];
+            _this.totalEvent = res.count;
+            res.data.map(function (d) {
+                _this.events.push([d.event_type_text, d.initiator, d.group, d.date_event]);
+            });
+        });
+    };
+    PageGroupsComponent.prototype.getTimeLineData = function () {
+        var _this = this;
         this.timelineData = [{
                 label: '2017',
                 timeline: []
             }];
-        this.apiService.getGroupEvents().then(function (res) {
-            _this.events = [];
+        this.apiService.getTimelineData().then(function (res) {
             res.data.map(function (d) {
                 _this.timelineData[0].timeline.push({ date: _this.getDuration(d.duration_seconds), content: d.event_type === 'GROUP_CREATED' ? 'A new group has been created' : 'A new request to join group has been created', pointColor: '#FFC6F1' });
-                _this.events.push([d.event_type_text, d.initiator, d.group, d.date_event]);
             });
         });
     };
@@ -2840,6 +2872,7 @@ var PageGroupsComponent = (function () {
         var _this = this;
         this.apiService.getGroupInfo().then(function (res) {
             _this.groupInfo = res.data[0];
+            console.log(res);
             if (_this.isClickedDetails) {
                 _this.showGroupList = false;
                 _this.apiService.showSpinner.next(false);
@@ -2879,10 +2912,10 @@ var PageGroupsComponent = (function () {
         else if (d > 1) {
             day = d + ' days ';
         }
-        return day + h + ' hours ' + m + ' mins ' + s + ' secs ago';
+        return day + h + ' hours ' + m + ' min ' + s + ' sec ago';
     };
     PageGroupsComponent.prototype.format = function (d) {
-        return (d < 10) ? '0' + d.toString() : d.toString();
+        return d.toString();
     };
     PageGroupsComponent.prototype.removeAll = function () {
         this.apiService.removeAll().then(function (res) {
@@ -2896,32 +2929,47 @@ var PageGroupsComponent = (function () {
     };
     PageGroupsComponent.prototype.doRefresh = function (res) {
         if (res === 1) {
-            this.getGroups();
+            this.getGroups(this.maxGroup, this.pageGroup);
         }
         else if (res === 2) {
-            this.getGroupMembers();
+            this.getGroupMembers(this.maxMember, this.pageMember);
         }
         else if (res === 3) {
-            this.getGroupObligations();
+            this.getGroupObligations(this.maxObligation, this.pageObligation);
         }
         else if (res === 4) {
-            this.getGroupRequests();
+            this.getGroupRequests(this.maxRequest, this.pageRequest);
         }
         else if (res === 5) {
-            this.getGroupEvents();
+            this.getGroupEvents(this.maxEvent, this.pageEvent);
         }
         else if (res === 6) {
         }
     };
     PageGroupsComponent.prototype.changeGroupPage = function (res) {
+        this.maxGroup = res[0];
+        this.pageGroup = res[1];
+        this.getGroups(this.maxGroup, this.pageGroup);
     };
     PageGroupsComponent.prototype.changeMemberPage = function (res) {
+        this.maxMember = res[0];
+        this.pageMember = res[1];
+        this.getGroupMembers(this.maxMember, this.pageMember);
     };
     PageGroupsComponent.prototype.changeRequestPage = function (res) {
+        this.maxRequest = res[0];
+        this.pageRequest = res[1];
+        this.getGroupRequests(this.maxRequest, this.pageRequest);
     };
     PageGroupsComponent.prototype.changeEventPage = function (res) {
+        this.maxEvent = res[0];
+        this.pageEvent = res[1];
+        this.getGroupEvents(this.maxEvent, this.pageEvent);
     };
     PageGroupsComponent.prototype.changeObligationPage = function (res) {
+        this.maxObligation = res[0];
+        this.pageObligation = res[1];
+        this.getGroupObligations(this.maxObligation, this.pageObligation);
     };
     PageGroupsComponent.prototype.changeTransactionPage = function (res) {
     };
@@ -3050,7 +3098,7 @@ var PageNotFoundComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/obligation/obligation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \n  </div>\n  <div class=\"col-lg-12\">\n    <ni-card [title]=\"'Obligation' | translate\" (refresh)=\"doRefresh($event)\" [showRefresh]=\"true\">\n      <ni-table [headers]=\"obligationHeaders\" [data]=\"obligations\"></ni-table>\n      <ni-alert *ngIf=\"obligations.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noobligation' | translate}}</strong></ni-alert>\n      <ni-pagination [totalItems]=\"obligations.length\" *ngIf=\"obligations.length > 0\" (changePage)=\"changePage($event)\"></ni-pagination>\n    </ni-card>\n  </div>\n</div>"
+module.exports = "<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \n  </div>\n  <div class=\"col-lg-12\">\n    <ni-card [title]=\"'Obligation' | translate\" (refresh)=\"doRefresh($event)\" [showRefresh]=\"true\">\n      <ni-table [headers]=\"obligationHeaders\" [data]=\"obligations\"></ni-table>\n      <ni-alert *ngIf=\"obligations.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noobligation' | translate}}</strong></ni-alert>\n      <ni-pagination [totalItems]=\"total\" [itemPerPage]=\"max\" [currentPage]=\"page\" *ngIf=\"obligations.length > 0\" (changePage)=\"changePage($event)\"></ni-pagination>\n    </ni-card>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -3097,22 +3145,26 @@ var PageObligationComponent = (function () {
         this.obligations = [];
         this.obligationHeaders = [];
         this.subscribeList = [];
+        this.max = 5;
+        this.page = 1;
+        this.total = 0;
     }
     PageObligationComponent.prototype.ngOnInit = function () {
         this.apiService.showSpinner.next(true);
-        this.getGroupObligations();
+        this.getGroupObligations(this.max, this.page);
     };
     PageObligationComponent.prototype.ngOnDestroy = function () {
         this.subscribeList.map(function (d) {
             d.unsubscribe();
         });
     };
-    PageObligationComponent.prototype.getGroupObligations = function () {
+    PageObligationComponent.prototype.getGroupObligations = function (max, page) {
         var _this = this;
         this.obligations = [];
         this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Position selection', { type: 'Action' }];
-        this.apiService.getGroupObligations().then(function (res) {
+        this.apiService.getGroupObligations(this.max, this.page).then(function (res) {
             _this.obligations = [];
+            _this.total = res.count;
             res.data.map(function (d) {
                 _this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status_text, d.p_type_text, { type: ['paynow'], id: d.id }]);
             });
@@ -3120,9 +3172,12 @@ var PageObligationComponent = (function () {
         });
     };
     PageObligationComponent.prototype.doRefresh = function (res) {
-        this.getGroupObligations();
+        this.getGroupObligations(this.max, this.page);
     };
     PageObligationComponent.prototype.changePage = function (res) {
+        this.max = res[0];
+        this.page = res[1];
+        this.getGroupObligations(this.max, this.page);
     };
     PageObligationComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -3218,7 +3273,7 @@ var PageProfileComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/requests/requests.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row members-header\">\r\n  <div class=\"col-sm-6\">\r\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>      \r\n  </div>\r\n  <div class=\"col-sm-6 text-right\">\r\n    <md-input-container class=\"search-group md-icon-left\">\r\n      <md-icon>search</md-icon>\r\n      <input mdInput value=\"\">\r\n    </md-input-container>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12\">\r\n    <ni-card [title]=\"'Requests' | translate\" (refresh)=\"doRefresh($event)\" [showRefresh]=\"true\">\r\n      <ni-table [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n      <ni-alert *ngIf=\"requests.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'norequest' | translate}}</strong></ni-alert>\r\n      <ni-pagination [totalItems]=\"requests.length\" *ngIf=\"requests.length > 0\" (changePage)=\"changePage($event)\"></ni-pagination>\r\n    </ni-card>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"row members-header\">\r\n  <div class=\"col-sm-6\">\r\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>      \r\n  </div>\r\n  <div class=\"col-sm-6 text-right\">\r\n    <md-input-container class=\"search-group md-icon-left\">\r\n      <md-icon>search</md-icon>\r\n      <input mdInput value=\"\">\r\n    </md-input-container>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12\">\r\n    <ni-card [title]=\"'Requests' | translate\" (refresh)=\"doRefresh($event)\" [showRefresh]=\"true\">\r\n      <ni-table [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n      <ni-alert *ngIf=\"requests.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'norequest' | translate}}</strong></ni-alert>\r\n      <ni-pagination [totalItems]=\"total\" [itemPerPage]=\"max\" [currentPage]=\"page\" *ngIf=\"requests.length > 0\" (changePage)=\"changePage($event)\"></ni-pagination>\r\n    </ni-card>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -3269,23 +3324,27 @@ var PageRequestsComponent = (function () {
         this.requestHeaders = [];
         this.breadcrumb = [{ title: 'requests' }];
         this.subscribeList = [];
+        this.max = 5;
+        this.page = 1;
+        this.total = 0;
         this._sharedService.emitChange(this.pageTitle);
     }
     PageRequestsComponent.prototype.ngOnInit = function () {
         this.apiService.showSpinner.next(true);
-        this.getUserRequests();
+        this.getUserRequests(this.max, this.page);
     };
     PageRequestsComponent.prototype.ngOnDestroy = function () {
         this.subscribeList.map(function (d) {
             d.unsubscribe();
         });
     };
-    PageRequestsComponent.prototype.getUserRequests = function () {
+    PageRequestsComponent.prototype.getUserRequests = function (max, page) {
         var _this = this;
         this.requests = [];
         this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date'];
-        this.apiService.getUserRequest().then(function (data) {
+        this.apiService.getUserRequest(max, page).then(function (data) {
             _this.requests = [];
+            _this.total = data.count;
             _this.apiService.showSpinner.next(false);
             data.data.map(function (d) {
                 _this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation]);
@@ -3293,9 +3352,12 @@ var PageRequestsComponent = (function () {
         });
     };
     PageRequestsComponent.prototype.doRefresh = function (res) {
-        this.getUserRequests();
+        this.getUserRequests(this.max, this.page);
     };
     PageRequestsComponent.prototype.changePage = function (res) {
+        this.max = res[0];
+        this.page = res[1];
+        this.getUserRequests(this.max, this.page);
     };
     PageRequestsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -4064,10 +4126,11 @@ var PageSigninComponent = (function () {
         var _this = this;
         this.auth.login(this.form.value).then(function (res) {
             if (res.email_validated === 'yes') {
+                console.log(res);
                 _this.isEmailCorrect = true;
                 localStorage.setItem('login', 'true');
                 localStorage.setItem('username', res.data[0].first_name + ' ' + res.data[0].middle_name + ' ' + res.data[0].sur_name);
-                localStorage.setItem('userphoto', res.data[0].photo_path);
+                localStorage.setItem('userphoto', res.data[0].picture);
                 _this.router.navigate(['/default-layout/dashboard']);
             }
             else {
@@ -4496,24 +4559,28 @@ var ApiService = (function () {
             });
         });
     };
-    ApiService.prototype.getUserRequest = function () {
+    ApiService.prototype.getUserRequest = function (max, page) {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'user/requests';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         params.set('token', localStorage.getItem('token'));
         params.set('lang', this.langCode);
+        params.set('max', max);
+        params.set('page', page);
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             });
         });
     };
-    ApiService.prototype.getNextPayment = function () {
+    ApiService.prototype.getNextPayment = function (max, page) {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'user/obligations';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         params.set('token', localStorage.getItem('token'));
         params.set('lang', this.langCode);
+        params.set('max', max);
+        params.set('page', page);
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
@@ -4526,18 +4593,21 @@ var ApiService = (function () {
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         params.set('token', localStorage.getItem('token'));
         params.set('lang', this.langCode);
+        params.set('max', '5');
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             });
         });
     };
-    ApiService.prototype.getGroups = function () {
+    ApiService.prototype.getGroups = function (max, page) {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'groups';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         params.set('token', localStorage.getItem('token'));
         params.set('lang', this.langCode);
+        params.set('max', max);
+        params.set('page', page);
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
@@ -4626,16 +4696,18 @@ var ApiService = (function () {
             });
         });
     };
-    ApiService.prototype.getGroupMembers = function () {
+    ApiService.prototype.getGroupMembers = function (max, page) {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/members';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         this.groupId.subscribe(function (data) {
             params.set('group_id', data);
         });
+        params.set('token', localStorage.getItem('token'));
+        params.set('lang', this.langCode);
+        params.set('max', max);
+        params.set('page', page);
         return new Promise(function (resolve, reject) {
-            params.set('token', localStorage.getItem('token'));
-            params.set('lang', _this.langCode);
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
@@ -4643,16 +4715,18 @@ var ApiService = (function () {
             });
         });
     };
-    ApiService.prototype.getGroupObligations = function () {
+    ApiService.prototype.getGroupObligations = function (max, page) {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/obligations';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         this.groupId.subscribe(function (data) {
             params.set('group_id', data);
         });
+        params.set('token', localStorage.getItem('token'));
+        params.set('lang', this.langCode);
+        params.set('max', max);
+        params.set('page', page);
         return new Promise(function (resolve, reject) {
-            params.set('token', localStorage.getItem('token'));
-            params.set('lang', _this.langCode);
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
@@ -4660,16 +4734,18 @@ var ApiService = (function () {
             });
         });
     };
-    ApiService.prototype.getGroupRequests = function () {
+    ApiService.prototype.getGroupRequests = function (max, page) {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/requests';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         this.groupId.subscribe(function (data) {
             params.set('group_id', data);
         });
+        params.set('token', localStorage.getItem('token'));
+        params.set('lang', this.langCode);
+        params.set('max', max);
+        params.set('page', page);
         return new Promise(function (resolve, reject) {
-            params.set('token', localStorage.getItem('token'));
-            params.set('lang', _this.langCode);
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
@@ -4677,16 +4753,18 @@ var ApiService = (function () {
             });
         });
     };
-    ApiService.prototype.getGroupEvents = function () {
+    ApiService.prototype.getGroupEvents = function (max, page) {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/events';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         this.groupId.subscribe(function (data) {
             params.set('group_id', data);
         });
+        params.set('token', localStorage.getItem('token'));
+        params.set('lang', this.langCode);
+        params.set('max', max);
+        params.set('page', page);
         return new Promise(function (resolve, reject) {
-            params.set('token', localStorage.getItem('token'));
-            params.set('lang', _this.langCode);
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
@@ -4709,34 +4787,17 @@ var ApiService = (function () {
             });
         });
     };
-    ApiService.prototype.validateAccept = function (id) {
+    ApiService.prototype.answerRequest = function (id, type) {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/requests/answer';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         return new Promise(function (resolve, reject) {
-            params.set('code', 'APPROVE');
+            params.set('code', type);
             params.set('request_id', id);
             params.set('lang', _this.langCode);
             params.set('token', localStorage.getItem('token'));
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 console.log(res._body);
-                resolve(res.json());
-            }, function (err) {
-                console.log(err);
-            });
-        });
-    };
-    ApiService.prototype.validateReject = function (id, comment) {
-        var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/requests/answer';
-        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
-        return new Promise(function (resolve, reject) {
-            params.set('code', 'REJECT');
-            params.set('request_id', id);
-            params.set('comments', comment);
-            params.set('lang', _this.langCode);
-            params.set('token', localStorage.getItem('token'));
-            _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
                 console.log(err);
@@ -5122,14 +5183,14 @@ var FooterComponent = (function () {
 /***/ "../../../../../src/app/ui/components/horizontal-navbar/group-create.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 md-dialog-title>{{'groupcreation' | translate}}</h2>\n<form [formGroup]=\"form\">\n  <div md-dialog-content *ngIf=\"step === 'first'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"name\" placeholder=\"{{'Name' | translate}}\" type=\"text\" value=\"\" [formControl]=\"form.controls['name']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'groupnameinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"{{'grouptype' | translate}}\" [formControl]=\"form.controls['grouptype']\">\n          <md-option *ngFor=\"let g of groupTypes\" [value]=\"g.code\">\n            {{ g.text }}\n          </md-option>\n        </md-select>\n        <md-icon mdTooltip=\"{{'grouptypeinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\" *ngIf=\"form.value.grouptype == 'PUBLIC'\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"minIndex\" placeholder=\"{{'Minimum index credit' | translate}}\" type=\"number\" value=\"0\" [formControl]=\"form.controls['minIndex']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"maxIndex\" placeholder=\"{{'Maximum index credit' | translate}}\" type=\"number\" value=\"1000\" [formControl]=\"form.controls['maxIndex']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"frequency\" placeholder=\"{{'frequency' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['frequency']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'groupmonthinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"{{'Currency' | translate}}\" [formControl]=\"form.controls['currency']\">\n          <md-option *ngFor=\"let c of currencies\" [value]=\"c.code\">\n            {{ c.code }}\n          </md-option>\n        </md-select>\n        <md-icon mdTooltip=\"{{'groupcurrencyinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-12\">\n        <md-input-container>\n          <textarea mdInput placeholder=\"{{'Description' | translate}}\" rows=\"3\" [formControl]=\"form.controls['description']\"></textarea>\n        </md-input-container>\n      </div>\n    </div>\n    <p>You will create a {{form.value.grouptype}} fund named {{form.value.name}}. The payment will be done every {{form.value.frequency}} {{form.value.frequency > 1 ? 'months' : 'month'}}, and the receiver will get the amount in {{form.value.currency}}.</p>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'first'\">\n    <button md-raised-button (click)=\"dialogRef.close('no')\" type=\"button\">{{'Cancel' | translate}}</button>\n    <button md-raised-button color=\"accent\" layout-align=\"end\" (click)=\"step = 'second'\">{{'Next' | translate}} >></button>\n  </div>\n  <div md-dialog-content *ngIf=\"step === 'second'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"amount\" class=\"text-right\" placeholder=\"{{'Amount' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['amount']\">\n        </md-input-container>\n        <span>{{currencySigns[form.value.currency]}}</span>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"rate\" placeholder=\"{{'Rate' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['rate']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'grouprateinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"duedate\" placeholder=\"{{'Due date' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['duedate']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'groupdayinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"{{'Group position selection mode' | translate}}\" [formControl]=\"form.controls['pstype']\">\n          <md-option *ngFor=\"let p of psTypes\" [value]=\"p.code\">\n            {{ p.text }}\n          </md-option>\n        </md-select>\n        <md-icon mdTooltip=\"{{'grouppstypeinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"nbdpenal\" placeholder=\"{{'Number of days of delay allowed' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['nbdpenal']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'grouppenalinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"penalty\" placeholder=\"{{'Penalty' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['penalty']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\" *ngIf=\"form.value.rate > 0\">\n      <div class=\"col-sm-12\">\n        <md-checkbox [checked]=\"form.value.rate > 0\" color=\"accent\" [disabled]=\"form.value.grouptype == 'PUBLIC'\" [formControl]=\"form.controls['smoothpayment']\">\n          {{'Smooth payment' | translate}}\n        </md-checkbox>\n        <md-icon mdTooltip=\"{{'grouppaymentinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <p>You will create a {{form.value.grouptype}} fund named {{form.value.name}}. The payment will be done every {{form.value.frequency}} {{form.value.frequency > 1 ? 'months' : 'month'}}, and the receiver will get {{form.value.amount}} the amount in {{form.value.currency}} plus {{form.value.rate}} % interest. The payment will have to be made on the {{form.value.duedate}}. In case of prepayment, you will have to pay extra {{form.value.payment}} of {{form.value.amount}}. After a delay of {{form.value.nbdpenal}} a penalty of {{form.value.penalty}} will apply. The members will select their position using {{form.value.pstype}} method.</p>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'second'\">\n    <button md-raised-button (click)=\"step = 'first'\" color=\"accent\" layout-align=\"end\"><< {{'Previous' | translate}}</button>\n    <button md-raised-button (click)=\"dialogRef.close('no')\" type=\"button\">{{'Cancel' | translate}}</button>\n    <button md-raised-button color=\"accent\" layout-align=\"end\" (click)=\"onSubmit()\" [disabled]=\"!form.valid\" type=\"button\">{{'Finish' | translate}}</button>\n  </div>\n</form>"
+module.exports = "<h2 md-dialog-title>{{'groupcreation' | translate}}</h2>\n<form [formGroup]=\"form\">\n  <div md-dialog-content *ngIf=\"step === 'first'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"name\" placeholder=\"{{'Name' | translate}}\" type=\"text\" value=\"\" [formControl]=\"form.controls['name']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'groupnameinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"{{'grouptype' | translate}}\" [formControl]=\"form.controls['grouptype']\">\n          <md-option *ngFor=\"let g of groupTypes\" [value]=\"g.code\">\n            {{ g.text }}\n          </md-option>\n        </md-select>\n        <md-icon mdTooltip=\"{{'grouptypeinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\" *ngIf=\"form.value.grouptype == 'PUBLIC'\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"minIndex\" placeholder=\"{{'Minimum index credit' | translate}}\" type=\"number\" value=\"0\" [formControl]=\"form.controls['minIndex']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"maxIndex\" placeholder=\"{{'Maximum index credit' | translate}}\" type=\"number\" value=\"1000\" [formControl]=\"form.controls['maxIndex']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"frequency\" placeholder=\"{{'frequency' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['frequency']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'groupmonthinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"{{'Currency' | translate}}\" [formControl]=\"form.controls['currency']\">\n          <md-option *ngFor=\"let c of currencies\" [value]=\"c.code\">\n            {{ c.code }}\n          </md-option>\n        </md-select>\n        <md-icon mdTooltip=\"{{'groupcurrencyinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-12\">\n        <md-input-container>\n          <textarea mdInput placeholder=\"{{'Description' | translate}}\" rows=\"3\" [formControl]=\"form.controls['description']\"></textarea>\n        </md-input-container>\n      </div>\n    </div>\n    <p>You are about to create a <span>{{form.value.grouptype}}</span> group named <span>{{form.value.name}}</span>.</p>\n    <p *ngIf=\"form.value.frequency == 1\">This payment will have to be made each month.</p>\n    <p *ngIf=\"form.value.frequency > 1\">This payment will have to be made every <span>{{form.value.frequency}}</span> months.</p>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'first'\">\n    <button md-raised-button (click)=\"dialogRef.close('no')\" type=\"button\">{{'Cancel' | translate}}</button>\n    <button md-raised-button color=\"accent\" layout-align=\"end\" (click)=\"step = 'second'\" [disabled]=\"form.value.name == '' || form.value.grouptype == '' || form.value.frequency == '' || form.value.currency == '' || form.value.description == ''\">{{'Next' | translate}} >></button>\n  </div>\n  <div md-dialog-content *ngIf=\"step === 'second'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"amount\" class=\"text-right\" placeholder=\"{{'Amount' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['amount']\">\n        </md-input-container>\n        <span>{{currencySigns[form.value.currency]}}</span>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"rate\" placeholder=\"{{'Rate' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['rate']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'grouprateinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"duedate\" placeholder=\"{{'Due date' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['duedate']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'groupdayinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"{{'Position Selection' | translate}}\" [formControl]=\"form.controls['pstype']\">\n          <md-option *ngFor=\"let p of psTypes\" [value]=\"p.code\">\n            {{ p.text }}\n          </md-option>\n        </md-select>\n        <md-icon mdTooltip=\"{{'grouppstypeinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"nbdpenal\" placeholder=\"{{'Number of days of delay allowed' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['nbdpenal']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'grouppenalinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"penalty\" placeholder=\"{{'Penalty' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['penalty']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\" *ngIf=\"form.value.rate > 0\">\n      <div class=\"col-sm-12\">\n        <md-checkbox [checked]=\"form.value.rate > 0\" color=\"accent\" [disabled]=\"form.value.grouptype == 'PUBLIC'\" [formControl]=\"form.controls['smoothpayment']\">\n          {{'Smooth payment' | translate}}\n        </md-checkbox>\n        <md-icon mdTooltip=\"{{'grouppaymentinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <p *ngIf=\"form.value.rate > 0\">The amount due will be <span>{{form.value.amount}} {{form.value.currency}}</span> with <span>{{form.value.rate}}</span> % interest applied.</p>\n    <p *ngIf=\"form.value.rate <= 0\">The amount due will be <span>{{form.value.amount}} {{form.value.currency}}</span>.</p>\n    <p *ngIf=\"form.value.frequency == 1\">This payment will have to be made on the <span>{{form.value.duedate}}</span> of each month.</p>\n    <p *ngIf=\"form.value.frequency > 1\">This payment will have to be made on the <span>{{form.value.duedate}}</span> every <span>{{form.value.frequency}}</span> months.</p>\n    <p *ngIf=\"form.value.nbdpenal > 0 && form.value.penalty > 0\">After a payment delay of <span>{{form.value.nbdpenal}}</span> days, a penalty of <span>{{form.value.penalty}}</span>% will apply.</p>\n    <p *ngIf=\"form.value.grouptype == 'PRIVATE' && form.value.smoothpayment == true && form.value.rate > 0\">The total payment (amount + interest) to pay will be smoothed.</p>\n    <p *ngIf=\"form.value.frequency == 1\">This will allow you to pay a single amount every month.</p>\n    <p *ngIf=\"form.value.frequency > 1\">This will allow you to pay a single amount every <span>{{form.value.frequency}}</span> months.</p>\n    <p *ngIf=\"form.value.pstype != ''\">When the group is kicked off, the members will select their position using <span>{{form.value.pstype}}</span></p>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'second'\">\n    <button md-raised-button (click)=\"step = 'first'\" color=\"accent\" layout-align=\"end\"><< {{'Previous' | translate}}</button>\n    <button md-raised-button (click)=\"dialogRef.close('no')\" type=\"button\">{{'Cancel' | translate}}</button>\n    <button md-raised-button color=\"accent\" layout-align=\"end\" (click)=\"onSubmit()\" [disabled]=\"!form.valid\" type=\"button\">{{'Finish' | translate}}</button>\n  </div>\n</form>"
 
 /***/ }),
 
 /***/ "../../../../../src/app/ui/components/horizontal-navbar/horizontal-navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"navbar-wrap\">\r\n  <div class=\"navbar-button\" [ngClass]=\"{ 'open' : openedSidebar }\" (click)=\"openSidebar()\">\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n  </div>\r\n\r\n  <h1 class=\"page-title\"></h1>\r\n\r\n  <div class=\"nav-items\">\r\n    \r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-input-container class=\"mb-0\">\r\n        <input mdInput [placeholder]=\"'Select a group' | translate\" [mdAutocomplete]=\"auto\" [formControl]=\"groupCtrl\">\r\n      </md-input-container>\r\n      <md-autocomplete #auto=\"mdAutocomplete\">\r\n        <md-option *ngFor=\"let group of filteredGroup | async\" [value]=\"group\" (click)=\"goToGroup(group)\">\r\n          {{ group }}\r\n        </md-option>\r\n      </md-autocomplete>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-icon mdTooltip=\"{{'paymenttooltip' | translate}}\" mdTooltipPosition=\"below\" class=\"btn-navbar\">payment</md-icon>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-icon mdTooltip=\"{{'paymenttooltip' | translate}}\" mdTooltipPosition=\"below\" class=\"btn-navbar\" (click)=\"openCreateGroupDialog()\">create_new_folder</md-icon>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link btn-code\">\r\n          <img [src]=\"'assets/content/' + langUrl\" width=\"30\" height=\"20\">\r\n      </a>\r\n      <div class=\"dropdown-menu\">\r\n        <ul>\r\n          <li *ngFor=\"let lang of languages\">\r\n            <a (click)=\"changeLanguage(lang.code)\">\r\n              <div class=\"content\">\r\n                <img [src]=\"'assets/content/' + lang.url\" width=\"30\" height=\"20\">\r\n                <span class=\"desc\"><strong>{{lang.code.toUpperCase()}}</strong></span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <div class=\"avatar\"><img [src]=\"'assets/' + photoUrl + '.png'\" width=\"40\" height=\"40\" alt=\"\"></div>\r\n        <div class=\"name\">{{username}}</div>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu mini-menu\">\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"transactions\"><span class=\"icon sli-home\"></span> My Account</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"profile\"><span class=\"icon sli-user\"></span> Profile</a>\r\n          </li>\r\n          <li>\r\n            <a (click)=\"logout()\"><span class=\"icon sli-logout\"></span> Log Out</a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"items-overlay\" (click)=\"close($event)\"></div>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"navbar-wrap\">\r\n  <div class=\"navbar-button\" [ngClass]=\"{ 'open' : openedSidebar }\" (click)=\"openSidebar()\">\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n  </div>\r\n\r\n  <h1 class=\"page-title\"></h1>\r\n\r\n  <div class=\"nav-items\">\r\n    \r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-input-container class=\"mb-0\">\r\n        <input mdInput [placeholder]=\"'Select a group' | translate\" [mdAutocomplete]=\"auto\" [formControl]=\"groupCtrl\">\r\n      </md-input-container>\r\n      <md-autocomplete #auto=\"mdAutocomplete\">\r\n        <md-option *ngFor=\"let group of filteredGroup | async\" [value]=\"group\" (click)=\"goToGroup(group)\">\r\n          {{ group }}\r\n        </md-option>\r\n      </md-autocomplete>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-icon mdTooltip=\"{{'paymenttooltip' | translate}}\" mdTooltipPosition=\"below\" class=\"btn-navbar\">payment</md-icon>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-icon mdTooltip=\"{{'paymenttooltip' | translate}}\" mdTooltipPosition=\"below\" class=\"btn-navbar\" (click)=\"openCreateGroupDialog()\">create_new_folder</md-icon>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link btn-code\">\r\n          <img [src]=\"'assets/content/' + langUrl\" width=\"30\" height=\"20\">\r\n      </a>\r\n      <div class=\"dropdown-menu\">\r\n        <ul>\r\n          <li *ngFor=\"let lang of languages\">\r\n            <a (click)=\"changeLanguage(lang.code)\">\r\n              <div class=\"content\">\r\n                <img [src]=\"'assets/content/' + lang.url\" width=\"30\" height=\"20\">\r\n                <span class=\"desc\"><strong>{{lang.code.toUpperCase()}}</strong></span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <div class=\"avatar\"><img [src]=\"'assets/img/user/' + photoUrl + '.png'\" width=\"40\" height=\"40\" alt=\"\"></div>\r\n        <div class=\"name\">{{username}}</div>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu mini-menu\">\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"transactions\"><span class=\"icon sli-home\"></span> My Account</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"profile\"><span class=\"icon sli-user\"></span> Profile</a>\r\n          </li>\r\n          <li>\r\n            <a (click)=\"logout()\"><span class=\"icon sli-logout\"></span> Log Out</a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"items-overlay\" (click)=\"close($event)\"></div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -5223,7 +5284,7 @@ var HorizontalNavbarComponent = (function () {
         var _this = this;
         this.apiService.groupCounts.subscribe(function (res) {
             if (!_this.apiService.isMenuClicked) {
-                _this.apiService.getGroups().then(function (data) {
+                _this.apiService.getGroups(500, 1).then(function (data) {
                     _this.groupList = [];
                     _this.groupDetailList = [];
                     data.data.map(function (d) {
@@ -5337,17 +5398,17 @@ var DialogGroupCreateComponent = (function () {
         this.psTypes = [];
         this.currencySigns = { USD: '$', GBP: '£', EUR: '€', ZEC: 'Z' };
         this.form = this.fb.group({
-            name: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].minLength(3), __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].maxLength(10)])],
-            frequency: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
-            grouptype: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
-            pstype: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
-            currency: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
-            description: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].minLength(3)])],
-            amount: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
-            rate: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
-            duedate: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
-            nbdpenal: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
-            penalty: [null, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            name: ['My group', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].minLength(3), __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].maxLength(10)])],
+            frequency: [1, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            grouptype: ['PRIVATE', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            pstype: ['', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            currency: ['GBP', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            description: ['', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].minLength(3)])],
+            amount: [500, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            rate: [0, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            duedate: [5, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            nbdpenal: [0, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            penalty: [0, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
             minIndex: [0],
             maxIndex: [1000],
             smoothpayment: [true]
@@ -5369,6 +5430,7 @@ var DialogGroupCreateComponent = (function () {
         var _this = this;
         this.dialogRef.close('yes');
         this.apiService.addGroup(this.form.value).then(function (res) {
+            _this.apiService.isMenuClicked = false;
             _this.apiService.groupCounts.next(_this.groupCounts + 1);
             _this.apiService.groupCreated.next(true);
             _this.router.navigate(['/default-layout/groups']);

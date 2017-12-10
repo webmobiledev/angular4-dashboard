@@ -52,11 +52,13 @@
         </md-input-container>
       </div>
     </div>
-    <p>You will create a {{form.value.grouptype}} fund named {{form.value.name}}. The payment will be done every {{form.value.frequency}} {{form.value.frequency > 1 ? 'months' : 'month'}}, and the receiver will get the amount in {{form.value.currency}}.</p>
+    <p>You are about to create a <span>{{form.value.grouptype}}</span> group named <span>{{form.value.name}}</span>.</p>
+    <p *ngIf="form.value.frequency == 1">This payment will have to be made each month.</p>
+    <p *ngIf="form.value.frequency > 1">This payment will have to be made every <span>{{form.value.frequency}}</span> months.</p>
   </div>
   <div md-dialog-actions *ngIf="step === 'first'">
     <button md-raised-button (click)="dialogRef.close('no')" type="button">{{'Cancel' | translate}}</button>
-    <button md-raised-button color="accent" layout-align="end" (click)="step = 'second'">{{'Next' | translate}} >></button>
+    <button md-raised-button color="accent" layout-align="end" (click)="step = 'second'" [disabled]="form.value.name == '' || form.value.grouptype == '' || form.value.frequency == '' || form.value.currency == '' || form.value.description == ''">{{'Next' | translate}} >></button>
   </div>
   <div md-dialog-content *ngIf="step === 'second'">
     <div class="row pt-3">
@@ -81,7 +83,7 @@
         <md-icon mdTooltip="{{'groupdayinfo' | translate}}" mdTooltipPosition="below">info</md-icon>
       </div>
       <div class="col-sm-6">
-        <md-select placeholder="{{'Group position selection mode' | translate}}" [formControl]="form.controls['pstype']">
+        <md-select placeholder="{{'Position Selection' | translate}}" [formControl]="form.controls['pstype']">
           <md-option *ngFor="let p of psTypes" [value]="p.code">
             {{ p.text }}
           </md-option>
@@ -110,7 +112,15 @@
         <md-icon mdTooltip="{{'grouppaymentinfo' | translate}}" mdTooltipPosition="below">info</md-icon>
       </div>
     </div>
-    <p>You will create a {{form.value.grouptype}} fund named {{form.value.name}}. The payment will be done every {{form.value.frequency}} {{form.value.frequency > 1 ? 'months' : 'month'}}, and the receiver will get {{form.value.amount}} the amount in {{form.value.currency}} plus {{form.value.rate}} % interest. The payment will have to be made on the {{form.value.duedate}}. In case of prepayment, you will have to pay extra {{form.value.payment}} of {{form.value.amount}}. After a delay of {{form.value.nbdpenal}} a penalty of {{form.value.penalty}} will apply. The members will select their position using {{form.value.pstype}} method.</p>
+    <p *ngIf="form.value.rate > 0">The amount due will be <span>{{form.value.amount}} {{form.value.currency}}</span> with <span>{{form.value.rate}}</span> % interest applied.</p>
+    <p *ngIf="form.value.rate <= 0">The amount due will be <span>{{form.value.amount}} {{form.value.currency}}</span>.</p>
+    <p *ngIf="form.value.frequency == 1">This payment will have to be made on the <span>{{form.value.duedate}}</span> of each month.</p>
+    <p *ngIf="form.value.frequency > 1">This payment will have to be made on the <span>{{form.value.duedate}}</span> every <span>{{form.value.frequency}}</span> months.</p>
+    <p *ngIf="form.value.nbdpenal > 0 && form.value.penalty > 0">After a payment delay of <span>{{form.value.nbdpenal}}</span> days, a penalty of <span>{{form.value.penalty}}</span>% will apply.</p>
+    <p *ngIf="form.value.grouptype == 'PRIVATE' && form.value.smoothpayment == true && form.value.rate > 0">The total payment (amount + interest) to pay will be smoothed.</p>
+    <p *ngIf="form.value.frequency == 1">This will allow you to pay a single amount every month.</p>
+    <p *ngIf="form.value.frequency > 1">This will allow you to pay a single amount every <span>{{form.value.frequency}}</span> months.</p>
+    <p *ngIf="form.value.pstype != ''">When the group is kicked off, the members will select their position using <span>{{form.value.pstype}}</span></p>
   </div>
   <div md-dialog-actions *ngIf="step === 'second'">
     <button md-raised-button (click)="step = 'first'" color="accent" layout-align="end"><< {{'Previous' | translate}}</button>

@@ -37,10 +37,11 @@ export class PageSigninComponent implements OnInit {
   onSubmit() {
     this.auth.login(this.form.value).then((res: any) => {
       if (res.email_validated === 'yes') {
+        console.log(res);
         this.isEmailCorrect = true;
         localStorage.setItem('login', 'true');
         localStorage.setItem('username', res.data[0].first_name + ' ' + res.data[0].middle_name + ' ' + res.data[0].sur_name);
-        localStorage.setItem('userphoto', res.data[0].photo_path);
+        localStorage.setItem('userphoto', res.data[0].picture);
         this.router.navigate(['/default-layout/dashboard']);
       } else {
         this.isEmailCorrect = false;

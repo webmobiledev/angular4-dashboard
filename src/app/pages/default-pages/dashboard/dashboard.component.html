@@ -4,16 +4,16 @@
       <div class="row">
         <div class="col-md-12">
           <ni-card [title]="'request' | translate" [info]="'requestinfo' | translate" [refreshIndex]="1" (refresh)="doRefresh($event)">
-            <ni-table [headers]="userRequestHeader" [data]="userRequests"></ni-table>
+            <ni-table [headers]="userRequestHeader" [data]="userRequests" (showRequestDialog)="showDialog($event)"></ni-table>
             <ni-alert *ngIf="userRequests.length === 0" [color]="'warning'" [outline]="true"><strong>{{'nopayment' | translate}}</strong></ni-alert>
-            <ni-pagination [totalItems]="userRequests.length" *ngIf="userRequests.length > 0" (changePage)="changeRequestPage($event)"></ni-pagination>
+            <ni-pagination [totalItems]="totalRequest" [itemPerPage]="maxRequest" [currentPage]="pageRequest" *ngIf="userRequests.length > 0" (changePage)="changeRequestPage($event)"></ni-pagination>
           </ni-card>
         </div>
         <div class="col-md-12">
           <ni-card [title]="'nextpayment' | translate" [info]="'paymentinfo' | translate" [refreshIndex]="2" (refresh)="doRefresh($event)">
             <ni-table [headers]="nextPaymentHeader" [data]="nextPayment"></ni-table>
             <ni-alert *ngIf="nextPayment.length === 0" [color]="'warning'" [outline]="true"><strong>{{'nopayment' | translate}}</strong></ni-alert>
-            <ni-pagination [totalItems]="nextPayment.length" *ngIf="nextPayment.length > 0" (changePage)="changePaymentPage($event)"></ni-pagination>
+            <ni-pagination [totalItems]="totalPayment" [itemPerPage]="maxPayment" [currentPage]="pagePayment" *ngIf="nextPayment.length > 0" (changePage)="changePaymentPage($event)"></ni-pagination>
           </ni-card>
         </div>
       </div>

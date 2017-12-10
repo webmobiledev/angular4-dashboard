@@ -16,8 +16,7 @@
           <button md-button color="accent" *ngIf="s.type && (s.type)[0] === 'details'" (click)="changePage(s.id)">details</button>
           <button md-button color="warn" *ngIf="s.type && (s.type)[0] === 'remove'" (click)="removeUser(s.id)">remove</button>
           <button md-button color="accent" *ngIf="s.type && (s.type)[0] === 'paynow'">pay now</button>
-          <button md-button color="accent" *ngIf="s.type && (s.type)[0] === 'Accept'" (click)="showDialog('accept', s.id, s.requestType, s.rotationType)">Accept</button>
-          <button md-button color="warn" *ngIf="s.type && (s.type)[1] === 'Reject'" (click)="showDialog('reject', s.id, s.requestType, s.rotationType)">Reject</button>
+          <button md-button color="accent" *ngIf="s.type && (s.type)[0] === 'Open'" (click)="showDialog(s.id)">{{'Open' | translate}}</button>
         </td>
       </tr>
       </tbody>

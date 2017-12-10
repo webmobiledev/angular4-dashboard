@@ -48,11 +48,13 @@ export class ApiService {
     });
   }
 
-  getUserRequest() {
+  getUserRequest(max, page) {
     const url = environment.serverUrl + 'user/requests';
     let params: URLSearchParams = new URLSearchParams();
     params.set('token', localStorage.getItem('token'));
     params.set('lang', this.langCode);
+    params.set('max', max);
+    params.set('page', page);
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
@@ -60,11 +62,13 @@ export class ApiService {
     });
   }
 
-  getNextPayment() {
+  getNextPayment(max, page) {
     const url = environment.serverUrl + 'user/obligations';
     let params: URLSearchParams = new URLSearchParams();
     params.set('token', localStorage.getItem('token'));
     params.set('lang', this.langCode);
+    params.set('max', max);
+    params.set('page', page);
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
@@ -77,6 +81,7 @@ export class ApiService {
     let params: URLSearchParams = new URLSearchParams();
     params.set('token', localStorage.getItem('token'));
     params.set('lang', this.langCode);
+    params.set('max', '5');
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
@@ -84,11 +89,13 @@ export class ApiService {
     });
   }
 
-  getGroups() {
+  getGroups(max, page) {
     const url = environment.serverUrl + 'groups';
     let params: URLSearchParams = new URLSearchParams();
     params.set('token', localStorage.getItem('token'));
     params.set('lang', this.langCode);
+    params.set('max', max);
+    params.set('page', page);
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
@@ -179,15 +186,17 @@ export class ApiService {
     });
   }
 
-  getGroupMembers() {
+  getGroupMembers(max, page) {
     const url = environment.serverUrl + 'group/members';
     let params: URLSearchParams = new URLSearchParams();
     this.groupId.subscribe(data => {
       params.set('group_id', data);
     });
+    params.set('token', localStorage.getItem('token'));
+    params.set('lang', this.langCode);
+    params.set('max', max);
+    params.set('page', page);
     return new Promise((resolve, reject) => {
-      params.set('token', localStorage.getItem('token'));
-      params.set('lang', this.langCode);
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
@@ -196,15 +205,17 @@ export class ApiService {
     });
   }
 
-  getGroupObligations() {
+  getGroupObligations(max, page) {
     const url = environment.serverUrl + 'group/obligations';
     let params: URLSearchParams = new URLSearchParams();
     this.groupId.subscribe(data => {
       params.set('group_id', data);
     });
+    params.set('token', localStorage.getItem('token'));
+    params.set('lang', this.langCode);
+    params.set('max', max);
+    params.set('page', page);
     return new Promise((resolve, reject) => {
-      params.set('token', localStorage.getItem('token'));
-      params.set('lang', this.langCode);
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
@@ -213,15 +224,17 @@ export class ApiService {
     });
   }
 
-  getGroupRequests() {
+  getGroupRequests(max, page) {
     const url = environment.serverUrl + 'group/requests';
     let params: URLSearchParams = new URLSearchParams();
     this.groupId.subscribe(data => {
       params.set('group_id', data);
     });
+    params.set('token', localStorage.getItem('token'));
+    params.set('lang', this.langCode);
+    params.set('max', max);
+    params.set('page', page);
     return new Promise((resolve, reject) => {
-      params.set('token', localStorage.getItem('token'));
-      params.set('lang', this.langCode);
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
@@ -230,15 +243,17 @@ export class ApiService {
     });
   }
 
-  getGroupEvents() {
+  getGroupEvents(max, page) {
     const url = environment.serverUrl + 'group/events';
     let params: URLSearchParams = new URLSearchParams();
     this.groupId.subscribe(data => {
       params.set('group_id', data);
     });
+    params.set('token', localStorage.getItem('token'));
+    params.set('lang', this.langCode);
+    params.set('max', max);
+    params.set('page', page);
     return new Promise((resolve, reject) => {
-      params.set('token', localStorage.getItem('token'));
-      params.set('lang', this.langCode);
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
@@ -262,33 +277,16 @@ export class ApiService {
     });
   }
 
-  validateAccept(id) {
+  answerRequest(id, type) {
     const url = environment.serverUrl + 'group/requests/answer';
     let params: URLSearchParams = new URLSearchParams();
     return new Promise((resolve, reject) => {
-      params.set('code', 'APPROVE');
+      params.set('code', type);
       params.set('request_id', id);
       params.set('lang', this.langCode);
       params.set('token', localStorage.getItem('token'));
       this.http.get(url, {search: params}).subscribe((res: any) => {
         console.log(res._body);
-        resolve(res.json());
-      }, err => {
-        console.log(err);
-      });
-    });
-  }
-
-  validateReject(id, comment) {
-    const url = environment.serverUrl + 'group/requests/answer';
-    let params: URLSearchParams = new URLSearchParams();
-    return new Promise((resolve, reject) => {
-      params.set('code', 'REJECT');
-      params.set('request_id', id);
-      params.set('comments', comment);
-      params.set('lang', this.langCode);
-      params.set('token', localStorage.getItem('token'));
-      this.http.get(url, {search: params}).subscribe((res) => {
         resolve(res.json());
       }, err => {
         console.log(err);

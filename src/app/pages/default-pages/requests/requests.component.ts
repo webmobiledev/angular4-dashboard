@@ -15,13 +15,17 @@ export class PageRequestsComponent {
   breadcrumb = [{title: 'requests'}];
   subscribeList: any = [];
 
+  max = 5;
+  page = 1;
+  total = 0;
+
   constructor( private _sharedService: SharedService, private apiService: ApiService ) {
     this._sharedService.emitChange(this.pageTitle);
   }
 
   ngOnInit() {
     this.apiService.showSpinner.next(true);
-    this.getUserRequests();
+    this.getUserRequests(this.max, this.page);
   }
 
   ngOnDestroy() {
@@ -30,11 +34,12 @@ export class PageRequestsComponent {
     });
   }
 
-  getUserRequests() {
+  getUserRequests(max, page) {
     this.requests = [];
     this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date'];
-    this.apiService.getUserRequest().then((data: any) => {
+    this.apiService.getUserRequest(max, page).then((data: any) => {
       this.requests = [];
+      this.total = data.count;
       this.apiService.showSpinner.next(false);
       data.data.map(d => {
         this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation]);
@@ -43,10 +48,12 @@ export class PageRequestsComponent {
   }
 
   doRefresh(res) {
-    this.getUserRequests();
+    this.getUserRequests(this.max, this.page);
   }
 
   changePage(res) {
-
+    this.max = res[0];
+    this.page = res[1];
+    this.getUserRequests(this.max, this.page);
   }
 }

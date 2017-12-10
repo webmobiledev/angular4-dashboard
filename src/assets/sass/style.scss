@@ -48,6 +48,7 @@ group-create {
 }
 md-dialog-container {
   width: 500px !important;
+  padding: 0 0 30px !important;
   h2 {
     background: #e5e6e9 !important;
     padding: 24px !important;
@@ -55,8 +56,7 @@ md-dialog-container {
     margin: 0 !important;
   }
   .mat-dialog-content {
-    padding: 20px 0;
-    margin: 0;
+    margin: 20px 0;
   }
   .mat-dialog-actions {
     justify-content: space-between;
@@ -100,4 +100,38 @@ dialog-remove {
 
 .btn-refresh:hover {
   color: #406cfe;
+}
+
+.mat-tab-group {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+group-create {
+  p {
+    margin: 0;
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .mat-dialog-actions {
+    padding: 0 24px 20px;
+  }
+}
+
+accept-reject-modal {
+  .mat-dialog-content {
+    margin: 0 !important;
+    padding-top: 30px;
+    .mat-dialog-actions {
+      margin: 0 !important;
+      padding: 20px 0 0;
+    }
+    p {
+      margin: 0;
+      span {
+        font-weight: bold;
+      }
+    }
+  }
 }

@@ -14,7 +14,7 @@
     <ni-card [title]="'Requests' | translate" (refresh)="doRefresh($event)" [showRefresh]="true">
       <ni-table [headers]="requestHeaders" [data]="requests"></ni-table>
       <ni-alert *ngIf="requests.length === 0" [color]="'warning'" [outline]="true"><strong>{{'norequest' | translate}}</strong></ni-alert>
-      <ni-pagination [totalItems]="requests.length" *ngIf="requests.length > 0" (changePage)="changePage($event)"></ni-pagination>
+      <ni-pagination [totalItems]="total" [itemPerPage]="max" [currentPage]="page" *ngIf="requests.length > 0" (changePage)="changePage($event)"></ni-pagination>
     </ni-card>
   </div>
 </div>

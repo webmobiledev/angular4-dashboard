@@ -1,47 +1,46 @@
-<div *ngIf="type === 'accept' && requestType === 'REQUEST_TO_JOIN_GROUP' && groupRotationType === 'FIRST_ARRIVED_FIRST_SERVED'">
+<div class="request-dialog">
   <div md-dialog-content>
-    <md-input-container>
-      <input mdInput placeholder="Position" value="" [(ngModel)]="position" type="number">
-    </md-input-container>
-    <md-select placeholder="Selected Positions">
+    <p>You have received a request to <span>{{request.request_type_text}}</span> from <span>{{request.sender}}</span> on <span>{{request.request_date}}</span>.</p>
+    <p *ngIf="request.request_type == 'REQUEST_FOR_OTHER_PAYMENT'">The admin of the group has requested the amount to be pay is <span>{{request.payment_amount}} {{request.currency}}</span>.</p>
+    <md-select [placeholder]="'Select your position in the group' | translate" *ngIf="request.request_type == 'START_AND_SELECT_POSTION_GROUP' && (request.group_rotation_type == 'FIRST_ARRIVED_FIRST_SERVED' || request.group_rotation_type == 'PRIORITY_BASED_ON_INDEX_CREDIT')">
       <md-option *ngFor="let p of positions" [value]="p.code">{{p.value}}</md-option>
     </md-select>
-    <div md-dialog-actions>
-      <button md-raised-button (click)="dialogRef.close('no')">CANCEL</button>
-      <button md-raised-button (click)="validate('accept')" color="accent">Validate</button>
-    </div>
-  </div>
-</div>
-
-<div *ngIf="type === 'accept' && requestType === 'REQUEST_TO_JOIN_GROUP' && groupRotationType !== 'FIRST_ARRIVED_FIRST_SERVED'">
-  <div md-dialog-content>
-    Do you really accept the request ?
-    <div md-dialog-actions>
-      <button md-raised-button (click)="dialogRef.close('no')">CANCEL</button>
-      <button md-raised-button (click)="validate('accept')" color="accent">Validate</button>
-    </div>
-  </div>
-</div>
-
-<div *ngIf="type === 'reject'">
-  <div md-dialog-content>
-    Do you really reject the request ?
-    <md-input-container class="mt-3">
-      <input mdInput placeholder="Justification" value="" [(ngModel)]="comment" type="text">
-    </md-input-container>
-    <div md-dialog-actions>
-      <button md-raised-button (click)="dialogRef.close('no')">CANCEL</button>
-      <button md-raised-button (click)="validate('reject')" color="accent">Validate</button>
-    </div>
-  </div>
-</div>
-
-<div *ngIf="type === 'accept' && requestType === 'START_AND_SELECT_POSTION_GROUP' && groupRotationType === 'RANDOM'">
-    <div md-dialog-content>
-      Do you really accept the request ?
-      <div md-dialog-actions>
-        <button md-raised-button>CANCEL</button>
-        <button md-raised-button color="accent">Validate</button>
+    <p *ngIf="request.request_type == 'REQUEST_FOR_OTHER_PAYMENT' || request.request_type == 'START_AND_SELECT_POSTION_GROUP'">
+      You will join a <span>{{request.g_type}}</span> Rolling Group named <span>{{request.group}}</span>
+    </p>
+    <p *ngIf="request.rate > 0">and the amount due will be <span>{{request.amount}} {{request.currency}}</span> with <span>{{request.rate}}</span> % interest applied.</p>
+    <p *ngIf="request.rate == 0">and the amount due will be <span>{{request.amount}} {{request.currency}}</span>.</p>
+    <p *ngIf="request.frequency == 1">This payment will have to be made at latest on <span>{{request.due_day}}</span> each month.</p>
+    <p *ngIf="request.frequency > 1">This payment will have to be made at latest on <span>{{request.due_day}}</span> every <span>{{request.frequency}}</span> month.</p>
+    <p *ngIf="request.delay_payment_penalty > 0 && request.nb_days_delay_before_penalty > 0">After a payment delay of <span>{{request.nb_days_delay_before_penalty}}</span> days, a penalty of <span>{{request.delay_payment_penalty}}</span> % will apply.</p>
+    <p *ngIf="request.g_type_code == 'PRIVATE' && request.smooth_payment == '1' && request.rate > 0">The total payment (amount + interest) to pay will be smoothed.</p>
+    <p *ngIf="request.frequency == 1">This will allow you to pay a single amount every month.</p>
+    <p *ngIf="request.frequency > 1">This will allow you to pay a single amount every <span>{{request.frequency}}</span> months.</p>
+    <p>When the group is kicked off, the members will select their position using <span>{{request.group_rotation_type_text}}</span> method.</p>
+    <div class="row mt-3" *ngIf="request.request_type == 'REQUEST_TO_JOIN_GROUP' || request.request_type == 'START_AND_SELECT_POSTION_GROUP'">
+      <div class="col-sm-6">
+        <p>Group: <span>{{request.group}}</span></p>
+        <p>Frequency: <span>{{request.frequency}}</span></p>
+        <p>Due date: <span>{{request.due_day}}</span></p>
+        <p>Penalty: <span>{{request.delay_payment_penalty}}</span></p>
+        <p>Type: <span>{{request.g_type}}</span></p>
+        <p>Smooth payment: <span>{{request.smooth_payment}}</span></p>
+        <p>Rotation type: <span>{{request.group_rotation_type_text}}</span></p>
+      </div>
+      <div class="col-sm-6">
+        <p>Rate: <span>{{request.rate}}</span></p>
+        <p>Minimum index credit: <span>{{request.index_credit_min}}</span></p>
+        <p>Maximum index credit: <span>{{request.index_credit_max}}</span></p>
+        <p>Amount: <span>{{request.amount}}</span></p>
+        <p>Description: <span>{{request.group_description}}</span></p>
+        <p>Currency: <span>{{request.currency}}</span></p>
+        <p>Request date: <span>{{request.request_date}}</span></p>
       </div>
     </div>
+    <div md-dialog-actions>
+      <button mdTooltip="{{'Click here to accept the request' | translate}}" mdTooltipPosition="below" md-raised-button (click)="answer('APPROVE')" color="accent">{{'Accept' | translate}}</button>
+      <button mdTooltip="{{'Click here to reject the request' | translate}}" mdTooltipPosition="below" md-raised-button (click)="answer('REJECT')" color="accent">{{'Reject' | translate}}</button>
+      <button mdTooltip="{{'Click here to close the window without any change' | translate}}" mdTooltipPosition="below" md-raised-button (click)="dialogRef.close('no')" color="warn">{{'Cancel' | translate}}</button>
+    </div>
   </div>
+</div>
