@@ -61,8 +61,6 @@ export class MenuComponent implements OnInit {
   toggle(event: Event, item: any, el: any) {
     event.preventDefault();
     this.apiService.isMenuClicked = true;
-    this.apiService.isClickedDetails.next(false);
-    this.apiService.initHeaderGroup.next('');
 
     let items: any[] = el.menuItems;
 
@@ -74,6 +72,14 @@ export class MenuComponent implements OnInit {
       }
       item.active = true;
     }
+
+    if (item.title === 'groups') {
+      this.apiService.isMenuClicked = false;
+      this.apiService.groupCounts.next(this.groupCounts);
+    }
+
+    this.apiService.isClickedDetails.next(false);
+    this.apiService.initHeaderGroup.next('');
   }
 
   changeGroup(item) {

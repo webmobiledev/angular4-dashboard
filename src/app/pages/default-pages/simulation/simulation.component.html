@@ -61,6 +61,6 @@
       </div>
     </div>
     <p>The payment will be done every {{form.value.frequency}} {{form.value.frequency > 1 ? 'months' : 'month'}}, and the receiver will get {{form.value.amount}} the amount in {{form.value.currency}} plus {{form.value.rate}} % interest. The payment will have to be made on the {{form.value.duedate}}.</p>
-    <button md-raised-button color="accent" layout-align="end" (click)="simulate()" [disabled]="!form.valid">{{'Simulate' | translate}}</button>
+    <button md-raised-button color="primary" layout-align="end" (click)="simulate()" [disabled]="!form.valid">{{'Simulate' | translate}}</button>
   </form>
 </md-card>

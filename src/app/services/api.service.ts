@@ -48,13 +48,16 @@ export class ApiService {
     });
   }
 
-  getUserRequest(max, page) {
+  getUserRequest(max, page, status?) {
     const url = environment.serverUrl + 'user/requests';
     let params: URLSearchParams = new URLSearchParams();
     params.set('token', localStorage.getItem('token'));
     params.set('lang', this.langCode);
     params.set('max', max);
     params.set('page', page);
+    if (status) {
+      params.set('status_code', status);
+    }
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
@@ -62,13 +65,16 @@ export class ApiService {
     });
   }
 
-  getNextPayment(max, page) {
+  getNextPayment(max, page, status?) {
     const url = environment.serverUrl + 'user/obligations';
     let params: URLSearchParams = new URLSearchParams();
     params.set('token', localStorage.getItem('token'));
     params.set('lang', this.langCode);
     params.set('max', max);
     params.set('page', page);
+    if (status) {
+      params.set('status_code', status);
+    }
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());

@@ -78,7 +78,7 @@ export class PageDashboardComponent {
   getRequests(max, page) {
     this.userRequests = [];
     this.userRequestHeader = ['Type', 'From', 'Group', {type: 'Action'}];
-    this.apiService.getUserRequest(max, page).then((data: any) => {
+    this.apiService.getUserRequest(max, page, 'PENDING').then((data: any) => {
       this.userRequests = [];
       this.requests = [];
       this.totalRequest = data.count;
@@ -92,7 +92,7 @@ export class PageDashboardComponent {
   getNextPayments(max, page) {
     this.nextPayment = [];
     this.nextPaymentHeader = ['Type', 'Amount', 'To', 'Date', {type: 'Action'}];
-    this.apiService.getNextPayment(max, page).then((data: any) => {
+    this.apiService.getNextPayment(max, page, 'PENDING').then((data: any) => {
       this.nextPayment = [];
       this.totalPayment = data.count;
       data.data.map(d => {

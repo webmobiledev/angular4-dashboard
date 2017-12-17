@@ -166,14 +166,14 @@ export class DialogGroupCreateComponent {
       grouptype: ['PRIVATE', Validators.compose([Validators.required])],
       pstype: ['', Validators.compose([Validators.required])],
       currency: ['GBP', Validators.compose([Validators.required])],
-      description: ['', Validators.compose([Validators.required, Validators.minLength(3)])],
+      description: ['', Validators.compose([Validators.required, Validators.minLength(20)])],
       amount: [500, Validators.compose([Validators.required])],
       rate: [0, Validators.compose([Validators.required])],
       duedate: [5, Validators.compose([Validators.required])],
       nbdpenal: [0, Validators.compose([Validators.required])],
       penalty: [0, Validators.compose([Validators.required])],
-      minIndex: [0],
-      maxIndex: [1000],
+      minIndex: [0, Validators.compose([Validators.required])],
+      maxIndex: [1000, Validators.compose([Validators.required])],
       smoothpayment: [true]
     });
 

@@ -31,15 +31,15 @@
       </ng-template>
       <div class="row p-2">
         <div class="col-md-7 mb-3">
-          <button md-raised-button color="accent" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'" (click)="openStartDialog()">Start</button>
-          <button md-raised-button color="accent" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'" (click)="openDialog()">Add a member</button>
-          <button md-raised-button color="accent" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'">Save changes</button>
+          <button md-raised-button color="primary" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'" (click)="openStartDialog()">Start</button>
+          <button md-raised-button color="primary" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'" (click)="openDialog()">Add a member</button>
+          <button md-raised-button color="primary" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'">Save changes</button>
           <md-card class="example-card mt-3" *ngIf="groupInfo && groupInfo.group_info">
             <div class="form-group row">
               <label class="col-sm-4 col-md-4 col-form-label mb-0">Name:</label>
               <div class="col-sm-8 col-md-8">
                 <md-input-container class="mb-0">
-                  <input mdInput type="text" value="{{groupInfo.group_info.name}}" disabled>
+                  <input mdInput type="text" value="{{groupInfo.group_info.name}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                 </md-input-container>
               </div>
             </div>
@@ -47,7 +47,7 @@
               <label class="col-sm-4 col-md-4 col-form-label mb-0">Description:</label>
               <div class="col-sm-8 col-md-8">
                 <md-input-container class="mb-0">
-                  <input mdInput type="text" value="{{groupInfo.group_info.description}}" [disabled]="groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'">
+                  <input mdInput type="text" value="{{groupInfo.group_info.description}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                 </md-input-container>
               </div>
             </div>
@@ -55,7 +55,7 @@
               <label class="col-sm-4 col-md-4 col-form-label mb-0">First Payment:</label>
               <div class="col-sm-8 col-md-8">
                 <md-input-container class="mb-0">
-                  <input mdInput type="text" value="{{groupInfo.group_info.date_first_payment}}" [disabled]="groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'">
+                  <input mdInput type="text" value="{{groupInfo.group_info.date_first_payment}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT' && groupInfo.group_info.status_code !== 'REQUEST_FOR_POSITION_VALIDATION_SENT'">
                 </md-input-container>
               </div>
             </div>
@@ -63,8 +63,8 @@
               <label class="col-sm-4 col-md-4 col-form-label mb-0">Date creation:</label>
               <div class="col-sm-8 col-md-8">
                 <md-input-container class="mb-0">
-                  <input mdInput type="text" [mdDatepicker]="picker" value="{{groupInfo.group_info.date_creation}}" disabled>
-                  <button mdSuffix [mdDatepickerToggle]="picker" disabled></button>
+                  <input mdInput type="text" [mdDatepicker]="picker" value="{{groupInfo.group_info.date_creation}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
+                  <button mdSuffix [mdDatepickerToggle]="picker" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'"></button>
                 </md-input-container>
                 <md-datepicker #picker></md-datepicker>
               </div>
@@ -72,7 +72,7 @@
             <div class="form-group row">
               <label class="col-sm-4 col-md-4 col-form-label mb-0">Type:</label>
               <div class="col-sm-8 col-md-8">
-                <md-select disabled [(ngModel)]="groupInfo.group_info.g_type_text">
+                <md-select [(ngModel)]="groupInfo.group_info.g_type_text" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                   <md-option [value]="groupInfo.group_info.g_type_text">{{groupInfo.group_info.g_type_text}}</md-option>
                 </md-select>
               </div>
@@ -80,7 +80,7 @@
             <div class="form-group row">
               <label class="col-sm-4 col-md-4 col-form-label mb-0">Currency:</label>
               <div class="col-sm-8 col-md-8">
-                <md-select disabled [(ngModel)]="groupInfo.group_info.currency">
+                <md-select [(ngModel)]="groupInfo.group_info.currency" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                   <md-option [value]="groupInfo.group_info.currency">{{groupInfo.group_info.currency}}</md-option>
                 </md-select>
               </div>
@@ -89,14 +89,14 @@
               <label class="col-sm-4 col-md-4 col-form-label mb-0">Creator:</label>
               <div class="col-sm-8 col-md-8">
                 <md-input-container class="mb-0">
-                  <input mdInput type="text" value="{{groupInfo.group_info.creator}}" disabled>
+                  <input mdInput type="text" value="{{groupInfo.group_info.creator}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                 </md-input-container>
               </div>
             </div>
             <div class="form-group row">
               <label class="col-sm-4 col-md-4 col-form-label mb-0">Status:</label>
               <div class="col-sm-8 col-md-8">
-                <md-select disabled [(ngModel)]="groupInfo.group_info.status_text">
+                <md-select [(ngModel)]="groupInfo.group_info.status_text" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                   <md-option [value]="groupInfo.group_info.status_text">{{groupInfo.group_info.status_text}}</md-option>
                 </md-select>
               </div>
@@ -104,7 +104,7 @@
             <div class="form-group row">
               <label class="col-sm-4 col-md-4 col-form-label mb-0">Position selection:</label>
               <div class="col-sm-8 col-md-8">
-                <md-select disabled [(ngModel)]="groupInfo.group_info.position_selection_type_text">
+                <md-select [(ngModel)]="groupInfo.group_info.position_selection_type_text" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                   <md-option [value]="groupInfo.group_info.position_selection_type_text">{{groupInfo.group_info.position_selection_type_text}}</md-option>
                 </md-select>
               </div>
@@ -113,7 +113,7 @@
               <label class="col-sm-4 col-md-4 col-form-label mb-0">Rate:</label>
               <div class="col-sm-8 col-md-8">
                 <md-input-container class="mb-0">
-                  <input mdInput type="number" value="{{groupInfo.group_info.rate}}" [disabled]="groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'">
+                  <input mdInput type="number" value="{{groupInfo.group_info.rate}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                 </md-input-container>
               </div>
             </div>
@@ -121,7 +121,7 @@
               <label class="col-sm-4 col-md-4 col-form-label mb-0">Frequency:</label>
               <div class="col-sm-8 col-md-8">
                 <md-input-container class="mb-0">
-                  <input mdInput type="number" value="{{groupInfo.group_info.frequency}}" [disabled]="groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'">
+                  <input mdInput type="number" value="{{groupInfo.group_info.frequency}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                 </md-input-container>
               </div>
             </div>
@@ -129,7 +129,7 @@
               <label class="col-sm-4 col-md-4 col-form-label mb-0">Due date:</label>
               <div class="col-sm-8 col-md-8">
                 <md-input-container class="mb-0">
-                  <input mdInput type="number" value="{{groupInfo.group_info.due_day}}" [disabled]="groupInfo.group_info.status !== 'PENDING_FOR_KICK_OFF'">
+                  <input mdInput type="number" value="{{groupInfo.group_info.due_day}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                 </md-input-container>
               </div>
             </div>
@@ -137,14 +137,14 @@
               <label class="col-sm-4 col-md-4 col-form-label mb-0">nb members:</label>
               <div class="col-sm-8 col-md-8">
                 <md-input-container class="mb-0">
-                  <input mdInput type="number" value="{{groupInfo.group_info.nb_members}}" disabled>
+                  <input mdInput type="number" value="{{groupInfo.group_info.nb_members}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                 </md-input-container>
               </div>
             </div>
           </md-card>
         </div>
         <div class="col-md-5 pt-3" *ngIf="groupInfo.group_info.g_type !== 'PUBLIC'">
-          <ni-card [customBgColor]="'rgba(100,181,246,0.9)'" [customColor]="'#fff'" [bgImage]="'assets/content/card-6.jpg'" class="info-card" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'">
+          <ni-card [outline]="true" [bgColor]="'warning'" class="info-card" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'">
             <div class="title text-uppercase">{{'Amount' | translate}}</div>
             <div class="count">2,543</div>
           </ni-card>
@@ -186,8 +186,8 @@
       </ng-template>
       <div class="row members-header">
         <div class="col-sm-6 p-3">
-          <button md-raised-button color="accent" (click)="openDialog()">{{'Add a member' | translate}}</button>
-          <button md-raised-button color="accent" (click)="removeAll()">{{'Remove all members' | translate}}</button>
+          <button md-raised-button color="primary" (click)="openDialog()">{{'Add a member' | translate}}</button>
+          <button md-raised-button color="primary" (click)="removeAll()">{{'Remove all members' | translate}}</button>
         </div>
         <div class="col-sm-6 text-right p-3">
           <md-input-container class="search-group md-icon-left">
@@ -212,7 +212,7 @@
       </ng-template>
       <div class="row members-header">
         <div class="col-sm-6 p-3">
-          <button md-raised-button color="accent" (click)="cancelAll()">{{'Cancel all outstanding request' | translate}}</button>
+          <button md-raised-button color="primary" (click)="cancelAll()">{{'Cancel all outstanding request' | translate}}</button>
         </div>
         <div class="col-sm-6 text-right p-3">
           <md-input-container class="search-group md-icon-left">

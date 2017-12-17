@@ -24,7 +24,7 @@ export class PageGroupsComponent implements OnInit {
   requestHeaders = [];
   events = [];
   eventHeaders = [];
-  groupInfo = {};
+  groupInfo: any;
   showGroupList = true;
   timelineData: any[] = [];
   showGroupAlert = false;
@@ -199,7 +199,6 @@ export class PageGroupsComponent implements OnInit {
   getGroupInfo() {
     this.apiService.getGroupInfo().then((res: any) => {
       this.groupInfo = res.data[0];
-      console.log(res);
       if (this.isClickedDetails) {
         this.showGroupList = false;
         this.apiService.showSpinner.next(false);          

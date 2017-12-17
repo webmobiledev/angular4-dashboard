@@ -57,8 +57,8 @@
     <p *ngIf="form.value.frequency > 1">This payment will have to be made every <span>{{form.value.frequency}}</span> months.</p>
   </div>
   <div md-dialog-actions *ngIf="step === 'first'">
-    <button md-raised-button (click)="dialogRef.close('no')" type="button">{{'Cancel' | translate}}</button>
-    <button md-raised-button color="accent" layout-align="end" (click)="step = 'second'" [disabled]="form.value.name == '' || form.value.grouptype == '' || form.value.frequency == '' || form.value.currency == '' || form.value.description == ''">{{'Next' | translate}} >></button>
+    <button md-raised-button (click)="dialogRef.close('no')" type="button" color="default">{{'Cancel' | translate}}</button>
+    <button md-raised-button color="primary" layout-align="end" (click)="step = 'second'" [disabled]="!form.controls['name'].valid || !form.controls['grouptype'].valid || !form.controls['frequency'].valid || !form.controls['currency'].valid || !form.controls['description'].valid || !form.controls['minIndex'].valid || !form.controls['maxIndex'].valid">{{'Next' | translate}} >></button>
   </div>
   <div md-dialog-content *ngIf="step === 'second'">
     <div class="row pt-3">
@@ -106,7 +106,7 @@
     </div>
     <div class="row pt-3" *ngIf="form.value.rate > 0">
       <div class="col-sm-12">
-        <md-checkbox [checked]="form.value.rate > 0" color="accent" [disabled]="form.value.grouptype == 'PUBLIC'" [formControl]="form.controls['smoothpayment']">
+        <md-checkbox [checked]="form.value.rate > 0" color="primary" [disabled]="form.value.grouptype == 'PUBLIC'" [formControl]="form.controls['smoothpayment']">
           {{'Smooth payment' | translate}}
         </md-checkbox>
         <md-icon mdTooltip="{{'grouppaymentinfo' | translate}}" mdTooltipPosition="below">info</md-icon>
@@ -123,8 +123,8 @@
     <p *ngIf="form.value.pstype != ''">When the group is kicked off, the members will select their position using <span>{{form.value.pstype}}</span></p>
   </div>
   <div md-dialog-actions *ngIf="step === 'second'">
-    <button md-raised-button (click)="step = 'first'" color="accent" layout-align="end"><< {{'Previous' | translate}}</button>
-    <button md-raised-button (click)="dialogRef.close('no')" type="button">{{'Cancel' | translate}}</button>
-    <button md-raised-button color="accent" layout-align="end" (click)="onSubmit()" [disabled]="!form.valid" type="button">{{'Finish' | translate}}</button>
+    <button md-raised-button (click)="step = 'first'" color="primary" layout-align="end"><< {{'Previous' | translate}}</button>
+    <button md-raised-button (click)="dialogRef.close('no')" type="button" color="default">{{'Cancel' | translate}}</button>
+    <button md-raised-button color="primary" layout-align="end" (click)="onSubmit()" [disabled]="!form.valid" type="button">{{'Finish' | translate}}</button>
   </div>
 </form>
