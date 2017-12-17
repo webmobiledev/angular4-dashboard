@@ -14,7 +14,7 @@
         <td *ngFor="let s of d">
           <span *ngIf="!s.type">{{ s }}</span>
           <button md-raised-button color="primary" *ngIf="s.type && (s.type)[0] === 'details'" (click)="changePage(s.id)">details</button>
-          <button md-raised-button color="default" *ngIf="s.type && (s.type)[0] === 'remove'" (click)="removeUser(s.id)">remove</button>
+          <button md-raised-button color="primary" *ngIf="s.type && (s.type)[0] === 'remove'" (click)="removeUser(s.id)">remove</button>
           <button md-raised-button color="primary" *ngIf="s.type && (s.type)[0] === 'paynow'">pay now</button>
           <button md-raised-button color="primary" *ngIf="s.type && (s.type)[0] === 'Open'" (click)="showDialog(s.id)">{{'Open' | translate}}</button>
         </td>
