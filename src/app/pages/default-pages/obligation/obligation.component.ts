@@ -14,6 +14,7 @@ export class PageObligationComponent implements OnInit {
   max = 5;
   page = 1;
   total = 0;
+  loading = true;
 
   constructor(private apiService: ApiService) { }
 
@@ -37,15 +38,18 @@ export class PageObligationComponent implements OnInit {
       res.data.map(d => {
         this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status_text, d.p_type_text, {type: ['paynow'], id: d.id}]);
       });
-      this.apiService.showSpinner.next(false);
+
+      this.loading = false;
     });
   }
 
   doRefresh(res) {
+    this.loading = true;
     this.getGroupObligations(this.max, this.page);
   }
 
   changePage(res) {
+    this.loading = true;
     this.max = res[0];
     this.page = res[1];
     this.getGroupObligations(this.max, this.page);

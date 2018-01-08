@@ -22,7 +22,9 @@ import { AutoGrowDirective }     from './directives/auto-grow/auto-grow.directiv
 
 import { MdIconModule, MdProgressBarModule, MdProgressSpinnerModule, MdOptionModule, MdButtonModule, MdSelectModule, MdTooltipModule } from '@angular/material';
 import { NiLoadingComponent } from './ni-loading/ni-loading.component';
+import { NiTableLoadingComponent } from './ni-table-loading/ni-table-loading.component';
 import { NiPaginationComponent } from './ni-pagination/ni-pagination.component';
+import { NiDialogComponent } from './ni-dialog/ni-dialog.component';
 
 @NgModule({
   imports: [
@@ -53,7 +55,9 @@ import { NiPaginationComponent } from './ni-pagination/ni-pagination.component';
     AutoGrowDirective,
     NiLoadingComponent,
     NiPaginationComponent,
-    DialogRemoveComponent
+    DialogRemoveComponent,
+    NiTableLoadingComponent,
+    NiDialogComponent
   ],
   exports: [
     NiAlertComponent,
@@ -70,10 +74,13 @@ import { NiPaginationComponent } from './ni-pagination/ni-pagination.component';
     BgDirective,
     GradientDirective,
     NiPaginationComponent,
-    DialogRemoveComponent
+    DialogRemoveComponent,
+    NiTableLoadingComponent,
+    NiDialogComponent
   ],
   entryComponents: [
-    DialogRemoveComponent
+    DialogRemoveComponent,
+    NiDialogComponent
   ]
 })
 export class NiComponentsModule { }

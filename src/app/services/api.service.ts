@@ -124,31 +124,42 @@ export class ApiService {
     });
   }
 
-  addGroup(group) {
-    const url = environment.serverUrl + 'groups/add';
-    let params: URLSearchParams = new URLSearchParams();
-    if (group.grouptype == 'PRIVATE') {
-      params.set('type_code', 'PRIVATE');
-    } else if (group.grouptype == 'PUBLIC') {
-      params.set('type_code', 'PUBLIC');
-      params.set('min_index', group.minIndex);
-      params.set('max_index', group.maxIndex);
+  addOrUpdateGroup(group, type) {
+    var url = environment.serverUrl + 'groups/add';
+
+    if (type === 'update') {
+      url = environment.serverUrl + 'group/update';
     }
 
-    if (group.rate > 0) {
-      params.set('smooth_payment', group.smoothpayment);
+    let params: URLSearchParams = new URLSearchParams();
+    if (group.g_type == 'PRIVATE') {
+      params.set('type_code', 'PRIVATE');
+    } else if (group.g_type == 'PUBLIC') {
+      params.set('type_code', 'PUBLIC');
+      if (type === 'add') {
+        params.set('min_index', group.index_credit_min);
+        params.set('max_index', group.index_credit_max);
+      }
+    }
+
+    if (group.rate > 0 && type === 'add') {
+      params.set('smooth_payment', group.smooth_payment);
+    }
+
+    if (type === 'update') {
+      params.set('number_of_members', group.nb_members);
     }
 
     params.set('name', group.name);
     params.set('rate', group.rate);
     params.set('description', group.description);
     params.set('amount', group.amount);
-    params.set('due_day', group.duedate);
+    params.set('due_day', group.due_day);
     params.set('currency_code', group.currency);
-    params.set('number_of_days_before_penalty', group.nbdpenal);
-    params.set('delay_payment_penalty', group.penalty);
+    params.set('number_of_days_before_penalty', group.nb_days_delay_before_penalty);
+    params.set('delay_payment_penalty', group.delay_payment_penalty);
     params.set('frequency', group.frequency);
-    params.set('position_selection_type_code', group.pstype);
+    params.set('position_selection_type_code', group.position_selection_type);
     params.set('token', localStorage.getItem('token'));
     params.set('lang', this.langCode);
     return new Promise((resolve, reject) => {
@@ -175,6 +186,25 @@ export class ApiService {
 
   addMember(member) {
     const url = environment.serverUrl + 'group/users/add';
+    let params: URLSearchParams = new URLSearchParams();
+    this.groupId.subscribe(data => {
+      params.set('group_id', data);
+    });
+    return new Promise((resolve, reject) => {
+      params.set('email_list', member);
+      params.set('lang', this.langCode);
+      params.set('token', localStorage.getItem('token'));
+      this.http.get(url, {search: params}).subscribe(res => {
+        console.log(res);
+        // resolve(res.json());
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
+  cloneGroup(member) {
+    const url = environment.serverUrl + 'group/clone';
     let params: URLSearchParams = new URLSearchParams();
     this.groupId.subscribe(data => {
       params.set('group_id', data);

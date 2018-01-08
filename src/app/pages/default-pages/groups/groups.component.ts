@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from '../../../layouts/shared-service';
 import { MdDialog, MdDialogRef, MdDialogConfig } from '@angular/material';
+import { NiDialogComponent } from '../../../ni-components/ni-dialog/ni-dialog.component';
 import { ApiService } from '../../../services/api.service';
 import { AuthService } from '../../../services/auth.service';
 
@@ -48,6 +49,12 @@ export class PageGroupsComponent implements OnInit {
   totalObligation = 0;
   totalRequest = 0;
   totalEvent = 0;
+
+  loadingGroups = true;
+  loadingMembers = true;
+  loadingObligations = true;
+  loadingRequests = true;
+  loadingEvents = true;
   
   constructor( private _sharedService: SharedService, private dialog: MdDialog, private apiService: ApiService, private auth: AuthService ) {
     this._sharedService.emitChange(this.pageTitle);
@@ -133,6 +140,8 @@ export class PageGroupsComponent implements OnInit {
         this.groups.push([d.name, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.frequency, d.g_type_text, d.rate, {type: ['details'], id: d.id}]);
       });
       this.apiService.groupList = this.groupList;
+
+      this.loadingGroups = false;
     });
   }
 
@@ -145,6 +154,8 @@ export class PageGroupsComponent implements OnInit {
       res.data.map(d => {
         this.members.push([d.first_name, d.email, d.member_type_text, d.photo_path, d.position, d.user_position_date, {type: ['remove'], id: d.id}]);
       });
+
+      this.loadingMembers = false;
     });
   }
 
@@ -157,6 +168,8 @@ export class PageGroupsComponent implements OnInit {
       res.data.map(d => {
         this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status_text, d.p_type_text, {type: ['paynow'], id: d.id}]);
       });
+
+      this.loadingObligations = false;
     });
   }
 
@@ -169,6 +182,8 @@ export class PageGroupsComponent implements OnInit {
       res.data.map(d => {
         this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation, {type: ['Accept', 'Reject'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type}]);
       });
+
+      this.loadingRequests = false;
     });
   }
 
@@ -181,6 +196,8 @@ export class PageGroupsComponent implements OnInit {
       res.data.map(d => {
         this.events.push([d.event_type_text, d.initiator, d.group, d.date_event]);
       });
+
+      this.loadingEvents = false;
     });
   }
 
@@ -199,6 +216,7 @@ export class PageGroupsComponent implements OnInit {
   getGroupInfo() {
     this.apiService.getGroupInfo().then((res: any) => {
       this.groupInfo = res.data[0];
+      console.log(this.groupInfo)
       if (this.isClickedDetails) {
         this.showGroupList = false;
         this.apiService.showSpinner.next(false);          
@@ -258,14 +276,19 @@ export class PageGroupsComponent implements OnInit {
 
   doRefresh(res) {
     if (res === 1) {
+      this.loadingGroups = true;
       this.getGroups(this.maxGroup, this.pageGroup);
     } else if (res === 2) {
+      this.loadingMembers = true;
       this.getGroupMembers(this.maxMember, this.pageMember);
     } else if (res === 3) {
+      this.loadingObligations = true;
       this.getGroupObligations(this.maxObligation, this.pageObligation);
     } else if (res === 4) {
+      this.loadingRequests = true;
       this.getGroupRequests(this.maxRequest, this.pageRequest);
     } else if (res === 5) {
+      this.loadingEvents = true;
       this.getGroupEvents(this.maxEvent, this.pageEvent);
     } else if (res === 6) {
     }
@@ -274,35 +297,79 @@ export class PageGroupsComponent implements OnInit {
   changeGroupPage(res) {
     this.maxGroup = res[0];
     this.pageGroup = res[1];
+    this.loadingGroups = true;
     this.getGroups(this.maxGroup, this.pageGroup);
   }
 
   changeMemberPage(res) {
     this.maxMember = res[0];
     this.pageMember = res[1];
+    this.loadingMembers = true;
     this.getGroupMembers(this.maxMember, this.pageMember);
   }
 
   changeRequestPage(res) {
     this.maxRequest = res[0];
     this.pageRequest = res[1];
+    this.loadingRequests = true;
     this.getGroupRequests(this.maxRequest, this.pageRequest);
   }
 
   changeEventPage(res) {
     this.maxEvent = res[0];
     this.pageEvent = res[1];
+    this.loadingEvents = true;
     this.getGroupEvents(this.maxEvent, this.pageEvent);
   }
 
   changeObligationPage(res) {
     this.maxObligation = res[0];
     this.pageObligation = res[1];
+    this.loadingObligations = true;
     this.getGroupObligations(this.maxObligation, this.pageObligation);
   }
 
   changeTransactionPage(res) {
     
+  }
+
+  reportIncident() {
+    
+  }
+
+  cloneGroup() {
+    let dialogRef = this.dialog.open(NiDialogComponent, {
+      data: {
+        content: 'Do you really want to clone this group?',
+        okText: 'Yes',
+        cancelText: 'No'
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'ok') {
+      } else {
+      }
+    });
+  }
+
+  updateGroup() {
+    let dialogRef = this.dialog.open(NiDialogComponent, {
+      data: {
+        content: 'Do you really want to update this group?',
+        okText: 'Yes',
+        cancelText: 'No'
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'ok') {
+        this.apiService.addOrUpdateGroup(this.groupInfo.group_info, 'update').then(res => {
+          console.log(res);
+        }).catch(err => {
+          console.log(err);
+        });
+      } else {
+      }
+    });
   }
 }
 

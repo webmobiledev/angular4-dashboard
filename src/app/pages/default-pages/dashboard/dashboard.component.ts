@@ -27,6 +27,10 @@ export class PageDashboardComponent {
   totalRequest = 0;
   totalPayment = 0;
 
+  loadingRequest = true;
+  loadingPayment = true;
+  loadingTimeline = true;
+
   constructor( private _sharedService: SharedService, private apiService: ApiService, private dialog: MdDialog ) {
     this._sharedService.emitChange(this.pageTitle);
 
@@ -86,6 +90,8 @@ export class PageDashboardComponent {
         this.requests = data.data;
         this.userRequests.push([d.request_type_text, d.sender, d.group, {type: ['Open'], id: d.id}]);
       });
+
+      this.loadingRequest = false;
     });
   }
 
@@ -98,6 +104,8 @@ export class PageDashboardComponent {
       data.data.map(d => {
         this.nextPayment.push([d.p_type_text, d.projected_amount_due, d.to, d.projected_payment_due_date, {type: ['paynow'], id: d.id}]);
       });
+
+      this.loadingPayment = false;
     });
   }
 
@@ -110,15 +118,20 @@ export class PageDashboardComponent {
       data.data.map(d => {
         this.timelineData[0].timeline.push({date: this.getDuration(d.duration_seconds), content: d.event_type === 'GROUP_CREATED' ? 'A new group has been created' : 'A new request to join group has been created', pointColor: '#FFC6F1'});
       });
+
+      this.loadingTimeline = false;
     });
   }
 
   doRefresh(event) {
     if (event === 1) {
+      this.loadingRequest = true;
       this.getRequests(this.maxRequest, this.pageRequest);
     } else if (event === 2) {
+      this.loadingPayment = true;
       this.getNextPayments(this.maxPayment, this.pagePayment);
     } else if (event === 3) {
+      this.loadingTimeline = true;
       this.getTimeLineData();
     }
   }
@@ -126,12 +139,14 @@ export class PageDashboardComponent {
   changeRequestPage(res) {
     this.maxRequest = res[0];
     this.pageRequest = res[1];
+    this.loadingRequest = true;
     this.getRequests(res[0], res[1]);
   }
 
   changePaymentPage(res) {
     this.maxPayment = res[0];
     this.pagePayment = res[1];
+    this.loadingPayment = true;
     this.getNextPayments(res[0], res[1]);
   }
 }

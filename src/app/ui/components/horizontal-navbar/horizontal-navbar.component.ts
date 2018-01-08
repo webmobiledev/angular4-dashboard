@@ -163,18 +163,18 @@ export class DialogGroupCreateComponent {
     this.form = this.fb.group({
       name: ['My group', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(10)])],
       frequency: [1, Validators.compose([Validators.required])],
-      grouptype: ['PRIVATE', Validators.compose([Validators.required])],
-      pstype: ['', Validators.compose([Validators.required])],
+      g_type: ['PRIVATE', Validators.compose([Validators.required])],
+      position_selection_type: ['', Validators.compose([Validators.required])],
       currency: ['GBP', Validators.compose([Validators.required])],
       description: ['', Validators.compose([Validators.required, Validators.minLength(20)])],
       amount: [500, Validators.compose([Validators.required])],
       rate: [0, Validators.compose([Validators.required])],
-      duedate: [5, Validators.compose([Validators.required])],
-      nbdpenal: [0, Validators.compose([Validators.required])],
-      penalty: [0, Validators.compose([Validators.required])],
-      minIndex: [0, Validators.compose([Validators.required])],
-      maxIndex: [1000, Validators.compose([Validators.required])],
-      smoothpayment: [true]
+      due_day: [5, Validators.compose([Validators.required])],
+      nb_days_delay_before_penalty: [0, Validators.compose([Validators.required])],
+      delay_payment_penalty: [0, Validators.compose([Validators.required])],
+      index_credit_min: [0, Validators.compose([Validators.required])],
+      index_credit_max: [1000, Validators.compose([Validators.required])],
+      smooth_payment: [true]
     });
 
     this.apiService.getListData('Currency').then((res: any) => {
@@ -196,7 +196,7 @@ export class DialogGroupCreateComponent {
 
   onSubmit() {
     this.dialogRef.close('yes');
-    this.apiService.addGroup(this.form.value).then(res => {
+    this.apiService.addOrUpdateGroup(this.form.value, 'add').then(res => {
       this.apiService.isMenuClicked = false;
       this.apiService.groupCounts.next(this.groupCounts + 1);
       this.apiService.groupCreated.next(true);

@@ -162,5 +162,9 @@
   "Click here to accept the request": "Clique aqui para aceitar o pedido",
   "Click here to reject the request": "Clique aqui para rejeitar o pedido",
   "Click here to close the window without any change": "Clique aqui para fechar a janela sem qualquer alteração",
-  "Select your position in the group": "Selecione sua posição no grupo"
+  "Select your position in the group": "Selecione sua posição no grupo",
+  "Update": "Atualizar",
+  "Report an Incident": "Informar um incidente",
+  "Close": "Fechar",
+  "Clone": "Clone"
 }

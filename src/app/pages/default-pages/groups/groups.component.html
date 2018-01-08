@@ -15,7 +15,8 @@
     <div class="col-lg-12">
       <ni-card [refreshIndex]="1" [title]="'Groups' | translate" (refresh)="doRefresh($event)">
         <ni-table [headers]="groupHeaders" [data]="groups"></ni-table>
-        <ni-alert *ngIf="groups.length === 0" [color]="'warning'" [outline]="true"><strong>{{'nogroup' | translate}}</strong></ni-alert>
+        <ni-table-loading *ngIf="loadingGroups"></ni-table-loading>
+        <ni-alert *ngIf="groups.length === 0 && !loadingGroups" [color]="'warning'" [outline]="true"><strong>{{'nogroup' | translate}}</strong></ni-alert>
         <ni-pagination [totalItems]="totalGroup" [itemPerPage]="maxGroup" [currentPage]="pageGroup" *ngIf="groups.length > 0" (changePage)="changeGroupPage($event)"></ni-pagination>
       </ni-card>
     </div>
@@ -30,114 +31,144 @@
         <md-icon>home</md-icon> {{'Home' | translate}}
       </ng-template>
       <div class="row p-2">
+        <div class="col-sm-12 pt-3">
+          <button *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.status_code !== 'RUNNING'" md-raised-button color="primary" (click)="updateGroup()">{{'Update' | translate}}</button>
+          <button md-raised-button color="primary" (click)="reportIncident()">{{'Report an Incident' | translate}}</button>
+          <button *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.status_code !== 'RUNNING'" md-raised-button color="primary" (click)="closeGroup()">{{'Close' | translate}}</button>
+          <button md-raised-button color="primary" (click)="cloneGroup()">{{'Clone' | translate}}</button>
+        </div>
         <div class="col-md-7 mb-3">
-          <button md-raised-button color="primary" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'" (click)="openStartDialog()">Start</button>
-          <button md-raised-button color="primary" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'" (click)="openDialog()">Add a member</button>
-          <button md-raised-button color="primary" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'">Save changes</button>
+          <button md-raised-button color="primary" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.status_code === 'PENDING_FOR_KICK_OFF'" (click)="openStartDialog()">Start</button>
+          <button md-raised-button color="primary" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.status_code === 'PENDING_FOR_KICK_OFF'" (click)="openDialog()">Add a member</button>
+          <button md-raised-button color="primary" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.status_code === 'PENDING_FOR_KICK_OFF'">Save changes</button>
           <md-card class="example-card mt-3" *ngIf="groupInfo && groupInfo.group_info">
             <div class="form-group row">
-              <label class="col-sm-4 col-md-4 col-form-label mb-0">Name:</label>
-              <div class="col-sm-8 col-md-8">
+              <label class="col-sm-5 col-md-5 col-form-label mb-0">Name:</label>
+              <div class="col-sm-7 col-md-7">
                 <md-input-container class="mb-0">
-                  <input mdInput type="text" value="{{groupInfo.group_info.name}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
+                  <input mdInput type="text" [(ngModel)]="groupInfo.group_info.name" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                 </md-input-container>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-4 col-md-4 col-form-label mb-0">Description:</label>
-              <div class="col-sm-8 col-md-8">
+              <label class="col-sm-5 col-md-5 col-form-label mb-0">Description:</label>
+              <div class="col-sm-7 col-md-7">
                 <md-input-container class="mb-0">
-                  <input mdInput type="text" value="{{groupInfo.group_info.description}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
+                  <input mdInput type="text" [(ngModel)]="groupInfo.group_info.description" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                 </md-input-container>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-4 col-md-4 col-form-label mb-0">First Payment:</label>
-              <div class="col-sm-8 col-md-8">
+              <label class="col-sm-5 col-md-5 col-form-label mb-0">First Payment:</label>
+              <div class="col-sm-7 col-md-7">
                 <md-input-container class="mb-0">
-                  <input mdInput type="text" value="{{groupInfo.group_info.date_first_payment}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT' && groupInfo.group_info.status_code !== 'REQUEST_FOR_POSITION_VALIDATION_SENT'">
+                  <input mdInput type="text" [(ngModel)]="groupInfo.group_info.date_first_payment" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT' && groupInfo.group_info.status_code !== 'REQUEST_FOR_POSITION_VALIDATION_SENT'">
                 </md-input-container>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-4 col-md-4 col-form-label mb-0">Date creation:</label>
-              <div class="col-sm-8 col-md-8">
+              <label class="col-sm-5 col-md-5 col-form-label mb-0">Date creation:</label>
+              <div class="col-sm-7 col-md-7">
                 <md-input-container class="mb-0">
-                  <input mdInput type="text" [mdDatepicker]="picker" value="{{groupInfo.group_info.date_creation}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
+                  <input mdInput type="text" [mdDatepicker]="picker" [(ngModel)]="groupInfo.group_info.date_creation" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                   <button mdSuffix [mdDatepickerToggle]="picker" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'"></button>
                 </md-input-container>
                 <md-datepicker #picker></md-datepicker>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-4 col-md-4 col-form-label mb-0">Type:</label>
-              <div class="col-sm-8 col-md-8">
+              <label class="col-sm-5 col-md-5 col-form-label mb-0">Type:</label>
+              <div class="col-sm-7 col-md-7">
                 <md-select [(ngModel)]="groupInfo.group_info.g_type_text" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                   <md-option [value]="groupInfo.group_info.g_type_text">{{groupInfo.group_info.g_type_text}}</md-option>
                 </md-select>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-4 col-md-4 col-form-label mb-0">Currency:</label>
-              <div class="col-sm-8 col-md-8">
+              <label class="col-sm-5 col-md-5 col-form-label mb-0">Currency:</label>
+              <div class="col-sm-7 col-md-7">
                 <md-select [(ngModel)]="groupInfo.group_info.currency" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                   <md-option [value]="groupInfo.group_info.currency">{{groupInfo.group_info.currency}}</md-option>
                 </md-select>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-4 col-md-4 col-form-label mb-0">Creator:</label>
-              <div class="col-sm-8 col-md-8">
+              <label class="col-sm-5 col-md-5 col-form-label mb-0">Creator:</label>
+              <div class="col-sm-7 col-md-7">
                 <md-input-container class="mb-0">
-                  <input mdInput type="text" value="{{groupInfo.group_info.creator}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
+                  <input mdInput type="text" [(ngModel)]="groupInfo.group_info.creator" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                 </md-input-container>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-4 col-md-4 col-form-label mb-0">Status:</label>
-              <div class="col-sm-8 col-md-8">
+              <label class="col-sm-5 col-md-5 col-form-label mb-0">Status:</label>
+              <div class="col-sm-7 col-md-7">
                 <md-select [(ngModel)]="groupInfo.group_info.status_text" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                   <md-option [value]="groupInfo.group_info.status_text">{{groupInfo.group_info.status_text}}</md-option>
                 </md-select>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-4 col-md-4 col-form-label mb-0">Position selection:</label>
-              <div class="col-sm-8 col-md-8">
+              <label class="col-sm-5 col-md-5 col-form-label mb-0">Position selection method:</label>
+              <div class="col-sm-7 col-md-7">
                 <md-select [(ngModel)]="groupInfo.group_info.position_selection_type_text" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                   <md-option [value]="groupInfo.group_info.position_selection_type_text">{{groupInfo.group_info.position_selection_type_text}}</md-option>
                 </md-select>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-4 col-md-4 col-form-label mb-0">Rate:</label>
-              <div class="col-sm-8 col-md-8">
+              <label class="col-sm-5 col-md-5 col-form-label mb-0">Rate (%):</label>
+              <div class="col-sm-7 col-md-7">
                 <md-input-container class="mb-0">
-                  <input mdInput type="number" value="{{groupInfo.group_info.rate}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
+                  <input mdInput type="number" [(ngModel)]="groupInfo.group_info.rate" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                 </md-input-container>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-4 col-md-4 col-form-label mb-0">Frequency:</label>
-              <div class="col-sm-8 col-md-8">
+              <label class="col-sm-5 col-md-5 col-form-label mb-0">Frequency (month):</label>
+              <div class="col-sm-7 col-md-7">
                 <md-input-container class="mb-0">
-                  <input mdInput type="number" value="{{groupInfo.group_info.frequency}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
+                  <input mdInput type="number" [(ngModel)]="groupInfo.group_info.frequency" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                 </md-input-container>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-4 col-md-4 col-form-label mb-0">Due date:</label>
-              <div class="col-sm-8 col-md-8">
+              <label class="col-sm-5 col-md-5 col-form-label mb-0">Due date:</label>
+              <div class="col-sm-7 col-md-7">
                 <md-input-container class="mb-0">
-                  <input mdInput type="number" value="{{groupInfo.group_info.due_day}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
+                  <input mdInput type="number" [(ngModel)]="groupInfo.group_info.due_day" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                 </md-input-container>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-sm-4 col-md-4 col-form-label mb-0">nb members:</label>
-              <div class="col-sm-8 col-md-8">
+              <label class="col-sm-5 col-md-5 col-form-label mb-0">Number of member:</label>
+              <div class="col-sm-7 col-md-7">
                 <md-input-container class="mb-0">
-                  <input mdInput type="number" value="{{groupInfo.group_info.nb_members}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
+                  <input mdInput type="number" [(ngModel)]="groupInfo.group_info.nb_members" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
+                </md-input-container>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-5 col-md-5 col-form-label mb-0">Smooth Payment:</label>
+              <div class="col-sm-7 col-md-7">
+                <md-input-container class="mb-0">
+                  <input mdInput type="text" value="{{groupInfo.group_info.smooth_payment === '1' ? 'Yes' : 'No'}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
+                </md-input-container>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-5 col-md-5 col-form-label mb-0">% Penalty for delay payment:</label>
+              <div class="col-sm-7 col-md-7">
+                <md-input-container class="mb-0">
+                  <input mdInput type="number" [(ngModel)]="groupInfo.group_info.delay_payment_penalty" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
+                </md-input-container>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-5 col-md-5 col-form-label mb-0">Number of days of delay before applying % penalty:</label>
+              <div class="col-sm-7 col-md-7">
+                <md-input-container class="mb-0">
+                  <input mdInput type="number" [(ngModel)]="groupInfo.group_info.nb_days_delay_before_penalty" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
                 </md-input-container>
               </div>
             </div>
@@ -186,8 +217,8 @@
       </ng-template>
       <div class="row members-header">
         <div class="col-sm-6 p-3">
-          <button md-raised-button color="primary" (click)="openDialog()">{{'Add a member' | translate}}</button>
-          <button md-raised-button color="primary" (click)="removeAll()">{{'Remove all members' | translate}}</button>
+          <button *ngIf="groupInfo.group_info.status_code !== 'RUNNING'" md-raised-button color="primary" (click)="openDialog()">{{'Add a member' | translate}}</button>
+          <button *ngIf="groupInfo.group_info.status_code !== 'RUNNING'" md-raised-button color="primary" (click)="removeAll()">{{'Remove all members' | translate}}</button>
         </div>
         <div class="col-sm-6 text-right p-3">
           <md-input-container class="search-group md-icon-left">
@@ -200,7 +231,8 @@
         <div class="col-lg-12 pl-3 pr-3">
           <ni-card [refreshIndex]="2" [title]="'Members' | translate" (refresh)="doRefresh($event)">
             <ni-table [headers]="memberHeaders" [data]="members"></ni-table>
-            <ni-alert *ngIf="members.length === 0" [color]="'warning'" [outline]="true"><strong>{{'nomember' | translate}}</strong></ni-alert>
+            <ni-table-loading *ngIf="loadingMembers"></ni-table-loading>
+            <ni-alert *ngIf="members.length === 0 && !loadingMembers" [color]="'warning'" [outline]="true"><strong>{{'nomember' | translate}}</strong></ni-alert>
             <ni-pagination [totalItems]="totalMember" [itemPerPage]="maxMember" [currentPage]="pageMember" *ngIf="members.length > 0" (changePage)="changeMemberPage($event)"></ni-pagination>
           </ni-card>
         </div>
@@ -209,6 +241,29 @@
     <md-tab>
       <ng-template md-tab-label>
         <md-icon>check_box</md-icon> {{'Obligation' | translate}}
+      </ng-template>
+      <div class="row members-header">
+        <div class="col-sm-12 text-right p-3">
+          <md-input-container class="search-group md-icon-left">
+            <md-icon>search</md-icon>
+            <input mdInput value="">
+          </md-input-container>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 pl-3 pr-3">
+          <ni-card [refreshIndex]="3" [title]="'Obligation' | translate" (refresh)="doRefresh($event)">
+            <ni-table [headers]="obligationHeaders" [data]="obligations"></ni-table>
+            <ni-table-loading *ngIf="loadingObligations"></ni-table-loading>
+            <ni-alert *ngIf="obligations.length === 0 && !loadingObligations" [color]="'warning'" [outline]="true"><strong>{{'noobligation' | translate}}</strong></ni-alert>
+            <ni-pagination [totalItems]="totalObligation" [itemPerPage]="maxObligation" [currentPage]="pageObligation" *ngIf="obligations.length > 0" (changePage)="changeObligationPage($event)"></ni-pagination>
+          </ni-card>
+        </div>
+      </div>
+    </md-tab>
+    <md-tab>
+      <ng-template md-tab-label>
+        <md-icon>sms_failed</md-icon> {{'Requests' | translate}}
       </ng-template>
       <div class="row members-header">
         <div class="col-sm-6 p-3">
@@ -223,31 +278,10 @@
       </div>
       <div class="row">
         <div class="col-lg-12 pl-3 pr-3">
-          <ni-card [refreshIndex]="3" [title]="'Obligation' | translate" (refresh)="doRefresh($event)">
-            <ni-table [headers]="obligationHeaders" [data]="obligations"></ni-table>
-            <ni-alert *ngIf="obligations.length === 0" [color]="'warning'" [outline]="true"><strong>{{'noobligation' | translate}}</strong></ni-alert>
-            <ni-pagination [totalItems]="totalObligation" [itemPerPage]="maxObligation" [currentPage]="pageObligation" *ngIf="obligations.length > 0" (changePage)="changeObligationPage($event)"></ni-pagination>
-          </ni-card>
-        </div>
-      </div>
-    </md-tab>
-    <md-tab>
-      <ng-template md-tab-label>
-        <md-icon>sms_failed</md-icon> {{'Requests' | translate}}
-      </ng-template>
-      <div class="row members-header">
-        <div class="col-sm-12 text-right p-3">
-          <md-input-container class="search-group md-icon-left">
-            <md-icon>search</md-icon>
-            <input mdInput value="">
-          </md-input-container>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12 pl-3 pr-3">
           <ni-card [refreshIndex]="4" [title]="'Requests' | translate" (refresh)="doRefresh($event)">
             <ni-table [headers]="requestHeaders" [data]="requests"></ni-table>
-            <ni-alert *ngIf="requests.length === 0" [color]="'warning'" [outline]="true"><strong>{{'norequest' | translate}}</strong></ni-alert>
+            <ni-table-loading *ngIf="loadingRequests"></ni-table-loading>
+            <ni-alert *ngIf="requests.length === 0 && !loadingRequests" [color]="'warning'" [outline]="true"><strong>{{'norequest' | translate}}</strong></ni-alert>
             <ni-pagination [totalItems]="totalRequest" [itemPerPage]="maxRequest" [currentPage]="pageRequest" *ngIf="requests.length > 0" (changePage)="changeRequestPage($event)"></ni-pagination>
           </ni-card>
         </div>
@@ -269,7 +303,8 @@
         <div class="col-lg-12 pl-3 pr-3">
           <ni-card [refreshIndex]="5" [title]="'Event' | translate" (refresh)="doRefresh($event)">
             <ni-table [headers]="eventHeaders" [data]="events"></ni-table>
-            <ni-alert *ngIf="events.length === 0" [color]="'warning'" [outline]="true"><strong>{{'noevent' | translate}}</strong></ni-alert>
+            <ni-table-loading *ngIf="loadingEvents"></ni-table-loading>
+            <ni-alert *ngIf="events.length === 0 && !loadingEvents" [color]="'warning'" [outline]="true"><strong>{{'noevent' | translate}}</strong></ni-alert>
             <ni-pagination [totalItems]="totalEvent" [itemPerPage]="maxEvent" [currentPage]="pageEvent" *ngIf="events.length > 0" (changePage)="changeEventPage($event)"></ni-pagination>
           </ni-card>
         </div>

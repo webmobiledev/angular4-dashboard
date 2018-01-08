@@ -18,6 +18,7 @@ export class PageRequestsComponent {
   max = 5;
   page = 1;
   total = 0;
+  loading = true;
 
   constructor( private _sharedService: SharedService, private apiService: ApiService ) {
     this._sharedService.emitChange(this.pageTitle);
@@ -44,14 +45,18 @@ export class PageRequestsComponent {
       data.data.map(d => {
         this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation]);
       });
+
+      this.loading = false;
     });
   }
 
   doRefresh(res) {
+    this.loading = true;
     this.getUserRequests(this.max, this.page);
   }
 
   changePage(res) {
+    this.loading = true;
     this.max = res[0];
     this.page = res[1];
     this.getUserRequests(this.max, this.page);

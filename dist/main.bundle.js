@@ -1530,13 +1530,17 @@ var NiChatComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__directives_auto_grow_auto_grow_directive__ = __webpack_require__("../../../../../src/app/ni-components/directives/auto-grow/auto-grow.directive.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ni_loading_ni_loading_component__ = __webpack_require__("../../../../../src/app/ni-components/ni-loading/ni-loading.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ni_pagination_ni_pagination_component__ = __webpack_require__("../../../../../src/app/ni-components/ni-pagination/ni-pagination.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ni_table_loading_ni_table_loading_component__ = __webpack_require__("../../../../../src/app/ni-components/ni-table-loading/ni-table-loading.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ni_pagination_ni_pagination_component__ = __webpack_require__("../../../../../src/app/ni-components/ni-pagination/ni-pagination.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__ni_dialog_ni_dialog_component__ = __webpack_require__("../../../../../src/app/ni-components/ni-dialog/ni-dialog.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -1568,12 +1572,12 @@ var NiComponentsModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormsModule"],
                 __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* RouterModule */],
                 __WEBPACK_IMPORTED_MODULE_4_ng2_translate__["b" /* TranslateModule */],
-                __WEBPACK_IMPORTED_MODULE_18__angular_material__["n" /* MdIconModule */],
-                __WEBPACK_IMPORTED_MODULE_18__angular_material__["v" /* MdProgressSpinnerModule */],
-                __WEBPACK_IMPORTED_MODULE_18__angular_material__["s" /* MdOptionModule */],
-                __WEBPACK_IMPORTED_MODULE_18__angular_material__["b" /* MdButtonModule */],
-                __WEBPACK_IMPORTED_MODULE_18__angular_material__["y" /* MdSelectModule */],
-                __WEBPACK_IMPORTED_MODULE_18__angular_material__["H" /* MdTooltipModule */]
+                __WEBPACK_IMPORTED_MODULE_18__angular_material__["o" /* MdIconModule */],
+                __WEBPACK_IMPORTED_MODULE_18__angular_material__["w" /* MdProgressSpinnerModule */],
+                __WEBPACK_IMPORTED_MODULE_18__angular_material__["t" /* MdOptionModule */],
+                __WEBPACK_IMPORTED_MODULE_18__angular_material__["c" /* MdButtonModule */],
+                __WEBPACK_IMPORTED_MODULE_18__angular_material__["z" /* MdSelectModule */],
+                __WEBPACK_IMPORTED_MODULE_18__angular_material__["I" /* MdTooltipModule */]
             ],
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_5__ni_alert_ni_alert_component__["a" /* NiAlertComponent */],
@@ -1590,8 +1594,10 @@ var NiComponentsModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_16__directives_gradient_gradient_directive__["a" /* GradientDirective */],
                 __WEBPACK_IMPORTED_MODULE_17__directives_auto_grow_auto_grow_directive__["a" /* AutoGrowDirective */],
                 __WEBPACK_IMPORTED_MODULE_19__ni_loading_ni_loading_component__["a" /* NiLoadingComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__ni_pagination_ni_pagination_component__["a" /* NiPaginationComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["a" /* DialogRemoveComponent */]
+                __WEBPACK_IMPORTED_MODULE_21__ni_pagination_ni_pagination_component__["a" /* NiPaginationComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["a" /* DialogRemoveComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__ni_table_loading_ni_table_loading_component__["a" /* NiTableLoadingComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__ni_dialog_ni_dialog_component__["a" /* NiDialogComponent */]
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_5__ni_alert_ni_alert_component__["a" /* NiAlertComponent */],
@@ -1607,11 +1613,14 @@ var NiComponentsModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_14__directives_color_color_directive__["a" /* ColorDirective */],
                 __WEBPACK_IMPORTED_MODULE_15__directives_bg_bg_directive__["a" /* BgDirective */],
                 __WEBPACK_IMPORTED_MODULE_16__directives_gradient_gradient_directive__["a" /* GradientDirective */],
-                __WEBPACK_IMPORTED_MODULE_20__ni_pagination_ni_pagination_component__["a" /* NiPaginationComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["a" /* DialogRemoveComponent */]
+                __WEBPACK_IMPORTED_MODULE_21__ni_pagination_ni_pagination_component__["a" /* NiPaginationComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["a" /* DialogRemoveComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__ni_table_loading_ni_table_loading_component__["a" /* NiTableLoadingComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__ni_dialog_ni_dialog_component__["a" /* NiDialogComponent */]
             ],
             entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["a" /* DialogRemoveComponent */]
+                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["a" /* DialogRemoveComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__ni_dialog_ni_dialog_component__["a" /* NiDialogComponent */]
             ]
         })
     ], NiComponentsModule);
@@ -1619,6 +1628,88 @@ var NiComponentsModule = (function () {
 }());
 
 //# sourceMappingURL=ni-components.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/ni-components/ni-dialog/ni-dialog.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div md-dialog-content class=\"p-3 text-center content\">{{content | translate}}</div>\n<div md-dialog-actions class=\"text-center buttons\">\n  <button md-raised-button (click)=\"closeDialog('ok')\" color=\"primary\">{{okText | translate}}</button>\n  <button md-raised-button (click)=\"closeDialog('cancel')\" color=\"default\">{{cancelText | translate}}</button>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/ni-components/ni-dialog/ni-dialog.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".buttons {\n  padding: 0 20px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/ni-components/ni-dialog/ni-dialog.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NiDialogComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+var NiDialogComponent = (function () {
+    function NiDialogComponent(apiService, dialogRef, data) {
+        this.apiService = apiService;
+        this.dialogRef = dialogRef;
+        this.data = data;
+        this.content = '';
+        this.okText = '';
+        this.cancelText = '';
+    }
+    NiDialogComponent.prototype.ngOnInit = function () {
+        this.content = this.data.content;
+        this.okText = this.data.okText;
+        this.cancelText = this.data.cancelText;
+    };
+    NiDialogComponent.prototype.closeDialog = function (status) {
+        this.dialogRef.close(status);
+    };
+    NiDialogComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'ni-dialog',
+            template: __webpack_require__("../../../../../src/app/ni-components/ni-dialog/ni-dialog.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/ni-components/ni-dialog/ni-dialog.component.scss")]
+        }),
+        __param(2, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["a" /* MD_DIALOG_DATA */])),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */]) === "function" && _b || Object, Object])
+    ], NiDialogComponent);
+    return NiDialogComponent;
+    var _a, _b;
+}());
+
+//# sourceMappingURL=ni-dialog.component.js.map
 
 /***/ }),
 
@@ -2015,6 +2106,71 @@ var NiPaginationComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/ni-components/ni-table-loading/ni-table-loading.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"loading\">\n  <md-spinner class=\"mb-0\" mode=\"indeterminate\"></md-spinner>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/ni-components/ni-table-loading/ni-table-loading.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".loading {\n  width: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n  .loading md-spinner {\n    width: 40px;\n    height: 40px; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/ni-components/ni-table-loading/ni-table-loading.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NiTableLoadingComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var NiTableLoadingComponent = (function () {
+    function NiTableLoadingComponent(apiService) {
+        this.apiService = apiService;
+    }
+    NiTableLoadingComponent.prototype.ngOnInit = function () {
+    };
+    NiTableLoadingComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'ni-table-loading',
+            template: __webpack_require__("../../../../../src/app/ni-components/ni-table-loading/ni-table-loading.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/ni-components/ni-table-loading/ni-table-loading.component.scss")]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === "function" && _a || Object])
+    ], NiTableLoadingComponent);
+    return NiTableLoadingComponent;
+    var _a;
+}());
+
+//# sourceMappingURL=ni-table-loading.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/ni-components/ni-table/dialog-remove.html":
 /***/ (function(module, exports) {
 
@@ -2118,7 +2274,7 @@ var NiTableComponent = (function () {
                 '[class.ni-table]': 'true'
             }
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["i" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["i" /* MdDialog */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["j" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["j" /* MdDialog */]) === "function" && _b || Object])
     ], NiTableComponent);
     return NiTableComponent;
     var _a, _b;
@@ -2133,7 +2289,7 @@ var DialogRemoveComponent = (function () {
             selector: 'dialog-remove',
             template: __webpack_require__("../../../../../src/app/ni-components/ni-table/dialog-remove.html"),
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MdDialogRef */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */]) === "function" && _a || Object])
     ], DialogRemoveComponent);
     return DialogRemoveComponent;
     var _a;
@@ -2402,7 +2558,7 @@ module.exports = "<h2 md-dialog-title>{{'request' | translate}}</h2>\n<div class
 /***/ "../../../../../src/app/pages/default-pages/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n<div class=\"row\">\r\n    <div class=\"col-lg-8\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'request' | translate\" [info]=\"'requestinfo' | translate\" [refreshIndex]=\"1\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"userRequestHeader\" [data]=\"userRequests\" (showRequestDialog)=\"showDialog($event)\"></ni-table>\r\n            <ni-alert *ngIf=\"userRequests.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nopayment' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalRequest\" [itemPerPage]=\"maxRequest\" [currentPage]=\"pageRequest\" *ngIf=\"userRequests.length > 0\" (changePage)=\"changeRequestPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'nextpayment' | translate\" [info]=\"'paymentinfo' | translate\" [refreshIndex]=\"2\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"nextPaymentHeader\" [data]=\"nextPayment\"></ni-table>\r\n            <ni-alert *ngIf=\"nextPayment.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nopayment' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalPayment\" [itemPerPage]=\"maxPayment\" [currentPage]=\"pagePayment\" *ngIf=\"nextPayment.length > 0\" (changePage)=\"changePaymentPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-4\">\r\n      <ni-card [title]=\"'timeline' | translate\" [info]=\"'timelineinfo' | translate\" [refreshIndex]=\"3\" (refresh)=\"doRefresh($event)\">\r\n        <ni-h-timeline [showYears]=\"true\" [showDate]=\"true\" [align]=\"'between'\" [data]=\"timelineData\"></ni-h-timeline>\r\n      </ni-card>\r\n    </div>\r\n</div>"
+module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n<div class=\"row\">\r\n    <div class=\"col-lg-8\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'request' | translate\" [info]=\"'requestinfo' | translate\" [refreshIndex]=\"1\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"userRequestHeader\" [data]=\"userRequests\" (showRequestDialog)=\"showDialog($event)\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingRequest\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"userRequests.length === 0 && !loadingRequest\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'norequest' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalRequest\" [itemPerPage]=\"maxRequest\" [currentPage]=\"pageRequest\" *ngIf=\"userRequests.length > 0\" (changePage)=\"changeRequestPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-12\">\r\n          <ni-card [title]=\"'nextpayment' | translate\" [info]=\"'paymentinfo' | translate\" [refreshIndex]=\"2\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"nextPaymentHeader\" [data]=\"nextPayment\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingPayment\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"nextPayment.length === 0 && !loadingPayment\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nopayment' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalPayment\" [itemPerPage]=\"maxPayment\" [currentPage]=\"pagePayment\" *ngIf=\"nextPayment.length > 0\" (changePage)=\"changePaymentPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-lg-4\">\r\n      <ni-card [title]=\"'timeline' | translate\" [info]=\"'timelineinfo' | translate\" [refreshIndex]=\"3\" (refresh)=\"doRefresh($event)\">\r\n        <ni-table-loading *ngIf=\"loadingTimeline\"></ni-table-loading>\r\n        <ni-h-timeline *ngIf=\"!loadingTimeline\" [showYears]=\"true\" [showDate]=\"true\" [align]=\"'between'\" [data]=\"timelineData\"></ni-h-timeline>\r\n      </ni-card>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -2467,6 +2623,9 @@ var PageDashboardComponent = (function () {
         this.pagePayment = 1;
         this.totalRequest = 0;
         this.totalPayment = 0;
+        this.loadingRequest = true;
+        this.loadingPayment = true;
+        this.loadingTimeline = true;
         this._sharedService.emitChange(this.pageTitle);
         this.getRequests(this.maxRequest, this.pageRequest);
         this.getNextPayments(this.maxPayment, this.pagePayment);
@@ -2522,6 +2681,7 @@ var PageDashboardComponent = (function () {
                 _this.requests = data.data;
                 _this.userRequests.push([d.request_type_text, d.sender, d.group, { type: ['Open'], id: d.id }]);
             });
+            _this.loadingRequest = false;
         });
     };
     PageDashboardComponent.prototype.getNextPayments = function (max, page) {
@@ -2534,6 +2694,7 @@ var PageDashboardComponent = (function () {
             data.data.map(function (d) {
                 _this.nextPayment.push([d.p_type_text, d.projected_amount_due, d.to, d.projected_payment_due_date, { type: ['paynow'], id: d.id }]);
             });
+            _this.loadingPayment = false;
         });
     };
     PageDashboardComponent.prototype.getTimeLineData = function () {
@@ -2546,27 +2707,33 @@ var PageDashboardComponent = (function () {
             data.data.map(function (d) {
                 _this.timelineData[0].timeline.push({ date: _this.getDuration(d.duration_seconds), content: d.event_type === 'GROUP_CREATED' ? 'A new group has been created' : 'A new request to join group has been created', pointColor: '#FFC6F1' });
             });
+            _this.loadingTimeline = false;
         });
     };
     PageDashboardComponent.prototype.doRefresh = function (event) {
         if (event === 1) {
+            this.loadingRequest = true;
             this.getRequests(this.maxRequest, this.pageRequest);
         }
         else if (event === 2) {
+            this.loadingPayment = true;
             this.getNextPayments(this.maxPayment, this.pagePayment);
         }
         else if (event === 3) {
+            this.loadingTimeline = true;
             this.getTimeLineData();
         }
     };
     PageDashboardComponent.prototype.changeRequestPage = function (res) {
         this.maxRequest = res[0];
         this.pageRequest = res[1];
+        this.loadingRequest = true;
         this.getRequests(res[0], res[1]);
     };
     PageDashboardComponent.prototype.changePaymentPage = function (res) {
         this.maxPayment = res[0];
         this.pagePayment = res[1];
+        this.loadingPayment = true;
         this.getNextPayments(res[0], res[1]);
     };
     PageDashboardComponent = __decorate([
@@ -2575,7 +2742,7 @@ var PageDashboardComponent = (function () {
             template: __webpack_require__("../../../../../src/app/pages/default-pages/dashboard/dashboard.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/default-pages/dashboard/dashboard.component.scss")]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_material__["i" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_material__["i" /* MdDialog */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_material__["j" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_material__["j" /* MdDialog */]) === "function" && _c || Object])
     ], PageDashboardComponent);
     return PageDashboardComponent;
     var _a, _b, _c;
@@ -2611,7 +2778,7 @@ var DialogAcceptAndRejectComponent = (function () {
             selector: 'accept-reject-modal',
             template: __webpack_require__("../../../../../src/app/pages/default-pages/dashboard/accept-reject-modal.html"),
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_material__["k" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_material__["k" /* MdDialogRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_material__["l" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_material__["l" /* MdDialogRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
     ], DialogAcceptAndRejectComponent);
     return DialogAcceptAndRejectComponent;
     var _a, _b;
@@ -2638,7 +2805,7 @@ module.exports = "<h2 md-dialog-title>Start Group</h2>\n<div md-dialog-content *
 /***/ "../../../../../src/app/pages/default-pages/groups/groups.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-alert [color]=\"'success'\" *ngIf=\"showGroupAlert === true\"><strong>Group has been created!</strong></ni-alert>\r\n<div *ngIf=\"showGroupList\">\r\n  <div class=\"row members-header\">\r\n    <div class=\"col-sm-6\">\r\n      <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \r\n    </div>\r\n    <div class=\"col-sm-6 text-right\">\r\n      <md-input-container class=\"search-group md-icon-left\">\r\n        <md-icon>search</md-icon>\r\n        <input mdInput value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12\">\r\n      <ni-card [refreshIndex]=\"1\" [title]=\"'Groups' | translate\" (refresh)=\"doRefresh($event)\">\r\n        <ni-table [headers]=\"groupHeaders\" [data]=\"groups\"></ni-table>\r\n        <ni-alert *ngIf=\"groups.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nogroup' | translate}}</strong></ni-alert>\r\n        <ni-pagination [totalItems]=\"totalGroup\" [itemPerPage]=\"maxGroup\" [currentPage]=\"pageGroup\" *ngIf=\"groups.length > 0\" (changePage)=\"changeGroupPage($event)\"></ni-pagination>\r\n      </ni-card>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"!showGroupList\">\r\n  <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n  <md-tab-group>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>home</md-icon> {{'Home' | translate}}\r\n      </ng-template>\r\n      <div class=\"row p-2\">\r\n        <div class=\"col-md-7 mb-3\">\r\n          <button md-raised-button color=\"primary\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\" (click)=\"openStartDialog()\">Start</button>\r\n          <button md-raised-button color=\"primary\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\" (click)=\"openDialog()\">Add a member</button>\r\n          <button md-raised-button color=\"primary\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status === 'PENDING_FOR_KICK_OFF'\">Save changes</button>\r\n          <md-card class=\"example-card mt-3\" *ngIf=\"groupInfo && groupInfo.group_info\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Name:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.name}}\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Description:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.description}}\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">First Payment:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.date_first_payment}}\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT' && groupInfo.group_info.status_code !== 'REQUEST_FOR_POSITION_VALIDATION_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Date creation:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [mdDatepicker]=\"picker\" value=\"{{groupInfo.group_info.date_creation}}\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <button mdSuffix [mdDatepickerToggle]=\"picker\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\"></button>\r\n                </md-input-container>\r\n                <md-datepicker #picker></md-datepicker>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Type:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.g_type_text\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.g_type_text\">{{groupInfo.group_info.g_type_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Currency:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.currency\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.currency\">{{groupInfo.group_info.currency}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Creator:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.creator}}\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Status:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.status_text\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.status_text\">{{groupInfo.group_info.status_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Position selection:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.position_selection_type_text\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.position_selection_type_text\">{{groupInfo.group_info.position_selection_type_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Rate:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.rate}}\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Frequency:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.frequency}}\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">Due date:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.due_day}}\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-4 col-md-4 col-form-label mb-0\">nb members:</label>\r\n              <div class=\"col-sm-8 col-md-8\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" value=\"{{groupInfo.group_info.nb_members}}\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-5 pt-3\" *ngIf=\"groupInfo.group_info.g_type !== 'PUBLIC'\">\r\n          <ni-card [outline]=\"true\" [bgColor]=\"'warning'\" class=\"info-card\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'\">\r\n            <div class=\"title text-uppercase\">{{'Amount' | translate}}</div>\r\n            <div class=\"count\">2,543</div>\r\n          </ni-card>\r\n          <ni-card [title]=\"'timeline' | translate\" [customBgColor]=\"'transparent'\">\r\n            <ni-h-timeline [data]=\"timelineData\"></ni-h-timeline>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.previous_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Previous Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.previous_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.previous_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.previous_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.previous_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.next_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Next Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.next_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.next_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.next_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.next_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>card_membership</md-icon> {{'Members' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"primary\" (click)=\"openDialog()\">{{'Add a member' | translate}}</button>\r\n          <button md-raised-button color=\"primary\" (click)=\"removeAll()\">{{'Remove all members' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"2\" [title]=\"'Members' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"memberHeaders\" [data]=\"members\"></ni-table>\r\n            <ni-alert *ngIf=\"members.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nomember' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalMember\" [itemPerPage]=\"maxMember\" [currentPage]=\"pageMember\" *ngIf=\"members.length > 0\" (changePage)=\"changeMemberPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>check_box</md-icon> {{'Obligation' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"primary\" (click)=\"cancelAll()\">{{'Cancel all outstanding request' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"3\" [title]=\"'Obligation' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"obligationHeaders\" [data]=\"obligations\"></ni-table>\r\n            <ni-alert *ngIf=\"obligations.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noobligation' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalObligation\" [itemPerPage]=\"maxObligation\" [currentPage]=\"pageObligation\" *ngIf=\"obligations.length > 0\" (changePage)=\"changeObligationPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>sms_failed</md-icon> {{'Requests' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"4\" [title]=\"'Requests' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n            <ni-alert *ngIf=\"requests.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'norequest' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalRequest\" [itemPerPage]=\"maxRequest\" [currentPage]=\"pageRequest\" *ngIf=\"requests.length > 0\" (changePage)=\"changeRequestPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>event</md-icon> {{'Event' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"5\" [title]=\"'Event' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"eventHeaders\" [data]=\"events\"></ni-table>\r\n            <ni-alert *ngIf=\"events.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noevent' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalEvent\" [itemPerPage]=\"maxEvent\" [currentPage]=\"pageEvent\" *ngIf=\"events.length > 0\" (changePage)=\"changeEventPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>local_atm</md-icon> {{'transaction' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"6\" [title]=\"'transaction' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <!-- <ni-table [headers]=\"transactionHeaders\" [data]=\"transactions\"></ni-table>\r\n            <ni-alert *ngIf=\"transactions.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'notransaction' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"transactions.length\" *ngIf=\"transactions.length > 0\" (changePage)=\"changeTransactionPage($event)\"></ni-pagination> -->\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n  </md-tab-group>\r\n</div>\r\n\r\n<ni-loading></ni-loading>"
+module.exports = "<ni-alert [color]=\"'success'\" *ngIf=\"showGroupAlert === true\"><strong>Group has been created!</strong></ni-alert>\r\n<div *ngIf=\"showGroupList\">\r\n  <div class=\"row members-header\">\r\n    <div class=\"col-sm-6\">\r\n      <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \r\n    </div>\r\n    <div class=\"col-sm-6 text-right\">\r\n      <md-input-container class=\"search-group md-icon-left\">\r\n        <md-icon>search</md-icon>\r\n        <input mdInput value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12\">\r\n      <ni-card [refreshIndex]=\"1\" [title]=\"'Groups' | translate\" (refresh)=\"doRefresh($event)\">\r\n        <ni-table [headers]=\"groupHeaders\" [data]=\"groups\"></ni-table>\r\n        <ni-table-loading *ngIf=\"loadingGroups\"></ni-table-loading>\r\n        <ni-alert *ngIf=\"groups.length === 0 && !loadingGroups\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nogroup' | translate}}</strong></ni-alert>\r\n        <ni-pagination [totalItems]=\"totalGroup\" [itemPerPage]=\"maxGroup\" [currentPage]=\"pageGroup\" *ngIf=\"groups.length > 0\" (changePage)=\"changeGroupPage($event)\"></ni-pagination>\r\n      </ni-card>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"!showGroupList\">\r\n  <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n  <md-tab-group>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>home</md-icon> {{'Home' | translate}}\r\n      </ng-template>\r\n      <div class=\"row p-2\">\r\n        <div class=\"col-sm-12 pt-3\">\r\n          <button *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code !== 'RUNNING'\" md-raised-button color=\"primary\" (click)=\"updateGroup()\">{{'Update' | translate}}</button>\r\n          <button md-raised-button color=\"primary\" (click)=\"reportIncident()\">{{'Report an Incident' | translate}}</button>\r\n          <button *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code !== 'RUNNING'\" md-raised-button color=\"primary\" (click)=\"closeGroup()\">{{'Close' | translate}}</button>\r\n          <button md-raised-button color=\"primary\" (click)=\"cloneGroup()\">{{'Clone' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-md-7 mb-3\">\r\n          <button md-raised-button color=\"primary\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code === 'PENDING_FOR_KICK_OFF'\" (click)=\"openStartDialog()\">Start</button>\r\n          <button md-raised-button color=\"primary\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code === 'PENDING_FOR_KICK_OFF'\" (click)=\"openDialog()\">Add a member</button>\r\n          <button md-raised-button color=\"primary\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code === 'PENDING_FOR_KICK_OFF'\">Save changes</button>\r\n          <md-card class=\"example-card mt-3\" *ngIf=\"groupInfo && groupInfo.group_info\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Name:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.name\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Description:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.description\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">First Payment:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.date_first_payment\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT' && groupInfo.group_info.status_code !== 'REQUEST_FOR_POSITION_VALIDATION_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Date creation:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [mdDatepicker]=\"picker\" [(ngModel)]=\"groupInfo.group_info.date_creation\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <button mdSuffix [mdDatepickerToggle]=\"picker\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\"></button>\r\n                </md-input-container>\r\n                <md-datepicker #picker></md-datepicker>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Type:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.g_type_text\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.g_type_text\">{{groupInfo.group_info.g_type_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Currency:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.currency\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.currency\">{{groupInfo.group_info.currency}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Creator:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.creator\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Status:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.status_text\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.status_text\">{{groupInfo.group_info.status_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Position selection method:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.position_selection_type_text\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.position_selection_type_text\">{{groupInfo.group_info.position_selection_type_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Rate (%):</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.rate\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Frequency (month):</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.frequency\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Due date:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.due_day\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Number of member:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.nb_members\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Smooth Payment:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.smooth_payment === '1' ? 'Yes' : 'No'}}\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">% Penalty for delay payment:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.delay_payment_penalty\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Number of days of delay before applying % penalty:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.nb_days_delay_before_penalty\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-5 pt-3\" *ngIf=\"groupInfo.group_info.g_type !== 'PUBLIC'\">\r\n          <ni-card [outline]=\"true\" [bgColor]=\"'warning'\" class=\"info-card\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'\">\r\n            <div class=\"title text-uppercase\">{{'Amount' | translate}}</div>\r\n            <div class=\"count\">2,543</div>\r\n          </ni-card>\r\n          <ni-card [title]=\"'timeline' | translate\" [customBgColor]=\"'transparent'\">\r\n            <ni-h-timeline [data]=\"timelineData\"></ni-h-timeline>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.previous_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Previous Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.previous_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.previous_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.previous_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.previous_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.next_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Next Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.next_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.next_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.next_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.next_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>card_membership</md-icon> {{'Members' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button *ngIf=\"groupInfo.group_info.status_code !== 'RUNNING'\" md-raised-button color=\"primary\" (click)=\"openDialog()\">{{'Add a member' | translate}}</button>\r\n          <button *ngIf=\"groupInfo.group_info.status_code !== 'RUNNING'\" md-raised-button color=\"primary\" (click)=\"removeAll()\">{{'Remove all members' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"2\" [title]=\"'Members' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"memberHeaders\" [data]=\"members\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingMembers\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"members.length === 0 && !loadingMembers\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nomember' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalMember\" [itemPerPage]=\"maxMember\" [currentPage]=\"pageMember\" *ngIf=\"members.length > 0\" (changePage)=\"changeMemberPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>check_box</md-icon> {{'Obligation' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"3\" [title]=\"'Obligation' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"obligationHeaders\" [data]=\"obligations\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingObligations\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"obligations.length === 0 && !loadingObligations\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noobligation' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalObligation\" [itemPerPage]=\"maxObligation\" [currentPage]=\"pageObligation\" *ngIf=\"obligations.length > 0\" (changePage)=\"changeObligationPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>sms_failed</md-icon> {{'Requests' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"primary\" (click)=\"cancelAll()\">{{'Cancel all outstanding request' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"4\" [title]=\"'Requests' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingRequests\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"requests.length === 0 && !loadingRequests\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'norequest' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalRequest\" [itemPerPage]=\"maxRequest\" [currentPage]=\"pageRequest\" *ngIf=\"requests.length > 0\" (changePage)=\"changeRequestPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>event</md-icon> {{'Event' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"5\" [title]=\"'Event' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"eventHeaders\" [data]=\"events\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingEvents\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"events.length === 0 && !loadingEvents\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noevent' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalEvent\" [itemPerPage]=\"maxEvent\" [currentPage]=\"pageEvent\" *ngIf=\"events.length > 0\" (changePage)=\"changeEventPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>local_atm</md-icon> {{'transaction' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"6\" [title]=\"'transaction' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <!-- <ni-table [headers]=\"transactionHeaders\" [data]=\"transactions\"></ni-table>\r\n            <ni-alert *ngIf=\"transactions.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'notransaction' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"transactions.length\" *ngIf=\"transactions.length > 0\" (changePage)=\"changeTransactionPage($event)\"></ni-pagination> -->\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n  </md-tab-group>\r\n</div>\r\n\r\n<ni-loading></ni-loading>"
 
 /***/ }),
 
@@ -2670,8 +2837,9 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ni_components_ni_dialog_ni_dialog_component__ = __webpack_require__("../../../../../src/app/ni-components/ni-dialog/ni-dialog.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2681,6 +2849,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -2725,6 +2894,11 @@ var PageGroupsComponent = (function () {
         this.totalObligation = 0;
         this.totalRequest = 0;
         this.totalEvent = 0;
+        this.loadingGroups = true;
+        this.loadingMembers = true;
+        this.loadingObligations = true;
+        this.loadingRequests = true;
+        this.loadingEvents = true;
         this._sharedService.emitChange(this.pageTitle);
     }
     PageGroupsComponent.prototype.ngOnInit = function () {
@@ -2805,6 +2979,7 @@ var PageGroupsComponent = (function () {
                 _this.groups.push([d.name, d.creator, d.actual_nb_members, d.amount, d.currency, d.date_creation, d.description, d.frequency, d.g_type_text, d.rate, { type: ['details'], id: d.id }]);
             });
             _this.apiService.groupList = _this.groupList;
+            _this.loadingGroups = false;
         });
     };
     PageGroupsComponent.prototype.getGroupMembers = function (max, page) {
@@ -2817,6 +2992,7 @@ var PageGroupsComponent = (function () {
             res.data.map(function (d) {
                 _this.members.push([d.first_name, d.email, d.member_type_text, d.photo_path, d.position, d.user_position_date, { type: ['remove'], id: d.id }]);
             });
+            _this.loadingMembers = false;
         });
     };
     PageGroupsComponent.prototype.getGroupObligations = function (max, page) {
@@ -2829,6 +3005,7 @@ var PageGroupsComponent = (function () {
             res.data.map(function (d) {
                 _this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status_text, d.p_type_text, { type: ['paynow'], id: d.id }]);
             });
+            _this.loadingObligations = false;
         });
     };
     PageGroupsComponent.prototype.getGroupRequests = function (max, page) {
@@ -2841,6 +3018,7 @@ var PageGroupsComponent = (function () {
             res.data.map(function (d) {
                 _this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation, { type: ['Accept', 'Reject'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type }]);
             });
+            _this.loadingRequests = false;
         });
     };
     PageGroupsComponent.prototype.getGroupEvents = function (max, page) {
@@ -2853,6 +3031,7 @@ var PageGroupsComponent = (function () {
             res.data.map(function (d) {
                 _this.events.push([d.event_type_text, d.initiator, d.group, d.date_event]);
             });
+            _this.loadingEvents = false;
         });
     };
     PageGroupsComponent.prototype.getTimeLineData = function () {
@@ -2871,6 +3050,7 @@ var PageGroupsComponent = (function () {
         var _this = this;
         this.apiService.getGroupInfo().then(function (res) {
             _this.groupInfo = res.data[0];
+            console.log(_this.groupInfo);
             if (_this.isClickedDetails) {
                 _this.showGroupList = false;
                 _this.apiService.showSpinner.next(false);
@@ -2927,18 +3107,23 @@ var PageGroupsComponent = (function () {
     };
     PageGroupsComponent.prototype.doRefresh = function (res) {
         if (res === 1) {
+            this.loadingGroups = true;
             this.getGroups(this.maxGroup, this.pageGroup);
         }
         else if (res === 2) {
+            this.loadingMembers = true;
             this.getGroupMembers(this.maxMember, this.pageMember);
         }
         else if (res === 3) {
+            this.loadingObligations = true;
             this.getGroupObligations(this.maxObligation, this.pageObligation);
         }
         else if (res === 4) {
+            this.loadingRequests = true;
             this.getGroupRequests(this.maxRequest, this.pageRequest);
         }
         else if (res === 5) {
+            this.loadingEvents = true;
             this.getGroupEvents(this.maxEvent, this.pageEvent);
         }
         else if (res === 6) {
@@ -2947,29 +3132,72 @@ var PageGroupsComponent = (function () {
     PageGroupsComponent.prototype.changeGroupPage = function (res) {
         this.maxGroup = res[0];
         this.pageGroup = res[1];
+        this.loadingGroups = true;
         this.getGroups(this.maxGroup, this.pageGroup);
     };
     PageGroupsComponent.prototype.changeMemberPage = function (res) {
         this.maxMember = res[0];
         this.pageMember = res[1];
+        this.loadingMembers = true;
         this.getGroupMembers(this.maxMember, this.pageMember);
     };
     PageGroupsComponent.prototype.changeRequestPage = function (res) {
         this.maxRequest = res[0];
         this.pageRequest = res[1];
+        this.loadingRequests = true;
         this.getGroupRequests(this.maxRequest, this.pageRequest);
     };
     PageGroupsComponent.prototype.changeEventPage = function (res) {
         this.maxEvent = res[0];
         this.pageEvent = res[1];
+        this.loadingEvents = true;
         this.getGroupEvents(this.maxEvent, this.pageEvent);
     };
     PageGroupsComponent.prototype.changeObligationPage = function (res) {
         this.maxObligation = res[0];
         this.pageObligation = res[1];
+        this.loadingObligations = true;
         this.getGroupObligations(this.maxObligation, this.pageObligation);
     };
     PageGroupsComponent.prototype.changeTransactionPage = function (res) {
+    };
+    PageGroupsComponent.prototype.reportIncident = function () {
+    };
+    PageGroupsComponent.prototype.cloneGroup = function () {
+        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_3__ni_components_ni_dialog_ni_dialog_component__["a" /* NiDialogComponent */], {
+            data: {
+                content: 'Do you really want to clone this group?',
+                okText: 'Yes',
+                cancelText: 'No'
+            }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result === 'ok') {
+            }
+            else {
+            }
+        });
+    };
+    PageGroupsComponent.prototype.updateGroup = function () {
+        var _this = this;
+        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_3__ni_components_ni_dialog_ni_dialog_component__["a" /* NiDialogComponent */], {
+            data: {
+                content: 'Do you really want to update this group?',
+                okText: 'Yes',
+                cancelText: 'No'
+            }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result === 'ok') {
+                _this.apiService.addOrUpdateGroup(_this.groupInfo.group_info, 'update').then(function (res) {
+                    console.log(res);
+                }).catch(function (err) {
+                    console.log(err);
+                });
+            }
+            else {
+            }
+        });
     };
     PageGroupsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -2977,7 +3205,7 @@ var PageGroupsComponent = (function () {
             template: __webpack_require__("../../../../../src/app/pages/default-pages/groups/groups.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/default-pages/groups/groups.component.scss")]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["i" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["i" /* MdDialog */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["j" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["j" /* MdDialog */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_api_service__["a" /* ApiService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_auth_service__["a" /* AuthService */]) === "function" && _d || Object])
     ], PageGroupsComponent);
     return PageGroupsComponent;
     var _a, _b, _c, _d;
@@ -2999,7 +3227,7 @@ var DialogAddMemberComponent = (function () {
             selector: 'dialog-add-member',
             template: __webpack_require__("../../../../../src/app/pages/default-pages/groups/dialog-add-member.html"),
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MdDialogRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
     ], DialogAddMemberComponent);
     return DialogAddMemberComponent;
     var _a, _b;
@@ -3036,7 +3264,7 @@ var DialogStartComponent = (function () {
             selector: 'dialog-start',
             template: __webpack_require__("../../../../../src/app/pages/default-pages/groups/dialog-start.html"),
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["k" /* MdDialogRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
     ], DialogStartComponent);
     return DialogStartComponent;
     var _a, _b;
@@ -3096,7 +3324,7 @@ var PageNotFoundComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/obligation/obligation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \n  </div>\n  <div class=\"col-lg-12\">\n    <ni-card [title]=\"'Obligation' | translate\" (refresh)=\"doRefresh($event)\" [showRefresh]=\"true\">\n      <ni-table [headers]=\"obligationHeaders\" [data]=\"obligations\"></ni-table>\n      <ni-alert *ngIf=\"obligations.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noobligation' | translate}}</strong></ni-alert>\n      <ni-pagination [totalItems]=\"total\" [itemPerPage]=\"max\" [currentPage]=\"page\" *ngIf=\"obligations.length > 0\" (changePage)=\"changePage($event)\"></ni-pagination>\n    </ni-card>\n  </div>\n</div>"
+module.exports = "<div class=\"row\">\n  <div class=\"col-sm-12\">\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \n  </div>\n  <div class=\"col-lg-12\">\n    <ni-card [title]=\"'Obligation' | translate\" (refresh)=\"doRefresh($event)\" [showRefresh]=\"true\">\n      <ni-table [headers]=\"obligationHeaders\" [data]=\"obligations\"></ni-table>\n      <ni-table-loading *ngIf=\"loading\"></ni-table-loading>\n      <ni-alert *ngIf=\"obligations.length === 0 && !loading\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noobligation' | translate}}</strong></ni-alert>\n      <ni-pagination [totalItems]=\"total\" [itemPerPage]=\"max\" [currentPage]=\"page\" *ngIf=\"obligations.length > 0\" (changePage)=\"changePage($event)\"></ni-pagination>\n    </ni-card>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -3146,6 +3374,7 @@ var PageObligationComponent = (function () {
         this.max = 5;
         this.page = 1;
         this.total = 0;
+        this.loading = true;
     }
     PageObligationComponent.prototype.ngOnInit = function () {
         this.apiService.showSpinner.next(true);
@@ -3166,13 +3395,15 @@ var PageObligationComponent = (function () {
             res.data.map(function (d) {
                 _this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status_text, d.p_type_text, { type: ['paynow'], id: d.id }]);
             });
-            _this.apiService.showSpinner.next(false);
+            _this.loading = false;
         });
     };
     PageObligationComponent.prototype.doRefresh = function (res) {
+        this.loading = true;
         this.getGroupObligations(this.max, this.page);
     };
     PageObligationComponent.prototype.changePage = function (res) {
+        this.loading = true;
         this.max = res[0];
         this.page = res[1];
         this.getGroupObligations(this.max, this.page);
@@ -3271,7 +3502,7 @@ var PageProfileComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/requests/requests.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row members-header\">\r\n  <div class=\"col-sm-6\">\r\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>      \r\n  </div>\r\n  <div class=\"col-sm-6 text-right\">\r\n    <md-input-container class=\"search-group md-icon-left\">\r\n      <md-icon>search</md-icon>\r\n      <input mdInput value=\"\">\r\n    </md-input-container>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12\">\r\n    <ni-card [title]=\"'Requests' | translate\" (refresh)=\"doRefresh($event)\" [showRefresh]=\"true\">\r\n      <ni-table [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n      <ni-alert *ngIf=\"requests.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'norequest' | translate}}</strong></ni-alert>\r\n      <ni-pagination [totalItems]=\"total\" [itemPerPage]=\"max\" [currentPage]=\"page\" *ngIf=\"requests.length > 0\" (changePage)=\"changePage($event)\"></ni-pagination>\r\n    </ni-card>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"row members-header\">\r\n  <div class=\"col-sm-6\">\r\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>      \r\n  </div>\r\n  <div class=\"col-sm-6 text-right\">\r\n    <md-input-container class=\"search-group md-icon-left\">\r\n      <md-icon>search</md-icon>\r\n      <input mdInput value=\"\">\r\n    </md-input-container>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-lg-12\">\r\n    <ni-card [title]=\"'Requests' | translate\" (refresh)=\"doRefresh($event)\" [showRefresh]=\"true\">\r\n      <ni-table [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n      <ni-table-loading *ngIf=\"loading\"></ni-table-loading>\r\n      <ni-alert *ngIf=\"requests.length === 0 && !loading\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'norequest' | translate}}</strong></ni-alert>\r\n      <ni-pagination [totalItems]=\"total\" [itemPerPage]=\"max\" [currentPage]=\"page\" *ngIf=\"requests.length > 0\" (changePage)=\"changePage($event)\"></ni-pagination>\r\n    </ni-card>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -3325,6 +3556,7 @@ var PageRequestsComponent = (function () {
         this.max = 5;
         this.page = 1;
         this.total = 0;
+        this.loading = true;
         this._sharedService.emitChange(this.pageTitle);
     }
     PageRequestsComponent.prototype.ngOnInit = function () {
@@ -3347,12 +3579,15 @@ var PageRequestsComponent = (function () {
             data.data.map(function (d) {
                 _this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation]);
             });
+            _this.loading = false;
         });
     };
     PageRequestsComponent.prototype.doRefresh = function (res) {
+        this.loading = true;
         this.getUserRequests(this.max, this.page);
     };
     PageRequestsComponent.prototype.changePage = function (res) {
+        this.loading = true;
         this.max = res[0];
         this.page = res[1];
         this.getUserRequests(this.max, this.page);
@@ -4281,7 +4516,7 @@ var PageSignupComponent = (function () {
             template: __webpack_require__("../../../../../src/app/pages/extra-pages/signup/signup.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/extra-pages/signup/signup.component.scss")]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__services_auth_service__["a" /* AuthService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["i" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["i" /* MdDialog */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5_ng2_translate__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ng2_translate__["c" /* TranslateService */]) === "function" && _e || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__services_auth_service__["a" /* AuthService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["j" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["j" /* MdDialog */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5_ng2_translate__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_ng2_translate__["c" /* TranslateService */]) === "function" && _e || Object])
     ], PageSignupComponent);
     return PageSignupComponent;
     var _a, _b, _c, _d, _e;
@@ -4296,7 +4531,7 @@ var DialogResultComponent = (function () {
             selector: 'dialog-result',
             template: __webpack_require__("../../../../../src/app/pages/extra-pages/signup/dialog-result.html"),
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["k" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["k" /* MdDialogRef */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["l" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["l" /* MdDialogRef */]) === "function" && _a || Object])
     ], DialogResultComponent);
     return DialogResultComponent;
     var _a;
@@ -4391,37 +4626,37 @@ var PagesModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["ReactiveFormsModule"],
                 __WEBPACK_IMPORTED_MODULE_3__ni_components_ni_components_module__["a" /* NiComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_13_ng2_translate__["b" /* TranslateModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["a" /* MdAutocompleteModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["b" /* MdButtonModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["c" /* MdButtonToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["d" /* MdCardModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["e" /* MdCheckboxModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["f" /* MdChipsModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["g" /* MdCoreModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["h" /* MdDatepickerModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["j" /* MdDialogModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["l" /* MdExpansionModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["m" /* MdGridListModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["n" /* MdIconModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["o" /* MdInputModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["p" /* MdListModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["q" /* MdMenuModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["r" /* MdNativeDateModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["t" /* MdPaginatorModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["u" /* MdProgressBarModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["v" /* MdProgressSpinnerModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["w" /* MdRadioModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["x" /* MdRippleModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["y" /* MdSelectModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["z" /* MdSidenavModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["B" /* MdSliderModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["A" /* MdSlideToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["C" /* MdSnackBarModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["D" /* MdSortModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["E" /* MdTableModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["F" /* MdTabsModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["G" /* MdToolbarModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["H" /* MdTooltipModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["b" /* MdAutocompleteModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["c" /* MdButtonModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["d" /* MdButtonToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["e" /* MdCardModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["f" /* MdCheckboxModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["g" /* MdChipsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["h" /* MdCoreModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["i" /* MdDatepickerModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["k" /* MdDialogModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["m" /* MdExpansionModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["n" /* MdGridListModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["o" /* MdIconModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["p" /* MdInputModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["q" /* MdListModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["r" /* MdMenuModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["s" /* MdNativeDateModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["u" /* MdPaginatorModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["v" /* MdProgressBarModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["w" /* MdProgressSpinnerModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["x" /* MdRadioModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["y" /* MdRippleModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["z" /* MdSelectModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["A" /* MdSidenavModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["C" /* MdSliderModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["B" /* MdSlideToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["D" /* MdSnackBarModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["E" /* MdSortModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["F" /* MdTableModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["G" /* MdTabsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["H" /* MdToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["I" /* MdTooltipModule */],
                 __WEBPACK_IMPORTED_MODULE_6__angular_cdk__["l" /* CdkTableModule */],
                 __WEBPACK_IMPORTED_MODULE_7_ng2_charts__["ChartsModule"],
                 __WEBPACK_IMPORTED_MODULE_8__swimlane_ngx_charts__["NgxChartsModule"],
@@ -4633,31 +4868,39 @@ var ApiService = (function () {
             });
         });
     };
-    ApiService.prototype.addGroup = function (group) {
+    ApiService.prototype.addOrUpdateGroup = function (group, type) {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'groups/add';
+        if (type === 'update') {
+            url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/update';
+        }
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
-        if (group.grouptype == 'PRIVATE') {
+        if (group.g_type == 'PRIVATE') {
             params.set('type_code', 'PRIVATE');
         }
-        else if (group.grouptype == 'PUBLIC') {
+        else if (group.g_type == 'PUBLIC') {
             params.set('type_code', 'PUBLIC');
-            params.set('min_index', group.minIndex);
-            params.set('max_index', group.maxIndex);
+            if (type === 'add') {
+                params.set('min_index', group.index_credit_min);
+                params.set('max_index', group.index_credit_max);
+            }
         }
-        if (group.rate > 0) {
-            params.set('smooth_payment', group.smoothpayment);
+        if (group.rate > 0 && type === 'add') {
+            params.set('smooth_payment', group.smooth_payment);
+        }
+        if (type === 'update') {
+            params.set('number_of_members', group.nb_members);
         }
         params.set('name', group.name);
         params.set('rate', group.rate);
         params.set('description', group.description);
         params.set('amount', group.amount);
-        params.set('due_day', group.duedate);
+        params.set('due_day', group.due_day);
         params.set('currency_code', group.currency);
-        params.set('number_of_days_before_penalty', group.nbdpenal);
-        params.set('delay_payment_penalty', group.penalty);
+        params.set('number_of_days_before_penalty', group.nb_days_delay_before_penalty);
+        params.set('delay_payment_penalty', group.delay_payment_penalty);
         params.set('frequency', group.frequency);
-        params.set('position_selection_type_code', group.pstype);
+        params.set('position_selection_type_code', group.position_selection_type);
         params.set('token', localStorage.getItem('token'));
         params.set('lang', this.langCode);
         return new Promise(function (resolve, reject) {
@@ -4684,6 +4927,25 @@ var ApiService = (function () {
     ApiService.prototype.addMember = function (member) {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/users/add';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
+        return new Promise(function (resolve, reject) {
+            params.set('email_list', member);
+            params.set('lang', _this.langCode);
+            params.set('token', localStorage.getItem('token'));
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                console.log(res);
+                // resolve(res.json());
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    ApiService.prototype.cloneGroup = function (member) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/clone';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         this.groupId.subscribe(function (data) {
             params.set('group_id', data);
@@ -5187,14 +5449,14 @@ var FooterComponent = (function () {
 /***/ "../../../../../src/app/ui/components/horizontal-navbar/group-create.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 md-dialog-title>{{'groupcreation' | translate}}</h2>\n<form [formGroup]=\"form\">\n  <div md-dialog-content *ngIf=\"step === 'first'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"name\" placeholder=\"{{'Name' | translate}}\" type=\"text\" value=\"\" [formControl]=\"form.controls['name']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'groupnameinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"{{'grouptype' | translate}}\" [formControl]=\"form.controls['grouptype']\">\n          <md-option *ngFor=\"let g of groupTypes\" [value]=\"g.code\">\n            {{ g.text }}\n          </md-option>\n        </md-select>\n        <md-icon mdTooltip=\"{{'grouptypeinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\" *ngIf=\"form.value.grouptype == 'PUBLIC'\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"minIndex\" placeholder=\"{{'Minimum index credit' | translate}}\" type=\"number\" value=\"0\" [formControl]=\"form.controls['minIndex']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"maxIndex\" placeholder=\"{{'Maximum index credit' | translate}}\" type=\"number\" value=\"1000\" [formControl]=\"form.controls['maxIndex']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"frequency\" placeholder=\"{{'frequency' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['frequency']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'groupmonthinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"{{'Currency' | translate}}\" [formControl]=\"form.controls['currency']\">\n          <md-option *ngFor=\"let c of currencies\" [value]=\"c.code\">\n            {{ c.code }}\n          </md-option>\n        </md-select>\n        <md-icon mdTooltip=\"{{'groupcurrencyinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-12\">\n        <md-input-container>\n          <textarea mdInput placeholder=\"{{'Description' | translate}}\" rows=\"3\" [formControl]=\"form.controls['description']\"></textarea>\n        </md-input-container>\n      </div>\n    </div>\n    <p>You are about to create a <span>{{form.value.grouptype}}</span> group named <span>{{form.value.name}}</span>.</p>\n    <p *ngIf=\"form.value.frequency == 1\">This payment will have to be made each month.</p>\n    <p *ngIf=\"form.value.frequency > 1\">This payment will have to be made every <span>{{form.value.frequency}}</span> months.</p>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'first'\">\n    <button md-raised-button (click)=\"dialogRef.close('no')\" type=\"button\" color=\"default\">{{'Cancel' | translate}}</button>\n    <button md-raised-button color=\"primary\" layout-align=\"end\" (click)=\"step = 'second'\" [disabled]=\"!form.controls['name'].valid || !form.controls['grouptype'].valid || !form.controls['frequency'].valid || !form.controls['currency'].valid || !form.controls['description'].valid || !form.controls['minIndex'].valid || !form.controls['maxIndex'].valid\">{{'Next' | translate}} >></button>\n  </div>\n  <div md-dialog-content *ngIf=\"step === 'second'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"amount\" class=\"text-right\" placeholder=\"{{'Amount' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['amount']\">\n        </md-input-container>\n        <span>{{currencySigns[form.value.currency]}}</span>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"rate\" placeholder=\"{{'Rate' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['rate']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'grouprateinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"duedate\" placeholder=\"{{'Due date' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['duedate']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'groupdayinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"{{'Position Selection' | translate}}\" [formControl]=\"form.controls['pstype']\">\n          <md-option *ngFor=\"let p of psTypes\" [value]=\"p.code\">\n            {{ p.text }}\n          </md-option>\n        </md-select>\n        <md-icon mdTooltip=\"{{'grouppstypeinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"nbdpenal\" placeholder=\"{{'Number of days of delay allowed' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['nbdpenal']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'grouppenalinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"penalty\" placeholder=\"{{'Penalty' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['penalty']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\" *ngIf=\"form.value.rate > 0\">\n      <div class=\"col-sm-12\">\n        <md-checkbox [checked]=\"form.value.rate > 0\" color=\"primary\" [disabled]=\"form.value.grouptype == 'PUBLIC'\" [formControl]=\"form.controls['smoothpayment']\">\n          {{'Smooth payment' | translate}}\n        </md-checkbox>\n        <md-icon mdTooltip=\"{{'grouppaymentinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <p *ngIf=\"form.value.rate > 0\">The amount due will be <span>{{form.value.amount}} {{form.value.currency}}</span> with <span>{{form.value.rate}}</span> % interest applied.</p>\n    <p *ngIf=\"form.value.rate <= 0\">The amount due will be <span>{{form.value.amount}} {{form.value.currency}}</span>.</p>\n    <p *ngIf=\"form.value.frequency == 1\">This payment will have to be made on the <span>{{form.value.duedate}}</span> of each month.</p>\n    <p *ngIf=\"form.value.frequency > 1\">This payment will have to be made on the <span>{{form.value.duedate}}</span> every <span>{{form.value.frequency}}</span> months.</p>\n    <p *ngIf=\"form.value.nbdpenal > 0 && form.value.penalty > 0\">After a payment delay of <span>{{form.value.nbdpenal}}</span> days, a penalty of <span>{{form.value.penalty}}</span>% will apply.</p>\n    <p *ngIf=\"form.value.grouptype == 'PRIVATE' && form.value.smoothpayment == true && form.value.rate > 0\">The total payment (amount + interest) to pay will be smoothed.</p>\n    <p *ngIf=\"form.value.frequency == 1\">This will allow you to pay a single amount every month.</p>\n    <p *ngIf=\"form.value.frequency > 1\">This will allow you to pay a single amount every <span>{{form.value.frequency}}</span> months.</p>\n    <p *ngIf=\"form.value.pstype != ''\">When the group is kicked off, the members will select their position using <span>{{form.value.pstype}}</span></p>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'second'\">\n    <button md-raised-button (click)=\"step = 'first'\" color=\"primary\" layout-align=\"end\"><< {{'Previous' | translate}}</button>\n    <button md-raised-button (click)=\"dialogRef.close('no')\" type=\"button\" color=\"default\">{{'Cancel' | translate}}</button>\n    <button md-raised-button color=\"primary\" layout-align=\"end\" (click)=\"onSubmit()\" [disabled]=\"!form.valid\" type=\"button\">{{'Finish' | translate}}</button>\n  </div>\n</form>"
+module.exports = "<h2 md-dialog-title>{{'groupcreation' | translate}}</h2>\n<form [formGroup]=\"form\">\n  <div md-dialog-content *ngIf=\"step === 'first'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"name\" placeholder=\"{{'Name' | translate}}\" type=\"text\" value=\"\" [formControl]=\"form.controls['name']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'groupnameinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"{{'grouptype' | translate}}\" [formControl]=\"form.controls['g_type']\">\n          <md-option *ngFor=\"let g of groupTypes\" [value]=\"g.code\">\n            {{ g.text }}\n          </md-option>\n        </md-select>\n        <md-icon mdTooltip=\"{{'grouptypeinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\" *ngIf=\"form.value.g_type == 'PUBLIC'\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"minIndex\" placeholder=\"{{'Minimum index credit' | translate}}\" type=\"number\" value=\"0\" [formControl]=\"form.controls['index_credit_min']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"maxIndex\" placeholder=\"{{'Maximum index credit' | translate}}\" type=\"number\" value=\"1000\" [formControl]=\"form.controls['index_credit_max']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"frequency\" placeholder=\"{{'frequency' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['frequency']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'groupmonthinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"{{'Currency' | translate}}\" [formControl]=\"form.controls['currency']\">\n          <md-option *ngFor=\"let c of currencies\" [value]=\"c.code\">\n            {{ c.code }}\n          </md-option>\n        </md-select>\n        <md-icon mdTooltip=\"{{'groupcurrencyinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-12\">\n        <md-input-container>\n          <textarea mdInput placeholder=\"{{'Description' | translate}}\" rows=\"3\" [formControl]=\"form.controls['description']\"></textarea>\n        </md-input-container>\n      </div>\n    </div>\n    <p>You are about to create a <span>{{form.value.g_type}}</span> group named <span>{{form.value.name}}</span>.</p>\n    <p *ngIf=\"form.value.frequency == 1\">This payment will have to be made each month.</p>\n    <p *ngIf=\"form.value.frequency > 1\">This payment will have to be made every <span>{{form.value.frequency}}</span> months.</p>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'first'\">\n    <button md-raised-button (click)=\"dialogRef.close('no')\" type=\"button\" color=\"default\">{{'Cancel' | translate}}</button>\n    <button md-raised-button color=\"primary\" layout-align=\"end\" (click)=\"step = 'second'\" [disabled]=\"!form.controls['name'].valid || !form.controls['g_type'].valid || !form.controls['frequency'].valid || !form.controls['currency'].valid || !form.controls['description'].valid || !form.controls['index_credit_min'].valid || !form.controls['index_credit_max'].valid\">{{'Next' | translate}} >></button>\n  </div>\n  <div md-dialog-content *ngIf=\"step === 'second'\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"amount\" class=\"text-right\" placeholder=\"{{'Amount' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['amount']\">\n        </md-input-container>\n        <span>{{currencySigns[form.value.currency]}}</span>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"rate\" placeholder=\"{{'Rate' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['rate']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'grouprateinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"duedate\" placeholder=\"{{'Due date' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['due_day']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'groupdayinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"{{'Position Selection' | translate}}\" [formControl]=\"form.controls['position_selection_type']\">\n          <md-option *ngFor=\"let p of psTypes\" [value]=\"p.code\">\n            {{ p.text }}\n          </md-option>\n        </md-select>\n        <md-icon mdTooltip=\"{{'grouppstypeinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"nbdpenal\" placeholder=\"{{'Number of days of delay allowed' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['nb_days_delay_before_penalty']\">\n        </md-input-container>\n        <md-icon mdTooltip=\"{{'grouppenalinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"penalty\" placeholder=\"{{'Penalty' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['delay_payment_penalty']\">\n        </md-input-container>\n      </div>\n    </div>\n    <div class=\"row pt-3\" *ngIf=\"form.value.rate > 0\">\n      <div class=\"col-sm-12\">\n        <md-checkbox [checked]=\"form.value.rate > 0\" color=\"primary\" [disabled]=\"form.value.g_type == 'PUBLIC'\" [formControl]=\"form.controls['smooth_payment']\">\n          {{'Smooth payment' | translate}}\n        </md-checkbox>\n        <md-icon mdTooltip=\"{{'grouppaymentinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>\n      </div>\n    </div>\n    <p *ngIf=\"form.value.rate > 0\">The amount due will be <span>{{form.value.amount}} {{form.value.currency}}</span> with <span>{{form.value.rate}}</span> % interest applied.</p>\n    <p *ngIf=\"form.value.rate <= 0\">The amount due will be <span>{{form.value.amount}} {{form.value.currency}}</span>.</p>\n    <p *ngIf=\"form.value.frequency == 1\">This payment will have to be made on the <span>{{form.value.due_day}}</span> of each month.</p>\n    <p *ngIf=\"form.value.frequency > 1\">This payment will have to be made on the <span>{{form.value.due_day}}</span> every <span>{{form.value.frequency}}</span> months.</p>\n    <p *ngIf=\"form.value.nb_days_delay_before_penalty > 0 && form.value.delay_payment_penalty > 0\">After a payment delay of <span>{{form.value.nb_days_delay_before_penalty}}</span> days, a penalty of <span>{{form.value.delay_payment_penalty}}</span>% will apply.</p>\n    <p *ngIf=\"form.value.g_type === 'PRIVATE' && form.value.smooth_payment === true && form.value.rate > 0\">The total payment (amount + interest) to pay will be smoothed.</p>\n    <p *ngIf=\"form.value.frequency == 1\">This will allow you to pay a single amount every month.</p>\n    <p *ngIf=\"form.value.frequency > 1\">This will allow you to pay a single amount every <span>{{form.value.frequency}}</span> months.</p>\n    <p *ngIf=\"form.value.position_selection_type != ''\">When the group is kicked off, the members will select their position using <span>{{form.value.position_selection_type}}</span></p>\n  </div>\n  <div md-dialog-actions *ngIf=\"step === 'second'\">\n    <button md-raised-button (click)=\"step = 'first'\" color=\"primary\" layout-align=\"end\"><< {{'Previous' | translate}}</button>\n    <button md-raised-button (click)=\"dialogRef.close('no')\" type=\"button\" color=\"default\">{{'Cancel' | translate}}</button>\n    <button md-raised-button color=\"primary\" layout-align=\"end\" (click)=\"onSubmit()\" [disabled]=\"!form.valid\" type=\"button\">{{'Finish' | translate}}</button>\n  </div>\n</form>"
 
 /***/ }),
 
 /***/ "../../../../../src/app/ui/components/horizontal-navbar/horizontal-navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"navbar-wrap\">\r\n  <div class=\"navbar-button\" [ngClass]=\"{ 'open' : openedSidebar }\" (click)=\"openSidebar()\">\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n  </div>\r\n\r\n  <h1 class=\"page-title\"></h1>\r\n\r\n  <div class=\"nav-items\">\r\n    \r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-input-container class=\"mb-0\">\r\n        <input mdInput [placeholder]=\"'Select a group' | translate\" [mdAutocomplete]=\"auto\" [formControl]=\"groupCtrl\">\r\n      </md-input-container>\r\n      <md-autocomplete #auto=\"mdAutocomplete\">\r\n        <md-option *ngFor=\"let group of filteredGroup | async\" [value]=\"group\" (click)=\"goToGroup(group)\">\r\n          {{ group }}\r\n        </md-option>\r\n      </md-autocomplete>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-icon mdTooltip=\"{{'paymenttooltip' | translate}}\" mdTooltipPosition=\"below\" class=\"btn-navbar\">payment</md-icon>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-icon mdTooltip=\"{{'paymenttooltip' | translate}}\" mdTooltipPosition=\"below\" class=\"btn-navbar\" (click)=\"openCreateGroupDialog()\">create_new_folder</md-icon>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link btn-code\">\r\n          <img [src]=\"'assets/content/' + langUrl\" width=\"30\" height=\"20\">\r\n      </a>\r\n      <div class=\"dropdown-menu\">\r\n        <ul>\r\n          <li *ngFor=\"let lang of languages\">\r\n            <a (click)=\"changeLanguage(lang.code)\">\r\n              <div class=\"content\">\r\n                <img [src]=\"'assets/content/' + lang.url\" width=\"30\" height=\"20\">\r\n                <span class=\"desc\"><strong>{{lang.code.toUpperCase()}}</strong></span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <div class=\"avatar\"><img [src]=\"'assets/img/user/' + photoUrl + '.png'\" width=\"40\" height=\"40\" alt=\"\"></div>\r\n        <div class=\"name\">{{username}}</div>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu mini-menu\">\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"transactions\"><span class=\"icon sli-home\"></span> My Account</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"profile\"><span class=\"icon sli-user\"></span> Profile</a>\r\n          </li>\r\n          <li>\r\n            <a (click)=\"logout()\"><span class=\"icon sli-logout\"></span> Log Out</a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"items-overlay\" (click)=\"close($event)\"></div>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"navbar-wrap\">\r\n  <div class=\"navbar-button\" [ngClass]=\"{ 'open' : openedSidebar }\" (click)=\"openSidebar()\">\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n  </div>\r\n\r\n  <h1 class=\"page-title\"></h1>\r\n\r\n  <div class=\"nav-items\">\r\n    \r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-input-container class=\"mb-0\">\r\n        <input mdInput [placeholder]=\"'Select a group' | translate\" [mdAutocomplete]=\"auto\" [formControl]=\"groupCtrl\">\r\n      </md-input-container>\r\n      <md-autocomplete #auto=\"mdAutocomplete\">\r\n        <md-option *ngFor=\"let group of filteredGroup | async\" [value]=\"group\" (click)=\"goToGroup(group)\">\r\n          {{ group }}\r\n        </md-option>\r\n      </md-autocomplete>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-icon mdTooltip=\"{{'paymenttooltip' | translate}}\" mdTooltipPosition=\"below\" class=\"btn-navbar\" routerLink=\"obligation\">payment</md-icon>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-icon mdTooltip=\"{{'creationtooltip' | translate}}\" mdTooltipPosition=\"below\" class=\"btn-navbar\" (click)=\"openCreateGroupDialog()\">create_new_folder</md-icon>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link btn-code\">\r\n          <img [src]=\"'assets/content/' + langUrl\" width=\"30\" height=\"20\">\r\n      </a>\r\n      <div class=\"dropdown-menu\">\r\n        <ul>\r\n          <li *ngFor=\"let lang of languages\">\r\n            <a (click)=\"changeLanguage(lang.code)\">\r\n              <div class=\"content\">\r\n                <img [src]=\"'assets/content/' + lang.url\" width=\"30\" height=\"20\">\r\n                <span class=\"desc\"><strong>{{lang.code.toUpperCase()}}</strong></span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <div class=\"avatar\"><img [src]=\"'assets/img/user/' + photoUrl + '.png'\" width=\"40\" height=\"40\" alt=\"\"></div>\r\n        <div class=\"name\">{{username}}</div>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu mini-menu\">\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"transactions\"><span class=\"icon sli-home\"></span> My Account</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"profile\"><span class=\"icon sli-user\"></span> Profile</a>\r\n          </li>\r\n          <li>\r\n            <a (click)=\"logout()\"><span class=\"icon sli-logout\"></span> Log Out</a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"items-overlay\" (click)=\"close($event)\"></div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -5382,7 +5644,7 @@ var HorizontalNavbarComponent = (function () {
                 '[class.show-overlay]': 'showOverlay'
             }
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["i" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["i" /* MdDialog */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_7_ng2_translate__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7_ng2_translate__["c" /* TranslateService */]) === "function" && _e || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["j" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["j" /* MdDialog */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_7_ng2_translate__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7_ng2_translate__["c" /* TranslateService */]) === "function" && _e || Object])
     ], HorizontalNavbarComponent);
     return HorizontalNavbarComponent;
     var _a, _b, _c, _d, _e;
@@ -5404,18 +5666,18 @@ var DialogGroupCreateComponent = (function () {
         this.form = this.fb.group({
             name: ['My group', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].minLength(3), __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].maxLength(10)])],
             frequency: [1, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
-            grouptype: ['PRIVATE', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
-            pstype: ['', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            g_type: ['PRIVATE', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            position_selection_type: ['', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
             currency: ['GBP', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
             description: ['', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].minLength(20)])],
             amount: [500, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
             rate: [0, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
-            duedate: [5, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
-            nbdpenal: [0, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
-            penalty: [0, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
-            minIndex: [0, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
-            maxIndex: [1000, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
-            smoothpayment: [true]
+            due_day: [5, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            nb_days_delay_before_penalty: [0, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            delay_payment_penalty: [0, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            index_credit_min: [0, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            index_credit_max: [1000, __WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_5__angular_forms__["Validators"].required])],
+            smooth_payment: [true]
         });
         this.apiService.getListData('Currency').then(function (res) {
             _this.currencies = res.data;
@@ -5433,7 +5695,7 @@ var DialogGroupCreateComponent = (function () {
     DialogGroupCreateComponent.prototype.onSubmit = function () {
         var _this = this;
         this.dialogRef.close('yes');
-        this.apiService.addGroup(this.form.value).then(function (res) {
+        this.apiService.addOrUpdateGroup(this.form.value, 'add').then(function (res) {
             _this.apiService.isMenuClicked = false;
             _this.apiService.groupCounts.next(_this.groupCounts + 1);
             _this.apiService.groupCreated.next(true);
@@ -5447,7 +5709,7 @@ var DialogGroupCreateComponent = (function () {
             selector: 'group-create',
             template: __webpack_require__("../../../../../src/app/ui/components/horizontal-navbar/group-create.html")
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["k" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["k" /* MdDialogRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_forms__["FormBuilder"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["l" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["l" /* MdDialogRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_5__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_forms__["FormBuilder"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */]) === "function" && _d || Object])
     ], DialogGroupCreateComponent);
     return DialogGroupCreateComponent;
     var _a, _b, _c, _d;
@@ -5815,37 +6077,37 @@ var UIModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
                 __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* RouterModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["a" /* MdAutocompleteModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["b" /* MdButtonModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["c" /* MdButtonToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["d" /* MdCardModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["e" /* MdCheckboxModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["f" /* MdChipsModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["g" /* MdCoreModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["h" /* MdDatepickerModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["j" /* MdDialogModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["l" /* MdExpansionModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["m" /* MdGridListModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["n" /* MdIconModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["o" /* MdInputModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["p" /* MdListModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["q" /* MdMenuModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["r" /* MdNativeDateModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["t" /* MdPaginatorModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["u" /* MdProgressBarModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["v" /* MdProgressSpinnerModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["w" /* MdRadioModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["x" /* MdRippleModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["y" /* MdSelectModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["z" /* MdSidenavModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["B" /* MdSliderModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["A" /* MdSlideToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["C" /* MdSnackBarModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["D" /* MdSortModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["E" /* MdTableModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["F" /* MdTabsModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["G" /* MdToolbarModule */],
-                __WEBPACK_IMPORTED_MODULE_5__angular_material__["H" /* MdTooltipModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["b" /* MdAutocompleteModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["c" /* MdButtonModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["d" /* MdButtonToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["e" /* MdCardModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["f" /* MdCheckboxModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["g" /* MdChipsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["h" /* MdCoreModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["i" /* MdDatepickerModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["k" /* MdDialogModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["m" /* MdExpansionModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["n" /* MdGridListModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["o" /* MdIconModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["p" /* MdInputModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["q" /* MdListModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["r" /* MdMenuModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["s" /* MdNativeDateModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["u" /* MdPaginatorModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["v" /* MdProgressBarModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["w" /* MdProgressSpinnerModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["x" /* MdRadioModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["y" /* MdRippleModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["z" /* MdSelectModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["A" /* MdSidenavModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["C" /* MdSliderModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["B" /* MdSlideToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["D" /* MdSnackBarModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["E" /* MdSortModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["F" /* MdTableModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["G" /* MdTabsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["H" /* MdToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_material__["I" /* MdTooltipModule */],
                 __WEBPACK_IMPORTED_MODULE_4__angular_forms__["FormsModule"],
                 __WEBPACK_IMPORTED_MODULE_4__angular_forms__["ReactiveFormsModule"],
                 __WEBPACK_IMPORTED_MODULE_6_ng2_translate__["b" /* TranslateModule */]

@@ -25,11 +25,11 @@
     </div>
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
-      <md-icon mdTooltip="{{'paymenttooltip' | translate}}" mdTooltipPosition="below" class="btn-navbar">payment</md-icon>
+      <md-icon mdTooltip="{{'paymenttooltip' | translate}}" mdTooltipPosition="below" class="btn-navbar" routerLink="obligation">payment</md-icon>
     </div>
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
-      <md-icon mdTooltip="{{'paymenttooltip' | translate}}" mdTooltipPosition="below" class="btn-navbar" (click)="openCreateGroupDialog()">create_new_folder</md-icon>
+      <md-icon mdTooltip="{{'creationtooltip' | translate}}" mdTooltipPosition="below" class="btn-navbar" (click)="openCreateGroupDialog()">create_new_folder</md-icon>
     </div>
 
     <div class="nav-item" [ngClass]="{ 'opened' : false }">
