@@ -16,9 +16,14 @@
       border: 0;
     }
     form {
+      md-input-container {
+        margin: 0 0 30px;
+      }
+
       button {
         width: 100%;
       }
+
       .additional-info {
         background: rgba(#000,.1);
         margin: $module-rem * 2 (-($module-rem * 2)) (-($module-rem * 2));

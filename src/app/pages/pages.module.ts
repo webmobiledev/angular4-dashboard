@@ -56,7 +56,7 @@ import { Page404Component } from './extra-pages/page-404/page-404.component';
 import { Page500Component } from './extra-pages/page-500/page-500.component';
 
 import { PageDashboardComponent, DialogAcceptAndRejectComponent } from './default-pages/dashboard/dashboard.component';
-import { PageGroupsComponent, DialogAddMemberComponent, DialogStartComponent } from './default-pages/groups/groups.component';
+import { PageGroupsComponent, DialogAddMemberComponent, DialogStartComponent, DialogReportIncidentComponent } from './default-pages/groups/groups.component';
 import { PageTransactionsComponent } from './default-pages/transactions/transactions.component';
 import { PageRequestsComponent } from './default-pages/requests/requests.component';
 import { PageNotFoundComponent } from './default-pages/not-found/not-found.component';
@@ -138,7 +138,8 @@ import { PageObligationComponent } from './default-pages/obligation/obligation.c
     ChatroomComponent,
     PageObligationComponent,
     DialogAcceptAndRejectComponent,
-    DialogStartComponent
+    DialogStartComponent,
+    DialogReportIncidentComponent
   ],
   exports: [
     PageDashboardComponent,
@@ -162,7 +163,8 @@ import { PageObligationComponent } from './default-pages/obligation/obligation.c
     DialogResultComponent,
     DialogAddMemberComponent,
     DialogAcceptAndRejectComponent,
-    DialogStartComponent
+    DialogStartComponent,
+    DialogReportIncidentComponent
   ]
 })
 export class PagesModule {}

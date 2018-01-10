@@ -55,8 +55,18 @@ export class PageGroupsComponent implements OnInit {
   loadingObligations = true;
   loadingRequests = true;
   loadingEvents = true;
+
+  isAdmin = false;
+  alertSuccess = false;
+  showStatusAlert = false;
+  alertText = '';
   
-  constructor( private _sharedService: SharedService, private dialog: MdDialog, private apiService: ApiService, private auth: AuthService ) {
+  constructor(
+    private _sharedService: SharedService,
+    private dialog: MdDialog,
+    private apiService: ApiService,
+    private auth: AuthService
+  ) {
     this._sharedService.emitChange(this.pageTitle);
   }
 
@@ -128,7 +138,7 @@ export class PageGroupsComponent implements OnInit {
   }
 
   getGroups(max, page) {
-    console.log("group");
+    this.loadingGroups = true;
     this.groups = [];
     this.groupHeaders = ['Group name', 'Creator', 'number of member', 'Amount', 'Currency', 'Creation Date', 'Description', 'Frequency Every x month(s)', 'Type', 'Rate', {type: 'Action'}];
     this.apiService.getGroups(max, page).then((res: any) => {
@@ -146,13 +156,19 @@ export class PageGroupsComponent implements OnInit {
   }
 
   getGroupMembers(max, page) {
+    this.loadingMembers = true;
     this.members = [];
     this.memberHeaders = ['Name', 'Email', 'Type', 'Picture', 'Position', 'Date', {type: 'Action'}];
     this.apiService.getGroupMembers(max, page).then((res: any) => {
       this.members = [];
       this.totalMember = res.count;
       res.data.map(d => {
-        this.members.push([d.first_name, d.email, d.member_type_text, d.photo_path, d.position, d.user_position_date, {type: ['remove'], id: d.id}]);
+        if (d.member_type === 'ADMIN' && localStorage.getItem('email') === d.email) {
+          this.isAdmin = true;
+          this.members.push([d.first_name, d.email, d.member_type_text, d.photo_path, d.position, d.user_position_date]);
+        } else {
+          this.members.push([d.first_name, d.email, d.member_type_text, d.photo_path, d.position, d.user_position_date, {type: ['remove'], id: d.id}]);
+        }
       });
 
       this.loadingMembers = false;
@@ -160,13 +176,14 @@ export class PageGroupsComponent implements OnInit {
   }
 
   getGroupObligations(max, page) {
+    this.loadingObligations = true;
     this.obligations = [];
     this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Position selection', {type: 'Action'}];
     this.apiService.getGroupObligations(max, page).then((res: any) => {
       this.obligations = [];
       this.totalObligation = res.count;
       res.data.map(d => {
-        this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status_text, d.p_type_text, {type: ['paynow'], id: d.id}]);
+        this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status_text, d.p_type_text, {type: ['paynow'], id: d.id, group_type: d.group_type, payment_is_smooth: d.payment_is_smooth, projected_amount_due: d.projected_amount_due}]);
       });
 
       this.loadingObligations = false;
@@ -174,13 +191,18 @@ export class PageGroupsComponent implements OnInit {
   }
 
   getGroupRequests(max, page) {
+    this.loadingRequests = true;
     this.requests = [];
     this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date', {type: 'Action'}];
     this.apiService.getGroupRequests(max, page).then((res: any) => {
       this.requests = [];
       this.totalRequest = res.count;
       res.data.map(d => {
-        this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation, {type: ['Accept', 'Reject'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type}]);
+        if (this.groupInfo.group_info.status_code === 'RUNNING') {
+          this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation]);
+        } else {
+          this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation, {type: ['Accept', 'Reject'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type}]);
+        }
       });
 
       this.loadingRequests = false;
@@ -188,6 +210,7 @@ export class PageGroupsComponent implements OnInit {
   }
 
   getGroupEvents(max, page) {
+    this.loadingEvents = true;
     this.events = [];
     this.eventHeaders = ['Type', 'Initiator', 'Group', 'Date'];
     this.apiService.getGroupEvents(max, page).then((res: any) => {
@@ -219,7 +242,7 @@ export class PageGroupsComponent implements OnInit {
       console.log(this.groupInfo)
       if (this.isClickedDetails) {
         this.showGroupList = false;
-        this.apiService.showSpinner.next(false);          
+        this.apiService.showSpinner.next(false);
       } else {
         this.showGroupList = true;
       }
@@ -229,9 +252,7 @@ export class PageGroupsComponent implements OnInit {
   openDialog() {
     let dialogRef = this.dialog.open(DialogAddMemberComponent);
     dialogRef.afterClosed().subscribe(result => {
-      if (result === 'yes') {
-      } else {
-      }
+      this.showAlert(result, 'Adding a member');
     });
   }
 
@@ -263,14 +284,48 @@ export class PageGroupsComponent implements OnInit {
   }
 
   removeAll() {
-    this.apiService.removeAll().then(res => {
-      console.log(res);
+    let dialogRef = this.dialog.open(NiDialogComponent, {
+      data: {
+        content: 'Do you really want to remove all the members of this group?',
+        okText: 'Yes',
+        cancelText: 'Cancel'
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'ok') {
+        this.apiService.removeAll().then((res: any) => {
+          if (res.member_removed === 'yes') {
+            this.showAlert('ok', 'Removing all members');
+          } else {
+            this.showAlert('cancel', 'Removing all members');
+          }
+        });
+      } else {
+        this.showAlert('cancel', 'Removing all members');
+      }
     });
   }
 
   cancelAll() {
-    this.apiService.cancelAll().then(res => {
-      console.log(res);
+    let dialogRef = this.dialog.open(NiDialogComponent, {
+      data: {
+        content: 'Do you really want to cancel all outstanding requests?',
+        okText: 'Yes',
+        cancelText: 'No'
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'ok') {
+        this.apiService.cancelAll().then((res: any) => {
+          if (res.request_cancelled === 'yes') {
+            this.showAlert('ok', 'Cancelling all requests');
+          } else {
+            this.showAlert('cancel', 'Cancelling all requests');
+          }
+        });
+      } else {
+        this.showAlert('cancel', 'Cancelling all requests');
+      }
     });
   }
 
@@ -334,7 +389,10 @@ export class PageGroupsComponent implements OnInit {
   }
 
   reportIncident() {
-    
+    let dialogRef = this.dialog.open(DialogReportIncidentComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      this.showAlert(result, 'Reporting an Incident');
+    });
   }
 
   cloneGroup() {
@@ -347,7 +405,21 @@ export class PageGroupsComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'ok') {
+        this.apiService.cloneGroup().then((res: any) => {
+          this.apiService.isMenuClicked = false;
+          this.apiService.isClickedDetails.next(false);
+          this.apiService.groupCounts.next(this.groups.length);
+          this.apiService.initHeaderGroup.next('');
+          if (res.group_added === 'yes') {
+            this.showAlert('ok', 'Cloning a group');
+          } else {
+            this.showAlert('cancel', 'Cloning a group');
+          }
+        }).catch(err => {
+          console.log(err);
+        });
       } else {
+        this.showAlert('cancel', 'Cloning a group');
       }
     });
   }
@@ -362,14 +434,33 @@ export class PageGroupsComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'ok') {
-        this.apiService.addOrUpdateGroup(this.groupInfo.group_info, 'update').then(res => {
-          console.log(res);
+        this.apiService.addOrUpdateGroup(this.groupInfo.group_info, 'update').then((res: any) => {
+          if (res.group_updated === 'yes') {
+            this.showAlert('ok', 'Updating a group');
+          } else {
+            this.showAlert('cancel', 'Updating a group');
+          }
         }).catch(err => {
           console.log(err);
         });
       } else {
+        this.showAlert('cancel', 'Updating a group');
       }
     });
+  }
+
+  showAlert(result, text) {
+    if (result === 'ok') {
+      this.alertSuccess = true;
+      this.alertText = text + ' has been performed successfully.';
+    } else {
+      this.alertSuccess = false;
+      this.alertText = text + ' has not been performed.';
+    }
+    this.showStatusAlert = true;
+    setTimeout(() => {
+      this.showStatusAlert = false;
+    }, 3000);
   }
 }
 
@@ -385,8 +476,12 @@ export class DialogAddMemberComponent {
 
   }
   addMember() {
-    this.dialogRef.close();
-    this.apiService.addMember(this.member).then(res => {
+    this.apiService.addMember(this.member).then((res: any) => {
+      if (res.request_added === 'yes') {
+        this.dialogRef.close('ok');
+      } else {
+        this.dialogRef.close('cancel');
+      }
     });
   }
 }
@@ -417,6 +512,38 @@ export class DialogStartComponent {
     this.dialogRef.close();
     this.apiService.forceStartGroup(this.date).then((res: any) => {
       console.log(res);
+    });
+  }
+}
+
+@Component({
+  selector: 'report-incident',
+  templateUrl: 'report-incident.html',
+})
+export class DialogReportIncidentComponent {
+  comment = '';
+  incidentTypes = [];
+  indexOfIncident = 0;
+
+  constructor(
+    private apiService: ApiService,
+    public dialogRef: MdDialogRef<DialogReportIncidentComponent>
+  ) {
+    this.apiService.getIncidentTypes().then((res: any) => {
+      res.data.map(r => {
+        this.incidentTypes.push(r.code);
+      });
+    });
+  }
+
+  reportIncident() {
+    this.apiService.reportIncident(this.comment).then((res: any) => {
+      console.log(res);
+      if (res.report_sent === 'yes') {
+        this.dialogRef.close('ok');
+      } else {
+        this.dialogRef.close('cancel');
+      }
     });
   }
 }

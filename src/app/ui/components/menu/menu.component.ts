@@ -74,7 +74,7 @@ export class MenuComponent implements OnInit {
     }
 
     if (item.title === 'groups') {
-      this.apiService.isMenuClicked = false;
+      this.apiService.isMenuClicked = true;
       this.apiService.groupCounts.next(this.groupCounts);
     }
 

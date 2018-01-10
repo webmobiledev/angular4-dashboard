@@ -1,0 +1,12 @@
+<div md-dialog-content>
+    <md-select [(ngModel)]="indexOfIncident">
+        <md-option *ngFor="let inc of incidentTypes;let i = index" [value]="i">{{inc}}</md-option>
+    </md-select>
+    <md-input-container class="mt-4">
+        <input mdInput placeholder="Comment" value="" [(ngModel)]="comment">
+    </md-input-container>
+    <div md-dialog-actions>
+        <button md-raised-button (click)="reportIncident()" color="primary" [disabled]="comment === ''">Report</button>
+        <button md-raised-button (click)="dialogRef.close('cancel')" color="default">CANCEL</button>
+    </div>
+</div>

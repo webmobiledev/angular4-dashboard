@@ -11,7 +11,7 @@ import { NiBreadcrumbComponent } from './ni-breadcrumb/ni-breadcrumb.component';
 import { NiButtonComponent }     from './ni-button/ni-button.component';
 import { NiCardComponent }       from './ni-card/ni-card.component';
 import { NiChatComponent }       from './ni-chat/ni-chat.component';
-import { NiTableComponent, DialogRemoveComponent }       from './ni-table/ni-table.component';
+import { NiTableComponent, DialogPaymentComponent }       from './ni-table/ni-table.component';
 import { NiFileComponent }       from './ni-file/ni-file.component';
 import { NiHTimelineComponent }  from './ni-h-timeline/ni-h-timeline.component';
 
@@ -20,7 +20,7 @@ import { BgDirective }           from './directives/bg/bg.directive';
 import { GradientDirective }     from './directives/gradient/gradient.directive';
 import { AutoGrowDirective }     from './directives/auto-grow/auto-grow.directive';
 
-import { MdIconModule, MdProgressBarModule, MdProgressSpinnerModule, MdOptionModule, MdButtonModule, MdSelectModule, MdTooltipModule } from '@angular/material';
+import { MdIconModule, MdProgressBarModule, MdProgressSpinnerModule, MdOptionModule, MdRadioModule, MdButtonModule, MdSelectModule, MdTooltipModule } from '@angular/material';
 import { NiLoadingComponent } from './ni-loading/ni-loading.component';
 import { NiTableLoadingComponent } from './ni-table-loading/ni-table-loading.component';
 import { NiPaginationComponent } from './ni-pagination/ni-pagination.component';
@@ -37,7 +37,8 @@ import { NiDialogComponent } from './ni-dialog/ni-dialog.component';
     MdOptionModule,
     MdButtonModule,
     MdSelectModule,
-    MdTooltipModule
+    MdTooltipModule,
+    MdRadioModule
   ],
   declarations: [
     NiAlertComponent,
@@ -55,9 +56,9 @@ import { NiDialogComponent } from './ni-dialog/ni-dialog.component';
     AutoGrowDirective,
     NiLoadingComponent,
     NiPaginationComponent,
-    DialogRemoveComponent,
     NiTableLoadingComponent,
-    NiDialogComponent
+    NiDialogComponent,
+    DialogPaymentComponent
   ],
   exports: [
     NiAlertComponent,
@@ -74,13 +75,12 @@ import { NiDialogComponent } from './ni-dialog/ni-dialog.component';
     BgDirective,
     GradientDirective,
     NiPaginationComponent,
-    DialogRemoveComponent,
     NiTableLoadingComponent,
     NiDialogComponent
   ],
   entryComponents: [
-    DialogRemoveComponent,
-    NiDialogComponent
+    NiDialogComponent,
+    DialogPaymentComponent
   ]
 })
 export class NiComponentsModule { }

@@ -8,6 +8,10 @@
 @import './components/material-components';
 @import './components/bootstrap';
 
+.mat-dialog-actions:last-child {
+  margin-bottom: 0 !important;
+}
+
 horizontal-navbar {
   .btn-group-list {
     font-size: 12px !important;
@@ -49,7 +53,7 @@ group-create {
 }
 md-dialog-container {
   width: 500px !important;
-  padding: 0 0 30px !important;
+  padding: 0 !important;
   h2 {
     background: #e5e6e9 !important;
     padding: 24px !important;

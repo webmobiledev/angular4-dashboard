@@ -1,4 +1,6 @@
 <ni-alert [color]="'success'" *ngIf="showGroupAlert === true"><strong>Group has been created!</strong></ni-alert>
+<ni-alert [color]="'success'" *ngIf="showStatusAlert && alertSuccess"><strong>{{alertText}}</strong></ni-alert>
+<ni-alert [color]="'danger'" *ngIf="showStatusAlert && !alertSuccess"><strong>{{alertText}}</strong></ni-alert>
 <div *ngIf="showGroupList">
   <div class="row members-header">
     <div class="col-sm-6">
@@ -230,7 +232,7 @@
       <div class="row">
         <div class="col-lg-12 pl-3 pr-3">
           <ni-card [refreshIndex]="2" [title]="'Members' | translate" (refresh)="doRefresh($event)">
-            <ni-table [headers]="memberHeaders" [data]="members"></ni-table>
+            <ni-table [headers]="memberHeaders" [data]="members" (showAlert)="showAlert($event.status, $event.text)"></ni-table>
             <ni-table-loading *ngIf="loadingMembers"></ni-table-loading>
             <ni-alert *ngIf="members.length === 0 && !loadingMembers" [color]="'warning'" [outline]="true"><strong>{{'nomember' | translate}}</strong></ni-alert>
             <ni-pagination [totalItems]="totalMember" [itemPerPage]="maxMember" [currentPage]="pageMember" *ngIf="members.length > 0" (changePage)="changeMemberPage($event)"></ni-pagination>
@@ -253,7 +255,7 @@
       <div class="row">
         <div class="col-lg-12 pl-3 pr-3">
           <ni-card [refreshIndex]="3" [title]="'Obligation' | translate" (refresh)="doRefresh($event)">
-            <ni-table [headers]="obligationHeaders" [data]="obligations"></ni-table>
+            <ni-table [headers]="obligationHeaders" [data]="obligations" (showAlert)="showAlert($event.status, $event.text)"></ni-table>
             <ni-table-loading *ngIf="loadingObligations"></ni-table-loading>
             <ni-alert *ngIf="obligations.length === 0 && !loadingObligations" [color]="'warning'" [outline]="true"><strong>{{'noobligation' | translate}}</strong></ni-alert>
             <ni-pagination [totalItems]="totalObligation" [itemPerPage]="maxObligation" [currentPage]="pageObligation" *ngIf="obligations.length > 0" (changePage)="changeObligationPage($event)"></ni-pagination>
@@ -267,7 +269,7 @@
       </ng-template>
       <div class="row members-header">
         <div class="col-sm-6 p-3">
-          <button md-raised-button color="primary" (click)="cancelAll()">{{'Cancel all outstanding request' | translate}}</button>
+          <button md-raised-button color="primary" *ngIf="isAdmin" (click)="cancelAll()">{{'Cancel all outstanding request' | translate}}</button>
         </div>
         <div class="col-sm-6 text-right p-3">
           <md-input-container class="search-group md-icon-left">

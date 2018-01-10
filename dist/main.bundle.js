@@ -68,11 +68,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var groupsRoutes = [
-    { path: '**', component: __WEBPACK_IMPORTED_MODULE_6__pages_default_pages_groups_groups_component__["c" /* PageGroupsComponent */] },
+    { path: '**', component: __WEBPACK_IMPORTED_MODULE_6__pages_default_pages_groups_groups_component__["d" /* PageGroupsComponent */] },
 ];
 var defaultRoutes = [
     { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_5__pages_default_pages_dashboard_dashboard_component__["b" /* PageDashboardComponent */] },
-    { path: 'groups', component: __WEBPACK_IMPORTED_MODULE_6__pages_default_pages_groups_groups_component__["c" /* PageGroupsComponent */] },
+    { path: 'groups', component: __WEBPACK_IMPORTED_MODULE_6__pages_default_pages_groups_groups_component__["d" /* PageGroupsComponent */] },
     { path: 'transactions', component: __WEBPACK_IMPORTED_MODULE_7__pages_default_pages_transactions_transactions_component__["a" /* PageTransactionsComponent */] },
     { path: 'requests', component: __WEBPACK_IMPORTED_MODULE_8__pages_default_pages_requests_requests_component__["a" /* PageRequestsComponent */] },
     { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_11__pages_default_pages_profile_profile_component__["a" /* PageProfileComponent */] },
@@ -1577,7 +1577,8 @@ var NiComponentsModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_18__angular_material__["t" /* MdOptionModule */],
                 __WEBPACK_IMPORTED_MODULE_18__angular_material__["c" /* MdButtonModule */],
                 __WEBPACK_IMPORTED_MODULE_18__angular_material__["z" /* MdSelectModule */],
-                __WEBPACK_IMPORTED_MODULE_18__angular_material__["I" /* MdTooltipModule */]
+                __WEBPACK_IMPORTED_MODULE_18__angular_material__["I" /* MdTooltipModule */],
+                __WEBPACK_IMPORTED_MODULE_18__angular_material__["x" /* MdRadioModule */]
             ],
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_5__ni_alert_ni_alert_component__["a" /* NiAlertComponent */],
@@ -1595,9 +1596,9 @@ var NiComponentsModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_17__directives_auto_grow_auto_grow_directive__["a" /* AutoGrowDirective */],
                 __WEBPACK_IMPORTED_MODULE_19__ni_loading_ni_loading_component__["a" /* NiLoadingComponent */],
                 __WEBPACK_IMPORTED_MODULE_21__ni_pagination_ni_pagination_component__["a" /* NiPaginationComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["a" /* DialogRemoveComponent */],
                 __WEBPACK_IMPORTED_MODULE_20__ni_table_loading_ni_table_loading_component__["a" /* NiTableLoadingComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__ni_dialog_ni_dialog_component__["a" /* NiDialogComponent */]
+                __WEBPACK_IMPORTED_MODULE_22__ni_dialog_ni_dialog_component__["a" /* NiDialogComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["a" /* DialogPaymentComponent */]
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_5__ni_alert_ni_alert_component__["a" /* NiAlertComponent */],
@@ -1614,13 +1615,12 @@ var NiComponentsModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_15__directives_bg_bg_directive__["a" /* BgDirective */],
                 __WEBPACK_IMPORTED_MODULE_16__directives_gradient_gradient_directive__["a" /* GradientDirective */],
                 __WEBPACK_IMPORTED_MODULE_21__ni_pagination_ni_pagination_component__["a" /* NiPaginationComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["a" /* DialogRemoveComponent */],
                 __WEBPACK_IMPORTED_MODULE_20__ni_table_loading_ni_table_loading_component__["a" /* NiTableLoadingComponent */],
                 __WEBPACK_IMPORTED_MODULE_22__ni_dialog_ni_dialog_component__["a" /* NiDialogComponent */]
             ],
             entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["a" /* DialogRemoveComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__ni_dialog_ni_dialog_component__["a" /* NiDialogComponent */]
+                __WEBPACK_IMPORTED_MODULE_22__ni_dialog_ni_dialog_component__["a" /* NiDialogComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["a" /* DialogPaymentComponent */]
             ]
         })
     ], NiComponentsModule);
@@ -1634,7 +1634,7 @@ var NiComponentsModule = (function () {
 /***/ "../../../../../src/app/ni-components/ni-dialog/ni-dialog.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div md-dialog-content class=\"p-3 text-center content\">{{content | translate}}</div>\n<div md-dialog-actions class=\"text-center buttons\">\n  <button md-raised-button (click)=\"closeDialog('ok')\" color=\"primary\">{{okText | translate}}</button>\n  <button md-raised-button (click)=\"closeDialog('cancel')\" color=\"default\">{{cancelText | translate}}</button>\n</div>"
+module.exports = "<div md-dialog-content class=\"p-3 text-center content\">\n  <p>{{content | translate}}</p>\n  <div md-dialog-actions class=\"text-center buttons\">\n    <button md-raised-button (click)=\"closeDialog('ok')\" color=\"primary\">{{okText | translate}}</button>\n    <button md-raised-button (click)=\"closeDialog('cancel')\" color=\"default\">{{cancelText | translate}}</button>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -2171,17 +2171,35 @@ var NiTableLoadingComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/ni-components/ni-table/dialog-remove.html":
+/***/ "../../../../../src/app/ni-components/ni-table/dialog-payment/dialog-payment.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div md-dialog-content>What would you like to do?</div>\n<div md-dialog-actions class=\"mt-3\">\n  <button md-raised-button (click)=\"dialogRef.close('ok')\" color=\"primary\">{{'Ok' | translate}}</button>\n  <button md-raised-button (click)=\"dialogRef.close('cancel')\" color=\"default\">{{'Cancel' | translate}}</button>\n</div>"
+module.exports = "<div md-dialog-content class=\"p-3\" *ngIf=\"pageNum === 1\">\n    <md-radio-group class=\"column-layout\" *ngIf=\"data.group_type === 'PRIVATE' || (data.group_type === 'PUBLIC' && data.payment_is_smooth === '1')\" [(ngModel)]=\"selectedType\">\n        <md-radio-button value=\"1\" [checked]=\"true\">Pay by credit card or PayPal</md-radio-button>\n        <md-radio-button value=\"2\">Pay with bitcoin</md-radio-button>\n        <md-radio-button value=\"3\">Pay with ether</md-radio-button>\n        <md-radio-button value=\"4\">Pay with Kori</md-radio-button>\n        <md-radio-button value=\"5\">Pay by bank transfer</md-radio-button>\n    </md-radio-group>\n    <md-radio-group class=\"column-layout\" *ngIf=\"data.group_type === 'PUBLIC' && data.payment_is_smooth === '0'\" [(ngModel)]=\"selectedType\">\n        <md-radio-button value=\"0\">Declare a payment by hand</md-radio-button>\n        <md-radio-button value=\"1\" [checked]=\"true\">Pay by credit card or PayPal</md-radio-button>\n        <md-radio-button value=\"2\">Pay with bitcoin</md-radio-button>\n        <md-radio-button value=\"3\">Pay with ether</md-radio-button>\n        <md-radio-button value=\"4\">Pay with Kori</md-radio-button>\n        <md-radio-button value=\"5\">Pay by bank transfer</md-radio-button>\n    </md-radio-group>\n    <div md-dialog-actions class=\"buttons\">\n        <button md-raised-button (click)=\"dialogRef.close('cancel')\" color=\"default\">CANCEL</button>\n        <button md-raised-button (click)=\"pageNum = 2\" color=\"primary\">Next</button>\n    </div>\n</div>\n\n<div md-dialog-content class=\"p-3\" *ngIf=\"pageNum === 2\">\n    <p *ngIf=\"selectedType === 0\">This send an approval request to the receiver for the amount {{data.projected_amount_due}} and he will enter the date at which he received the amount.</p>\n    <div md-dialog-actions class=\"buttons\">\n        <button md-raised-button (click)=\"pageNum = 1\" color=\"primary\">Previous</button>\n        <button md-raised-button (click)=\"dialogRef.close('cancel')\" color=\"default\">CANCEL</button>\n        <button md-raised-button (click)=\"sendApproval()\" color=\"primary\">Send approval request</button>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/ni-components/ni-table/dialog-payment/dialog-payment.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".buttons {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
 
 /***/ }),
 
 /***/ "../../../../../src/app/ni-components/ni-table/ni-table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <div class=\"table-responsive\">\n    <table class=\"table table-striped table-sm\">\n      <thead>\n      <tr>\n        <th *ngFor=\"let h of headers\">\n          <span *ngIf=\"!h.type\">{{ h | translate }}</span>\n          <span *ngIf=\"h.type\">{{ h.type | translate }}</span>\n        </th>\n      </tr>\n      </thead>\n      <tbody>\n      <tr *ngFor=\"let d of data\">\n        <td *ngFor=\"let s of d\">\n          <span *ngIf=\"!s.type\">{{ s }}</span>\n          <button md-raised-button color=\"primary\" *ngIf=\"s.type && (s.type)[0] === 'details'\" (click)=\"changePage(s.id)\">details</button>\n          <button md-raised-button color=\"primary\" *ngIf=\"s.type && (s.type)[0] === 'remove'\" (click)=\"removeUser(s.id)\">remove</button>\n          <button md-raised-button color=\"primary\" *ngIf=\"s.type && (s.type)[0] === 'paynow'\">pay now</button>\n          <button md-raised-button color=\"primary\" *ngIf=\"s.type && (s.type)[0] === 'Open'\" (click)=\"showDialog(s.id)\">{{'Open' | translate}}</button>\n        </td>\n      </tr>\n      </tbody>\n    </table>\n  </div>\n</div>"
+module.exports = "<div>\n  <div class=\"table-responsive\">\n    <table class=\"table table-striped table-sm\">\n      <thead>\n      <tr>\n        <th *ngFor=\"let h of headers\">\n          <span *ngIf=\"!h.type\">{{ h | translate }}</span>\n          <span *ngIf=\"h.type\">{{ h.type | translate }}</span>\n        </th>\n      </tr>\n      </thead>\n      <tbody>\n      <tr *ngFor=\"let d of data\">\n        <td *ngFor=\"let s of d\">\n          <span *ngIf=\"!s.type\">{{ s }}</span>\n          <button md-raised-button color=\"primary\" *ngIf=\"s.type && (s.type)[0] === 'details'\" (click)=\"changePage(s.id)\">Details</button>\n          <button md-raised-button color=\"primary\" *ngIf=\"s.type && (s.type)[0] === 'remove'\" (click)=\"removeUser(s.id)\">Remove</button>\n          <button md-raised-button color=\"primary\" *ngIf=\"s.type && (s.type)[0] === 'paynow'\" (click)=\"showPayDialog(s)\">Pay now</button>\n          <button md-raised-button color=\"primary\" *ngIf=\"s.type && (s.type)[0] === 'Open'\" (click)=\"showDialog(s.id)\">{{'Open' | translate}}</button>\n        </td>\n      </tr>\n      </tbody>\n    </table>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -2208,10 +2226,11 @@ module.exports = module.exports.toString();
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return NiTableComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogRemoveComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogPaymentComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ni_dialog_ni_dialog_component__ = __webpack_require__("../../../../../src/app/ni-components/ni-dialog/ni-dialog.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2221,6 +2240,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
 
 
 
@@ -2231,6 +2254,7 @@ var NiTableComponent = (function () {
         this.headers = [];
         this.data = [];
         this.showRequestDialog = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.showAlert = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
     NiTableComponent.prototype.ngOnInit = function () {
     };
@@ -2242,15 +2266,38 @@ var NiTableComponent = (function () {
     NiTableComponent.prototype.showDialog = function (groupId) {
         this.showRequestDialog.emit(groupId);
     };
-    NiTableComponent.prototype.removeUser = function (groupId, memberId) {
+    NiTableComponent.prototype.removeUser = function (memberId) {
         var _this = this;
-        var dialogRef = this.dialog.open(DialogRemoveComponent);
+        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_3__ni_dialog_ni_dialog_component__["a" /* NiDialogComponent */], {
+            data: {
+                content: 'Do you really want to remove this member?',
+                okText: 'Yes',
+                cancelText: 'Cancel'
+            }
+        });
         dialogRef.afterClosed().subscribe(function (result) {
             if (result === 'ok') {
-                _this.apiService.removeUser(groupId, memberId).then(function (res) {
-                    console.log(res);
+                _this.apiService.removeUser(memberId).then(function (res) {
+                    if (res.status === 'yes') {
+                        _this.showAlert.emit({ status: 'ok', text: 'Removing member' });
+                    }
+                    else {
+                        _this.showAlert.emit({ status: 'cancel', text: 'Removing member' });
+                    }
                 });
             }
+            else {
+                _this.showAlert.emit({ status: 'cancel', text: 'Removing member' });
+            }
+        });
+    };
+    NiTableComponent.prototype.showPayDialog = function (data) {
+        var _this = this;
+        var dialogRef = this.dialog.open(DialogPaymentComponent, {
+            data: data
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            _this.showAlert.emit({ status: result, text: 'Paying obligation' });
         });
     };
     __decorate([
@@ -2265,6 +2312,10 @@ var NiTableComponent = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
         __metadata("design:type", Object)
     ], NiTableComponent.prototype, "showRequestDialog", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+        __metadata("design:type", Object)
+    ], NiTableComponent.prototype, "showAlert", void 0);
     NiTableComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'ni-table',
@@ -2280,19 +2331,36 @@ var NiTableComponent = (function () {
     var _a, _b;
 }());
 
-var DialogRemoveComponent = (function () {
-    function DialogRemoveComponent(dialogRef) {
+var DialogPaymentComponent = (function () {
+    function DialogPaymentComponent(dialogRef, data, apiService) {
         this.dialogRef = dialogRef;
+        this.data = data;
+        this.apiService = apiService;
+        this.pageNum = 1;
+        this.selectedType = 1;
     }
-    DialogRemoveComponent = __decorate([
+    DialogPaymentComponent.prototype.sendApproval = function () {
+        var _this = this;
+        this.apiService.sendApproval(this.data.id).then(function (res) {
+            if (res.request_added === 'yes') {
+                _this.dialogRef.close('ok');
+            }
+            else {
+                _this.dialogRef.close('cancel');
+            }
+        });
+    };
+    DialogPaymentComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'dialog-remove',
-            template: __webpack_require__("../../../../../src/app/ni-components/ni-table/dialog-remove.html"),
+            selector: 'dialog-payment',
+            template: __webpack_require__("../../../../../src/app/ni-components/ni-table/dialog-payment/dialog-payment.html"),
+            styles: [__webpack_require__("../../../../../src/app/ni-components/ni-table/dialog-payment/dialog-payment.scss")]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */]) === "function" && _a || Object])
-    ], DialogRemoveComponent);
-    return DialogRemoveComponent;
-    var _a;
+        __param(1, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["a" /* MD_DIALOG_DATA */])),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */]) === "function" && _a || Object, Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
+    ], DialogPaymentComponent);
+    return DialogPaymentComponent;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=ni-table.component.js.map
@@ -2791,7 +2859,7 @@ var DialogAcceptAndRejectComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/groups/dialog-add-member.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 md-dialog-title>Add member</h2>\n<div md-dialog-content>\n  <md-input-container>\n    <input mdInput placeholder=\"Member to add\" value=\"\" [(ngModel)]=\"member\">\n  </md-input-container>\n  <div md-dialog-actions>\n    <button md-raised-button (click)=\"dialogRef.close('no')\" color=\"default\">CANCEL</button>\n    <button md-raised-button (click)=\"addMember()\" color=\"primary\" [disabled]=\"member === ''\">Add</button>\n  </div>\n</div>"
+module.exports = "<h2 md-dialog-title>Add member</h2>\n<div md-dialog-content>\n  <md-input-container class=\"mt-4\">\n    <input mdInput placeholder=\"Member to add\" value=\"\" [(ngModel)]=\"member\">\n  </md-input-container>\n  <div md-dialog-actions>\n    <button md-raised-button (click)=\"dialogRef.close('no')\" color=\"default\">CANCEL</button>\n    <button md-raised-button (click)=\"addMember()\" color=\"primary\" [disabled]=\"member === ''\">Add</button>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -2805,7 +2873,7 @@ module.exports = "<h2 md-dialog-title>Start Group</h2>\n<div md-dialog-content *
 /***/ "../../../../../src/app/pages/default-pages/groups/groups.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-alert [color]=\"'success'\" *ngIf=\"showGroupAlert === true\"><strong>Group has been created!</strong></ni-alert>\r\n<div *ngIf=\"showGroupList\">\r\n  <div class=\"row members-header\">\r\n    <div class=\"col-sm-6\">\r\n      <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \r\n    </div>\r\n    <div class=\"col-sm-6 text-right\">\r\n      <md-input-container class=\"search-group md-icon-left\">\r\n        <md-icon>search</md-icon>\r\n        <input mdInput value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12\">\r\n      <ni-card [refreshIndex]=\"1\" [title]=\"'Groups' | translate\" (refresh)=\"doRefresh($event)\">\r\n        <ni-table [headers]=\"groupHeaders\" [data]=\"groups\"></ni-table>\r\n        <ni-table-loading *ngIf=\"loadingGroups\"></ni-table-loading>\r\n        <ni-alert *ngIf=\"groups.length === 0 && !loadingGroups\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nogroup' | translate}}</strong></ni-alert>\r\n        <ni-pagination [totalItems]=\"totalGroup\" [itemPerPage]=\"maxGroup\" [currentPage]=\"pageGroup\" *ngIf=\"groups.length > 0\" (changePage)=\"changeGroupPage($event)\"></ni-pagination>\r\n      </ni-card>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"!showGroupList\">\r\n  <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n  <md-tab-group>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>home</md-icon> {{'Home' | translate}}\r\n      </ng-template>\r\n      <div class=\"row p-2\">\r\n        <div class=\"col-sm-12 pt-3\">\r\n          <button *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code !== 'RUNNING'\" md-raised-button color=\"primary\" (click)=\"updateGroup()\">{{'Update' | translate}}</button>\r\n          <button md-raised-button color=\"primary\" (click)=\"reportIncident()\">{{'Report an Incident' | translate}}</button>\r\n          <button *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code !== 'RUNNING'\" md-raised-button color=\"primary\" (click)=\"closeGroup()\">{{'Close' | translate}}</button>\r\n          <button md-raised-button color=\"primary\" (click)=\"cloneGroup()\">{{'Clone' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-md-7 mb-3\">\r\n          <button md-raised-button color=\"primary\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code === 'PENDING_FOR_KICK_OFF'\" (click)=\"openStartDialog()\">Start</button>\r\n          <button md-raised-button color=\"primary\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code === 'PENDING_FOR_KICK_OFF'\" (click)=\"openDialog()\">Add a member</button>\r\n          <button md-raised-button color=\"primary\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code === 'PENDING_FOR_KICK_OFF'\">Save changes</button>\r\n          <md-card class=\"example-card mt-3\" *ngIf=\"groupInfo && groupInfo.group_info\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Name:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.name\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Description:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.description\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">First Payment:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.date_first_payment\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT' && groupInfo.group_info.status_code !== 'REQUEST_FOR_POSITION_VALIDATION_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Date creation:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [mdDatepicker]=\"picker\" [(ngModel)]=\"groupInfo.group_info.date_creation\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <button mdSuffix [mdDatepickerToggle]=\"picker\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\"></button>\r\n                </md-input-container>\r\n                <md-datepicker #picker></md-datepicker>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Type:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.g_type_text\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.g_type_text\">{{groupInfo.group_info.g_type_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Currency:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.currency\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.currency\">{{groupInfo.group_info.currency}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Creator:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.creator\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Status:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.status_text\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.status_text\">{{groupInfo.group_info.status_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Position selection method:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.position_selection_type_text\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.position_selection_type_text\">{{groupInfo.group_info.position_selection_type_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Rate (%):</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.rate\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Frequency (month):</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.frequency\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Due date:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.due_day\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Number of member:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.nb_members\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Smooth Payment:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.smooth_payment === '1' ? 'Yes' : 'No'}}\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">% Penalty for delay payment:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.delay_payment_penalty\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Number of days of delay before applying % penalty:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.nb_days_delay_before_penalty\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-5 pt-3\" *ngIf=\"groupInfo.group_info.g_type !== 'PUBLIC'\">\r\n          <ni-card [outline]=\"true\" [bgColor]=\"'warning'\" class=\"info-card\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'\">\r\n            <div class=\"title text-uppercase\">{{'Amount' | translate}}</div>\r\n            <div class=\"count\">2,543</div>\r\n          </ni-card>\r\n          <ni-card [title]=\"'timeline' | translate\" [customBgColor]=\"'transparent'\">\r\n            <ni-h-timeline [data]=\"timelineData\"></ni-h-timeline>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.previous_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Previous Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.previous_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.previous_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.previous_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.previous_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.next_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Next Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.next_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.next_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.next_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.next_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>card_membership</md-icon> {{'Members' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button *ngIf=\"groupInfo.group_info.status_code !== 'RUNNING'\" md-raised-button color=\"primary\" (click)=\"openDialog()\">{{'Add a member' | translate}}</button>\r\n          <button *ngIf=\"groupInfo.group_info.status_code !== 'RUNNING'\" md-raised-button color=\"primary\" (click)=\"removeAll()\">{{'Remove all members' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"2\" [title]=\"'Members' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"memberHeaders\" [data]=\"members\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingMembers\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"members.length === 0 && !loadingMembers\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nomember' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalMember\" [itemPerPage]=\"maxMember\" [currentPage]=\"pageMember\" *ngIf=\"members.length > 0\" (changePage)=\"changeMemberPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>check_box</md-icon> {{'Obligation' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"3\" [title]=\"'Obligation' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"obligationHeaders\" [data]=\"obligations\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingObligations\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"obligations.length === 0 && !loadingObligations\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noobligation' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalObligation\" [itemPerPage]=\"maxObligation\" [currentPage]=\"pageObligation\" *ngIf=\"obligations.length > 0\" (changePage)=\"changeObligationPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>sms_failed</md-icon> {{'Requests' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"primary\" (click)=\"cancelAll()\">{{'Cancel all outstanding request' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"4\" [title]=\"'Requests' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingRequests\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"requests.length === 0 && !loadingRequests\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'norequest' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalRequest\" [itemPerPage]=\"maxRequest\" [currentPage]=\"pageRequest\" *ngIf=\"requests.length > 0\" (changePage)=\"changeRequestPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>event</md-icon> {{'Event' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"5\" [title]=\"'Event' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"eventHeaders\" [data]=\"events\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingEvents\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"events.length === 0 && !loadingEvents\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noevent' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalEvent\" [itemPerPage]=\"maxEvent\" [currentPage]=\"pageEvent\" *ngIf=\"events.length > 0\" (changePage)=\"changeEventPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>local_atm</md-icon> {{'transaction' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"6\" [title]=\"'transaction' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <!-- <ni-table [headers]=\"transactionHeaders\" [data]=\"transactions\"></ni-table>\r\n            <ni-alert *ngIf=\"transactions.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'notransaction' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"transactions.length\" *ngIf=\"transactions.length > 0\" (changePage)=\"changeTransactionPage($event)\"></ni-pagination> -->\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n  </md-tab-group>\r\n</div>\r\n\r\n<ni-loading></ni-loading>"
+module.exports = "<ni-alert [color]=\"'success'\" *ngIf=\"showGroupAlert === true\"><strong>Group has been created!</strong></ni-alert>\r\n<ni-alert [color]=\"'success'\" *ngIf=\"showStatusAlert && alertSuccess\"><strong>{{alertText}}</strong></ni-alert>\r\n<ni-alert [color]=\"'danger'\" *ngIf=\"showStatusAlert && !alertSuccess\"><strong>{{alertText}}</strong></ni-alert>\r\n<div *ngIf=\"showGroupList\">\r\n  <div class=\"row members-header\">\r\n    <div class=\"col-sm-6\">\r\n      <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \r\n    </div>\r\n    <div class=\"col-sm-6 text-right\">\r\n      <md-input-container class=\"search-group md-icon-left\">\r\n        <md-icon>search</md-icon>\r\n        <input mdInput value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12\">\r\n      <ni-card [refreshIndex]=\"1\" [title]=\"'Groups' | translate\" (refresh)=\"doRefresh($event)\">\r\n        <ni-table [headers]=\"groupHeaders\" [data]=\"groups\"></ni-table>\r\n        <ni-table-loading *ngIf=\"loadingGroups\"></ni-table-loading>\r\n        <ni-alert *ngIf=\"groups.length === 0 && !loadingGroups\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nogroup' | translate}}</strong></ni-alert>\r\n        <ni-pagination [totalItems]=\"totalGroup\" [itemPerPage]=\"maxGroup\" [currentPage]=\"pageGroup\" *ngIf=\"groups.length > 0\" (changePage)=\"changeGroupPage($event)\"></ni-pagination>\r\n      </ni-card>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"!showGroupList\">\r\n  <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n  <md-tab-group>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>home</md-icon> {{'Home' | translate}}\r\n      </ng-template>\r\n      <div class=\"row p-2\">\r\n        <div class=\"col-sm-12 pt-3\">\r\n          <button *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code !== 'RUNNING'\" md-raised-button color=\"primary\" (click)=\"updateGroup()\">{{'Update' | translate}}</button>\r\n          <button md-raised-button color=\"primary\" (click)=\"reportIncident()\">{{'Report an Incident' | translate}}</button>\r\n          <button *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code !== 'RUNNING'\" md-raised-button color=\"primary\" (click)=\"closeGroup()\">{{'Close' | translate}}</button>\r\n          <button md-raised-button color=\"primary\" (click)=\"cloneGroup()\">{{'Clone' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-md-7 mb-3\">\r\n          <button md-raised-button color=\"primary\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code === 'PENDING_FOR_KICK_OFF'\" (click)=\"openStartDialog()\">Start</button>\r\n          <button md-raised-button color=\"primary\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code === 'PENDING_FOR_KICK_OFF'\" (click)=\"openDialog()\">Add a member</button>\r\n          <button md-raised-button color=\"primary\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code === 'PENDING_FOR_KICK_OFF'\">Save changes</button>\r\n          <md-card class=\"example-card mt-3\" *ngIf=\"groupInfo && groupInfo.group_info\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Name:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.name\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Description:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.description\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">First Payment:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.date_first_payment\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT' && groupInfo.group_info.status_code !== 'REQUEST_FOR_POSITION_VALIDATION_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Date creation:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [mdDatepicker]=\"picker\" [(ngModel)]=\"groupInfo.group_info.date_creation\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <button mdSuffix [mdDatepickerToggle]=\"picker\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\"></button>\r\n                </md-input-container>\r\n                <md-datepicker #picker></md-datepicker>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Type:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.g_type_text\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.g_type_text\">{{groupInfo.group_info.g_type_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Currency:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.currency\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.currency\">{{groupInfo.group_info.currency}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Creator:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.creator\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Status:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.status_text\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.status_text\">{{groupInfo.group_info.status_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Position selection method:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.position_selection_type_text\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.position_selection_type_text\">{{groupInfo.group_info.position_selection_type_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Rate (%):</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.rate\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Frequency (month):</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.frequency\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Due date:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.due_day\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Number of member:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.nb_members\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Smooth Payment:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.smooth_payment === '1' ? 'Yes' : 'No'}}\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">% Penalty for delay payment:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.delay_payment_penalty\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Number of days of delay before applying % penalty:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.nb_days_delay_before_penalty\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-5 pt-3\" *ngIf=\"groupInfo.group_info.g_type !== 'PUBLIC'\">\r\n          <ni-card [outline]=\"true\" [bgColor]=\"'warning'\" class=\"info-card\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'\">\r\n            <div class=\"title text-uppercase\">{{'Amount' | translate}}</div>\r\n            <div class=\"count\">2,543</div>\r\n          </ni-card>\r\n          <ni-card [title]=\"'timeline' | translate\" [customBgColor]=\"'transparent'\">\r\n            <ni-h-timeline [data]=\"timelineData\"></ni-h-timeline>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.previous_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Previous Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.previous_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.previous_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.previous_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.previous_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.next_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Next Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.next_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.next_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.next_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.next_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>card_membership</md-icon> {{'Members' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button *ngIf=\"groupInfo.group_info.status_code !== 'RUNNING'\" md-raised-button color=\"primary\" (click)=\"openDialog()\">{{'Add a member' | translate}}</button>\r\n          <button *ngIf=\"groupInfo.group_info.status_code !== 'RUNNING'\" md-raised-button color=\"primary\" (click)=\"removeAll()\">{{'Remove all members' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"2\" [title]=\"'Members' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"memberHeaders\" [data]=\"members\" (showAlert)=\"showAlert($event.status, $event.text)\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingMembers\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"members.length === 0 && !loadingMembers\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nomember' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalMember\" [itemPerPage]=\"maxMember\" [currentPage]=\"pageMember\" *ngIf=\"members.length > 0\" (changePage)=\"changeMemberPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>check_box</md-icon> {{'Obligation' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"3\" [title]=\"'Obligation' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"obligationHeaders\" [data]=\"obligations\" (showAlert)=\"showAlert($event.status, $event.text)\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingObligations\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"obligations.length === 0 && !loadingObligations\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noobligation' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalObligation\" [itemPerPage]=\"maxObligation\" [currentPage]=\"pageObligation\" *ngIf=\"obligations.length > 0\" (changePage)=\"changeObligationPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>sms_failed</md-icon> {{'Requests' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"primary\" *ngIf=\"isAdmin\" (click)=\"cancelAll()\">{{'Cancel all outstanding request' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"4\" [title]=\"'Requests' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"requestHeaders\" [data]=\"requests\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingRequests\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"requests.length === 0 && !loadingRequests\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'norequest' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalRequest\" [itemPerPage]=\"maxRequest\" [currentPage]=\"pageRequest\" *ngIf=\"requests.length > 0\" (changePage)=\"changeRequestPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>event</md-icon> {{'Event' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"5\" [title]=\"'Event' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"eventHeaders\" [data]=\"events\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingEvents\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"events.length === 0 && !loadingEvents\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noevent' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalEvent\" [itemPerPage]=\"maxEvent\" [currentPage]=\"pageEvent\" *ngIf=\"events.length > 0\" (changePage)=\"changeEventPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>local_atm</md-icon> {{'transaction' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"6\" [title]=\"'transaction' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <!-- <ni-table [headers]=\"transactionHeaders\" [data]=\"transactions\"></ni-table>\r\n            <ni-alert *ngIf=\"transactions.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'notransaction' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"transactions.length\" *ngIf=\"transactions.length > 0\" (changePage)=\"changeTransactionPage($event)\"></ni-pagination> -->\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n  </md-tab-group>\r\n</div>\r\n\r\n<ni-loading></ni-loading>"
 
 /***/ }),
 
@@ -2831,9 +2899,10 @@ module.exports = module.exports.toString();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return PageGroupsComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return PageGroupsComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogAddMemberComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return DialogStartComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return DialogStartComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return DialogReportIncidentComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
@@ -2899,6 +2968,10 @@ var PageGroupsComponent = (function () {
         this.loadingObligations = true;
         this.loadingRequests = true;
         this.loadingEvents = true;
+        this.isAdmin = false;
+        this.alertSuccess = false;
+        this.showStatusAlert = false;
+        this.alertText = '';
         this._sharedService.emitChange(this.pageTitle);
     }
     PageGroupsComponent.prototype.ngOnInit = function () {
@@ -2967,7 +3040,7 @@ var PageGroupsComponent = (function () {
     };
     PageGroupsComponent.prototype.getGroups = function (max, page) {
         var _this = this;
-        console.log("group");
+        this.loadingGroups = true;
         this.groups = [];
         this.groupHeaders = ['Group name', 'Creator', 'number of member', 'Amount', 'Currency', 'Creation Date', 'Description', 'Frequency Every x month(s)', 'Type', 'Rate', { type: 'Action' }];
         this.apiService.getGroups(max, page).then(function (res) {
@@ -2984,45 +3057,60 @@ var PageGroupsComponent = (function () {
     };
     PageGroupsComponent.prototype.getGroupMembers = function (max, page) {
         var _this = this;
+        this.loadingMembers = true;
         this.members = [];
         this.memberHeaders = ['Name', 'Email', 'Type', 'Picture', 'Position', 'Date', { type: 'Action' }];
         this.apiService.getGroupMembers(max, page).then(function (res) {
             _this.members = [];
             _this.totalMember = res.count;
             res.data.map(function (d) {
-                _this.members.push([d.first_name, d.email, d.member_type_text, d.photo_path, d.position, d.user_position_date, { type: ['remove'], id: d.id }]);
+                if (d.member_type === 'ADMIN' && localStorage.getItem('email') === d.email) {
+                    _this.isAdmin = true;
+                    _this.members.push([d.first_name, d.email, d.member_type_text, d.photo_path, d.position, d.user_position_date]);
+                }
+                else {
+                    _this.members.push([d.first_name, d.email, d.member_type_text, d.photo_path, d.position, d.user_position_date, { type: ['remove'], id: d.id }]);
+                }
             });
             _this.loadingMembers = false;
         });
     };
     PageGroupsComponent.prototype.getGroupObligations = function (max, page) {
         var _this = this;
+        this.loadingObligations = true;
         this.obligations = [];
         this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Position selection', { type: 'Action' }];
         this.apiService.getGroupObligations(max, page).then(function (res) {
             _this.obligations = [];
             _this.totalObligation = res.count;
             res.data.map(function (d) {
-                _this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status_text, d.p_type_text, { type: ['paynow'], id: d.id }]);
+                _this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status_text, d.p_type_text, { type: ['paynow'], id: d.id, group_type: d.group_type, payment_is_smooth: d.payment_is_smooth, projected_amount_due: d.projected_amount_due }]);
             });
             _this.loadingObligations = false;
         });
     };
     PageGroupsComponent.prototype.getGroupRequests = function (max, page) {
         var _this = this;
+        this.loadingRequests = true;
         this.requests = [];
         this.requestHeaders = ['Sender', 'Receiver', 'Group', 'Type', 'Status', 'Date', { type: 'Action' }];
         this.apiService.getGroupRequests(max, page).then(function (res) {
             _this.requests = [];
             _this.totalRequest = res.count;
             res.data.map(function (d) {
-                _this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation, { type: ['Accept', 'Reject'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type }]);
+                if (_this.groupInfo.group_info.status_code === 'RUNNING') {
+                    _this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation]);
+                }
+                else {
+                    _this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation, { type: ['Accept', 'Reject'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type }]);
+                }
             });
             _this.loadingRequests = false;
         });
     };
     PageGroupsComponent.prototype.getGroupEvents = function (max, page) {
         var _this = this;
+        this.loadingEvents = true;
         this.events = [];
         this.eventHeaders = ['Type', 'Initiator', 'Group', 'Date'];
         this.apiService.getGroupEvents(max, page).then(function (res) {
@@ -3061,12 +3149,10 @@ var PageGroupsComponent = (function () {
         });
     };
     PageGroupsComponent.prototype.openDialog = function () {
+        var _this = this;
         var dialogRef = this.dialog.open(DialogAddMemberComponent);
         dialogRef.afterClosed().subscribe(function (result) {
-            if (result === 'yes') {
-            }
-            else {
-            }
+            _this.showAlert(result, 'Adding a member');
         });
     };
     PageGroupsComponent.prototype.openStartDialog = function () {
@@ -3096,13 +3182,53 @@ var PageGroupsComponent = (function () {
         return d.toString();
     };
     PageGroupsComponent.prototype.removeAll = function () {
-        this.apiService.removeAll().then(function (res) {
-            console.log(res);
+        var _this = this;
+        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_3__ni_components_ni_dialog_ni_dialog_component__["a" /* NiDialogComponent */], {
+            data: {
+                content: 'Do you really want to remove all the members of this group?',
+                okText: 'Yes',
+                cancelText: 'Cancel'
+            }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result === 'ok') {
+                _this.apiService.removeAll().then(function (res) {
+                    if (res.member_removed === 'yes') {
+                        _this.showAlert('ok', 'Removing all members');
+                    }
+                    else {
+                        _this.showAlert('cancel', 'Removing all members');
+                    }
+                });
+            }
+            else {
+                _this.showAlert('cancel', 'Removing all members');
+            }
         });
     };
     PageGroupsComponent.prototype.cancelAll = function () {
-        this.apiService.cancelAll().then(function (res) {
-            console.log(res);
+        var _this = this;
+        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_3__ni_components_ni_dialog_ni_dialog_component__["a" /* NiDialogComponent */], {
+            data: {
+                content: 'Do you really want to cancel all outstanding requests?',
+                okText: 'Yes',
+                cancelText: 'No'
+            }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result === 'ok') {
+                _this.apiService.cancelAll().then(function (res) {
+                    if (res.request_cancelled === 'yes') {
+                        _this.showAlert('ok', 'Cancelling all requests');
+                    }
+                    else {
+                        _this.showAlert('cancel', 'Cancelling all requests');
+                    }
+                });
+            }
+            else {
+                _this.showAlert('cancel', 'Cancelling all requests');
+            }
         });
     };
     PageGroupsComponent.prototype.doRefresh = function (res) {
@@ -3162,8 +3288,14 @@ var PageGroupsComponent = (function () {
     PageGroupsComponent.prototype.changeTransactionPage = function (res) {
     };
     PageGroupsComponent.prototype.reportIncident = function () {
+        var _this = this;
+        var dialogRef = this.dialog.open(DialogReportIncidentComponent);
+        dialogRef.afterClosed().subscribe(function (result) {
+            _this.showAlert(result, 'Reporting an Incident');
+        });
     };
     PageGroupsComponent.prototype.cloneGroup = function () {
+        var _this = this;
         var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_3__ni_components_ni_dialog_ni_dialog_component__["a" /* NiDialogComponent */], {
             data: {
                 content: 'Do you really want to clone this group?',
@@ -3173,8 +3305,23 @@ var PageGroupsComponent = (function () {
         });
         dialogRef.afterClosed().subscribe(function (result) {
             if (result === 'ok') {
+                _this.apiService.cloneGroup().then(function (res) {
+                    _this.apiService.isMenuClicked = false;
+                    _this.apiService.isClickedDetails.next(false);
+                    _this.apiService.groupCounts.next(_this.groups.length);
+                    _this.apiService.initHeaderGroup.next('');
+                    if (res.group_added === 'yes') {
+                        _this.showAlert('ok', 'Cloning a group');
+                    }
+                    else {
+                        _this.showAlert('cancel', 'Cloning a group');
+                    }
+                }).catch(function (err) {
+                    console.log(err);
+                });
             }
             else {
+                _this.showAlert('cancel', 'Cloning a group');
             }
         });
     };
@@ -3190,14 +3337,35 @@ var PageGroupsComponent = (function () {
         dialogRef.afterClosed().subscribe(function (result) {
             if (result === 'ok') {
                 _this.apiService.addOrUpdateGroup(_this.groupInfo.group_info, 'update').then(function (res) {
-                    console.log(res);
+                    if (res.group_updated === 'yes') {
+                        _this.showAlert('ok', 'Updating a group');
+                    }
+                    else {
+                        _this.showAlert('cancel', 'Updating a group');
+                    }
                 }).catch(function (err) {
                     console.log(err);
                 });
             }
             else {
+                _this.showAlert('cancel', 'Updating a group');
             }
         });
+    };
+    PageGroupsComponent.prototype.showAlert = function (result, text) {
+        var _this = this;
+        if (result === 'ok') {
+            this.alertSuccess = true;
+            this.alertText = text + ' has been performed successfully.';
+        }
+        else {
+            this.alertSuccess = false;
+            this.alertText = text + ' has not been performed.';
+        }
+        this.showStatusAlert = true;
+        setTimeout(function () {
+            _this.showStatusAlert = false;
+        }, 3000);
     };
     PageGroupsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -3218,8 +3386,14 @@ var DialogAddMemberComponent = (function () {
         this.member = '';
     }
     DialogAddMemberComponent.prototype.addMember = function () {
-        this.dialogRef.close();
+        var _this = this;
         this.apiService.addMember(this.member).then(function (res) {
+            if (res.request_added === 'yes') {
+                _this.dialogRef.close('ok');
+            }
+            else {
+                _this.dialogRef.close('cancel');
+            }
         });
     };
     DialogAddMemberComponent = __decorate([
@@ -3270,7 +3444,51 @@ var DialogStartComponent = (function () {
     var _a, _b;
 }());
 
+var DialogReportIncidentComponent = (function () {
+    function DialogReportIncidentComponent(apiService, dialogRef) {
+        var _this = this;
+        this.apiService = apiService;
+        this.dialogRef = dialogRef;
+        this.comment = '';
+        this.incidentTypes = [];
+        this.indexOfIncident = 0;
+        this.apiService.getIncidentTypes().then(function (res) {
+            res.data.map(function (r) {
+                _this.incidentTypes.push(r.code);
+            });
+        });
+    }
+    DialogReportIncidentComponent.prototype.reportIncident = function () {
+        var _this = this;
+        this.apiService.reportIncident(this.comment).then(function (res) {
+            console.log(res);
+            if (res.report_sent === 'yes') {
+                _this.dialogRef.close('ok');
+            }
+            else {
+                _this.dialogRef.close('cancel');
+            }
+        });
+    };
+    DialogReportIncidentComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'report-incident',
+            template: __webpack_require__("../../../../../src/app/pages/default-pages/groups/report-incident.html"),
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_api_service__["a" /* ApiService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */]) === "function" && _b || Object])
+    ], DialogReportIncidentComponent);
+    return DialogReportIncidentComponent;
+    var _a, _b;
+}());
+
 //# sourceMappingURL=groups.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/groups/report-incident.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div md-dialog-content>\n    <md-select [(ngModel)]=\"indexOfIncident\">\n        <md-option *ngFor=\"let inc of incidentTypes;let i = index\" [value]=\"i\">{{inc}}</md-option>\n    </md-select>\n    <md-input-container class=\"mt-4\">\n        <input mdInput placeholder=\"Comment\" value=\"\" [(ngModel)]=\"comment\">\n    </md-input-container>\n    <div md-dialog-actions>\n        <button md-raised-button (click)=\"reportIncident()\" color=\"primary\" [disabled]=\"comment === ''\">Report</button>\n        <button md-raised-button (click)=\"dialogRef.close('cancel')\" color=\"default\">CANCEL</button>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -4364,6 +4582,7 @@ var PageSigninComponent = (function () {
                 localStorage.setItem('login', 'true');
                 localStorage.setItem('username', res.data[0].first_name + ' ' + res.data[0].middle_name + ' ' + res.data[0].sur_name);
                 localStorage.setItem('userphoto', res.data[0].picture);
+                localStorage.setItem('email', res.data[0].email);
                 _this.router.navigate(['/default-layout/dashboard']);
             }
             else {
@@ -4424,7 +4643,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ":host {\n  background: url(" + __webpack_require__("../../../../../src/assets/content/signup-bg.jpg") + ") 50% 50% no-repeat;\n  background-size: cover;\n  display: table-cell;\n  height: 100%;\n  vertical-align: middle;\n  width: 100%; }\n  :host .ni-card {\n    margin: 0 auto;\n    max-width: 400px; }\n    :host .ni-card /deep/ .card-wrap {\n      border: 0; }\n    :host .ni-card form button {\n      width: 100%; }\n    :host .ni-card form .additional-info {\n      background: rgba(0, 0, 0, 0.1);\n      margin: 1.375rem -1.375rem -1.375rem;\n      padding: 0.6875rem 1.375rem; }\n", ""]);
+exports.push([module.i, ":host {\n  background: url(" + __webpack_require__("../../../../../src/assets/content/signup-bg.jpg") + ") 50% 50% no-repeat;\n  background-size: cover;\n  display: table-cell;\n  height: 100%;\n  vertical-align: middle;\n  width: 100%; }\n  :host .ni-card {\n    margin: 0 auto;\n    max-width: 400px; }\n    :host .ni-card /deep/ .card-wrap {\n      border: 0; }\n    :host .ni-card form md-input-container {\n      margin: 0 0 30px; }\n    :host .ni-card form button {\n      width: 100%; }\n    :host .ni-card form .additional-info {\n      background: rgba(0, 0, 0, 0.1);\n      margin: 1.375rem -1.375rem -1.375rem;\n      padding: 0.6875rem 1.375rem; }\n", ""]);
 
 // exports
 
@@ -4670,7 +4889,7 @@ var PagesModule = (function () {
             ],
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__["b" /* PageDashboardComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["c" /* PageGroupsComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["d" /* PageGroupsComponent */],
                 __WEBPACK_IMPORTED_MODULE_23__default_pages_requests_requests_component__["a" /* PageRequestsComponent */],
                 __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["a" /* PageProfileComponent */],
                 __WEBPACK_IMPORTED_MODULE_25__default_pages_aboutus_aboutus_component__["a" /* PageAboutusComponent */],
@@ -4689,11 +4908,12 @@ var PagesModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_28__default_pages_chatroom_chatroom_component__["a" /* ChatroomComponent */],
                 __WEBPACK_IMPORTED_MODULE_29__default_pages_obligation_obligation_component__["a" /* PageObligationComponent */],
                 __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__["a" /* DialogAcceptAndRejectComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["b" /* DialogStartComponent */]
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["c" /* DialogStartComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["b" /* DialogReportIncidentComponent */]
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__["b" /* PageDashboardComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["c" /* PageGroupsComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["d" /* PageGroupsComponent */],
                 __WEBPACK_IMPORTED_MODULE_23__default_pages_requests_requests_component__["a" /* PageRequestsComponent */],
                 __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["a" /* PageProfileComponent */],
                 __WEBPACK_IMPORTED_MODULE_25__default_pages_aboutus_aboutus_component__["a" /* PageAboutusComponent */],
@@ -4713,7 +4933,8 @@ var PagesModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_15__extra_pages_signup_signup_component__["a" /* DialogResultComponent */],
                 __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["a" /* DialogAddMemberComponent */],
                 __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__["a" /* DialogAcceptAndRejectComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["b" /* DialogStartComponent */]
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["c" /* DialogStartComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["b" /* DialogReportIncidentComponent */]
             ]
         })
     ], PagesModule);
@@ -4760,7 +4981,7 @@ var ApiService = (function () {
         this.showSpinner = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"](false);
         this.groupCreated = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"](false);
         this.initHeaderGroup = new __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__["BehaviorSubject"]('');
-        this.langCode = "ENG";
+        this.langCode = 'ENG';
         this.isMenuClicked = false;
         this.groupList = [];
         this.auth.langCode.subscribe(function (res) {
@@ -4875,10 +5096,10 @@ var ApiService = (function () {
             url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/update';
         }
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
-        if (group.g_type == 'PRIVATE') {
+        if (group.g_type === 'PRIVATE') {
             params.set('type_code', 'PRIVATE');
         }
-        else if (group.g_type == 'PUBLIC') {
+        else if (group.g_type === 'PUBLIC') {
             params.set('type_code', 'PUBLIC');
             if (type === 'add') {
                 params.set('min_index', group.index_credit_min);
@@ -4936,27 +5157,36 @@ var ApiService = (function () {
             params.set('lang', _this.langCode);
             params.set('token', localStorage.getItem('token'));
             _this.http.get(url, { search: params }).subscribe(function (res) {
-                console.log(res);
-                // resolve(res.json());
+                resolve(res.json());
             }, function (err) {
                 console.log(err);
             });
         });
     };
-    ApiService.prototype.cloneGroup = function (member) {
+    ApiService.prototype.cloneGroup = function () {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/clone';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         this.groupId.subscribe(function (data) {
             params.set('group_id', data);
         });
+        params.set('token', localStorage.getItem('token'));
         return new Promise(function (resolve, reject) {
-            params.set('email_list', member);
-            params.set('lang', _this.langCode);
-            params.set('token', localStorage.getItem('token'));
             _this.http.get(url, { search: params }).subscribe(function (res) {
-                console.log(res);
-                // resolve(res.json());
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    ApiService.prototype.getIncidentTypes = function () {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'lists';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        params.set('data', 'GroupIncident');
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
             }, function (err) {
                 console.log(err);
             });
@@ -5106,11 +5336,13 @@ var ApiService = (function () {
             });
         });
     };
-    ApiService.prototype.removeUser = function (groupId, memberId) {
+    ApiService.prototype.removeUser = function (memberId) {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/users/remove';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
-        params.set('group_id', groupId);
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
         params.set('member_id', memberId);
         params.set('token', localStorage.getItem('token'));
         params.set('lang', this.langCode);
@@ -5131,7 +5363,6 @@ var ApiService = (function () {
         });
         return new Promise(function (resolve, reject) {
             params.set('token', localStorage.getItem('token'));
-            params.set('lang', _this.langCode);
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
@@ -5148,7 +5379,6 @@ var ApiService = (function () {
         });
         return new Promise(function (resolve, reject) {
             params.set('token', localStorage.getItem('token'));
-            params.set('lang', _this.langCode);
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
@@ -5176,6 +5406,40 @@ var ApiService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 console.log(res);
                 resolve(res.json());
+            });
+        });
+    };
+    ApiService.prototype.reportIncident = function (comment) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/report';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
+        params.set('token', localStorage.getItem('token'));
+        params.set('comment', comment);
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    ApiService.prototype.sendApproval = function (id) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/payment/manual';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
+        params.set('payment_id', id);
+        params.set('token', localStorage.getItem('token'));
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
             });
         });
     };
@@ -5550,6 +5814,7 @@ var HorizontalNavbarComponent = (function () {
         var _this = this;
         this.apiService.groupCounts.subscribe(function (res) {
             if (!_this.apiService.isMenuClicked) {
+                console.log(res, 'subscribe');
                 _this.apiService.getGroups(500, 1).then(function (data) {
                     _this.groupList = [];
                     _this.groupDetailList = [];
@@ -5883,7 +6148,7 @@ var MenuComponent = (function () {
             item.active = true;
         }
         if (item.title === 'groups') {
-            this.apiService.isMenuClicked = false;
+            this.apiService.isMenuClicked = true;
             this.apiService.groupCounts.next(this.groupCounts);
         }
         this.apiService.isClickedDetails.next(false);

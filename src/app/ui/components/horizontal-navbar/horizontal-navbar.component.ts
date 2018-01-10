@@ -61,6 +61,7 @@ export class HorizontalNavbarComponent implements OnInit {
   ngOnInit() {
     this.apiService.groupCounts.subscribe(res => {
       if (!this.apiService.isMenuClicked) {
+        console.log(res, 'subscribe');
         this.apiService.getGroups(500, 1).then((data: any) => {
           this.groupList = [];
           this.groupDetailList = [];
@@ -159,6 +160,7 @@ export class DialogGroupCreateComponent {
   currencies = [];
   psTypes = [];
   currencySigns = {USD: '$', GBP: '£', EUR: '€', ZEC: 'Z'};
+  
   constructor(public dialogRef: MdDialogRef<DialogGroupCreateComponent>, private fb: FormBuilder, private apiService: ApiService, private router: Router) {
     this.form = this.fb.group({
       name: ['My group', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(10)])],

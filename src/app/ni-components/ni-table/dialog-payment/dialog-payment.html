@@ -1,0 +1,30 @@
+<div md-dialog-content class="p-3" *ngIf="pageNum === 1">
+    <md-radio-group class="column-layout" *ngIf="data.group_type === 'PRIVATE' || (data.group_type === 'PUBLIC' && data.payment_is_smooth === '1')" [(ngModel)]="selectedType">
+        <md-radio-button value="1" [checked]="true">Pay by credit card or PayPal</md-radio-button>
+        <md-radio-button value="2">Pay with bitcoin</md-radio-button>
+        <md-radio-button value="3">Pay with ether</md-radio-button>
+        <md-radio-button value="4">Pay with Kori</md-radio-button>
+        <md-radio-button value="5">Pay by bank transfer</md-radio-button>
+    </md-radio-group>
+    <md-radio-group class="column-layout" *ngIf="data.group_type === 'PUBLIC' && data.payment_is_smooth === '0'" [(ngModel)]="selectedType">
+        <md-radio-button value="0">Declare a payment by hand</md-radio-button>
+        <md-radio-button value="1" [checked]="true">Pay by credit card or PayPal</md-radio-button>
+        <md-radio-button value="2">Pay with bitcoin</md-radio-button>
+        <md-radio-button value="3">Pay with ether</md-radio-button>
+        <md-radio-button value="4">Pay with Kori</md-radio-button>
+        <md-radio-button value="5">Pay by bank transfer</md-radio-button>
+    </md-radio-group>
+    <div md-dialog-actions class="buttons">
+        <button md-raised-button (click)="dialogRef.close('cancel')" color="default">CANCEL</button>
+        <button md-raised-button (click)="pageNum = 2" color="primary">Next</button>
+    </div>
+</div>
+
+<div md-dialog-content class="p-3" *ngIf="pageNum === 2">
+    <p *ngIf="selectedType === 0">This send an approval request to the receiver for the amount {{data.projected_amount_due}} and he will enter the date at which he received the amount.</p>
+    <div md-dialog-actions class="buttons">
+        <button md-raised-button (click)="pageNum = 1" color="primary">Previous</button>
+        <button md-raised-button (click)="dialogRef.close('cancel')" color="default">CANCEL</button>
+        <button md-raised-button (click)="sendApproval()" color="primary">Send approval request</button>
+    </div>
+</div>
