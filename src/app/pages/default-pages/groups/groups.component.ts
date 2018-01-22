@@ -197,11 +197,13 @@ export class PageGroupsComponent implements OnInit {
     this.apiService.getGroupRequests(max, page).then((res: any) => {
       this.requests = [];
       this.totalRequest = res.count;
+      console.log(this.isAdmin, 'isadmin!!!!');
+      console.log(res);
       res.data.map(d => {
-        if (this.groupInfo.group_info.status_code === 'RUNNING') {
-          this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation]);
-        } else {
-          this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation, {type: ['Accept', 'Reject'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type}]);
+        if (this.isAdmin || d.sender.indexOf(localStorage.getItem('email')) >= 0) {
+          this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation, {type: ['Cancel'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type}]);
+        } else if (d.receiver.indexOf(localStorage.getItem('email')) >= 0) {
+          this.requests.push([d.sender, d.receiver, d.group, d.request_type_text, d.request_status_text, d.date_creation, {type: ['Open'], id: d.id, rotationType: d.group_rotation_type, requestType: d.request_type}]);
         }
       });
 
@@ -321,6 +323,29 @@ export class PageGroupsComponent implements OnInit {
             this.showAlert('ok', 'Cancelling all requests');
           } else {
             this.showAlert('cancel', 'Cancelling all requests');
+          }
+        });
+      } else {
+        this.showAlert('cancel', 'Cancelling all requests');
+      }
+    });
+  }
+
+  cancelRequest(id) {
+    let dialogRef = this.dialog.open(NiDialogComponent, {
+      data: {
+        content: 'Do you really want to cancel this request ?',
+        okText: 'Yes',
+        cancelText: 'No'
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'ok') {
+        this.apiService.cancelRequest(id).then((res: any) => {
+          if (res.request_cancelled == 'yes') {
+            this.showAlert('ok', 'Cancelling request');
+          } else {
+            this.showAlert('cancel', 'Cancelling request');
           }
         });
       } else {

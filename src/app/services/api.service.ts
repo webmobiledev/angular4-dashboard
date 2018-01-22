@@ -425,6 +425,20 @@ export class ApiService {
     });
   }
 
+  cancelRequest(id) {
+    const url = environment.serverUrl + 'group/requests/cancel';
+    const params: URLSearchParams = new URLSearchParams();
+    params.set('requst_id', id);
+    params.set('token', localStorage.getItem('token'));
+    return new Promise((resolve, reject) => {
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
+
   simulate(group) {
     const url = environment.serverUrl + 'group/sumlilate';
     const params: URLSearchParams = new URLSearchParams();

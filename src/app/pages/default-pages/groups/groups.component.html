@@ -219,8 +219,8 @@
       </ng-template>
       <div class="row members-header">
         <div class="col-sm-6 p-3">
-          <button *ngIf="groupInfo.group_info.status_code !== 'RUNNING'" md-raised-button color="primary" (click)="openDialog()">{{'Add a member' | translate}}</button>
-          <button *ngIf="groupInfo.group_info.status_code !== 'RUNNING'" md-raised-button color="primary" (click)="removeAll()">{{'Remove all members' | translate}}</button>
+          <button *ngIf="groupInfo.group_info.status_code != 'RUNNING' && isAdmin" md-raised-button color="primary" (click)="openDialog()">{{'Add a member' | translate}}</button>
+          <button *ngIf="groupInfo.group_info.status_code != 'RUNNING' && isAdmin" md-raised-button color="primary" (click)="removeAll()">{{'Remove all members' | translate}}</button>
         </div>
         <div class="col-sm-6 text-right p-3">
           <md-input-container class="search-group md-icon-left">
@@ -281,7 +281,7 @@
       <div class="row">
         <div class="col-lg-12 pl-3 pr-3">
           <ni-card [refreshIndex]="4" [title]="'Requests' | translate" (refresh)="doRefresh($event)">
-            <ni-table [headers]="requestHeaders" [data]="requests"></ni-table>
+            <ni-table [headers]="requestHeaders" [data]="requests" (showRequestDialog)="cancelRequest($event)"></ni-table>
             <ni-table-loading *ngIf="loadingRequests"></ni-table-loading>
             <ni-alert *ngIf="requests.length === 0 && !loadingRequests" [color]="'warning'" [outline]="true"><strong>{{'norequest' | translate}}</strong></ni-alert>
             <ni-pagination [totalItems]="totalRequest" [itemPerPage]="maxRequest" [currentPage]="pageRequest" *ngIf="requests.length > 0" (changePage)="changeRequestPage($event)"></ni-pagination>
