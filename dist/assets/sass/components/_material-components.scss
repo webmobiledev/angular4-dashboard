@@ -196,7 +196,7 @@ body {
     .sb-item {
       .sb-item-head {
         a {
-          color: rgba(main-contrast(500),.8);
+          // color: rgba(main-contrast(500),.8);
 
           .toggle-icon {
             height: 22px;
@@ -204,12 +204,12 @@ body {
 
             &:before,
             &:after {
-              background: main-contrast(500);
+              // background: main-contrast(500);
             }
           }
           &:hover,
           &:focus {
-            color: main-contrast(500);
+            // color: main-contrast(500);
           }
         }
       }

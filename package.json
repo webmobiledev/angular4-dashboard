@@ -40,6 +40,7 @@
     "ng2-translate": "^5.0.0",
     "ng2-validation": "4.2.0",
     "rxjs": "5.4.3",
+    "socket.io-client": "^2.0.4",
     "squeezebox": "1.1.12",
     "zone.js": "0.8.16"
   },

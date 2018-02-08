@@ -1,3 +1,16 @@
 .search-group {
   width: 150px;
 }
+
+md-list {
+  width: 250px;
+}
+
+md-list-item {
+  border-bottom: 1px solid #dddddd;
+  cursor: pointer;
+}
+
+md-list-item:hover {
+  background-color: #dddddd;
+}

@@ -34,12 +34,14 @@ webpackEmptyAsyncContext.id = "../../../../../src lazy recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_default_pages_simulation_simulation_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/simulation/simulation.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_default_pages_chatroom_chatroom_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/chatroom/chatroom.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_default_pages_obligation_obligation_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/obligation/obligation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_extra_pages_signin_signin_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/signin/signin.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_extra_pages_signup_signup_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/signup/signup.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_extra_pages_forgot_forgot_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/forgot/forgot.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_extra_pages_confirm_confirm_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/confirm/confirm.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_extra_pages_page_404_page_404_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-404/page-404.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_extra_pages_page_500_page_500_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-500/page-500.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_default_pages_rollinvest_rollinvest_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/rollinvest/rollinvest.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_default_pages_faq_faq_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/faq/faq.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_extra_pages_signin_signin_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/signin/signin.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_extra_pages_signup_signup_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/signup/signup.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_extra_pages_forgot_forgot_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/forgot/forgot.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_extra_pages_confirm_confirm_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/confirm/confirm.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_extra_pages_page_404_page_404_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-404/page-404.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_extra_pages_page_500_page_500_component__ = __webpack_require__("../../../../../src/app/pages/extra-pages/page-500/page-500.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -67,26 +69,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
 var groupsRoutes = [
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_6__pages_default_pages_groups_groups_component__["d" /* PageGroupsComponent */] },
 ];
 var defaultRoutes = [
     { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_5__pages_default_pages_dashboard_dashboard_component__["b" /* PageDashboardComponent */] },
     { path: 'groups', component: __WEBPACK_IMPORTED_MODULE_6__pages_default_pages_groups_groups_component__["d" /* PageGroupsComponent */] },
-    { path: 'transactions', component: __WEBPACK_IMPORTED_MODULE_7__pages_default_pages_transactions_transactions_component__["a" /* PageTransactionsComponent */] },
+    { path: 'transactions', component: __WEBPACK_IMPORTED_MODULE_7__pages_default_pages_transactions_transactions_component__["b" /* PageTransactionsComponent */] },
     { path: 'requests', component: __WEBPACK_IMPORTED_MODULE_8__pages_default_pages_requests_requests_component__["a" /* PageRequestsComponent */] },
     { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_11__pages_default_pages_profile_profile_component__["a" /* PageProfileComponent */] },
     { path: 'simulation', component: __WEBPACK_IMPORTED_MODULE_12__pages_default_pages_simulation_simulation_component__["a" /* PageSimulationComponent */] },
     { path: 'aboutus', component: __WEBPACK_IMPORTED_MODULE_10__pages_default_pages_aboutus_aboutus_component__["a" /* PageAboutusComponent */] },
-    { path: 'chatroom', component: __WEBPACK_IMPORTED_MODULE_13__pages_default_pages_chatroom_chatroom_component__["a" /* ChatroomComponent */] },
+    { path: 'chatroom', component: __WEBPACK_IMPORTED_MODULE_13__pages_default_pages_chatroom_chatroom_component__["a" /* PageChatroomComponent */] },
     { path: 'obligation', component: __WEBPACK_IMPORTED_MODULE_14__pages_default_pages_obligation_obligation_component__["a" /* PageObligationComponent */] },
+    { path: 'rollinvest', component: __WEBPACK_IMPORTED_MODULE_15__pages_default_pages_rollinvest_rollinvest_component__["a" /* PageRollinvestComponent */] },
+    { path: 'faq', component: __WEBPACK_IMPORTED_MODULE_16__pages_default_pages_faq_faq_component__["a" /* PageFaqComponent */] },
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_9__pages_default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */] },
 ];
 var extraRoutes = [
-    { path: 'sign-in', component: __WEBPACK_IMPORTED_MODULE_15__pages_extra_pages_signin_signin_component__["a" /* PageSigninComponent */] },
+    { path: 'sign-in', component: __WEBPACK_IMPORTED_MODULE_17__pages_extra_pages_signin_signin_component__["a" /* PageSigninComponent */] },
     {
         path: 'sign-up',
-        component: __WEBPACK_IMPORTED_MODULE_16__pages_extra_pages_signup_signup_component__["b" /* PageSignupComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_18__pages_extra_pages_signup_signup_component__["b" /* PageSignupComponent */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
         data: {
             authGuardRedirect: 'signup'
@@ -94,7 +100,7 @@ var extraRoutes = [
     },
     {
         path: 'forgot',
-        component: __WEBPACK_IMPORTED_MODULE_17__pages_extra_pages_forgot_forgot_component__["a" /* PageForgotComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_19__pages_extra_pages_forgot_forgot_component__["a" /* PageForgotComponent */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
         data: {
             authGuardRedirect: 'forgot'
@@ -102,7 +108,7 @@ var extraRoutes = [
     },
     {
         path: 'confirm',
-        component: __WEBPACK_IMPORTED_MODULE_18__pages_extra_pages_confirm_confirm_component__["a" /* PageConfirmComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_20__pages_extra_pages_confirm_confirm_component__["a" /* PageConfirmComponent */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
         data: {
             authGuardRedirect: 'confirm'
@@ -110,7 +116,7 @@ var extraRoutes = [
     },
     {
         path: 'page-404',
-        component: __WEBPACK_IMPORTED_MODULE_19__pages_extra_pages_page_404_page_404_component__["a" /* Page404Component */],
+        component: __WEBPACK_IMPORTED_MODULE_21__pages_extra_pages_page_404_page_404_component__["a" /* Page404Component */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
         data: {
             authGuardRedirect: 'page404'
@@ -118,7 +124,7 @@ var extraRoutes = [
     },
     {
         path: 'page-500',
-        component: __WEBPACK_IMPORTED_MODULE_20__pages_extra_pages_page_500_page_500_component__["a" /* Page500Component */],
+        component: __WEBPACK_IMPORTED_MODULE_22__pages_extra_pages_page_500_page_500_component__["a" /* Page500Component */],
         canActivate: [__WEBPACK_IMPORTED_MODULE_2__services_user_access_guard_service__["a" /* UserAccessGuardService */]],
         data: {
             authGuardRedirect: 'page500'
@@ -2287,7 +2293,6 @@ var NiTableComponent = (function () {
                 });
             }
             else {
-                _this.showAlert.emit({ status: 'cancel', text: 'Removing member' });
             }
         });
     };
@@ -2514,7 +2519,7 @@ var PageAboutusComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/chatroom/chatroom.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row members-header\">\n  <div class=\"col-sm-6\">\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>      \n  </div>\n  <div class=\"col-sm-6 text-right\">\n    <md-input-container class=\"search-group md-icon-left\">\n      <md-icon>search</md-icon>\n      <input mdInput value=\"\">\n    </md-input-container>\n  </div>\n  <div class=\"col-md-12\">\n    <ni-chat [messages]=\"messages\" [style.height.px]=\"600\"></ni-chat>\n  </div>\n</div>"
+module.exports = "<div class=\"row members-header\" id=\"chatroom\">\n  <div class=\"col-sm-6\">\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>      \n  </div>\n  <div class=\"col-sm-6 text-right\">\n    <md-input-container class=\"search-group md-icon-left\">\n      <md-icon>search</md-icon>\n      <input mdInput value=\"\">\n    </md-input-container>\n  </div>\n  <div class=\"col-md-12\">\n    <ni-card [title]=\"'Lists with avatars'\">\n      <md-list>\n        <md-input-container class=\"search-group md-icon-left\">\n          <md-icon>search</md-icon>\n          <input mdInput value=\"\" [(ngModel)]=\"searchName\" placeholder=\"Enter a name\" (ngModelChange)=\"searchUsers()\">\n        </md-input-container>\n        <md-list-item *ngFor=\"let m of members\">\n          <!-- <img md-list-avatar src=\"{{ message.avatar }}\" width=\"40\" height=\"40\" alt=\"\"> -->\n          <h3 md-line class=\"h3\">{{ m.name }}</h3>\n        </md-list-item>\n      </md-list>\n      <ni-chat [messages]=\"messages\" [style.height.px]=\"600\"></ni-chat>\n    </ni-card>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -2526,7 +2531,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".search-group {\n  width: 150px; }\n", ""]);
+exports.push([module.i, ".search-group {\n  width: 150px; }\n\nmd-list {\n  width: 250px; }\n\nmd-list-item {\n  border-bottom: 1px solid #dddddd;\n  cursor: pointer; }\n\nmd-list-item:hover {\n  background-color: #dddddd; }\n", ""]);
 
 // exports
 
@@ -2540,8 +2545,11 @@ module.exports = module.exports.toString();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatroomComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageChatroomComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_socket_io_client__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2552,14 +2560,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var ChatroomComponent = (function () {
-    function ChatroomComponent() {
+
+
+var PageChatroomComponent = (function () {
+    function PageChatroomComponent(apiService) {
+        this.apiService = apiService;
         this.breadcrumb = [{ title: 'chatroom' }];
-        this.activeUser = {
-            name: 'Amanda Li',
-            lastSeen: 'last seen 10 minutes ago',
-            avatar: 'assets/content/avatar-4.jpg'
-        };
         this.messages = [
             {
                 'date': '8 hours ago',
@@ -2598,18 +2604,35 @@ var ChatroomComponent = (function () {
                 'avatar': 'assets/content/avatar-4.jpg'
             }
         ];
+        this.members = [];
+        this.searchName = '';
+        this.socket = __WEBPACK_IMPORTED_MODULE_2_socket_io_client__('https://www.rollincome.com:446/chat');
     }
-    ChatroomComponent.prototype.ngOnInit = function () {
+    PageChatroomComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.apiService.getAllChatMembers().then(function (res) {
+            _this.members = res.data;
+        });
+        this.socket.on('new-message', function (data) {
+            console.log(data);
+        }.bind(this));
     };
-    ChatroomComponent = __decorate([
+    PageChatroomComponent.prototype.searchUsers = function () {
+        var _this = this;
+        this.apiService.getAllChatMembers(this.searchName).then(function (res) {
+            _this.members = res.data;
+        });
+    };
+    PageChatroomComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-chatroom',
             template: __webpack_require__("../../../../../src/app/pages/default-pages/chatroom/chatroom.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/default-pages/chatroom/chatroom.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
-    ], ChatroomComponent);
-    return ChatroomComponent;
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === "function" && _a || Object])
+    ], PageChatroomComponent);
+    return PageChatroomComponent;
+    var _a;
 }());
 
 //# sourceMappingURL=chatroom.component.js.map
@@ -2856,6 +2879,77 @@ var DialogAcceptAndRejectComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/pages/default-pages/faq/faq.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom1'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<div class=\"text-center\">\r\n  <h4>Some of your Questions:</h4>\r\n  <div class=\"row\">\r\n    <div class=\"col-xl-3\"></div>\r\n    <div class=\"col-xl-6\">\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos labore minima odio possimus praesentium qui\r\n        quibusdam quis recusandae sequi voluptate. Iste nihil totam voluptatibus. Blanditiis, non vitae! Deleniti eum,\r\n        fugiat illum in incidunt labore, magni maxime necessitatibus nisi numquam officia, placeat quo suscipit tempora\r\n        temporibus ut veniam! Labore, omnis, suscipit?</p>\r\n      <div class=\"clearfix\"></div>\r\n    </div>\r\n    <div class=\"col-xl-3\"></div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6\">\r\n    <ni-card title=\"General\">\r\n      <squeezebox [multiple]=\"false\">\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cumque dolor exercitationem\r\n            incidunt quaerat, ullam!</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias atque dolores harum maiores\r\n            nam sint? Accusantium ducimus laboriosam natus.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet, aperiam aspernatur, autem\r\n            consequatur dignissimos, ipsum itaque numquam praesentium quaerat quis reprehenderit sint tempora veniam.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing elit?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi culpa error harum laborum,\r\n            nihil non quis rerum, soluta voluptate voluptatem?</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at aut consequuntur cumque,\r\n            esse exercitationem fugit numquam quam sed soluta, tempora ut voluptatum.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus autem doloremque eveniet\r\n            fuga iusto, nemo obcaecati quos sunt voluptatem. Provident, veritatis.</sb-item-body>\r\n        </sb-item>\r\n      </squeezebox>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6\">\r\n    <ni-card title=\"Marketplace\">\r\n      <squeezebox [multiple]=\"false\">\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cumque dolor exercitationem\r\n            incidunt quaerat, ullam!</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cumque dolor exercitationem\r\n            incidunt quaerat, ullam!</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias atque dolores harum maiores\r\n            nam sint? Accusantium ducimus laboriosam natus.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet, aperiam aspernatur, autem\r\n            consequatur dignissimos, ipsum itaque numquam praesentium quaerat quis reprehenderit sint tempora veniam.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing elit?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi culpa error harum laborum,\r\n            nihil non quis rerum, soluta voluptate voluptatem?</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at aut consequuntur cumque,\r\n            esse exercitationem fugit numquam quam sed soluta, tempora ut voluptatum.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus autem doloremque eveniet\r\n            fuga iusto, nemo obcaecati quos sunt voluptatem. Provident, veritatis.</sb-item-body>\r\n        </sb-item>\r\n      </squeezebox>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6\">\r\n    <ni-card title=\"Customization\" class=\"mb-lg-0\">\r\n      <squeezebox [multiple]=\"false\">\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias atque dolores harum maiores\r\n            nam sint? Accusantium ducimus laboriosam natus.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet, aperiam aspernatur, autem\r\n            consequatur dignissimos, ipsum itaque numquam praesentium quaerat quis reprehenderit sint tempora veniam.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing elit?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi culpa error harum laborum,\r\n            nihil non quis rerum, soluta voluptate voluptatem?</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at aut consequuntur cumque,\r\n            esse exercitationem fugit numquam quam sed soluta, tempora ut voluptatum.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus autem doloremque eveniet\r\n            fuga iusto, nemo obcaecati quos sunt voluptatem. Provident, veritatis.</sb-item-body>\r\n        </sb-item>\r\n      </squeezebox>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-6\">\r\n    <ni-card title=\"Design\" class=\"mb-0\">\r\n      <squeezebox [multiple]=\"false\">\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias atque dolores harum maiores\r\n            nam sint? Accusantium ducimus laboriosam natus.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet, aperiam aspernatur, autem\r\n            consequatur dignissimos, ipsum itaque numquam praesentium quaerat quis reprehenderit sint tempora veniam.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing elit?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi culpa error harum laborum,\r\n            nihil non quis rerum, soluta voluptate voluptatem?</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at aut consequuntur cumque,\r\n            esse exercitationem fugit numquam quam sed soluta, tempora ut voluptatum.</sb-item-body>\r\n        </sb-item>\r\n        <sb-item>\r\n          <sb-item-head>Lorem ipsum dolor sit amet, consectetur adipisicing?</sb-item-head>\r\n          <sb-item-body>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus autem doloremque eveniet\r\n            fuga iusto, nemo obcaecati quos sunt voluptatem. Provident, veritatis.</sb-item-body>\r\n        </sb-item>\r\n      </squeezebox>\r\n    </ni-card>\r\n  </div>\r\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/faq/faq.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/faq/faq.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageFaqComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var PageFaqComponent = (function () {
+    function PageFaqComponent(_sharedService) {
+        this._sharedService = _sharedService;
+        this.pageTitle = 'FAQ';
+        this.breadcrumb = [
+            {
+                title: 'Faq'
+            },
+        ];
+        this._sharedService.emitChange(this.pageTitle);
+    }
+    PageFaqComponent.prototype.ngOnInit = function () { };
+    PageFaqComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-faq',
+            template: __webpack_require__("../../../../../src/app/pages/default-pages/faq/faq.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/default-pages/faq/faq.component.scss")]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object])
+    ], PageFaqComponent);
+    return PageFaqComponent;
+    var _a;
+}());
+
+//# sourceMappingURL=faq.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/pages/default-pages/groups/dialog-add-member.html":
 /***/ (function(module, exports) {
 
@@ -2873,7 +2967,7 @@ module.exports = "<h2 md-dialog-title>Start Group</h2>\n<div md-dialog-content *
 /***/ "../../../../../src/app/pages/default-pages/groups/groups.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-alert [color]=\"'success'\" *ngIf=\"showGroupAlert === true\"><strong>Group has been created!</strong></ni-alert>\r\n<ni-alert [color]=\"'success'\" *ngIf=\"showStatusAlert && alertSuccess\"><strong>{{alertText}}</strong></ni-alert>\r\n<ni-alert [color]=\"'danger'\" *ngIf=\"showStatusAlert && !alertSuccess\"><strong>{{alertText}}</strong></ni-alert>\r\n<div *ngIf=\"showGroupList\">\r\n  <div class=\"row members-header\">\r\n    <div class=\"col-sm-6\">\r\n      <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \r\n    </div>\r\n    <div class=\"col-sm-6 text-right\">\r\n      <md-input-container class=\"search-group md-icon-left\">\r\n        <md-icon>search</md-icon>\r\n        <input mdInput value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12\">\r\n      <ni-card [refreshIndex]=\"1\" [title]=\"'Groups' | translate\" (refresh)=\"doRefresh($event)\">\r\n        <ni-table [headers]=\"groupHeaders\" [data]=\"groups\"></ni-table>\r\n        <ni-table-loading *ngIf=\"loadingGroups\"></ni-table-loading>\r\n        <ni-alert *ngIf=\"groups.length === 0 && !loadingGroups\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nogroup' | translate}}</strong></ni-alert>\r\n        <ni-pagination [totalItems]=\"totalGroup\" [itemPerPage]=\"maxGroup\" [currentPage]=\"pageGroup\" *ngIf=\"groups.length > 0\" (changePage)=\"changeGroupPage($event)\"></ni-pagination>\r\n      </ni-card>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"!showGroupList\">\r\n  <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n  <md-tab-group>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>home</md-icon> {{'Home' | translate}}\r\n      </ng-template>\r\n      <div class=\"row p-2\">\r\n        <div class=\"col-sm-12 pt-3\">\r\n          <button *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code !== 'RUNNING'\" md-raised-button color=\"primary\" (click)=\"updateGroup()\">{{'Update' | translate}}</button>\r\n          <button md-raised-button color=\"primary\" (click)=\"reportIncident()\">{{'Report an Incident' | translate}}</button>\r\n          <button *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code !== 'RUNNING'\" md-raised-button color=\"primary\" (click)=\"closeGroup()\">{{'Close' | translate}}</button>\r\n          <button md-raised-button color=\"primary\" (click)=\"cloneGroup()\">{{'Clone' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-md-7 mb-3\">\r\n          <button md-raised-button color=\"primary\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code === 'PENDING_FOR_KICK_OFF'\" (click)=\"openStartDialog()\">Start</button>\r\n          <button md-raised-button color=\"primary\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code === 'PENDING_FOR_KICK_OFF'\" (click)=\"openDialog()\">Add a member</button>\r\n          <button md-raised-button color=\"primary\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code === 'PENDING_FOR_KICK_OFF'\">Save changes</button>\r\n          <md-card class=\"example-card mt-3\" *ngIf=\"groupInfo && groupInfo.group_info\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Name:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.name\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Description:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.description\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">First Payment:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.date_first_payment\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT' && groupInfo.group_info.status_code !== 'REQUEST_FOR_POSITION_VALIDATION_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Date creation:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [mdDatepicker]=\"picker\" [(ngModel)]=\"groupInfo.group_info.date_creation\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <button mdSuffix [mdDatepickerToggle]=\"picker\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\"></button>\r\n                </md-input-container>\r\n                <md-datepicker #picker></md-datepicker>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Type:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.g_type_text\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.g_type_text\">{{groupInfo.group_info.g_type_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Currency:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.currency\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.currency\">{{groupInfo.group_info.currency}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Creator:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.creator\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Status:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.status_text\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.status_text\">{{groupInfo.group_info.status_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Position selection method:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.position_selection_type_text\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.position_selection_type_text\">{{groupInfo.group_info.position_selection_type_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Rate (%):</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.rate\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Frequency (month):</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.frequency\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Due date:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.due_day\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Number of member:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.nb_members\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Smooth Payment:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.smooth_payment === '1' ? 'Yes' : 'No'}}\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">% Penalty for delay payment:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.delay_payment_penalty\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Number of days of delay before applying % penalty:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.nb_days_delay_before_penalty\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-5 pt-3\" *ngIf=\"groupInfo.group_info.g_type !== 'PUBLIC'\">\r\n          <ni-card [outline]=\"true\" [bgColor]=\"'warning'\" class=\"info-card\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'\">\r\n            <div class=\"title text-uppercase\">{{'Amount' | translate}}</div>\r\n            <div class=\"count\">2,543</div>\r\n          </ni-card>\r\n          <ni-card [title]=\"'timeline' | translate\" [customBgColor]=\"'transparent'\">\r\n            <ni-h-timeline [data]=\"timelineData\"></ni-h-timeline>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.previous_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Previous Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.previous_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.previous_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.previous_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.previous_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.next_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Next Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.next_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.next_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.next_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.next_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>card_membership</md-icon> {{'Members' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button *ngIf=\"groupInfo.group_info.status_code != 'RUNNING' && isAdmin\" md-raised-button color=\"primary\" (click)=\"openDialog()\">{{'Add a member' | translate}}</button>\r\n          <button *ngIf=\"groupInfo.group_info.status_code != 'RUNNING' && isAdmin\" md-raised-button color=\"primary\" (click)=\"removeAll()\">{{'Remove all members' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"2\" [title]=\"'Members' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"memberHeaders\" [data]=\"members\" (showAlert)=\"showAlert($event.status, $event.text)\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingMembers\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"members.length === 0 && !loadingMembers\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nomember' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalMember\" [itemPerPage]=\"maxMember\" [currentPage]=\"pageMember\" *ngIf=\"members.length > 0\" (changePage)=\"changeMemberPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>check_box</md-icon> {{'Obligation' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"3\" [title]=\"'Obligation' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"obligationHeaders\" [data]=\"obligations\" (showAlert)=\"showAlert($event.status, $event.text)\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingObligations\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"obligations.length === 0 && !loadingObligations\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noobligation' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalObligation\" [itemPerPage]=\"maxObligation\" [currentPage]=\"pageObligation\" *ngIf=\"obligations.length > 0\" (changePage)=\"changeObligationPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>sms_failed</md-icon> {{'Requests' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"primary\" *ngIf=\"isAdmin\" (click)=\"cancelAll()\">{{'Cancel all outstanding request' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"4\" [title]=\"'Requests' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"requestHeaders\" [data]=\"requests\" (showRequestDialog)=\"cancelRequest($event)\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingRequests\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"requests.length === 0 && !loadingRequests\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'norequest' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalRequest\" [itemPerPage]=\"maxRequest\" [currentPage]=\"pageRequest\" *ngIf=\"requests.length > 0\" (changePage)=\"changeRequestPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>event</md-icon> {{'Event' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"5\" [title]=\"'Event' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"eventHeaders\" [data]=\"events\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingEvents\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"events.length === 0 && !loadingEvents\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noevent' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalEvent\" [itemPerPage]=\"maxEvent\" [currentPage]=\"pageEvent\" *ngIf=\"events.length > 0\" (changePage)=\"changeEventPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>local_atm</md-icon> {{'transaction' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"6\" [title]=\"'transaction' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <!-- <ni-table [headers]=\"transactionHeaders\" [data]=\"transactions\"></ni-table>\r\n            <ni-alert *ngIf=\"transactions.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'notransaction' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"transactions.length\" *ngIf=\"transactions.length > 0\" (changePage)=\"changeTransactionPage($event)\"></ni-pagination> -->\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n  </md-tab-group>\r\n</div>\r\n\r\n<ni-loading></ni-loading>"
+module.exports = "<ni-alert [color]=\"'success'\" *ngIf=\"showGroupAlert === true\"><strong>Group has been created!</strong></ni-alert>\r\n<ni-alert [color]=\"'success'\" *ngIf=\"showStatusAlert && alertSuccess\"><strong>{{alertText}}</strong></ni-alert>\r\n<ni-alert [color]=\"'danger'\" *ngIf=\"showStatusAlert && !alertSuccess\"><strong>{{alertText}}</strong></ni-alert>\r\n<div *ngIf=\"showGroupList\">\r\n  <div class=\"row members-header\">\r\n    <div class=\"col-sm-6\">\r\n      <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>        \r\n    </div>\r\n    <div class=\"col-sm-6 text-right\">\r\n      <md-input-container class=\"search-group md-icon-left\">\r\n        <md-icon>search</md-icon>\r\n        <input mdInput value=\"\">\r\n      </md-input-container>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-lg-12\">\r\n      <ni-card [refreshIndex]=\"1\" [title]=\"'Groups' | translate\" (refresh)=\"doRefresh($event)\">\r\n        <ni-table [headers]=\"groupHeaders\" [data]=\"groups\"></ni-table>\r\n        <ni-table-loading *ngIf=\"loadingGroups\"></ni-table-loading>\r\n        <ni-alert *ngIf=\"groups.length === 0 && !loadingGroups\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nogroup' | translate}}</strong></ni-alert>\r\n        <ni-pagination [totalItems]=\"totalGroup\" [itemPerPage]=\"maxGroup\" [currentPage]=\"pageGroup\" *ngIf=\"groups.length > 0\" (changePage)=\"changeGroupPage($event)\"></ni-pagination>\r\n      </ni-card>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"!showGroupList\">\r\n  <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n  <md-tab-group>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>home</md-icon> {{'Home' | translate}}\r\n      </ng-template>\r\n      <div class=\"row p-2\">\r\n        <div class=\"col-sm-12 pt-3\">\r\n          <button *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code !== 'RUNNING'\" md-raised-button color=\"primary\" (click)=\"updateGroup()\">{{'Update' | translate}}</button>\r\n          <button md-raised-button color=\"primary\" (click)=\"reportIncident()\">{{'Report an Incident' | translate}}</button>\r\n          <button *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code !== 'RUNNING'\" md-raised-button color=\"primary\" (click)=\"closeGroup()\">{{'Close' | translate}}</button>\r\n          <button md-raised-button color=\"primary\" (click)=\"cloneGroup()\">{{'Clone' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-md-7 mb-3\">\r\n          <button md-raised-button color=\"primary\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code === 'PENDING_FOR_KICK_OFF'\" (click)=\"openStartDialog()\">Start</button>\r\n          <button md-raised-button color=\"primary\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code === 'PENDING_FOR_KICK_OFF'\" (click)=\"openDialog()\">Add a member</button>\r\n          <button md-raised-button color=\"primary\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.status_code === 'PENDING_FOR_KICK_OFF'\">Save changes</button>\r\n          <md-card class=\"example-card mt-3\" *ngIf=\"groupInfo && groupInfo.group_info\">\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Name:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.name\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Description:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.description\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">First Payment:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.date_first_payment\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT' && groupInfo.group_info.status_code !== 'REQUEST_FOR_POSITION_VALIDATION_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Date creation:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [mdDatepicker]=\"picker\" [(ngModel)]=\"groupInfo.group_info.date_creation\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <button mdSuffix [mdDatepickerToggle]=\"picker\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\"></button>\r\n                </md-input-container>\r\n                <md-datepicker #picker></md-datepicker>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Type:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.g_type_text\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.g_type_text\">{{groupInfo.group_info.g_type_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Currency:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.currency\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.currency\">{{groupInfo.group_info.currency}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Creator:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" [(ngModel)]=\"groupInfo.group_info.creator\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Status:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.status_text\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.status_text\">{{groupInfo.group_info.status_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Position selection method:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-select [(ngModel)]=\"groupInfo.group_info.position_selection_type_text\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                  <md-option [value]=\"groupInfo.group_info.position_selection_type_text\">{{groupInfo.group_info.position_selection_type_text}}</md-option>\r\n                </md-select>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Rate (%):</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.rate\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Frequency (month):</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.frequency\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Due date:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.due_day\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Number of member:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.nb_members\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Smooth Payment:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"text\" value=\"{{groupInfo.group_info.smooth_payment === '1' ? 'Yes' : 'No'}}\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">% Penalty for delay payment:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.delay_payment_penalty\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group row\">\r\n              <label class=\"col-sm-5 col-md-5 col-form-label mb-0\">Number of days of delay before applying % penalty:</label>\r\n              <div class=\"col-sm-7 col-md-7\">\r\n                <md-input-container class=\"mb-0\">\r\n                  <input mdInput type=\"number\" [(ngModel)]=\"groupInfo.group_info.nb_days_delay_before_penalty\" [disabled]=\"groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'\">\r\n                </md-input-container>\r\n              </div>\r\n            </div>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-5 pt-3\" *ngIf=\"groupInfo.group_info.g_type !== 'PUBLIC'\">\r\n          <ni-card [outline]=\"true\" [bgColor]=\"'warning'\" class=\"info-card\" *ngIf=\"groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'\">\r\n            <div class=\"title text-uppercase\">{{'Amount' | translate}}</div>\r\n            <div class=\"count\">{{isShowAmount ? totalAmount : '#####'}}</div>\r\n            <u><a (click)=\"showAmount()\">Show amount</a></u>\r\n          </ni-card>\r\n          <ni-card [title]=\"'timeline' | translate\" [customBgColor]=\"'transparent'\">\r\n            <ni-h-timeline [data]=\"timelineData\"></ni-h-timeline>\r\n          </ni-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.previous_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Previous Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.previous_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.previous_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.previous_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.previous_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <md-card class=\"example-card\" *ngIf=\"groupInfo && groupInfo.next_rotation_data\">\r\n            <md-card-header>\r\n              <md-card-title><strong>Next Rotation</strong></md-card-title>\r\n            </md-card-header>\r\n            <ul>\r\n              <li>First name: {{groupInfo.next_rotation_data.first_name}}</li>\r\n              <li>Email: {{groupInfo.next_rotation_data.email}}</li>\r\n              <li>Position: {{groupInfo.next_rotation_data.position}}</li>\r\n              <li>Position Date: {{groupInfo.next_rotation_data.user_position_date}}</li>\r\n            </ul>\r\n          </md-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>card_membership</md-icon> {{'Members' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button *ngIf=\"groupInfo.group_info.status_code != 'RUNNING' && isAdmin\" md-raised-button color=\"primary\" (click)=\"openDialog()\">{{'Add a member' | translate}}</button>\r\n          <button *ngIf=\"groupInfo.group_info.status_code != 'RUNNING' && isAdmin\" md-raised-button color=\"primary\" (click)=\"removeAll()\">{{'Remove all members' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"2\" [title]=\"'Members' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"memberHeaders\" [data]=\"members\" (showAlert)=\"showAlert($event.status, $event.text)\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingMembers\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"members.length === 0 && !loadingMembers\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'nomember' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalMember\" [itemPerPage]=\"maxMember\" [currentPage]=\"pageMember\" *ngIf=\"members.length > 0\" (changePage)=\"changeMemberPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>check_box</md-icon> {{'Obligation' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"3\" [title]=\"'Obligation' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"obligationHeaders\" [data]=\"obligations\" (showAlert)=\"showAlert($event.status, $event.text)\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingObligations\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"obligations.length === 0 && !loadingObligations\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noobligation' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalObligation\" [itemPerPage]=\"maxObligation\" [currentPage]=\"pageObligation\" *ngIf=\"obligations.length > 0\" (changePage)=\"changeObligationPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>sms_failed</md-icon> {{'Requests' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-6 p-3\">\r\n          <button md-raised-button color=\"primary\" *ngIf=\"isAdmin\" (click)=\"cancelAll()\">{{'Cancel all outstanding request' | translate}}</button>\r\n        </div>\r\n        <div class=\"col-sm-6 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"4\" [title]=\"'Requests' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"requestHeaders\" [data]=\"requests\" (showRequestDialog)=\"cancelRequest($event)\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingRequests\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"requests.length === 0 && !loadingRequests\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'norequest' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalRequest\" [itemPerPage]=\"maxRequest\" [currentPage]=\"pageRequest\" *ngIf=\"requests.length > 0\" (changePage)=\"changeRequestPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>event</md-icon> {{'Event' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"5\" [title]=\"'Event' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <ni-table [headers]=\"eventHeaders\" [data]=\"events\"></ni-table>\r\n            <ni-table-loading *ngIf=\"loadingEvents\"></ni-table-loading>\r\n            <ni-alert *ngIf=\"events.length === 0 && !loadingEvents\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'noevent' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"totalEvent\" [itemPerPage]=\"maxEvent\" [currentPage]=\"pageEvent\" *ngIf=\"events.length > 0\" (changePage)=\"changeEventPage($event)\"></ni-pagination>\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n    <md-tab>\r\n      <ng-template md-tab-label>\r\n        <md-icon>local_atm</md-icon> {{'transaction' | translate}}\r\n      </ng-template>\r\n      <div class=\"row members-header\">\r\n        <div class=\"col-sm-12 text-right p-3\">\r\n          <md-input-container class=\"search-group md-icon-left\">\r\n            <md-icon>search</md-icon>\r\n            <input mdInput value=\"\">\r\n          </md-input-container>\r\n        </div>\r\n      </div>\r\n      <div class=\"row\">\r\n        <div class=\"col-lg-12 pl-3 pr-3\">\r\n          <ni-card [refreshIndex]=\"6\" [title]=\"'transaction' | translate\" (refresh)=\"doRefresh($event)\">\r\n            <!-- <ni-table [headers]=\"transactionHeaders\" [data]=\"transactions\"></ni-table>\r\n            <ni-alert *ngIf=\"transactions.length === 0\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'notransaction' | translate}}</strong></ni-alert>\r\n            <ni-pagination [totalItems]=\"transactions.length\" *ngIf=\"transactions.length > 0\" (changePage)=\"changeTransactionPage($event)\"></ni-pagination> -->\r\n          </ni-card>\r\n        </div>\r\n      </div>\r\n    </md-tab>\r\n  </md-tab-group>\r\n</div>\r\n\r\n<ni-loading></ni-loading>"
 
 /***/ }),
 
@@ -2909,6 +3003,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ni_components_ni_dialog_ni_dialog_component__ = __webpack_require__("../../../../../src/app/ni-components/ni-dialog/ni-dialog.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__transactions_transactions_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/transactions/transactions.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2918,6 +3013,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -2972,6 +3068,9 @@ var PageGroupsComponent = (function () {
         this.alertSuccess = false;
         this.showStatusAlert = false;
         this.alertText = '';
+        this.amounts = [];
+        this.totalAmount = 0;
+        this.isShowAmount = false;
         this._sharedService.emitChange(this.pageTitle);
     }
     PageGroupsComponent.prototype.ngOnInit = function () {
@@ -3154,7 +3253,9 @@ var PageGroupsComponent = (function () {
         var _this = this;
         var dialogRef = this.dialog.open(DialogAddMemberComponent);
         dialogRef.afterClosed().subscribe(function (result) {
-            _this.showAlert(result, 'Adding a member');
+            if (result === 'ok') {
+                _this.showAlert(result, 'Adding a member');
+            }
         });
     };
     PageGroupsComponent.prototype.openStartDialog = function () {
@@ -3204,7 +3305,6 @@ var PageGroupsComponent = (function () {
                 });
             }
             else {
-                _this.showAlert('cancel', 'Removing all members');
             }
         });
     };
@@ -3229,7 +3329,6 @@ var PageGroupsComponent = (function () {
                 });
             }
             else {
-                _this.showAlert('cancel', 'Cancelling all requests');
             }
         });
     };
@@ -3245,7 +3344,7 @@ var PageGroupsComponent = (function () {
         dialogRef.afterClosed().subscribe(function (result) {
             if (result === 'ok') {
                 _this.apiService.cancelRequest(id).then(function (res) {
-                    if (res.request_cancelled == 'yes') {
+                    if (res.request_cancelled === 'yes') {
                         _this.showAlert('ok', 'Cancelling request');
                     }
                     else {
@@ -3254,7 +3353,6 @@ var PageGroupsComponent = (function () {
                 });
             }
             else {
-                _this.showAlert('cancel', 'Cancelling all requests');
             }
         });
     };
@@ -3318,7 +3416,9 @@ var PageGroupsComponent = (function () {
         var _this = this;
         var dialogRef = this.dialog.open(DialogReportIncidentComponent);
         dialogRef.afterClosed().subscribe(function (result) {
-            _this.showAlert(result, 'Reporting an Incident');
+            if (result === 'ok') {
+                _this.showAlert(result, 'Reporting an Incident');
+            }
         });
     };
     PageGroupsComponent.prototype.cloneGroup = function () {
@@ -3348,7 +3448,6 @@ var PageGroupsComponent = (function () {
                 });
             }
             else {
-                _this.showAlert('cancel', 'Cloning a group');
             }
         });
     };
@@ -3375,7 +3474,6 @@ var PageGroupsComponent = (function () {
                 });
             }
             else {
-                _this.showAlert('cancel', 'Updating a group');
             }
         });
     };
@@ -3393,6 +3491,21 @@ var PageGroupsComponent = (function () {
         setTimeout(function () {
             _this.showStatusAlert = false;
         }, 3000);
+    };
+    PageGroupsComponent.prototype.showAmount = function () {
+        var _this = this;
+        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_6__transactions_transactions_component__["a" /* DialogCheckPasswordComponent */]);
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result === 'ok') {
+                _this.apiService.getAmount().then(function (res) {
+                    _this.amounts = res.data;
+                    _this.amounts.forEach(function (a) {
+                        _this.totalAmount += parseInt(a.amount);
+                        _this.isShowAmount = true;
+                    });
+                });
+            }
+        });
     };
     PageGroupsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -3853,6 +3966,125 @@ var PageRequestsComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/pages/default-pages/rollinvest/rollinvest.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\n<md-card>\n  <form [formGroup]=\"form\">\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"name\" placeholder=\"{{'Name' | translate}}\" type=\"text\" value=\"\" [formControl]=\"form.controls['name']\">\n        </md-input-container>\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"frequency\" placeholder=\"{{'frequency' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['frequency']\">\n        </md-input-container>\n        <!-- <md-icon mdTooltip=\"{{'groupmonthinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon> -->\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"min_amount\" placeholder=\"{{'Amount minimum' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['min_amount']\">\n        </md-input-container>\n        <!-- <md-icon mdTooltip=\"{{'grouprateinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>     -->\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"max_amount\" placeholder=\"{{'Amount maximum' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['max_amount']\">\n        </md-input-container>\n        <!-- <md-icon mdTooltip=\"{{'groupdayinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon> -->\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"min_credit\" placeholder=\"{{'Index credit minimum Number' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['min_credit']\">\n        </md-input-container>\n        <!-- <md-icon mdTooltip=\"{{'grouprateinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>     -->\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"max_credit\" placeholder=\"{{'Index credit maximum Number' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['max_credit']\">\n        </md-input-container>\n        <!-- <md-icon mdTooltip=\"{{'groupdayinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon> -->\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"min_rate\" placeholder=\"{{'Return rate minimum' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['min_rate']\">\n        </md-input-container>\n        <!-- <md-icon mdTooltip=\"{{'grouprateinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>     -->\n      </div>\n      <div class=\"col-sm-6\">\n        <md-input-container>\n          <input mdInput id=\"max_rate\" placeholder=\"{{'Return rate maximum' | translate}}\" type=\"number\" value=\"\" [formControl]=\"form.controls['max_rate']\">\n        </md-input-container>\n        <!-- <md-icon mdTooltip=\"{{'groupdayinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon> -->\n      </div>\n    </div>\n    <div class=\"row pt-3\">\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"{{'Base currency' | translate}}\" [formControl]=\"form.controls['base_currency']\">\n          <md-option *ngFor=\"let c of currencies\" [value]=\"c.code\">\n            {{ c.text }}\n          </md-option>\n        </md-select>\n        <!-- <md-icon mdTooltip=\"{{'groupcurrencyinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>     -->\n      </div>\n      <div class=\"col-sm-6\">\n        <md-select placeholder=\"{{'Position selection type' | translate}}\" [formControl]=\"form.controls['ps_type']\">\n          <md-option *ngFor=\"let g of groupTypes\" [value]=\"g.code\">\n            {{ g.text }}\n          </md-option>\n        </md-select>\n        <!-- <md-icon mdTooltip=\"{{'grouptypeinfo' | translate}}\" mdTooltipPosition=\"below\">info</md-icon>     -->\n      </div>\n    </div>\n    <button class=\"mt-3\" md-raised-button color=\"primary\" layout-align=\"end\" (click)=\"search()\" [disabled]=\"!form.valid || form.controls['min_rate'].value > form.controls['max_rate'].value || form.controls['min_credit'].value > form.controls['max_credit'].value\">{{'Search for public' | translate}}</button>\n  </form>\n</md-card>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/rollinvest/rollinvest.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".col-sm-6 {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/default-pages/rollinvest/rollinvest.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageRollinvestComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var PageRollinvestComponent = (function () {
+    function PageRollinvestComponent(_sharedService, fb, apiService, auth) {
+        this._sharedService = _sharedService;
+        this.fb = fb;
+        this.apiService = apiService;
+        this.auth = auth;
+        this.pageTitle = 'rollinvest';
+        this.breadcrumb = [{ title: 'rollinvest' }];
+        this.currencySigns = { USD: '$', GBP: '£', EUR: '€', ZEC: 'Z' };
+        this.groupTypes = [];
+        this.currencies = [];
+        this.psTypes = [];
+        this._sharedService.emitChange(this.pageTitle);
+        this.form = fb.group({
+            name: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].maxLength(30)])],
+            frequency: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required],
+            base_currency: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required],
+            ps_type: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required],
+            min_amount: [10, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].min(10), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].max(9000)])],
+            max_amount: [100, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].min(100), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].max(10000)])],
+            min_credit: [0, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].min(0), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].max(999)])],
+            max_credit: [100, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].min(100), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].max(1000)])],
+            min_rate: [0, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].min(0), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].max(29)])],
+            max_rate: [1, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].min(1), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].max(30)])],
+        }, {
+            validator: this.checkMaxRateAndMinRate
+        });
+    }
+    PageRollinvestComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.auth.langCode.subscribe(function (code) {
+            _this.getData();
+        });
+    };
+    PageRollinvestComponent.prototype.checkMaxRateAndMinRate = function (c) {
+        if ((c.get('max_rate').value < c.get('min_rate').value) || (c.get('max_credit').value < c.get('min_credit').value)) {
+            console.log(c.get('max_rate').value, c.get('min_rate').value);
+            return false;
+        }
+    };
+    PageRollinvestComponent.prototype.getData = function () {
+        var _this = this;
+        this.apiService.getListData('Currency').then(function (res) {
+            _this.currencies = res.data;
+        });
+        this.apiService.getListData('GroupType').then(function (res) {
+            _this.groupTypes = res.data;
+        });
+    };
+    PageRollinvestComponent.prototype.search = function () {
+        this.apiService.search(this.form.value).then(function (res) {
+            console.log(res);
+        });
+    };
+    PageRollinvestComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-rollinvest',
+            template: __webpack_require__("../../../../../src/app/pages/default-pages/rollinvest/rollinvest.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/default-pages/rollinvest/rollinvest.component.scss")]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormBuilder"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */]) === "function" && _d || Object])
+    ], PageRollinvestComponent);
+    return PageRollinvestComponent;
+    var _a, _b, _c, _d;
+}());
+
+//# sourceMappingURL=rollinvest.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/pages/default-pages/simulation/simulation.component.html":
 /***/ (function(module, exports) {
 
@@ -3962,10 +4194,17 @@ var PageSimulationComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/pages/default-pages/transactions/dialog-check-password.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div md-dialog-content>\n  <md-input-container class=\"mt-4\">\n    <input mdInput placeholder=\"Enter your password\" value=\"\"  type=\"password\" [(ngModel)]=\"password\">\n    <small class=\"form-message text-danger\" *ngIf=\"!isPasswordCorrect\">Password is not correct.</small>\n  </md-input-container>\n  <div md-dialog-actions>\n    <button md-raised-button (click)=\"dialogRef.close('no')\" color=\"default\">CANCEL</button>\n    <button md-raised-button (click)=\"checkPassword()\" color=\"primary\" [disabled]=\"password === ''\">Check</button>\n  </div>\n</div>"
+
+/***/ }),
+
 /***/ "../../../../../src/app/pages/default-pages/transactions/transactions.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n<div class=\"row\">\r\n  <div class=\"col-lg-4\">\r\n    <ni-card>\r\n      <div id=\"amchart-1\" [style.width.%]=\"100\" [style.height.px]=\"300\"></div>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-lg-4\">\r\n    <ni-card>\r\n      <div id=\"amchart-2\" [style.width.%]=\"100\" [style.height.px]=\"300\"></div>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-lg-4\">\r\n    <ni-card>\r\n      <div id=\"amchart-3\" [style.width.%]=\"100\" [style.height.px]=\"300\"></div>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-xl-8\">\r\n    <ni-card [title]=\"'What we doing'\">\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dolor ducimus est excepturi illo itaque\r\n        modi quis repudiandae totam vitae. Accusamus beatae consectetur dolorum pariatur sapiente. Ad architecto at aut\r\n        et ex facilis fuga, laboriosam, magnam modi obcaecati officia officiis, omnis praesentium quam quas reiciendis\r\n        rerum ullam velit veritatis vitae.</p>\r\n\r\n      <div class=\"row\">\r\n        <div class=\"col-md-6\">\r\n          <p class=\"mb-1\"><strong>Wordpress</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"90\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Magento</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"80\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Opencart</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"60\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Drupal</strong></p>\r\n          <md-progress-bar mode=\"determinate\" [value]=\"30\"></md-progress-bar>\r\n          <div class=\"clearfix\"></div>\r\n        </div>\r\n\r\n        <div class=\"col-md-6\">\r\n          <p class=\"mb-1\"><strong>Angular</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"98\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>React</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"85\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Vue.js</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"40\"></md-progress-bar>\r\n\r\n          <p class=\"mb-1\"><strong>Backbone.js</strong></p>\r\n          <md-progress-bar mode=\"determinate\" color=\"accent\" [value]=\"38\"></md-progress-bar>\r\n          <div class=\"clearfix\"></div>\r\n        </div>\r\n      </div>\r\n\r\n      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam at corporis deleniti dicta doloremque\r\n        doloribus, ea ex excepturi fugiat labore minima possimus quia repellat similique soluta ut voluptate! Ad et hic\r\n        incidunt molestiae mollitia officiis omnis, perspiciatis quaerat qui quibusdam.</p>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-xl-4\">\r\n    <ni-card [bgColor]=\"''\" class=\"chart-card\">\r\n      <div class=\"chart\">\r\n        <canvas\r\n          baseChart\r\n          [data]=\"pieChartData\"\r\n          [colors]=\"pieChartColors\"\r\n          [labels]=\"pieChartLabels\"\r\n          [legend]=\"false\"\r\n          [options]=\"pieChartOptions\"\r\n          [chartType]=\"pieChartType\"></canvas>\r\n      </div>\r\n      <div class=\"info\">\r\n        <div class=\"title\"><strong>930</strong> <small>Resolved</small></div>\r\n        <div class=\"small\">More than 70% resolved issues</div>\r\n      </div>\r\n    </ni-card>\r\n    <ni-card [bgColor]=\"''\" class=\"chart-card\">\r\n      <div class=\"chart\">\r\n        <canvas\r\n          baseChart\r\n          [data]=\"doughnutChartData\"\r\n          [colors]=\"doughnutChartColors\"\r\n          [labels]=\"doughnutChartLabels\"\r\n          [legend]=\"false\"\r\n          [options]=\"doughnutChartOptions\"\r\n          [chartType]=\"doughnutChartType\"></canvas>\r\n      </div>\r\n      <div class=\"info\">\r\n        <div class=\"title\"><strong>466</strong> <small>Unresolved</small></div>\r\n        <div class=\"small\">Less than 30% unresolved issues</div>\r\n      </div>\r\n    </ni-card>\r\n    <ni-card [bgColor]=\"''\" class=\"chart-card\">\r\n      <div class=\"chart\">\r\n        <canvas\r\n          baseChart\r\n          [data]=\"polarAreaChartData\"\r\n          [colors]=\"polarAreaChartColors\"\r\n          [labels]=\"polarAreaChartLabels\"\r\n          [legend]=\"false\"\r\n          [options]=\"polarAreaChartOptions\"\r\n          [chartType]=\"polarAreaChartType\"></canvas>\r\n      </div>\r\n      <div class=\"info\">\r\n        <div class=\"title\"><strong>1,547</strong> <small>Issues</small></div>\r\n        <div class=\"small\">8 issues are unassigned</div>\r\n      </div>\r\n    </ni-card>\r\n  </div>\r\n\r\n  <div class=\"col-md-4\">\r\n    <ni-card [title]=\"'Recent activities'\" [outline]=\"true\" class=\"mb-md-0\">\r\n      <ni-h-timeline [showYears]=\"false\" [align]=\"'left'\" [data]=\"timelineData\"></ni-h-timeline>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <ni-card [title]=\"'Last sales'\" class=\"mb-md-0\">\r\n      <div class=\"table-responsive mb-3\">\r\n        <table class=\"table table-sm\">\r\n          <tbody>\r\n          <tr>\r\n            <td>Samsung Galaxy S8</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Meizu M3</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Meizu Pro 6</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">5</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Apple iPhone SE</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'warning'\" [borderRadius]=\"false\">7</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>iPhone 6</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>iPhone 7</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">1</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Huawei P8</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">4</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Ipad Mini</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'info'\" [borderRadius]=\"false\">15</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Ipad Pro</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'success'\" [borderRadius]=\"false\">6</ni-badge>\r\n            </td>\r\n          </tr>\r\n          <tr>\r\n            <td>Xiaomi Mi Band 2</td>\r\n            <td class=\"text-right\">\r\n              <ni-badge [color]=\"'danger'\" [borderRadius]=\"false\">10</ni-badge>\r\n            </td>\r\n          </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n      <button ni-button block=\"true\" type=\"accent\" outline=\"true\" lineStyle=\"dashed\" beforeIcon=\"fa fa-shopping-basket\">Look all</button>\r\n    </ni-card>\r\n  </div>\r\n</div>"
+module.exports = "\r\n<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-8\">\r\n    <ni-card [title]=\"'Transactions' | translate\" (refresh)=\"doRefresh($event)\" [showRefresh]=\"true\">\r\n      <ni-table [headers]=\"transactionHeaders\" [data]=\"transactions\"></ni-table>\r\n      <ni-table-loading *ngIf=\"loading\"></ni-table-loading>\r\n      <ni-alert *ngIf=\"transactions.length === 0 && !loading\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'No transaction' | translate}}</strong></ni-alert>\r\n      <ni-pagination [totalItems]=\"total\" [itemPerPage]=\"max\" [currentPage]=\"page\" *ngIf=\"transactions.length > 0\" (changePage)=\"changePage($event)\"></ni-pagination>\r\n    </ni-card>\r\n  </div>\r\n  <div class=\"col-md-4\">\r\n    <ni-card [outline]=\"true\" [bgColor]=\"'warning'\" class=\"info-card\">\r\n      <div class=\"title text-uppercase\">{{'Amount' | translate}}</div>\r\n      <div class=\"count\">{{isShowAmount ? totalAmount : '#####'}}</div>\r\n      <u><a (click)=\"showAmount()\">Show amount</a></u>\r\n    </ni-card>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -3991,11 +4230,13 @@ module.exports = module.exports.toString();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageTransactionsComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PageTransactionsComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogCheckPasswordComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__ = __webpack_require__("../../../../@amcharts/amcharts3-angular/es2015/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4009,247 +4250,67 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var timelineData = [
-    {
-        'timeline': [
-            {
-                'date': '12 minutes ago',
-                'content': "You <span class=\"text-info\">recommended</span> Sem B.",
-                'pointColor': '#ea8080'
-            },
-            {
-                'date': '37 minutes ago',
-                'content': "You followed Sydney N.",
-                'pointColor': '#915035'
-            },
-            {
-                'date': '2 hours ago',
-                'content': "You <span class=\"text-danger\">subscribed</span> to Harold Fuller",
-                'pointColor': '#B925FF'
-            },
-            {
-                'date': '7 hours ago',
-                'content': "You updated your profile picture",
-                'pointColor': '#C5CAE9'
-            }
-        ]
-    }
-];
+
 var PageTransactionsComponent = (function () {
-    function PageTransactionsComponent(AmCharts, _sharedService, apiService) {
-        this.AmCharts = AmCharts;
+    function PageTransactionsComponent(_sharedService, apiService, dialog) {
         this._sharedService = _sharedService;
         this.apiService = apiService;
+        this.dialog = dialog;
         this.pageTitle = 'transactions';
-        this.timelineData = timelineData;
         this.breadcrumb = [{ title: 'transactions' }];
-        this.activeUser = {
-            name: 'Amanda Li',
-            lastSeen: 'last seen 10 minutes ago',
-            avatar: 'assets/content/avatar-4.jpg'
-        };
-        // Pie
-        this.pieChartLabels = [
-            'Angular',
-            'PHP',
-            'HTML'
-        ];
-        this.pieChartData = [
-            300,
-            500,
-            100
-        ];
-        this.pieChartColors = [
-            {
-                backgroundColor: [
-                    "#778391",
-                    "#5dade0",
-                    "#3c4e62"
-                ],
-            }
-        ];
-        this.pieChartType = 'pie';
-        this.pieChartOptions = {
-            elements: {
-                arc: {
-                    borderWidth: 0
-                }
-            },
-            tooltips: false
-        };
-        //Doughnut
-        this.doughnutChartLabels = [
-            'Angular',
-            'PHP',
-            'HTML'
-        ];
-        this.doughnutChartData = [
-            350,
-            450,
-            100
-        ];
-        this.doughnutChartColors = [
-            {
-                backgroundColor: [
-                    "#778391",
-                    "#ff8c00",
-                    "#3c4e62"
-                ],
-            }
-        ];
-        this.doughnutChartType = 'doughnut';
-        this.doughnutChartOptions = {
-            elements: {
-                arc: {
-                    borderWidth: 0
-                }
-            },
-            tooltips: false
-        };
-        // PolarArea
-        this.polarAreaChartLabels = [
-            'Angular',
-            'PHP',
-            'HTML'
-        ];
-        this.polarAreaChartData = [
-            300,
-            400,
-            500
-        ];
-        this.polarAreaChartColors = [
-            {
-                backgroundColor: [
-                    "#778391",
-                    "#dc143c",
-                    "#3c4e62"
-                ],
-            }
-        ];
-        this.polarAreaChartType = 'polarArea';
-        this.polarAreaChartOptions = {
-            elements: {
-                arc: {
-                    borderWidth: 0
-                }
-            },
-            tooltips: false
-        };
+        this.transactions = [];
+        this.transactionHeaders = [];
+        this.subscribeList = [];
+        this.amounts = [];
+        this.totalAmount = 0;
+        this.isShowAmount = false;
+        this.max = 5;
+        this.page = 1;
+        this.total = 0;
+        this.loading = true;
         this._sharedService.emitChange(this.pageTitle);
         this.apiService.initHeaderGroup.next('');
     }
     PageTransactionsComponent.prototype.ngOnInit = function () {
-        this.chart = this.AmCharts.makeChart('amchart-1', {
-            'type': 'pie',
-            'theme': 'light',
-            'dataProvider': [
-                {
-                    'country': 'Lithuania',
-                    'litres': 501.9
-                }, {
-                    'country': 'Czech Republic',
-                    'litres': 301.9
-                }, {
-                    'country': 'Ireland',
-                    'litres': 201.1
-                }, {
-                    'country': 'Germany',
-                    'litres': 165.8
-                }, {
-                    'country': 'Australia',
-                    'litres': 139.9
-                }, {
-                    'country': 'Austria',
-                    'litres': 128.3
-                }, {
-                    'country': 'UK',
-                    'litres': 99
-                }, {
-                    'country': 'Belgium',
-                    'litres': 60
-                }, {
-                    'country': 'The Netherlands',
-                    'litres': 50
-                }
-            ],
-            'pullOutRadius': 0,
-            'labelRadius': -40,
-            'valueField': 'litres',
-            'titleField': 'country',
-            'labelText': '[[litres]]',
-            'balloon': {
-                'fixedPosition': true
-            }
-        });
-        this.chart = this.AmCharts.makeChart('amchart-2', {
-            'type': 'pie',
-            'theme': 'light',
-            'dataProvider': [
-                {
-                    'title': 'Chrome',
-                    'value': 70
-                }, {
-                    'title': 'Firefox',
-                    'value': 15
-                }, {
-                    'title': 'Opera',
-                    'value': 10
-                }, {
-                    'title': 'Safari',
-                    'value': 12
-                }, {
-                    'title': 'Edge',
-                    'value': 5
-                }
-            ],
-            'titleField': 'title',
-            'valueField': 'value',
-            'labelRadius': -40,
-            'radius': '46%',
-            'innerRadius': '60%',
-            'labelText': '[[title]]'
-        });
-        this.chart = this.AmCharts.makeChart('amchart-3', {
-            'type': 'radar',
-            'theme': 'light',
-            'dataProvider': [
-                {
-                    'country': 'Czech Republic',
-                    'litres': 156.9
-                }, {
-                    'country': 'Ireland',
-                    'litres': 131.1
-                }, {
-                    'country': 'Germany',
-                    'litres': 115.8
-                }, {
-                    'country': 'Australia',
-                    'litres': 109.9
-                }, {
-                    'country': 'Austria',
-                    'litres': 108.3
-                }, {
-                    'country': 'UK',
-                    'litres': 99
-                }
-            ],
-            'valueAxes': [{
-                    'axisTitleOffset': 20,
-                    'minimum': 0,
-                    'axisAlpha': 0.15
-                }],
-            'startDuration': 1,
-            'graphs': [{
-                    'balloonText': '[[value]] litres of beer per year',
-                    'bullet': 'round',
-                    'lineThickness': 2,
-                    'valueField': 'litres'
-                }],
-            'categoryField': 'country'
-        });
+        this.getTransactions();
     };
     PageTransactionsComponent.prototype.ngOnDestroy = function () {
-        this.AmCharts.destroyChart(this.chart);
+    };
+    PageTransactionsComponent.prototype.getTransactions = function () {
+        var _this = this;
+        this.loading = true;
+        this.transactions = [];
+        this.transactionHeaders = ['Sender', 'Receiver', 'Amount', 'Creation Date', 'Payment Date', 'Status'];
+        this.apiService.getTransactions(this.max, this.page).then(function (res) {
+            res.data.forEach(function (d) {
+                _this.transactions.push([d.sender, d.receiver, d.amount, d.creation_date, d.payment_date, d.status_text]);
+            });
+            _this.total = res.count;
+            _this.loading = false;
+        });
+    };
+    PageTransactionsComponent.prototype.doRefresh = function (res) {
+        this.getTransactions();
+    };
+    PageTransactionsComponent.prototype.changePage = function (res) {
+        this.max = res[0];
+        this.page = res[1];
+        this.getTransactions();
+    };
+    PageTransactionsComponent.prototype.showAmount = function () {
+        var _this = this;
+        var dialogRef = this.dialog.open(DialogCheckPasswordComponent);
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result === 'ok') {
+                _this.apiService.getAmount().then(function (res) {
+                    _this.amounts = res.data;
+                    _this.amounts.forEach(function (a) {
+                        _this.totalAmount += parseInt(a.amount);
+                        _this.isShowAmount = true;
+                    });
+                });
+            }
+        });
     };
     PageTransactionsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -4257,9 +4318,40 @@ var PageTransactionsComponent = (function () {
             template: __webpack_require__("../../../../../src/app/pages/default-pages/transactions/transactions.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/default-pages/transactions/transactions.component.scss")]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__amcharts_amcharts3_angular__["b" /* AmChartsService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_api_service__["a" /* ApiService */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__["a" /* SharedService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["j" /* MdDialog */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["j" /* MdDialog */]) === "function" && _c || Object])
     ], PageTransactionsComponent);
     return PageTransactionsComponent;
+    var _a, _b, _c;
+}());
+
+var DialogCheckPasswordComponent = (function () {
+    function DialogCheckPasswordComponent(dialogRef, apiService, authService) {
+        this.dialogRef = dialogRef;
+        this.apiService = apiService;
+        this.authService = authService;
+        this.password = '';
+        this.isPasswordCorrect = true;
+    }
+    DialogCheckPasswordComponent.prototype.checkPassword = function () {
+        var _this = this;
+        this.authService.checkPassword(this.password).then(function (res) {
+            console.log(res);
+            if (res.password_valid) {
+                _this.dialogRef.close('ok');
+            }
+            else {
+                _this.isPasswordCorrect = false;
+            }
+        });
+    };
+    DialogCheckPasswordComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'dialog-check-password',
+            template: __webpack_require__("../../../../../src/app/pages/default-pages/transactions/dialog-check-password.html"),
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__angular_material__["l" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_material__["l" /* MdDialogRef */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */]) === "function" && _c || Object])
+    ], DialogCheckPasswordComponent);
+    return DialogCheckPasswordComponent;
     var _a, _b, _c;
 }());
 
@@ -4270,7 +4362,7 @@ var PageTransactionsComponent = (function () {
 /***/ "../../../../../src/app/pages/extra-pages/confirm/confirm.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-card [title]=\"'Confirm Email'\" [align]=\"'center'\">\r\n  <span class=\"material-icons\">mail_outline</span>\r\n  <p class=\"small\">An email has been send to username@mail.com. Please check for an email from us and click on the included link to reset your password.</p>\r\n  <div class=\"additional-info\">\r\n    <a [routerLink]=\"'/extra-layout/sign-in'\">Return to Sign in</a>\r\n  </div>\r\n</ni-card>\r\n\r\n"
+module.exports = "<ni-card [title]=\"'Confirm Email'\" [align]=\"'center'\">\r\n  <span class=\"material-icons\">mail_outline</span>\r\n  <p class=\"small\">An email has been send to {{email}}. Please check for an email from us and click on the included link to reset your password.</p>\r\n  <div class=\"additional-info\">\r\n    <a [routerLink]=\"'/extra-layout/sign-in'\">Return to Sign in</a>\r\n  </div>\r\n</ni-card>\r\n\r\n"
 
 /***/ }),
 
@@ -4316,6 +4408,8 @@ var PageConfirmComponent = (function () {
     function PageConfirmComponent(auth, router) {
         this.auth = auth;
         this.router = router;
+        this.email = '';
+        this.email = localStorage.getItem('email');
     }
     PageConfirmComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -4347,7 +4441,7 @@ var PageConfirmComponent = (function () {
 /***/ "../../../../../src/app/pages/extra-pages/forgot/forgot.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ni-card [title]=\"'Reset Your Password'\" [align]=\"'center'\">\r\n  <form (ngSubmit)=\"onSubmit()\">\r\n    <md-input-container>\r\n      <input mdInput placeholder=\"Email\" value=\"\">\r\n    </md-input-container>\r\n\r\n    <p class=\"text-left small\">Enter your email address that you used to register. We'll send you an email with your username and a link to reset your password.</p>\r\n\r\n    <button md-raised-button color=\"primary\" type=\"submit\">Reset</button>\r\n\r\n    <div class=\"additional-info\">\r\n      <a [routerLink]=\"'/extra-layout/sign-in'\">Sign In</a>\r\n    </div>\r\n  </form>\r\n</ni-card>"
+module.exports = "<ni-card [title]=\"'Reset Your Password'\" [align]=\"'center'\">\r\n  <form [formGroup]=\"form\" (ngSubmit)=\"onSubmit()\">\r\n    <md-input-container>\r\n      <input mdInput id=\"email\" placeholder=\"{{'Email' | translate}}\" type=\"email\" value=\"\" [formControl]=\"form.controls['email']\">\r\n    </md-input-container>\r\n\r\n    <p class=\"text-left small\">Enter your email address that you used to register. We'll send you an email with your username and a link to reset your password.</p>\r\n\r\n    <button md-raised-button color=\"primary\" [disabled]=\"!form.valid\" type=\"submit\">Reset</button>\r\n\r\n    <div class=\"additional-info\">\r\n      <a [routerLink]=\"'/extra-layout/sign-in'\">Sign In</a>\r\n    </div>\r\n  </form>\r\n</ni-card>"
 
 /***/ }),
 
@@ -4375,6 +4469,8 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageForgotComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4385,20 +4481,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var PageForgotComponent = (function () {
-    function PageForgotComponent() {
+    function PageForgotComponent(authService, fb) {
+        this.authService = authService;
+        this.fb = fb;
     }
-    PageForgotComponent.prototype.ngOnInit = function () { };
-    PageForgotComponent.prototype.onSubmit = function () { };
+    PageForgotComponent.prototype.ngOnInit = function () {
+        this.form = this.fb.group({
+            email: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["Validators"].email])],
+        });
+    };
+    PageForgotComponent.prototype.onSubmit = function () {
+        this.authService.resetPassword(this.form.value.email).then(function (res) {
+            console.log(res);
+        });
+    };
     PageForgotComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-forgot',
             template: __webpack_require__("../../../../../src/app/pages/extra-pages/forgot/forgot.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/extra-pages/forgot/forgot.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormBuilder"]) === "function" && _b || Object])
     ], PageForgotComponent);
     return PageForgotComponent;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=forgot.component.js.map
@@ -4727,7 +4836,7 @@ var PageSignupComponent = (function () {
         this.auth.isConfirm = false;
         this.auth.isLogged = false;
         this.form = this.fb.group({
-            fname: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].minLength(5), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].maxLength(10)])],
+            fname: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].minLength(2), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].maxLength(20)])],
             email: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].compose([__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required, __WEBPACK_IMPORTED_MODULE_2_ng2_validation__["CustomValidators"].email])],
             gender: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required],
             agree: [null, __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].requiredTrue],
@@ -4740,6 +4849,7 @@ var PageSignupComponent = (function () {
         var _this = this;
         this.auth.signup(this.form.value).then(function (data) {
             _this.auth.redirectPage = 'confirm';
+            localStorage.setItem('email', _this.form.value.email);
             _this.router.navigate(['/extra-layout/confirm']);
         });
     };
@@ -4823,13 +4933,17 @@ var DialogResultComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/profile/profile.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__default_pages_simulation_simulation_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/simulation/simulation.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__default_pages_chatroom_chatroom_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/chatroom/chatroom.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__default_pages_obligation_obligation_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/obligation/obligation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__default_pages_rollinvest_rollinvest_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/rollinvest/rollinvest.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__default_pages_obligation_obligation_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/obligation/obligation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__default_pages_faq_faq_component__ = __webpack_require__("../../../../../src/app/pages/default-pages/faq/faq.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -4922,7 +5036,7 @@ var PagesModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_25__default_pages_aboutus_aboutus_component__["a" /* PageAboutusComponent */],
                 __WEBPACK_IMPORTED_MODULE_27__default_pages_simulation_simulation_component__["a" /* PageSimulationComponent */],
                 __WEBPACK_IMPORTED_MODULE_24__default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__default_pages_transactions_transactions_component__["a" /* PageTransactionsComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__default_pages_transactions_transactions_component__["b" /* PageTransactionsComponent */],
                 __WEBPACK_IMPORTED_MODULE_15__extra_pages_signup_signup_component__["a" /* DialogResultComponent */],
                 __WEBPACK_IMPORTED_MODULE_14__extra_pages_signin_signin_component__["a" /* PageSigninComponent */],
                 __WEBPACK_IMPORTED_MODULE_15__extra_pages_signup_signup_component__["b" /* PageSignupComponent */],
@@ -4932,11 +5046,14 @@ var PagesModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_19__extra_pages_page_500_page_500_component__["a" /* Page500Component */],
                 __WEBPACK_IMPORTED_MODULE_24__default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */],
                 __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["a" /* DialogAddMemberComponent */],
-                __WEBPACK_IMPORTED_MODULE_28__default_pages_chatroom_chatroom_component__["a" /* ChatroomComponent */],
-                __WEBPACK_IMPORTED_MODULE_29__default_pages_obligation_obligation_component__["a" /* PageObligationComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__default_pages_chatroom_chatroom_component__["a" /* PageChatroomComponent */],
+                __WEBPACK_IMPORTED_MODULE_30__default_pages_obligation_obligation_component__["a" /* PageObligationComponent */],
                 __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__["a" /* DialogAcceptAndRejectComponent */],
                 __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["c" /* DialogStartComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["b" /* DialogReportIncidentComponent */]
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["b" /* DialogReportIncidentComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__default_pages_rollinvest_rollinvest_component__["a" /* PageRollinvestComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__default_pages_transactions_transactions_component__["a" /* DialogCheckPasswordComponent */],
+                __WEBPACK_IMPORTED_MODULE_31__default_pages_faq_faq_component__["a" /* PageFaqComponent */],
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__["b" /* PageDashboardComponent */],
@@ -4946,7 +5063,7 @@ var PagesModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_25__default_pages_aboutus_aboutus_component__["a" /* PageAboutusComponent */],
                 __WEBPACK_IMPORTED_MODULE_27__default_pages_simulation_simulation_component__["a" /* PageSimulationComponent */],
                 __WEBPACK_IMPORTED_MODULE_24__default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__default_pages_transactions_transactions_component__["a" /* PageTransactionsComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__default_pages_transactions_transactions_component__["b" /* PageTransactionsComponent */],
                 __WEBPACK_IMPORTED_MODULE_15__extra_pages_signup_signup_component__["a" /* DialogResultComponent */],
                 __WEBPACK_IMPORTED_MODULE_14__extra_pages_signin_signin_component__["a" /* PageSigninComponent */],
                 __WEBPACK_IMPORTED_MODULE_15__extra_pages_signup_signup_component__["b" /* PageSignupComponent */],
@@ -4954,14 +5071,17 @@ var PagesModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_17__extra_pages_confirm_confirm_component__["a" /* PageConfirmComponent */],
                 __WEBPACK_IMPORTED_MODULE_18__extra_pages_page_404_page_404_component__["a" /* Page404Component */],
                 __WEBPACK_IMPORTED_MODULE_19__extra_pages_page_500_page_500_component__["a" /* Page500Component */],
-                __WEBPACK_IMPORTED_MODULE_24__default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */]
+                __WEBPACK_IMPORTED_MODULE_24__default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__default_pages_rollinvest_rollinvest_component__["a" /* PageRollinvestComponent */],
+                __WEBPACK_IMPORTED_MODULE_31__default_pages_faq_faq_component__["a" /* PageFaqComponent */],
             ],
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_15__extra_pages_signup_signup_component__["a" /* DialogResultComponent */],
                 __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["a" /* DialogAddMemberComponent */],
                 __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__["a" /* DialogAcceptAndRejectComponent */],
                 __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["c" /* DialogStartComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["b" /* DialogReportIncidentComponent */]
+                __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["b" /* DialogReportIncidentComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__default_pages_transactions_transactions_component__["a" /* DialogCheckPasswordComponent */],
             ]
         })
     ], PagesModule);
@@ -5153,7 +5273,6 @@ var ApiService = (function () {
         params.set('lang', this.langCode);
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
-                console.log(res);
                 resolve(res.json());
             });
         });
@@ -5168,7 +5287,7 @@ var ApiService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
-                console.log(err);
+                reject(err);
             });
         });
     };
@@ -5186,7 +5305,7 @@ var ApiService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
-                console.log(err);
+                reject(err);
             });
         });
     };
@@ -5202,7 +5321,7 @@ var ApiService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
-                console.log(err);
+                reject(err);
             });
         });
     };
@@ -5215,7 +5334,7 @@ var ApiService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
-                console.log(err);
+                reject(err);
             });
         });
     };
@@ -5234,7 +5353,7 @@ var ApiService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
-                console.log(err);
+                reject(err);
             });
         });
     };
@@ -5253,7 +5372,7 @@ var ApiService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
-                console.log(err);
+                reject(err);
             });
         });
     };
@@ -5272,7 +5391,7 @@ var ApiService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
-                console.log(err);
+                reject(err);
             });
         });
     };
@@ -5291,7 +5410,7 @@ var ApiService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
-                console.log(err);
+                reject(err);
             });
         });
     };
@@ -5306,7 +5425,7 @@ var ApiService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
-                console.log(err);
+                reject(err);
             });
         });
     };
@@ -5323,7 +5442,7 @@ var ApiService = (function () {
                 console.log(res._body);
                 resolve(res.json());
             }, function (err) {
-                console.log(err);
+                reject(err);
             });
         });
     };
@@ -5341,7 +5460,7 @@ var ApiService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
-                console.log(err);
+                reject(err);
             });
         });
     };
@@ -5359,7 +5478,7 @@ var ApiService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
-                console.log(err);
+                reject(err);
             });
         });
     };
@@ -5377,7 +5496,7 @@ var ApiService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
-                console.log(err);
+                reject(err);
             });
         });
     };
@@ -5393,7 +5512,7 @@ var ApiService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
-                console.log(err);
+                reject(err);
             });
         });
     };
@@ -5409,7 +5528,7 @@ var ApiService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
-                console.log(err);
+                reject(err);
             });
         });
     };
@@ -5423,7 +5542,7 @@ var ApiService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
-                console.log(err);
+                reject(err);
             });
         });
     };
@@ -5445,7 +5564,26 @@ var ApiService = (function () {
         }
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
-                console.log(res);
+                resolve(res.json());
+            });
+        });
+    };
+    ApiService.prototype.search = function (form) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'groups/search';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        params.set('name', form.name);
+        params.set('rate_min', form.min_rate);
+        params.set('rate_max', form.max_rate);
+        params.set('amount_min', form.min_amount);
+        params.set('amount_max', form.max_amount);
+        params.set('currency_code', form.base_currency);
+        params.set('position_selection_type_code', form.ps_type);
+        params.set('frequency', form.frequency);
+        params.set('token', localStorage.getItem('token'));
+        params.set('lang', this.langCode);
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             });
         });
@@ -5463,7 +5601,7 @@ var ApiService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
-                console.log(err);
+                reject(err);
             });
         });
     };
@@ -5480,7 +5618,54 @@ var ApiService = (function () {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
             }, function (err) {
-                console.log(err);
+                reject(err);
+            });
+        });
+    };
+    ApiService.prototype.getTransactions = function (max, page) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/transactions';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        this.groupId.subscribe(function (data) {
+            params.set('group_id', data);
+        });
+        params.set('token', localStorage.getItem('token'));
+        params.set('max', max);
+        params.set('page', page);
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                reject(err);
+            });
+        });
+    };
+    ApiService.prototype.getAmount = function () {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'user/account';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        params.set('token', localStorage.getItem('token'));
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                reject(err);
+            });
+        });
+    };
+    ApiService.prototype.getAllChatMembers = function (name) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'user/chat/members';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        params.set('token', localStorage.getItem('token'));
+        if (name) {
+            params.set('name', name);
+        }
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                reject(err);
             });
         });
     };
@@ -5547,6 +5732,7 @@ var AuthService = (function () {
         params.set('gender', data.gender);
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
+                console.log(res);
                 localStorage.setItem('confirm', 'true');
                 _this.isConfirm = true;
                 resolve(res.json());
@@ -5605,6 +5791,33 @@ var AuthService = (function () {
         params.set('lng', lng);
         params.set('username', 'demo');
         var url = 'http://api.geonames.org/countryCodeJSON/';
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    AuthService.prototype.checkPassword = function (password) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'user/password/check';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        params.set('password', password);
+        params.set('token', localStorage.getItem('token'));
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                console.log(err);
+            });
+        });
+    };
+    AuthService.prototype.resetPassword = function (email) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'users/password/reset';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        params.set('email', email);
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
@@ -6028,7 +6241,7 @@ var DialogGroupCreateComponent = (function () {
 /***/ "../../../../../src/app/ui/components/logo/logo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<a [routerLink]=\"'/default-layout/dashboard'\" class=\"logo\">\n  <!-- <img src=\"assets/img/logo.png\" alt=\"\" width=\"147\" height=\"33\" class=\"logo-img\"> -->\n  RollIncome\n</a>\n\n<span class=\"compress-logo\">\n  <!-- <img src=\"assets/img/logo-compress.png\" alt=\"\" width=\"38\" height=\"33\" class=\"logo-img\"> -->\n</span>\n"
+module.exports = "<a [routerLink]=\"'/default-layout/dashboard'\" class=\"logo\">\n  <img src=\"assets/img/logo.png\" alt=\"\" class=\"logo-img\">\n  <!-- RollIncome -->\n</a>\n\n<span class=\"compress-logo\">\n  <!-- <img src=\"assets/img/logo-compress.png\" alt=\"\" width=\"38\" height=\"33\" class=\"logo-img\"> -->\n</span>\n"
 
 /***/ }),
 
@@ -6040,7 +6253,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ":host {\n  background: #1b2237;\n  color: #ffffff;\n  display: block;\n  height: 3.4375rem;\n  position: relative; }\n  :host .logo {\n    -webkit-box-align: start;\n        -ms-flex-align: start;\n            align-items: flex-start;\n    color: inherit;\n    display: block;\n    text-align: center;\n    font-size: 28px;\n    height: 100%;\n    padding: 0.6875rem 1.375rem;\n    text-decoration: none; }\n    :host .logo .logo-img {\n      height: auto;\n      max-height: 100%;\n      max-width: 100%;\n      vertical-align: top;\n      width: auto; }\n    :host .logo .logo-text {\n      display: block;\n      font-size: 33px;\n      font-weight: 500;\n      line-height: 1; }\n  :host .compress-logo {\n    -webkit-box-align: start;\n        -ms-flex-align: start;\n            align-items: flex-start;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    height: 100%;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    opacity: 0;\n    padding: 0.6875rem;\n    position: absolute;\n    right: 0;\n    top: 0;\n    width: 4.125rem; }\n    .rtl :host .compress-logo {\n      left: 0;\n      right: auto; }\n    :host .compress-logo .logo-img {\n      height: auto;\n      max-height: 100%;\n      max-width: 100%;\n      vertical-align: top;\n      width: auto; }\n    :host .compress-logo .logo-text {\n      display: block;\n      font-size: 26px;\n      font-weight: 500;\n      line-height: 1; }\n  .menu-style-2 :host .compress-logo,\n  .menu-style-3 :host .compress-logo,\n  .menu-style-4 :host .compress-logo {\n    left: 0;\n    right: auto; }\n  .menu-style-2.rtl :host .compress-logo,\n  .menu-style-3.rtl :host .compress-logo,\n  .menu-style-4.rtl :host .compress-logo {\n    left: auto;\n    right: 0; }\n  @media (min-width: 992px) {\n    .compress-vertical-navbar :host .logo {\n      opacity: 0;\n      -webkit-transform: translateX(100%);\n              transform: translateX(100%);\n      transition: 0.2s opacity 0s ease-in-out, 0.2s -webkit-transform 0s ease-in-out;\n      transition: 0.2s opacity 0s ease-in-out, 0.2s transform 0s ease-in-out;\n      transition: 0.2s opacity 0s ease-in-out, 0.2s transform 0s ease-in-out, 0.2s -webkit-transform 0s ease-in-out; }\n    .compress-vertical-navbar :host .compress-logo {\n      opacity: 1;\n      -webkit-transform: scale(1);\n              transform: scale(1);\n      transition: 0.2s opacity 0.2s ease-in-out, 0.2s -webkit-transform 0.2s ease-in-out;\n      transition: 0.2s opacity 0.2s ease-in-out, 0.2s transform 0.2s ease-in-out;\n      transition: 0.2s opacity 0.2s ease-in-out, 0.2s transform 0.2s ease-in-out, 0.2s -webkit-transform 0.2s ease-in-out; } }\n  @media (min-width: 992px) {\n    .compress-vertical-navbar.rtl :host .logo {\n      -webkit-transform: translateX(-100%);\n              transform: translateX(-100%); } }\n  @media (min-width: 992px) {\n    .compress-vertical-navbar .vertical-navbar:hover :host .logo {\n      opacity: 1;\n      -webkit-transform: translateX(0);\n              transform: translateX(0);\n      transition: 0.2s opacity 0.2s ease-in-out, 0.2s -webkit-transform 0.2s ease-in-out;\n      transition: 0.2s opacity 0.2s ease-in-out, 0.2s transform 0.2s ease-in-out;\n      transition: 0.2s opacity 0.2s ease-in-out, 0.2s transform 0.2s ease-in-out, 0.2s -webkit-transform 0.2s ease-in-out; }\n    .compress-vertical-navbar .vertical-navbar:hover :host .compress-logo {\n      opacity: 0;\n      -webkit-transform: scale(0);\n              transform: scale(0);\n      transition: 0.2s opacity 0s ease-in-out, 0.2s -webkit-transform 0s ease-in-out;\n      transition: 0.2s opacity 0s ease-in-out, 0.2s transform 0s ease-in-out;\n      transition: 0.2s opacity 0s ease-in-out, 0.2s transform 0s ease-in-out, 0.2s -webkit-transform 0s ease-in-out; } }\n  @media (min-width: 992px) {\n    .compress-vertical-navbar.rtl .vertical-navbar:hover :host .logo {\n      -webkit-transform: translateX(0);\n              transform: translateX(0); } }\n", ""]);
+exports.push([module.i, ":host {\n  background: #1b2237;\n  color: #ffffff;\n  display: block;\n  height: 3.4375rem;\n  position: relative; }\n  :host .logo {\n    -webkit-box-align: start;\n        -ms-flex-align: start;\n            align-items: flex-start;\n    color: inherit;\n    display: block;\n    text-align: center;\n    font-size: 28px;\n    height: 100%;\n    padding: 0.6875rem 1.375rem;\n    text-decoration: none; }\n    :host .logo .logo-img {\n      height: auto;\n      max-height: 100%;\n      max-width: 100%;\n      vertical-align: top;\n      width: 100%;\n      height: 100%; }\n    :host .logo .logo-text {\n      display: block;\n      font-size: 33px;\n      font-weight: 500;\n      line-height: 1; }\n  :host .compress-logo {\n    -webkit-box-align: start;\n        -ms-flex-align: start;\n            align-items: flex-start;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    height: 100%;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    opacity: 0;\n    padding: 0.6875rem;\n    position: absolute;\n    right: 0;\n    top: 0;\n    width: 4.125rem; }\n    .rtl :host .compress-logo {\n      left: 0;\n      right: auto; }\n    :host .compress-logo .logo-img {\n      height: auto;\n      max-height: 100%;\n      max-width: 100%;\n      vertical-align: top;\n      width: auto; }\n    :host .compress-logo .logo-text {\n      display: block;\n      font-size: 26px;\n      font-weight: 500;\n      line-height: 1; }\n  .menu-style-2 :host .compress-logo,\n  .menu-style-3 :host .compress-logo,\n  .menu-style-4 :host .compress-logo {\n    left: 0;\n    right: auto; }\n  .menu-style-2.rtl :host .compress-logo,\n  .menu-style-3.rtl :host .compress-logo,\n  .menu-style-4.rtl :host .compress-logo {\n    left: auto;\n    right: 0; }\n  @media (min-width: 992px) {\n    .compress-vertical-navbar :host .logo {\n      opacity: 0;\n      -webkit-transform: translateX(100%);\n              transform: translateX(100%);\n      transition: 0.2s opacity 0s ease-in-out, 0.2s -webkit-transform 0s ease-in-out;\n      transition: 0.2s opacity 0s ease-in-out, 0.2s transform 0s ease-in-out;\n      transition: 0.2s opacity 0s ease-in-out, 0.2s transform 0s ease-in-out, 0.2s -webkit-transform 0s ease-in-out; }\n    .compress-vertical-navbar :host .compress-logo {\n      opacity: 1;\n      -webkit-transform: scale(1);\n              transform: scale(1);\n      transition: 0.2s opacity 0.2s ease-in-out, 0.2s -webkit-transform 0.2s ease-in-out;\n      transition: 0.2s opacity 0.2s ease-in-out, 0.2s transform 0.2s ease-in-out;\n      transition: 0.2s opacity 0.2s ease-in-out, 0.2s transform 0.2s ease-in-out, 0.2s -webkit-transform 0.2s ease-in-out; } }\n  @media (min-width: 992px) {\n    .compress-vertical-navbar.rtl :host .logo {\n      -webkit-transform: translateX(-100%);\n              transform: translateX(-100%); } }\n  @media (min-width: 992px) {\n    .compress-vertical-navbar .vertical-navbar:hover :host .logo {\n      opacity: 1;\n      -webkit-transform: translateX(0);\n              transform: translateX(0);\n      transition: 0.2s opacity 0.2s ease-in-out, 0.2s -webkit-transform 0.2s ease-in-out;\n      transition: 0.2s opacity 0.2s ease-in-out, 0.2s transform 0.2s ease-in-out;\n      transition: 0.2s opacity 0.2s ease-in-out, 0.2s transform 0.2s ease-in-out, 0.2s -webkit-transform 0.2s ease-in-out; }\n    .compress-vertical-navbar .vertical-navbar:hover :host .compress-logo {\n      opacity: 0;\n      -webkit-transform: scale(0);\n              transform: scale(0);\n      transition: 0.2s opacity 0s ease-in-out, 0.2s -webkit-transform 0s ease-in-out;\n      transition: 0.2s opacity 0s ease-in-out, 0.2s transform 0s ease-in-out;\n      transition: 0.2s opacity 0s ease-in-out, 0.2s transform 0s ease-in-out, 0.2s -webkit-transform 0s ease-in-out; } }\n  @media (min-width: 992px) {\n    .compress-vertical-navbar.rtl .vertical-navbar:hover :host .logo {\n      -webkit-transform: translateX(0);\n              transform: translateX(0); } }\n", ""]);
 
 // exports
 
@@ -6564,6 +6777,15 @@ var MENU = [
         routing: '/default-layout/profile'
     },
     {
+        title: 'rollinvest',
+        icon: {
+            class: 'fa fa-bitcoin',
+            bg: '#b0bec5',
+            color: 'rgba(0,0,0,.87)'
+        },
+        routing: '/default-layout/rollinvest'
+    },
+    {
         title: 'simulation',
         icon: {
             class: 'fa fa-cog',
@@ -6580,7 +6802,16 @@ var MENU = [
             color: 'rgba(0,0,0,.87)'
         },
         routing: '/default-layout/aboutus'
-    }
+    },
+    {
+        title: 'Faq',
+        icon: {
+            class: 'fa fa-edit',
+            bg: '#FFAB91',
+            color: 'rgba(0,0,0,.87)'
+        },
+        routing: '/default-layout/faq',
+    },
 ];
 var LANGUAGES = [
     { code: 'en', value: 'ENGLISH', url: 'flag-uk.png' },
@@ -6850,6 +7081,13 @@ webpackContext.id = "../../../../moment/locale recursive ^\\.\\/.*$";
 
 module.exports = __webpack_require__("../../../../../src/main.ts");
 
+
+/***/ }),
+
+/***/ 1:
+/***/ (function(module, exports) {
+
+/* (ignored) */
 
 /***/ })
 

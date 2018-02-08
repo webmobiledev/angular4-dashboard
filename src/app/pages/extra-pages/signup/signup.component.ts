@@ -28,7 +28,7 @@ export class PageSignupComponent implements OnInit {
     this.auth.isConfirm = false;
     this.auth.isLogged = false;
     this.form = this.fb.group({
-      fname: [null, Validators.compose([Validators.required, Validators.minLength(5), Validators.maxLength(10)])],
+      fname: [null, Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(20)])],
       email: [null, Validators.compose([Validators.required, CustomValidators.email])],
       gender: [null, Validators.required],
       agree: [null, Validators.requiredTrue],
@@ -41,6 +41,7 @@ export class PageSignupComponent implements OnInit {
   onSubmit() {
     this.auth.signup(this.form.value).then(data => {
       this.auth.redirectPage = 'confirm';
+      localStorage.setItem('email', this.form.value.email);
       this.router.navigate(['/extra-layout/confirm']);
     });
   }

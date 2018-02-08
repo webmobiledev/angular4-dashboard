@@ -13,8 +13,8 @@
   "male": "Masculino",
   "female": "Fêmea",
   "firstnameValid1": "Você deve incluir um primeiro nome.",
-  "firstnameValid2": "Seu primeiro nome deve ter no mínimo 5 caracteres.",
-  "firstnameValid3": "Seu primeiro nome deve ter no mínimo 5 caracteres.",
+  "firstnameValid2": "Seu primeiro nome deve ter no mínimo 2 caracteres.",
+  "firstnameValid3": "Seu primeiro nome deve ter no mínimo 20 caracteres.",
   "emailValid1": "Você deve incluir um endereço de e-mail.",
   "emailValid2": "Você deve incluir um endereço de e-mail válido.",
   "emailValid3": "O email ou a senha não estão corretos.",
@@ -166,5 +166,7 @@
   "Update": "Atualizar",
   "Report an Incident": "Informar um incidente",
   "Close": "Fechar",
-  "Clone": "Clone"
+  "Clone": "Clone",
+  "rollinvest": "RollInvest",
+  "Search for public": "Procure por público"
 }

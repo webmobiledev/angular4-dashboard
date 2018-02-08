@@ -1,4 +1,4 @@
-<div class="row members-header">
+<div class="row members-header" id="chatroom">
   <div class="col-sm-6">
     <ni-breadcrumb [menu]="breadcrumb" [style]="'custom2'" class="mb-4"></ni-breadcrumb>      
   </div>
@@ -9,6 +9,18 @@
     </md-input-container>
   </div>
   <div class="col-md-12">
-    <ni-chat [messages]="messages" [style.height.px]="600"></ni-chat>
+    <ni-card [title]="'Lists with avatars'">
+      <md-list>
+        <md-input-container class="search-group md-icon-left">
+          <md-icon>search</md-icon>
+          <input mdInput value="" [(ngModel)]="searchName" placeholder="Enter a name" (ngModelChange)="searchUsers()">
+        </md-input-container>
+        <md-list-item *ngFor="let m of members">
+          <!-- <img md-list-avatar src="{{ message.avatar }}" width="40" height="40" alt=""> -->
+          <h3 md-line class="h3">{{ m.name }}</h3>
+        </md-list-item>
+      </md-list>
+      <ni-chat [messages]="messages" [style.height.px]="600"></ni-chat>
+    </ni-card>
   </div>
 </div>

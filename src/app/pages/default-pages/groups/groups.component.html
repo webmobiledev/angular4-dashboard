@@ -179,7 +179,8 @@
         <div class="col-md-5 pt-3" *ngIf="groupInfo.group_info.g_type !== 'PUBLIC'">
           <ni-card [outline]="true" [bgColor]="'warning'" class="info-card" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'">
             <div class="title text-uppercase">{{'Amount' | translate}}</div>
-            <div class="count">2,543</div>
+            <div class="count">{{isShowAmount ? totalAmount : '#####'}}</div>
+            <u><a (click)="showAmount()">Show amount</a></u>
           </ni-card>
           <ni-card [title]="'timeline' | translate" [customBgColor]="'transparent'">
             <ni-h-timeline [data]="timelineData"></ni-h-timeline>

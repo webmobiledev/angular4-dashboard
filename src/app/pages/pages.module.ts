@@ -57,14 +57,16 @@ import { Page500Component } from './extra-pages/page-500/page-500.component';
 
 import { PageDashboardComponent, DialogAcceptAndRejectComponent } from './default-pages/dashboard/dashboard.component';
 import { PageGroupsComponent, DialogAddMemberComponent, DialogStartComponent, DialogReportIncidentComponent } from './default-pages/groups/groups.component';
-import { PageTransactionsComponent } from './default-pages/transactions/transactions.component';
+import { PageTransactionsComponent, DialogCheckPasswordComponent } from './default-pages/transactions/transactions.component';
 import { PageRequestsComponent } from './default-pages/requests/requests.component';
 import { PageNotFoundComponent } from './default-pages/not-found/not-found.component';
 import { PageAboutusComponent } from './default-pages/aboutus/aboutus.component';
 import { PageProfileComponent } from './default-pages/profile/profile.component';
 import { PageSimulationComponent } from './default-pages/simulation/simulation.component';
-import { ChatroomComponent } from './default-pages/chatroom/chatroom.component';
+import { PageChatroomComponent } from './default-pages/chatroom/chatroom.component';
+import { PageRollinvestComponent } from './default-pages/rollinvest/rollinvest.component';
 import { PageObligationComponent } from './default-pages/obligation/obligation.component';
+import { PageFaqComponent } from './default-pages/faq/faq.component';
 
 @NgModule({
   imports: [
@@ -135,11 +137,14 @@ import { PageObligationComponent } from './default-pages/obligation/obligation.c
     Page500Component,
     PageNotFoundComponent,
     DialogAddMemberComponent,
-    ChatroomComponent,
+    PageChatroomComponent,
     PageObligationComponent,
     DialogAcceptAndRejectComponent,
     DialogStartComponent,
-    DialogReportIncidentComponent
+    DialogReportIncidentComponent,
+    PageRollinvestComponent,
+    DialogCheckPasswordComponent,
+    PageFaqComponent,
   ],
   exports: [
     PageDashboardComponent,
@@ -157,14 +162,17 @@ import { PageObligationComponent } from './default-pages/obligation/obligation.c
     PageConfirmComponent,
     Page404Component,
     Page500Component,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PageRollinvestComponent,
+    PageFaqComponent,
   ],
   entryComponents: [
     DialogResultComponent,
     DialogAddMemberComponent,
     DialogAcceptAndRejectComponent,
     DialogStartComponent,
-    DialogReportIncidentComponent
+    DialogReportIncidentComponent,
+    DialogCheckPasswordComponent,
   ]
 })
 export class PagesModule {}

@@ -164,7 +164,6 @@ export class ApiService {
     params.set('lang', this.langCode);
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
-        console.log(res);
         resolve(res.json());
       });
     });
@@ -179,7 +178,7 @@ export class ApiService {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
-        console.log(err);
+        reject(err);
       });
     });
   }
@@ -197,7 +196,7 @@ export class ApiService {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
-        console.log(err);
+        reject(err);
       });
     });
   }
@@ -213,7 +212,7 @@ export class ApiService {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
-        console.log(err);
+        reject(err);
       });
     });
   }
@@ -226,7 +225,7 @@ export class ApiService {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
-        console.log(err);
+        reject(err);
       });
     });
   }
@@ -245,7 +244,7 @@ export class ApiService {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
-        console.log(err);
+        reject(err);
       });
     });
   }
@@ -264,7 +263,7 @@ export class ApiService {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
-        console.log(err);
+        reject(err);
       });
     });
   }
@@ -283,7 +282,7 @@ export class ApiService {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
-        console.log(err);
+        reject(err);
       });
     });
   }
@@ -302,7 +301,7 @@ export class ApiService {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
-        console.log(err);
+        reject(err);
       });
     });
   }
@@ -317,7 +316,7 @@ export class ApiService {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
-        console.log(err);
+        reject(err);
       });
     });
   }
@@ -334,7 +333,7 @@ export class ApiService {
         console.log(res._body);
         resolve(res.json());
       }, err => {
-        console.log(err);
+        reject(err);
       });
     });
   }
@@ -352,7 +351,7 @@ export class ApiService {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
-        console.log(err);
+        reject(err);
       });
     });
   }
@@ -370,7 +369,7 @@ export class ApiService {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
-        console.log(err);
+        reject(err);
       });
     });
   }
@@ -388,7 +387,7 @@ export class ApiService {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
-        console.log(err);
+        reject(err);
       });
     });
   }
@@ -404,7 +403,7 @@ export class ApiService {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
-        console.log(err);
+        reject(err);
       });
     });
   }
@@ -420,7 +419,7 @@ export class ApiService {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
-        console.log(err);
+        reject(err);
       });
     });
   }
@@ -434,7 +433,7 @@ export class ApiService {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
-        console.log(err);
+        reject(err);
       });
     });
   }
@@ -456,7 +455,26 @@ export class ApiService {
     }
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
-        console.log(res);
+        resolve(res.json());
+      });
+    });
+  }
+
+  search(form) {
+    const url = environment.serverUrl + 'groups/search';
+    const params: URLSearchParams = new URLSearchParams();
+    params.set('name', form.name);
+    params.set('rate_min', form.min_rate);
+    params.set('rate_max', form.max_rate);
+    params.set('amount_min', form.min_amount);
+    params.set('amount_max', form.max_amount);
+    params.set('currency_code', form.base_currency);
+    params.set('position_selection_type_code', form.ps_type);
+    params.set('frequency', form.frequency);
+    params.set('token', localStorage.getItem('token'));
+    params.set('lang', this.langCode);
+    return new Promise((resolve, reject) => {
+      this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       });
     });
@@ -474,7 +492,7 @@ export class ApiService {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
-        console.log(err);
+        reject(err);
       });
     });
   }
@@ -491,7 +509,54 @@ export class ApiService {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
       }, err => {
-        console.log(err);
+        reject(err);
+      });
+    });
+  }
+
+  getTransactions(max, page) {
+    const url = environment.serverUrl + 'group/transactions';
+    const params: URLSearchParams = new URLSearchParams();
+    this.groupId.subscribe(data => {
+      params.set('group_id', data);
+    });
+    params.set('token', localStorage.getItem('token'));
+    params.set('max', max);
+    params.set('page', page);
+    return new Promise((resolve, reject) => {
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        reject(err);
+      });
+    });
+  }
+
+  getAmount() {
+    const url = environment.serverUrl + 'user/account';
+    const params: URLSearchParams = new URLSearchParams();
+    params.set('token', localStorage.getItem('token'));
+    return new Promise((resolve, reject) => {
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        reject(err);
+      });
+    });
+  }
+
+  getAllChatMembers(name?) {
+    const url = environment.serverUrl + 'user/chat/members';
+    const params: URLSearchParams = new URLSearchParams();
+    params.set('token', localStorage.getItem('token'));
+    if (name) {
+      params.set('name', name);
+    }
+    return new Promise((resolve, reject) => {
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        reject(err);
       });
     });
   }

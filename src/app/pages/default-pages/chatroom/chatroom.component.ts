@@ -1,17 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../../services/api.service';
+import * as io from 'socket.io-client';
 
 @Component({
   selector: 'app-chatroom',
   templateUrl: './chatroom.component.html',
   styleUrls: ['./chatroom.component.scss']
 })
-export class ChatroomComponent implements OnInit {
+export class PageChatroomComponent implements OnInit {
   breadcrumb = [{title: 'chatroom'}];
-  activeUser = {
-    name: 'Amanda Li',
-    lastSeen: 'last seen 10 minutes ago',
-    avatar: 'assets/content/avatar-4.jpg'
-  };
   messages = [
     {
       'date': '8 hours ago',
@@ -50,9 +47,29 @@ export class ChatroomComponent implements OnInit {
       'avatar': 'assets/content/avatar-4.jpg'
     }
   ];
-  constructor() { }
+
+  members = [];
+  searchName = '';
+
+  socket = io('https://www.rollincome.com:446/chat');
+
+  constructor(
+    private apiService: ApiService,
+  ) { }
 
   ngOnInit() {
+    this.apiService.getAllChatMembers().then((res: any) => {
+      this.members = res.data;
+    });
+
+    this.socket.on('new-message', function (data) {
+      console.log(data);
+    }.bind(this));
   }
 
+  searchUsers() {
+    this.apiService.getAllChatMembers(this.searchName).then((res: any) => {
+      this.members = res.data;
+    });
+  }
 }

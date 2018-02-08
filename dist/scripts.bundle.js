@@ -108,7 +108,7 @@ __webpack_require__("../../../../script-loader/addScript.js")(__webpack_require_
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__("../../../../script-loader/index.js!../../../../amcharts3/amcharts/amcharts.js");
@@ -121,5 +121,5 @@ module.exports = __webpack_require__("../../../../script-loader/index.js!../../.
 
 /***/ })
 
-},[2]);
+},[3]);
 //# sourceMappingURL=scripts.bundle.js.map

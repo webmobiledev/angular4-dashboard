@@ -4,6 +4,7 @@ import { MdDialog, MdDialogRef, MdDialogConfig } from '@angular/material';
 import { NiDialogComponent } from '../../../ni-components/ni-dialog/ni-dialog.component';
 import { ApiService } from '../../../services/api.service';
 import { AuthService } from '../../../services/auth.service';
+import { DialogCheckPasswordComponent } from '../transactions/transactions.component';
 
 @Component({
   selector: 'page-groups',
@@ -60,6 +61,10 @@ export class PageGroupsComponent implements OnInit {
   alertSuccess = false;
   showStatusAlert = false;
   alertText = '';
+
+  amounts = [];
+  totalAmount = 0;
+  isShowAmount = false;
   
   constructor(
     private _sharedService: SharedService,
@@ -254,7 +259,9 @@ export class PageGroupsComponent implements OnInit {
   openDialog() {
     let dialogRef = this.dialog.open(DialogAddMemberComponent);
     dialogRef.afterClosed().subscribe(result => {
-      this.showAlert(result, 'Adding a member');
+      if (result === 'ok') {
+        this.showAlert(result, 'Adding a member');
+      }
     });
   }
 
@@ -303,7 +310,6 @@ export class PageGroupsComponent implements OnInit {
           }
         });
       } else {
-        this.showAlert('cancel', 'Removing all members');
       }
     });
   }
@@ -326,7 +332,6 @@ export class PageGroupsComponent implements OnInit {
           }
         });
       } else {
-        this.showAlert('cancel', 'Cancelling all requests');
       }
     });
   }
@@ -342,14 +347,13 @@ export class PageGroupsComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'ok') {
         this.apiService.cancelRequest(id).then((res: any) => {
-          if (res.request_cancelled == 'yes') {
+          if (res.request_cancelled === 'yes') {
             this.showAlert('ok', 'Cancelling request');
           } else {
             this.showAlert('cancel', 'Cancelling request');
           }
         });
       } else {
-        this.showAlert('cancel', 'Cancelling all requests');
       }
     });
   }
@@ -416,7 +420,9 @@ export class PageGroupsComponent implements OnInit {
   reportIncident() {
     let dialogRef = this.dialog.open(DialogReportIncidentComponent);
     dialogRef.afterClosed().subscribe(result => {
-      this.showAlert(result, 'Reporting an Incident');
+      if (result === 'ok') {
+        this.showAlert(result, 'Reporting an Incident');
+      }
     });
   }
 
@@ -444,7 +450,6 @@ export class PageGroupsComponent implements OnInit {
           console.log(err);
         });
       } else {
-        this.showAlert('cancel', 'Cloning a group');
       }
     });
   }
@@ -469,7 +474,6 @@ export class PageGroupsComponent implements OnInit {
           console.log(err);
         });
       } else {
-        this.showAlert('cancel', 'Updating a group');
       }
     });
   }
@@ -486,6 +490,21 @@ export class PageGroupsComponent implements OnInit {
     setTimeout(() => {
       this.showStatusAlert = false;
     }, 3000);
+  }
+
+  showAmount() {
+    let dialogRef = this.dialog.open(DialogCheckPasswordComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'ok') {
+        this.apiService.getAmount().then((res: any) => {
+          this.amounts = res.data;
+          this.amounts.forEach(a => {
+            this.totalAmount += parseInt(a.amount);
+            this.isShowAmount = true;
+          });
+        });
+      }
+    });
   }
 }
 

@@ -13,8 +13,8 @@
   "male": "Male",
   "female": "Female",
   "firstnameValid1": "You must include a first name.",
-  "firstnameValid2": "Your first name must be at least 5 characters long.",
-  "firstnameValid3": "Your first name cannot exceed 10 characters.",
+  "firstnameValid2": "Your first name must be at least 2 characters long.",
+  "firstnameValid3": "Your first name cannot exceed 20 characters.",
   "emailValid1": "You must include an email address.",
   "emailValid2": "You must include a valid email address.",
   "emailValid3": "Email or password is not correct.",
@@ -166,5 +166,7 @@
   "Update": "Update",
   "Report an Incident": "Report an Incident",
   "Close": "Close",
-  "Clone": "Clone"
+  "Clone": "Clone",
+  "rollinvest": "RollInvest",
+  "Search for public": "Search for public"
 }

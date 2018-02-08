@@ -8,7 +8,11 @@ import { AuthService } from '../../../services/auth.service';
   styleUrls: ['./confirm.component.scss']
 })
 export class PageConfirmComponent implements OnInit {
-  constructor(private auth: AuthService, private router: Router) { }
+  email = '';
+
+  constructor(private auth: AuthService, private router: Router) {
+    this.email = localStorage.getItem('email');
+  }
 
   ngOnInit() {
     this.auth.validateEmail().then(res => {

@@ -13,8 +13,8 @@
   "male": "Mâle",
   "female": "Femelle",
   "firstnameValid1": "Vous devez inclure un prénom.",
-  "firstnameValid2": "Votre prénom doit avoir au moins 5 caractères.",
-  "firstnameValid3": "Votre prénom ne peut pas dépasser 10 caractères.",
+  "firstnameValid2": "Votre prénom doit avoir au moins 2 caractères.",
+  "firstnameValid3": "Votre prénom ne peut pas dépasser 20 caractères.",
   "emailValid1": "Vous devez inclure une adresse électronique.",
   "emailValid2": "Vous devez inclure une adresse e-mail valide.",
   "emailValid3": "Email ou mot de passe n'est pas correct.",
@@ -166,5 +166,7 @@
   "Update": "Mettre à jour",
   "Report an Incident": "Signaler un incident",
   "Close": "Fermer",
-  "Clone": "Cloner"
+  "Clone": "Cloner",
+  "rollinvest": "RollInvest",
+  "Search for public": "Rechercher un public"
 }

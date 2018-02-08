@@ -51,7 +51,6 @@ export class NiTableComponent implements OnInit {
           }
         });
       } else {
-        this.showAlert.emit({status: 'cancel', text: 'Removing member'});
       }
     });
   }

@@ -1,0 +1,80 @@
+
+<ni-breadcrumb [menu]="breadcrumb" [style]="'custom2'" class="mb-4"></ni-breadcrumb>
+<md-card>
+  <form [formGroup]="form">
+    <div class="row pt-3">
+      <div class="col-sm-6">
+        <md-input-container>
+          <input mdInput id="name" placeholder="{{'Name' | translate}}" type="text" value="" [formControl]="form.controls['name']">
+        </md-input-container>
+      </div>
+      <div class="col-sm-6">
+        <md-input-container>
+          <input mdInput id="frequency" placeholder="{{'frequency' | translate}}" type="number" value="" [formControl]="form.controls['frequency']">
+        </md-input-container>
+        <!-- <md-icon mdTooltip="{{'groupmonthinfo' | translate}}" mdTooltipPosition="below">info</md-icon> -->
+      </div>
+    </div>
+    <div class="row pt-3">
+      <div class="col-sm-6">
+        <md-input-container>
+          <input mdInput id="min_amount" placeholder="{{'Amount minimum' | translate}}" type="number" value="" [formControl]="form.controls['min_amount']">
+        </md-input-container>
+        <!-- <md-icon mdTooltip="{{'grouprateinfo' | translate}}" mdTooltipPosition="below">info</md-icon>     -->
+      </div>
+      <div class="col-sm-6">
+        <md-input-container>
+          <input mdInput id="max_amount" placeholder="{{'Amount maximum' | translate}}" type="number" value="" [formControl]="form.controls['max_amount']">
+        </md-input-container>
+        <!-- <md-icon mdTooltip="{{'groupdayinfo' | translate}}" mdTooltipPosition="below">info</md-icon> -->
+      </div>
+    </div>
+    <div class="row pt-3">
+      <div class="col-sm-6">
+        <md-input-container>
+          <input mdInput id="min_credit" placeholder="{{'Index credit minimum Number' | translate}}" type="number" value="" [formControl]="form.controls['min_credit']">
+        </md-input-container>
+        <!-- <md-icon mdTooltip="{{'grouprateinfo' | translate}}" mdTooltipPosition="below">info</md-icon>     -->
+      </div>
+      <div class="col-sm-6">
+        <md-input-container>
+          <input mdInput id="max_credit" placeholder="{{'Index credit maximum Number' | translate}}" type="number" value="" [formControl]="form.controls['max_credit']">
+        </md-input-container>
+        <!-- <md-icon mdTooltip="{{'groupdayinfo' | translate}}" mdTooltipPosition="below">info</md-icon> -->
+      </div>
+    </div>
+    <div class="row pt-3">
+      <div class="col-sm-6">
+        <md-input-container>
+          <input mdInput id="min_rate" placeholder="{{'Return rate minimum' | translate}}" type="number" value="" [formControl]="form.controls['min_rate']">
+        </md-input-container>
+        <!-- <md-icon mdTooltip="{{'grouprateinfo' | translate}}" mdTooltipPosition="below">info</md-icon>     -->
+      </div>
+      <div class="col-sm-6">
+        <md-input-container>
+          <input mdInput id="max_rate" placeholder="{{'Return rate maximum' | translate}}" type="number" value="" [formControl]="form.controls['max_rate']">
+        </md-input-container>
+        <!-- <md-icon mdTooltip="{{'groupdayinfo' | translate}}" mdTooltipPosition="below">info</md-icon> -->
+      </div>
+    </div>
+    <div class="row pt-3">
+      <div class="col-sm-6">
+        <md-select placeholder="{{'Base currency' | translate}}" [formControl]="form.controls['base_currency']">
+          <md-option *ngFor="let c of currencies" [value]="c.code">
+            {{ c.text }}
+          </md-option>
+        </md-select>
+        <!-- <md-icon mdTooltip="{{'groupcurrencyinfo' | translate}}" mdTooltipPosition="below">info</md-icon>     -->
+      </div>
+      <div class="col-sm-6">
+        <md-select placeholder="{{'Position selection type' | translate}}" [formControl]="form.controls['ps_type']">
+          <md-option *ngFor="let g of groupTypes" [value]="g.code">
+            {{ g.text }}
+          </md-option>
+        </md-select>
+        <!-- <md-icon mdTooltip="{{'grouptypeinfo' | translate}}" mdTooltipPosition="below">info</md-icon>     -->
+      </div>
+    </div>
+    <button class="mt-3" md-raised-button color="primary" layout-align="end" (click)="search()" [disabled]="!form.valid || form.controls['min_rate'].value > form.controls['max_rate'].value || form.controls['min_credit'].value > form.controls['max_credit'].value">{{'Search for public' | translate}}</button>
+  </form>
+</md-card>

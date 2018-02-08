@@ -14,8 +14,10 @@ import { PageNotFoundComponent } from './pages/default-pages/not-found/not-foun
 import { PageAboutusComponent } from './pages/default-pages/aboutus/aboutus.component';
 import { PageProfileComponent } from './pages/default-pages/profile/profile.component';
 import { PageSimulationComponent } from './pages/default-pages/simulation/simulation.component';
-import { ChatroomComponent } from './pages/default-pages/chatroom/chatroom.component';
+import { PageChatroomComponent } from './pages/default-pages/chatroom/chatroom.component';
 import { PageObligationComponent } from './pages/default-pages/obligation/obligation.component';
+import { PageRollinvestComponent } from './pages/default-pages/rollinvest/rollinvest.component';
+import { PageFaqComponent } from './pages/default-pages/faq/faq.component';
 
 import { PageSigninComponent } from './pages/extra-pages/signin/signin.component';
 import { PageSignupComponent } from './pages/extra-pages/signup/signup.component';
@@ -36,8 +38,10 @@ const defaultRoutes: Routes = [
   { path: 'profile', component: PageProfileComponent },
   { path: 'simulation', component: PageSimulationComponent },
   { path: 'aboutus', component: PageAboutusComponent },
-  { path: 'chatroom', component: ChatroomComponent },
+  { path: 'chatroom', component: PageChatroomComponent },
   { path: 'obligation', component: PageObligationComponent },
+  { path: 'rollinvest', component: PageRollinvestComponent },
+  { path: 'faq', component: PageFaqComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

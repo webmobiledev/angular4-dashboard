@@ -68,6 +68,15 @@ export const MENU: any = [
     routing: '/default-layout/profile'
   },
   {
+    title: 'rollinvest',
+    icon: {
+      class: 'fa fa-bitcoin',
+      bg: '#b0bec5',
+      color: 'rgba(0,0,0,.87)'
+    },
+    routing: '/default-layout/rollinvest'
+  },
+  {
     title: 'simulation',
     icon: {
       class: 'fa fa-cog',
@@ -84,7 +93,16 @@ export const MENU: any = [
       color: 'rgba(0,0,0,.87)'
     },
     routing: '/default-layout/aboutus'
-  }
+  },
+  {
+    title: 'Faq',
+    icon: {
+      class: 'fa fa-edit',
+      bg: '#FFAB91',
+      color: 'rgba(0,0,0,.87)'
+    },
+    routing: '/default-layout/faq',
+  },
 ];
 
 export const LANGUAGES: any = [
