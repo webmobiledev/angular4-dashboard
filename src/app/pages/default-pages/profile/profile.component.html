@@ -14,7 +14,7 @@
                 <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'First Name' | translate}}:</label>
                 <div class="col-sm-6 col-md-8">
                   <md-input-container class="mb-0">
-                    <input mdInput type="text" value="">
+                    <input mdInput type="text" [value]="userInfo.first_name">
                   </md-input-container>
                 </div>
               </div>
@@ -24,7 +24,7 @@
                 <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Middle Name' | translate}}:</label>
                 <div class="col-sm-6 col-md-8">
                   <md-input-container class="mb-0">
-                    <input mdInput type="text" value="">
+                    <input mdInput type="text" [value]="userInfo.middle_name">
                   </md-input-container>
                 </div>
               </div>
@@ -36,7 +36,7 @@
                 <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Surname' | translate}}:</label>
                 <div class="col-sm-6 col-md-8">
                   <md-input-container class="mb-0">
-                    <input mdInput type="text" value="">
+                    <input mdInput type="text" [value]="userInfo.sur_name">
                   </md-input-container>
                 </div>
               </div>
@@ -46,8 +46,8 @@
                 <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Gender' | translate}}:</label>
                 <div class="col-sm-6 col-md-8">
                   <md-select class="w-full" [(ngModel)]="gender">
-                    <md-option>{{'Male' | translate}}</md-option>
-                    <md-option>{{'Female' | translate}}</md-option>
+                    <md-option [value]="userInfo.gender">{{'Male' | translate}}</md-option>
+                    <md-option [value]="userInfo.gender">{{'Female' | translate}}</md-option>
                   </md-select>
                 </div>
               </div>
@@ -81,7 +81,7 @@
                 <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Email' | translate}}:</label>
                 <div class="col-sm-6 col-md-8">
                   <md-input-container class="mb-0">
-                    <input mdInput type="email">
+                    <input mdInput type="email" [value]="userInfo.email">
                   </md-input-container>
                 </div>
               </div>
@@ -90,6 +90,7 @@
               <div class="form-group row">
                 <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Photo' | translate}}:</label>
                 <div class="col-sm-6 col-md-8">
+                  <img src="{{userInfo.photo_path}}" class="avatar">
                   <!-- <md-input-container class="mb-0"> -->
                     <input type="file">
                   <!-- </md-input-container> -->
@@ -103,7 +104,7 @@
                 <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Date of Birth'}}:</label>
                 <div class="col-sm-6 col-md-8">
                   <md-input-container class="mb-0">
-                    <input mdInput type="text" [mdDatepicker]="picker">
+                    <input mdInput type="text" [mdDatepicker]="picker" [value]="userInfo.date_of_birth">
                     <button mdSuffix [mdDatepickerToggle]="picker"></button>
                   </md-input-container>
                   <md-datepicker #picker></md-datepicker>
@@ -114,9 +115,9 @@
               <div class="form-group row">
                 <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Country of Birth' | translate}}:</label>
                 <div class="col-sm-6 col-md-8">
-                  <md-input-container class="mb-0">
-                    <input mdInput type="text">
-                  </md-input-container>
+                  <md-select class="w-full" [(ngModel)]="userInfo.country_of_birth" (change)="selectCountry()">
+                    <md-option *ngFor="let c of countries" [value]="c.name">{{c.name | translate}}</md-option>
+                  </md-select>
                 </div>
               </div>
             </div>
@@ -126,9 +127,9 @@
               <div class="form-group row">
                 <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'State of Birth' | translate}}:</label>
                 <div class="col-sm-6 col-md-8">
-                  <md-input-container class="mb-0">
-                    <input mdInput type="text">
-                  </md-input-container>
+                  <md-select class="w-full" [(ngModel)]="userInfo.state_of_birth" (change)="selectState()">
+                    <md-option *ngFor="let s of states" [value]="s.name">{{s.name | translate}}</md-option>
+                  </md-select>
                 </div>
               </div>
             </div>
@@ -136,9 +137,9 @@
               <div class="form-group row">
                 <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Town of Birth' | translate}}:</label>
                 <div class="col-sm-6 col-md-8">
-                  <md-input-container class="mb-0">
-                    <input mdInput type="text">
-                  </md-input-container>
+                  <md-select class="w-full" [(ngModel)]="userInfo.town_of_birth">
+                    <md-option *ngFor="let t of towns" [value]="t.name">{{t.name | translate}}</md-option>
+                  </md-select>
                 </div>
               </div>
             </div>
@@ -208,11 +209,11 @@
             </div>
             <div class="col-sm-6">
               <div class="form-group row">
-                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Address town' | translate}}:</label>
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Address country' | translate}}:</label>
                 <div class="col-sm-6 col-md-8">
-                  <md-input-container class="mb-0">
-                    <input mdInput type="text">
-                  </md-input-container>
+                  <md-select class="w-full" [(ngModel)]="userInfo.address_country" (change)="selectCountry('ADDRESS')">
+                    <md-option *ngFor="let c of countries" [value]="c.name">{{c.name | translate}}</md-option>
+                  </md-select>
                 </div>
               </div>
             </div>
@@ -222,19 +223,19 @@
               <div class="form-group row">
                 <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Address state' | translate}}:</label>
                 <div class="col-sm-6 col-md-8">
-                  <md-input-container class="mb-0">
-                    <input mdInput type="text">
-                  </md-input-container>
+                  <md-select class="w-full" [(ngModel)]="userInfo.address_state" (change)="selectState('ADDRESS')">
+                    <md-option *ngFor="let s of states" [value]="s.name">{{s.name | translate}}</md-option>
+                  </md-select>
                 </div>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="form-group row">
-                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Address country' | translate}}:</label>
+                <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Address town' | translate}}:</label>
                 <div class="col-sm-6 col-md-8">
-                  <md-input-container class="mb-0">
-                    <input mdInput type="text">
-                  </md-input-container>
+                  <md-select class="w-full" [(ngModel)]="userInfo.address_town">
+                    <md-option *ngFor="let t of towns" [value]="t.name">{{t.name | translate}}</md-option>
+                  </md-select>
                 </div>
               </div>
             </div>

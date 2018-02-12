@@ -169,11 +169,16 @@ export class ApiService {
     });
   }
 
-  getListData(type) {
+  getListData(data, country?, state?) {
     const url = environment.serverUrl + 'lists';
     const params: URLSearchParams = new URLSearchParams();
-    params.set('data', type);
-    params.set('lang', this.langCode);
+    params.set('data', data);
+    if (country) {
+      params.set('country', country);
+    }
+    if (state) {
+      params.set('state', state);
+    }
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
@@ -208,19 +213,6 @@ export class ApiService {
       params.set('group_id', data);
     });
     params.set('token', localStorage.getItem('token'));
-    return new Promise((resolve, reject) => {
-      this.http.get(url, {search: params}).subscribe(res => {
-        resolve(res.json());
-      }, err => {
-        reject(err);
-      });
-    });
-  }
-
-  getIncidentTypes() {
-    const url = environment.serverUrl + 'lists';
-    const params: URLSearchParams = new URLSearchParams();
-    params.set('data', 'GroupIncident');
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());

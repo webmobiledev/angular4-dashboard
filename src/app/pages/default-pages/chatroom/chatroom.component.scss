@@ -3,12 +3,14 @@
 }
 
 md-list {
-  width: 250px;
+  width: 350px;
+  margin-right: 20px;
 }
 
 md-list-item {
   border-bottom: 1px solid #dddddd;
   cursor: pointer;
+  padding-left: 10px;
 }
 
 md-list-item:hover {

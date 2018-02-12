@@ -13,10 +13,10 @@
       <md-list>
         <md-input-container class="search-group md-icon-left">
           <md-icon>search</md-icon>
-          <input mdInput value="" [(ngModel)]="searchName" placeholder="Enter a name" (ngModelChange)="searchUsers()">
+          <input mdInput value="" [(ngModel)]="searchName" placeholder="Search..." (ngModelChange)="searchUsers()">
         </md-input-container>
         <md-list-item *ngFor="let m of members">
-          <!-- <img md-list-avatar src="{{ message.avatar }}" width="40" height="40" alt=""> -->
+          <img md-list-avatar src="../../../../assets/img/user/av1.png" width="40" height="40" alt="">
           <h3 md-line class="h3">{{ m.name }}</h3>
         </md-list-item>
       </md-list>

@@ -573,7 +573,7 @@ export class DialogReportIncidentComponent {
     private apiService: ApiService,
     public dialogRef: MdDialogRef<DialogReportIncidentComponent>
   ) {
-    this.apiService.getIncidentTypes().then((res: any) => {
+    this.apiService.getListData('GroupIncident').then((res: any) => {
       res.data.map(r => {
         this.incidentTypes.push(r.code);
       });
