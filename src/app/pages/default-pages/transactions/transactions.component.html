@@ -14,7 +14,7 @@
     <ni-card [outline]="true" [bgColor]="'warning'" class="info-card">
       <div class="title text-uppercase">{{'Amount' | translate}}</div>
       <div class="count">{{isShowAmount ? totalAmount : '#####'}}</div>
-      <u><a (click)="showAmount()">Show amount</a></u>
+      <u><a (click)="showAmount()" class="show-link">Show amount</a></u>
     </ni-card>
   </div>
 </div>

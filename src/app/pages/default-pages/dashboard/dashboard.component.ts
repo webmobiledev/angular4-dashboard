@@ -102,7 +102,7 @@ export class PageDashboardComponent {
       this.nextPayment = [];
       this.totalPayment = data.count;
       data.data.map(d => {
-        this.nextPayment.push([d.p_type_text, d.projected_amount_due, d.to, d.projected_payment_due_date, {type: ['paynow'], id: d.id}]);
+        this.nextPayment.push([d.p_type_text, d.projected_amount_due, d.to, d.projected_payment_due_date, {type: ['paynow'], id: d.id, data: d}]);
       });
 
       this.loadingPayment = false;

@@ -52,7 +52,7 @@
         </md-input-container>
       </div>
     </div>
-    <p>You are about to create a <span>{{form.value.g_type}}</span> group named <span>{{form.value.name}}</span>.</p>
+    <p>You are about to create a <span [innerHTML]="getTypeText(form.value.g_type)"></span> group named <span>{{form.value.name}}</span>.</p>
     <p *ngIf="form.value.frequency == 1">This payment will have to be made each month.</p>
     <p *ngIf="form.value.frequency > 1">This payment will have to be made every <span>{{form.value.frequency}}</span> months.</p>
   </div>
@@ -120,7 +120,7 @@
     <p *ngIf="form.value.g_type === 'PRIVATE' && form.value.smooth_payment === true && form.value.rate > 0">The total payment (amount + interest) to pay will be smoothed.</p>
     <p *ngIf="form.value.frequency == 1">This will allow you to pay a single amount every month.</p>
     <p *ngIf="form.value.frequency > 1">This will allow you to pay a single amount every <span>{{form.value.frequency}}</span> months.</p>
-    <p *ngIf="form.value.position_selection_type != ''">When the group is kicked off, the members will select their position using <span>{{form.value.position_selection_type}}</span></p>
+    <p *ngIf="form.value.position_selection_type != ''">When the group is kicked off, the members will select their position using <span [innerHTML]="getPSTypeText(form.value.position_selection_type)"></span></p>
   </div>
   <div md-dialog-actions *ngIf="step === 'second'">
     <button md-raised-button (click)="step = 'first'" color="primary" layout-align="end"><< {{'Previous' | translate}}</button>

@@ -64,25 +64,27 @@
               <label class="col-sm-5 col-md-5 col-form-label mb-0">First Payment:</label>
               <div class="col-sm-7 col-md-7">
                 <md-input-container class="mb-0">
-                  <input mdInput type="text" [(ngModel)]="groupInfo.group_info.date_first_payment" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT' && groupInfo.group_info.status_code !== 'REQUEST_FOR_POSITION_VALIDATION_SENT'">
+                  <input mdInput type="text" [mdDatepicker]="picker1" [(ngModel)]="groupInfo.group_info.date_first_payment" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT' && groupInfo.group_info.status_code !== 'REQUEST_FOR_POSITION_VALIDATION_SENT'">
+                  <button mdSuffix [mdDatepickerToggle]="picker1" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT' && groupInfo.group_info.status_code !== 'REQUEST_FOR_POSITION_VALIDATION_SENT'"></button>
                 </md-input-container>
+                <md-datepicker #picker1></md-datepicker>
               </div>
             </div>
             <div class="form-group row">
               <label class="col-sm-5 col-md-5 col-form-label mb-0">Date creation:</label>
               <div class="col-sm-7 col-md-7">
                 <md-input-container class="mb-0">
-                  <input mdInput type="text" [mdDatepicker]="picker" [(ngModel)]="groupInfo.group_info.date_creation" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
-                  <button mdSuffix [mdDatepickerToggle]="picker" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'"></button>
+                  <input mdInput type="text" [mdDatepicker]="picker2" [(ngModel)]="groupInfo.group_info.date_creation" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
+                  <button mdSuffix [mdDatepickerToggle]="picker2" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'"></button>
                 </md-input-container>
-                <md-datepicker #picker></md-datepicker>
+                <md-datepicker #picker2></md-datepicker>
               </div>
             </div>
             <div class="form-group row">
               <label class="col-sm-5 col-md-5 col-form-label mb-0">Type:</label>
               <div class="col-sm-7 col-md-7">
                 <md-select [(ngModel)]="groupInfo.group_info.g_type_text" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
-                  <md-option [value]="groupInfo.group_info.g_type_text">{{groupInfo.group_info.g_type_text}}</md-option>
+                  <md-option [value]="t.text" *ngFor="let t of groupTypes">{{t.text}}</md-option>
                 </md-select>
               </div>
             </div>
@@ -90,7 +92,7 @@
               <label class="col-sm-5 col-md-5 col-form-label mb-0">Currency:</label>
               <div class="col-sm-7 col-md-7">
                 <md-select [(ngModel)]="groupInfo.group_info.currency" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
-                  <md-option [value]="groupInfo.group_info.currency">{{groupInfo.group_info.currency}}</md-option>
+                  <md-option [value]="c.text" *ngFor="let c of currencies">{{c.text}}</md-option>
                 </md-select>
               </div>
             </div>
@@ -98,14 +100,14 @@
               <label class="col-sm-5 col-md-5 col-form-label mb-0">Creator:</label>
               <div class="col-sm-7 col-md-7">
                 <md-input-container class="mb-0">
-                  <input mdInput type="text" [(ngModel)]="groupInfo.group_info.creator" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
+                  <input mdInput type="text" [(ngModel)]="groupInfo.group_info.creator" disabled>
                 </md-input-container>
               </div>
             </div>
             <div class="form-group row">
               <label class="col-sm-5 col-md-5 col-form-label mb-0">Status:</label>
               <div class="col-sm-7 col-md-7">
-                <md-select [(ngModel)]="groupInfo.group_info.status_text" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
+                <md-select [(ngModel)]="groupInfo.group_info.status_text" disabled>
                   <md-option [value]="groupInfo.group_info.status_text">{{groupInfo.group_info.status_text}}</md-option>
                 </md-select>
               </div>
@@ -114,7 +116,7 @@
               <label class="col-sm-5 col-md-5 col-form-label mb-0">Position selection method:</label>
               <div class="col-sm-7 col-md-7">
                 <md-select [(ngModel)]="groupInfo.group_info.position_selection_type_text" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
-                  <md-option [value]="groupInfo.group_info.position_selection_type_text">{{groupInfo.group_info.position_selection_type_text}}</md-option>
+                  <md-option [value]="p.text" *ngFor="let p of psTypes">{{p.text}}</md-option>
                 </md-select>
               </div>
             </div>
@@ -153,9 +155,10 @@
             <div class="form-group row">
               <label class="col-sm-5 col-md-5 col-form-label mb-0">Smooth Payment:</label>
               <div class="col-sm-7 col-md-7">
-                <md-input-container class="mb-0">
-                  <input mdInput type="text" value="{{groupInfo.group_info.smooth_payment === '1' ? 'Yes' : 'No'}}" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
-                </md-input-container>
+                <md-radio-group name="ngModel-options" [(ngModel)]="groupInfo.group_info.smooth_payment" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
+                  <md-radio-button value="1">Yes</md-radio-button>
+                  <md-radio-button value="0">No</md-radio-button>
+                </md-radio-group>
               </div>
             </div>
             <div class="form-group row">
@@ -180,7 +183,7 @@
           <ni-card [outline]="true" [bgColor]="'warning'" class="info-card" *ngIf="groupInfo && groupInfo.group_info && groupInfo.group_info.g_type === 'PRIVATE'">
             <div class="title text-uppercase">{{'Amount' | translate}}</div>
             <div class="count">{{isShowAmount ? totalAmount : '#####'}}</div>
-            <u><a (click)="showAmount()">Show amount</a></u>
+            <u><a (click)="showAmount()" class="show-link">Show amount</a></u>
           </ni-card>
           <ni-card [title]="'timeline' | translate" [customBgColor]="'transparent'">
             <ni-h-timeline [data]="timelineData"></ni-h-timeline>
@@ -328,9 +331,37 @@
       <div class="row">
         <div class="col-lg-12 pl-3 pr-3">
           <ni-card [refreshIndex]="6" [title]="'transaction' | translate" (refresh)="doRefresh($event)">
-            <!-- <ni-table [headers]="transactionHeaders" [data]="transactions"></ni-table>
+            <ni-table [headers]="transactionHeaders" [data]="transactions"></ni-table>
             <ni-alert *ngIf="transactions.length === 0" [color]="'warning'" [outline]="true"><strong>{{'notransaction' | translate}}</strong></ni-alert>
-            <ni-pagination [totalItems]="transactions.length" *ngIf="transactions.length > 0" (changePage)="changeTransactionPage($event)"></ni-pagination> -->
+            <ni-pagination [totalItems]="transactions.length" *ngIf="transactions.length > 0" (changePage)="changeTransactionPage($event)"></ni-pagination>
+          </ni-card>
+        </div>
+      </div>
+    </md-tab>
+    <md-tab>
+      <ng-template md-tab-label>
+        <md-icon>local_atm</md-icon> {{'Payment means' | translate}}
+      </ng-template>
+      <div class="row members-header">
+        <div class="col-sm-12 text-left p-3">
+          <button md-raised-button color="primary" (click)="addIBAN()">{{'Add a new IBAN' | translate}}</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <ni-card [title]="'Kori address' | translate" (refresh)="doRefreshKori($event)" [showRefresh]="true">
+            <ni-table [headers]="koriHeaders" [data]="koriData"></ni-table>
+            <ni-table-loading *ngIf="loadingKori"></ni-table-loading>
+            <ni-alert *ngIf="koriData.length === 0 && !loadingKori" [color]="'warning'" [outline]="true"><strong>{{'No Kori address' | translate}}</strong></ni-alert>
+            <ni-pagination [totalItems]="totalKori" [itemPerPage]="maxKori" [currentPage]="pageKori" *ngIf="koriData.length > 0" (changePage)="changeKoriPage($event)"></ni-pagination>
+          </ni-card>
+        </div>
+        <div class="col-md-6">
+          <ni-card [title]="'Bank address' | translate" (refresh)="doRefreshBank($event)" [showRefresh]="true">
+            <ni-table [headers]="bankHeaders" [data]="bankData"></ni-table>
+            <ni-table-loading *ngIf="loadingBank"></ni-table-loading>
+            <ni-alert *ngIf="bankData.length === 0 && !loadingBank" [color]="'warning'" [outline]="true"><strong>{{'No Bank address' | translate}}</strong></ni-alert>
+            <ni-pagination [totalItems]="totalBank" [itemPerPage]="maxBank" [currentPage]="pageBank" *ngIf="bankData.length > 0" (changePage)="changeBankPage($event)"></ni-pagination>
           </ni-card>
         </div>
       </div>

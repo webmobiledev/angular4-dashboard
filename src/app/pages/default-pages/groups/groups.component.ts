@@ -5,6 +5,7 @@ import { NiDialogComponent } from '../../../ni-components/ni-dialog/ni-dialog.co
 import { ApiService } from '../../../services/api.service';
 import { AuthService } from '../../../services/auth.service';
 import { DialogCheckPasswordComponent } from '../transactions/transactions.component';
+import { DialogAddIbanComponent } from '../profile/profile.component';
 
 @Component({
   selector: 'page-groups',
@@ -26,6 +27,8 @@ export class PageGroupsComponent implements OnInit {
   requestHeaders = [];
   events = [];
   eventHeaders = [];
+  transactions = [];
+  transactionHeaders = [];
   groupInfo: any;
   showGroupList = true;
   timelineData: any[] = [];
@@ -40,22 +43,26 @@ export class PageGroupsComponent implements OnInit {
   maxObligation = 5;
   maxRequest = 5;
   maxEvent = 5;
+  maxTransaction = 5;
   pageGroup = 1;
   pageMember = 1;
   pageObligation = 1;
   pageRequest = 1;
   pageEvent = 1;
+  pageTransaction = 1;
   totalGroup = 0;
   totalMember = 0;
   totalObligation = 0;
   totalRequest = 0;
   totalEvent = 0;
+  totalTransaction = 0;
 
   loadingGroups = true;
   loadingMembers = true;
   loadingObligations = true;
   loadingRequests = true;
   loadingEvents = true;
+  loadingTransactions = true;
 
   isAdmin = false;
   alertSuccess = false;
@@ -65,6 +72,24 @@ export class PageGroupsComponent implements OnInit {
   amounts = [];
   totalAmount = 0;
   isShowAmount = false;
+
+  bankData = [];
+  bankHeaders = [];
+  bankMax = 5;
+  bankPage = 1;
+  bankTotal = 0;
+  loadingBank = false;
+
+  koriData = [];
+  koriHeaders = [];
+  koriMax = 5;
+  koriPage = 1;
+  koriTotal = 0;
+  loadingKori = false;
+
+  currencies = [];
+  groupTypes = [];
+  psTypes = [];
   
   constructor(
     private _sharedService: SharedService,
@@ -96,6 +121,18 @@ export class PageGroupsComponent implements OnInit {
           this.apiService.groupCreated.next(false);
         }, 5000);
       }
+    });
+
+    this.apiService.getListData('Currency').then((res: any) => {
+      this.currencies = res.data;
+    });
+
+    this.apiService.getListData('GroupType').then((res: any) => {
+      this.groupTypes = res.data;
+    });
+
+    this.apiService.getListData('PositionSelectionType').then((res: any) => {
+      this.psTypes = res.data;
     });
 
     this.subscribeList[1] = this.apiService.groupCounts.subscribe(res => {
@@ -132,6 +169,8 @@ export class PageGroupsComponent implements OnInit {
         this.getGroupMembers(this.maxMember, this.pageMember);
         this.getGroupObligations(this.maxObligation, this.pageObligation);
         this.getGroupRequests(this.maxRequest, this.pageRequest);
+        this.getGroupTransactions(this.maxTransaction, this.pageTransaction);
+        this.getAddresses();
       }
     });
   }
@@ -170,7 +209,7 @@ export class PageGroupsComponent implements OnInit {
       res.data.map(d => {
         if (d.member_type === 'ADMIN' && localStorage.getItem('email') === d.email) {
           this.isAdmin = true;
-          this.members.push([d.first_name, d.email, d.member_type_text, d.photo_path, d.position, d.user_position_date]);
+          this.members.push([d.first_name, d.email, d.member_type_text, d.photo_path, d.position, d.user_position_date, '']);
         } else {
           this.members.push([d.first_name, d.email, d.member_type_text, d.photo_path, d.position, d.user_position_date, {type: ['remove'], id: d.id}]);
         }
@@ -188,7 +227,7 @@ export class PageGroupsComponent implements OnInit {
       this.obligations = [];
       this.totalObligation = res.count;
       res.data.map(d => {
-        this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status_text, d.p_type_text, {type: ['paynow'], id: d.id, group_type: d.group_type, payment_is_smooth: d.payment_is_smooth, projected_amount_due: d.projected_amount_due}]);
+        this.obligations.push([d.from, d.to, d.group, d.currency, d.projected_amount_due, d.projected_payment_due_date, d.status_text, d.p_type_text, {type: ['paynow'], id: d.id, data: d}]);
       });
 
       this.loadingObligations = false;
@@ -252,6 +291,60 @@ export class PageGroupsComponent implements OnInit {
         this.apiService.showSpinner.next(false);
       } else {
         this.showGroupList = true;
+      }
+    });
+  }
+
+  getGroupTransactions(max, page) {
+    this.loadingTransactions = true;
+    this.transactions = [];
+    this.transactionHeaders = ['Sender', 'Receiver', 'Amount', 'Creation Date', 'Payment Date', 'Status'];
+    this.apiService.getTransactions(max, page).then((res: any) => {
+      res.data.forEach(d => {
+        this.transactions.push([d.sender, d.receiver, d.amount, d.creation_date, d.payment_date, d.status_text]);
+      });
+      this.totalTransaction = res.count;
+      this.loadingTransactions = false;
+    });
+  }
+
+  getAddresses(type?) {
+    if (type === 'kori') {
+      this.loadingKori = true;
+      this.koriData = [];
+      this.koriHeaders = ['Account Permission', 'IBAN', 'County', 'Bic', {type: 'Action'}];
+    } else if (type === 'bank') {
+      this.loadingBank = true;
+      this.bankData = [];
+      this.bankHeaders = ['Account Permission', 'Public Address', {type: 'Action'}];
+    } else {
+      this.loadingKori = true;
+      this.koriData = [];
+      this.koriHeaders = ['Account Permission', 'IBAN', 'County', 'Bic', {type: 'Action'}];
+      this.loadingBank = true;
+      this.bankData = [];
+      this.bankHeaders = ['Account Permission', 'Public Address', {type: 'Action'}];
+    }
+    this.apiService.getAddresses().then((res: any) => {
+      if (type === 'kori') {
+        res.kori.forEach(k => {
+          this.koriData.push([k.account_permission, k.address, {type: ['Update permission', 'Remove payment mean']}]);
+        });
+        this.loadingKori = false;
+      } else if (type === 'bank') {
+        res.bank.forEach(b => {
+          this.bankData.push([b.account_permission, b.iban, b.country, b.bic, {type: ['Update permission', 'Remove payment mean']}]);
+        });
+        this.loadingBank = false;
+      } else {
+        res.kori.forEach(k => {
+          this.koriData.push([k.account_permission, k.address, {type: ['Update permission', 'Remove payment mean']}]);
+        });
+        this.loadingKori = false;
+        res.bank.forEach(b => {
+          this.bankData.push([b.account_permission, b.iban, b.country, b.bic, {type: ['Update permission', 'Remove payment mean']}]);
+        });
+        this.loadingBank = false;
       }
     });
   }
@@ -375,6 +468,7 @@ export class PageGroupsComponent implements OnInit {
       this.loadingEvents = true;
       this.getGroupEvents(this.maxEvent, this.pageEvent);
     } else if (res === 6) {
+      this.getGroupTransactions(this.maxTransaction, this.pageTransaction);
     }
   }
 
@@ -414,14 +508,16 @@ export class PageGroupsComponent implements OnInit {
   }
 
   changeTransactionPage(res) {
-    
+    this.maxTransaction = res[0];
+    this.pageTransaction = res[1];
+    this.getGroupTransactions(this.maxTransaction, this.pageTransaction);
   }
 
   reportIncident() {
     let dialogRef = this.dialog.open(DialogReportIncidentComponent);
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'ok') {
-        this.showAlert(result, 'Reporting an Incident');
+        this.showAlert(result, 'This');
       }
     });
   }
@@ -481,10 +577,10 @@ export class PageGroupsComponent implements OnInit {
   showAlert(result, text) {
     if (result === 'ok') {
       this.alertSuccess = true;
-      this.alertText = text + ' has been performed successfully.';
+      this.alertText = text + ' has been done successfully.';
     } else {
       this.alertSuccess = false;
-      this.alertText = text + ' has not been performed.';
+      this.alertText = text + ' has not been done.';
     }
     this.showStatusAlert = true;
     setTimeout(() => {
@@ -505,6 +601,31 @@ export class PageGroupsComponent implements OnInit {
         });
       }
     });
+  }
+
+  addIBAN() {
+    let dialogRef = this.dialog.open(DialogAddIbanComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'ok') {
+        
+      }
+    });
+  }
+
+  doRefreshKori(event) {
+    this.getAddresses('kori');
+  }
+
+  doRefreshBank(event) {
+    this.getAddresses('bank');
+  }
+
+  changeKoriPage(res) {
+
+  }
+
+  changeBankPage(res) {
+    
   }
 }
 
@@ -581,8 +702,7 @@ export class DialogReportIncidentComponent {
   }
 
   reportIncident() {
-    this.apiService.reportIncident(this.comment).then((res: any) => {
-      console.log(res);
+    this.apiService.reportIncident(this.comment, this.incidentTypes[this.indexOfIncident]).then((res: any) => {
       if (res.report_sent === 'yes') {
         this.dialogRef.close('ok');
       } else {

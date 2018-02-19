@@ -151,6 +151,7 @@ export class ApiService {
     }
 
     params.set('name', group.name);
+    params.set('group_id', group.id);
     params.set('rate', group.rate);
     params.set('description', group.description);
     params.set('amount', group.amount);
@@ -472,12 +473,13 @@ export class ApiService {
     });
   }
 
-  reportIncident(comment) {
+  reportIncident(comment, type) {
     const url = environment.serverUrl + 'group/report';
     const params: URLSearchParams = new URLSearchParams();
     this.groupId.subscribe(data => {
       params.set('group_id', data);
     });
+    params.set('type', type);
     params.set('token', localStorage.getItem('token'));
     params.set('comment', comment);
     return new Promise((resolve, reject) => {
@@ -544,6 +546,40 @@ export class ApiService {
     if (name) {
       params.set('name', name);
     }
+    return new Promise((resolve, reject) => {
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        reject(err);
+      });
+    });
+  }
+
+  addIban(mean) {
+    const url = environment.serverUrl + 'group/payment/means/add';
+    const params: URLSearchParams = new URLSearchParams();
+    params.set('token', localStorage.getItem('token'));
+    params.set('iban', mean.iban);
+    params.set('bic', mean.bic);
+    params.set('country', mean.country);
+    params.set('account_permission_code', 'ALL_GROUP');
+    this.groupId.subscribe(data => {
+      params.set('group_id', data);
+    });
+    return new Promise((resolve, reject) => {
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        reject(err);
+      });
+    });
+  }
+
+  getAddresses() {
+    const url = environment.serverUrl + 'group/payment/means';
+    const params: URLSearchParams = new URLSearchParams();
+    params.set('token', localStorage.getItem('token'));
+    params.set('lang', this.langCode);
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());

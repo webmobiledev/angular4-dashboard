@@ -163,7 +163,7 @@ export class DialogGroupCreateComponent {
   
   constructor(public dialogRef: MdDialogRef<DialogGroupCreateComponent>, private fb: FormBuilder, private apiService: ApiService, private router: Router) {
     this.form = this.fb.group({
-      name: ['My group', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(10)])],
+      name: ['My group', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(20)])],
       frequency: [1, Validators.compose([Validators.required])],
       g_type: ['PRIVATE', Validators.compose([Validators.required])],
       position_selection_type: ['', Validators.compose([Validators.required])],
@@ -206,5 +206,25 @@ export class DialogGroupCreateComponent {
     }).catch(err => {
       console.log(err);
     });
+  }
+
+  getTypeText(code) {
+    let text = '';
+    this.groupTypes.forEach(g => {
+      if (g.code == code) {
+        text = g.text;
+      }
+    });
+    return text;
+  }
+
+  getPSTypeText(code) {
+    let text = '';
+    this.psTypes.forEach(p => {
+      if (p.code == code) {
+        text = p.text;
+      }
+    });
+    return text;
   }
 }

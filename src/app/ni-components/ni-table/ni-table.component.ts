@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter, Output, Inject } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, Inject, Optional } from '@angular/core';
 import { ApiService } from '../../services/api.service'
 import { MdDialog, MdDialogRef, MdDialogConfig, MD_DIALOG_DATA } from '@angular/material';
 import { NiDialogComponent } from '../ni-dialog/ni-dialog.component';
@@ -47,7 +47,7 @@ export class NiTableComponent implements OnInit {
           if (res.status === 'yes') {
             this.showAlert.emit({status: 'ok', text: 'Removing member'});
           } else {
-            this.showAlert.emit({status: 'cancel', text: 'Removing member'});
+            // this.showAlert.emit({status: 'cancel', text: 'Removing member'});
           }
         });
       } else {
@@ -57,10 +57,12 @@ export class NiTableComponent implements OnInit {
 
   showPayDialog(data) {
     let dialogRef = this.dialog.open(DialogPaymentComponent, {
-      data: data
+      data: data.data
     });
     dialogRef.afterClosed().subscribe(result => {
-      this.showAlert.emit({status: result, text: 'Paying obligation'});
+      if (result === 'ok') {
+        this.showAlert.emit({status: result, text: 'Paying obligation'});
+      }
     });
   }
 }
@@ -77,10 +79,10 @@ export class DialogPaymentComponent {
 
   constructor(
     public dialogRef: MdDialogRef<DialogPaymentComponent>,
-    @Inject(MD_DIALOG_DATA) public data: any,
+    @Optional() @Inject(MD_DIALOG_DATA) public data: any,
     public apiService: ApiService
   ) {
-    
+    console.log(data);
   }
 
   sendApproval() {

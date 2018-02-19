@@ -1,0 +1,16 @@
+<div md-dialog-content>
+    <md-input-container class="mt-4">
+        <input mdInput placeholder="Enter details for the new IBAN: " value="" type="text" [(ngModel)]="mean.iban">
+    </md-input-container>
+    <md-input-container class="mt-4">
+        <input mdInput placeholder="Enter a bic code: " value="" type="text" [(ngModel)]="mean.bic">
+    </md-input-container>
+    <label>{{'Select the account country:' | translate}}:</label>
+    <md-select class="w-full" [(ngModel)]="mean.country">
+        <md-option *ngFor="let c of countries" [value]="c.name">{{c.name | translate}}</md-option>
+    </md-select>
+    <div md-dialog-actions>
+        <button md-raised-button (click)="dialogRef.close('no')" color="default">Cancel</button>
+        <button md-raised-button (click)="add()" color="primary" [disabled]="iban === ''">Add</button>
+    </div>
+</div>
