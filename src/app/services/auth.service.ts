@@ -3,6 +3,7 @@ import { Http, URLSearchParams } from '@angular/http';
 import { environment } from '../../environments/environment';
 import { BehaviorSubject } from 'rxjs/Rx';
 import { ActivatedRoute, Params } from '@angular/router';
+import * as sha512 from 'sha512';
 
 @Injectable()
 export class AuthService {
@@ -30,7 +31,7 @@ export class AuthService {
     let params: URLSearchParams = new URLSearchParams();
     params.set('email', data.email);
     params.set('first_name', data.fname);
-    params.set('password', data.password);
+    params.set('password', sha512(data.password).toString('hex'));
     params.set('gender', data.gender);
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
@@ -46,7 +47,7 @@ export class AuthService {
     const url = environment.serverUrl + 'login';
     let params: URLSearchParams = new URLSearchParams();
     params.set('email', data.email);
-    params.set('password', data.password);
+    params.set('password', sha512(data.password).toString('hex'));
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
         this.isLogged = true;
@@ -107,7 +108,7 @@ export class AuthService {
   checkPassword(password) {
     const url = environment.serverUrl + 'user/password/check';
     let params: URLSearchParams = new URLSearchParams();
-    params.set('password', password);
+    params.set('password', sha512(password).toString('hex'));
     params.set('token', localStorage.getItem('token'));
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {

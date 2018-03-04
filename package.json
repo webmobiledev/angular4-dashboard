@@ -4,7 +4,7 @@
   "description": "Angular Admin Template",
   "private": true,
   "scripts": {
-    "start": "node server.js",
+    "start": "ng serve",
     "pree2e": "webdriver-manager update",
     "build": "ng build",
     "test": "ng test",
@@ -40,6 +40,8 @@
     "ng2-translate": "^5.0.0",
     "ng2-validation": "4.2.0",
     "rxjs": "5.4.3",
+    "sha512": "0.0.1",
+    "socket.io": "^2.0.4",
     "socket.io-client": "^2.0.4",
     "squeezebox": "1.1.12",
     "zone.js": "0.8.16"

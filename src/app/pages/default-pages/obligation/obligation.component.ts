@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../../services/api.service'
+import { SharedService } from '../../../layouts/shared-service';
 
 @Component({
   selector: 'app-obligation',
@@ -8,6 +9,7 @@ import { ApiService } from '../../../services/api.service'
 })
 export class PageObligationComponent implements OnInit {
   breadcrumb = [{title: 'Obligation'}];
+  pageTitle = 'Obligation';
   obligations = [];
   obligationHeaders = [];
   subscribeList: any = [];
@@ -16,7 +18,12 @@ export class PageObligationComponent implements OnInit {
   total = 0;
   loading = true;
 
-  constructor(private apiService: ApiService) { }
+  constructor(
+    private apiService: ApiService,
+    private sharedService: SharedService,
+  ) {
+    this.sharedService.emitChange(this.pageTitle);
+  }
 
   ngOnInit() {
     this.apiService.showSpinner.next(true);

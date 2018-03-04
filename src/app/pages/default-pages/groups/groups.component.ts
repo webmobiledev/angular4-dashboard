@@ -110,6 +110,7 @@ export class PageGroupsComponent implements OnInit {
       } else if (!this.apiService.isMenuClicked && data === false) {
         this.isClickedDetails = false;
         this.breadcrumb = [{title: 'groups'}];
+        this._sharedService.emitChange('groups');
       }
     });
 
@@ -153,6 +154,7 @@ export class PageGroupsComponent implements OnInit {
     this.subscribeList[0] = this.apiService.groupId.subscribe(data => {
       if (!this.isClickedDetails) {
         this.breadcrumb = [{title: 'groups'}];
+        this._sharedService.emitChange('groups');
         this.apiService.showSpinner.next(false);
       } else {
         this.groupList.map(d => {
@@ -161,6 +163,7 @@ export class PageGroupsComponent implements OnInit {
             this.breadcrumb = [];
             this.breadcrumb.push({title: this.pageTitle, link: '/default-layout/groups/'});
             this.breadcrumb.push({title: d.name});
+            this._sharedService.emitChange(d.name);
           }
         });
         this.getGroupEvents(this.maxEvent, this.pageEvent);

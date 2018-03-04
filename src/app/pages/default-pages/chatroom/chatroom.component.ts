@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../../services/api.service';
-import * as io from 'socket.io-client';
+import { ChatService } from '../../../services/chat.service';
+import { SharedService } from '../../../layouts/shared-service';
 
 @Component({
   selector: 'app-chatroom',
   templateUrl: './chatroom.component.html',
-  styleUrls: ['./chatroom.component.scss']
+  styleUrls: ['./chatroom.component.scss'],
+  providers: [ChatService]
 })
 export class PageChatroomComponent implements OnInit {
   breadcrumb = [{title: 'chatroom'}];
+  pageTitle = 'Chatroom';
   messages = [
     {
       'date': '8 hours ago',
@@ -51,25 +54,40 @@ export class PageChatroomComponent implements OnInit {
   members = [];
   searchName = '';
 
-  socket = io('https://www.rollincome.com:446/chat');
+  messagess = [];
+  connection;
 
   constructor(
     private apiService: ApiService,
-  ) { }
+    private chatService: ChatService,
+    private _sharedService: SharedService,
+  ) {
+    this._sharedService.emitChange(this.pageTitle);
+  }
 
   ngOnInit() {
     this.apiService.getAllChatMembers().then((res: any) => {
       this.members = res.data;
     });
 
-    this.socket.on('new-message', function (data) {
-      console.log(data);
-    }.bind(this));
+    this.connection = this.chatService.getMessages().subscribe(message => {
+      console.log(message);
+      this.messagess.push(message);
+    })
+  }
+
+  ngOnDestroy() {
+    this.connection.unsubscribe();
   }
 
   searchUsers() {
     this.apiService.getAllChatMembers(this.searchName).then((res: any) => {
       this.members = res.data;
     });
+  }
+
+  sendMessage($event){
+    this.chatService.sendMessage('hello');
+    // this.message = '';
   }
 }

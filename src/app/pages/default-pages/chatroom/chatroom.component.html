@@ -20,7 +20,7 @@
           <h3 md-line class="h3">{{ m.name }}</h3>
         </md-list-item>
       </md-list>
-      <ni-chat [messages]="messages" [style.height.px]="600"></ni-chat>
+      <ni-chat [messages]="messages" [style.height.px]="600" (sendMessage)="sendMessage($event)"></ni-chat>
     </ni-card>
   </div>
 </div>

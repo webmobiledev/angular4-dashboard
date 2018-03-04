@@ -1444,6 +1444,7 @@ var NiChatComponent = (function () {
         this.elementRef = elementRef;
         this.contacts = [];
         this.messages = [];
+        this.sendMessage = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.dialogMessages = this.elementRef.nativeElement.getElementsByClassName('dialog-messages');
     }
     NiChatComponent.prototype.ngOnInit = function () {
@@ -1463,6 +1464,7 @@ var NiChatComponent = (function () {
                 avatar: 'assets/content/avatar-4.jpg'
             };
             this.messages.push(this.message);
+            this.sendMessage.emit(this.message);
             form.reset();
             var chatDialogMessages_1 = this.dialogMessages[0];
             chatDialogMessages_1.classList.add('add-message');
@@ -1492,6 +1494,10 @@ var NiChatComponent = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Array)
     ], NiChatComponent.prototype, "messages", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+        __metadata("design:type", Object)
+    ], NiChatComponent.prototype, "sendMessage", void 0);
     NiChatComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'ni-chat',
@@ -2522,7 +2528,7 @@ var PageAboutusComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/chatroom/chatroom.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row members-header\" id=\"chatroom\">\n  <div class=\"col-sm-6\">\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>      \n  </div>\n  <div class=\"col-sm-6 text-right\">\n    <md-input-container class=\"search-group md-icon-left\">\n      <md-icon>search</md-icon>\n      <input mdInput value=\"\">\n    </md-input-container>\n  </div>\n  <div class=\"col-md-12\">\n    <ni-card [title]=\"'Lists with avatars'\">\n      <md-list>\n        <md-input-container class=\"search-group md-icon-left\">\n          <md-icon>search</md-icon>\n          <input mdInput value=\"\" [(ngModel)]=\"searchName\" placeholder=\"Search...\" (ngModelChange)=\"searchUsers()\">\n        </md-input-container>\n        <md-list-item *ngFor=\"let m of members\">\n          <img md-list-avatar src=\"../../../../assets/img/user/av1.png\" width=\"40\" height=\"40\" alt=\"\">\n          <h3 md-line class=\"h3\">{{ m.name }}</h3>\n        </md-list-item>\n      </md-list>\n      <ni-chat [messages]=\"messages\" [style.height.px]=\"600\"></ni-chat>\n    </ni-card>\n  </div>\n</div>"
+module.exports = "<div class=\"row members-header\" id=\"chatroom\">\n  <div class=\"col-sm-6\">\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>      \n  </div>\n  <div class=\"col-sm-6 text-right\">\n    <md-input-container class=\"search-group md-icon-left\">\n      <md-icon>search</md-icon>\n      <input mdInput value=\"\">\n    </md-input-container>\n  </div>\n  <div class=\"col-md-12\">\n    <ni-card [title]=\"'Lists with avatars'\">\n      <md-list>\n        <md-input-container class=\"search-group md-icon-left\">\n          <md-icon>search</md-icon>\n          <input mdInput value=\"\" [(ngModel)]=\"searchName\" placeholder=\"Search...\" (ngModelChange)=\"searchUsers()\">\n        </md-input-container>\n        <md-list-item *ngFor=\"let m of members\">\n          <img md-list-avatar src=\"../../../../assets/img/user/av1.png\" width=\"40\" height=\"40\" alt=\"\">\n          <h3 md-line class=\"h3\">{{ m.name }}</h3>\n        </md-list-item>\n      </md-list>\n      <ni-chat [messages]=\"messages\" [style.height.px]=\"600\" (sendMessage)=\"sendMessage($event)\"></ni-chat>\n    </ni-card>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -2551,8 +2557,8 @@ module.exports = module.exports.toString();
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageChatroomComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_socket_io_client__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_chat_service__ = __webpack_require__("../../../../../src/app/services/chat.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2565,10 +2571,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var PageChatroomComponent = (function () {
-    function PageChatroomComponent(apiService) {
+    function PageChatroomComponent(apiService, chatService, _sharedService) {
         this.apiService = apiService;
+        this.chatService = chatService;
+        this._sharedService = _sharedService;
         this.breadcrumb = [{ title: 'chatroom' }];
+        this.pageTitle = 'Chatroom';
         this.messages = [
             {
                 'date': '8 hours ago',
@@ -2609,16 +2619,21 @@ var PageChatroomComponent = (function () {
         ];
         this.members = [];
         this.searchName = '';
-        this.socket = __WEBPACK_IMPORTED_MODULE_2_socket_io_client__('https://www.rollincome.com:446/chat');
+        this.messagess = [];
+        this._sharedService.emitChange(this.pageTitle);
     }
     PageChatroomComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.apiService.getAllChatMembers().then(function (res) {
             _this.members = res.data;
         });
-        this.socket.on('new-message', function (data) {
-            console.log(data);
-        }.bind(this));
+        this.connection = this.chatService.getMessages().subscribe(function (message) {
+            console.log(message);
+            _this.messagess.push(message);
+        });
+    };
+    PageChatroomComponent.prototype.ngOnDestroy = function () {
+        this.connection.unsubscribe();
     };
     PageChatroomComponent.prototype.searchUsers = function () {
         var _this = this;
@@ -2626,16 +2641,21 @@ var PageChatroomComponent = (function () {
             _this.members = res.data;
         });
     };
+    PageChatroomComponent.prototype.sendMessage = function ($event) {
+        this.chatService.sendMessage('hello');
+        // this.message = '';
+    };
     PageChatroomComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-chatroom',
             template: __webpack_require__("../../../../../src/app/pages/default-pages/chatroom/chatroom.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/default-pages/chatroom/chatroom.component.scss")]
+            styles: [__webpack_require__("../../../../../src/app/pages/default-pages/chatroom/chatroom.component.scss")],
+            providers: [__WEBPACK_IMPORTED_MODULE_2__services_chat_service__["a" /* ChatService */]]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_chat_service__["a" /* ChatService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_chat_service__["a" /* ChatService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__layouts_shared_service__["a" /* SharedService */]) === "function" && _c || Object])
     ], PageChatroomComponent);
     return PageChatroomComponent;
-    var _a;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=chatroom.component.js.map
@@ -3111,6 +3131,7 @@ var PageGroupsComponent = (function () {
             else if (!_this.apiService.isMenuClicked && data === false) {
                 _this.isClickedDetails = false;
                 _this.breadcrumb = [{ title: 'groups' }];
+                _this._sharedService.emitChange('groups');
             }
         });
         this.subscribeList[3] = this.apiService.groupCreated.subscribe(function (res) {
@@ -3147,6 +3168,7 @@ var PageGroupsComponent = (function () {
         this.subscribeList[0] = this.apiService.groupId.subscribe(function (data) {
             if (!_this.isClickedDetails) {
                 _this.breadcrumb = [{ title: 'groups' }];
+                _this._sharedService.emitChange('groups');
                 _this.apiService.showSpinner.next(false);
             }
             else {
@@ -3156,6 +3178,7 @@ var PageGroupsComponent = (function () {
                         _this.breadcrumb = [];
                         _this.breadcrumb.push({ title: _this.pageTitle, link: '/default-layout/groups/' });
                         _this.breadcrumb.push({ title: d.name });
+                        _this._sharedService.emitChange(d.name);
                     }
                 });
                 _this.getGroupEvents(_this.maxEvent, _this.pageEvent);
@@ -3826,6 +3849,7 @@ module.exports = module.exports.toString();
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageObligationComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3837,10 +3861,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var PageObligationComponent = (function () {
-    function PageObligationComponent(apiService) {
+    function PageObligationComponent(apiService, sharedService) {
         this.apiService = apiService;
+        this.sharedService = sharedService;
         this.breadcrumb = [{ title: 'Obligation' }];
+        this.pageTitle = 'Obligation';
         this.obligations = [];
         this.obligationHeaders = [];
         this.subscribeList = [];
@@ -3848,6 +3875,7 @@ var PageObligationComponent = (function () {
         this.page = 1;
         this.total = 0;
         this.loading = true;
+        this.sharedService.emitChange(this.pageTitle);
     }
     PageObligationComponent.prototype.ngOnInit = function () {
         this.apiService.showSpinner.next(true);
@@ -3887,10 +3915,10 @@ var PageObligationComponent = (function () {
             template: __webpack_require__("../../../../../src/app/pages/default-pages/obligation/obligation.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/default-pages/obligation/obligation.component.scss")]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__layouts_shared_service__["a" /* SharedService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__layouts_shared_service__["a" /* SharedService */]) === "function" && _b || Object])
     ], PageObligationComponent);
     return PageObligationComponent;
-    var _a;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=obligation.component.js.map
@@ -6013,6 +6041,8 @@ var ApiService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__("../../../../rxjs/Rx.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_sha512__ = __webpack_require__("../../../../sha512/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_sha512___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_sha512__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6022,6 +6052,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -6050,7 +6081,7 @@ var AuthService = (function () {
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         params.set('email', data.email);
         params.set('first_name', data.fname);
-        params.set('password', data.password);
+        params.set('password', __WEBPACK_IMPORTED_MODULE_4_sha512__(data.password).toString('hex'));
         params.set('gender', data.gender);
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
@@ -6066,7 +6097,7 @@ var AuthService = (function () {
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'login';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         params.set('email', data.email);
-        params.set('password', data.password);
+        params.set('password', __WEBPACK_IMPORTED_MODULE_4_sha512__(data.password).toString('hex'));
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 _this.isLogged = true;
@@ -6125,7 +6156,7 @@ var AuthService = (function () {
         var _this = this;
         var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'user/password/check';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
-        params.set('password', password);
+        params.set('password', __WEBPACK_IMPORTED_MODULE_4_sha512__(password).toString('hex'));
         params.set('token', localStorage.getItem('token'));
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
@@ -6157,6 +6188,56 @@ var AuthService = (function () {
 }());
 
 //# sourceMappingURL=auth.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/chat.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_socket_io_client__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var ChatService = (function () {
+    function ChatService() {
+        this.url = 'https://www.rollincome.com/chat';
+    }
+    ChatService.prototype.sendMessage = function (message) {
+        this.socket.emit('message', message);
+    };
+    ChatService.prototype.getMessages = function () {
+        var _this = this;
+        this.socket = __WEBPACK_IMPORTED_MODULE_2_socket_io_client__(this.url);
+        var observable = new __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"](function (observer) {
+            _this.socket.on('message', function (data) {
+                console.log(data);
+                observer.next(data);
+            });
+            return function () {
+                _this.socket.disconnect();
+            };
+        });
+        return observable;
+    };
+    ChatService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])()
+    ], ChatService);
+    return ChatService;
+}());
+
+//# sourceMappingURL=chat.service.js.map
 
 /***/ }),
 
@@ -6296,7 +6377,7 @@ module.exports = "<h2 md-dialog-title>{{'groupcreation' | translate}}</h2>\n<for
 /***/ "../../../../../src/app/ui/components/horizontal-navbar/horizontal-navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"navbar-wrap\">\r\n  <div class=\"navbar-button\" [ngClass]=\"{ 'open' : openedSidebar }\" (click)=\"openSidebar()\">\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n  </div>\r\n\r\n  <h1 class=\"page-title\"></h1>\r\n\r\n  <div class=\"nav-items\">\r\n    \r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-input-container class=\"mb-0\">\r\n        <input mdInput [placeholder]=\"'Select a group' | translate\" [mdAutocomplete]=\"auto\" [formControl]=\"groupCtrl\">\r\n      </md-input-container>\r\n      <md-autocomplete #auto=\"mdAutocomplete\">\r\n        <md-option *ngFor=\"let group of filteredGroup | async\" [value]=\"group\" (click)=\"goToGroup(group)\">\r\n          {{ group }}\r\n        </md-option>\r\n      </md-autocomplete>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-icon mdTooltip=\"{{'paymenttooltip' | translate}}\" mdTooltipPosition=\"below\" class=\"btn-navbar\" routerLink=\"obligation\">payment</md-icon>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-icon mdTooltip=\"{{'creationtooltip' | translate}}\" mdTooltipPosition=\"below\" class=\"btn-navbar\" (click)=\"openCreateGroupDialog()\">create_new_folder</md-icon>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link btn-code\">\r\n          <img [src]=\"'assets/content/' + langUrl\" width=\"30\" height=\"20\">\r\n      </a>\r\n      <div class=\"dropdown-menu\">\r\n        <ul>\r\n          <li *ngFor=\"let lang of languages\">\r\n            <a (click)=\"changeLanguage(lang.code)\">\r\n              <div class=\"content\">\r\n                <img [src]=\"'assets/content/' + lang.url\" width=\"30\" height=\"20\">\r\n                <span class=\"desc\"><strong>{{lang.code.toUpperCase()}}</strong></span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <div class=\"avatar\"><img [src]=\"'assets/img/user/' + photoUrl + '.png'\" width=\"40\" height=\"40\" alt=\"\"></div>\r\n        <div class=\"name\">{{username}}</div>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu mini-menu\">\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"transactions\"><span class=\"icon sli-home\"></span> My Account</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"profile\"><span class=\"icon sli-user\"></span> Profile</a>\r\n          </li>\r\n          <li>\r\n            <a (click)=\"logout()\"><span class=\"icon sli-logout\"></span> Log Out</a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"items-overlay\" (click)=\"close($event)\"></div>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"navbar-wrap\">\r\n  <div class=\"navbar-button\" [ngClass]=\"{ 'open' : openedSidebar }\" (click)=\"openSidebar()\">\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n    <span></span>\r\n  </div>\r\n\r\n  <h1 class=\"page-title\">{{title | translate}}</h1>\r\n\r\n  <div class=\"nav-items\">\r\n    \r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-input-container class=\"mb-0\">\r\n        <input mdInput [placeholder]=\"'Select a group' | translate\" [mdAutocomplete]=\"auto\" [formControl]=\"groupCtrl\">\r\n      </md-input-container>\r\n      <md-autocomplete #auto=\"mdAutocomplete\">\r\n        <md-option *ngFor=\"let group of filteredGroup | async\" [value]=\"group\" (click)=\"goToGroup(group)\">\r\n          {{ group }}\r\n        </md-option>\r\n      </md-autocomplete>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-icon mdTooltip=\"{{'paymenttooltip' | translate}}\" mdTooltipPosition=\"below\" class=\"btn-navbar\" routerLink=\"obligation\">payment</md-icon>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <md-icon mdTooltip=\"{{'creationtooltip' | translate}}\" mdTooltipPosition=\"below\" class=\"btn-navbar\" (click)=\"openCreateGroupDialog()\">create_new_folder</md-icon>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link btn-code\">\r\n          <img [src]=\"'assets/content/' + langUrl\" width=\"30\" height=\"20\">\r\n      </a>\r\n      <div class=\"dropdown-menu\">\r\n        <ul>\r\n          <li *ngFor=\"let lang of languages\">\r\n            <a (click)=\"changeLanguage(lang.code)\">\r\n              <div class=\"content\">\r\n                <img [src]=\"'assets/content/' + lang.url\" width=\"30\" height=\"20\">\r\n                <span class=\"desc\"><strong>{{lang.code.toUpperCase()}}</strong></span>\r\n              </div>\r\n            </a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"nav-item\" [ngClass]=\"{ 'opened' : false }\">\r\n      <a href=\"#\" (click)=\"open($event)\" class=\"nav-link\">\r\n        <div class=\"avatar\"><img [src]=\"'assets/img/user/' + photoUrl + '.png'\" width=\"40\" height=\"40\" alt=\"\"></div>\r\n        <div class=\"name\">{{username}}</div>\r\n      </a>\r\n\r\n      <div class=\"dropdown-menu mini-menu\">\r\n        <ul>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"transactions\"><span class=\"icon sli-home\"></span> My Account</a>\r\n          </li>\r\n          <li>\r\n            <a href=\"#\" routerLink=\"profile\"><span class=\"icon sli-user\"></span> Profile</a>\r\n          </li>\r\n          <li>\r\n            <a (click)=\"logout()\"><span class=\"icon sli-logout\"></span> Log Out</a>\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"items-overlay\" (click)=\"close($event)\"></div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -7008,7 +7089,7 @@ module.exports = __webpack_require__.p + "signup-bg.54a59ac18b156a86c517.jpg";
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 var environment = {
     production: false,
-    serverUrl: 'https://www.rollincome.com:444/'
+    serverUrl: 'https://www.rollincome.com/api/'
 };
 //# sourceMappingURL=environment.js.map
 

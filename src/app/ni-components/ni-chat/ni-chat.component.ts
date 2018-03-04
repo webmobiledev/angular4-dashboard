@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostBinding, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, HostBinding, ElementRef, Output, EventEmitter } from '@angular/core';
 import { NgForm} from '@angular/forms';
 import { Message } from './message';
 import { User } from './user';
@@ -14,6 +14,7 @@ import { User } from './user';
 export class NiChatComponent implements OnInit {
   @Input() contacts: any[] = [];
   @Input() messages: Message[] = [];
+  @Output() sendMessage = new EventEmitter();
   message: Message;
   firstLetter: string;
   dialogMessages: any;
@@ -43,6 +44,8 @@ export class NiChatComponent implements OnInit {
         avatar: 'assets/content/avatar-4.jpg'
       };
       this.messages.push(this.message);
+
+      this.sendMessage.emit(this.message);
 
       form.reset();
 
