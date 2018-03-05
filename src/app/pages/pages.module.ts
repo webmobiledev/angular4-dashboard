@@ -56,7 +56,13 @@ import { Page404Component } from './extra-pages/page-404/page-404.component';
 import { Page500Component } from './extra-pages/page-500/page-500.component';
 
 import { PageDashboardComponent, DialogAcceptAndRejectComponent } from './default-pages/dashboard/dashboard.component';
-import { PageGroupsComponent, DialogAddMemberComponent, DialogStartComponent, DialogReportIncidentComponent } from './default-pages/groups/groups.component';
+import { 
+  PageGroupsComponent, 
+  DialogAddMemberComponent, 
+  DialogStartComponent, 
+  DialogReportIncidentComponent, 
+  DialogCloneGroupComponent,
+} from './default-pages/groups/groups.component';
 import { PageTransactionsComponent, DialogCheckPasswordComponent } from './default-pages/transactions/transactions.component';
 import { PageRequestsComponent } from './default-pages/requests/requests.component';
 import { PageNotFoundComponent } from './default-pages/not-found/not-found.component';
@@ -146,6 +152,7 @@ import { PageFaqComponent } from './default-pages/faq/faq.component';
     DialogCheckPasswordComponent,
     PageFaqComponent,
     DialogAddIbanComponent,
+    DialogCloneGroupComponent,
   ],
   exports: [
     PageDashboardComponent,
@@ -175,6 +182,7 @@ import { PageFaqComponent } from './default-pages/faq/faq.component';
     DialogReportIncidentComponent,
     DialogCheckPasswordComponent,
     DialogAddIbanComponent,
+    DialogCloneGroupComponent,
   ]
 })
 export class PagesModule {}

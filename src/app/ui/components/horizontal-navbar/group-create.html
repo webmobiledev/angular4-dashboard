@@ -52,13 +52,14 @@
         </md-input-container>
       </div>
     </div>
+    <p class="error mb-2" *ngIf="form.controls['description'].invalid">Minimum length of description should be 20.</p>
     <p>You are about to create a <span [innerHTML]="getTypeText(form.value.g_type)"></span> group named <span>{{form.value.name}}</span>.</p>
     <p *ngIf="form.value.frequency == 1">This payment will have to be made each month.</p>
     <p *ngIf="form.value.frequency > 1">This payment will have to be made every <span>{{form.value.frequency}}</span> months.</p>
   </div>
   <div md-dialog-actions *ngIf="step === 'first'">
-    <button md-raised-button (click)="dialogRef.close('no')" type="button" color="default">{{'Cancel' | translate}}</button>
-    <button md-raised-button color="primary" layout-align="end" (click)="step = 'second'" [disabled]="!form.controls['name'].valid || !form.controls['g_type'].valid || !form.controls['frequency'].valid || !form.controls['currency'].valid || !form.controls['description'].valid || !form.controls['index_credit_min'].valid || !form.controls['index_credit_max'].valid">{{'Next' | translate}} >></button>
+    <button md-raised-button (click)="dialogRef.close('no')" type="button" color="primary">{{'Cancel' | translate}}</button>
+    <button md-raised-button color="accent" layout-align="end" (click)="step = 'second'" [disabled]="!form.controls['name'].valid || !form.controls['g_type'].valid || !form.controls['frequency'].valid || !form.controls['currency'].valid || !form.controls['description'].valid || !form.controls['index_credit_min'].valid || !form.controls['index_credit_max'].valid">{{'Next' | translate}} >></button>
   </div>
   <div md-dialog-content *ngIf="step === 'second'">
     <div class="row pt-3">
@@ -94,7 +95,7 @@
     <div class="row pt-3">
       <div class="col-sm-6">
         <md-input-container>
-          <input mdInput id="nbdpenal" placeholder="{{'Number of days of delay allowed' | translate}}" type="number" value="" [formControl]="form.controls['nb_days_delay_before_penalty']">
+          <input mdInput id="nbdpenal" placeholder="{{'Delayed payment flexibility' | translate}}" type="number" value="" [formControl]="form.controls['nb_days_delay_before_penalty']">
         </md-input-container>
         <md-icon mdTooltip="{{'grouppenalinfo' | translate}}" mdTooltipPosition="below">info</md-icon>
       </div>
@@ -121,10 +122,11 @@
     <p *ngIf="form.value.frequency == 1">This will allow you to pay a single amount every month.</p>
     <p *ngIf="form.value.frequency > 1">This will allow you to pay a single amount every <span>{{form.value.frequency}}</span> months.</p>
     <p *ngIf="form.value.position_selection_type != ''">When the group is kicked off, the members will select their position using <span [innerHTML]="getPSTypeText(form.value.position_selection_type)"></span></p>
+    <p *ngIf="form.value.smooth_payment && form.value.rate > 0">Smooth payment will allow you to pay a single smooth amount every month.</p>
   </div>
   <div md-dialog-actions *ngIf="step === 'second'">
-    <button md-raised-button (click)="step = 'first'" color="primary" layout-align="end"><< {{'Previous' | translate}}</button>
-    <button md-raised-button (click)="dialogRef.close('no')" type="button" color="default">{{'Cancel' | translate}}</button>
-    <button md-raised-button color="primary" layout-align="end" (click)="onSubmit()" [disabled]="!form.valid" type="button">{{'Finish' | translate}}</button>
+    <button md-raised-button (click)="step = 'first'" color="accent" layout-align="end"><< {{'Previous' | translate}}</button>
+    <button md-raised-button (click)="dialogRef.close('no')" type="button" color="primary">{{'Cancel' | translate}}</button>
+    <button md-raised-button color="accent" layout-align="end" (click)="onSubmit()" [disabled]="!form.valid" type="button">{{'Finish' | translate}}</button>
   </div>
 </form>

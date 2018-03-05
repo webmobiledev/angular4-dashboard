@@ -15,16 +15,16 @@
         <md-radio-button value="5">Pay by bank transfer</md-radio-button>
     </md-radio-group>
     <div md-dialog-actions class="buttons">
-        <button md-raised-button (click)="dialogRef.close('cancel')" color="default">CANCEL</button>
-        <button md-raised-button (click)="pageNum = 2" color="primary">Next</button>
+        <button md-raised-button (click)="dialogRef.close('cancel')" color="primary">CANCEL</button>
+        <button md-raised-button (click)="pageNum = 2" color="accent">Next</button>
     </div>
 </div>
 
 <div md-dialog-content class="p-3" *ngIf="pageNum === 2">
     <p *ngIf="selectedType === 0">This send an approval request to the receiver for the amount {{data.projected_amount_due}} and he will enter the date at which he received the amount.</p>
     <div md-dialog-actions class="buttons">
-        <button md-raised-button (click)="pageNum = 1" color="primary">Previous</button>
-        <button md-raised-button (click)="dialogRef.close('cancel')" color="default">CANCEL</button>
-        <button md-raised-button (click)="sendApproval()" color="primary">Send approval request</button>
+        <button md-raised-button (click)="pageNum = 1" color="accent">Previous</button>
+        <button md-raised-button (click)="dialogRef.close('cancel')" color="primary">CANCEL</button>
+        <button md-raised-button (click)="sendApproval()" color="accent">Send approval request</button>
     </div>
 </div>

@@ -6,7 +6,7 @@
         <input mdInput placeholder="Comment" value="" [(ngModel)]="comment">
     </md-input-container>
     <div md-dialog-actions>
-        <button md-raised-button (click)="reportIncident()" color="primary" [disabled]="comment === ''">Report</button>
-        <button md-raised-button (click)="dialogRef.close('cancel')" color="default">CANCEL</button>
+        <button md-raised-button (click)="reportIncident()" color="accent" [disabled]="comment === ''">Report</button>
+        <button md-raised-button (click)="dialogRef.close('cancel')" color="primary">CANCEL</button>
     </div>
 </div>

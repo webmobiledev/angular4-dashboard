@@ -18,10 +18,10 @@
     <p *ngIf="request.frequency == 1">This will allow you to pay a single amount every month.</p>
     <p *ngIf="request.frequency > 1">This will allow you to pay a single amount every <span>{{request.frequency}}</span> months.</p>
     <p>When the group is kicked off, the members will select their position using <span>{{request.group_rotation_type_text}}</span> method.</p>
-    <div md-dialog-actions>
-      <button mdTooltip="{{'Click here to accept the request' | translate}}" mdTooltipPosition="below" md-raised-button (click)="answer('APPROVE')" color="primary">{{'Accept' | translate}}</button>
-      <button mdTooltip="{{'Click here to reject the request' | translate}}" mdTooltipPosition="below" md-raised-button (click)="answer('REJECT')" color="primary">{{'Reject' | translate}}</button>
-      <button mdTooltip="{{'Click here to close the window without any change' | translate}}" mdTooltipPosition="below" md-raised-button (click)="dialogRef.close('no')" color="default">{{'Cancel' | translate}}</button>
+    <div md-dialog-actions class="mb-3">
+      <button mdTooltip="{{'Click here to accept the request' | translate}}" mdTooltipPosition="below" md-raised-button (click)="answer('APPROVE')" color="accent">{{'Accept' | translate}}</button>
+      <button mdTooltip="{{'Click here to reject the request' | translate}}" mdTooltipPosition="below" md-raised-button (click)="answer('REJECT')" color="warning">{{'Reject' | translate}}</button>
+      <button mdTooltip="{{'Click here to close the window without any change' | translate}}" mdTooltipPosition="below" md-raised-button (click)="dialogRef.close('no')" color="primary">{{'Cancel' | translate}}</button>
     </div>
   </div>
 </div>

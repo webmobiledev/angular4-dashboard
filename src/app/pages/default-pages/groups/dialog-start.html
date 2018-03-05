@@ -6,14 +6,14 @@
   </md-input-container>
   <md-datepicker #picker></md-datepicker>
   <div md-dialog-actions>
-    <button md-raised-button (click)="dialogRef.close('no')" color="default">Cancel</button>
-    <button md-raised-button (click)="start()" color="primary">Start</button>
+    <button md-raised-button (click)="dialogRef.close('no')" color="primary">Cancel</button>
+    <button md-raised-button (click)="start()" color="accent">Start</button>
   </div>
 </div>
 <div md-dialog-content *ngIf="isPendingRequest">
   <p>There is {{pendingRequest}} pending request, do you want to start anyway ?</p>
   <div md-dialog-actions>
-    <button md-raised-button (click)="dialogRef.close('no')" color="default">Cancel</button>
-    <button md-raised-button (click)="forceStart()" color="primary">Force Start</button>
+    <button md-raised-button (click)="dialogRef.close('no')" color="primary">Cancel</button>
+    <button md-raised-button (click)="forceStart()" color="accent">Force Start</button>
   </div>
 </div>

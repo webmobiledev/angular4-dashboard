@@ -156,13 +156,8 @@ export class PageDashboardComponent {
   templateUrl: 'accept-reject-modal.html',
 })
 export class DialogAcceptAndRejectComponent {
-  id = '';
   request: any;
-  groupId = '';
   positions = [];
-  comment = '';
-  groupRotationType = '';
-  requestType = '';
   constructor(public dialogRef: MdDialogRef<DialogAcceptAndRejectComponent>, private apiService: ApiService) {
   }
 
@@ -173,7 +168,7 @@ export class DialogAcceptAndRejectComponent {
   }
 
   answer(type) {
-    this.apiService.answerRequest(this.id, type).then((res: any) => {
+    this.apiService.answerRequest(this.request.id, type).then((res: any) => {
       if (res.status === 'ok') {
         this.dialogRef.close();
       }

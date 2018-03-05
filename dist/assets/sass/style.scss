@@ -126,11 +126,8 @@ group-create {
 
 accept-reject-modal {
   .mat-dialog-content {
-    margin: 0 !important;
-    padding-top: 30px;
     .mat-dialog-actions {
-      margin: 0 !important;
-      padding: 20px 0 0;
+      padding: 20px 0 10px;
     }
     p {
       margin: 0;

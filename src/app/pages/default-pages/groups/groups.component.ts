@@ -526,16 +526,10 @@ export class PageGroupsComponent implements OnInit {
   }
 
   cloneGroup() {
-    let dialogRef = this.dialog.open(NiDialogComponent, {
-      data: {
-        content: 'Do you really want to clone this group?',
-        okText: 'Yes',
-        cancelText: 'No'
-      }
-    });
+    let dialogRef = this.dialog.open(DialogCloneGroupComponent);
     dialogRef.afterClosed().subscribe(result => {
-      if (result === 'ok') {
-        this.apiService.cloneGroup().then((res: any) => {
+      if (result.status === 'ok') {
+        this.apiService.cloneGroup(result.name).then((res: any) => {
           this.apiService.isMenuClicked = false;
           this.apiService.isClickedDetails.next(false);
           this.apiService.groupCounts.next(this.groups.length);
@@ -575,6 +569,10 @@ export class PageGroupsComponent implements OnInit {
       } else {
       }
     });
+  }
+
+  closeGroup() {
+
   }
 
   showAlert(result, text) {
@@ -711,6 +709,24 @@ export class DialogReportIncidentComponent {
       } else {
         this.dialogRef.close('cancel');
       }
+    });
+  }
+}
+
+@Component({
+  selector: 'dialog-clone',
+  templateUrl: 'dialog-clone.html',
+})
+export class DialogCloneGroupComponent {
+  group = '';
+  constructor(public dialogRef: MdDialogRef<DialogCloneGroupComponent>, private apiService: ApiService) {
+
+  }
+
+  closeDialog(status) {
+    this.dialogRef.close({
+      status: status,
+      name: this.group
     });
   }
 }

@@ -12,50 +12,12 @@ import { SharedService } from '../../../layouts/shared-service';
 export class PageChatroomComponent implements OnInit {
   breadcrumb = [{title: 'chatroom'}];
   pageTitle = 'Chatroom';
-  messages = [
-    {
-      'date': '8 hours ago',
-      'content': `Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.`,
-      'my': false,
-      'avatar': 'assets/content/avatar-4.jpg'
-    },
-    {
-      'date': '7 hours ago',
-      'content': `Aenean lacinia bibendum nulla sed consectetur.`,
-      'my': true,
-      'avatar': 'assets/content/avatar-4.jpg'
-    },
-    {
-      'date': '2 hours ago',
-      'content': `Contrary to popular belief,`,
-      'my': false,
-      'avatar': 'assets/content/avatar-4.jpg'
-    },
-    {
-      'date': '15 minutes ago',
-      'content': `Lorem ipsum dolor sit.`,
-      'my': true,
-      'avatar': 'assets/content/avatar-4.jpg'
-    },
-    {
-      'date': '14 minutes ago',
-      'content': `Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit.`,
-      'my': false,
-      'avatar': 'assets/content/avatar-4.jpg'
-    },
-    {
-      'date': '12 minutes ago',
-      'content': `Aenean lacinia bibendum nulla sed consectetur.`,
-      'my': true,
-      'avatar': 'assets/content/avatar-4.jpg'
-    }
-  ];
+  messages = [];
 
   members = [];
   searchName = '';
 
-  messagess = [];
-  connection;
+  connection: any;
 
   constructor(
     private apiService: ApiService,
@@ -66,14 +28,20 @@ export class PageChatroomComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.connection = this.chatService.getMessages().subscribe((messages: any) => {
+      let message = JSON.parse(messages.json_msg)[0];
+      console.log(this.messages);
+      this.messages.push({
+        date: message.creation_date,
+        content: message.message,
+        my: message.sender.indexOf(localStorage.getItem('email')) >= 0 ? true : false,
+        avatar: message.sender.indexOf(localStorage.getItem('email')) >= 0 ? message.sender_pic : message.receiver_pic,
+      });
+    });
+
     this.apiService.getAllChatMembers().then((res: any) => {
       this.members = res.data;
     });
-
-    this.connection = this.chatService.getMessages().subscribe(message => {
-      console.log(message);
-      this.messagess.push(message);
-    })
   }
 
   ngOnDestroy() {
@@ -87,7 +55,11 @@ export class PageChatroomComponent implements OnInit {
   }
 
   sendMessage($event){
-    this.chatService.sendMessage('hello');
-    // this.message = '';
+    console.log($event);
+    this.chatService.sendMessage({
+      message: $event.content,
+      receiver_id: 2,
+      token: localStorage.getItem('token'),
+    });
   }
 }

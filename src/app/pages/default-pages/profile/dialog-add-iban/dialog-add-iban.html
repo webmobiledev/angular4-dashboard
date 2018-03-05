@@ -10,7 +10,7 @@
         <md-option *ngFor="let c of countries" [value]="c.name">{{c.name | translate}}</md-option>
     </md-select>
     <div md-dialog-actions>
-        <button md-raised-button (click)="dialogRef.close('no')" color="default">Cancel</button>
-        <button md-raised-button (click)="add()" color="primary" [disabled]="iban === ''">Add</button>
+        <button md-raised-button (click)="dialogRef.close('no')" color="primary">Cancel</button>
+        <button md-raised-button (click)="add()" color="accent" [disabled]="iban === ''">Add</button>
     </div>
 </div>

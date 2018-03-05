@@ -48,7 +48,7 @@
               <label class="col-sm-5 col-md-5 col-form-label mb-0">Name:</label>
               <div class="col-sm-7 col-md-7">
                 <md-input-container class="mb-0">
-                  <input mdInput type="text" [(ngModel)]="groupInfo.group_info.name" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
+                  <input mdInput type="text" [(ngModel)]="groupInfo.group_info.name" disabled>
                 </md-input-container>
               </div>
             </div>
@@ -74,8 +74,8 @@
               <label class="col-sm-5 col-md-5 col-form-label mb-0">Date creation:</label>
               <div class="col-sm-7 col-md-7">
                 <md-input-container class="mb-0">
-                  <input mdInput type="text" [mdDatepicker]="picker2" [(ngModel)]="groupInfo.group_info.date_creation" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
-                  <button mdSuffix [mdDatepickerToggle]="picker2" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'"></button>
+                  <input mdInput type="text" [mdDatepicker]="picker2" [(ngModel)]="groupInfo.group_info.date_creation" disabled>
+                  <button mdSuffix [mdDatepickerToggle]="picker2" disabled></button>
                 </md-input-container>
                 <md-datepicker #picker2></md-datepicker>
               </div>
@@ -83,7 +83,7 @@
             <div class="form-group row">
               <label class="col-sm-5 col-md-5 col-form-label mb-0">Type:</label>
               <div class="col-sm-7 col-md-7">
-                <md-select [(ngModel)]="groupInfo.group_info.g_type_text" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
+                <md-select [(ngModel)]="groupInfo.group_info.g_type_text" disabled>
                   <md-option [value]="t.text" *ngFor="let t of groupTypes">{{t.text}}</md-option>
                 </md-select>
               </div>
@@ -91,7 +91,7 @@
             <div class="form-group row">
               <label class="col-sm-5 col-md-5 col-form-label mb-0">Currency:</label>
               <div class="col-sm-7 col-md-7">
-                <md-select [(ngModel)]="groupInfo.group_info.currency" [disabled]="groupInfo.group_info.status_code !== 'CREATED' && groupInfo.group_info.status_code !== 'REQUEST_TO_JOIN_SENT'">
+                <md-select [(ngModel)]="groupInfo.group_info.currency" disabled>
                   <md-option [value]="c.text" *ngFor="let c of currencies">{{c.text}}</md-option>
                 </md-select>
               </div>

@@ -1,0 +1,11 @@
+<div md-dialog-content class="p-3 text-center content">
+    <p>{{'Do you really want to clone this group?' | translate}}</p>
+    <md-input-container class="mt-4">
+        <input mdInput placeholder="Group Name" value="" [(ngModel)]="group">
+    </md-input-container>
+    <div md-dialog-actions class="text-center buttons">
+      <button md-raised-button (click)="closeDialog('ok')" color="accent">{{'Yes' | translate}}</button>
+      <button md-raised-button (click)="closeDialog('cancel')" color="primary">{{'No' | translate}}</button>
+    </div>
+</div>
+  

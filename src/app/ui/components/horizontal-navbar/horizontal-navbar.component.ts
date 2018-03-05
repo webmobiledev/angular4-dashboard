@@ -55,7 +55,7 @@ export class HorizontalNavbarComponent implements OnInit {
     });
 
     this.username = localStorage.getItem('username');
-    this.photoUrl = localStorage.getItem('userphoto').substring(0, localStorage.getItem('userphoto').indexOf('.'));
+    this.photoUrl = localStorage.getItem('userphoto') ? localStorage.getItem('userphoto').substring(0, localStorage.getItem('userphoto').indexOf('.')) : 'av1';
   }
 
   ngOnInit() {
@@ -150,7 +150,8 @@ export class HorizontalNavbarComponent implements OnInit {
 
 @Component({
   selector: 'group-create',
-  templateUrl: 'group-create.html'
+  templateUrl: 'group-create.html',
+  styleUrls: ['group-create.scss']
 })
 export class DialogGroupCreateComponent {
   public form: FormGroup;
@@ -164,18 +165,18 @@ export class DialogGroupCreateComponent {
   constructor(public dialogRef: MdDialogRef<DialogGroupCreateComponent>, private fb: FormBuilder, private apiService: ApiService, private router: Router) {
     this.form = this.fb.group({
       name: ['My group', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(20)])],
-      frequency: [1, Validators.compose([Validators.required])],
+      frequency: [1, Validators.compose([Validators.required, Validators.min(0)])],
       g_type: ['PRIVATE', Validators.compose([Validators.required])],
       position_selection_type: ['', Validators.compose([Validators.required])],
       currency: ['GBP', Validators.compose([Validators.required])],
       description: ['', Validators.compose([Validators.required, Validators.minLength(20)])],
       amount: [500, Validators.compose([Validators.required])],
-      rate: [0, Validators.compose([Validators.required])],
-      due_day: [5, Validators.compose([Validators.required])],
-      nb_days_delay_before_penalty: [0, Validators.compose([Validators.required])],
-      delay_payment_penalty: [0, Validators.compose([Validators.required])],
-      index_credit_min: [0, Validators.compose([Validators.required])],
-      index_credit_max: [1000, Validators.compose([Validators.required])],
+      rate: [0, Validators.compose([Validators.required, Validators.min(0)])],
+      due_day: [5, Validators.compose([Validators.required, Validators.min(0)])],
+      nb_days_delay_before_penalty: [0, Validators.compose([Validators.required, Validators.min(0)])],
+      delay_payment_penalty: [0, Validators.compose([Validators.required, Validators.min(0)])],
+      index_credit_min: [0, Validators.compose([Validators.required, Validators.min(0)])],
+      index_credit_max: [1000, Validators.compose([Validators.required, Validators.max(1000)])],
       smooth_payment: [true]
     });
 

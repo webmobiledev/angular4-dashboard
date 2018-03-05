@@ -207,12 +207,13 @@ export class ApiService {
     });
   }
 
-  cloneGroup() {
+  cloneGroup(name) {
     const url = environment.serverUrl + 'group/clone';
     const params: URLSearchParams = new URLSearchParams();
     this.groupId.subscribe(data => {
       params.set('group_id', data);
     });
+    params.set('name', name);
     params.set('token', localStorage.getItem('token'));
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {

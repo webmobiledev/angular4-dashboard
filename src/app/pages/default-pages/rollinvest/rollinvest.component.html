@@ -75,6 +75,6 @@
         <!-- <md-icon mdTooltip="{{'grouptypeinfo' | translate}}" mdTooltipPosition="below">info</md-icon>     -->
       </div>
     </div>
-    <button class="mt-3" md-raised-button color="primary" layout-align="end" (click)="search()" [disabled]="!form.valid || form.controls['min_rate'].value > form.controls['max_rate'].value || form.controls['min_credit'].value > form.controls['max_credit'].value">{{'Search for public' | translate}}</button>
+    <button class="mt-3" md-raised-button color="accent" layout-align="end" (click)="search()" [disabled]="!form.valid || form.controls['min_rate'].value > form.controls['max_rate'].value || form.controls['min_credit'].value > form.controls['max_credit'].value">{{'Search for public' | translate}}</button>
   </form>
 </md-card>

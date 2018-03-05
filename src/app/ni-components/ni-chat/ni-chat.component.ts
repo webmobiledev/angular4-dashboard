@@ -43,7 +43,6 @@ export class NiChatComponent implements OnInit {
         my: true,
         avatar: 'assets/content/avatar-4.jpg'
       };
-      this.messages.push(this.message);
 
       this.sendMessage.emit(this.message);
 

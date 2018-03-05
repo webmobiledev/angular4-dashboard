@@ -40,6 +40,7 @@ export class PageSignupComponent implements OnInit {
 
   onSubmit() {
     this.auth.signup(this.form.value).then(data => {
+      localStorage.setItem('username', this.form.value.fname);
       this.auth.redirectPage = 'confirm';
       localStorage.setItem('email', this.form.value.email);
       this.router.navigate(['/extra-layout/confirm']);
