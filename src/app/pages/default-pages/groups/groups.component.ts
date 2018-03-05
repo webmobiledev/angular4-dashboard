@@ -528,7 +528,7 @@ export class PageGroupsComponent implements OnInit {
   cloneGroup() {
     let dialogRef = this.dialog.open(DialogCloneGroupComponent);
     dialogRef.afterClosed().subscribe(result => {
-      if (result.status === 'ok') {
+      if (result && result.status === 'ok') {
         this.apiService.cloneGroup(result.name).then((res: any) => {
           this.apiService.isMenuClicked = false;
           this.apiService.isClickedDetails.next(false);

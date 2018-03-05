@@ -13,9 +13,9 @@ export class PageChatroomComponent implements OnInit {
   breadcrumb = [{title: 'chatroom'}];
   pageTitle = 'Chatroom';
   messages = [];
-
   members = [];
   searchName = '';
+  selectedUserIndex = 0;
 
   connection: any;
 
@@ -29,18 +29,26 @@ export class PageChatroomComponent implements OnInit {
 
   ngOnInit() {
     this.connection = this.chatService.getMessages().subscribe((messages: any) => {
-      let message = JSON.parse(messages.json_msg)[0];
-      console.log(this.messages);
-      this.messages.push({
-        date: message.creation_date,
-        content: message.message,
-        my: message.sender.indexOf(localStorage.getItem('email')) >= 0 ? true : false,
-        avatar: message.sender.indexOf(localStorage.getItem('email')) >= 0 ? message.sender_pic : message.receiver_pic,
+      this.messages = [];
+      console.log(JSON.parse(messages.json_msg));
+      JSON.parse(messages.json_msg).forEach(message => {
+        this.messages.push({
+          date: message.creation_date,
+          content: message.message,
+          my: message.sender.indexOf(localStorage.getItem('email')) >= 0 ? true : false,
+          avatar: message.sender.indexOf(localStorage.getItem('email')) >= 0 ? message.sender_pic : message.receiver_pic,
+        });
       });
     });
 
     this.apiService.getAllChatMembers().then((res: any) => {
-      this.members = res.data;
+      res.data.forEach((m, index) => {
+        this.members.push({
+          id: m.id,
+          name: m.name,
+          selected: index == 0 ? true : false
+        });
+      });
     });
   }
 
@@ -49,16 +57,34 @@ export class PageChatroomComponent implements OnInit {
   }
 
   searchUsers() {
+    this.members = [];
     this.apiService.getAllChatMembers(this.searchName).then((res: any) => {
-      this.members = res.data;
+      res.data.forEach((m, index) => {
+        this.members.push({
+          id: m.id,
+          name: m.name,
+          selected: false
+        });
+      });
     });
   }
 
+  selectUser(index) {
+    if (index != this.selectedUserIndex) {
+      this.messages = [];
+    }
+
+    this.members.forEach(m => {
+      m.selected = false;
+    });
+    this.members[index].selected = true;
+    this.selectedUserIndex = index;
+  }
+
   sendMessage($event){
-    console.log($event);
     this.chatService.sendMessage({
       message: $event.content,
-      receiver_id: 2,
+      receiver_id: this.members[this.selectedUserIndex].id,
       token: localStorage.getItem('token'),
     });
   }

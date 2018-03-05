@@ -2527,7 +2527,7 @@ var PageAboutusComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/chatroom/chatroom.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row members-header\" id=\"chatroom\">\n  <div class=\"col-sm-6\">\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>      \n  </div>\n  <div class=\"col-sm-6 text-right\">\n    <md-input-container class=\"search-group md-icon-left\">\n      <md-icon>search</md-icon>\n      <input mdInput value=\"\">\n    </md-input-container>\n  </div>\n  <div class=\"col-md-12\">\n    <ni-card [title]=\"'Lists with avatars'\">\n      <md-list>\n        <md-input-container class=\"search-group md-icon-left\">\n          <md-icon>search</md-icon>\n          <input mdInput value=\"\" [(ngModel)]=\"searchName\" placeholder=\"Search...\" (ngModelChange)=\"searchUsers()\">\n        </md-input-container>\n        <md-list-item *ngFor=\"let m of members\">\n          <img md-list-avatar src=\"../../../../assets/img/user/av1.png\" width=\"40\" height=\"40\" alt=\"\">\n          <h3 md-line class=\"h3\">{{ m.name }}</h3>\n        </md-list-item>\n      </md-list>\n      <ni-chat [messages]=\"messages\" [style.height.px]=\"600\" (sendMessage)=\"sendMessage($event)\"></ni-chat>\n    </ni-card>\n  </div>\n</div>"
+module.exports = "<div class=\"row members-header\" id=\"chatroom\">\n  <div class=\"col-sm-6\">\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>      \n  </div>\n  <div class=\"col-sm-6 text-right\">\n    <md-input-container class=\"search-group md-icon-left\">\n      <md-icon>search</md-icon>\n      <input mdInput value=\"\">\n    </md-input-container>\n  </div>\n  <div class=\"col-md-12\">\n    <ni-card [title]=\"'Lists with avatars'\">\n      <md-list>\n        <md-input-container class=\"search-group md-icon-left\">\n          <md-icon>search</md-icon>\n          <input mdInput value=\"\" [(ngModel)]=\"searchName\" placeholder=\"Search...\" (ngModelChange)=\"searchUsers()\">\n        </md-input-container>\n        <md-list-item *ngFor=\"let m of members; let i = index\" [class.selected]=\"m.selected\" (click)=\"selectUser(i)\">\n          <img md-list-avatar src=\"../../../../assets/img/user/av1.png\" width=\"40\" height=\"40\" alt=\"\">\n          <h3 md-line class=\"h3\">{{ m.name }}</h3>\n        </md-list-item>\n      </md-list>\n      <ni-chat [messages]=\"messages\" [style.height.px]=\"600\" (sendMessage)=\"sendMessage($event)\"></ni-chat>\n    </ni-card>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -2539,7 +2539,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".search-group {\n  width: 150px; }\n\nmd-list {\n  width: 350px;\n  margin-right: 20px; }\n\nmd-list-item {\n  border-bottom: 1px solid #dddddd;\n  cursor: pointer;\n  padding-left: 10px; }\n\nmd-list-item:hover {\n  background-color: #dddddd; }\n", ""]);
+exports.push([module.i, ".search-group {\n  width: 150px; }\n\nmd-list {\n  width: 350px;\n  margin-right: 20px; }\n\nmd-list-item {\n  border-bottom: 1px solid #dddddd;\n  cursor: pointer;\n  padding-left: 10px; }\n\nmd-list-item:hover {\n  background-color: #dddddd; }\n\n.selected {\n  background-color: aquamarine; }\n", ""]);
 
 // exports
 
@@ -2581,22 +2581,31 @@ var PageChatroomComponent = (function () {
         this.messages = [];
         this.members = [];
         this.searchName = '';
+        this.selectedUserIndex = 0;
         this._sharedService.emitChange(this.pageTitle);
     }
     PageChatroomComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.connection = this.chatService.getMessages().subscribe(function (messages) {
-            var message = JSON.parse(messages.json_msg)[0];
-            console.log(_this.messages);
-            _this.messages.push({
-                date: message.creation_date,
-                content: message.message,
-                my: message.sender.indexOf(localStorage.getItem('email')) >= 0 ? true : false,
-                avatar: message.sender.indexOf(localStorage.getItem('email')) >= 0 ? message.sender_pic : message.receiver_pic,
+            _this.messages = [];
+            console.log(JSON.parse(messages.json_msg));
+            JSON.parse(messages.json_msg).forEach(function (message) {
+                _this.messages.push({
+                    date: message.creation_date,
+                    content: message.message,
+                    my: message.sender.indexOf(localStorage.getItem('email')) >= 0 ? true : false,
+                    avatar: message.sender.indexOf(localStorage.getItem('email')) >= 0 ? message.sender_pic : message.receiver_pic,
+                });
             });
         });
         this.apiService.getAllChatMembers().then(function (res) {
-            _this.members = res.data;
+            res.data.forEach(function (m, index) {
+                _this.members.push({
+                    id: m.id,
+                    name: m.name,
+                    selected: index == 0 ? true : false
+                });
+            });
         });
     };
     PageChatroomComponent.prototype.ngOnDestroy = function () {
@@ -2604,15 +2613,31 @@ var PageChatroomComponent = (function () {
     };
     PageChatroomComponent.prototype.searchUsers = function () {
         var _this = this;
+        this.members = [];
         this.apiService.getAllChatMembers(this.searchName).then(function (res) {
-            _this.members = res.data;
+            res.data.forEach(function (m, index) {
+                _this.members.push({
+                    id: m.id,
+                    name: m.name,
+                    selected: false
+                });
+            });
         });
     };
+    PageChatroomComponent.prototype.selectUser = function (index) {
+        if (index != this.selectedUserIndex) {
+            this.messages = [];
+        }
+        this.members.forEach(function (m) {
+            m.selected = false;
+        });
+        this.members[index].selected = true;
+        this.selectedUserIndex = index;
+    };
     PageChatroomComponent.prototype.sendMessage = function ($event) {
-        console.log($event);
         this.chatService.sendMessage({
             message: $event.content,
-            receiver_id: 2,
+            receiver_id: this.members[this.selectedUserIndex].id,
             token: localStorage.getItem('token'),
         });
     };
@@ -2949,7 +2974,7 @@ module.exports = "<h2 md-dialog-title>Add member</h2>\n<div md-dialog-content>\n
 /***/ "../../../../../src/app/pages/default-pages/groups/dialog-clone.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div md-dialog-content class=\"p-3 text-center content\">\n    <p>{{'Do you really want to clone this group?' | translate}}</p>\n    <md-input-container class=\"mt-4\">\n        <input mdInput placeholder=\"Group Name\" value=\"\" [(ngModel)]=\"group\">\n    </md-input-container>\n    <div md-dialog-actions class=\"text-center buttons\">\n      <button md-raised-button (click)=\"closeDialog('ok')\" color=\"accent\">{{'Yes' | translate}}</button>\n      <button md-raised-button (click)=\"closeDialog('cancel')\" color=\"primary\">{{'No' | translate}}</button>\n    </div>\n</div>\n  "
+module.exports = "<div md-dialog-content class=\"p-3 text-center content\">\n    <p>{{'Do you really want to clone this group?' | translate}}</p>\n    <md-input-container class=\"mt-4\">\n        <input mdInput placeholder=\"Group Name\" value=\"\" [(ngModel)]=\"group\">\n    </md-input-container>\n    <div md-dialog-actions class=\"text-center buttons\">\n      <button md-raised-button (click)=\"closeDialog('ok')\" [disabled]=\"group == ''\" color=\"accent\">{{'Yes' | translate}}</button>\n      <button md-raised-button (click)=\"closeDialog('cancel')\" color=\"primary\">{{'No' | translate}}</button>\n    </div>\n</div>\n  "
 
 /***/ }),
 
@@ -3521,7 +3546,7 @@ var PageGroupsComponent = (function () {
         var _this = this;
         var dialogRef = this.dialog.open(DialogCloneGroupComponent);
         dialogRef.afterClosed().subscribe(function (result) {
-            if (result.status === 'ok') {
+            if (result && result.status === 'ok') {
                 _this.apiService.cloneGroup(result.name).then(function (res) {
                     _this.apiService.isMenuClicked = false;
                     _this.apiService.isClickedDetails.next(false);
@@ -5968,7 +5993,7 @@ var ApiService = (function () {
     };
     ApiService.prototype.getAllChatMembers = function (name) {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'user/chat/members';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'user/rooms';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
         params.set('token', localStorage.getItem('token'));
         if (name) {

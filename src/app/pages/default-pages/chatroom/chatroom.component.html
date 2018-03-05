@@ -15,7 +15,7 @@
           <md-icon>search</md-icon>
           <input mdInput value="" [(ngModel)]="searchName" placeholder="Search..." (ngModelChange)="searchUsers()">
         </md-input-container>
-        <md-list-item *ngFor="let m of members">
+        <md-list-item *ngFor="let m of members; let i = index" [class.selected]="m.selected" (click)="selectUser(i)">
           <img md-list-avatar src="../../../../assets/img/user/av1.png" width="40" height="40" alt="">
           <h3 md-line class="h3">{{ m.name }}</h3>
         </md-list-item>

@@ -541,7 +541,7 @@ export class ApiService {
   }
 
   getAllChatMembers(name?) {
-    const url = environment.serverUrl + 'user/chat/members';
+    const url = environment.serverUrl + 'user/rooms';
     const params: URLSearchParams = new URLSearchParams();
     params.set('token', localStorage.getItem('token'));
     if (name) {
