@@ -4,12 +4,9 @@ import { environment } from '../../environments/environment';
 import { BehaviorSubject } from 'rxjs/Rx';
 import { ActivatedRoute, Params } from '@angular/router';
 import * as sha512 from 'sha512';
-import * as io from 'socket.io-client';
 
 @Injectable()
 export class AuthService {
-  private url = 'https://www.rollincome.com/chat';
-  private socket = io(this.url);
   
   isLogged = false;
   isConfirm = false;
@@ -20,14 +17,6 @@ export class AuthService {
   constructor(private http: Http) {
     this.isLogged = localStorage.getItem('login') === 'true' ? true : false;
     this.isConfirm = localStorage.getItem('confirm') === 'true' ? true : false;
-
-    this.socket.on('connect', res => {
-      this.socket.emit('user_connected', {token: localStorage.getItem('token')});
-    });
-
-    this.socket.on('user_connected', function(msg) {
-      console.log(msg);
-    });
   }
 
   isLoggedIn() {
@@ -62,6 +51,7 @@ export class AuthService {
     params.set('password', sha512(data.password).toString('hex'));
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
+        console.log(res.json());
         this.isLogged = true;
         this.isConfirm = false;
         localStorage.setItem('token', res.json().token);

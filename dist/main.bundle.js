@@ -2587,7 +2587,6 @@ var PageChatroomComponent = (function () {
     PageChatroomComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.connection = this.chatService.getMessages().subscribe(function (messages) {
-            _this.messages = [];
             console.log(JSON.parse(messages.json_msg));
             JSON.parse(messages.json_msg).forEach(function (message) {
                 _this.messages.push({
@@ -2606,6 +2605,7 @@ var PageChatroomComponent = (function () {
                     selected: index == 0 ? true : false
                 });
             });
+            _this.selectUser(0);
         });
     };
     PageChatroomComponent.prototype.ngOnDestroy = function () {
@@ -2625,14 +2625,26 @@ var PageChatroomComponent = (function () {
         });
     };
     PageChatroomComponent.prototype.selectUser = function (index) {
-        if (index != this.selectedUserIndex) {
-            this.messages = [];
-        }
+        var _this = this;
         this.members.forEach(function (m) {
             m.selected = false;
         });
         this.members[index].selected = true;
         this.selectedUserIndex = index;
+        this.chatService.messagesSubscriber.subscribe(function (res) {
+            console.log(res);
+            _this.messages = [];
+            res.forEach(function (r) {
+                if ((r.sender.indexOf(localStorage.getItem('email')) >= 0 && r.receiver.indexOf(_this.members[index].name) >= 0) || (r.sender.indexOf(_this.members[index].name) >= 0 && r.receiver.indexOf(localStorage.getItem('email')) >= 0)) {
+                    _this.messages.push({
+                        date: r.creation_date,
+                        content: r.message,
+                        my: r.sender.indexOf(localStorage.getItem('email')) >= 0 ? true : false,
+                        avatar: r.sender.indexOf(localStorage.getItem('email')) >= 0 ? r.sender_pic : r.receiver_pic,
+                    });
+                }
+            });
+        });
     };
     PageChatroomComponent.prototype.sendMessage = function ($event) {
         this.chatService.sendMessage({
@@ -6065,8 +6077,6 @@ var ApiService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_sha512__ = __webpack_require__("../../../../sha512/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_sha512___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_sha512__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_socket_io_client__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6081,13 +6091,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var AuthService = (function () {
     function AuthService(http) {
-        var _this = this;
         this.http = http;
-        this.url = 'https://www.rollincome.com/chat';
-        this.socket = __WEBPACK_IMPORTED_MODULE_5_socket_io_client__(this.url);
         this.isLogged = false;
         this.isConfirm = false;
         this.confirmCode = '';
@@ -6096,12 +6102,6 @@ var AuthService = (function () {
         this.redirectPage = '';
         this.isLogged = localStorage.getItem('login') === 'true' ? true : false;
         this.isConfirm = localStorage.getItem('confirm') === 'true' ? true : false;
-        this.socket.on('connect', function (res) {
-            _this.socket.emit('user_connected', { token: localStorage.getItem('token') });
-        });
-        this.socket.on('user_connected', function (msg) {
-            console.log(msg);
-        });
     }
     AuthService.prototype.isLoggedIn = function () {
         return this.isLogged;
@@ -6134,6 +6134,7 @@ var AuthService = (function () {
         params.set('password', __WEBPACK_IMPORTED_MODULE_4_sha512__(data.password).toString('hex'));
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
+                console.log(res.json());
                 _this.isLogged = true;
                 _this.isConfirm = false;
                 localStorage.setItem('token', res.json().token);
@@ -6235,19 +6236,34 @@ var AuthService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_socket_io_client__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs__ = __webpack_require__("../../../../rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 
 
 var ChatService = (function () {
     function ChatService() {
+        var _this = this;
         this.url = 'https://www.rollincome.com/chat';
         this.socket = __WEBPACK_IMPORTED_MODULE_2_socket_io_client__(this.url);
+        this.messagesSubscriber = new __WEBPACK_IMPORTED_MODULE_3_rxjs__["BehaviorSubject"]([]);
+        this.socket.on('connect', function (res) {
+            _this.socket.emit('user_connected', { token: localStorage.getItem('token') });
+        });
+        var handle = this;
+        this.socket.on('user_connected', function (msg) {
+            handle.messagesSubscriber.next(msg.json_msg);
+        });
     }
     ChatService.prototype.sendMessage = function (message) {
         this.socket.emit('message', message);
@@ -6261,7 +6277,8 @@ var ChatService = (function () {
         });
     };
     ChatService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])()
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [])
     ], ChatService);
     return ChatService;
 }());

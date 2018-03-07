@@ -28,8 +28,8 @@ export class PageChatroomComponent implements OnInit {
   }
 
   ngOnInit() {
+
     this.connection = this.chatService.getMessages().subscribe((messages: any) => {
-      this.messages = [];
       console.log(JSON.parse(messages.json_msg));
       JSON.parse(messages.json_msg).forEach(message => {
         this.messages.push({
@@ -49,6 +49,7 @@ export class PageChatroomComponent implements OnInit {
           selected: index == 0 ? true : false
         });
       });
+      this.selectUser(0);
     });
   }
 
@@ -70,15 +71,26 @@ export class PageChatroomComponent implements OnInit {
   }
 
   selectUser(index) {
-    if (index != this.selectedUserIndex) {
-      this.messages = [];
-    }
-
     this.members.forEach(m => {
       m.selected = false;
     });
     this.members[index].selected = true;
     this.selectedUserIndex = index;
+
+    this.chatService.messagesSubscriber.subscribe(res => {
+      console.log(res);
+      this.messages = [];
+      res.forEach(r => {
+        if ((r.sender.indexOf(localStorage.getItem('email')) >= 0 && r.receiver.indexOf(this.members[index].name) >= 0) || (r.sender.indexOf(this.members[index].name) >= 0 && r.receiver.indexOf(localStorage.getItem('email')) >= 0)) {
+          this.messages.push({
+            date: r.creation_date,
+            content: r.message,
+            my: r.sender.indexOf(localStorage.getItem('email')) >= 0 ? true : false,
+            avatar: r.sender.indexOf(localStorage.getItem('email')) >= 0 ? r.sender_pic : r.receiver_pic,
+          });
+        }
+      });
+    });
   }
 
   sendMessage($event){
