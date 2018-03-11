@@ -10,6 +10,7 @@ export class ChatService {
   private url = 'https://www.rollincome.com/chat';
   private socket = io(this.url);
   public messagesSubscriber = new BehaviorSubject([]);
+  public message = new BehaviorSubject([]);
 
   constructor() {
     this.socket.on('connect', res => {
@@ -20,17 +21,14 @@ export class ChatService {
     this.socket.on('user_connected', function(msg) {
       handle.messagesSubscriber.next(msg.json_msg);
     });
+
+    this.socket.on('message', (data) => {
+      console.log(data);
+      this.message.next(data);
+    }); 
   }
   
   sendMessage(message){
     this.socket.emit('message', message);
   }
-  
-  getMessages() {
-    return new Observable(observer => {
-      this.socket.on('message', (data) => {
-        observer.next(data);
-      }); 
-    })     
-  }  
 }

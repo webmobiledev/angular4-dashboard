@@ -589,4 +589,18 @@ export class ApiService {
       });
     });
   }
+
+  getMessages(receiver_id) {
+    const url = environment.serverUrl + 'group/messages';
+    const params: URLSearchParams = new URLSearchParams();
+    params.set('token', localStorage.getItem('token'));
+    params.set('receiver_id', receiver_id);
+    return new Promise((resolve, reject) => {
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        reject(err);
+      });
+    });
+  }
 }

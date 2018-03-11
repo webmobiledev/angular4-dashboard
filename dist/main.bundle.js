@@ -2586,9 +2586,9 @@ var PageChatroomComponent = (function () {
     }
     PageChatroomComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.connection = this.chatService.getMessages().subscribe(function (messages) {
-            console.log(JSON.parse(messages.json_msg));
-            JSON.parse(messages.json_msg).forEach(function (message) {
+        this.connection = this.chatService.message.subscribe(function (messages) {
+            console.log(messages);
+            messages.forEach(function (message) {
                 _this.messages.push({
                     date: message.creation_date,
                     content: message.message,
@@ -2631,11 +2631,11 @@ var PageChatroomComponent = (function () {
         });
         this.members[index].selected = true;
         this.selectedUserIndex = index;
-        this.chatService.messagesSubscriber.subscribe(function (res) {
+        this.apiService.getMessages(this.members[index].id).then(function (res) {
             console.log(res);
             _this.messages = [];
-            res.forEach(function (r) {
-                if ((r.sender.indexOf(localStorage.getItem('email')) >= 0 && r.receiver.indexOf(_this.members[index].name) >= 0) || (r.sender.indexOf(_this.members[index].name) >= 0 && r.receiver.indexOf(localStorage.getItem('email')) >= 0)) {
+            res.data.forEach(function (r) {
+                if (_this.members[index].id === r.receiver_id) {
                     _this.messages.push({
                         date: r.creation_date,
                         content: r.message,
@@ -6053,6 +6053,20 @@ var ApiService = (function () {
             });
         });
     };
+    ApiService.prototype.getMessages = function (receiver_id) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'group/messages';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        params.set('token', localStorage.getItem('token'));
+        params.set('receiver_id', receiver_id);
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                reject(err);
+            });
+        });
+    };
     ApiService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__auth_service__["a" /* AuthService */]) === "function" && _b || Object])
@@ -6232,12 +6246,10 @@ var AuthService = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_socket_io_client__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs__ = __webpack_require__("../../../../rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_socket_io_client__ = __webpack_require__("../../../../socket.io-client/lib/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_socket_io_client__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs__ = __webpack_require__("../../../../rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6250,13 +6262,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var ChatService = (function () {
     function ChatService() {
         var _this = this;
         this.url = 'https://www.rollincome.com/chat';
-        this.socket = __WEBPACK_IMPORTED_MODULE_2_socket_io_client__(this.url);
-        this.messagesSubscriber = new __WEBPACK_IMPORTED_MODULE_3_rxjs__["BehaviorSubject"]([]);
+        this.socket = __WEBPACK_IMPORTED_MODULE_1_socket_io_client__(this.url);
+        this.messagesSubscriber = new __WEBPACK_IMPORTED_MODULE_2_rxjs__["BehaviorSubject"]([]);
+        this.message = new __WEBPACK_IMPORTED_MODULE_2_rxjs__["BehaviorSubject"]([]);
         this.socket.on('connect', function (res) {
             _this.socket.emit('user_connected', { token: localStorage.getItem('token') });
         });
@@ -6264,17 +6276,13 @@ var ChatService = (function () {
         this.socket.on('user_connected', function (msg) {
             handle.messagesSubscriber.next(msg.json_msg);
         });
+        this.socket.on('message', function (data) {
+            console.log(data);
+            _this.message.next(data);
+        });
     }
     ChatService.prototype.sendMessage = function (message) {
         this.socket.emit('message', message);
-    };
-    ChatService.prototype.getMessages = function () {
-        var _this = this;
-        return new __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"](function (observer) {
-            _this.socket.on('message', function (data) {
-                observer.next(data);
-            });
-        });
     };
     ChatService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),

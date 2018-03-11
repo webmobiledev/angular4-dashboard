@@ -29,9 +29,9 @@ export class PageChatroomComponent implements OnInit {
 
   ngOnInit() {
 
-    this.connection = this.chatService.getMessages().subscribe((messages: any) => {
-      console.log(JSON.parse(messages.json_msg));
-      JSON.parse(messages.json_msg).forEach(message => {
+    this.connection = this.chatService.message.subscribe((messages: any) => {
+      console.log(messages);
+      messages.forEach(message => {
         this.messages.push({
           date: message.creation_date,
           content: message.message,
@@ -77,11 +77,11 @@ export class PageChatroomComponent implements OnInit {
     this.members[index].selected = true;
     this.selectedUserIndex = index;
 
-    this.chatService.messagesSubscriber.subscribe(res => {
+    this.apiService.getMessages(this.members[index].id).then((res: any) => {
       console.log(res);
       this.messages = [];
-      res.forEach(r => {
-        if ((r.sender.indexOf(localStorage.getItem('email')) >= 0 && r.receiver.indexOf(this.members[index].name) >= 0) || (r.sender.indexOf(this.members[index].name) >= 0 && r.receiver.indexOf(localStorage.getItem('email')) >= 0)) {
+      res.data.forEach(r => {
+        if (this.members[index].id === r.receiver_id) {
           this.messages.push({
             date: r.creation_date,
             content: r.message,
