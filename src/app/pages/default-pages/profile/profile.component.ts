@@ -91,38 +91,43 @@ export class PageProfileComponent implements OnInit {
     if (type === 'kori') {
       this.loadingKori = true;
       this.koriData = [];
-      this.koriHeaders = ['Account Permission', 'IBAN', 'County', 'Bic', {type: 'Action'}];
+      this.koriHeaders = ['Account Permission', 'Public Address', {type: 'Action'}];
     } else if (type === 'bank') {
       this.loadingBank = true;
       this.bankData = [];
-      this.bankHeaders = ['Account Permission', 'Public Address', {type: 'Action'}];
+      this.bankHeaders = ['Account Permission', 'IBAN', 'County', 'Bic', {type: 'Action'}];
     } else {
       this.loadingKori = true;
       this.koriData = [];
-      this.koriHeaders = ['Account Permission', 'IBAN', 'County', 'Bic', {type: 'Action'}];
+      this.koriHeaders = ['Account Permission', 'Public Address', {type: 'Action'}];
       this.loadingBank = true;
       this.bankData = [];
-      this.bankHeaders = ['Account Permission', 'Public Address', {type: 'Action'}];
+      this.bankHeaders = ['Account Permission', 'IBAN', 'County', 'Bic', {type: 'Action'}];
     }
-    this.apiService.getAddresses().then((res: any) => {
+    this.apiService.getUserPaymentMeans().then((res: any) => {
+      console.log(res);
       if (type === 'kori') {
         res.kori.forEach(k => {
-          this.koriData.push([k.account_permission, k.address, {type: ['Update permission', 'Remove payment mean']}]);
+          this.koriData.push([k.account_permission_text, k.address, {type: ['Update permission', 'Remove payment mean']}]);
         });
+        this.koriTotal = this.koriData.length;
         this.loadingKori = false;
       } else if (type === 'bank') {
         res.bank.forEach(b => {
-          this.bankData.push([b.account_permission, b.iban, b.country, b.bic, {type: ['Update permission', 'Remove payment mean']}]);
+          this.bankData.push([b.account_permission_text, b.iban, b.country, b.bic, {type: ['Update permission', 'Remove payment mean']}]);
         });
+        this.bankTotal = this.bankData.length;
         this.loadingBank = false;
       } else {
         res.kori.forEach(k => {
-          this.koriData.push([k.account_permission, k.address, {type: ['Update permission', 'Remove payment mean']}]);
+          this.koriData.push([k.account_permission_text, k.address, {type: ['Update permission', 'Remove payment mean']}]);
         });
+        this.koriTotal = this.koriData.length;
         this.loadingKori = false;
         res.bank.forEach(b => {
-          this.bankData.push([b.account_permission, b.iban, b.country, b.bic, {type: ['Update permission', 'Remove payment mean']}]);
+          this.bankData.push([b.account_permission_text, b.iban, b.country, b.bic, {type: ['Update permission', 'Remove payment mean']}]);
         });
+        this.bankTotal = this.bankData.length;
         this.loadingBank = false;
       }
     });

@@ -576,8 +576,25 @@ export class ApiService {
     });
   }
 
-  getAddresses() {
+  getGroupPaymentMeans() {
     const url = environment.serverUrl + 'group/payment/means';
+    const params: URLSearchParams = new URLSearchParams();
+    params.set('token', localStorage.getItem('token'));
+    params.set('lang', this.langCode);
+    this.groupId.subscribe(data => {
+      params.set('group_id', data);
+    });
+    return new Promise((resolve, reject) => {
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        reject(err);
+      });
+    });
+  }
+
+  getUserPaymentMeans() {
+    const url = environment.serverUrl + 'user/payment/means';
     const params: URLSearchParams = new URLSearchParams();
     params.set('token', localStorage.getItem('token'));
     params.set('lang', this.langCode);
@@ -595,6 +612,21 @@ export class ApiService {
     const params: URLSearchParams = new URLSearchParams();
     params.set('token', localStorage.getItem('token'));
     params.set('receiver_id', receiver_id);
+    return new Promise((resolve, reject) => {
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        reject(err);
+      });
+    });
+  }
+
+  sendPaymentRequest(obligation_id, payment_method_id) {
+    const url = environment.serverUrl + 'payment/manual';
+    const params: URLSearchParams = new URLSearchParams();
+    params.set('token', localStorage.getItem('token'));
+    params.set('obligation_id', obligation_id);
+    params.set('payment_method_id', payment_method_id);
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());

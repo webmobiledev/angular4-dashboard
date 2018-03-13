@@ -1,30 +1,34 @@
+<h2 md-dialog-title *ngIf="pageNum === 1">Payment : Select your payment method.</h2>
 <div md-dialog-content class="p-3" *ngIf="pageNum === 1">
-    <md-radio-group class="column-layout" *ngIf="data.group_type === 'PRIVATE' || (data.group_type === 'PUBLIC' && data.payment_is_smooth === '1')" [(ngModel)]="selectedType">
-        <md-radio-button value="1" [checked]="true">Pay by credit card or PayPal</md-radio-button>
-        <md-radio-button value="2">Pay with bitcoin</md-radio-button>
-        <md-radio-button value="3">Pay with ether</md-radio-button>
-        <md-radio-button value="4">Pay with Kori</md-radio-button>
-        <md-radio-button value="5">Pay by bank transfer</md-radio-button>
-    </md-radio-group>
-    <md-radio-group class="column-layout" *ngIf="data.group_type === 'PUBLIC' && data.payment_is_smooth === '0'" [(ngModel)]="selectedType">
-        <md-radio-button value="0">Declare a payment by hand</md-radio-button>
-        <md-radio-button value="1" [checked]="true">Pay by credit card or PayPal</md-radio-button>
-        <md-radio-button value="2">Pay with bitcoin</md-radio-button>
-        <md-radio-button value="3">Pay with ether</md-radio-button>
-        <md-radio-button value="4">Pay with Kori</md-radio-button>
-        <md-radio-button value="5">Pay by bank transfer</md-radio-button>
+    <p>You are about to make a {{data.p_type_text}} payment of {{data.amount_due}} to {{data.to}}.</p>
+    <p>Populate the list of payment radio button using the api below:</p>
+    <md-radio-group class="column-layout" [(ngModel)]="selectedType">
+        <md-radio-button value="{{i}}" *ngFor="let p of payments;let i = index">{{p.text}}</md-radio-button>
     </md-radio-group>
     <div md-dialog-actions class="buttons">
         <button md-raised-button (click)="dialogRef.close('cancel')" color="primary">CANCEL</button>
-        <button md-raised-button (click)="pageNum = 2" color="accent">Next</button>
+        <button md-raised-button (click)="goNext()" color="accent">Next</button>
     </div>
 </div>
 
+<h2 md-dialog-title *ngIf="pageNum === 2">Payment : {{payments[selectedType].text}}.</h2>
 <div md-dialog-content class="p-3" *ngIf="pageNum === 2">
-    <p *ngIf="selectedType === 0">This send an approval request to the receiver for the amount {{data.projected_amount_due}} and he will enter the date at which he received the amount.</p>
+    <p *ngIf="payments[selectedType].code === 'BANK_TRANSFER_DIRECT_TO_USER'">
+        To pay by bank transfer, send the amount {{data.amount_due}} to the account below with reference P#{{payments[selectedType].id}}.<br>
+        IBAN : xxxxxxxxxxxxxxxxxx
+    </p>
+    <div *ngIf="payments[selectedType].code === 'BY_HAND'">
+        <p>{{data.to}} will receive a request to confirm that you have given money and the data.</p>
+        <md-input-container class="mt-4">
+            <textarea mdInput readonly rows="3">Hi {{data.to}}, Can you please confirm that you received from me the payment of {{data.amount_due}} kori in cash? Click here confirm.
+                {{data.from}}
+            </textarea>
+        </md-input-container>
+    </div>
     <div md-dialog-actions class="buttons">
         <button md-raised-button (click)="pageNum = 1" color="accent">Previous</button>
-        <button md-raised-button (click)="dialogRef.close('cancel')" color="primary">CANCEL</button>
-        <button md-raised-button (click)="sendApproval()" color="accent">Send approval request</button>
+        <button md-raised-button *ngIf="payments[selectedType].code === 'BY_HAND'" (click)="sendConfirmationRequest()" color="primary">Send Confirmation request</button>
+        <button md-raised-button *ngIf="payments[selectedType].code !== 'BY_HAND'" (click)="dialogRef.close('cancel')" color="primary">CANCEL</button>
+        <button md-raised-button *ngIf="payments[selectedType].code !== 'BANK_TRANSFER_DIRECT_TO_USER' && payments[selectedType].code !== 'BY_HAND'" (click)="sendApproval()" color="accent">Send approval request</button>
     </div>
 </div>

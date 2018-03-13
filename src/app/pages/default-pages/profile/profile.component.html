@@ -336,7 +336,7 @@
           <ni-table [headers]="koriHeaders" [data]="koriData"></ni-table>
           <ni-table-loading *ngIf="loadingKori"></ni-table-loading>
           <ni-alert *ngIf="koriData.length === 0 && !loadingKori" [color]="'warning'" [outline]="true"><strong>{{'No Kori address' | translate}}</strong></ni-alert>
-          <ni-pagination [totalItems]="totalKori" [itemPerPage]="maxKori" [currentPage]="pageKori" *ngIf="koriData.length > 0" (changePage)="changeKoriPage($event)"></ni-pagination>
+          <ni-pagination [totalItems]="koriTotal" [itemPerPage]="koriMax" [currentPage]="koriPage" *ngIf="koriData.length > 0" (changePage)="changeKoriPage($event)"></ni-pagination>
         </ni-card>
       </div>
       <div class="col-md-6">
@@ -344,7 +344,7 @@
           <ni-table [headers]="bankHeaders" [data]="bankData"></ni-table>
           <ni-table-loading *ngIf="loadingBank"></ni-table-loading>
           <ni-alert *ngIf="bankData.length === 0 && !loadingBank" [color]="'warning'" [outline]="true"><strong>{{'No Bank address' | translate}}</strong></ni-alert>
-          <ni-pagination [totalItems]="totalBank" [itemPerPage]="maxBank" [currentPage]="pageBank" *ngIf="bankData.length > 0" (changePage)="changeBankPage($event)"></ni-pagination>
+          <ni-pagination [totalItems]="bankTotal" [itemPerPage]="bankMax" [currentPage]="bankPage" *ngIf="bankData.length > 0" (changePage)="changeBankPage($event)"></ni-pagination>
         </ni-card>
       </div>
     </div>

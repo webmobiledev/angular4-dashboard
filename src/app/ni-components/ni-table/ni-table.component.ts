@@ -21,6 +21,7 @@ export class NiTableComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.data);
   }
 
   changePage(id) {
@@ -76,6 +77,7 @@ export class DialogPaymentComponent {
 
   pageNum = 1;
   selectedType = 1;
+  payments = [];
 
   constructor(
     public dialogRef: MdDialogRef<DialogPaymentComponent>,
@@ -83,6 +85,10 @@ export class DialogPaymentComponent {
     public apiService: ApiService
   ) {
     console.log(data);
+    this.apiService.getListData('PaymentMethod').then((res: any) => {
+      console.log(res);
+      this.payments = res.data;
+    });
   }
 
   sendApproval() {
@@ -92,6 +98,16 @@ export class DialogPaymentComponent {
       } else {
         this.dialogRef.close('cancel');
       }
+    });
+  }
+
+  goNext() {
+    this.pageNum = 2;
+  }
+
+  sendConfirmationRequest() {
+    this.apiService.sendPaymentRequest(this.data.id, this.payments[this.selectedType].id).then(res => {
+      this.dialogRef.close('ok');
     });
   }
 }

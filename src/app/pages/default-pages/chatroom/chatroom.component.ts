@@ -29,16 +29,16 @@ export class PageChatroomComponent implements OnInit {
 
   ngOnInit() {
 
-    this.connection = this.chatService.message.subscribe((messages: any) => {
-      console.log(messages);
-      messages.forEach(message => {
+    this.connection = this.chatService.message.subscribe((res: any) => {
+      if (res) {
+        let message = JSON.parse(res.json_msg)[0];
         this.messages.push({
           date: message.creation_date,
           content: message.message,
           my: message.sender.indexOf(localStorage.getItem('email')) >= 0 ? true : false,
           avatar: message.sender.indexOf(localStorage.getItem('email')) >= 0 ? message.sender_pic : message.receiver_pic,
         });
-      });
+      }
     });
 
     this.apiService.getAllChatMembers().then((res: any) => {
@@ -54,7 +54,6 @@ export class PageChatroomComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    this.connection.unsubscribe();
   }
 
   searchUsers() {
@@ -80,7 +79,9 @@ export class PageChatroomComponent implements OnInit {
     this.apiService.getMessages(this.members[index].id).then((res: any) => {
       console.log(res);
       this.messages = [];
-      res.data.forEach(r => {
+      res.data.sort((a, b) => {
+        return a.creation_date > b.creation_date;
+      }).forEach(r => {
         if (this.members[index].id === r.receiver_id) {
           this.messages.push({
             date: r.creation_date,

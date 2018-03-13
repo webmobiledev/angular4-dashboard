@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { ApiService } from '../../../services/api.service'
 import { SharedService } from '../../../layouts/shared-service';
 
@@ -21,6 +21,7 @@ export class PageObligationComponent implements OnInit {
   constructor(
     private apiService: ApiService,
     private sharedService: SharedService,
+    private changeDetectorRef: ChangeDetectorRef,
   ) {
     this.sharedService.emitChange(this.pageTitle);
   }
@@ -39,7 +40,7 @@ export class PageObligationComponent implements OnInit {
   getGroupObligations(max, page) {
     this.obligations = [];
     this.obligationHeaders = ['From', 'To', 'Group', 'Currency', 'Amount', 'Date', 'Status', 'Position selection', {type: 'Action'}];
-    this.apiService.getGroupObligations(this.max, this.page).then((res: any) => {
+    this.apiService.getNextPayment(this.max, this.page).then((res: any) => {
       this.obligations = [];
       this.total = res.count;
       res.data.map(d => {
@@ -47,6 +48,7 @@ export class PageObligationComponent implements OnInit {
       });
 
       this.loading = false;
+      this.changeDetectorRef.markForCheck();
     });
   }
 

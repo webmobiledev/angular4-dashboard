@@ -20,7 +20,16 @@ import { BgDirective }           from './directives/bg/bg.directive';
 import { GradientDirective }     from './directives/gradient/gradient.directive';
 import { AutoGrowDirective }     from './directives/auto-grow/auto-grow.directive';
 
-import { MdIconModule, MdProgressBarModule, MdProgressSpinnerModule, MdOptionModule, MdRadioModule, MdButtonModule, MdSelectModule, MdTooltipModule } from '@angular/material';
+import { MdIconModule, 
+  MdProgressBarModule, 
+  MdProgressSpinnerModule, 
+  MdOptionModule, 
+  MdRadioModule, 
+  MdButtonModule, 
+  MdSelectModule, 
+  MdTooltipModule,
+  MdInputModule,
+} from '@angular/material';
 import { NiLoadingComponent } from './ni-loading/ni-loading.component';
 import { NiTableLoadingComponent } from './ni-table-loading/ni-table-loading.component';
 import { NiPaginationComponent } from './ni-pagination/ni-pagination.component';
@@ -38,7 +47,8 @@ import { NiDialogComponent } from './ni-dialog/ni-dialog.component';
     MdButtonModule,
     MdSelectModule,
     MdTooltipModule,
-    MdRadioModule
+    MdRadioModule,
+    MdInputModule,
   ],
   declarations: [
     NiAlertComponent,

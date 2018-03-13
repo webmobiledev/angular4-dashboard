@@ -15,8 +15,8 @@ export class AuthService {
   langCode = new BehaviorSubject('en');
   redirectPage = '';
   constructor(private http: Http) {
-    this.isLogged = localStorage.getItem('login') === 'true' ? true : false;
-    this.isConfirm = localStorage.getItem('confirm') === 'true' ? true : false;
+    this.isLogged = localStorage.getItem('login') === 'true';
+    this.isConfirm = localStorage.getItem('confirm') === 'true';
   }
 
   isLoggedIn() {

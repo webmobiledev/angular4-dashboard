@@ -328,7 +328,8 @@ export class PageGroupsComponent implements OnInit {
       this.bankData = [];
       this.bankHeaders = ['Account Permission', 'Public Address', {type: 'Action'}];
     }
-    this.apiService.getAddresses().then((res: any) => {
+    this.apiService.getGroupPaymentMeans().then((res: any) => {
+      console.log(res);
       if (type === 'kori') {
         res.kori.forEach(k => {
           this.koriData.push([k.account_permission, k.address, {type: ['Update permission', 'Remove payment mean']}]);

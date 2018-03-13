@@ -10,7 +10,7 @@ export class ChatService {
   private url = 'https://www.rollincome.com/chat';
   private socket = io(this.url);
   public messagesSubscriber = new BehaviorSubject([]);
-  public message = new BehaviorSubject([]);
+  public message = new BehaviorSubject(null);
 
   constructor() {
     this.socket.on('connect', res => {
