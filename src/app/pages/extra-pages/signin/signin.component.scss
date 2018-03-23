@@ -16,7 +16,7 @@
     /deep/ .card-wrap {
       border: 0;
     }
-    form {
+    form {    
       md-input-container:nth-child(1) {
         margin-bottom: 30px;
       }
@@ -42,4 +42,9 @@
       }
     }
   }
+}
+::selection {
+  background: #16a085;
+  color: #a4003a;
+  text-shadow: none;
 }

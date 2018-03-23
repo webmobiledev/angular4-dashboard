@@ -51,7 +51,7 @@ export class AuthService {
     params.set('password', sha512(data.password).toString('hex'));
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
-        console.log(res.json());
+        console.log(res.json(), data.email);
         this.isLogged = true;
         this.isConfirm = false;
         localStorage.setItem('token', res.json().token);

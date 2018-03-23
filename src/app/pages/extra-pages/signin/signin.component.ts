@@ -40,9 +40,8 @@ export class PageSigninComponent implements OnInit {
         console.log(res);
         this.isEmailCorrect = true;
         localStorage.setItem('login', 'true');
-        localStorage.setItem('username', res.data[0].first_name + ' ' + res.data[0].middle_name + ' ' + res.data[0].sur_name);
-        localStorage.setItem('userphoto', res.data[0].picture);
-        localStorage.setItem('email', res.data[0].email);
+        localStorage.setItem('username', res.data[0].user_full_name.first_name + ' ' + res.data[0].user_full_name.middle_name + ' ' + res.data[0].user_full_name.sur_name);
+        localStorage.setItem('userphoto', res.data[0].picture ? res.data[0].picture : '');
         this.router.navigate(['/default-layout/dashboard']);
       } else {
         this.isEmailCorrect = false;

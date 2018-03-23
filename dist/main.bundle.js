@@ -2603,6 +2603,7 @@ var PageChatroomComponent = (function () {
     }
     PageChatroomComponent.prototype.ngOnInit = function () {
         var _this = this;
+        console.log(localStorage.getItem('email'));
         this.connection = this.chatService.message.subscribe(function (res) {
             if (res) {
                 var message = JSON.parse(res.json_msg)[0];
@@ -5025,7 +5026,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ":host {\n  background: url(" + __webpack_require__("../../../../../src/assets/content/login-bg.jpg") + ") 50% 50% no-repeat;\n  background-size: cover;\n  display: table-cell;\n  height: 100%;\n  padding: 1.375rem 0;\n  vertical-align: middle;\n  width: 100%; }\n  :host .ni-card {\n    margin: 0 auto;\n    max-width: 400px; }\n    :host .ni-card /deep/ .card-wrap {\n      border: 0; }\n    :host .ni-card form md-input-container:nth-child(1) {\n      margin-bottom: 30px; }\n    :host .ni-card form button {\n      width: 100%; }\n    :host .ni-card form .additional-info {\n      background: rgba(0, 0, 0, 0.1);\n      margin: 1.375rem -1.375rem -1.375rem;\n      padding: 0.6875rem 1.375rem; }\n      :host .ni-card form .additional-info a {\n        cursor: pointer; }\n      :host .ni-card form .additional-info .divider {\n        border-left: 1px solid rgba(0, 0, 0, 0.2);\n        display: inline-block;\n        height: 18px;\n        margin: 0 10px;\n        vertical-align: bottom; }\n", ""]);
+exports.push([module.i, ":host {\n  background: url(" + __webpack_require__("../../../../../src/assets/content/login-bg.jpg") + ") 50% 50% no-repeat;\n  background-size: cover;\n  display: table-cell;\n  height: 100%;\n  padding: 1.375rem 0;\n  vertical-align: middle;\n  width: 100%; }\n  :host .ni-card {\n    margin: 0 auto;\n    max-width: 400px; }\n    :host .ni-card /deep/ .card-wrap {\n      border: 0; }\n    :host .ni-card form md-input-container:nth-child(1) {\n      margin-bottom: 30px; }\n    :host .ni-card form button {\n      width: 100%; }\n    :host .ni-card form .additional-info {\n      background: rgba(0, 0, 0, 0.1);\n      margin: 1.375rem -1.375rem -1.375rem;\n      padding: 0.6875rem 1.375rem; }\n      :host .ni-card form .additional-info a {\n        cursor: pointer; }\n      :host .ni-card form .additional-info .divider {\n        border-left: 1px solid rgba(0, 0, 0, 0.2);\n        display: inline-block;\n        height: 18px;\n        margin: 0 10px;\n        vertical-align: bottom; }\n\n::-moz-selection {\n  background: #16a085;\n  color: #a4003a;\n  text-shadow: none; }\n\n::selection {\n  background: #16a085;\n  color: #a4003a;\n  text-shadow: none; }\n", ""]);
 
 // exports
 
@@ -5092,9 +5093,8 @@ var PageSigninComponent = (function () {
                 console.log(res);
                 _this.isEmailCorrect = true;
                 localStorage.setItem('login', 'true');
-                localStorage.setItem('username', res.data[0].first_name + ' ' + res.data[0].middle_name + ' ' + res.data[0].sur_name);
-                localStorage.setItem('userphoto', res.data[0].picture);
-                localStorage.setItem('email', res.data[0].email);
+                localStorage.setItem('username', res.data[0].user_full_name.first_name + ' ' + res.data[0].user_full_name.middle_name + ' ' + res.data[0].user_full_name.sur_name);
+                localStorage.setItem('userphoto', res.data[0].picture ? res.data[0].picture : '');
                 _this.router.navigate(['/default-layout/dashboard']);
             }
             else {
@@ -6206,7 +6206,7 @@ var AuthService = (function () {
         params.set('password', __WEBPACK_IMPORTED_MODULE_4_sha512__(data.password).toString('hex'));
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
-                console.log(res.json());
+                console.log(res.json(), data.email);
                 _this.isLogged = true;
                 _this.isConfirm = false;
                 localStorage.setItem('token', res.json().token);
@@ -6595,7 +6595,7 @@ var HorizontalNavbarComponent = (function () {
             translate.use(_this.langCode);
         });
         this.username = localStorage.getItem('username');
-        this.photoUrl = localStorage.getItem('userphoto') ? localStorage.getItem('userphoto').substring(0, localStorage.getItem('userphoto').indexOf('.')) : 'av1';
+        this.photoUrl = localStorage.getItem('userphoto') && localStorage.getItem('userphoto') !== '' ? localStorage.getItem('userphoto').substring(0, localStorage.getItem('userphoto').indexOf('.')) : 'av1';
     }
     HorizontalNavbarComponent.prototype.ngOnInit = function () {
         var _this = this;

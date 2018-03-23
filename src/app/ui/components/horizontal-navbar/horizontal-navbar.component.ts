@@ -55,7 +55,7 @@ export class HorizontalNavbarComponent implements OnInit {
     });
 
     this.username = localStorage.getItem('username');
-    this.photoUrl = localStorage.getItem('userphoto') ? localStorage.getItem('userphoto').substring(0, localStorage.getItem('userphoto').indexOf('.')) : 'av1';
+    this.photoUrl = localStorage.getItem('userphoto') && localStorage.getItem('userphoto') !== '' ? localStorage.getItem('userphoto').substring(0, localStorage.getItem('userphoto').indexOf('.')) : 'av1';
   }
 
   ngOnInit() {

@@ -28,7 +28,7 @@ export class PageChatroomComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    console.log(localStorage.getItem('email'))
     this.connection = this.chatService.message.subscribe((res: any) => {
       if (res) {
         let message = JSON.parse(res.json_msg)[0];
