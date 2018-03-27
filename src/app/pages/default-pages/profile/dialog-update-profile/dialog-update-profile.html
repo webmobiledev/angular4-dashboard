@@ -1,0 +1,128 @@
+<div md-dialog-content>
+    <div class="col-md-12" *ngIf="section == 'general'">
+        <div class="form-group row">
+            <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'First Name' | translate}}:</label>
+            <div class="col-sm-6 col-md-8">
+                <md-input-container class="mb-0">
+                <input mdInput type="text" [value]="userInfo.first_name">
+                </md-input-container>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Middle Name' | translate}}:</label>
+            <div class="col-sm-6 col-md-8">
+                <md-input-container class="mb-0">
+                <input mdInput type="text" [value]="userInfo.middle_name">
+                </md-input-container>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Surname' | translate}}:</label>
+            <div class="col-sm-6 col-md-8">
+                <md-input-container class="mb-0">
+                <input mdInput type="text" [value]="userInfo.sur_name">
+                </md-input-container>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Gender' | translate}}:</label>
+            <div class="col-sm-6 col-md-8">
+                <md-select class="w-full" [(ngModel)]="userInfo.gender">
+                <md-option [value]="userInfo.gender">{{'Male' | translate}}</md-option>
+                <md-option [value]="userInfo.gender">{{'Female' | translate}}</md-option>
+                </md-select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Photo' | translate}}:</label>
+            <div class="col-sm-6 col-md-8">
+                <img src="{{userInfo.photo_path}}" class="avatar">
+                <!-- <md-input-container class="mb-0"> -->
+                <input type="file">
+                <!-- </md-input-container> -->
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12" *ngIf="section == 'contact'">
+        <div class="form-group row">
+            <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Home Phone' | translate}}:</label>
+            <div class="col-sm-6 col-md-8">
+                <md-input-container class="mb-0">
+                <input mdInput type="text" [value]="userInfo.contact_home_phone">
+                </md-input-container>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Mobile Phone' | translate}}:</label>
+            <div class="col-sm-6 col-md-8">
+                <md-input-container class="mb-0">
+                <input mdInput type="text" [value]="userInfo.contact_mobile_phone">
+                </md-input-container>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Office Phone' | translate}}:</label>
+            <div class="col-sm-6 col-md-8">
+                <md-input-container class="mb-0">
+                <input mdInput type="text" [value]="userInfo.contact_office_phone">
+                </md-input-container>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12" *ngIf="section == 'email'">
+        <div class="form-group row">
+            <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Email' | translate}}:</label>
+            <div class="col-sm-6 col-md-8">
+                <md-input-container class="mb-0">
+                <input mdInput type="email" [value]="userInfo.email">
+                </md-input-container>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Password' | translate}}:</label>
+            <div class="col-sm-6 col-md-8">
+                <md-input-container class="mb-0">
+                <input mdInput type="password" [value]="userInfo.password">
+                </md-input-container>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12" *ngIf="section == 'occupation'">
+        <div class="form-group row">
+            <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Occupation' | translate}}:</label>
+            <div class="col-sm-6 col-md-8">
+                <md-input-container class="mb-0">
+                <input mdInput type="text" [value]="userInfo.occupation">
+                </md-input-container>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Occupation Sector' | translate}}:</label>
+            <div class="col-sm-6 col-md-8">
+                <md-input-container class="mb-0">
+                <input mdInput type="text" [value]="userInfo.occupation_sector">
+                </md-input-container>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Yearly Income' | translate}}:</label>
+            <div class="col-sm-6 col-md-8">
+                <md-input-container class="mb-0">
+                <input mdInput type="number" [value]="userInfo.yearly_income">
+                </md-input-container>
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Select Permission' | translate}}:</label>
+        <div class="col-sm-6 col-md-8">
+            <md-select class="w-full" [(ngModel)]="userInfo.field_permission">
+            <md-option [value]="userInfo.field_permission" *ngFor="let p of permissions">{{p.text | translate}}</md-option>
+            </md-select>
+        </div>
+    </div>
+    <div md-dialog-actions>
+        <button md-raised-button (click)="dialogRef.close('no')" color="primary">Cancel</button>
+        <button md-raised-button (click)="update()" color="accent" [disabled]="iban === ''">Update</button>
+    </div>
+</div>

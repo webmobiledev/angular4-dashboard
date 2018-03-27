@@ -48,6 +48,31 @@ export class ApiService {
     });
   }
 
+  updateUser(data) {
+    const url = environment.serverUrl + 'user/update';
+    const params: URLSearchParams = new URLSearchParams();
+    Object.keys(data).forEach(key => {
+      params.set(key, data[key]);
+    });
+    params.set('token', localStorage.getItem('token'));
+    return new Promise((resolve, reject) => {
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      });
+    });
+  }
+
+  getPermission(data) {
+    const url = environment.serverUrl + 'lists';
+    const params: URLSearchParams = new URLSearchParams();
+    params.set('data', data);
+    return new Promise((resolve, reject) => {
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      });
+    });
+  }
+
   getUserRequest(max, page, status?) {
     const url = environment.serverUrl + 'user/requests';
     const params: URLSearchParams = new URLSearchParams();

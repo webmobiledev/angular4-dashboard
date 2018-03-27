@@ -1,7 +1,7 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, Inject } from '@angular/core';
 import { SharedService } from '../../../layouts/shared-service';
 import { ApiService } from '../../../services/api.service';
-import { MdDialog, MdDialogRef, MdDialogConfig } from '@angular/material';
+import { MdDialog, MdDialogRef, MdDialogConfig, MD_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'page-profile',
@@ -148,6 +148,15 @@ export class PageProfileComponent implements OnInit {
   changeBankPage(event) {
     
   }
+
+  update(section) {
+    let dialogRef = this.dialog.open(DialogUpdateProfileComponent, {data: section});
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'ok') {
+        
+      }
+    });
+  }
 }
 
 @Component({
@@ -177,6 +186,61 @@ export class DialogAddIbanComponent {
       this.dialogRef.close('ok');
     }).catch(err => {
       this.dialogRef.close('cancel');
+    });
+  }
+}
+
+
+@Component({
+  selector: 'update-profile-dialog',
+  templateUrl: './dialog-update-profile/dialog-update-profile.html',
+  styleUrls: ['./dialog-update-profile/dialog-update-profile.scss']
+})
+export class DialogUpdateProfileComponent {
+  userInfo = {};
+  gender = '';
+  section = '';
+  permissions = [];
+
+  constructor(
+    private apiService: ApiService,
+    public dialogRef: MdDialogRef<DialogAddIbanComponent>,
+    @Inject(MD_DIALOG_DATA) public data: any
+  ) {
+    this.section = data;
+
+    apiService.getUserInfo().then((res: any) => {
+      let user = res.data[0];
+      this.userInfo = {
+        first_name: user.user_full_name.first_name,
+        middle_name: user.user_full_name.middle_name,
+        sur_name: user.user_full_name.sur_name,
+        photo_path: user.user_full_name.photo_path,
+        gender: user.user_full_name.gender,
+        field_permission: user.user_full_name.field_permission,
+        contact_home_phone: user.user_phones.contact_home_phone,
+        contact_mobile_phone: user.user_phones.contact_mobile_phone,
+        contact_office_phone: user.user_phones.contact_office_phone,
+        email: user.user_email.email,
+        password: '',
+        country_of_birth: user.user_birth_info.country_of_birth,
+        date_of_birth: user.user_birth_info.date_of_birth,
+        state_of_birth: user.user_birth_info.state_of_birth,
+        town_of_birth: user.user_birth_info.town_of_birth,
+        occupation: user.user_work_info.occupation,
+        occupation_sector: user.user_work_info.occupation_sector,
+        yearly_income: user.user_work_info.yearly_income,
+      };
+    });
+
+    apiService.getPermission('AccountPermission').then((res: any) => {
+      this.permissions = res.data;
+    });
+  }
+
+  update() {
+    this.apiService.updateUser(this.userInfo).then((res: any) => {
+      this.dialogRef.close('ok');
     });
   }
 }

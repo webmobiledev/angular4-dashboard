@@ -1,7 +1,6 @@
 <h2 md-dialog-title *ngIf="pageNum === 1">Payment : Select your payment method.</h2>
 <div md-dialog-content class="p-3" *ngIf="pageNum === 1">
     <p>You are about to make a {{data.p_type_text}} payment of {{data.amount_due}} to {{data.to}}.</p>
-    <p>Populate the list of payment radio button using the api below:</p>
     <md-radio-group class="column-layout" [(ngModel)]="selectedType">
         <md-radio-button value="{{i}}" *ngFor="let p of payments;let i = index">{{p.text}}</md-radio-button>
     </md-radio-group>

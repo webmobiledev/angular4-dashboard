@@ -41,6 +41,7 @@ export class PageTransactionsComponent implements OnInit {
     this.transactions = [];
     this.transactionHeaders = ['Sender', 'Receiver', 'Amount', 'Creation Date', 'Payment Date', 'Status'];
     this.apiService.getTransactions(this.max, this.page).then((res: any) => {
+      console.log(res.data);
       res.data.forEach(d => {
         this.transactions.push([d.sender, d.receiver, d.amount, d.creation_date, d.payment_date, d.status_text]);
       });
