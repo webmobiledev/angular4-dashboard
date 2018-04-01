@@ -4,7 +4,7 @@
             <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'First Name' | translate}}:</label>
             <div class="col-sm-6 col-md-8">
                 <md-input-container class="mb-0">
-                <input mdInput type="text" [value]="userInfo.first_name">
+                <input mdInput type="text" [value]="userInfo.first_name" [(ngModel)]="userInfo.first_name">
                 </md-input-container>
             </div>
         </div>
@@ -12,7 +12,7 @@
             <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Middle Name' | translate}}:</label>
             <div class="col-sm-6 col-md-8">
                 <md-input-container class="mb-0">
-                <input mdInput type="text" [value]="userInfo.middle_name">
+                <input mdInput type="text" [value]="userInfo.middle_name" [(ngModel)]="userInfo.middle_name">
                 </md-input-container>
             </div>
         </div>
@@ -20,7 +20,7 @@
             <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Surname' | translate}}:</label>
             <div class="col-sm-6 col-md-8">
                 <md-input-container class="mb-0">
-                <input mdInput type="text" [value]="userInfo.sur_name">
+                <input mdInput type="text" [value]="userInfo.sur_name" [(ngModel)]="userInfo.sur_name">
                 </md-input-container>
             </div>
         </div>
@@ -48,7 +48,7 @@
             <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Home Phone' | translate}}:</label>
             <div class="col-sm-6 col-md-8">
                 <md-input-container class="mb-0">
-                <input mdInput type="text" [value]="userInfo.contact_home_phone">
+                <input mdInput type="text" [value]="userInfo.contact_home_phone" [(ngModel)]="userInfo.contact_home_phone">
                 </md-input-container>
             </div>
         </div>
@@ -56,7 +56,7 @@
             <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Mobile Phone' | translate}}:</label>
             <div class="col-sm-6 col-md-8">
                 <md-input-container class="mb-0">
-                <input mdInput type="text" [value]="userInfo.contact_mobile_phone">
+                <input mdInput type="text" [value]="userInfo.contact_mobile_phone" [(ngModel)]="userInfo.contact_mobile_phone">
                 </md-input-container>
             </div>
         </div>
@@ -64,7 +64,7 @@
             <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Office Phone' | translate}}:</label>
             <div class="col-sm-6 col-md-8">
                 <md-input-container class="mb-0">
-                <input mdInput type="text" [value]="userInfo.contact_office_phone">
+                <input mdInput type="text" [value]="userInfo.contact_office_phone" [(ngModel)]="userInfo.contact_office_phone">
                 </md-input-container>
             </div>
         </div>
@@ -74,7 +74,7 @@
             <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Email' | translate}}:</label>
             <div class="col-sm-6 col-md-8">
                 <md-input-container class="mb-0">
-                <input mdInput type="email" [value]="userInfo.email">
+                <input mdInput type="email" [value]="userInfo.email" [(ngModel)]="userInfo.email">
                 </md-input-container>
             </div>
         </div>
@@ -82,7 +82,7 @@
             <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Password' | translate}}:</label>
             <div class="col-sm-6 col-md-8">
                 <md-input-container class="mb-0">
-                <input mdInput type="password" [value]="userInfo.password">
+                <input mdInput type="password" [value]="userInfo.password" [(ngModel)]="userInfo.password">
                 </md-input-container>
             </div>
         </div>
@@ -92,7 +92,7 @@
             <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Occupation' | translate}}:</label>
             <div class="col-sm-6 col-md-8">
                 <md-input-container class="mb-0">
-                <input mdInput type="text" [value]="userInfo.occupation">
+                <input mdInput type="text" [value]="userInfo.occupation" [(ngModel)]="userInfo.occupation">
                 </md-input-container>
             </div>
         </div>
@@ -100,7 +100,7 @@
             <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Occupation Sector' | translate}}:</label>
             <div class="col-sm-6 col-md-8">
                 <md-input-container class="mb-0">
-                <input mdInput type="text" [value]="userInfo.occupation_sector">
+                <input mdInput type="text" [value]="userInfo.occupation_sector" [(ngModel)]="userInfo.occupation_sector">
                 </md-input-container>
             </div>
         </div>
@@ -108,7 +108,7 @@
             <label class="col-sm-6 col-md-4 col-form-label mb-0">{{'Yearly Income' | translate}}:</label>
             <div class="col-sm-6 col-md-8">
                 <md-input-container class="mb-0">
-                <input mdInput type="number" [value]="userInfo.yearly_income">
+                <input mdInput type="number" [value]="userInfo.yearly_income" [(ngModel)]="userInfo.yearly_income">
                 </md-input-container>
             </div>
         </div>

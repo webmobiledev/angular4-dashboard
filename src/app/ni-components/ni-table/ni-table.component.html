@@ -18,8 +18,10 @@
           <button md-raised-button color="primary" *ngIf="s && s.type && (s.type)[0] === 'paynow'" (click)="showPayDialog(s)">Pay now</button>
           <button md-raised-button color="primary" *ngIf="s && s.type && (s.type)[0] === 'Open'" (click)="showDialog(s.id)">{{'Open' | translate}}</button>
           <button md-raised-button color="primary" *ngIf="s && s.type && (s.type)[0] === 'Cancel'" (click)="showDialog(s.id)">{{'Cancel' | translate}}</button>
-          <button md-raised-button color="primary" *ngIf="s && s.type && (s.type)[0] === 'Update permission'" (click)="removeUser(s.id)">Update permission</button>
-          <button md-raised-button color="primary" *ngIf="s && s.type && (s.type)[1] === 'Remove payment mean'" (click)="removeUser(s.id)">Remove payment mean</button>
+          <button md-raised-button color="primary" *ngIf="s && s.type && (s.type)[0] === 'Update permission'" (click)="updatePermission(s.id)">Update permission</button>
+          <button md-raised-button color="primary" *ngIf="s && s.type && (s.type)[1] === 'Remove payment mean'" (click)="removePermission(s.id)">Remove payment mean</button>
+          <button md-raised-button color="primary" *ngIf="s && s.type && (s.type)[1] === 'Update Address'" (click)="updateAddress(s)">Update Address</button>
+          <button md-raised-button color="primary" *ngIf="s && s.type && (s.type)[0] === 'Remove Address'" (click)="removeAddress(s)">Remove Address</button>
         </td>
       </tr>
       </tbody>

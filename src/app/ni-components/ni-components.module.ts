@@ -11,7 +11,7 @@ import { NiBreadcrumbComponent } from './ni-breadcrumb/ni-breadcrumb.component';
 import { NiButtonComponent }     from './ni-button/ni-button.component';
 import { NiCardComponent }       from './ni-card/ni-card.component';
 import { NiChatComponent }       from './ni-chat/ni-chat.component';
-import { NiTableComponent, DialogPaymentComponent }       from './ni-table/ni-table.component';
+import { NiTableComponent, DialogPaymentComponent, DialogAddressComponent }       from './ni-table/ni-table.component';
 import { NiFileComponent }       from './ni-file/ni-file.component';
 import { NiHTimelineComponent }  from './ni-h-timeline/ni-h-timeline.component';
 
@@ -68,7 +68,8 @@ import { NiDialogComponent } from './ni-dialog/ni-dialog.component';
     NiPaginationComponent,
     NiTableLoadingComponent,
     NiDialogComponent,
-    DialogPaymentComponent
+    DialogPaymentComponent,
+    DialogAddressComponent
   ],
   exports: [
     NiAlertComponent,
@@ -90,7 +91,8 @@ import { NiDialogComponent } from './ni-dialog/ni-dialog.component';
   ],
   entryComponents: [
     NiDialogComponent,
-    DialogPaymentComponent
+    DialogPaymentComponent,
+    DialogAddressComponent
   ]
 })
 export class NiComponentsModule { }

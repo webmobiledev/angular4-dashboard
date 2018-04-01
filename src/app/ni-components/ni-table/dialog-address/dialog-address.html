@@ -1,0 +1,32 @@
+<h2 md-dialog-title>{{dialogType === 'add' ? 'Add' : 'Update'}} Address</h2>
+<div md-dialog-content class="col-sm-12">
+  <md-input-container class="mt-4">
+    <input mdInput placeholder="Number" value="address.address_number" [(ngModel)]="address.address_number">
+  </md-input-container>
+  <md-input-container class="mt-4">
+    <input mdInput placeholder="Street" value="address.address_street_name" [(ngModel)]="address.address_street_name">
+  </md-input-container>
+  <md-input-container class="mt-4">
+    <input mdInput placeholder="Post code" value="address.address_post_code" [(ngModel)]="address.address_post_code">
+  </md-input-container>
+  <md-select class="mt-4" [(ngModel)]="address.address_state" placeholder="State">
+    <md-option *ngFor="let s of states" [value]="s.name">{{s.name | translate}}</md-option>
+  </md-select>
+  <md-input-container class="mt-4">
+    <input mdInput placeholder="Town" value="address.address_town" [(ngModel)]="address.address_town">
+  </md-input-container>
+  <md-select class="mt-4" [(ngModel)]="address.address_country" (change)="selectCountry()" placeholder="Country">
+    <md-option *ngFor="let c of countries" [value]="c.name">{{c.name | translate}}</md-option>
+  </md-select>
+  <md-input-container class="mt-4">
+    <input mdInput placeholder="Extra Information" value="address.address_extra_info" [(ngModel)]="address.address_extra_info">
+  </md-input-container>
+  <md-select class="mt-4" [(ngModel)]="address.perm_code" placeholder="Permission">
+    <md-option [value]="p.text" *ngFor="let p of permissions">{{p.text | translate}}</md-option>
+  </md-select>
+  <div md-dialog-actions class="buttons pt-3 pb-3">
+    <button md-raised-button (click)="dialogRef.close('no')" color="primary">CANCEL</button>
+    <button md-raised-button (click)="updateAddress()" *ngIf="dialogType === 'update'" color="accent">Update</button>
+    <button md-raised-button (click)="add()" *ngIf="dialogType === 'add'" color="accent">Add</button>
+  </div>
+</div>

@@ -4,7 +4,7 @@
   "description": "Angular Admin Template",
   "private": true,
   "scripts": {
-    "start": "node server.js",
+    "start": "ng serve",
     "pree2e": "webdriver-manager update",
     "build": "ng build",
     "test": "ng test",

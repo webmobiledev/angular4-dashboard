@@ -79,7 +79,7 @@ var defaultRoutes = [
     { path: 'groups', component: __WEBPACK_IMPORTED_MODULE_6__pages_default_pages_groups_groups_component__["e" /* PageGroupsComponent */] },
     { path: 'transactions', component: __WEBPACK_IMPORTED_MODULE_7__pages_default_pages_transactions_transactions_component__["b" /* PageTransactionsComponent */] },
     { path: 'requests', component: __WEBPACK_IMPORTED_MODULE_8__pages_default_pages_requests_requests_component__["a" /* PageRequestsComponent */] },
-    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_11__pages_default_pages_profile_profile_component__["c" /* PageProfileComponent */] },
+    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_11__pages_default_pages_profile_profile_component__["d" /* PageProfileComponent */] },
     { path: 'simulation', component: __WEBPACK_IMPORTED_MODULE_12__pages_default_pages_simulation_simulation_component__["a" /* PageSimulationComponent */] },
     { path: 'aboutus', component: __WEBPACK_IMPORTED_MODULE_10__pages_default_pages_aboutus_aboutus_component__["a" /* PageAboutusComponent */] },
     { path: 'chatroom', component: __WEBPACK_IMPORTED_MODULE_13__pages_default_pages_chatroom_chatroom_component__["a" /* PageChatroomComponent */] },
@@ -1413,7 +1413,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ":host {\n  background: #fff;\n  border-radius: 3px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  font-family: inherit;\n  height: 500px;\n  max-height: 100%;\n  width: 100%; }\n  :host .chat-wrap {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    height: 100%;\n    max-height: inherit; }\n    :host .chat-wrap .dialog {\n      background: #e5e6e9;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column;\n      max-height: inherit;\n      width: 100%;\n      height: 100%; }\n      :host .chat-wrap .dialog .btn {\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        background: none;\n        border: none;\n        border-radius: 0;\n        box-shadow: none;\n        color: rgba(0, 0, 0, 0.3);\n        cursor: pointer;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        font-size: 20px;\n        height: 2.75rem;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n        outline: none;\n        padding: 0;\n        transition: color 0.2s ease-in-out;\n        width: 2.75rem; }\n        :host .chat-wrap .dialog .btn:hover, :host .chat-wrap .dialog .btn:focus {\n          color: #000; }\n      :host .chat-wrap .dialog .dialog-header {\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        background: #fff;\n        border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        padding: 0.6875rem 0.6875rem; }\n        :host .chat-wrap .dialog .dialog-header .user-avatar {\n          -webkit-box-align: center;\n              -ms-flex-align: center;\n                  align-items: center;\n          background: #666c7e;\n          border-radius: 50%;\n          color: #ffffff;\n          display: -webkit-box;\n          display: -ms-flexbox;\n          display: flex;\n          height: 36px;\n          -webkit-box-pack: center;\n              -ms-flex-pack: center;\n                  justify-content: center;\n          margin: 0 0.6875rem;\n          overflow: hidden;\n          width: 36px; }\n          :host .chat-wrap .dialog .dialog-header .user-avatar .text-avatar {\n            font-size: 20px;\n            line-height: 1; }\n        :host .chat-wrap .dialog .dialog-header .user-info {\n          -webkit-box-flex: 2;\n              -ms-flex-positive: 2;\n                  flex-grow: 2; }\n          :host .chat-wrap .dialog .dialog-header .user-info .user-name {\n            font-size: 16px;\n            margin: 0; }\n          :host .chat-wrap .dialog .dialog-header .user-info .user-last-seen {\n            line-height: 1;\n            opacity: .8; }\n            :host .chat-wrap .dialog .dialog-header .user-info .user-last-seen.online {\n              color: #64B5F6;\n              opacity: 1; }\n      :host .chat-wrap .dialog .dialog-messages {\n        height: 100%;\n        min-height: 300px;\n        overflow: auto; }\n        :host .chat-wrap .dialog .dialog-messages .messages-list {\n          padding: 0.34375rem 1.375rem 0; }\n          :host .chat-wrap .dialog .dialog-messages .messages-list .message {\n            padding: 0.34375rem 0;\n            transition: -webkit-transform 0.2s ease-in-out;\n            transition: transform 0.2s ease-in-out;\n            transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;\n            width: 90%; }\n            :host .chat-wrap .dialog .dialog-messages .messages-list .message .message-content {\n              background: #fff;\n              border-radius: 5px;\n              display: inline-block;\n              padding: 0.34375rem 0.6875rem;\n              position: relative; }\n              :host .chat-wrap .dialog .dialog-messages .messages-list .message .message-content:before {\n                border: 5px solid transparent;\n                border-bottom-color: #fff;\n                bottom: 0;\n                content: '';\n                display: block;\n                height: 0;\n                left: -5px;\n                position: absolute;\n                width: 0; }\n                .rtl :host .chat-wrap .dialog .dialog-messages .messages-list .message .message-content:before {\n                  left: auto;\n                  right: -5px; }\n            :host .chat-wrap .dialog .dialog-messages .messages-list .message .message-date {\n              font-size: 90%;\n              margin-top: 0.171875rem;\n              opacity: .8; }\n            :host .chat-wrap .dialog .dialog-messages .messages-list .message.my-message {\n              margin-left: auto;\n              text-align: right; }\n              .rtl :host .chat-wrap .dialog .dialog-messages .messages-list .message.my-message {\n                margin-left: 0;\n                margin-right: auto;\n                text-align: left; }\n              :host .chat-wrap .dialog .dialog-messages .messages-list .message.my-message .message-content {\n                background: #0bd237;\n                color: #fff; }\n                :host .chat-wrap .dialog .dialog-messages .messages-list .message.my-message .message-content:before {\n                  border-bottom-color: #0bd237;\n                  left: auto;\n                  right: -5px; }\n                  .rtl :host .chat-wrap .dialog .dialog-messages .messages-list .message.my-message .message-content:before {\n                    left: -5px;\n                    right: auto; }\n        :host .chat-wrap .dialog .dialog-messages.add-message .messages-list .message:last-child {\n          -webkit-transform: scale(0);\n                  transform: scale(0); }\n      :host .chat-wrap .dialog .dialog-footer {\n        -webkit-box-align: end;\n            -ms-flex-align: end;\n                align-items: flex-end;\n        background: #fff;\n        border-top: 1px solid rgba(0, 0, 0, 0.1);\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -ms-flex-negative: 0;\n            flex-shrink: 0;\n        min-height: 2.75rem;\n        padding: 0 0.6875rem; }\n        :host .chat-wrap .dialog .dialog-footer .btn.send-message {\n          color: #64B5F6; }\n          :host .chat-wrap .dialog .dialog-footer .btn.send-message:hover, :host .chat-wrap .dialog .dialog-footer .btn.send-message:focus {\n            color: #000; }\n        :host .chat-wrap .dialog .dialog-footer .message-box {\n          -webkit-box-flex: 2;\n              -ms-flex-positive: 2;\n                  flex-grow: 2;\n          padding: 0.6875rem 0; }\n          :host .chat-wrap .dialog .dialog-footer .message-box .enter-message {\n            background: none;\n            border: 0;\n            display: block;\n            font-family: inherit;\n            font-size: 14px;\n            height: auto;\n            line-height: 1.6;\n            max-height: 5.5rem;\n            min-height: 1.375rem;\n            outline: none;\n            overflow: hidden;\n            padding: 0;\n            resize: none;\n            width: 100%; }\n            :host .chat-wrap .dialog .dialog-footer .message-box .enter-message::-webkit-input-placeholder {\n              color: rgba(0, 0, 0, 0.5); }\n            :host .chat-wrap .dialog .dialog-footer .message-box .enter-message::-moz-placeholder {\n              color: rgba(0, 0, 0, 0.5); }\n            :host .chat-wrap .dialog .dialog-footer .message-box .enter-message:-ms-input-placeholder {\n              color: rgba(0, 0, 0, 0.5); }\n            :host .chat-wrap .dialog .dialog-footer .message-box .enter-message:-moz-placeholder {\n              color: rgba(0, 0, 0, 0.5); }\n\n.avatar-div {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n  .avatar-div .image-avatar img {\n    border-radius: 50%; }\n\n.my-message .avatar-div {\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end; }\n", ""]);
+exports.push([module.i, ":host {\n  background: #fff;\n  border-radius: 3px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  font-family: inherit;\n  height: 450px;\n  max-height: 100%;\n  width: 100%; }\n  :host .chat-wrap {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    height: 100%;\n    max-height: inherit; }\n    :host .chat-wrap .dialog {\n      background: #e5e6e9;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column;\n      max-height: inherit;\n      width: 100%;\n      height: 100%; }\n      :host .chat-wrap .dialog .btn {\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        background: none;\n        border: none;\n        border-radius: 0;\n        box-shadow: none;\n        color: rgba(0, 0, 0, 0.3);\n        cursor: pointer;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        font-size: 20px;\n        height: 2.75rem;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n        outline: none;\n        padding: 0;\n        transition: color 0.2s ease-in-out;\n        width: 2.75rem; }\n        :host .chat-wrap .dialog .btn:hover, :host .chat-wrap .dialog .btn:focus {\n          color: #000; }\n      :host .chat-wrap .dialog .dialog-header {\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        background: #fff;\n        border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        padding: 0.6875rem 0.6875rem; }\n        :host .chat-wrap .dialog .dialog-header .user-avatar {\n          -webkit-box-align: center;\n              -ms-flex-align: center;\n                  align-items: center;\n          background: #666c7e;\n          border-radius: 50%;\n          color: #ffffff;\n          display: -webkit-box;\n          display: -ms-flexbox;\n          display: flex;\n          height: 36px;\n          -webkit-box-pack: center;\n              -ms-flex-pack: center;\n                  justify-content: center;\n          margin: 0 0.6875rem;\n          overflow: hidden;\n          width: 36px; }\n          :host .chat-wrap .dialog .dialog-header .user-avatar .text-avatar {\n            font-size: 20px;\n            line-height: 1; }\n        :host .chat-wrap .dialog .dialog-header .user-info {\n          -webkit-box-flex: 2;\n              -ms-flex-positive: 2;\n                  flex-grow: 2; }\n          :host .chat-wrap .dialog .dialog-header .user-info .user-name {\n            font-size: 16px;\n            margin: 0; }\n          :host .chat-wrap .dialog .dialog-header .user-info .user-last-seen {\n            line-height: 1;\n            opacity: .8; }\n            :host .chat-wrap .dialog .dialog-header .user-info .user-last-seen.online {\n              color: #64B5F6;\n              opacity: 1; }\n      :host .chat-wrap .dialog .dialog-messages {\n        height: 100%;\n        min-height: 300px;\n        overflow: auto; }\n        :host .chat-wrap .dialog .dialog-messages .messages-list {\n          padding: 0.34375rem 1.375rem 0; }\n          :host .chat-wrap .dialog .dialog-messages .messages-list .message {\n            padding: 0.34375rem 0;\n            transition: -webkit-transform 0.2s ease-in-out;\n            transition: transform 0.2s ease-in-out;\n            transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;\n            width: 90%; }\n            :host .chat-wrap .dialog .dialog-messages .messages-list .message .message-content {\n              background: #fff;\n              border-radius: 5px;\n              display: inline-block;\n              padding: 0.34375rem 0.6875rem;\n              position: relative; }\n              :host .chat-wrap .dialog .dialog-messages .messages-list .message .message-content:before {\n                border: 5px solid transparent;\n                border-bottom-color: #fff;\n                bottom: 0;\n                content: '';\n                display: block;\n                height: 0;\n                left: -5px;\n                position: absolute;\n                width: 0; }\n                .rtl :host .chat-wrap .dialog .dialog-messages .messages-list .message .message-content:before {\n                  left: auto;\n                  right: -5px; }\n            :host .chat-wrap .dialog .dialog-messages .messages-list .message .message-date {\n              font-size: 90%;\n              margin-top: 0.171875rem;\n              opacity: .8; }\n            :host .chat-wrap .dialog .dialog-messages .messages-list .message.my-message {\n              margin-left: auto;\n              text-align: right; }\n              .rtl :host .chat-wrap .dialog .dialog-messages .messages-list .message.my-message {\n                margin-left: 0;\n                margin-right: auto;\n                text-align: left; }\n              :host .chat-wrap .dialog .dialog-messages .messages-list .message.my-message .message-content {\n                background: #0bd237;\n                color: #fff; }\n                :host .chat-wrap .dialog .dialog-messages .messages-list .message.my-message .message-content:before {\n                  border-bottom-color: #0bd237;\n                  left: auto;\n                  right: -5px; }\n                  .rtl :host .chat-wrap .dialog .dialog-messages .messages-list .message.my-message .message-content:before {\n                    left: -5px;\n                    right: auto; }\n        :host .chat-wrap .dialog .dialog-messages.add-message .messages-list .message:last-child {\n          -webkit-transform: scale(0);\n                  transform: scale(0); }\n      :host .chat-wrap .dialog .dialog-footer {\n        -webkit-box-align: end;\n            -ms-flex-align: end;\n                align-items: flex-end;\n        background: #fff;\n        border-top: 1px solid rgba(0, 0, 0, 0.1);\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -ms-flex-negative: 0;\n            flex-shrink: 0;\n        min-height: 2.75rem;\n        padding: 0 0.6875rem; }\n        :host .chat-wrap .dialog .dialog-footer .btn.send-message {\n          color: #64B5F6; }\n          :host .chat-wrap .dialog .dialog-footer .btn.send-message:hover, :host .chat-wrap .dialog .dialog-footer .btn.send-message:focus {\n            color: #000; }\n        :host .chat-wrap .dialog .dialog-footer .message-box {\n          -webkit-box-flex: 2;\n              -ms-flex-positive: 2;\n                  flex-grow: 2;\n          padding: 0.6875rem 0; }\n          :host .chat-wrap .dialog .dialog-footer .message-box .enter-message {\n            background: none;\n            border: 0;\n            display: block;\n            font-family: inherit;\n            font-size: 14px;\n            height: auto;\n            line-height: 1.6;\n            max-height: 5.5rem;\n            min-height: 1.375rem;\n            outline: none;\n            overflow: hidden;\n            padding: 0;\n            resize: none;\n            width: 100%; }\n            :host .chat-wrap .dialog .dialog-footer .message-box .enter-message::-webkit-input-placeholder {\n              color: rgba(0, 0, 0, 0.5); }\n            :host .chat-wrap .dialog .dialog-footer .message-box .enter-message::-moz-placeholder {\n              color: rgba(0, 0, 0, 0.5); }\n            :host .chat-wrap .dialog .dialog-footer .message-box .enter-message:-ms-input-placeholder {\n              color: rgba(0, 0, 0, 0.5); }\n            :host .chat-wrap .dialog .dialog-footer .message-box .enter-message:-moz-placeholder {\n              color: rgba(0, 0, 0, 0.5); }\n\n.avatar-div {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: start;\n      -ms-flex-pack: start;\n          justify-content: flex-start;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n  .avatar-div .image-avatar img {\n    border-radius: 50%; }\n\n.my-message .avatar-div {\n  -webkit-box-pack: end;\n      -ms-flex-pack: end;\n          justify-content: flex-end; }\n", ""]);
 
 // exports
 
@@ -1601,7 +1601,7 @@ var NiComponentsModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_10__ni_chat_ni_chat_component__["a" /* NiChatComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__ni_file_ni_file_component__["a" /* NiFileComponent */],
                 __WEBPACK_IMPORTED_MODULE_13__ni_h_timeline_ni_h_timeline_component__["a" /* NiHTimelineComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["b" /* NiTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["c" /* NiTableComponent */],
                 __WEBPACK_IMPORTED_MODULE_14__directives_color_color_directive__["a" /* ColorDirective */],
                 __WEBPACK_IMPORTED_MODULE_15__directives_bg_bg_directive__["a" /* BgDirective */],
                 __WEBPACK_IMPORTED_MODULE_16__directives_gradient_gradient_directive__["a" /* GradientDirective */],
@@ -1610,7 +1610,8 @@ var NiComponentsModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_21__ni_pagination_ni_pagination_component__["a" /* NiPaginationComponent */],
                 __WEBPACK_IMPORTED_MODULE_20__ni_table_loading_ni_table_loading_component__["a" /* NiTableLoadingComponent */],
                 __WEBPACK_IMPORTED_MODULE_22__ni_dialog_ni_dialog_component__["a" /* NiDialogComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["a" /* DialogPaymentComponent */]
+                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["b" /* DialogPaymentComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["a" /* DialogAddressComponent */]
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_5__ni_alert_ni_alert_component__["a" /* NiAlertComponent */],
@@ -1621,7 +1622,7 @@ var NiComponentsModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_10__ni_chat_ni_chat_component__["a" /* NiChatComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__ni_file_ni_file_component__["a" /* NiFileComponent */],
                 __WEBPACK_IMPORTED_MODULE_13__ni_h_timeline_ni_h_timeline_component__["a" /* NiHTimelineComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["b" /* NiTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["c" /* NiTableComponent */],
                 __WEBPACK_IMPORTED_MODULE_19__ni_loading_ni_loading_component__["a" /* NiLoadingComponent */],
                 __WEBPACK_IMPORTED_MODULE_14__directives_color_color_directive__["a" /* ColorDirective */],
                 __WEBPACK_IMPORTED_MODULE_15__directives_bg_bg_directive__["a" /* BgDirective */],
@@ -1632,7 +1633,8 @@ var NiComponentsModule = (function () {
             ],
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_22__ni_dialog_ni_dialog_component__["a" /* NiDialogComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["a" /* DialogPaymentComponent */]
+                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["b" /* DialogPaymentComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__ni_table_ni_table_component__["a" /* DialogAddressComponent */]
             ]
         })
     ], NiComponentsModule);
@@ -2183,6 +2185,31 @@ var NiTableLoadingComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/ni-components/ni-table/dialog-address/dialog-address.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h2 md-dialog-title>{{dialogType === 'add' ? 'Add' : 'Update'}} Address</h2>\n<div md-dialog-content class=\"col-sm-12\">\n  <md-input-container class=\"mt-4\">\n    <input mdInput placeholder=\"Number\" value=\"address.address_number\" [(ngModel)]=\"address.address_number\">\n  </md-input-container>\n  <md-input-container class=\"mt-4\">\n    <input mdInput placeholder=\"Street\" value=\"address.address_street_name\" [(ngModel)]=\"address.address_street_name\">\n  </md-input-container>\n  <md-input-container class=\"mt-4\">\n    <input mdInput placeholder=\"Post code\" value=\"address.address_post_code\" [(ngModel)]=\"address.address_post_code\">\n  </md-input-container>\n  <md-select class=\"mt-4\" [(ngModel)]=\"address.address_state\" placeholder=\"State\">\n    <md-option *ngFor=\"let s of states\" [value]=\"s.name\">{{s.name | translate}}</md-option>\n  </md-select>\n  <md-input-container class=\"mt-4\">\n    <input mdInput placeholder=\"Town\" value=\"address.address_town\" [(ngModel)]=\"address.address_town\">\n  </md-input-container>\n  <md-select class=\"mt-4\" [(ngModel)]=\"address.address_country\" (change)=\"selectCountry()\" placeholder=\"Country\">\n    <md-option *ngFor=\"let c of countries\" [value]=\"c.name\">{{c.name | translate}}</md-option>\n  </md-select>\n  <md-input-container class=\"mt-4\">\n    <input mdInput placeholder=\"Extra Information\" value=\"address.address_extra_info\" [(ngModel)]=\"address.address_extra_info\">\n  </md-input-container>\n  <md-select class=\"mt-4\" [(ngModel)]=\"address.perm_code\" placeholder=\"Permission\">\n    <md-option [value]=\"p.text\" *ngFor=\"let p of permissions\">{{p.text | translate}}</md-option>\n  </md-select>\n  <div md-dialog-actions class=\"buttons pt-3 pb-3\">\n    <button md-raised-button (click)=\"dialogRef.close('no')\" color=\"primary\">CANCEL</button>\n    <button md-raised-button (click)=\"updateAddress()\" *ngIf=\"dialogType === 'update'\" color=\"accent\">Update</button>\n    <button md-raised-button (click)=\"add()\" *ngIf=\"dialogType === 'add'\" color=\"accent\">Add</button>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/ni-components/ni-table/dialog-address/dialog-address.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "h2 {\n  font-size: 1.5rem; }\n\n.buttons {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
 /***/ "../../../../../src/app/ni-components/ni-table/dialog-payment/dialog-payment.html":
 /***/ (function(module, exports) {
 
@@ -2211,7 +2238,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/ni-components/ni-table/ni-table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <div class=\"table-responsive\">\n    <table class=\"table table-striped table-sm\">\n      <thead>\n      <tr>\n        <th *ngFor=\"let h of headers\">\n          <span *ngIf=\"!h.type\">{{ h | translate }}</span>\n          <span *ngIf=\"h.type\">{{ h.type | translate }}</span>\n        </th>\n      </tr>\n      </thead>\n      <tbody>\n      <tr *ngFor=\"let d of data\">\n        <td *ngFor=\"let s of d\">\n          <span *ngIf=\"s && !s.type\">{{ s }}</span>\n          <button md-raised-button color=\"primary\" *ngIf=\"s && s.type && (s.type)[0] === 'details'\" (click)=\"changePage(s.id)\">Details</button>\n          <button md-raised-button color=\"warning\" *ngIf=\"s && s.type && (s.type)[0] === 'remove'\" (click)=\"removeUser(s.id)\">Remove</button>\n          <button md-raised-button color=\"primary\" *ngIf=\"s && s.type && (s.type)[0] === 'paynow'\" (click)=\"showPayDialog(s)\">Pay now</button>\n          <button md-raised-button color=\"primary\" *ngIf=\"s && s.type && (s.type)[0] === 'Open'\" (click)=\"showDialog(s.id)\">{{'Open' | translate}}</button>\n          <button md-raised-button color=\"primary\" *ngIf=\"s && s.type && (s.type)[0] === 'Cancel'\" (click)=\"showDialog(s.id)\">{{'Cancel' | translate}}</button>\n          <button md-raised-button color=\"primary\" *ngIf=\"s && s.type && (s.type)[0] === 'Update permission'\" (click)=\"removeUser(s.id)\">Update permission</button>\n          <button md-raised-button color=\"primary\" *ngIf=\"s && s.type && (s.type)[1] === 'Remove payment mean'\" (click)=\"removeUser(s.id)\">Remove payment mean</button>\n        </td>\n      </tr>\n      </tbody>\n    </table>\n  </div>\n</div>"
+module.exports = "<div>\n  <div class=\"table-responsive\">\n    <table class=\"table table-striped table-sm\">\n      <thead>\n      <tr>\n        <th *ngFor=\"let h of headers\">\n          <span *ngIf=\"!h.type\">{{ h | translate }}</span>\n          <span *ngIf=\"h.type\">{{ h.type | translate }}</span>\n        </th>\n      </tr>\n      </thead>\n      <tbody>\n      <tr *ngFor=\"let d of data\">\n        <td *ngFor=\"let s of d\">\n          <span *ngIf=\"s && !s.type\">{{ s }}</span>\n          <button md-raised-button color=\"primary\" *ngIf=\"s && s.type && (s.type)[0] === 'details'\" (click)=\"changePage(s.id)\">Details</button>\n          <button md-raised-button color=\"warning\" *ngIf=\"s && s.type && (s.type)[0] === 'remove'\" (click)=\"removeUser(s.id)\">Remove</button>\n          <button md-raised-button color=\"primary\" *ngIf=\"s && s.type && (s.type)[0] === 'paynow'\" (click)=\"showPayDialog(s)\">Pay now</button>\n          <button md-raised-button color=\"primary\" *ngIf=\"s && s.type && (s.type)[0] === 'Open'\" (click)=\"showDialog(s.id)\">{{'Open' | translate}}</button>\n          <button md-raised-button color=\"primary\" *ngIf=\"s && s.type && (s.type)[0] === 'Cancel'\" (click)=\"showDialog(s.id)\">{{'Cancel' | translate}}</button>\n          <button md-raised-button color=\"primary\" *ngIf=\"s && s.type && (s.type)[0] === 'Update permission'\" (click)=\"updatePermission(s.id)\">Update permission</button>\n          <button md-raised-button color=\"primary\" *ngIf=\"s && s.type && (s.type)[1] === 'Remove payment mean'\" (click)=\"removePermission(s.id)\">Remove payment mean</button>\n          <button md-raised-button color=\"primary\" *ngIf=\"s && s.type && (s.type)[1] === 'Update Address'\" (click)=\"updateAddress(s)\">Update Address</button>\n          <button md-raised-button color=\"primary\" *ngIf=\"s && s.type && (s.type)[0] === 'Remove Address'\" (click)=\"removeAddress(s)\">Remove Address</button>\n        </td>\n      </tr>\n      </tbody>\n    </table>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -2237,8 +2264,9 @@ module.exports = module.exports.toString();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return NiTableComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogPaymentComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return NiTableComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return DialogPaymentComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogAddressComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/@angular/material.es5.js");
@@ -2303,6 +2331,30 @@ var NiTableComponent = (function () {
             }
         });
     };
+    NiTableComponent.prototype.removeAddress = function (address) {
+        var _this = this;
+        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_3__ni_dialog_ni_dialog_component__["a" /* NiDialogComponent */], {
+            data: {
+                content: 'Do you really want to remove?',
+                okText: 'Yes',
+                cancelText: 'Cancel'
+            }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result === 'ok') {
+                _this.apiService.removeAddress(address.id).then(function (res) {
+                    if (res.status === 'yes') {
+                        _this.showAlert.emit({ status: 'ok', text: 'Removing member' });
+                    }
+                    else {
+                        // this.showAlert.emit({status: 'cancel', text: 'Removing member'});
+                    }
+                });
+            }
+            else {
+            }
+        });
+    };
     NiTableComponent.prototype.showPayDialog = function (data) {
         var _this = this;
         var dialogRef = this.dialog.open(DialogPaymentComponent, {
@@ -2313,6 +2365,21 @@ var NiTableComponent = (function () {
                 _this.showAlert.emit({ status: result, text: 'Paying obligation' });
             }
         });
+    };
+    NiTableComponent.prototype.updateAddress = function (address) {
+        var _this = this;
+        var dialogRef = this.dialog.open(DialogAddressComponent, {
+            data: address
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result === 'ok') {
+                _this.showAlert.emit({ status: result, text: 'Updating Address' });
+            }
+        });
+    };
+    NiTableComponent.prototype.updatePermission = function (id) {
+    };
+    NiTableComponent.prototype.removePermission = function (id) {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
@@ -2390,6 +2457,66 @@ var DialogPaymentComponent = (function () {
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */]) === "function" && _a || Object, Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
     ], DialogPaymentComponent);
     return DialogPaymentComponent;
+    var _a, _b;
+}());
+
+var DialogAddressComponent = (function () {
+    function DialogAddressComponent(dialogRef, data, apiService) {
+        var _this = this;
+        this.dialogRef = dialogRef;
+        this.data = data;
+        this.apiService = apiService;
+        this.address = {};
+        this.permissions = [];
+        this.countries = [];
+        this.states = [];
+        this.dialogType = 'update';
+        this.address = {
+            address_number: data.address_number,
+            address_street_name: data.address_street_name,
+            address_post_code: data.address_post_code,
+            address_state: data.address_state,
+            address_town: data.address_town,
+            address_country: data.address_country,
+            address_extra_info: data.address_extra_info,
+            address_id: data.address_id,
+            perm_code: ''
+        };
+        apiService.getListData('AccountPermission').then(function (res) {
+            _this.permissions = res.data;
+        });
+        apiService.getListData('Country').then(function (res) {
+            _this.countries = res.data;
+        });
+        this.apiService.getListData('State', this.address.address_country).then(function (res) {
+            _this.states = res.data;
+        });
+    }
+    DialogAddressComponent.prototype.updateAddress = function () {
+        var _this = this;
+        this.apiService.updateAddress(this.address).then(function (res) {
+            console.log(res);
+            if (res) {
+                _this.dialogRef.close('ok');
+            }
+        });
+    };
+    DialogAddressComponent.prototype.selectCountry = function () {
+        var _this = this;
+        this.apiService.getListData('State', this.address.address_country).then(function (res) {
+            _this.states = res.data;
+        });
+    };
+    DialogAddressComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'dialog-address',
+            template: __webpack_require__("../../../../../src/app/ni-components/ni-table/dialog-address/dialog-address.html"),
+            styles: [__webpack_require__("../../../../../src/app/ni-components/ni-table/dialog-address/dialog-address.scss")]
+        }),
+        __param(1, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Optional"])()), __param(1, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["a" /* MD_DIALOG_DATA */])),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MdDialogRef */]) === "function" && _a || Object, Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_api_service__["a" /* ApiService */]) === "function" && _b || Object])
+    ], DialogAddressComponent);
+    return DialogAddressComponent;
     var _a, _b;
 }());
 
@@ -2544,7 +2671,7 @@ var PageAboutusComponent = (function () {
 /***/ "../../../../../src/app/pages/default-pages/chatroom/chatroom.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row members-header\" id=\"chatroom\">\n  <div class=\"col-sm-6\">\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>      \n  </div>\n  <div class=\"col-sm-6 text-right\">\n    <md-input-container class=\"search-group md-icon-left\">\n      <md-icon>search</md-icon>\n      <input mdInput value=\"\">\n    </md-input-container>\n  </div>\n  <div class=\"col-md-12\">\n    <ni-card [title]=\"'Lists with avatars'\">\n      <md-list>\n        <md-input-container class=\"search-group md-icon-left\">\n          <md-icon>search</md-icon>\n          <input mdInput value=\"\" [(ngModel)]=\"searchName\" placeholder=\"Search...\" (ngModelChange)=\"searchUsers()\">\n        </md-input-container>\n        <md-list-item *ngFor=\"let m of members; let i = index\" [class.selected]=\"m.selected\" (click)=\"selectUser(i)\">\n          <img md-list-avatar src=\"../../../../assets/img/user/av1.png\" width=\"40\" height=\"40\" alt=\"\">\n          <h3 md-line class=\"h3\">{{ m.name }}</h3>\n        </md-list-item>\n      </md-list>\n      <ni-chat [messages]=\"messages\" [style.height.px]=\"500\" (sendMessage)=\"sendMessage($event)\"></ni-chat>\n    </ni-card>\n  </div>\n</div>"
+module.exports = "<div class=\"row members-header\" id=\"chatroom\">\n  <div class=\"col-sm-6\">\n    <ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>      \n  </div>\n  <div class=\"col-sm-6 text-right\">\n    <md-input-container class=\"search-group md-icon-left\">\n      <md-icon>search</md-icon>\n      <input mdInput value=\"\">\n    </md-input-container>\n  </div>\n  <div class=\"col-md-12\">\n    <ni-card [title]=\"'Lists of chatroom available'\">\n      <md-list>\n        <md-input-container class=\"search-group md-icon-left\">\n          <md-icon>search</md-icon>\n          <input mdInput value=\"\" [(ngModel)]=\"searchName\" placeholder=\"Search...\" (ngModelChange)=\"searchUsers()\">\n        </md-input-container>\n        <md-list-item *ngFor=\"let m of members; let i = index\" [class.selected]=\"m.selected\" (click)=\"selectUser(i)\">\n          <img md-list-avatar src=\"../../../../assets/img/user/av1.png\" width=\"40\" height=\"40\" alt=\"\">\n          <h3 md-line class=\"h3\">{{ m.name }}</h3>\n        </md-list-item>\n      </md-list>\n      <ni-chat [messages]=\"messages\" [style.height.px]=\"500\" (sendMessage)=\"sendMessage($event)\"></ni-chat>\n    </ni-card>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -2556,7 +2683,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".search-group {\n  width: 150px; }\n\nmd-list {\n  width: 350px;\n  margin-right: 20px;\n  height: 500px;\n  overflow-y: scroll; }\n\nmd-list-item {\n  border-bottom: 1px solid #dddddd;\n  cursor: pointer;\n  padding-left: 10px; }\n\nmd-list-item:hover {\n  background-color: #dddddd; }\n\n.selected {\n  background-color: #54c4f8;\n  color: #fff !important; }\n", ""]);
+exports.push([module.i, ".search-group {\n  width: 150px; }\n\nmd-list {\n  width: 350px;\n  margin-right: 20px;\n  height: 450px;\n  overflow-y: scroll; }\n\nmd-list-item {\n  border-bottom: 1px solid #dddddd;\n  cursor: pointer;\n  padding-left: 10px; }\n\nmd-list-item:hover {\n  background-color: #dddddd; }\n\n.selected {\n  background-color: #54c4f8;\n  color: #fff !important; }\n", ""]);
 
 // exports
 
@@ -3657,7 +3784,7 @@ var PageGroupsComponent = (function () {
         });
     };
     PageGroupsComponent.prototype.addIBAN = function () {
-        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_7__profile_profile_component__["a" /* DialogAddIbanComponent */]);
+        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_7__profile_profile_component__["b" /* DialogAddIbanComponent */]);
         dialogRef.afterClosed().subscribe(function (result) {
             if (result === 'ok') {
             }
@@ -4005,7 +4132,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/default-pages/profile/dialog-update-profile/dialog-update-profile.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div md-dialog-content>\n    <div class=\"col-md-12\" *ngIf=\"section == 'general'\">\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'First Name' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"text\" [value]=\"userInfo.first_name\">\n                </md-input-container>\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Middle Name' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"text\" [value]=\"userInfo.middle_name\">\n                </md-input-container>\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Surname' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"text\" [value]=\"userInfo.sur_name\">\n                </md-input-container>\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Gender' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-select class=\"w-full\" [(ngModel)]=\"userInfo.gender\">\n                <md-option [value]=\"userInfo.gender\">{{'Male' | translate}}</md-option>\n                <md-option [value]=\"userInfo.gender\">{{'Female' | translate}}</md-option>\n                </md-select>\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Photo' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <img src=\"{{userInfo.photo_path}}\" class=\"avatar\">\n                <!-- <md-input-container class=\"mb-0\"> -->\n                <input type=\"file\">\n                <!-- </md-input-container> -->\n            </div>\n        </div>\n    </div>\n    <div class=\"col-md-12\" *ngIf=\"section == 'contact'\">\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Home Phone' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"text\" [value]=\"userInfo.contact_home_phone\">\n                </md-input-container>\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Mobile Phone' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"text\" [value]=\"userInfo.contact_mobile_phone\">\n                </md-input-container>\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Office Phone' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"text\" [value]=\"userInfo.contact_office_phone\">\n                </md-input-container>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-md-12\" *ngIf=\"section == 'email'\">\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Email' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"email\" [value]=\"userInfo.email\">\n                </md-input-container>\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Password' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"password\" [value]=\"userInfo.password\">\n                </md-input-container>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-md-12\" *ngIf=\"section == 'occupation'\">\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Occupation' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"text\" [value]=\"userInfo.occupation\">\n                </md-input-container>\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Occupation Sector' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"text\" [value]=\"userInfo.occupation_sector\">\n                </md-input-container>\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Yearly Income' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"number\" [value]=\"userInfo.yearly_income\">\n                </md-input-container>\n            </div>\n        </div>\n    </div>\n    <div class=\"form-group row\">\n        <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Select Permission' | translate}}:</label>\n        <div class=\"col-sm-6 col-md-8\">\n            <md-select class=\"w-full\" [(ngModel)]=\"userInfo.field_permission\">\n            <md-option [value]=\"userInfo.field_permission\" *ngFor=\"let p of permissions\">{{p.text | translate}}</md-option>\n            </md-select>\n        </div>\n    </div>\n    <div md-dialog-actions>\n        <button md-raised-button (click)=\"dialogRef.close('no')\" color=\"primary\">Cancel</button>\n        <button md-raised-button (click)=\"update()\" color=\"accent\" [disabled]=\"iban === ''\">Update</button>\n    </div>\n</div>"
+module.exports = "<div md-dialog-content>\n    <div class=\"col-md-12\" *ngIf=\"section == 'general'\">\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'First Name' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"text\" [value]=\"userInfo.first_name\" [(ngModel)]=\"userInfo.first_name\">\n                </md-input-container>\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Middle Name' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"text\" [value]=\"userInfo.middle_name\" [(ngModel)]=\"userInfo.middle_name\">\n                </md-input-container>\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Surname' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"text\" [value]=\"userInfo.sur_name\" [(ngModel)]=\"userInfo.sur_name\">\n                </md-input-container>\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Gender' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-select class=\"w-full\" [(ngModel)]=\"userInfo.gender\">\n                <md-option [value]=\"userInfo.gender\">{{'Male' | translate}}</md-option>\n                <md-option [value]=\"userInfo.gender\">{{'Female' | translate}}</md-option>\n                </md-select>\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Photo' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <img src=\"{{userInfo.photo_path}}\" class=\"avatar\">\n                <!-- <md-input-container class=\"mb-0\"> -->\n                <input type=\"file\">\n                <!-- </md-input-container> -->\n            </div>\n        </div>\n    </div>\n    <div class=\"col-md-12\" *ngIf=\"section == 'contact'\">\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Home Phone' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"text\" [value]=\"userInfo.contact_home_phone\" [(ngModel)]=\"userInfo.contact_home_phone\">\n                </md-input-container>\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Mobile Phone' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"text\" [value]=\"userInfo.contact_mobile_phone\" [(ngModel)]=\"userInfo.contact_mobile_phone\">\n                </md-input-container>\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Office Phone' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"text\" [value]=\"userInfo.contact_office_phone\" [(ngModel)]=\"userInfo.contact_office_phone\">\n                </md-input-container>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-md-12\" *ngIf=\"section == 'email'\">\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Email' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"email\" [value]=\"userInfo.email\" [(ngModel)]=\"userInfo.email\">\n                </md-input-container>\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Password' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"password\" [value]=\"userInfo.password\" [(ngModel)]=\"userInfo.password\">\n                </md-input-container>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-md-12\" *ngIf=\"section == 'occupation'\">\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Occupation' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"text\" [value]=\"userInfo.occupation\" [(ngModel)]=\"userInfo.occupation\">\n                </md-input-container>\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Occupation Sector' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"text\" [value]=\"userInfo.occupation_sector\" [(ngModel)]=\"userInfo.occupation_sector\">\n                </md-input-container>\n            </div>\n        </div>\n        <div class=\"form-group row\">\n            <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Yearly Income' | translate}}:</label>\n            <div class=\"col-sm-6 col-md-8\">\n                <md-input-container class=\"mb-0\">\n                <input mdInput type=\"number\" [value]=\"userInfo.yearly_income\" [(ngModel)]=\"userInfo.yearly_income\">\n                </md-input-container>\n            </div>\n        </div>\n    </div>\n    <div class=\"form-group row\">\n        <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Select Permission' | translate}}:</label>\n        <div class=\"col-sm-6 col-md-8\">\n            <md-select class=\"w-full\" [(ngModel)]=\"userInfo.field_permission\">\n            <md-option [value]=\"userInfo.field_permission\" *ngFor=\"let p of permissions\">{{p.text | translate}}</md-option>\n            </md-select>\n        </div>\n    </div>\n    <div md-dialog-actions>\n        <button md-raised-button (click)=\"dialogRef.close('no')\" color=\"primary\">Cancel</button>\n        <button md-raised-button (click)=\"update()\" color=\"accent\" [disabled]=\"iban === ''\">Update</button>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -4030,7 +4157,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/default-pages/profile/profile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n<md-tab-group>\r\n  <md-tab>\r\n    <ng-template md-tab-label>\r\n      {{'Identification' | translate}}\r\n    </ng-template>\r\n    <div class=\"row p-2 mt-3 text-center\">\r\n      <div class=\"col-md-3 mb-3\">\r\n        <ni-card [title]=\"'General' | translate\" *ngIf=\"userInfo.user_full_name\">\r\n          <p>{{'First Name' | translate}}: {{userInfo.user_full_name.first_name}}</p>\r\n          <p>{{'Middle Name' | translate}}: {{userInfo.user_full_name.middle_name}}</p>\r\n          <p>{{'Surname' | translate}}: {{userInfo.user_full_name.sur_name}}</p>\r\n          <p>{{'Gender' | translate}}: {{userInfo.user_full_name.gender}}</p>\r\n          <img src=\"{{userInfo.user_full_name.photo_path}}\" class=\"avatar\"><br/>\r\n          <button md-raised-button color=\"accent\" (click)=\"update('general')\" class=\"mt-3\">{{'Update' | translate}}</button>\r\n        </ni-card>\r\n      </div>\r\n      <div class=\"col-md-3 mb-3\">\r\n        <ni-card [title]=\"'Contact' | translate\" *ngIf=\"userInfo.user_phones\">\r\n          <p>{{'Home Phone' | translate}}: {{userInfo.user_phones.contact_home_phone}}</p>\r\n          <p>{{'Mobile Phone' | translate}}: {{userInfo.user_phones.contact_mobile_phone}}</p>\r\n          <p>{{'Office Phone' | translate}}: {{userInfo.user_phones.contact_office_phone}}</p>\r\n          <button md-raised-button color=\"accent\" (click)=\"update('contact')\" class=\"mt-3\">{{'Update' | translate}}</button>\r\n        </ni-card>\r\n      </div>\r\n      <div class=\"col-md-3 mb-3\">\r\n        <ni-card [title]=\"'Email' | translate\" *ngIf=\"userInfo.user_email\">\r\n          <p>{{'Email' | translate}}: {{userInfo.user_email.email}}</p>\r\n          <p>{{'Validation Status' | translate}}: {{userInfo.user_email.email_validation_status}}</p>\r\n          <button md-raised-button color=\"accent\" (click)=\"update('email')\" class=\"mt-3\">{{'Update' | translate}}</button>\r\n        </ni-card>\r\n      </div>\r\n      <div class=\"col-md-3 mb-3\">\r\n        <ni-card [title]=\"'Occupation' | translate\" *ngIf=\"userInfo.user_work_info\">\r\n          <p>{{'Occupation' | translate}}: {{userInfo.user_work_info.occupation}}</p>\r\n          <p>{{'Occupation Sector' | translate}}: {{userInfo.user_work_info.occupation_sector}}</p>\r\n          <p>{{'Yearly Income' | translate}}: {{userInfo.user_work_info.yearly_income}}</p>\r\n          <button md-raised-button color=\"accent\" (click)=\"update('occupation')\" class=\"mt-3\">{{'Update' | translate}}</button>\r\n        </ni-card>\r\n      </div>\r\n    </div>\r\n  </md-tab>\r\n  <md-tab>\r\n    <ng-template md-tab-label>\r\n      {{'Address and occupation' | translate}}\r\n    </ng-template>\r\n    <div class=\"row p-2\">\r\n      <div class=\"col-md-12 mb-3\">\r\n        <md-card class=\"mt-3\">\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Address number' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Address street name' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Address post code' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Address country' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-select class=\"w-full\" [(ngModel)]=\"userInfo.address_country\" (change)=\"selectCountry('ADDRESS')\">\r\n                    <md-option *ngFor=\"let c of countries\" [value]=\"c.name\">{{c.name | translate}}</md-option>\r\n                  </md-select>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Address state' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-select class=\"w-full\" [(ngModel)]=\"userInfo.address_state\" (change)=\"selectState('ADDRESS')\">\r\n                    <md-option *ngFor=\"let s of states\" [value]=\"s.name\">{{s.name | translate}}</md-option>\r\n                  </md-select>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Address town' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-select class=\"w-full\" [(ngModel)]=\"userInfo.address_town\">\r\n                    <md-option *ngFor=\"let t of towns\" [value]=\"t.name\">{{t.name | translate}}</md-option>\r\n                  </md-select>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Address extra info' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Contact home phone' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Contact office phone' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Contact mobile phone' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Occupation' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Occupation sector' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"row\">\r\n            <div class=\"col-sm-6\">\r\n              <div class=\"form-group row\">\r\n                <label class=\"col-sm-6 col-md-4 col-form-label mb-0\">{{'Yearly income' | translate}}:</label>\r\n                <div class=\"col-sm-6 col-md-8\">\r\n                  <md-input-container class=\"mb-0\">\r\n                    <input mdInput type=\"text\">\r\n                  </md-input-container>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </md-card>\r\n        <button md-raised-button color=\"accent\" class=\"mt-3\" (click)=\"validate()\">{{'Validate' | translate}}</button>\r\n      </div>\r\n    </div>\r\n  </md-tab>\r\n  <md-tab>\r\n    <ng-template md-tab-label>\r\n      {{'Payment means' | translate}}\r\n    </ng-template>\r\n    <div class=\"row p-2\">\r\n      <div class=\"col-md-12 mb-3\">\r\n        <button md-raised-button color=\"accent\" (click)=\"addIBAN()\">{{'Add a new IBAN' | translate}}</button>\r\n      </div>\r\n      <div class=\"col-md-6\">\r\n        <ni-card [title]=\"'Kori address' | translate\" (refresh)=\"doRefreshKori($event)\" [showRefresh]=\"true\">\r\n          <ni-table [headers]=\"koriHeaders\" [data]=\"koriData\"></ni-table>\r\n          <ni-table-loading *ngIf=\"loadingKori\"></ni-table-loading>\r\n          <ni-alert *ngIf=\"koriData.length === 0 && !loadingKori\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'No Kori address' | translate}}</strong></ni-alert>\r\n          <ni-pagination [totalItems]=\"koriTotal\" [itemPerPage]=\"koriMax\" [currentPage]=\"koriPage\" *ngIf=\"koriData.length > 0\" (changePage)=\"changeKoriPage($event)\"></ni-pagination>\r\n        </ni-card>\r\n      </div>\r\n      <div class=\"col-md-6\">\r\n        <ni-card [title]=\"'Bank address' | translate\" (refresh)=\"doRefreshBank($event)\" [showRefresh]=\"true\">\r\n          <ni-table [headers]=\"bankHeaders\" [data]=\"bankData\"></ni-table>\r\n          <ni-table-loading *ngIf=\"loadingBank\"></ni-table-loading>\r\n          <ni-alert *ngIf=\"bankData.length === 0 && !loadingBank\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'No Bank address' | translate}}</strong></ni-alert>\r\n          <ni-pagination [totalItems]=\"bankTotal\" [itemPerPage]=\"bankMax\" [currentPage]=\"bankPage\" *ngIf=\"bankData.length > 0\" (changePage)=\"changeBankPage($event)\"></ni-pagination>\r\n        </ni-card>\r\n      </div>\r\n    </div>\r\n  </md-tab>\r\n</md-tab-group>"
+module.exports = "\r\n<ni-breadcrumb [menu]=\"breadcrumb\" [style]=\"'custom2'\" class=\"mb-4\"></ni-breadcrumb>\r\n<md-tab-group>\r\n  <md-tab>\r\n    <ng-template md-tab-label>\r\n      {{'Identification' | translate}}\r\n    </ng-template>\r\n    <div class=\"row p-2 mt-3 text-center\">\r\n      <div class=\"col-md-3 mb-3\">\r\n        <ni-card [title]=\"'General' | translate\" *ngIf=\"userInfo.user_full_name\">\r\n          <p>{{'First Name' | translate}}: {{userInfo.user_full_name.first_name}}</p>\r\n          <p>{{'Middle Name' | translate}}: {{userInfo.user_full_name.middle_name}}</p>\r\n          <p>{{'Surname' | translate}}: {{userInfo.user_full_name.sur_name}}</p>\r\n          <p>{{'Gender' | translate}}: {{userInfo.user_full_name.gender}}</p>\r\n          <img src=\"{{userInfo.user_full_name.photo_path}}\" class=\"avatar\"><br/>\r\n          <button md-raised-button color=\"accent\" (click)=\"update('general')\" class=\"mt-3\">{{'Update' | translate}}</button>\r\n        </ni-card>\r\n      </div>\r\n      <div class=\"col-md-3 mb-3\">\r\n        <ni-card [title]=\"'Contact' | translate\" *ngIf=\"userInfo.user_phones\">\r\n          <p>{{'Home Phone' | translate}}: {{userInfo.user_phones.contact_home_phone}}</p>\r\n          <p>{{'Mobile Phone' | translate}}: {{userInfo.user_phones.contact_mobile_phone}}</p>\r\n          <p>{{'Office Phone' | translate}}: {{userInfo.user_phones.contact_office_phone}}</p>\r\n          <button md-raised-button color=\"accent\" (click)=\"update('contact')\" class=\"mt-3\">{{'Update' | translate}}</button>\r\n        </ni-card>\r\n      </div>\r\n      <div class=\"col-md-3 mb-3\">\r\n        <ni-card [title]=\"'Email' | translate\" *ngIf=\"userInfo.user_email\">\r\n          <p>{{'Email' | translate}}: {{userInfo.user_email.email}}</p>\r\n          <p>{{'Validation Status' | translate}}: {{userInfo.user_email.email_validation_status}}</p>\r\n          <button md-raised-button color=\"accent\" (click)=\"update('email')\" class=\"mt-3\">{{'Update' | translate}}</button>\r\n        </ni-card>\r\n      </div>\r\n      <div class=\"col-md-3 mb-3\">\r\n        <ni-card [title]=\"'Occupation' | translate\" *ngIf=\"userInfo.user_work_info\">\r\n          <p>{{'Occupation' | translate}}: {{userInfo.user_work_info.occupation}}</p>\r\n          <p>{{'Occupation Sector' | translate}}: {{userInfo.user_work_info.occupation_sector}}</p>\r\n          <p>{{'Yearly Income' | translate}}: {{userInfo.user_work_info.yearly_income}}</p>\r\n          <button md-raised-button color=\"accent\" (click)=\"update('occupation')\" class=\"mt-3\">{{'Update' | translate}}</button>\r\n        </ni-card>\r\n      </div>\r\n    </div>\r\n  </md-tab>\r\n  <md-tab>\r\n    <ng-template md-tab-label>\r\n      {{'Address and occupation' | translate}}\r\n    </ng-template>\r\n    <div class=\"row p-2\">\r\n      <div class=\"col-md-12 mb-3\">\r\n        <button md-raised-button color=\"primary\" class=\"mb-3\" (click)=\"addAddress()\">Add address</button>\r\n        <ni-card [title]=\"'Addresses' | translate\" (refresh)=\"doRefreshAddress($event)\" [showRefresh]=\"true\">\r\n          <ni-table [headers]=\"addressHeaders\" [data]=\"addresses\"></ni-table>\r\n          <ni-table-loading *ngIf=\"loadingAddress\"></ni-table-loading>\r\n          <ni-alert *ngIf=\"addresses.length === 0 && !loadingAddress\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'No address' | translate}}</strong></ni-alert>\r\n          <ni-pagination [totalItems]=\"addressTotal\" [itemPerPage]=\"addressMax\" [currentPage]=\"addressPage\" *ngIf=\"addresses.length > 0\" (changePage)=\"changeAddressPage($event)\"></ni-pagination>\r\n        </ni-card>\r\n      </div>\r\n    </div>\r\n  </md-tab>\r\n  <md-tab>\r\n    <ng-template md-tab-label>\r\n      {{'Payment means' | translate}}\r\n    </ng-template>\r\n    <div class=\"row p-2\">\r\n      <div class=\"col-md-12 mb-3\">\r\n        <button md-raised-button color=\"accent\" (click)=\"addIBAN()\">{{'Add a new IBAN' | translate}}</button>\r\n      </div>\r\n      <div class=\"col-md-6\">\r\n        <ni-card [title]=\"'Kori address' | translate\" (refresh)=\"doRefreshKori($event)\" [showRefresh]=\"true\">\r\n          <ni-table [headers]=\"koriHeaders\" [data]=\"koriData\"></ni-table>\r\n          <ni-table-loading *ngIf=\"loadingKori\"></ni-table-loading>\r\n          <ni-alert *ngIf=\"koriData.length === 0 && !loadingKori\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'No Kori address' | translate}}</strong></ni-alert>\r\n          <ni-pagination [totalItems]=\"koriTotal\" [itemPerPage]=\"koriMax\" [currentPage]=\"koriPage\" *ngIf=\"koriData.length > 0\" (changePage)=\"changeKoriPage($event)\"></ni-pagination>\r\n        </ni-card>\r\n      </div>\r\n      <div class=\"col-md-6\">\r\n        <ni-card [title]=\"'Bank address' | translate\" (refresh)=\"doRefreshBank($event)\" [showRefresh]=\"true\">\r\n          <ni-table [headers]=\"bankHeaders\" [data]=\"bankData\"></ni-table>\r\n          <ni-table-loading *ngIf=\"loadingBank\"></ni-table-loading>\r\n          <ni-alert *ngIf=\"bankData.length === 0 && !loadingBank\" [color]=\"'warning'\" [outline]=\"true\"><strong>{{'No Bank address' | translate}}</strong></ni-alert>\r\n          <ni-pagination [totalItems]=\"bankTotal\" [itemPerPage]=\"bankMax\" [currentPage]=\"bankPage\" *ngIf=\"bankData.length > 0\" (changePage)=\"changeBankPage($event)\"></ni-pagination>\r\n        </ni-card>\r\n      </div>\r\n    </div>\r\n  </md-tab>\r\n</md-tab-group>"
 
 /***/ }),
 
@@ -4056,9 +4183,10 @@ module.exports = module.exports.toString();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return PageProfileComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogAddIbanComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return DialogUpdateProfileComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return PageProfileComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return DialogAddIbanComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return DialogUpdateProfileComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogAddAddressComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layouts_shared_service__ = __webpack_require__("../../../../../src/app/layouts/shared-service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_api_service__ = __webpack_require__("../../../../../src/app/services/api.service.ts");
@@ -4093,6 +4221,12 @@ var PageProfileComponent = (function () {
         this.countries = [];
         this.states = [];
         this.towns = [];
+        this.addresses = [];
+        this.addressHeaders = [];
+        this.addressMax = 5;
+        this.addressPage = 1;
+        this.addressTotal = 0;
+        this.loadingAddress = false;
         this.bankData = [];
         this.bankHeaders = [];
         this.bankMax = 5;
@@ -4110,8 +4244,12 @@ var PageProfileComponent = (function () {
             console.log(res);
             _this.userInfo = res.data[0];
             _this.changeDetectorRef.detectChanges();
+            res.data[0].user_addresses.forEach(function (a) {
+                _this.addresses.push([a.address_street_name, a.address_number, a.address_town, a.address_post_code, a.address_extra_info, { type: ["Remove Address", "Update Address"], data: a }]);
+            });
         });
         this.apiService.initHeaderGroup.next('');
+        this.getAddress();
         apiService.getListData('Country').then(function (res) {
             _this.countries = res.data;
         });
@@ -4202,11 +4340,17 @@ var PageProfileComponent = (function () {
             }
         });
     };
+    PageProfileComponent.prototype.getAddress = function () {
+        this.addressHeaders = ['Street Name', 'Number', 'Town', 'Post Code', 'Extra Information', { type: 'Action' }];
+    };
     PageProfileComponent.prototype.doRefreshKori = function (event) {
         this.getAddresses('kori');
     };
     PageProfileComponent.prototype.doRefreshBank = function (event) {
         this.getAddresses('bank');
+    };
+    PageProfileComponent.prototype.doRefreshAddress = function () {
+        this.getAddress();
     };
     PageProfileComponent.prototype.changeKoriPage = function (event) {
     };
@@ -4214,6 +4358,13 @@ var PageProfileComponent = (function () {
     };
     PageProfileComponent.prototype.update = function (section) {
         var dialogRef = this.dialog.open(DialogUpdateProfileComponent, { data: section });
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result === 'ok') {
+            }
+        });
+    };
+    PageProfileComponent.prototype.addAddress = function () {
+        var dialogRef = this.dialog.open(DialogAddAddressComponent);
         dialogRef.afterClosed().subscribe(function (result) {
             if (result === 'ok') {
             }
@@ -4300,7 +4451,7 @@ var DialogUpdateProfileComponent = (function () {
                 yearly_income: user.user_work_info.yearly_income,
             };
         });
-        apiService.getPermission('AccountPermission').then(function (res) {
+        apiService.getListData('AccountPermission').then(function (res) {
             _this.permissions = res.data;
         });
     }
@@ -4320,6 +4471,63 @@ var DialogUpdateProfileComponent = (function () {
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_material__["l" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_material__["l" /* MdDialogRef */]) === "function" && _b || Object, Object])
     ], DialogUpdateProfileComponent);
     return DialogUpdateProfileComponent;
+    var _a, _b;
+}());
+
+var DialogAddAddressComponent = (function () {
+    function DialogAddAddressComponent(apiService, dialogRef) {
+        var _this = this;
+        this.apiService = apiService;
+        this.dialogRef = dialogRef;
+        this.address = {};
+        this.permissions = [];
+        this.countries = [];
+        this.states = [];
+        this.dialogType = 'add';
+        this.address = {
+            address_number: '',
+            address_street_name: '',
+            address_post_code: '',
+            address_state: '',
+            address_town: '',
+            address_country: '',
+            address_extra_info: '',
+            perm_code: ''
+        };
+        apiService.getListData('AccountPermission').then(function (res) {
+            _this.permissions = res.data;
+        });
+        apiService.getListData('Country').then(function (res) {
+            _this.countries = res.data;
+        });
+        this.apiService.getListData('State', this.address.address_country).then(function (res) {
+            _this.states = res.data;
+        });
+    }
+    DialogAddAddressComponent.prototype.add = function () {
+        var _this = this;
+        this.apiService.addAddress(this.address).then(function (res) {
+            console.log(res);
+            if (res) {
+                _this.dialogRef.close('ok');
+            }
+        });
+    };
+    DialogAddAddressComponent.prototype.selectCountry = function () {
+        var _this = this;
+        this.apiService.getListData('State', this.address.address_country).then(function (res) {
+            _this.states = res.data;
+        });
+    };
+    DialogAddAddressComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'add-address-dialog',
+            template: __webpack_require__("../../../../../src/app/ni-components/ni-table/dialog-address/dialog-address.html"),
+            styles: [__webpack_require__("../../../../../src/app/ni-components/ni-table/dialog-address/dialog-address.scss")]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_api_service__["a" /* ApiService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_material__["l" /* MdDialogRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_material__["l" /* MdDialogRef */]) === "function" && _b || Object])
+    ], DialogAddAddressComponent);
+    return DialogAddAddressComponent;
     var _a, _b;
 }());
 
@@ -5503,7 +5711,7 @@ var PagesModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__["b" /* PageDashboardComponent */],
                 __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["e" /* PageGroupsComponent */],
                 __WEBPACK_IMPORTED_MODULE_23__default_pages_requests_requests_component__["a" /* PageRequestsComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["c" /* PageProfileComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["d" /* PageProfileComponent */],
                 __WEBPACK_IMPORTED_MODULE_25__default_pages_aboutus_aboutus_component__["a" /* PageAboutusComponent */],
                 __WEBPACK_IMPORTED_MODULE_27__default_pages_simulation_simulation_component__["a" /* PageSimulationComponent */],
                 __WEBPACK_IMPORTED_MODULE_24__default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */],
@@ -5525,15 +5733,16 @@ var PagesModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_29__default_pages_rollinvest_rollinvest_component__["a" /* PageRollinvestComponent */],
                 __WEBPACK_IMPORTED_MODULE_22__default_pages_transactions_transactions_component__["a" /* DialogCheckPasswordComponent */],
                 __WEBPACK_IMPORTED_MODULE_31__default_pages_faq_faq_component__["a" /* PageFaqComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["a" /* DialogAddIbanComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["b" /* DialogAddIbanComponent */],
                 __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["b" /* DialogCloneGroupComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["b" /* DialogUpdateProfileComponent */]
+                __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["c" /* DialogUpdateProfileComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["a" /* DialogAddAddressComponent */]
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_20__default_pages_dashboard_dashboard_component__["b" /* PageDashboardComponent */],
                 __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["e" /* PageGroupsComponent */],
                 __WEBPACK_IMPORTED_MODULE_23__default_pages_requests_requests_component__["a" /* PageRequestsComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["c" /* PageProfileComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["d" /* PageProfileComponent */],
                 __WEBPACK_IMPORTED_MODULE_25__default_pages_aboutus_aboutus_component__["a" /* PageAboutusComponent */],
                 __WEBPACK_IMPORTED_MODULE_27__default_pages_simulation_simulation_component__["a" /* PageSimulationComponent */],
                 __WEBPACK_IMPORTED_MODULE_24__default_pages_not_found_not_found_component__["a" /* PageNotFoundComponent */],
@@ -5556,9 +5765,10 @@ var PagesModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["d" /* DialogStartComponent */],
                 __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["c" /* DialogReportIncidentComponent */],
                 __WEBPACK_IMPORTED_MODULE_22__default_pages_transactions_transactions_component__["a" /* DialogCheckPasswordComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["a" /* DialogAddIbanComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["b" /* DialogAddIbanComponent */],
                 __WEBPACK_IMPORTED_MODULE_21__default_pages_groups_groups_component__["b" /* DialogCloneGroupComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["b" /* DialogUpdateProfileComponent */]
+                __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["c" /* DialogUpdateProfileComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__default_pages_profile_profile_component__["a" /* DialogAddAddressComponent */],
             ]
         })
     ], PagesModule);
@@ -5651,11 +5861,28 @@ var ApiService = (function () {
             });
         });
     };
-    ApiService.prototype.getPermission = function (data) {
+    ApiService.prototype.updateAddress = function (data) {
         var _this = this;
-        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'lists';
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'user/address/update';
         var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
-        params.set('data', data);
+        Object.keys(data).forEach(function (key) {
+            params.set(key, data[key]);
+        });
+        params.set('token', localStorage.getItem('token'));
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            });
+        });
+    };
+    ApiService.prototype.addAddress = function (data) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'user/address/add';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        Object.keys(data).forEach(function (key) {
+            params.set(key, data[key]);
+        });
+        params.set('token', localStorage.getItem('token'));
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());
@@ -5988,6 +6215,20 @@ var ApiService = (function () {
         params.set('member_id', memberId);
         params.set('token', localStorage.getItem('token'));
         params.set('lang', this.langCode);
+        return new Promise(function (resolve, reject) {
+            _this.http.get(url, { search: params }).subscribe(function (res) {
+                resolve(res.json());
+            }, function (err) {
+                reject(err);
+            });
+        });
+    };
+    ApiService.prototype.removeAddress = function (addressId) {
+        var _this = this;
+        var url = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverUrl + 'user/address/remove';
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* URLSearchParams */]();
+        params.set('address_id', addressId);
+        params.set('token', localStorage.getItem('token'));
         return new Promise(function (resolve, reject) {
             _this.http.get(url, { search: params }).subscribe(function (res) {
                 resolve(res.json());

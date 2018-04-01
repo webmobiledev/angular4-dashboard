@@ -67,7 +67,7 @@ import { PageTransactionsComponent, DialogCheckPasswordComponent } from './defau
 import { PageRequestsComponent } from './default-pages/requests/requests.component';
 import { PageNotFoundComponent } from './default-pages/not-found/not-found.component';
 import { PageAboutusComponent } from './default-pages/aboutus/aboutus.component';
-import { PageProfileComponent, DialogAddIbanComponent, DialogUpdateProfileComponent } from './default-pages/profile/profile.component';
+import { PageProfileComponent, DialogAddIbanComponent, DialogUpdateProfileComponent, DialogAddAddressComponent } from './default-pages/profile/profile.component';
 import { PageSimulationComponent } from './default-pages/simulation/simulation.component';
 import { PageChatroomComponent } from './default-pages/chatroom/chatroom.component';
 import { PageRollinvestComponent } from './default-pages/rollinvest/rollinvest.component';
@@ -153,7 +153,8 @@ import { PageFaqComponent } from './default-pages/faq/faq.component';
     PageFaqComponent,
     DialogAddIbanComponent,
     DialogCloneGroupComponent,
-    DialogUpdateProfileComponent
+    DialogUpdateProfileComponent,
+    DialogAddAddressComponent
   ],
   exports: [
     PageDashboardComponent,
@@ -184,7 +185,8 @@ import { PageFaqComponent } from './default-pages/faq/faq.component';
     DialogCheckPasswordComponent,
     DialogAddIbanComponent,
     DialogCloneGroupComponent,
-    DialogUpdateProfileComponent
+    DialogUpdateProfileComponent,
+    DialogAddAddressComponent,
   ]
 })
 export class PagesModule {}

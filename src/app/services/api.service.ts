@@ -62,10 +62,27 @@ export class ApiService {
     });
   }
 
-  getPermission(data) {
-    const url = environment.serverUrl + 'lists';
+  updateAddress(data) {
+    const url = environment.serverUrl + 'user/address/update';
     const params: URLSearchParams = new URLSearchParams();
-    params.set('data', data);
+    Object.keys(data).forEach(key => {
+      params.set(key, data[key]);
+    });
+    params.set('token', localStorage.getItem('token'));
+    return new Promise((resolve, reject) => {
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      });
+    });
+  }
+
+  addAddress(data) {
+    const url = environment.serverUrl + 'user/address/add';
+    const params: URLSearchParams = new URLSearchParams();
+    Object.keys(data).forEach(key => {
+      params.set(key, data[key]);
+    });
+    params.set('token', localStorage.getItem('token'));
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());
@@ -402,6 +419,20 @@ export class ApiService {
     params.set('member_id', memberId);
     params.set('token', localStorage.getItem('token'));
     params.set('lang', this.langCode);
+    return new Promise((resolve, reject) => {
+      this.http.get(url, {search: params}).subscribe(res => {
+        resolve(res.json());
+      }, err => {
+        reject(err);
+      });
+    });
+  }
+
+  removeAddress(addressId) {
+    const url = environment.serverUrl + 'user/address/remove';
+    const params: URLSearchParams = new URLSearchParams();
+    params.set('address_id', addressId);
+    params.set('token', localStorage.getItem('token'));
     return new Promise((resolve, reject) => {
       this.http.get(url, {search: params}).subscribe(res => {
         resolve(res.json());

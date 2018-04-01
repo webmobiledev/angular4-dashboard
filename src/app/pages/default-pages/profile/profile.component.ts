@@ -16,6 +16,12 @@ export class PageProfileComponent implements OnInit {
   countries = [];
   states = [];
   towns = [];
+  addresses = [];
+  addressHeaders = [];
+  addressMax = 5;
+  addressPage = 1;
+  addressTotal = 0;
+  loadingAddress = false;
 
   bankData = [];
   bankHeaders = [];
@@ -42,8 +48,12 @@ export class PageProfileComponent implements OnInit {
       console.log(res);
       this.userInfo = res.data[0];
       this.changeDetectorRef.detectChanges();
+      res.data[0].user_addresses.forEach(a => {
+        this.addresses.push([a.address_street_name, a.address_number, a.address_town, a.address_post_code, a.address_extra_info, {type: ["Remove Address", "Update Address"], data: a}]);
+      });
     });
     this.apiService.initHeaderGroup.next('');
+    this.getAddress();
 
     apiService.getListData('Country').then((res: any) => {
       this.countries = res.data;
@@ -133,12 +143,20 @@ export class PageProfileComponent implements OnInit {
     });
   }
 
+  getAddress() {
+    this.addressHeaders = ['Street Name', 'Number', 'Town', 'Post Code', 'Extra Information', {type: 'Action'}];
+  }
+
   doRefreshKori(event) {
     this.getAddresses('kori');
   }
 
   doRefreshBank(event) {
     this.getAddresses('bank');
+  }
+
+  doRefreshAddress() {
+    this.getAddress();
   }
 
   changeKoriPage(event) {
@@ -151,6 +169,15 @@ export class PageProfileComponent implements OnInit {
 
   update(section) {
     let dialogRef = this.dialog.open(DialogUpdateProfileComponent, {data: section});
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'ok') {
+        
+      }
+    });
+  }
+
+  addAddress() {
+    let dialogRef = this.dialog.open(DialogAddAddressComponent);
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'ok') {
         
@@ -233,7 +260,7 @@ export class DialogUpdateProfileComponent {
       };
     });
 
-    apiService.getPermission('AccountPermission').then((res: any) => {
+    apiService.getListData('AccountPermission').then((res: any) => {
       this.permissions = res.data;
     });
   }
@@ -241,6 +268,62 @@ export class DialogUpdateProfileComponent {
   update() {
     this.apiService.updateUser(this.userInfo).then((res: any) => {
       this.dialogRef.close('ok');
+    });
+  }
+}
+
+@Component({
+  selector: 'add-address-dialog',
+  templateUrl: '../../../ni-components/ni-table/dialog-address/dialog-address.html',
+  styleUrls: ['../../../ni-components/ni-table/dialog-address/dialog-address.scss']
+})
+export class DialogAddAddressComponent {
+  address:any = {};
+  permissions = [];
+  countries = [];
+  states = [];
+  dialogType = 'add';
+
+  constructor(
+    private apiService: ApiService,
+    public dialogRef: MdDialogRef<DialogAddAddressComponent>
+  ) {
+    this.address = {
+      address_number: '',
+      address_street_name: '',
+      address_post_code: '',
+      address_state: '',
+      address_town: '',
+      address_country: '',
+      address_extra_info: '',
+      perm_code: ''
+    };
+
+    apiService.getListData('AccountPermission').then((res: any) => {
+      this.permissions = res.data;
+    });
+
+    apiService.getListData('Country').then((res: any) => {
+      this.countries = res.data;
+    });
+
+    this.apiService.getListData('State', this.address.address_country).then((res: any) => {
+      this.states = res.data;
+    });
+  }
+
+  add() {
+    this.apiService.addAddress(this.address).then((res: any) => {
+      console.log(res);
+      if (res) {
+        this.dialogRef.close('ok');
+      }
+    })
+  }
+
+  selectCountry() {
+    this.apiService.getListData('State', this.address.address_country).then((res: any) => {
+      this.states = res.data;
     });
   }
 }
